@@ -1,15 +1,15 @@
 {
   "as_of": "2026-09-08",
-  "updated_at": "2026-09-08T08:42:00-04:00",
-  "index": 84,
+  "updated_at": "2026-09-08T13:27:45.960Z",
+  "index": 87,
   "previous_index": 82,
-  "change_24h": 2,
-  "change_7d": 5,
-  "risk_level": "HIGH",
+  "change_24h": 5,
+  "change_7d": 8,
+  "risk_level": "SEVERE",
   "tactical_tempo": "ACCELERATING",
   "strategic_tempo": "ACCELERATING",
-  "primary_driver": "Middle East expansion and Gulf energy/shipping coupling",
-  "primary_stabilizer": "Active Ukraine diplomacy and continued U.S.\u2013China engagement",
+  "primary_driver": "The U.S.-Iran war is widening through Houthi attacks on Saudi energy infrastructure, while Russian strikes on Kyiv resumed during active U.S.-Ukraine diplomacy.",
+  "primary_stabilizer": "Active U.S.-Ukraine diplomatic contacts and the scheduled NATO Ukraine Defence Contact Group meeting preserve limited crisis-management channels.",
   "factors": [
     {
       "key": "multiple_wars",
@@ -21,7 +21,7 @@
     {
       "key": "direct_combat",
       "name": "Direct major-power/state combat",
-      "score": 8,
+      "score": 9,
       "trend": "rising",
       "weight": 15
     },
@@ -36,14 +36,14 @@
       "key": "rearmament",
       "name": "Rearmament / arms production",
       "score": 9,
-      "trend": "rising",
+      "trend": "stable",
       "weight": 10
     },
     {
       "key": "mobilization",
       "name": "Military mobilization / readiness",
-      "score": 7,
-      "trend": "stable",
+      "score": 8,
+      "trend": "rising",
       "weight": 15
     },
     {
@@ -57,13 +57,13 @@
       "key": "economic_warfare",
       "name": "Economic / energy warfare",
       "score": 10,
-      "trend": "rising",
+      "trend": "stable",
       "weight": 8
     },
     {
       "key": "hostile_rhetoric",
       "name": "Hostile rhetoric / threats",
-      "score": 9,
+      "score": 10,
       "trend": "rising",
       "weight": 5
     },
@@ -77,56 +77,68 @@
     {
       "key": "diplomatic_breakdown",
       "name": "Diplomatic breakdown",
-      "score": 5,
+      "score": 4,
       "trend": "easing",
       "weight": 5
     }
   ],
   "headlines": [
     {
-      "title": "Middle East conflict expansion and Gulf infrastructure risk",
-      "summary": "Regional attacks increasingly connect U.S.\u2013Iran confrontation, Gulf states, energy infrastructure, shipping and global commodity risk.",
-      "url": "https://www.reuters.com/world/middle-east/",
+      "title": "Houthi strikes set fire to Saudi oil sites and wound 73",
+      "summary": "Iran-backed Houthi attacks on Saudi cities, energy facilities and utilities materially widen the U.S.-Iran conflict beyond the immediate theater and raise the risk of Gulf-state entry or retaliation.",
+      "url": "https://apnews.com/article/4ad9446f0bb8c096750c84b6e1ba86b8",
       "impact": "up"
     },
     {
-      "title": "Hormuz remains a global escalation channel",
-      "summary": "Shipping disruption and threats to Gulf energy infrastructure can transmit regional conflict into energy, inflation and alliance pressure.",
-      "url": "https://www.reuters.com/business/energy/",
+      "title": "Russian ballistic missiles hit Kyiv as U.S. envoys leave",
+      "summary": "Russia resumed missile attacks on Kyiv shortly after U.S. negotiators departed, demonstrating continued high-intensity combat despite renewed diplomatic efforts and prompting Polish military aviation activity.",
+      "url": "https://www.marketscreener.com/news/russian-ballistic-missiles-hit-kyiv-as-us-envoys-leave-ce785bd8d889fe23",
       "impact": "up"
     },
     {
-      "title": "Ukraine diplomacy remains active",
-      "summary": "Continued high-level diplomatic engagement is a meaningful stabilizer despite sustained battlefield pressure.",
-      "url": "https://www.reuters.com/world/europe/",
+      "title": "Zelenskyy says U.S. envoys brought ideas to end Russia's war",
+      "summary": "The reported exchange of potentially useful proposals provides a limited stabilizing channel, although it has not yet produced a ceasefire or restrained Russian operations.",
+      "url": "https://apnews.com/article/fd634a6786462bc95b7dfefc97d2331e",
       "impact": "down"
+    },
+    {
+      "title": "Oil rises as risks of prolonged Middle East conflict heighten supply worries",
+      "summary": "Higher oil prices and renewed risk premiums around the Strait of Hormuz show that military escalation is producing immediate global economic effects and increasing pressure on energy security.",
+      "url": "https://www.marketscreener.com/news/oil-rises-as-risks-of-prolonged-mideast-conflict-heighten-supply-worries-ce785bd8d981f326",
+      "impact": "up"
+    },
+    {
+      "title": "NATO Secretary General attends Ukraine Defence Contact Group meeting",
+      "summary": "The meeting signals continued allied military support and institutional coordination for Ukraine, reinforcing alliance cohesion while also sustaining the risk of protracted confrontation with Russia.",
+      "url": "https://nato.int/en/news-and-events/events",
+      "impact": "neutral"
     }
   ],
   "areas_to_watch": [
     {
-      "name": "NATO\u2013Russia direct engagement",
+      "name": "Saudi Arabia and Gulf energy infrastructure",
       "severity": "critical",
-      "why": "Any sustained kinetic exchange would be a structural shift and likely cause a multi-point jump."
+      "why": "Further Houthi or Iranian attacks on oil, gas, ports or utilities could trigger direct Saudi or broader Gulf military retaliation and disrupt global energy flows."
     },
     {
-      "name": "Chinese blockade or quarantine of Taiwan",
+      "name": "Strait of Hormuz and commercial shipping",
       "severity": "critical",
-      "why": "A blockade or quarantine would create an immediate major-power alliance decision point."
+      "why": "Threats to shipping and exposed energy assets create a high-impact pathway from regional combat to global economic and military escalation."
     },
     {
-      "name": "Prolonged closure of Hormuz",
-      "severity": "high",
-      "why": "A sustained closure would sharply increase economic-warfare and conflict-coupling scores."
+      "name": "U.S.-Iran escalation ladder",
+      "severity": "critical",
+      "why": "Additional U.S. strikes, Iranian attacks on American forces or shipping, or attacks on Gulf partners could end the current intermittent pattern and produce sustained regional war."
     },
     {
-      "name": "Saudi / Gulf retaliation cycle",
+      "name": "Ukraine-Russia front and NATO airspace",
       "severity": "high",
-      "why": "Watch whether attacks generate broader retaliation and deeper Iranian involvement."
+      "why": "Missile attacks near or across NATO borders, combined with Ukrainian strikes on Russian infrastructure, could create pressure for direct alliance involvement."
     },
     {
-      "name": "Large-scale reserve or industrial mobilization",
+      "name": "U.S.-Ukraine-Russia diplomacy",
       "severity": "high",
-      "why": "This remains one of the clearest differences from immediate pre-war 1939 conditions."
+      "why": "Diplomatic contacts are active but fragile; continued Russian attacks during negotiations could discredit the process and close the remaining de-escalation channel."
     }
   ],
   "history": [
@@ -144,12 +156,12 @@
     },
     {
       "date": "2026-09-08",
-      "score": 84
+      "score": 87
     }
   ],
   "methodology": {
     "note": "Analytical early-warning index, not a probability forecast.",
-    "formula": "Weighted average of ten 0\u201310 factor scores, multiplied by 10 and rounded.",
+    "formula": "Weighted average of ten 0–10 factor scores, multiplied by 10 and rounded.",
     "historical_reference": {
       "summer_1939": 91,
       "general_war": 100
