@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Global Escalation Early-Warning Dashboard</title>
+<style>
+:root{--bg:#08111f;--panel:#0d1a2d;--panel2:#11213a;--line:#29415f;--text:#eef4ff;--muted:#9cb0c9;--good:#47d18c;--warn:#f4c95d;--high:#ff9f43;--critical:#ff5c6c;--accent:#5ea2ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% 0%,rgba(94,162,255,.15),transparent 28%),var(--bg);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text)}
+.wrap{max-width:1450px;margin:auto;padding:22px}.header{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:16px}h1{margin:0 0 6px;font-size:30px}.sub,.small{color:var(--muted);line-height:1.5}.status{padding:8px 11px;border:1px solid var(--line);border-radius:999px;color:var(--muted);white-space:nowrap}.grid{display:grid;grid-template-columns:1.25fr .75fr;gap:16px}.panel{background:linear-gradient(180deg,rgba(17,33,58,.96),rgba(13,26,45,.96));border:1px solid var(--line);border-radius:18px;padding:18px}.scorePanel{display:grid;grid-template-columns:205px 1fr;gap:18px;align-items:center}.ring{width:185px;height:185px;border-radius:50%;display:grid;place-items:center;position:relative;margin:auto;background:conic-gradient(var(--high) 0 var(--pct),#1f324c var(--pct) 100%)}.ring:after{content:"";position:absolute;inset:14px;border-radius:50%;background:var(--panel);border:1px solid #263b56}.inner{z-index:1;text-align:center}.score{font-size:58px;font-weight:850;line-height:1}.label{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1.4px}.level{font-size:25px;font-weight:850}.delta{display:inline-block;margin-top:8px;padding:6px 9px;border-radius:9px;background:rgba(255,159,67,.12);color:#ffd0a3;font-weight:750}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:15px}.metric{padding:12px;border:1px solid #223853;border-radius:12px;background:rgba(8,17,31,.42)}.metric b{font-size:23px}.metric span{display:block;color:var(--muted);font-size:11px;margin-top:2px}.tempo{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.tempo>div{padding:11px;border:1px solid #243a56;border-radius:12px;background:rgba(8,17,31,.34)}.section{font-size:16px;font-weight:800;margin:0 0 12px}.factors{display:grid;grid-template-columns:1fr 1fr;gap:10px}.factor{padding:11px;border:1px solid #243a56;border-radius:12px;background:rgba(8,17,31,.34)}.frow{display:flex;justify-content:space-between;gap:8px;font-size:13px;font-weight:700}.bar{height:8px;background:#1f324c;border-radius:99px;overflow:hidden;margin-top:8px}.fill{height:100%;border-radius:99px}.trend{font-size:11px;color:var(--muted);margin-top:5px}.watch{padding:11px 12px;border-left:4px solid var(--warn);background:rgba(8,17,31,.4);border-radius:0 10px 10px 0;margin-bottom:9px}.watch.critical{border-left-color:var(--critical)}.watch.high{border-left-color:var(--high)}.watch h3{font-size:14px;margin:0 0 4px}.watch p{font-size:12px;color:var(--muted);margin:0;line-height:1.45}.headline{padding:11px 0;border-bottom:1px solid #223853}.headline:last-child{border-bottom:0}.headline a{color:var(--text);font-weight:750;text-decoration:none}.headline p{margin:4px 0 0;color:var(--muted);font-size:12px;line-height:1.45}.chart{height:330px}.footer{margin-top:16px;padding:13px 15px;border:1px solid var(--line);border-radius:14px;color:var(--muted);font-size:12px;line-height:1.5}.error{display:none;background:#351b25;border:1px solid #6b2f40;color:#ffc4cc;padding:12px;border-radius:12px;margin-bottom:14px}
+@media(max-width:980px){.grid{grid-template-columns:1fr}.scorePanel{grid-template-columns:1fr}}@media(max-width:620px){.wrap{padding:13px}.header{flex-direction:column}.metrics,.factors,.tempo{grid-template-columns:1fr}h1{font-size:24px}.chart{height:280px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div id="err" class="error">Dashboard data could not be loaded. Try refreshing.</div>
+<div class="header"><div><h1>Global Escalation Early-Warning Dashboard</h1><div class="sub">Daily systemic-risk assessment compared with the pre-WWII escalation path. This is an analytical early-warning index, not a probability of world war.</div></div><div class="status" id="updated">Loading…</div></div>
+<div class="grid">
+<div>
+  <div class="panel scorePanel">
+    <div class="ring" id="ring" style="--pct:0%"><div class="inner"><div class="score" id="score">—</div><div class="label">Current index</div></div></div>
+    <div><div class="level" id="level">Loading assessment…</div><div class="delta" id="delta">—</div>
+      <p class="small" id="summary"></p>
+      <div class="metrics">
+        <div class="metric"><b id="mScore">—</b><span>Current index</span></div>
+        <div class="metric"><b>91</b><span>Summer 1939 reference</span></div>
+        <div class="metric"><b id="m24">—</b><span>Latest change</span></div>
+        <div class="metric"><b id="m7">—</b><span>7-day change</span></div>
+      </div>
+      <div class="tempo"><div><b id="tactical"></b><div class="small">Tactical tempo</div></div><div><b id="strategic"></b><div class="small">Strategic trajectory</div></div></div>
+    </div>
+  </div>
+  <div class="panel" style="margin-top:16px"><div class="section">Daily index trend</div><div class="chart"><svg id="chart" viewBox="0 0 900 330" style="width:100%;height:100%"></svg></div></div>
+  <div class="panel" style="margin-top:16px"><div class="section">Current factor scores</div><div class="factors" id="factors"></div></div>
+</div>
+<div>
+  <div class="panel"><div class="section">Latest drivers</div><div class="small"><b>Primary escalation driver</b><p id="driver"></p><b>Primary stabilizer</b><p id="stabilizer"></p></div></div>
+  <div class="panel" style="margin-top:16px"><div class="section">Today's headlines</div><div id="headlines"></div></div>
+  <div class="panel" style="margin-top:16px"><div class="section">Areas to watch</div><div id="watch"></div></div>
+</div>
+</div>
+<div class="footer"><b>Methodology:</b> Ten factors are scored 0–10 using a fixed rubric and weighted to produce the 0–100 index. The daily automation researches current reporting, updates factor scores and explanations, computes the index mechanically, and retains the historical series. Scores are analytical judgments, not probabilities.</div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+function c(v){return v>=9?"var(--critical)":v>=8?"var(--high)":v>=6?"var(--warn)":"var(--good)"}
+function signed(n){return (n>0?"+":"")+n}
+function draw(history){
+ const svg=$("chart"),W=900,H=330,L=50,R=20,T=15,B=45,w=W-L-R,h=H-T-B;
+ const y=v=>T+(100-v)/100*h, x=i=>L+(history.length<2?0:(i/(history.length-1))*w);
+ let o="";
+ [0,20,40,60,80,100].forEach(v=>{o+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="#223853"/><text x="${L-9}" y="${y(v)+4}" text-anchor="end" fill="#9cb0c9" font-size="11">${v}</text>`});
+ o+=`<line x1="${L}" x2="${W-R}" y1="${y(91)}" y2="${y(91)}" stroke="#ff5c6c" stroke-dasharray="7 6"/><text x="${W-R}" y="${y(91)-6}" text-anchor="end" fill="#ff8793" font-size="11">Summer 1939 reference · 91</text>`;
+ if(history.length){let p=history.map((d,i)=>(i?"L":"M")+x(i)+","+y(d.score)).join(" ");o+=`<path d="${p}" fill="none" stroke="#ff9f43" stroke-width="3"/>`;history.forEach((d,i)=>o+=`<circle cx="${x(i)}" cy="${y(d.score)}" r="4.5" fill="#ff9f43"><title>${d.date}: ${d.score}</title></circle>`)}
+ svg.innerHTML=o;
+}
+async function boot(){
+ try{
+  const r=await fetch("dashboard.json?t="+Date.now(),{cache:"no-store"}); if(!r.ok)throw 0; const d=await r.json();
+  $("updated").textContent="Updated · "+d.as_of;
+  $("score").textContent=d.index;$("mScore").textContent=d.index;$("ring").style.setProperty("--pct",d.index+"%");
+  $("level").textContent=d.risk_level+" — "+(d.index>=85?"Severe systemic escalation":d.index>=60?"Elevated systemic escalation":"Heightened monitoring");
+  $("delta").textContent="Latest "+signed(d.change_24h)+" · 7-day "+signed(d.change_7d);
+  $("m24").textContent=signed(d.change_24h);$("m7").textContent=signed(d.change_7d);
+  $("summary").textContent="The index is being updated daily from current reporting using a fixed 10-factor scoring model.";
+  $("tactical").textContent=d.tactical_tempo;$("strategic").textContent=d.strategic_tempo;
+  $("driver").textContent=d.primary_driver;$("stabilizer").textContent=d.primary_stabilizer;
+  $("factors").innerHTML=d.factors.map(f=>`<div class="factor"><div class="frow"><span>${f.name}</span><span>${f.score}/10</span></div><div class="bar"><div class="fill" style="width:${f.score*10}%;background:${c(f.score)}"></div></div><div class="trend">${f.trend}</div></div>`).join("");
+  $("headlines").innerHTML=d.headlines.map(h=>`<div class="headline"><a href="${h.url}" target="_blank" rel="noopener">${h.title}</a><p>${h.summary}</p></div>`).join("");
+  $("watch").innerHTML=d.areas_to_watch.map(w=>`<div class="watch ${w.severity}"><h3>${w.name}</h3><p>${w.why}</p></div>`).join("");
+  draw(d.history);
+ }catch(e){$("err").style.display="block"}
+}
+boot();
+</script>
+</body>
+</html>

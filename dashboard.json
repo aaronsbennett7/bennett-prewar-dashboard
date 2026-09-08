@@ -1,0 +1,158 @@
+{
+  "as_of": "2026-09-08",
+  "updated_at": "2026-09-08T08:42:00-04:00",
+  "index": 84,
+  "previous_index": 82,
+  "change_24h": 2,
+  "change_7d": 5,
+  "risk_level": "HIGH",
+  "tactical_tempo": "ACCELERATING",
+  "strategic_tempo": "ACCELERATING",
+  "primary_driver": "Middle East expansion and Gulf energy/shipping coupling",
+  "primary_stabilizer": "Active Ukraine diplomacy and continued U.S.\u2013China engagement",
+  "factors": [
+    {
+      "key": "multiple_wars",
+      "name": "Multiple simultaneous wars",
+      "score": 9,
+      "trend": "stable",
+      "weight": 10
+    },
+    {
+      "key": "direct_combat",
+      "name": "Direct major-power/state combat",
+      "score": 8,
+      "trend": "rising",
+      "weight": 15
+    },
+    {
+      "key": "alliances",
+      "name": "Alliance hardening",
+      "score": 7,
+      "trend": "stable",
+      "weight": 10
+    },
+    {
+      "key": "rearmament",
+      "name": "Rearmament / arms production",
+      "score": 9,
+      "trend": "rising",
+      "weight": 10
+    },
+    {
+      "key": "mobilization",
+      "name": "Military mobilization / readiness",
+      "score": 7,
+      "trend": "stable",
+      "weight": 15
+    },
+    {
+      "key": "territorial_revisionism",
+      "name": "Territorial revisionism",
+      "score": 9,
+      "trend": "stable",
+      "weight": 10
+    },
+    {
+      "key": "economic_warfare",
+      "name": "Economic / energy warfare",
+      "score": 10,
+      "trend": "rising",
+      "weight": 8
+    },
+    {
+      "key": "hostile_rhetoric",
+      "name": "Hostile rhetoric / threats",
+      "score": 9,
+      "trend": "rising",
+      "weight": 5
+    },
+    {
+      "key": "conflict_coupling",
+      "name": "Conflict coupling",
+      "score": 10,
+      "trend": "rising",
+      "weight": 12
+    },
+    {
+      "key": "diplomatic_breakdown",
+      "name": "Diplomatic breakdown",
+      "score": 5,
+      "trend": "easing",
+      "weight": 5
+    }
+  ],
+  "headlines": [
+    {
+      "title": "Middle East conflict expansion and Gulf infrastructure risk",
+      "summary": "Regional attacks increasingly connect U.S.\u2013Iran confrontation, Gulf states, energy infrastructure, shipping and global commodity risk.",
+      "url": "https://www.reuters.com/world/middle-east/",
+      "impact": "up"
+    },
+    {
+      "title": "Hormuz remains a global escalation channel",
+      "summary": "Shipping disruption and threats to Gulf energy infrastructure can transmit regional conflict into energy, inflation and alliance pressure.",
+      "url": "https://www.reuters.com/business/energy/",
+      "impact": "up"
+    },
+    {
+      "title": "Ukraine diplomacy remains active",
+      "summary": "Continued high-level diplomatic engagement is a meaningful stabilizer despite sustained battlefield pressure.",
+      "url": "https://www.reuters.com/world/europe/",
+      "impact": "down"
+    }
+  ],
+  "areas_to_watch": [
+    {
+      "name": "NATO\u2013Russia direct engagement",
+      "severity": "critical",
+      "why": "Any sustained kinetic exchange would be a structural shift and likely cause a multi-point jump."
+    },
+    {
+      "name": "Chinese blockade or quarantine of Taiwan",
+      "severity": "critical",
+      "why": "A blockade or quarantine would create an immediate major-power alliance decision point."
+    },
+    {
+      "name": "Prolonged closure of Hormuz",
+      "severity": "high",
+      "why": "A sustained closure would sharply increase economic-warfare and conflict-coupling scores."
+    },
+    {
+      "name": "Saudi / Gulf retaliation cycle",
+      "severity": "high",
+      "why": "Watch whether attacks generate broader retaliation and deeper Iranian involvement."
+    },
+    {
+      "name": "Large-scale reserve or industrial mobilization",
+      "severity": "high",
+      "why": "This remains one of the clearest differences from immediate pre-war 1939 conditions."
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-09-03",
+      "score": 79
+    },
+    {
+      "date": "2026-09-06",
+      "score": 81
+    },
+    {
+      "date": "2026-09-07",
+      "score": 82
+    },
+    {
+      "date": "2026-09-08",
+      "score": 84
+    }
+  ],
+  "methodology": {
+    "note": "Analytical early-warning index, not a probability forecast.",
+    "formula": "Weighted average of ten 0\u201310 factor scores, multiplied by 10 and rounded.",
+    "historical_reference": {
+      "summer_1939": 91,
+      "general_war": 100
+    }
+  }
+}
