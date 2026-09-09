@@ -1,15 +1,15 @@
 {
-  "as_of": "2026-09-08",
-  "updated_at": "2026-09-08T13:27:45.960Z",
-  "index": 87,
-  "previous_index": 82,
+  "as_of": "2026-09-09",
+  "updated_at": "2026-09-09T11:26:19.112Z",
+  "index": 92,
+  "previous_index": 87,
   "change_24h": 5,
-  "change_7d": 8,
+  "change_7d": 13,
   "risk_level": "SEVERE",
   "tactical_tempo": "ACCELERATING",
   "strategic_tempo": "ACCELERATING",
-  "primary_driver": "The U.S.-Iran war is widening through Houthi attacks on Saudi energy infrastructure, while Russian strikes on Kyiv resumed during active U.S.-Ukraine diplomacy.",
-  "primary_stabilizer": "Active U.S.-Ukraine diplomatic contacts and the scheduled NATO Ukraine Defence Contact Group meeting preserve limited crisis-management channels.",
+  "primary_driver": "Renewed U.S.-Iran direct strikes, Iranian attacks on U.S. forces and Gulf targets, and expanding proxy and energy spillover.",
+  "primary_stabilizer": "Active but weak diplomatic channels, alongside continuing NATO-led military support and coordination for Ukraine.",
   "factors": [
     {
       "key": "multiple_wars",
@@ -21,15 +21,15 @@
     {
       "key": "direct_combat",
       "name": "Direct major-power/state combat",
-      "score": 9,
+      "score": 10,
       "trend": "rising",
       "weight": 15
     },
     {
       "key": "alliances",
       "name": "Alliance hardening",
-      "score": 7,
-      "trend": "stable",
+      "score": 8,
+      "trend": "rising",
       "weight": 10
     },
     {
@@ -42,7 +42,7 @@
     {
       "key": "mobilization",
       "name": "Military mobilization / readiness",
-      "score": 8,
+      "score": 9,
       "trend": "rising",
       "weight": 15
     },
@@ -64,81 +64,86 @@
       "key": "hostile_rhetoric",
       "name": "Hostile rhetoric / threats",
       "score": 10,
-      "trend": "rising",
+      "trend": "stable",
       "weight": 5
     },
     {
       "key": "conflict_coupling",
       "name": "Conflict coupling",
       "score": 10,
-      "trend": "rising",
+      "trend": "stable",
       "weight": 12
     },
     {
       "key": "diplomatic_breakdown",
       "name": "Diplomatic breakdown",
-      "score": 4,
-      "trend": "easing",
+      "score": 6,
+      "trend": "rising",
       "weight": 5
     }
   ],
   "headlines": [
     {
-      "title": "Houthi strikes set fire to Saudi oil sites and wound 73",
-      "summary": "Iran-backed Houthi attacks on Saudi cities, energy facilities and utilities materially widen the U.S.-Iran conflict beyond the immediate theater and raise the risk of Gulf-state entry or retaliation.",
-      "url": "https://apnews.com/article/4ad9446f0bb8c096750c84b6e1ba86b8",
+      "title": "U.S. military says it destroyed five Iranian oil tankers after missile attacks on Navy warship",
+      "summary": "The exchange represents a renewed round of direct U.S.-Iran combat after attacks on U.S. naval forces. Iranian missile launches toward U.S. targets in Jordan expand the geographic exposure of American allies and raise the risk of further retaliation.",
+      "url": "https://apnews.com/article/dfc9a1d9c9a5b8bc7b47fcc004025e65",
       "impact": "up"
     },
     {
-      "title": "Russian ballistic missiles hit Kyiv as U.S. envoys leave",
-      "summary": "Russia resumed missile attacks on Kyiv shortly after U.S. negotiators departed, demonstrating continued high-intensity combat despite renewed diplomatic efforts and prompting Polish military aviation activity.",
-      "url": "https://www.marketscreener.com/news/russian-ballistic-missiles-hit-kyiv-as-us-envoys-leave-ce785bd8d889fe23",
+      "title": "Oil rises past $100 a barrel after latest wave of Middle East attacks",
+      "summary": "Attacks on oil facilities and shipping are producing a material global energy shock, reinforcing the economic and strategic consequences of the Iran conflict beyond the immediate theater.",
+      "url": "https://apnews.com/article/7538e6386a819bcdc2547d530ec3472e",
       "impact": "up"
     },
     {
-      "title": "Zelenskyy says U.S. envoys brought ideas to end Russia's war",
-      "summary": "The reported exchange of potentially useful proposals provides a limited stabilizing channel, although it has not yet produced a ceasefire or restrained Russian operations.",
-      "url": "https://apnews.com/article/fd634a6786462bc95b7dfefc97d2331e",
-      "impact": "down"
-    },
-    {
-      "title": "Oil rises as risks of prolonged Middle East conflict heighten supply worries",
-      "summary": "Higher oil prices and renewed risk premiums around the Strait of Hormuz show that military escalation is producing immediate global economic effects and increasing pressure on energy security.",
-      "url": "https://www.marketscreener.com/news/oil-rises-as-risks-of-prolonged-mideast-conflict-heighten-supply-worries-ce785bd8d981f326",
+      "title": "Iran is forging a new ring of proxies to threaten U.S. allies in the Gulf, officials say",
+      "summary": "Iran-linked militias and the Houthis are being used to pressure Saudi Arabia and other U.S. partners, while the Yemen ceasefire is described as being in tatters. This increases the probability of conflict coupling across the Gulf, Iraq, Yemen, Israel and U.S. forces.",
+      "url": "https://apnews.com/article/41b104b908daeb58ad1d714224f8f570",
       "impact": "up"
     },
     {
-      "title": "NATO Secretary General attends Ukraine Defence Contact Group meeting",
-      "summary": "The meeting signals continued allied military support and institutional coordination for Ukraine, reinforcing alliance cohesion while also sustaining the risk of protracted confrontation with Russia.",
-      "url": "https://nato.int/en/news-and-events/events",
-      "impact": "neutral"
+      "title": "NATO secretary general welcomes new support for Ukraine and urges nations to continue to step up",
+      "summary": "New pledges and continued NATO coordination are hardening the Western support structure for Ukraine, particularly for air defense. The support reduces Ukraine’s immediate vulnerability but also sustains a prolonged high-intensity confrontation with Russia.",
+      "url": "https://nato.int/en/news-and-events/articles/news/2026/09/08/nato-secretary-general-welcomes-new-support-for-ukraine-urges-nations-to-continue-to-step-up",
+      "impact": "up"
+    },
+    {
+      "title": "Zelenskyy urges more international pressure on Russia over civilian deaths",
+      "summary": "Continuing Russian missile and drone attacks against Ukrainian cities show no operational de-escalation. Kyiv’s appeal for stronger pressure, alongside the absence of a breakthrough in diplomacy, indicates persistent escalation pressure in Europe.",
+      "url": "https://apnews.com/article/6670c99dcc9ed149a2bd9c0deac455cf",
+      "impact": "up"
     }
   ],
   "areas_to_watch": [
     {
-      "name": "Saudi Arabia and Gulf energy infrastructure",
+      "name": "U.S.-Iran and Gulf military exchange",
       "severity": "critical",
-      "why": "Further Houthi or Iranian attacks on oil, gas, ports or utilities could trigger direct Saudi or broader Gulf military retaliation and disrupt global energy flows."
+      "why": "Further Iranian attacks on U.S. forces, Jordan, Saudi Arabia, Bahrain or Kuwait could trigger a larger regional campaign and direct involvement by additional states."
     },
     {
       "name": "Strait of Hormuz and commercial shipping",
       "severity": "critical",
-      "why": "Threats to shipping and exposed energy assets create a high-impact pathway from regional combat to global economic and military escalation."
+      "why": "Threats to tankers and attacks on energy infrastructure could produce a sustained supply shock, naval escalation and pressure for wider maritime operations."
     },
     {
-      "name": "U.S.-Iran escalation ladder",
-      "severity": "critical",
-      "why": "Additional U.S. strikes, Iranian attacks on American forces or shipping, or attacks on Gulf partners could end the current intermittent pattern and produce sustained regional war."
-    },
-    {
-      "name": "Ukraine-Russia front and NATO airspace",
+      "name": "Iran-linked proxy activation",
       "severity": "high",
-      "why": "Missile attacks near or across NATO borders, combined with Ukrainian strikes on Russian infrastructure, could create pressure for direct alliance involvement."
+      "why": "Expansion by Iraqi militias, the Houthis, Hezbollah or other aligned groups would couple multiple conflicts and complicate attempts to contain the Iran war."
     },
     {
-      "name": "U.S.-Ukraine-Russia diplomacy",
+      "name": "Russia-Ukraine strike intensity",
       "severity": "high",
-      "why": "Diplomatic contacts are active but fragile; continued Russian attacks during negotiations could discredit the process and close the remaining de-escalation channel."
+      "why": "Continued attacks on Ukrainian cities and critical infrastructure, combined with accelerating Western air-defense support, preserve a high risk of further escalation and miscalculation."
+    },
+    {
+      "name": "Diplomatic channels and ceasefire durability",
+      "severity": "high",
+      "why": "The absence of a breakthrough in U.S.-Russia-Ukraine diplomacy and the weakening of Middle Eastern ceasefires could shift the system from managed escalation toward open-ended confrontation."
+    },
+    {
+      "name": "Alliance force-posture changes",
+      "severity": "medium",
+      "why": "New NATO support commitments, U.S. deployments and regional partner readiness measures could materially alter deterrence dynamics if they move from support and defense toward direct combat roles."
     }
   ],
   "history": [
@@ -157,6 +162,10 @@
     {
       "date": "2026-09-08",
       "score": 87
+    },
+    {
+      "date": "2026-09-09",
+      "score": 92
     }
   ],
   "methodology": {
