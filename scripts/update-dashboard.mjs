@@ -209,22 +209,70 @@ IMPORTANT
 const body = {
   model: "gpt-5.6-luna",
   tools: [{ type: "web_search" }],
-  input: prompt
+  input: prompt,
+  // Keep the reserved output allowance well below the account TPM limit.
+  // The dashboard JSON normally needs far less than this.
+  max_output_tokens: 10000
 };
 
-const response = await fetch("https://api.openai.com/v1/responses", {
-  method: "POST",
-  headers: {
-    "Authorization": `Bearer ${API_KEY}`,
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify(body)
-});
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-if (!response.ok) {
-  throw new Error(`OpenAI API ${response.status}: ${await response.text()}`);
+async function callOpenAIWithRetry(requestBody) {
+  const maxAttempts = 4;
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    const response = await fetch("https://api.openai.com/v1/responses", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${API_KEY}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(requestBody)
+    });
+
+    if (response.ok) return response;
+
+    const errorText = await response.text();
+
+    // Retry only temporary rate-limit errors. Other API errors should fail immediately.
+    if (response.status !== 429 || attempt === maxAttempts) {
+      throw new Error(`OpenAI API ${response.status}: ${errorText}`);
+    }
+
+    // Prefer the server's Retry-After header. If unavailable, use the
+    // "try again in Xs" value from the response body, otherwise exponential backoff.
+    let delayMs = 15000 * (2 ** (attempt - 1));
+
+    const retryAfter = response.headers.get("retry-after");
+    if (retryAfter) {
+      const seconds = Number(retryAfter);
+      if (Number.isFinite(seconds) && seconds > 0) {
+        delayMs = Math.max(delayMs, Math.ceil(seconds * 1000));
+      }
+    }
+
+    const bodyDelay = errorText.match(/try again in\s+([0-9.]+)s/i);
+    if (bodyDelay) {
+      const seconds = Number(bodyDelay[1]);
+      if (Number.isFinite(seconds) && seconds > 0) {
+        delayMs = Math.max(delayMs, Math.ceil(seconds * 1000) + 1000);
+      }
+    }
+
+    // Small jitter prevents repeated synchronized retries.
+    delayMs += Math.floor(Math.random() * 1500);
+
+    console.warn(
+      `OpenAI rate limit (429), attempt ${attempt}/${maxAttempts}. ` +
+      `Retrying in ${Math.ceil(delayMs / 1000)}s...`
+    );
+    await sleep(delayMs);
+  }
+
+  throw new Error("OpenAI request failed after retries");
 }
 
+const response = await callOpenAIWithRetry(body);
 const raw = await response.json();
 let text = raw.output_text || "";
 if (!text) {
