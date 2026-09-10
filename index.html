@@ -3,73 +3,352 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Global Escalation Early-Warning Dashboard</title>
+<meta name="color-scheme" content="dark">
+<meta name="description" content="All-hazards early warning of global disruptions that could affect energy, trade, infrastructure, finance, supply chains, and household readiness.">
+<title>Global Disruption & Preparedness Dashboard</title>
 <style>
-:root{--bg:#08111f;--panel:#0d1a2d;--panel2:#11213a;--line:#29415f;--text:#eef4ff;--muted:#9cb0c9;--good:#47d18c;--warn:#f4c95d;--high:#ff9f43;--critical:#ff5c6c;--accent:#5ea2ff}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% 0%,rgba(94,162,255,.15),transparent 28%),var(--bg);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text)}
-.wrap{max-width:1450px;margin:auto;padding:22px}.header{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:16px}h1{margin:0 0 6px;font-size:30px}.sub,.small{color:var(--muted);line-height:1.5}.status{padding:8px 11px;border:1px solid var(--line);border-radius:999px;color:var(--muted);white-space:nowrap}.grid{display:grid;grid-template-columns:1.25fr .75fr;gap:16px}.panel{background:linear-gradient(180deg,rgba(17,33,58,.96),rgba(13,26,45,.96));border:1px solid var(--line);border-radius:18px;padding:18px}.scorePanel{display:grid;grid-template-columns:205px 1fr;gap:18px;align-items:center}.ring{width:185px;height:185px;border-radius:50%;display:grid;place-items:center;position:relative;margin:auto;background:conic-gradient(var(--high) 0 var(--pct),#1f324c var(--pct) 100%)}.ring:after{content:"";position:absolute;inset:14px;border-radius:50%;background:var(--panel);border:1px solid #263b56}.inner{z-index:1;text-align:center}.score{font-size:58px;font-weight:850;line-height:1}.label{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1.4px}.level{font-size:25px;font-weight:850}.delta{display:inline-block;margin-top:8px;padding:6px 9px;border-radius:9px;background:rgba(255,159,67,.12);color:#ffd0a3;font-weight:750}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:15px}.metric{padding:12px;border:1px solid #223853;border-radius:12px;background:rgba(8,17,31,.42)}.metric b{font-size:23px}.metric span{display:block;color:var(--muted);font-size:11px;margin-top:2px}.tempo{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.tempo>div{padding:11px;border:1px solid #243a56;border-radius:12px;background:rgba(8,17,31,.34)}.section{font-size:16px;font-weight:800;margin:0 0 12px}.factors{display:grid;grid-template-columns:1fr 1fr;gap:10px}.factor{padding:11px;border:1px solid #243a56;border-radius:12px;background:rgba(8,17,31,.34)}.frow{display:flex;justify-content:space-between;gap:8px;font-size:13px;font-weight:700}.bar{height:8px;background:#1f324c;border-radius:99px;overflow:hidden;margin-top:8px}.fill{height:100%;border-radius:99px}.trend{font-size:11px;color:var(--muted);margin-top:5px}.watch{padding:11px 12px;border-left:4px solid var(--warn);background:rgba(8,17,31,.4);border-radius:0 10px 10px 0;margin-bottom:9px}.watch.critical{border-left-color:var(--critical)}.watch.high{border-left-color:var(--high)}.watch h3{font-size:14px;margin:0 0 4px}.watch p{font-size:12px;color:var(--muted);margin:0;line-height:1.45}.headline{padding:11px 0;border-bottom:1px solid #223853}.headline:last-child{border-bottom:0}.headline a{color:var(--text);font-weight:750;text-decoration:none}.headline p{margin:4px 0 0;color:var(--muted);font-size:12px;line-height:1.45}.chart{height:330px}.footer{margin-top:16px;padding:13px 15px;border:1px solid var(--line);border-radius:14px;color:var(--muted);font-size:12px;line-height:1.5}.error{display:none;background:#351b25;border:1px solid #6b2f40;color:#ffc4cc;padding:12px;border-radius:12px;margin-bottom:14px}
-@media(max-width:980px){.grid{grid-template-columns:1fr}.scorePanel{grid-template-columns:1fr}}@media(max-width:620px){.wrap{padding:13px}.header{flex-direction:column}.metrics,.factors,.tempo{grid-template-columns:1fr}h1{font-size:24px}.chart{height:280px}}
+:root{
+  --bg:#07111d; --bg2:#0a1625; --sidebar:#071523; --panel:#0c1b2d; --panel2:#10233a;
+  --line:#24415e; --line2:#1a324c; --text:#eef5ff; --muted:#9fb2c8; --blue:#54a8ff;
+  --cyan:#45d7ff; --green:#48d28b; --yellow:#f6d257; --orange:#ff9b42; --red:#ff586c;
+  --shadow:0 16px 40px rgba(0,0,0,.22);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  background:
+    radial-gradient(circle at 64% -12%,rgba(41,126,207,.18),transparent 34%),
+    linear-gradient(180deg,#07111d,#081523 46%,#07111d);
+  min-height:100vh;
+}
+a{color:inherit}
+button,select{font:inherit}
+.shell{display:grid;grid-template-columns:214px minmax(0,1fr);min-height:100vh}
+.sidebar{
+  position:sticky;top:0;height:100vh;padding:22px 14px 18px;border-right:1px solid var(--line2);
+  background:linear-gradient(180deg,rgba(6,21,35,.98),rgba(7,18,31,.96));display:flex;flex-direction:column;z-index:10
+}
+.brand{display:flex;align-items:center;gap:11px;padding:2px 8px 24px}
+.brandmark{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;border:1px solid #287bb0;background:radial-gradient(circle at 38% 32%,#1f94cb,#0a3d62 58%,#071523);font-weight:900;color:#b8efff}
+.brandtext b{display:block;font-size:15px;letter-spacing:.07em}.brandtext span{font-size:9px;color:var(--muted);letter-spacing:.13em}
+.nav{display:grid;gap:6px}
+.nav a{display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:9px;text-decoration:none;color:#bdd0e4;font-size:14px;border:1px solid transparent}
+.nav a:hover{background:#0d2741;border-color:#173c5e}.nav a.active{background:linear-gradient(90deg,#0f3c63,#0c2945);border-color:#1c5f8d;color:#75caff}
+.navicon{width:23px;text-align:center;font-weight:800}
+.badge{font-size:9px;background:var(--red);color:white;padding:2px 6px;border-radius:99px;margin-left:auto}
+.sidequote{margin-top:auto;padding:18px 10px 6px;color:#9db1c8;font-family:Georgia,serif;font-style:italic;line-height:1.5;font-size:15px}
+.sidequote:after{content:"";display:block;width:44px;border-top:1px solid #33516d;margin-top:14px}
+.main{min-width:0;padding:18px 18px 12px}
+.header{position:relative;overflow:hidden;border-bottom:1px solid rgba(38,70,98,.55);padding:0 2px 16px;margin-bottom:14px}
+.header:after{content:"";position:absolute;right:-4%;top:-50px;width:48%;height:140px;background:
+  radial-gradient(circle at 20% 60%,rgba(69,215,255,.18) 0 2px,transparent 3px),
+  radial-gradient(circle at 38% 42%,rgba(69,215,255,.16) 0 2px,transparent 3px),
+  radial-gradient(circle at 54% 68%,rgba(69,215,255,.16) 0 2px,transparent 3px),
+  linear-gradient(90deg,transparent,rgba(40,119,182,.08));opacity:.7;pointer-events:none}
+.headrow{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;position:relative;z-index:1}
+h1{font-size:30px;line-height:1.1;margin:0 0 5px;letter-spacing:-.02em}
+.subtitle{color:#b7c7d9;font-size:13px}
+.status{display:flex;align-items:center;gap:7px;border:1px solid #285173;border-radius:999px;padding:8px 12px;color:#c5d7e8;font-size:12px;white-space:nowrap;background:rgba(6,18,31,.55)}
+.dotlive{width:9px;height:9px;border-radius:50%;background:#4ee59b;box-shadow:0 0 12px rgba(78,229,155,.75)}
+.error{display:none;padding:12px 14px;margin-bottom:13px;border-radius:10px;background:#3a1720;border:1px solid #713040;color:#ffd1d7}
+.gridTop{display:grid;grid-template-columns:1.35fr .92fr;gap:12px}
+.hero{display:grid;grid-template-columns:226px minmax(0,1fr);gap:14px;align-items:stretch}
+.card{border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,rgba(13,31,50,.96),rgba(10,25,42,.96));box-shadow:var(--shadow)}
+.pad{padding:15px}
+.gaugeBox{display:grid;place-items:center;min-height:210px}
+.gauge{--pct:0%;--gaugeColor:var(--orange);width:178px;height:178px;border-radius:50%;position:relative;display:grid;place-items:center;background:conic-gradient(var(--gaugeColor) 0 var(--pct),#263b52 var(--pct) 100%);box-shadow:0 0 28px rgba(255,155,66,.14)}
+.gauge:after{content:"";position:absolute;inset:13px;border-radius:50%;background:radial-gradient(circle at 50% 25%,#102239,#091827 72%);border:1px solid #263f5a}
+.ginner{z-index:1;text-align:center}.gscore{font-size:53px;font-weight:850;line-height:.95}.glabel{font-size:11px;color:#c9d6e5;margin-top:8px}.gstage{font-size:17px;font-weight:850;color:var(--orange);margin-top:5px}
+.heroRight{display:grid;grid-template-rows:auto 1fr;gap:11px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.kpi{padding:12px 12px 10px;border:1px solid var(--line);border-radius:10px;background:rgba(10,27,46,.82);min-height:97px}
+.kpiHead{display:flex;align-items:center;gap:9px;color:#c9d5e3;font-size:11px}.ki{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-weight:900;background:#142c48;color:#8dcbff}
+.kpiVal{font-size:31px;font-weight:850;line-height:1;margin:8px 0 5px 41px}.delta{font-size:11px;margin-left:5px}.delta.up{color:var(--red)}.delta.down{color:var(--green)}.delta.flat{color:var(--muted)}
+.spark{height:2px;background:linear-gradient(90deg,transparent,#2c577a 35%,#538fc0);margin-left:41px;border-radius:9px}
+.info{display:grid;align-content:center;gap:8px;padding:12px 14px;border:1px solid #245278;border-radius:10px;background:linear-gradient(90deg,rgba(23,73,112,.35),rgba(9,28,46,.3));font-size:12px;color:#d5e1ee;line-height:1.45}
+.infoLine{display:flex;gap:9px;align-items:flex-start}.infoIcon{color:#68bcff;font-weight:900}.window{color:#acc1d6;font-size:11px}
+.stageCard{padding:16px;display:flex;flex-direction:column;justify-content:space-between;min-height:221px}
+.sectionTitle{font-size:16px;font-weight:800;margin:0 0 12px}.stageTop{display:flex;justify-content:space-between;gap:10px}.higher{font-size:10px;color:var(--red);font-weight:750}
+.stageTrack{display:grid;grid-template-columns:repeat(6,1fr);align-items:start;margin:18px 2px 12px;position:relative}
+.stageTrack:before{content:"";position:absolute;top:9px;left:4%;right:4%;height:4px;border-radius:6px;background:linear-gradient(90deg,var(--green),var(--yellow),var(--orange),var(--red),#9c2948)}
+.stageStep{position:relative;z-index:1;text-align:center}.stageNode{width:18px;height:18px;border-radius:50%;margin:auto;background:#15304a;border:2px solid #46627c;box-shadow:0 0 0 3px #0b1c2d}
+.stageStep.active .stageNode{background:var(--orange);border-color:#ffe079;box-shadow:0 0 0 4px #3e3516,0 0 16px rgba(255,179,58,.8)}
+.stageName{margin-top:9px;font-size:9px;color:#b8c8d8;line-height:1.2;text-transform:uppercase}.stageStep.active .stageName{color:#ffd15e;font-weight:850}
+.quote{text-align:right;color:#9fb0c1;font-family:Georgia,serif;font-style:italic;font-size:13px}
+.midgrid{display:grid;grid-template-columns:1.42fr .72fr .78fr;gap:12px;margin-top:12px}
+.trendCard{padding:14px}.trendHead{display:flex;justify-content:space-between;gap:12px;align-items:center}.period{display:flex;gap:6px}.pill{border:1px solid #244564;border-radius:6px;padding:5px 9px;color:#b5c4d3;font-size:10px;background:#0a1a2c}.pill.active{background:#133857;color:#8cd4ff}
+.chartWrap{display:grid;grid-template-columns:minmax(0,1fr) 215px;gap:12px}.chart{height:185px}.chart svg{width:100%;height:100%}
+.analogs{border:1px solid var(--line2);border-radius:9px;background:rgba(7,20,34,.42);padding:10px}
+.analogHead{font-size:12px;font-weight:800}.analogNote{font-size:9px;color:var(--muted);margin:3px 0 8px}.analog{display:flex;justify-content:space-between;gap:8px;padding:7px 0;border-bottom:1px solid #1d344a;font-size:11px}.analog:last-child{border-bottom:0}.analog span:first-child:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--orange);margin-right:7px}
+.listCard{padding:14px}.driver,.watchItem{display:flex;gap:9px;align-items:center;padding:10px 2px;border-bottom:1px solid #1c354d;font-size:12px}.driver:last-child,.watchItem:last-child{border-bottom:0}
+.sevDot{width:12px;height:12px;border-radius:50%;flex:0 0 auto}.sevDot.critical{background:var(--red)}.sevDot.high{background:var(--orange)}.sevDot.medium{background:var(--yellow)}
+.driverNote{margin-left:auto;border:1px solid #8e2f39;background:#38151c;color:#ff7b88;padding:3px 6px;border-radius:5px;font-size:9px}
+.watchIcon{width:25px;height:25px;border-radius:7px;background:#103653;display:grid;place-items:center;color:#80ceff;font-size:10px;font-weight:900}.chev{margin-left:auto;color:#7691a9}
+.bottomGrid{display:grid;grid-template-columns:1.23fr .87fr .92fr;gap:12px;margin-top:12px}
+.impactCard{padding:14px}.impactSub{font-size:10px;color:var(--muted);margin-top:-8px;margin-bottom:11px}.impactHeader,.impactRow{display:grid;grid-template-columns:1.2fr .86fr .72fr;gap:12px;align-items:center}.impactHeader{font-size:10px;color:#b6c6d6;padding:7px 0;border-bottom:1px solid #1f3a53}.impactRow{padding:8px 0;border-bottom:1px solid #152f46}.impactRow:last-child{border-bottom:0}.domainName{font-size:11px;display:flex;align-items:center;gap:7px}.domainKey{width:22px;height:22px;border-radius:6px;background:#0d304b;display:grid;place-items:center;color:#74ccff;font-size:9px;font-weight:850}
+.barWrap{display:grid;grid-template-columns:minmax(40px,1fr) 27px;align-items:center;gap:7px}.bar{height:9px;border-radius:99px;background:#1d344a;overflow:hidden}.fill{height:100%;border-radius:99px}.num{font-size:10px;font-weight:850}
+.actionsCard{padding:14px}.action{display:flex;gap:9px;margin:10px 0;font-size:11px;line-height:1.35;color:#d1dce8}.check{width:17px;height:17px;border-radius:50%;background:#164a38;color:#6cf0af;display:grid;place-items:center;flex:0 0 auto;font-size:10px;font-weight:900}
+.actionCallout{margin-top:14px;border:1px solid #244969;border-radius:9px;padding:10px 12px;background:#0d2a45;color:#bfd1e3;font-size:11px}.actionCallout b{color:#dfeaf5}
+.rightStack{display:grid;gap:12px}.signalsCard,.stabilizersCard{padding:14px}.signalsHead{display:flex;justify-content:space-between;gap:10px}.signalsHead span{font-size:10px;color:#69bfff}
+.signal{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:9px;align-items:center;padding:9px 0;border-bottom:1px solid #1b344c}.signal:last-child{border-bottom:0}
+.signalIcon{width:34px;height:34px;border-radius:6px;background:linear-gradient(135deg,#163c59,#0a2135);display:grid;place-items:center;font-size:9px;font-weight:850;color:#8ad3ff;border:1px solid #1d4b6e}.signalTitle{font-size:10px;line-height:1.25;text-decoration:none}.signalTitle:hover{text-decoration:underline}.meta{display:flex;align-items:center;gap:6px;margin-top:4px;color:#8fa4b9;font-size:8px}.cat{border:1px solid #2a638c;border-radius:4px;padding:2px 4px;color:#7fd1ff}.cat.ENERGY{border-color:#8c3340;color:#ff7784}.cat.TRADE{border-color:#92592b;color:#ffac65}.cat.STABILIZER{border-color:#27734c;color:#6ee6a6}
+.signalTime{font-size:8px;color:#8da2b7;text-align:right;white-space:nowrap}
+.stab{display:flex;gap:8px;margin:8px 0;font-size:10px;line-height:1.35;color:#c9d6e2}
+.footer{margin-top:12px;border-top:1px solid #1f3a54;padding:12px 2px 3px;display:flex;justify-content:space-between;gap:18px;color:#8fa5bb;font-size:9px}.footerLinks{display:flex;gap:15px}.footer a{text-decoration:none}.footer a:hover{color:#d5e4f2}
+.methodology{margin-top:12px;padding:13px 15px;border:1px solid #1f3c56;border-radius:10px;background:rgba(6,20,33,.45);color:#8fa6bd;font-size:10px;line-height:1.5}
+.methodology b{color:#c7d7e5}
+@media(max-width:1200px){
+ .shell{grid-template-columns:72px minmax(0,1fr)}.sidebar{padding:18px 8px}.brandtext,.nav a span:not(.navicon),.sidequote{display:none}.brand{justify-content:center;padding-left:0;padding-right:0}.nav a{justify-content:center}.badge{position:absolute;margin-left:22px;margin-top:-18px}
+ .gridTop{grid-template-columns:1fr}.midgrid{grid-template-columns:1fr 1fr}.trendCard{grid-column:1/-1}.bottomGrid{grid-template-columns:1fr 1fr}.rightStack{grid-column:1/-1;grid-template-columns:1.2fr .8fr}
+}
+@media(max-width:800px){
+ .shell{display:block}.sidebar{position:static;height:auto;display:block;border-right:0;border-bottom:1px solid var(--line2);padding:10px}.brand{display:none}.nav{display:flex;overflow-x:auto}.nav a{flex:0 0 auto;padding:9px 10px}.nav a span:not(.navicon){display:inline}.main{padding:13px}.headrow{flex-direction:column}h1{font-size:24px}.status{align-self:flex-start}
+ .hero{grid-template-columns:1fr}.gaugeBox{min-height:195px}.kpis{grid-template-columns:1fr}.gridTop,.midgrid,.bottomGrid{grid-template-columns:1fr}.trendCard{grid-column:auto}.chartWrap{grid-template-columns:1fr}.rightStack{grid-column:auto;grid-template-columns:1fr}.stageName{font-size:7px}.impactHeader,.impactRow{grid-template-columns:1.05fr .95fr .8fr}.footer{flex-direction:column}
+}
 </style>
 </head>
 <body>
-<div class="wrap">
-<div id="err" class="error">Dashboard data could not be loaded. Try refreshing.</div>
-<div class="header"><div><h1>Global Escalation Early-Warning Dashboard</h1><div class="sub">Daily systemic-risk assessment compared with the pre-WWII escalation path. This is an analytical early-warning index, not a probability of world war.</div></div><div class="status" id="updated">Loading…</div></div>
-<div class="grid">
-<div>
-  <div class="panel scorePanel">
-    <div class="ring" id="ring" style="--pct:0%"><div class="inner"><div class="score" id="score">—</div><div class="label">Current index</div></div></div>
-    <div><div class="level" id="level">Loading assessment…</div><div class="delta" id="delta">—</div>
-      <p class="small" id="summary"></p>
-      <div class="metrics">
-        <div class="metric"><b id="mScore">—</b><span>Current index</span></div>
-        <div class="metric"><b>91</b><span>Summer 1939 reference</span></div>
-        <div class="metric"><b id="m24">—</b><span>Latest change</span></div>
-        <div class="metric"><b id="m7">—</b><span>7-day change</span></div>
+<div class="shell">
+  <aside class="sidebar">
+    <div class="brand"><div class="brandmark">GW</div><div class="brandtext"><b>GLOBAL WATCH</b><span>A SAFER TOMORROW</span></div></div>
+    <nav class="nav">
+      <a class="active" href="#top"><span class="navicon">⌂</span><span>Dashboard</span></a>
+      <a href="#impact-pathways"><span class="navicon">◎</span><span>Global Threats</span></a>
+      <a href="#trend"><span class="navicon">↗</span><span>Analysis</span></a>
+      <a href="#preparedness"><span class="navicon">✓</span><span>Preparedness</span></a>
+      <a href="#watch"><span class="navicon">!</span><span>Alerts</span><span id="alertBadge" class="badge">0</span></a>
+      <a href="#methodology"><span class="navicon">⚙</span><span>Methodology</span></a>
+    </nav>
+    <div class="sidequote">“Greater resilience for a more stable tomorrow.”</div>
+  </aside>
+
+  <main class="main" id="top">
+    <div id="err" class="error">Dashboard data could not be loaded. Try refreshing the page.</div>
+    <header class="header">
+      <div class="headrow">
+        <div>
+          <h1>Global Disruption &amp; Preparedness Dashboard</h1>
+          <div class="subtitle">Early warning of major global disruptions that could affect energy, trade, infrastructure, and household readiness.</div>
+        </div>
+        <div class="status"><span class="dotlive"></span><span id="updated">Loading…</span></div>
       </div>
-      <div class="tempo"><div><b id="tactical"></b><div class="small">Tactical tempo</div></div><div><b id="strategic"></b><div class="small">Strategic trajectory</div></div></div>
+    </header>
+
+    <section class="gridTop">
+      <div class="card pad hero">
+        <div class="gaugeBox">
+          <div id="gauge" class="gauge" style="--pct:0%"><div class="ginner"><div id="score" class="gscore">—</div><div class="glabel">Preparedness Urgency</div><div id="stage" class="gstage">LOADING</div></div></div>
+        </div>
+        <div class="heroRight">
+          <div class="kpis">
+            <div class="kpi"><div class="kpiHead"><span class="ki">C</span><span>Conflict Escalation</span></div><div class="kpiVal"><span id="conflict">—</span><span id="conflictDelta" class="delta flat"></span></div><div class="spark"></div></div>
+            <div class="kpi"><div class="kpiHead"><span class="ki">T</span><span>Leading Threat Pressure</span></div><div class="kpiVal"><span id="threat">—</span><span id="threatDelta" class="delta flat"></span></div><div class="spark"></div></div>
+            <div class="kpi"><div class="kpiHead"><span class="ki">I</span><span>Observed Civilian Disruption</span></div><div class="kpiVal"><span id="impact">—</span><span id="impactDelta" class="delta flat"></span></div><div class="spark"></div></div>
+          </div>
+          <div class="info">
+            <div class="infoLine"><span class="infoIcon">i</span><span id="summary">Loading current assessment…</span></div>
+            <div class="infoLine window"><span class="infoIcon">◷</span><span>Estimated preparedness window: <b id="window">—</b></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card stageCard">
+        <div>
+          <div class="stageTop"><div class="sectionTitle">Preparedness Stage</div><div class="higher">HIGHER RISKS AHEAD →</div></div>
+          <div id="stageTrack" class="stageTrack"></div>
+        </div>
+        <div class="quote">“Awareness today. Options tomorrow.”</div>
+      </div>
+    </section>
+
+    <section class="midgrid" id="trend">
+      <div class="card trendCard">
+        <div class="trendHead"><div class="sectionTitle">Preparedness Urgency Trend</div><div class="period"><span class="pill active">7D</span><span class="pill">30D</span><span class="pill">90D</span><span class="pill">1Y</span></div></div>
+        <div class="chartWrap">
+          <div class="chart"><svg id="chart" viewBox="0 0 620 190" role="img" aria-label="Preparedness urgency trend"></svg></div>
+          <div class="analogs">
+            <div class="analogHead">Historical analogs</div>
+            <div id="historicalNote" class="analogNote">Context only</div>
+            <div id="analogs"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card listCard">
+        <div class="sectionTitle">What's Driving Today's Score</div>
+        <div id="drivers"></div>
+      </div>
+
+      <div class="card listCard" id="watch">
+        <div class="sectionTitle">Areas to Watch</div>
+        <div id="watchList"></div>
+      </div>
+    </section>
+
+    <section class="bottomGrid">
+      <div class="card impactCard" id="impact-pathways">
+        <div class="sectionTitle">Impact Pathways</div>
+        <div class="impactSub">How key threats could affect global systems (0–100). Threat is forward-looking; current impact is already observed.</div>
+        <div class="impactHeader"><div>Threat</div><div>Threat Level</div><div>Current Impact</div></div>
+        <div id="domains"></div>
+      </div>
+
+      <div class="card actionsCard" id="preparedness">
+        <div class="sectionTitle">What a Household Should Do at This Level</div>
+        <div id="actions"></div>
+        <div class="actionCallout"><b>Practical steps today increase your options tomorrow.</b><br>Preparedness guidance is stage-based and deliberately avoids panic buying or hoarding.</div>
+      </div>
+
+      <div class="rightStack">
+        <div class="card signalsCard">
+          <div class="signalsHead"><div class="sectionTitle">Latest Signals</div><span>Source-linked</span></div>
+          <div id="signals"></div>
+        </div>
+        <div class="card stabilizersCard">
+          <div class="sectionTitle">Primary Stabilizers</div>
+          <div id="stabilizers"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="methodology" id="methodology">
+      <b>Methodology:</b> <span id="methodNote">Loading…</span><br>
+      <span id="methodFormula"></span><br>
+      <span id="methodGuardrails"></span>
     </div>
-  </div>
-  <div class="panel" style="margin-top:16px"><div class="section">Daily index trend</div><div class="chart"><svg id="chart" viewBox="0 0 900 330" style="width:100%;height:100%"></svg></div></div>
-  <div class="panel" style="margin-top:16px"><div class="section">Current factor scores</div><div class="factors" id="factors"></div></div>
+
+    <footer class="footer">
+      <div>Global Disruption &amp; Preparedness Dashboard &nbsp;|&nbsp; Intelligence for a more resilient tomorrow.</div>
+      <div class="footerLinks"><a href="#methodology">Methodology</a><a href="#watch">Watch List</a><a href="#preparedness">Preparedness</a></div>
+    </footer>
+  </main>
 </div>
-<div>
-  <div class="panel"><div class="section">Latest drivers</div><div class="small"><b>Primary escalation driver</b><p id="driver"></p><b>Primary stabilizer</b><p id="stabilizer"></p></div></div>
-  <div class="panel" style="margin-top:16px"><div class="section">Today's headlines</div><div id="headlines"></div></div>
-  <div class="panel" style="margin-top:16px"><div class="section">Areas to watch</div><div id="watch"></div></div>
-</div>
-</div>
-<div class="footer"><b>Methodology:</b> Ten factors are scored 0–10 using a fixed rubric and weighted to produce the 0–100 index. The daily automation researches current reporting, updates factor scores and explanations, computes the index mechanically, and retains the historical series. Scores are analytical judgments, not probabilities.</div>
-</div>
+
 <script>
-const $=id=>document.getElementById(id);
-function c(v){return v>=9?"var(--critical)":v>=8?"var(--high)":v>=6?"var(--warn)":"var(--good)"}
-function signed(n){return (n>0?"+":"")+n}
-function draw(history){
- const svg=$("chart"),W=900,H=330,L=50,R=20,T=15,B=45,w=W-L-R,h=H-T-B;
- const y=v=>T+(100-v)/100*h, x=i=>L+(history.length<2?0:(i/(history.length-1))*w);
- let o="";
- [0,20,40,60,80,100].forEach(v=>{o+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="#223853"/><text x="${L-9}" y="${y(v)+4}" text-anchor="end" fill="#9cb0c9" font-size="11">${v}</text>`});
- o+=`<line x1="${L}" x2="${W-R}" y1="${y(91)}" y2="${y(91)}" stroke="#ff5c6c" stroke-dasharray="7 6"/><text x="${W-R}" y="${y(91)-6}" text-anchor="end" fill="#ff8793" font-size="11">Summer 1939 reference · 91</text>`;
- if(history.length){let p=history.map((d,i)=>(i?"L":"M")+x(i)+","+y(d.score)).join(" ");o+=`<path d="${p}" fill="none" stroke="#ff9f43" stroke-width="3"/>`;history.forEach((d,i)=>o+=`<circle cx="${x(i)}" cy="${y(d.score)}" r="4.5" fill="#ff9f43"><title>${d.date}: ${d.score}</title></circle>`)}
- svg.innerHTML=o;
+const $ = id => document.getElementById(id);
+const stages = ["NORMAL","WATCH","PREPARE","ACCELERATE","IMMINENT DISRUPTION","ACTIVE DISRUPTION"];
+
+function scoreColor(v){
+  return v>=85?"var(--red)":v>=70?"var(--orange)":v>=55?"var(--yellow)":v>=40?"#75d6a7":"var(--green)";
+}
+function signed(n){
+  if(n===null || n===undefined || Number.isNaN(n)) return "";
+  return `${n>0?"▲ +":n<0?"▼ ":""}${n}`;
+}
+function deltaClass(n){return n>0?"up":n<0?"down":"flat"}
+function esc(s){
+  return String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[m]));
+}
+function previous(history, key){
+  if(!history || history.length<2) return 0;
+  const a=history[history.length-1]?.[key], b=history[history.length-2]?.[key];
+  return Number.isFinite(a)&&Number.isFinite(b)?a-b:0;
+}
+function formatUpdated(d){
+  const dt = new Date(d);
+  if(Number.isNaN(dt.getTime())) return d;
+  return new Intl.DateTimeFormat(undefined,{month:"short",day:"numeric",year:"numeric"}).format(dt);
+}
+function formatSignalTime(value, asOf){
+  if(!value) return formatUpdated(asOf);
+  if(/^\d{4}-\d{2}-\d{2}$/.test(value)) return formatUpdated(value+"T12:00:00Z");
+  const dt=new Date(value); if(Number.isNaN(dt.getTime())) return value;
+  const diff=Date.now()-dt.getTime();
+  if(diff>=0 && diff<48*3600*1000){
+    const h=Math.max(1,Math.round(diff/3600000)); return `${h}h ago`;
+  }
+  return new Intl.DateTimeFormat(undefined,{month:"short",day:"numeric"}).format(dt);
+}
+function renderStage(active){
+  $("stageTrack").innerHTML=stages.map(s=>`<div class="stageStep ${s===active?"active":""}"><div class="stageNode"></div><div class="stageName">${esc(s)}</div></div>`).join("");
+}
+function drawChart(history){
+  const svg=$("chart"), W=620,H=190,L=34,R=10,T=12,B=28,w=W-L-R,h=H-T-B;
+  const recent=(history||[]).slice(-30);
+  const ys=recent.map(x=>x.preparedness).filter(Number.isFinite);
+  const ymin=ys.length?Math.max(0,Math.floor((Math.min(...ys)-10)/10)*10):0;
+  const ymax=ys.length?Math.min(100,Math.ceil((Math.max(...ys)+10)/10)*10):100;
+  const span=Math.max(20,ymax-ymin);
+  const y=v=>T+(ymax-v)/span*h;
+  const x=i=>L+(recent.length<2?w/2:(i/(recent.length-1))*w);
+  let out="";
+  for(let v=ymin;v<=ymax;v+=10){
+    out+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="#1b344a"/><text x="${L-7}" y="${y(v)+4}" text-anchor="end" fill="#8fa6bd" font-size="9">${v}</text>`;
+  }
+  if(recent.length){
+    const pts=recent.map((d,i)=>`${x(i)},${y(d.preparedness)}`).join(" ");
+    out+=`<polyline points="${pts}" fill="none" stroke="#f6c945" stroke-width="2.5"/>`;
+    recent.forEach((d,i)=>{
+      const label=new Intl.DateTimeFormat(undefined,{month:"short",day:"numeric"}).format(new Date(d.date+"T12:00:00Z"));
+      out+=`<circle cx="${x(i)}" cy="${y(d.preparedness)}" r="3.8" fill="#ffd34f"><title>${esc(label)}: ${d.preparedness}</title></circle>`;
+      if(recent.length<=10) out+=`<text x="${x(i)}" y="${Math.max(10,y(d.preparedness)-8)}" text-anchor="middle" fill="#dce8f3" font-size="9">${d.preparedness}</text><text x="${x(i)}" y="${H-8}" text-anchor="middle" fill="#8fa6bd" font-size="8">${esc(label)}</text>`;
+    });
+  } else {
+    out+=`<text x="${W/2}" y="${H/2}" text-anchor="middle" fill="#8fa6bd" font-size="12">Trend history begins with the new methodology.</text>`;
+  }
+  svg.innerHTML=out;
 }
 async function boot(){
- try{
-  const r=await fetch("dashboard.json?t="+Date.now(),{cache:"no-store"}); if(!r.ok)throw 0; const d=await r.json();
-  $("updated").textContent="Updated · "+d.as_of;
-  $("score").textContent=d.index;$("mScore").textContent=d.index;$("ring").style.setProperty("--pct",d.index+"%");
-  $("level").textContent=d.risk_level+" — "+(d.index>=85?"Severe systemic escalation":d.index>=60?"Elevated systemic escalation":"Heightened monitoring");
-  $("delta").textContent="Latest "+signed(d.change_24h)+" · 7-day "+signed(d.change_7d);
-  $("m24").textContent=signed(d.change_24h);$("m7").textContent=signed(d.change_7d);
-  $("summary").textContent="The index is being updated daily from current reporting using a fixed 10-factor scoring model.";
-  $("tactical").textContent=d.tactical_tempo;$("strategic").textContent=d.strategic_tempo;
-  $("driver").textContent=d.primary_driver;$("stabilizer").textContent=d.primary_stabilizer;
-  $("factors").innerHTML=d.factors.map(f=>`<div class="factor"><div class="frow"><span>${f.name}</span><span>${f.score}/10</span></div><div class="bar"><div class="fill" style="width:${f.score*10}%;background:${c(f.score)}"></div></div><div class="trend">${f.trend}</div></div>`).join("");
-  $("headlines").innerHTML=d.headlines.map(h=>`<div class="headline"><a href="${h.url}" target="_blank" rel="noopener">${h.title}</a><p>${h.summary}</p></div>`).join("");
-  $("watch").innerHTML=d.areas_to_watch.map(w=>`<div class="watch ${w.severity}"><h3>${w.name}</h3><p>${w.why}</p></div>`).join("");
-  draw(d.history);
- }catch(e){$("err").style.display="block"}
+  try{
+    const r=await fetch(`dashboard.json?t=${Date.now()}`,{cache:"no-store"});
+    if(!r.ok) throw new Error("dashboard.json unavailable");
+    const d=await r.json();
+
+    $("updated").textContent=`Updated ${formatUpdated(d.as_of)}`;
+    $("score").textContent=d.preparedness_urgency;
+    $("stage").textContent=d.preparedness_stage;
+    $("gauge").style.setProperty("--pct",`${d.preparedness_urgency}%`);
+    $("gauge").style.setProperty("--gaugeColor",scoreColor(d.preparedness_urgency));
+    $("stage").style.color=scoreColor(d.preparedness_urgency);
+    $("conflict").textContent=d.conflict_escalation;
+    $("threat").textContent=d.leading_threat_pressure;
+    $("impact").textContent=d.observed_civilian_disruption;
+    $("summary").textContent=d.summary;
+    $("window").textContent=d.preparedness_window;
+
+    const dc=previous(d.history,"conflict"), dt=previous(d.history,"threat"), di=previous(d.history,"impact");
+    [["conflictDelta",dc],["threatDelta",dt],["impactDelta",di]].forEach(([id,v])=>{$(id).textContent=v?signed(v):"";$(id).className=`delta ${deltaClass(v)}`});
+
+    renderStage(d.preparedness_stage);
+    drawChart(d.history);
+
+    $("historicalNote").textContent=d.historical_note || "Context only; not used in the live score.";
+    $("analogs").innerHTML=(d.historical_analogs||[]).map(a=>`<div class="analog"><span>${esc(a.name)}</span><b>${a.score??"—"}</b></div>`).join("");
+
+    $("drivers").innerHTML=(d.drivers||[]).map(x=>`<div class="driver"><span class="sevDot ${esc(x.severity)}"></span><span>${esc(x.name)}</span>${x.note?`<span class="driverNote">${esc(x.note)}</span>`:""}</div>`).join("");
+
+    $("watchList").innerHTML=(d.areas_to_watch||[]).map((x,i)=>`<div class="watchItem" title="${esc(x.why)}"><span class="watchIcon">${i+1}</span><span>${esc(x.name)}</span><span class="chev">›</span></div>`).join("");
+    $("alertBadge").textContent=(d.areas_to_watch||[]).filter(x=>x.severity==="critical").length;
+
+    $("domains").innerHTML=(d.domains||[]).map((x,i)=>`
+      <div class="impactRow" title="${esc(x.rationale)}">
+        <div class="domainName"><span class="domainKey">${esc(x.name.slice(0,1))}</span><span>${esc(x.name)}</span></div>
+        <div class="barWrap"><div class="bar"><div class="fill" style="width:${x.threat}%;background:${scoreColor(x.threat)}"></div></div><span class="num" style="color:${scoreColor(x.threat)}">${x.threat}</span></div>
+        <div class="barWrap"><div class="bar"><div class="fill" style="width:${x.impact}%;background:${scoreColor(x.impact)}"></div></div><span class="num" style="color:${scoreColor(x.impact)}">${x.impact}</span></div>
+      </div>`).join("");
+
+    $("actions").innerHTML=(d.preparedness_actions||[]).map(x=>`<div class="action"><span class="check">✓</span><span>${esc(x)}</span></div>`).join("");
+
+    $("signals").innerHTML=(d.signals||[]).slice(0,6).map(x=>`
+      <div class="signal">
+        <div class="signalIcon">${esc(x.category.slice(0,3))}</div>
+        <div>
+          <a class="signalTitle" href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.title)}</a>
+          <div class="meta"><span class="cat ${esc(x.category)}">${esc(x.category)}</span><span>${esc(x.source)}</span></div>
+        </div>
+        <div class="signalTime">${esc(formatSignalTime(x.published_at,d.as_of))}</div>
+      </div>`).join("");
+
+    $("stabilizers").innerHTML=(d.primary_stabilizers||[]).map(x=>`<div class="stab"><span class="check">✓</span><span>${esc(x)}</span></div>`).join("");
+
+    $("methodNote").textContent=d.methodology?.note||"";
+    $("methodFormula").textContent=d.methodology?.formula||"";
+    $("methodGuardrails").textContent=d.methodology?.stage_guardrails||"";
+  }catch(e){
+    console.error(e);
+    $("err").style.display="block";
+  }
 }
 boot();
 </script>

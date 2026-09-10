@@ -1,189 +1,281 @@
 {
+  "schema_version": 2,
   "as_of": "2026-09-10",
-  "updated_at": "2026-09-10T11:25:10.115Z",
-  "index": 96,
-  "previous_index": 92,
-  "change_24h": 4,
-  "change_7d": 17,
-  "risk_level": "SEVERE",
-  "tactical_tempo": "ACCELERATING",
-  "strategic_tempo": "ACCELERATING",
-  "primary_driver": "Direct U.S.-Iran combat is widening through attacks on Gulf energy infrastructure, shipping routes, and Iranian-aligned forces, while Russia's war against Ukraine continues to generate spillover risk into NATO airspace.",
-  "primary_stabilizer": "Active diplomatic and support channels remain open through NATO, the Ukraine Defence Contact Group, presidential travel, and UN nuclear-monitoring mechanisms, although none has yet produced durable de-escalation.",
-  "factors": [
+  "updated_at": "2026-09-10T15:15:00Z",
+  "preparedness_urgency": 78,
+  "preparedness_stage": "ACCELERATE",
+  "leading_threat_pressure": 85,
+  "observed_civilian_disruption": 64,
+  "conflict_escalation": 88,
+  "coupling_score": 80,
+  "preparedness_window": "Weeks, not days",
+  "summary": "Normal systems remain broadly functional, but multiple leading indicators are deteriorating. Complete reasonable preparations before shortages or access constraints worsen.",
+  "primary_driver": "Energy security and Gulf shipping disruption are the strongest near-term pathways to wider civilian-facing economic stress.",
+  "primary_stabilizers": [
+    "Global trade, finance, and energy systems are still functioning and adapting.",
+    "No direct NATO\u2013Russia or U.S.\u2013China war is underway.",
+    "Alternative energy routes, reserves, and diplomatic channels continue to provide partial buffers."
+  ],
+  "domains": [
     {
-      "key": "multiple_wars",
-      "name": "Multiple simultaneous wars",
-      "score": 10,
+      "key": "energy",
+      "name": "Energy security",
+      "threat": 92,
+      "impact": 76,
       "trend": "rising",
-      "weight": 10
+      "weight": 12,
+      "rationale": "Oil prices are above $100 and Hormuz traffic remains sharply reduced, though alternative routes and supply adaptation are limiting broader failure."
     },
     {
-      "key": "direct_combat",
-      "name": "Direct major-power/state combat",
-      "score": 10,
-      "trend": "stable",
-      "weight": 15
-    },
-    {
-      "key": "alliances",
-      "name": "Alliance hardening",
-      "score": 9,
+      "key": "military",
+      "name": "Military / geopolitical",
+      "threat": 88,
+      "impact": 58,
       "trend": "rising",
-      "weight": 10
+      "weight": 15,
+      "rationale": "The U.S.\u2013Iran conflict and continuing Russia\u2013Ukraine spillover risks elevate escalation pressure without yet producing direct great-power war."
     },
     {
-      "key": "rearmament",
-      "name": "Rearmament / arms production",
-      "score": 9,
-      "trend": "stable",
-      "weight": 10
-    },
-    {
-      "key": "mobilization",
-      "name": "Military mobilization / readiness",
-      "score": 10,
+      "key": "supply_chain",
+      "name": "Supply chain & transportation",
+      "threat": 82,
+      "impact": 64,
       "trend": "rising",
-      "weight": 15
+      "weight": 10,
+      "rationale": "Shipping risk, rerouting, insurance costs, and energy-related freight pressure are affecting global logistics."
     },
     {
-      "key": "territorial_revisionism",
-      "name": "Territorial revisionism",
-      "score": 9,
-      "trend": "stable",
-      "weight": 10
-    },
-    {
-      "key": "economic_warfare",
-      "name": "Economic / energy warfare",
-      "score": 10,
-      "trend": "stable",
-      "weight": 8
-    },
-    {
-      "key": "hostile_rhetoric",
-      "name": "Hostile rhetoric / threats",
-      "score": 10,
-      "trend": "stable",
-      "weight": 5
-    },
-    {
-      "key": "conflict_coupling",
-      "name": "Conflict coupling",
-      "score": 10,
+      "key": "trade",
+      "name": "Global trade fragmentation",
+      "threat": 78,
+      "impact": 58,
       "trend": "rising",
-      "weight": 12
+      "weight": 10,
+      "rationale": "U.S.\u2013Canada retaliation and wider tariff/export-control frictions are increasing costs and strategic supply-chain fragmentation."
     },
     {
-      "key": "diplomatic_breakdown",
-      "name": "Diplomatic breakdown",
-      "score": 7,
+      "key": "technology",
+      "name": "Technology chokepoints",
+      "threat": 76,
+      "impact": 48,
       "trend": "rising",
-      "weight": 5
+      "weight": 8,
+      "rationale": "Rare-earth and strategic-material access remains vulnerable to geopolitical restrictions and supplier hesitation."
+    },
+    {
+      "key": "critical_infrastructure",
+      "name": "Critical infrastructure / cyber",
+      "threat": 72,
+      "impact": 35,
+      "trend": "rising",
+      "weight": 12,
+      "rationale": "Subsea infrastructure and energy-sector cyber threats are elevated, but widespread civilian outages are not occurring."
+    },
+    {
+      "key": "financial",
+      "name": "Financial-system stress",
+      "threat": 62,
+      "impact": 35,
+      "trend": "rising",
+      "weight": 10,
+      "rationale": "High energy prices, inflation pressure, and elevated bond yields are stressing markets, while the IMF still reports broad global resilience."
+    },
+    {
+      "key": "food",
+      "name": "Food & agriculture",
+      "threat": 52,
+      "impact": 28,
+      "trend": "rising",
+      "weight": 8,
+      "rationale": "Energy, fertilizer, freight, and tariff costs are lifting input pressures, but a global food-supply emergency is not present."
+    },
+    {
+      "key": "domestic",
+      "name": "Domestic institutional stress",
+      "threat": 40,
+      "impact": 25,
+      "trend": "stable",
+      "weight": 5,
+      "rationale": "Political and policy friction is elevated in several countries without broad loss of institutional capacity."
+    },
+    {
+      "key": "public_health",
+      "name": "Public health / biological",
+      "threat": 30,
+      "impact": 15,
+      "trend": "stable",
+      "weight": 5,
+      "rationale": "No current public-health event is producing globally systemic disruption."
+    },
+    {
+      "key": "natural",
+      "name": "Natural / environmental",
+      "threat": 25,
+      "impact": 15,
+      "trend": "stable",
+      "weight": 5,
+      "rationale": "No current natural event is producing globally systemic disruption."
     }
   ],
-  "headlines": [
+  "drivers": [
     {
-      "title": "U.S.-Iran fighting keeps oil above $100 as Strait of Hormuz traffic remains severely disrupted",
-      "summary": "AP reports that renewed U.S.-Iran attacks are constraining energy flows through the Strait of Hormuz, with major implications for global prices, shipping, and allied economic resilience. The combination of direct combat and energy disruption raises systemic spillover risk.",
-      "url": "https://apnews.com/article/7fbc77061abd778608068d3beb1bbbaf",
-      "impact": "up"
+      "name": "Energy security",
+      "severity": "critical",
+      "note": "Primary driver"
     },
     {
-      "title": "IAEA board refers Iran to the UN Security Council",
-      "summary": "The referral represents a significant deterioration in the nuclear-diplomatic track and increases the risk of sanctions, countermeasures, and further military escalation. Russia and China may limit punitive action, but the procedural breakdown is strategically destabilizing.",
-      "url": "https://apnews.com/article/607ecdffcd8ef88ddf8f33041e86b720",
-      "impact": "up"
+      "name": "Global trade fragmentation",
+      "severity": "high",
+      "note": ""
     },
     {
-      "title": "Yemen risks renewed civil war as Iran-backed forces threaten Gulf shipping alternatives",
-      "summary": "Iran-linked Houthi activity is tying the Yemen conflict more closely to the U.S.-Iran war and to the security of Red Sea and Gulf trade routes. This creates an additional escalation pathway involving Saudi Arabia, the United States, and regional proxy forces.",
-      "url": "https://apnews.com/article/f9cb75eca9a89664db0b6e84e4161ea0",
-      "impact": "up"
+      "name": "Supply chain & transportation",
+      "severity": "high",
+      "note": ""
     },
     {
-      "title": "Zelenskyy seeks further military support in Canada as Russian drone attacks continue",
-      "summary": "Ukraine is pursuing additional external military backing while Russian strikes continue, including a deadly attack in the Kyiv region. The war remains active at high intensity and continues to draw NATO states deeper into sustained material support.",
-      "url": "https://apnews.com/article/2a74de6552061bda57a1c5aa4464db52",
-      "impact": "neutral"
+      "name": "Military / geopolitical",
+      "severity": "high",
+      "note": ""
     },
     {
-      "title": "Drone incursion disrupts Zelenskyy's flight and crosses into NATO-member Romania",
-      "summary": "A suspected Russian-type drone incident involving Moldovan and Romanian airspace demonstrates continuing spillover risk from the Ukraine war. The event did not trigger direct NATO-Russia combat but increases air-defense and alliance-alert pressures.",
-      "url": "https://apnews.com/article/bddec39fed01f4ee7673511830f09a8c",
-      "impact": "up"
-    },
-    {
-      "title": "NATO welcomes new Ukraine-support commitments from allies",
-      "summary": "NATO says allies committed additional support, including air-defense assistance and funding through established mechanisms. This strengthens alliance cohesion and Ukrainian resilience but also formalizes continued long-term confrontation with Russia.",
-      "url": "https://www.nato.int/en/news-and-events/articles/news/2026/09/08/nato-secretary-general-welcomes-new-support-for-ukraine-urges-nations-to-continue-to-step-up",
-      "impact": "up"
+      "name": "Grid / cyber",
+      "severity": "medium",
+      "note": ""
     }
   ],
   "areas_to_watch": [
     {
-      "name": "Strait of Hormuz and Gulf energy infrastructure",
+      "name": "Hormuz shipping & oil flows",
       "severity": "critical",
-      "why": "Further attacks on tankers, ports, refineries, or naval vessels could convert the existing energy shock into a broader global economic and military crisis."
+      "why": "Further tanker attacks or a deeper traffic collapse could rapidly transmit into fuel, freight, inflation, and industrial costs."
     },
     {
-      "name": "Iran-linked proxy expansion",
-      "severity": "critical",
-      "why": "Houthi, Iraqi militia, Lebanese, Syrian, or other aligned forces could widen the U.S.-Iran conflict across multiple theaters and increase pressure on Gulf states."
-    },
-    {
-      "name": "NATO airspace incidents along the eastern flank",
+      "name": "U.S.\u2013Canada / global tariff escalation",
       "severity": "high",
-      "why": "Repeated drone or missile incursions into Romania, Moldova-adjacent airspace, Poland, or the Baltic region could produce a politically difficult demand for direct alliance response."
+      "why": "Further retaliation or expansion into strategic sectors could deepen cross-border cost and availability pressure."
     },
     {
-      "name": "Iran nuclear monitoring and retaliation",
-      "severity": "critical",
-      "why": "The UN Security Council referral, disrupted verification, and continued strikes create incentives for Iran to restrict inspections or accelerate sensitive nuclear activity."
-    },
-    {
-      "name": "Ukraine support and Russian escalation",
+      "name": "Strategic cyber threats",
       "severity": "high",
-      "why": "Additional Western air-defense and long-range-strike support may improve Ukraine's position but could also prompt intensified Russian attacks on cities, logistics, or NATO-linked infrastructure."
+      "why": "Energy, telecom, financial, and subsea infrastructure remain high-consequence targets with little civilian warning time."
     },
     {
-      "name": "Diplomatic channel durability",
+      "name": "Financial stress / credit markets",
       "severity": "medium",
-      "why": "NATO, UN, and Ukraine-related diplomatic mechanisms remain active, but their failure to produce ceasefires or enforceable restraint would push the diplomatic-breakdown factor higher."
+      "why": "Energy-driven inflation and high yields could become more disruptive if liquidity or credit conditions deteriorate materially."
+    },
+    {
+      "name": "Export controls & rare earths",
+      "severity": "medium",
+      "why": "Restrictions on critical minerals and industrial inputs can create delayed but significant technology and manufacturing bottlenecks."
     }
   ],
-  "history": [
+  "signals": [
     {
-      "date": "2026-09-03",
-      "score": 79
+      "title": "Hormuz shipping traffic falls to single digits",
+      "summary": "Vessel transits through the Strait of Hormuz dropped to seven on Wednesday, while alternative Saudi Red Sea export routes are carrying more volume.",
+      "url": "https://www.reuters.com/world/middle-east/hormuz-shipping-traffic-single-digits-data-shows-2026-09-10/",
+      "source": "Reuters",
+      "published_at": "2026-09-10",
+      "category": "ENERGY",
+      "impact": "up"
     },
     {
-      "date": "2026-09-06",
-      "score": 81
+      "title": "Oil surges above $100 on renewed tanker attacks",
+      "summary": "Brent and U.S. crude both rose above $100 as attacks on shipping and energy infrastructure increased supply-risk premiums.",
+      "url": "https://www.reuters.com/business/energy/brent-holds-above-100-tanker-attacks-deepen-supply-fear-2026-09-10/",
+      "source": "Reuters",
+      "published_at": "2026-09-10",
+      "category": "ENERGY",
+      "impact": "up"
     },
     {
-      "date": "2026-09-07",
+      "title": "Canada's new counter-tariffs take effect",
+      "summary": "Canada imposed 15%, 25%, and 50% counter-tariffs on C$27.6 billion of U.S. products across steel, dairy, appliances, farm equipment, paper, plastics, and electronics.",
+      "url": "https://www.canada.ca/en/department-finance/news/2026/08/list-of-products-from-the-united-states-subject-to-counter-tariffs-effective-september-8-2026.html",
+      "source": "Government of Canada",
+      "published_at": "2026-09-08",
+      "category": "TRADE",
+      "impact": "up"
+    },
+    {
+      "title": "U.S. broadens retaliation against Canadian imports",
+      "summary": "The U.S. Trade Representative announced targeted import bans and tariff adjustments in response to Canada's retaliatory measures.",
+      "url": "https://www.ustr.gov/about/policy-offices/press-office/press-releases/2026/september/ambassador-greer-issues-statement-president-trumps-response-canadas-continued-retaliation-against",
+      "source": "USTR",
+      "published_at": "2026-09-08",
+      "category": "TRADE",
+      "impact": "up"
+    },
+    {
+      "title": "NATO allies disrupted suspected subsea cable sabotage training",
+      "summary": "Reuters reported that allied forces confronted a Russian undersea operation involving technology designed to disable critical subsea cables.",
+      "url": "https://www.reuters.com/world/europe/nato-allies-foil-russian-subsea-cable-sabotage-plot-2026-09-10/",
+      "source": "Reuters",
+      "published_at": "2026-09-10T06:03:41Z",
+      "category": "CYBER",
+      "impact": "up"
+    },
+    {
+      "title": "IMF says global growth remains resilient despite energy shock",
+      "summary": "The IMF still expects roughly 3% global growth in 2026 while warning that energy prices, debt pressure, and uncertainty remain high.",
+      "url": "https://www.reuters.com/world/china/imf-say-global-growth-track-reach-3-2026-risks-remain-high-2026-09-10/",
+      "source": "Reuters",
+      "published_at": "2026-09-10T15:07:20Z",
+      "category": "STABILIZER",
+      "impact": "down"
+    },
+    {
+      "title": "Some Chinese rare-earth suppliers halt U.S. shipments",
+      "summary": "Supplier reluctance and export-license friction are keeping several critical materials tight ahead of high-level U.S.\u2013China meetings.",
+      "url": "https://www.reuters.com/business/aerospace-defense/china-rare-earth-firms-halt-some-us-shipments-over-geopolitical-worries-sources-2026-09-04/",
+      "source": "Reuters",
+      "published_at": "2026-09-04T07:15:52Z",
+      "category": "TECH",
+      "impact": "up"
+    }
+  ],
+  "preparedness_actions": [
+    "Maintain several weeks of normal food and household consumables.",
+    "Keep prescriptions and essential medical supplies current.",
+    "Maintain a reasonable amount of emergency cash alongside normal banking access.",
+    "Keep vehicles reasonably fueled.",
+    "Verify generator, battery, solar, or other backup-power capability.",
+    "Confirm family communications and meeting plans."
+  ],
+  "historical_analogs": [
+    {
+      "name": "1973 Oil Shock",
+      "score": 85
+    },
+    {
+      "name": "2008 Financial Crisis",
+      "score": 83
+    },
+    {
+      "name": "2020 Pandemic",
       "score": 82
     },
     {
-      "date": "2026-09-08",
-      "score": 87
-    },
-    {
-      "date": "2026-09-09",
-      "score": 92
-    },
+      "name": "1939 Europe",
+      "score": 80
+    }
+  ],
+  "historical_note": "Illustrative reference markers only; not used in the live score until formal back-testing is completed.",
+  "history": [
     {
       "date": "2026-09-10",
-      "score": 96
+      "preparedness": 78,
+      "threat": 85,
+      "impact": 64,
+      "conflict": 88
     }
   ],
   "methodology": {
-    "note": "Analytical early-warning index, not a probability forecast.",
-    "formula": "Weighted average of ten 0–10 factor scores, multiplied by 10 and rounded.",
-    "historical_reference": {
-      "summer_1939": 91,
-      "general_war": 100
-    }
+    "note": "All-hazards early-warning assessment, not a probability forecast or prediction that a specific disaster will occur.",
+    "formula": "Leading Threat Pressure = mean of the four highest domain threat scores. Observed Civilian Disruption = mean of the four highest domain impact scores. Preparedness Urgency = 55% Leading Threat Pressure + 30% Observed Civilian Disruption + 15% Cross-System Coupling, rounded.",
+    "stage_guardrails": "IMMINENT DISRUPTION requires both a high urgency score and material observed disruption. ACTIVE DISRUPTION requires broad, documented system impairment; threat scores alone cannot trigger it.",
+    "domains": "Military/geopolitical, energy, trade, supply chain, technology, critical infrastructure/cyber, financial, food/agriculture, domestic institutional, public health, and natural/environmental."
   }
 }
