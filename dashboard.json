@@ -1,120 +1,122 @@
 {
   "schema_version": 2,
   "as_of": "2026-09-10",
-  "updated_at": "2026-09-10T15:15:00Z",
-  "preparedness_urgency": 78,
-  "preparedness_stage": "ACCELERATE",
-  "leading_threat_pressure": 85,
-  "observed_civilian_disruption": 64,
-  "conflict_escalation": 88,
-  "coupling_score": 80,
-  "preparedness_window": "Weeks, not days",
-  "summary": "Normal systems remain broadly functional, but multiple leading indicators are deteriorating. Complete reasonable preparations before shortages or access constraints worsen.",
-  "primary_driver": "Energy security and Gulf shipping disruption are the strongest near-term pathways to wider civilian-facing economic stress.",
+  "updated_at": "2026-09-10T18:00:37.625Z",
+  "preparedness_urgency": 86,
+  "preparedness_stage": "IMMINENT DISRUPTION",
+  "leading_threat_pressure": 93,
+  "observed_civilian_disruption": 71,
+  "conflict_escalation": 95,
+  "coupling_score": 91,
+  "preparedness_window": "Days to weeks",
+  "summary": "Global disruption conditions have deteriorated materially as the U.S.-Iran war is constricting Hormuz traffic, pushing oil above $100 per barrel, threatening Red Sea alternatives, and feeding inflation and bond-market stress. Civilian disruption is still uneven rather than systemic, but the fastest credible deterioration pathway is now measured in days to weeks through fuel, shipping, price, and financial channels.",
+  "primary_driver": "Escalating Middle East conflict is coupling maritime chokepoint disruption with an energy-price shock, inflation pressure, trade friction, and tightening financial conditions.",
   "primary_stabilizers": [
-    "Global trade, finance, and energy systems are still functioning and adapting.",
-    "No direct NATO\u2013Russia or U.S.\u2013China war is underway.",
-    "Alternative energy routes, reserves, and diplomatic channels continue to provide partial buffers."
+    "Global financial markets, payment systems, and major exchanges remain operational despite higher oil prices, falling equities, and rising bond yields.",
+    "Alternative maritime routes remain partially functional: approximately 28 commodity vessels transited the Bab el-Mandeb on September 9, near its recent average.",
+    "Existing oil inventories and emergency-stock mechanisms provide some buffer against an immediate total supply failure, even though spare capacity and reserve protection are less comfortable than earlier in the conflict.",
+    "Central banks and governments are actively responding to inflation and energy stress rather than allowing the shock to remain unmanaged.",
+    "The observed natural-disaster impacts remain geographically concentrated, with no indication of a simultaneous global weather or earthquake catastrophe."
   ],
   "domains": [
     {
       "key": "energy",
       "name": "Energy security",
-      "threat": 92,
-      "impact": 76,
+      "threat": 97,
+      "impact": 86,
       "trend": "rising",
       "weight": 12,
-      "rationale": "Oil prices are above $100 and Hormuz traffic remains sharply reduced, though alternative routes and supply adaptation are limiting broader failure."
+      "rationale": "Attacks on tankers and regional energy infrastructure have pushed Brent above $100 per barrel while sharply reducing Hormuz traffic, creating an actively unfolding risk to oil, LNG, fuel prices, and electricity costs."
     },
     {
       "key": "military",
       "name": "Military / geopolitical",
-      "threat": 88,
-      "impact": 58,
+      "threat": 95,
+      "impact": 72,
       "trend": "rising",
       "weight": 15,
-      "rationale": "The U.S.\u2013Iran conflict and continuing Russia\u2013Ukraine spillover risks elevate escalation pressure without yet producing direct great-power war."
+      "rationale": "The U.S.-Iran conflict has expanded into repeated attacks on ships, bases, and energy facilities, while Houthi forces have seized a strategic Yemeni port and increased the risk of a second maritime chokepoint crisis."
     },
     {
       "key": "supply_chain",
       "name": "Supply chain & transportation",
-      "threat": 82,
-      "impact": 64,
+      "threat": 92,
+      "impact": 70,
       "trend": "rising",
       "weight": 10,
-      "rationale": "Shipping risk, rerouting, insurance costs, and energy-related freight pressure are affecting global logistics."
+      "rationale": "Hormuz commodity-vessel transits have fallen to single digits and Red Sea security is deteriorating, raising near-term risks to tanker capacity, rerouting, insurance, delivery times, and freight costs."
     },
     {
       "key": "trade",
       "name": "Global trade fragmentation",
-      "threat": 78,
-      "impact": 58,
+      "threat": 87,
+      "impact": 55,
       "trend": "rising",
       "weight": 10,
-      "rationale": "U.S.\u2013Canada retaliation and wider tariff/export-control frictions are increasing costs and strategic supply-chain fragmentation."
+      "rationale": "The U.S.-Canada dispute has escalated from tariffs to targeted import bans and retaliation, adding a major North American trade barrier to already-fragmented global commerce."
     },
     {
       "key": "technology",
       "name": "Technology chokepoints",
-      "threat": 76,
-      "impact": 48,
-      "trend": "rising",
+      "threat": 79,
+      "impact": 42,
+      "trend": "stable",
       "weight": 8,
-      "rationale": "Rare-earth and strategic-material access remains vulnerable to geopolitical restrictions and supplier hesitation."
+      "rationale": "Export controls and concentration in advanced semiconductor equipment and critical-mineral refining remain credible disruption pathways, but current reporting shows strategic vulnerability more clearly than immediate civilian shortages."
     },
     {
       "key": "critical_infrastructure",
       "name": "Critical infrastructure / cyber",
-      "threat": 72,
-      "impact": 35,
+      "threat": 84,
+      "impact": 34,
       "trend": "rising",
       "weight": 12,
-      "rationale": "Subsea infrastructure and energy-sector cyber threats are elevated, but widespread civilian outages are not occurring."
+      "rationale": "Wartime cyber targeting of water, power, ports, telecom, and other infrastructure is a credible escalation vector, although broad cross-border outages or prolonged civilian service failures are not yet observed."
     },
     {
       "key": "financial",
       "name": "Financial-system stress",
-      "threat": 62,
-      "impact": 35,
+      "threat": 75,
+      "impact": 48,
       "trend": "rising",
       "weight": 10,
-      "rationale": "High energy prices, inflation pressure, and elevated bond yields are stressing markets, while the IMF still reports broad global resilience."
+      "rationale": "The oil shock is lifting inflation expectations and long-term bond yields, prompting central-bank tightening and increasing the risk of weaker credit, higher borrowing costs, and market stress."
     },
     {
       "key": "food",
       "name": "Food & agriculture",
-      "threat": 52,
-      "impact": 28,
+      "threat": 63,
+      "impact": 34,
       "trend": "rising",
       "weight": 8,
-      "rationale": "Energy, fertilizer, freight, and tariff costs are lifting input pressures, but a global food-supply emergency is not present."
+      "rationale": "Higher fuel, fertilizer, insurance, and freight costs are increasing food-system vulnerability, but broad global food shortages or rationing are not currently evident."
     },
     {
       "key": "domestic",
       "name": "Domestic institutional stress",
-      "threat": 40,
-      "impact": 25,
-      "trend": "stable",
+      "threat": 55,
+      "impact": 35,
+      "trend": "rising",
       "weight": 5,
-      "rationale": "Political and policy friction is elevated in several countries without broad loss of institutional capacity."
+      "rationale": "Emergency measures, wartime economic controls, trade retaliation, and political polarization could affect civilian access and prices, though widespread domestic institutional breakdown is not observed."
     },
     {
       "key": "public_health",
       "name": "Public health / biological",
-      "threat": 30,
-      "impact": 15,
+      "threat": 35,
+      "impact": 18,
       "trend": "stable",
       "weight": 5,
-      "rationale": "No current public-health event is producing globally systemic disruption."
+      "rationale": "Polio remains an international public-health emergency in affected regions, but there is no current evidence of a new pandemic-scale biological event producing broad global civilian disruption."
     },
     {
       "key": "natural",
       "name": "Natural / environmental",
-      "threat": 25,
-      "impact": 15,
-      "trend": "stable",
+      "threat": 44,
+      "impact": 38,
+      "trend": "rising",
       "weight": 5,
-      "rationale": "No current natural event is producing globally systemic disruption."
+      "rationale": "Hurricane Lowell has caused deaths, power outages, road damage, and loss of cargo-port functionality in Hawaii, demonstrating localized disruption but not a global natural-disaster cascade."
     }
   ],
   "drivers": [
@@ -124,125 +126,138 @@
       "note": "Primary driver"
     },
     {
-      "name": "Global trade fragmentation",
-      "severity": "high",
+      "name": "Military / geopolitical",
+      "severity": "critical",
       "note": ""
     },
     {
       "name": "Supply chain & transportation",
-      "severity": "high",
+      "severity": "critical",
       "note": ""
     },
     {
-      "name": "Military / geopolitical",
-      "severity": "high",
+      "name": "Global trade fragmentation",
+      "severity": "critical",
       "note": ""
     },
     {
-      "name": "Grid / cyber",
-      "severity": "medium",
+      "name": "Critical infrastructure / cyber",
+      "severity": "high",
       "note": ""
     }
   ],
   "areas_to_watch": [
     {
-      "name": "Hormuz shipping & oil flows",
+      "name": "Hormuz traffic and LNG departures",
       "severity": "critical",
-      "why": "Further tanker attacks or a deeper traffic collapse could rapidly transmit into fuel, freight, inflation, and industrial costs."
+      "why": "A sustained period of near-zero tanker and LNG movement would convert a severe price shock into physical fuel shortages, rationing, and electricity stress in import-dependent regions."
     },
     {
-      "name": "U.S.\u2013Canada / global tariff escalation",
+      "name": "Attacks on Saudi, UAE, Iraqi, or Iranian energy infrastructure",
+      "severity": "critical",
+      "why": "Additional damage to production, refining, export terminals, or pipelines could remove remaining market buffers and cause a second step-change in oil and fuel prices."
+    },
+    {
+      "name": "Bab el-Mandeb and Red Sea control",
+      "severity": "critical",
+      "why": "A simultaneous disruption of Hormuz and the Red Sea would sharply reduce viable energy and container routes and force longer, more expensive diversions."
+    },
+    {
+      "name": "Expansion of U.S.-Canada trade restrictions",
       "severity": "high",
-      "why": "Further retaliation or expansion into strategic sectors could deepen cross-border cost and availability pressure."
+      "why": "Broader bans or retaliation involving energy, food, metals, automotive inputs, or agricultural equipment would create immediate North American price and availability effects."
     },
     {
-      "name": "Strategic cyber threats",
+      "name": "Cyber incidents causing prolonged utility or telecom outages",
       "severity": "high",
-      "why": "Energy, telecom, financial, and subsea infrastructure remain high-consequence targets with little civilian warning time."
+      "why": "A confirmed multi-state or cross-border outage affecting power, water, ports, payments, GPS, or communications would rapidly increase civilian disruption beyond current market effects."
     },
     {
-      "name": "Financial stress / credit markets",
-      "severity": "medium",
-      "why": "Energy-driven inflation and high yields could become more disruptive if liquidity or credit conditions deteriorate materially."
-    },
-    {
-      "name": "Export controls & rare earths",
-      "severity": "medium",
-      "why": "Restrictions on critical minerals and industrial inputs can create delayed but significant technology and manufacturing bottlenecks."
+      "name": "Bond-market deterioration and credit-spread widening",
+      "severity": "high",
+      "why": "Persistent oil-driven inflation combined with higher sovereign yields could tighten household, business, and government financing while amplifying supply-chain stress."
     }
   ],
   "signals": [
     {
       "title": "Hormuz shipping traffic falls to single digits",
-      "summary": "Vessel transits through the Strait of Hormuz dropped to seven on Wednesday, while alternative Saudi Red Sea export routes are carrying more volume.",
-      "url": "https://www.reuters.com/world/middle-east/hormuz-shipping-traffic-single-digits-data-shows-2026-09-10/",
+      "summary": "Reuters reported that only seven commodity vessels transited the Strait of Hormuz on September 9, below the recent average, with no LNG carriers exiting. This is direct evidence of an active maritime and energy-flow disruption rather than a purely speculative threat.",
+      "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/10/hormuz-shipping-traffic-single-digits-data-shows",
       "source": "Reuters",
       "published_at": "2026-09-10",
       "category": "ENERGY",
       "impact": "up"
     },
     {
-      "title": "Oil surges above $100 on renewed tanker attacks",
-      "summary": "Brent and U.S. crude both rose above $100 as attacks on shipping and energy infrastructure increased supply-risk premiums.",
-      "url": "https://www.reuters.com/business/energy/brent-holds-above-100-tanker-attacks-deepen-supply-fear-2026-09-10/",
-      "source": "Reuters",
-      "published_at": "2026-09-10",
+      "title": "Oil remains above $100 as Middle East attacks intensify",
+      "summary": "Brent crude remained above $100 per barrel after attacks involving U.S. and Iranian forces and regional shipping. Higher oil prices are already transmitting into inflation expectations, transport costs, and household fuel exposure.",
+      "url": "https://apnews.com/article/7fbc77061abd778608068d3beb1bbbaf",
+      "source": "Associated Press",
+      "published_at": "2026-09-10T03:48:06Z",
       "category": "ENERGY",
       "impact": "up"
     },
     {
-      "title": "Canada's new counter-tariffs take effect",
-      "summary": "Canada imposed 15%, 25%, and 50% counter-tariffs on C$27.6 billion of U.S. products across steel, dairy, appliances, farm equipment, paper, plastics, and electronics.",
-      "url": "https://www.canada.ca/en/department-finance/news/2026/08/list-of-products-from-the-united-states-subject-to-counter-tariffs-effective-september-8-2026.html",
-      "source": "Government of Canada",
-      "published_at": "2026-09-08",
+      "title": "Houthi forces seize strategic Yemeni port",
+      "summary": "The reported capture of a key Yemeni port raises the risk that the Red Sea and Bab el-Mandeb become materially less reliable as an alternative to disrupted Hormuz traffic. A two-chokepoint disruption would substantially increase global freight and energy risk.",
+      "url": "https://apnews.com/article/e4e799701b382799a955969c212800ea",
+      "source": "Associated Press",
+      "published_at": "2026-09-10T14:04:28Z",
+      "category": "SUPPLY",
+      "impact": "up"
+    },
+    {
+      "title": "U.S.-Canada tariff dispute escalates to import bans",
+      "summary": "The United States has banned selected Canadian alcoholic beverages, motorcycles, and dairy products after Canada imposed retaliatory tariffs. The move indicates that the trade conflict is shifting from tariff management toward direct product restrictions.",
+      "url": "https://www.kitco.com/news/off-the-wire/2026-09-09/canadian-dollar-edges-lower-trade-war-us-intensifies",
+      "source": "Reuters",
+      "published_at": "2026-09-09T20:58:00Z",
       "category": "TRADE",
       "impact": "up"
     },
     {
-      "title": "U.S. broadens retaliation against Canadian imports",
-      "summary": "The U.S. Trade Representative announced targeted import bans and tariff adjustments in response to Canada's retaliatory measures.",
-      "url": "https://www.ustr.gov/about/policy-offices/press-office/press-releases/2026/september/ambassador-greer-issues-statement-president-trumps-response-canadas-continued-retaliation-against",
-      "source": "USTR",
-      "published_at": "2026-09-08",
-      "category": "TRADE",
+      "title": "Energy shock lifts global bond yields",
+      "summary": "Reuters reported that 10-year U.S. Treasury yields reached their highest level since 2023 as oil prices renewed inflation fears. The combination raises the risk of tighter credit and weaker economic activity even while financial plumbing remains functional.",
+      "url": "https://au.marketscreener.com/news/asian-stocks-wilt-as-brent-holds-above-100-yields-near-2023-peak-ce785bd9d88ef627",
+      "source": "Reuters",
+      "published_at": "2026-09-10T02:01:00Z",
+      "category": "FINANCE",
       "impact": "up"
     },
     {
-      "title": "NATO allies disrupted suspected subsea cable sabotage training",
-      "summary": "Reuters reported that allied forces confronted a Russian undersea operation involving technology designed to disable critical subsea cables.",
-      "url": "https://www.reuters.com/world/europe/nato-allies-foil-russian-subsea-cable-sabotage-plot-2026-09-10/",
-      "source": "Reuters",
-      "published_at": "2026-09-10T06:03:41Z",
-      "category": "CYBER",
-      "impact": "up"
-    },
-    {
-      "title": "IMF says global growth remains resilient despite energy shock",
-      "summary": "The IMF still expects roughly 3% global growth in 2026 while warning that energy prices, debt pressure, and uncertainty remain high.",
-      "url": "https://www.reuters.com/world/china/imf-say-global-growth-track-reach-3-2026-risks-remain-high-2026-09-10/",
-      "source": "Reuters",
-      "published_at": "2026-09-10T15:07:20Z",
+      "title": "European Central Bank raises rates against energy inflation",
+      "summary": "The ECB raised interest rates to counter inflation fueled by the Iran war and higher energy prices. The action is a stabilizing response but also confirms that the shock is broad enough to affect monetary policy.",
+      "url": "https://apnews.com/article/de62b59fba535fccaf6f75e52d037c63",
+      "source": "Associated Press",
+      "published_at": "2026-09-10T12:16:46Z",
       "category": "STABILIZER",
-      "impact": "down"
+      "impact": "neutral"
     },
     {
-      "title": "Some Chinese rare-earth suppliers halt U.S. shipments",
-      "summary": "Supplier reluctance and export-license friction are keeping several critical materials tight ahead of high-level U.S.\u2013China meetings.",
-      "url": "https://www.reuters.com/business/aerospace-defense/china-rare-earth-firms-halt-some-us-shipments-over-geopolitical-worries-sources-2026-09-04/",
-      "source": "Reuters",
-      "published_at": "2026-09-04T07:15:52Z",
-      "category": "TECH",
+      "title": "Hurricane Lowell disrupts Hawaii infrastructure",
+      "summary": "The storm has caused deaths, power outages, road damage, and the loss of a cargo port serving food and fuel deliveries to Lanai. The event is geographically limited but demonstrates current localized civilian disruption from a natural hazard.",
+      "url": "https://apnews.com/article/022ea2c63c979c08586ccb47063d691d",
+      "source": "Associated Press",
+      "published_at": "2026-09-10T10:34:48Z",
+      "category": "NATURAL",
       "impact": "up"
+    },
+    {
+      "title": "Polio remains an international public-health emergency",
+      "summary": "WHO extended temporary recommendations because of continuing international spread risks involving wild and circulating vaccine-derived poliovirus. The situation warrants monitoring but is not currently classified as a pandemic emergency.",
+      "url": "https://www.who.int/news/item/25-08-2026-statement-of-the-forty-fifth-meeting-of-the-polio-ihr-emergency-committee",
+      "source": "World Health Organization",
+      "published_at": "2026-08-25",
+      "category": "HEALTH",
+      "impact": "neutral"
     }
   ],
   "preparedness_actions": [
-    "Maintain several weeks of normal food and household consumables.",
-    "Keep prescriptions and essential medical supplies current.",
-    "Maintain a reasonable amount of emergency cash alongside normal banking access.",
-    "Keep vehicles reasonably fueled.",
-    "Verify generator, battery, solar, or other backup-power capability.",
-    "Confirm family communications and meeting plans."
+    "Complete previously planned purchases of essential household supplies without hoarding.",
+    "Top off normal prescriptions, fuel, water storage, and backup-power readiness where practical and lawful.",
+    "Keep additional payment options and emergency cash accessible.",
+    "Confirm family communications, transportation, and contingency plans.",
+    "Follow official emergency guidance for any affected region or infrastructure system."
   ],
   "historical_analogs": [
     {
@@ -266,10 +281,10 @@
   "history": [
     {
       "date": "2026-09-10",
-      "preparedness": 78,
-      "threat": 85,
-      "impact": 64,
-      "conflict": 88
+      "preparedness": 86,
+      "threat": 93,
+      "impact": 71,
+      "conflict": 95
     }
   ],
   "methodology": {
