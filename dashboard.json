@@ -1,296 +1,169 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "as_of": "2026-09-10",
-  "updated_at": "2026-09-10T18:00:37.625Z",
-  "preparedness_urgency": 86,
-  "preparedness_stage": "IMMINENT DISRUPTION",
-  "leading_threat_pressure": 93,
-  "observed_civilian_disruption": 71,
+  "updated_at": "2026-09-10T18:45:00Z",
+  "preparedness_urgency": 69,
+  "raw_preparedness_urgency": 69,
+  "preparedness_stage": "ACCELERATE",
+  "global_threat_pressure": 76,
+  "leading_threat_pressure": 76,
+  "observed_civilian_disruption": 50,
+  "americas_exposure": 72,
+  "americas_stage": "HIGH",
+  "americas_summary": "Current Americas exposure is being driven more by trade, energy, supply-chain, cyber, and financial transmission than by broad public disorder. Civil unrest and public order are now monitored as a dedicated domain and will rise only when violence, duration, emergency measures, or disruption to essential services materially affects civilians.",
+  "americas_components": [
+    {"name":"Global trade fragmentation","score":92,"trend":"rising"},
+    {"name":"Energy security","score":90,"trend":"rising"},
+    {"name":"Critical infrastructure / cyber","score":82,"trend":"rising"},
+    {"name":"Supply chain & transportation","score":80,"trend":"rising"},
+    {"name":"Financial-system stress","score":78,"trend":"rising"},
+    {"name":"Civil unrest / public order","score":55,"trend":"stable"}
+  ],
   "conflict_escalation": 95,
-  "coupling_score": 91,
+  "coupling_score": 85,
+  "momentum_score": 70,
+  "confidence_score": 75,
+  "confidence_level": "MODERATE",
+  "confidence_rationale": "Multiple authoritative sources support the major energy, trade, shipping, and financial signals, while some downstream civilian impacts and civil-order pathways remain uncertain or uneven.",
   "preparedness_window": "Days to weeks",
-  "summary": "Global disruption conditions have deteriorated materially as the U.S.-Iran war is constricting Hormuz traffic, pushing oil above $100 per barrel, threatening Red Sea alternatives, and feeding inflation and bond-market stress. Civilian disruption is still uneven rather than systemic, but the fastest credible deterioration pathway is now measured in days to weeks through fuel, shipping, price, and financial channels.",
-  "primary_driver": "Escalating Middle East conflict is coupling maritime chokepoint disruption with an energy-price shock, inflation pressure, trade friction, and tightening financial conditions.",
+  "summary": "Global threat conditions are severe, but broad civilian systems remain functional. The calibrated preparedness score emphasizes observed disruption, Americas exposure, persistence, and hard triggers so that high geopolitical stress does not automatically produce an imminent-disaster label.",
+  "primary_driver": "Energy and maritime disruption remain the strongest near-term transmission pathway into fuel, freight, inflation, and financial stress.",
   "primary_stabilizers": [
-    "Global financial markets, payment systems, and major exchanges remain operational despite higher oil prices, falling equities, and rising bond yields.",
-    "Alternative maritime routes remain partially functional: approximately 28 commodity vessels transited the Bab el-Mandeb on September 9, near its recent average.",
-    "Existing oil inventories and emergency-stock mechanisms provide some buffer against an immediate total supply failure, even though spare capacity and reserve protection are less comfortable than earlier in the conflict.",
-    "Central banks and governments are actively responding to inflation and energy stress rather than allowing the shock to remain unmanaged.",
-    "The observed natural-disaster impacts remain geographically concentrated, with no indication of a simultaneous global weather or earthquake catastrophe."
+    "Global financial markets, payment systems, and major exchanges remain operational.",
+    "Alternative trade and maritime routes remain partially functional.",
+    "No broad Americas civil-order breakdown is currently a leading systemic driver.",
+    "Food, banking, grid, and retail systems remain broadly functional in most of the Americas.",
+    "Government, central-bank, and emergency-management mechanisms remain active."
   ],
   "domains": [
     {
-      "key": "energy",
-      "name": "Energy security",
-      "threat": 97,
-      "impact": 86,
-      "trend": "rising",
-      "weight": 12,
-      "rationale": "Attacks on tankers and regional energy infrastructure have pushed Brent above $100 per barrel while sharply reducing Hormuz traffic, creating an actively unfolding risk to oil, LNG, fuel prices, and electricity costs."
+      "key":"energy","name":"Energy security","threat":97,"impact":86,"americas_exposure":90,"trend":"rising","weight":11,
+      "rationale":"Energy and maritime chokepoint disruption is actively affecting oil prices, shipping risk, and downstream transport costs."
     },
     {
-      "key": "military",
-      "name": "Military / geopolitical",
-      "threat": 95,
-      "impact": 72,
-      "trend": "rising",
-      "weight": 15,
-      "rationale": "The U.S.-Iran conflict has expanded into repeated attacks on ships, bases, and energy facilities, while Houthi forces have seized a strategic Yemeni port and increased the risk of a second maritime chokepoint crisis."
+      "key":"military","name":"Military / geopolitical","threat":95,"impact":72,"americas_exposure":70,"trend":"rising","weight":10,
+      "rationale":"Active interstate conflict creates substantial escalation risk, but the household score is moderated unless disruption transmits into civilian systems."
     },
     {
-      "key": "supply_chain",
-      "name": "Supply chain & transportation",
-      "threat": 92,
-      "impact": 70,
-      "trend": "rising",
-      "weight": 10,
-      "rationale": "Hormuz commodity-vessel transits have fallen to single digits and Red Sea security is deteriorating, raising near-term risks to tanker capacity, rerouting, insurance, delivery times, and freight costs."
+      "key":"supply_chain","name":"Supply chain & transportation","threat":92,"impact":70,"americas_exposure":80,"trend":"rising","weight":10,
+      "rationale":"Shipping, insurance, rerouting, and freight pressure create credible near-term availability and price effects."
     },
     {
-      "key": "trade",
-      "name": "Global trade fragmentation",
-      "threat": 87,
-      "impact": 55,
-      "trend": "rising",
-      "weight": 10,
-      "rationale": "The U.S.-Canada dispute has escalated from tariffs to targeted import bans and retaliation, adding a major North American trade barrier to already-fragmented global commerce."
+      "key":"trade","name":"Global trade fragmentation","threat":87,"impact":55,"americas_exposure":92,"trend":"rising","weight":10,
+      "rationale":"Tariffs, retaliation, import restrictions, and export controls are increasingly relevant to North American prices and supply chains."
     },
     {
-      "key": "technology",
-      "name": "Technology chokepoints",
-      "threat": 79,
-      "impact": 42,
-      "trend": "stable",
-      "weight": 8,
-      "rationale": "Export controls and concentration in advanced semiconductor equipment and critical-mineral refining remain credible disruption pathways, but current reporting shows strategic vulnerability more clearly than immediate civilian shortages."
+      "key":"technology","name":"Technology chokepoints","threat":79,"impact":42,"americas_exposure":60,"trend":"stable","weight":7,
+      "rationale":"Critical-mineral and semiconductor concentration remains a meaningful disruption pathway without broad consumer shortages at present."
     },
     {
-      "key": "critical_infrastructure",
-      "name": "Critical infrastructure / cyber",
-      "threat": 84,
-      "impact": 34,
-      "trend": "rising",
-      "weight": 12,
-      "rationale": "Wartime cyber targeting of water, power, ports, telecom, and other infrastructure is a credible escalation vector, although broad cross-border outages or prolonged civilian service failures are not yet observed."
+      "key":"critical_infrastructure","name":"Critical infrastructure / cyber","threat":84,"impact":34,"americas_exposure":82,"trend":"rising","weight":11,
+      "rationale":"Grid, telecom, payment, satellite, port, and subsea infrastructure are high-consequence targets, while widespread outages are not currently observed."
     },
     {
-      "key": "financial",
-      "name": "Financial-system stress",
-      "threat": 75,
-      "impact": 48,
-      "trend": "rising",
-      "weight": 10,
-      "rationale": "The oil shock is lifting inflation expectations and long-term bond yields, prompting central-bank tightening and increasing the risk of weaker credit, higher borrowing costs, and market stress."
+      "key":"financial","name":"Financial-system stress","threat":75,"impact":48,"americas_exposure":78,"trend":"rising","weight":10,
+      "rationale":"Energy inflation and higher yields are tightening conditions, while core banking and payment systems continue functioning."
     },
     {
-      "key": "food",
-      "name": "Food & agriculture",
-      "threat": 63,
-      "impact": 34,
-      "trend": "rising",
-      "weight": 8,
-      "rationale": "Higher fuel, fertilizer, insurance, and freight costs are increasing food-system vulnerability, but broad global food shortages or rationing are not currently evident."
+      "key":"food","name":"Food & agriculture","threat":63,"impact":34,"americas_exposure":65,"trend":"rising","weight":8,
+      "rationale":"Fuel, fertilizer, freight, and trade costs are increasing vulnerability without broad food shortages or rationing."
     },
     {
-      "key": "domestic",
-      "name": "Domestic institutional stress",
-      "threat": 55,
-      "impact": 35,
-      "trend": "rising",
-      "weight": 5,
-      "rationale": "Emergency measures, wartime economic controls, trade retaliation, and political polarization could affect civilian access and prices, though widespread domestic institutional breakdown is not observed."
+      "key":"domestic","name":"Domestic institutional stress","threat":55,"impact":35,"americas_exposure":68,"trend":"stable","weight":6,
+      "rationale":"Policy friction and emergency measures can affect civilian access, but broad institutional failure is not evident."
     },
     {
-      "key": "public_health",
-      "name": "Public health / biological",
-      "threat": 35,
-      "impact": 18,
-      "trend": "stable",
-      "weight": 5,
-      "rationale": "Polio remains an international public-health emergency in affected regions, but there is no current evidence of a new pandemic-scale biological event producing broad global civilian disruption."
+      "key":"civil_unrest","name":"Civil unrest / public order","threat":45,"impact":25,"americas_exposure":55,"trend":"stable","weight":7,
+      "rationale":"The domain now monitors riots, violent unrest, major strikes, curfews, emergency deployments, and essential-service disruption while excluding peaceful protest from elevated scoring."
     },
     {
-      "key": "natural",
-      "name": "Natural / environmental",
-      "threat": 44,
-      "impact": 38,
-      "trend": "rising",
-      "weight": 5,
-      "rationale": "Hurricane Lowell has caused deaths, power outages, road damage, and loss of cargo-port functionality in Hawaii, demonstrating localized disruption but not a global natural-disaster cascade."
+      "key":"public_health","name":"Public health / biological","threat":35,"impact":18,"americas_exposure":30,"trend":"stable","weight":5,
+      "rationale":"No current biological event is producing pandemic-scale disruption across the Americas."
+    },
+    {
+      "key":"natural","name":"Natural / environmental","threat":44,"impact":38,"americas_exposure":45,"trend":"rising","weight":5,
+      "rationale":"Localized natural hazards can be severe, but there is no current multi-region natural-disaster cascade driving global systemic risk."
     }
   ],
+  "hard_triggers": [],
+  "verified_hard_trigger_count": 0,
+  "severe_hard_trigger_count": 0,
+  "score_calibration": {
+    "raw_score": 69,
+    "published_score": 69,
+    "rate_limit_applied": false,
+    "daily_rate_limit": null,
+    "sustained_90_for_48h": false,
+    "high_impact_domain_count": 3
+  },
+  "score_components": {
+    "global_threat_pressure": 76,
+    "observed_civilian_disruption": 50,
+    "coupling": 85,
+    "momentum": 70,
+    "americas_exposure": 72
+  },
   "drivers": [
-    {
-      "name": "Energy security",
-      "severity": "critical",
-      "note": "Primary driver"
-    },
-    {
-      "name": "Military / geopolitical",
-      "severity": "critical",
-      "note": ""
-    },
-    {
-      "name": "Supply chain & transportation",
-      "severity": "critical",
-      "note": ""
-    },
-    {
-      "name": "Global trade fragmentation",
-      "severity": "critical",
-      "note": ""
-    },
-    {
-      "name": "Critical infrastructure / cyber",
-      "severity": "high",
-      "note": ""
-    }
+    {"name":"Energy security","severity":"critical","note":"Primary driver"},
+    {"name":"Military / geopolitical","severity":"critical","note":""},
+    {"name":"Supply chain & transportation","severity":"critical","note":""},
+    {"name":"Global trade fragmentation","severity":"critical","note":""},
+    {"name":"Critical infrastructure / cyber","severity":"high","note":""},
+    {"name":"Financial-system stress","severity":"high","note":""}
   ],
   "areas_to_watch": [
-    {
-      "name": "Hormuz traffic and LNG departures",
-      "severity": "critical",
-      "why": "A sustained period of near-zero tanker and LNG movement would convert a severe price shock into physical fuel shortages, rationing, and electricity stress in import-dependent regions."
-    },
-    {
-      "name": "Attacks on Saudi, UAE, Iraqi, or Iranian energy infrastructure",
-      "severity": "critical",
-      "why": "Additional damage to production, refining, export terminals, or pipelines could remove remaining market buffers and cause a second step-change in oil and fuel prices."
-    },
-    {
-      "name": "Bab el-Mandeb and Red Sea control",
-      "severity": "critical",
-      "why": "A simultaneous disruption of Hormuz and the Red Sea would sharply reduce viable energy and container routes and force longer, more expensive diversions."
-    },
-    {
-      "name": "Expansion of U.S.-Canada trade restrictions",
-      "severity": "high",
-      "why": "Broader bans or retaliation involving energy, food, metals, automotive inputs, or agricultural equipment would create immediate North American price and availability effects."
-    },
-    {
-      "name": "Cyber incidents causing prolonged utility or telecom outages",
-      "severity": "high",
-      "why": "A confirmed multi-state or cross-border outage affecting power, water, ports, payments, GPS, or communications would rapidly increase civilian disruption beyond current market effects."
-    },
-    {
-      "name": "Bond-market deterioration and credit-spread widening",
-      "severity": "high",
-      "why": "Persistent oil-driven inflation combined with higher sovereign yields could tighten household, business, and government financing while amplifying supply-chain stress."
-    }
+    {"name":"Hormuz traffic and energy flows","severity":"critical","why":"A sustained physical reduction in tanker or LNG movement could convert price stress into availability constraints."},
+    {"name":"U.S.–Canada and wider trade retaliation","severity":"high","why":"Expansion into energy, food, metals, vehicles, agricultural inputs, or critical goods could increase Americas exposure quickly."},
+    {"name":"Americas civil unrest and major strikes","severity":"high","why":"Watch for sustained violence, curfews, emergency deployments, or port, rail, trucking, border, fuel, or essential-service disruption."},
+    {"name":"Cyber incidents affecting utilities or payments","severity":"high","why":"A confirmed prolonged outage affecting power, water, telecom, ports, payments, GPS, or banking would rapidly raise observed disruption."},
+    {"name":"Financial stress and credit conditions","severity":"high","why":"Persistent inflation, funding stress, bank-access restrictions, or payment disruptions could amplify other supply shocks."},
+    {"name":"Food, fertilizer, and freight restrictions","severity":"medium","why":"Export restrictions or supply interruptions could transmit energy and trade stress into household essentials."}
   ],
   "signals": [
     {
-      "title": "Hormuz shipping traffic falls to single digits",
-      "summary": "Reuters reported that only seven commodity vessels transited the Strait of Hormuz on September 9, below the recent average, with no LNG carriers exiting. This is direct evidence of an active maritime and energy-flow disruption rather than a purely speculative threat.",
-      "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/10/hormuz-shipping-traffic-single-digits-data-shows",
-      "source": "Reuters",
-      "published_at": "2026-09-10",
-      "category": "ENERGY",
-      "impact": "up"
+      "title":"Hormuz shipping traffic remains severely constrained","summary":"Reduced maritime throughput is a direct transmission pathway into fuel, freight, insurance, and inflation pressure.","url":"https://www.reuters.com/world/middle-east/hormuz-shipping-traffic-single-digits-data-shows-2026-09-10/","source":"Reuters","published_at":"2026-09-10","category":"ENERGY","impact":"up"
     },
     {
-      "title": "Oil remains above $100 as Middle East attacks intensify",
-      "summary": "Brent crude remained above $100 per barrel after attacks involving U.S. and Iranian forces and regional shipping. Higher oil prices are already transmitting into inflation expectations, transport costs, and household fuel exposure.",
-      "url": "https://apnews.com/article/7fbc77061abd778608068d3beb1bbbaf",
-      "source": "Associated Press",
-      "published_at": "2026-09-10T03:48:06Z",
-      "category": "ENERGY",
-      "impact": "up"
+      "title":"Oil remains above $100 amid supply concerns","summary":"High energy prices are already affecting inflation expectations and transport exposure even while broad physical shortages remain uneven.","url":"https://www.reuters.com/business/energy/brent-holds-above-100-tanker-attacks-deepen-supply-fear-2026-09-10/","source":"Reuters","published_at":"2026-09-10","category":"ENERGY","impact":"up"
     },
     {
-      "title": "Houthi forces seize strategic Yemeni port",
-      "summary": "The reported capture of a key Yemeni port raises the risk that the Red Sea and Bab el-Mandeb become materially less reliable as an alternative to disrupted Hormuz traffic. A two-chokepoint disruption would substantially increase global freight and energy risk.",
-      "url": "https://apnews.com/article/e4e799701b382799a955969c212800ea",
-      "source": "Associated Press",
-      "published_at": "2026-09-10T14:04:28Z",
-      "category": "SUPPLY",
-      "impact": "up"
+      "title":"Canada counter-tariffs expand North American trade friction","summary":"Retaliatory tariffs increase direct Americas exposure through prices, industrial inputs, agriculture, and cross-border supply chains.","url":"https://www.canada.ca/en/department-finance/news/2026/08/list-of-products-from-the-united-states-subject-to-counter-tariffs-effective-september-8-2026.html","source":"Government of Canada","published_at":"2026-09-08","category":"TRADE","impact":"up"
     },
     {
-      "title": "U.S.-Canada tariff dispute escalates to import bans",
-      "summary": "The United States has banned selected Canadian alcoholic beverages, motorcycles, and dairy products after Canada imposed retaliatory tariffs. The move indicates that the trade conflict is shifting from tariff management toward direct product restrictions.",
-      "url": "https://www.kitco.com/news/off-the-wire/2026-09-09/canadian-dollar-edges-lower-trade-war-us-intensifies",
-      "source": "Reuters",
-      "published_at": "2026-09-09T20:58:00Z",
-      "category": "TRADE",
-      "impact": "up"
+      "title":"U.S. retaliation adds targeted Canadian import restrictions","summary":"The dispute is broadening from tariff pressure toward direct product restrictions in selected sectors.","url":"https://www.ustr.gov/about/policy-offices/press-office/press-releases/2026/september/ambassador-greer-issues-statement-president-trumps-response-canadas-continued-retaliation-against","source":"USTR","published_at":"2026-09-08","category":"TRADE","impact":"up"
     },
     {
-      "title": "Energy shock lifts global bond yields",
-      "summary": "Reuters reported that 10-year U.S. Treasury yields reached their highest level since 2023 as oil prices renewed inflation fears. The combination raises the risk of tighter credit and weaker economic activity even while financial plumbing remains functional.",
-      "url": "https://au.marketscreener.com/news/asian-stocks-wilt-as-brent-holds-above-100-yields-near-2023-peak-ce785bd9d88ef627",
-      "source": "Reuters",
-      "published_at": "2026-09-10T02:01:00Z",
-      "category": "FINANCE",
-      "impact": "up"
+      "title":"Critical subsea infrastructure remains under heightened scrutiny","summary":"Undersea communications and energy infrastructure remain high-consequence targets, but broad service failure is not currently observed.","url":"https://www.reuters.com/world/europe/nato-allies-foil-russian-subsea-cable-sabotage-plot-2026-09-10/","source":"Reuters","published_at":"2026-09-10","category":"CYBER","impact":"up"
     },
     {
-      "title": "European Central Bank raises rates against energy inflation",
-      "summary": "The ECB raised interest rates to counter inflation fueled by the Iran war and higher energy prices. The action is a stabilizing response but also confirms that the shock is broad enough to affect monetary policy.",
-      "url": "https://apnews.com/article/de62b59fba535fccaf6f75e52d037c63",
-      "source": "Associated Press",
-      "published_at": "2026-09-10T12:16:46Z",
-      "category": "STABILIZER",
-      "impact": "neutral"
-    },
-    {
-      "title": "Hurricane Lowell disrupts Hawaii infrastructure",
-      "summary": "The storm has caused deaths, power outages, road damage, and the loss of a cargo port serving food and fuel deliveries to Lanai. The event is geographically limited but demonstrates current localized civilian disruption from a natural hazard.",
-      "url": "https://apnews.com/article/022ea2c63c979c08586ccb47063d691d",
-      "source": "Associated Press",
-      "published_at": "2026-09-10T10:34:48Z",
-      "category": "NATURAL",
-      "impact": "up"
-    },
-    {
-      "title": "Polio remains an international public-health emergency",
-      "summary": "WHO extended temporary recommendations because of continuing international spread risks involving wild and circulating vaccine-derived poliovirus. The situation warrants monitoring but is not currently classified as a pandemic emergency.",
-      "url": "https://www.who.int/news/item/25-08-2026-statement-of-the-forty-fifth-meeting-of-the-polio-ihr-emergency-committee",
-      "source": "World Health Organization",
-      "published_at": "2026-08-25",
-      "category": "HEALTH",
-      "impact": "neutral"
+      "title":"Global financial plumbing remains functional despite energy shock","summary":"Market stress and higher yields are meaningful, but core banking, payments, and exchange operations remain functioning.","url":"https://www.reuters.com/world/china/imf-say-global-growth-track-reach-3-2026-risks-remain-high-2026-09-10/","source":"Reuters","published_at":"2026-09-10","category":"STABILIZER","impact":"down"
     }
   ],
   "preparedness_actions": [
-    "Complete previously planned purchases of essential household supplies without hoarding.",
-    "Top off normal prescriptions, fuel, water storage, and backup-power readiness where practical and lawful.",
-    "Keep additional payment options and emergency cash accessible.",
-    "Confirm family communications, transportation, and contingency plans.",
-    "Follow official emergency guidance for any affected region or infrastructure system."
+    "Complete sensible, previously planned preparedness purchases while normal supply channels are functioning.",
+    "Maintain several weeks of food, household consumables, water capacity, and essential medical supplies.",
+    "Keep vehicles reasonably fueled and verify generator, battery, solar, or other backup-power capability.",
+    "Maintain diversified payment options and a reasonable amount of emergency cash.",
+    "Confirm family communications, transportation, and meeting plans.",
+    "Avoid panic buying; focus on resilience gaps that would be difficult to correct after disruption begins."
   ],
   "historical_analogs": [
-    {
-      "name": "1973 Oil Shock",
-      "score": 85
-    },
-    {
-      "name": "2008 Financial Crisis",
-      "score": 83
-    },
-    {
-      "name": "2020 Pandemic",
-      "score": 82
-    },
-    {
-      "name": "1939 Europe",
-      "score": 80
-    }
+    {"name":"1973 Oil Shock","score":85},
+    {"name":"2008 Financial Crisis","score":83},
+    {"name":"2020 Pandemic","score":82},
+    {"name":"1939 Europe","score":80}
   ],
-  "historical_note": "Illustrative reference markers only; not used in the live score until formal back-testing is completed.",
+  "historical_note":"Illustrative reference markers only. They are not used in the live score until formal back-testing is completed.",
   "history": [
-    {
-      "date": "2026-09-10",
-      "preparedness": 86,
-      "threat": 93,
-      "impact": 71,
-      "conflict": 95
-    }
+    {"date":"2026-09-10","preparedness":69,"raw_preparedness":69,"threat":76,"impact":50,"americas":72,"conflict":95,"momentum":70}
   ],
   "methodology": {
-    "note": "All-hazards early-warning assessment, not a probability forecast or prediction that a specific disaster will occur.",
-    "formula": "Leading Threat Pressure = mean of the four highest domain threat scores. Observed Civilian Disruption = mean of the four highest domain impact scores. Preparedness Urgency = 55% Leading Threat Pressure + 30% Observed Civilian Disruption + 15% Cross-System Coupling, rounded.",
-    "stage_guardrails": "IMMINENT DISRUPTION requires both a high urgency score and material observed disruption. ACTIVE DISRUPTION requires broad, documented system impairment; threat scores alone cannot trigger it.",
-    "domains": "Military/geopolitical, energy, trade, supply chain, technology, critical infrastructure/cyber, financial, food/agriculture, domestic institutional, public health, and natural/environmental."
+    "note":"All-hazards early-warning assessment. The score is a preparedness-urgency index, not the probability that a disaster, collapse, or war will occur.",
+    "formula":"Preparedness Urgency = 40% Global Threat Pressure + 25% Observed Civilian Disruption + 10% Cross-System Coupling + 10% Momentum/Persistence + 15% Americas Exposure. Global threat, observed impact, and Americas exposure are weighted averages across all 12 domains.",
+    "rate_limits":"Absent a verified hard trigger, normal daily movement is limited to ±3 points. A verified but non-severe hard trigger allows up to ±6. A verified national, multinational, or global hard trigger can bypass the rate limit.",
+    "stage_guardrails":"HIGH ALERT begins at 80. IMMINENT DISRUPTION requires a score of at least 90, observed disruption of at least 75, and a verified severe hard trigger plus either 48-hour persistence or an active fast-onset trigger. ACTIVE DISRUPTION requires at least 97, observed disruption at least 85, three high-impact domains, and two verified severe triggers.",
+    "civil_unrest":"Civil Unrest / Public Order is scored from observable violence, duration, geographic spread, emergency measures, infrastructure damage, and disruption to transport, commerce, public safety, or essential services. Peaceful protest and political ideology do not raise the score by themselves.",
+    "confidence":"Evidence confidence is displayed separately and does not increase preparedness urgency.",
+    "domains":"Military/geopolitical, energy, trade, supply chain/transportation, technology chokepoints, critical infrastructure/cyber, financial-system stress, food/agriculture, domestic institutional stress, civil unrest/public order, public health/biological, and natural/environmental."
   }
 }
