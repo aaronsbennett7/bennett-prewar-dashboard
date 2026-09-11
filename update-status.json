@@ -1,15 +1,23 @@
 {
   "schema_version": 1,
-  "engine_version": "5.2",
+  "engine_version": "5.3",
   "date": "2026-09-11",
-  "status": "STALE",
-  "started_at": "2026-09-11T17:29:14.808Z",
-  "completed_at": "2026-09-11T17:29:25.326Z",
-  "message": "Research:military_energy_shipping: response status incomplete; max_output_tokens",
-  "dashboard_preserved": true,
-  "last_verified_update": "2026-09-11T16:30:34.010Z",
-  "web_search_calls": 0,
-  "estimated_partial_run_cost_usd": 0,
-  "estimated_period_spend_usd": 0,
+  "status": "VERIFIED",
+  "started_at": "2026-09-11T17:33:45.400Z",
+  "completed_at": "2026-09-11T17:37:13.998Z",
+  "message": "Published verified v5 assessment: 72 ACCELERATE.",
+  "research_quality": {
+    "evidence_count": 14,
+    "fresh_count": 11,
+    "unique_sources": 10,
+    "tier_a_sources": 7,
+    "clusters": 5,
+    "domains_covered": 11,
+    "confidence_cap": 88,
+    "publishable": true
+  },
+  "web_search_calls": 6,
+  "estimated_run_cost_usd": 0.098322,
+  "estimated_period_spend_usd": 0.098322,
   "operational_stop_usd": 9
 }

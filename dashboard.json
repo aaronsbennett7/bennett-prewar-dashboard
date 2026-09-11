@@ -1,211 +1,230 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
+  "engine_version": "5.3",
+  "data_status": "VERIFIED",
   "as_of": "2026-09-11",
-  "updated_at": "2026-09-11T16:30:34.010Z",
-  "preparedness_urgency": 63,
-  "raw_preparedness_urgency": 63,
-  "preparedness_stage": "PREPARE",
-  "global_threat_pressure": 73,
-  "leading_threat_pressure": 73,
-  "observed_civilian_disruption": 48,
-  "americas_exposure": 66,
-  "americas_stage": "ELEVATED",
-  "americas_summary": "Americas exposure is 66 (ELEVATED). The strongest regional transmission channels are Global trade fragmentation, Energy security, Critical infrastructure / cyber; civil unrest is scored only when reporting shows violence, emergency measures, or material disruption to transport, commerce, safety, or essential services.",
+  "updated_at": "2026-09-11T17:37:13.998Z",
+  "last_successful_update": "2026-09-11T17:37:13.998Z",
+  "preparedness_urgency": 72,
+  "raw_preparedness_urgency": 72,
+  "preparedness_stage": "ACCELERATE",
+  "global_threat_pressure": 77,
+  "leading_threat_pressure": 77,
+  "observed_civilian_disruption": 52,
+  "americas_exposure": 74,
+  "americas_stage": "HIGH",
+  "americas_summary": "Americas exposure remains high through fuel and import prices, shipping delays, U.S.–Canada trade measures, and localized Hawaii outages and Andean transit disruption.",
   "americas_components": [
     {
-      "name": "Global trade fragmentation",
-      "score": 84,
-      "trend": "easing"
-    },
-    {
       "name": "Energy security",
-      "score": 82,
-      "trend": "easing"
-    },
-    {
-      "name": "Critical infrastructure / cyber",
-      "score": 74,
-      "trend": "easing"
+      "score": 91,
+      "trend": "rising"
     },
     {
       "name": "Supply chain & transportation",
-      "score": 72,
-      "trend": "easing"
-    },
-    {
-      "name": "Financial-system stress",
-      "score": 70,
-      "trend": "easing"
+      "score": 82,
+      "trend": "rising"
     },
     {
       "name": "Military / geopolitical",
-      "score": 68,
-      "trend": "easing"
+      "score": 70,
+      "trend": "rising"
+    },
+    {
+      "name": "Global trade fragmentation",
+      "score": 94,
+      "trend": "rising"
+    },
+    {
+      "name": "Critical infrastructure / cyber",
+      "score": 84,
+      "trend": "rising"
+    },
+    {
+      "name": "Financial-system stress",
+      "score": 79,
+      "trend": "rising"
     }
   ],
-  "conflict_escalation": 87,
-  "coupling_score": 80,
-  "momentum_score": 40,
-  "confidence_score": 92,
+  "conflict_escalation": 96,
+  "coupling_score": 82,
+  "momentum_score": 91,
+  "confidence_score": 84,
   "confidence_level": "HIGH",
-  "confidence_rationale": "12/12 domains returned fresh news coverage, spanning 248 unique outlets including 12 high-authority sources; 0 domain feeds failed.",
-  "preparedness_window": "Days",
-  "summary": "Preparedness urgency is 63 (PREPARE). Fresh rule-based monitoring across 248 outlets places the highest combined pressure in Energy security, Military / geopolitical, Supply chain & transportation; 1 hard trigger(s) met multi-source verification.",
-  "primary_driver": "Energy security is the current leading driver with threat 89, observed impact 79, and Americas exposure 82.",
+  "confidence_rationale": "Fresh, multi-source official and major-news evidence directly supports maritime, trade, and weather impacts; cyber risks are primarily forward-looking. Evidence gate: 14 items, 10 sources, 7 Tier-A sources, 5/5 clusters.",
+  "preparedness_window": "Days to weeks",
+  "summary": "Severe maritime energy and shipping disruption remains the primary systemic risk, with added trade restrictions and localized weather-related outages in the Americas.",
+  "primary_driver": "Conflict-related pressure on Middle East maritime chokepoints and the resulting oil/shipping disruption.",
   "primary_stabilizers": [
-    "Observed civilian disruption remains below forward-looking threat pressure, indicating that several risks have not fully transmitted into day-to-day systems.",
-    "8 of 12 domains remain below 50 on observed civilian impact.",
-    "Aggregate Americas exposure remains below the dashboard's severe regional threshold.",
-    "All monitored domain feeds returned usable fresh data on this run."
+    "IEA reports alternative routing has partly offset disruption, but the conflict remains the largest oil-supply disruption in global oil-market history.",
+    "CPMI-IOSCO released voluntary cyber-resilience tools to help financial-market infrastructures strengthen controls, response planning, and operational resilience.",
+    "CDC’s latest update lists 40 active multistate foodborne investigations and says it coordinates responses with FDA and USDA-FSIS."
   ],
   "domains": [
     {
       "key": "energy",
+      "threat": 97,
+      "impact": 87,
+      "americas_exposure": 91,
+      "trend": "rising",
+      "rationale": "Oil-market disruption and elevated Hormuz risk persist despite partial alternative routing.",
       "name": "Energy security",
-      "threat": 89,
-      "impact": 79,
-      "americas_exposure": 82,
-      "trend": "easing",
-      "weight": 11,
-      "rationale": "Fresh Google News RSS monitoring found 25 relevant reports across 25 outlets; top signal: Costco Is Now Rationing Motor Oil Because the Global Shortage Is Getting Real - The Drive."
+      "weight": 11
     },
     {
       "key": "military",
+      "threat": 96,
+      "impact": 73,
+      "americas_exposure": 70,
+      "trend": "rising",
+      "rationale": "Commercial-vessel attacks and pressure near both Hormuz and Bab el-Mandeb continue.",
       "name": "Military / geopolitical",
-      "threat": 87,
-      "impact": 65,
-      "americas_exposure": 68,
-      "trend": "easing",
-      "weight": 10,
-      "rationale": "Fresh Google News RSS monitoring found 25 relevant reports across 21 outlets; top signal: More than 500,000 Russian troops killed in Ukraine, UK defense chief says - AP News."
+      "weight": 10
     },
     {
       "key": "supply_chain",
+      "threat": 93,
+      "impact": 72,
+      "americas_exposure": 82,
+      "trend": "rising",
+      "rationale": "Maritime risk, route degradation, tariffs, and a border-corridor closure constrain trade flows.",
       "name": "Supply chain & transportation",
-      "threat": 84,
-      "impact": 63,
-      "americas_exposure": 72,
-      "trend": "easing",
-      "weight": 10,
-      "rationale": "Fresh Google News RSS monitoring found 25 relevant reports across 25 outlets; top signal: Strike called over train safety concerns suspended - BBC."
+      "weight": 10
     },
     {
       "key": "trade",
+      "threat": 89,
+      "impact": 59,
+      "americas_exposure": 94,
+      "trend": "rising",
+      "rationale": "New U.S. import bans and broad tariffs add direct Americas trade friction.",
       "name": "Global trade fragmentation",
-      "threat": 82,
-      "impact": 50,
-      "americas_exposure": 84,
-      "trend": "easing",
-      "weight": 10,
-      "rationale": "Fresh Google News RSS monitoring found 25 relevant reports across 23 outlets; top signal: Russia’s drone offensive | Impact of 9/11 | West Bank sanctions | Trump's US-Canada trade war - Channel 4 News | Substack."
+      "weight": 10
     },
     {
       "key": "technology",
+      "threat": 80,
+      "impact": 42,
+      "americas_exposure": 61,
+      "trend": "stable",
+      "rationale": "Rare-earth and AI-enabled cyber vulnerabilities remain credible, without new observed outage.",
       "name": "Technology chokepoints",
-      "threat": 74,
-      "impact": 43,
-      "americas_exposure": 52,
-      "trend": "easing",
-      "weight": 7,
-      "rationale": "Fresh Google News RSS monitoring found 25 relevant reports across 20 outlets; top signal: NVIDIA’s Export Ban Backfires as Chinese Competitors Raise Prices 50% - 24/7 Wall St.."
+      "weight": 7
     },
     {
       "key": "critical_infrastructure",
+      "threat": 85,
+      "impact": 40,
+      "americas_exposure": 84,
+      "trend": "rising",
+      "rationale": "Widespread Hawaii power outages show localized impact; shared-provider cyber dependencies remain a risk.",
       "name": "Critical infrastructure / cyber",
-      "threat": 77,
-      "impact": 41,
-      "americas_exposure": 74,
-      "trend": "easing",
-      "weight": 11,
-      "rationale": "Fresh Google News RSS monitoring found 25 relevant reports across 24 outlets; top signal: State authorities warn they lack resources to address cyber threat to critical sectors - Cybersecurity Dive."
+      "weight": 11
     },
     {
       "key": "financial",
+      "threat": 76,
+      "impact": 48,
+      "americas_exposure": 79,
+      "trend": "rising",
+      "rationale": "Interconnected payment-system provider dependency raises forward disruption risk, without observed access loss.",
       "name": "Financial-system stress",
-      "threat": 72,
-      "impact": 42,
-      "americas_exposure": 70,
-      "trend": "easing",
-      "weight": 10,
-      "rationale": "Fresh Google News RSS monitoring found 25 relevant reports across 21 outlets; top signal: Exploring The Standard Reserve: Can a Central Bank Run on Code Work? Will a Modified OHM Model Actually Succeed? - 深潮TechFlow."
+      "weight": 10
     },
     {
       "key": "food",
-      "name": "Food & agriculture",
       "threat": 64,
       "impact": 35,
-      "americas_exposure": 57,
-      "trend": "stable",
-      "weight": 8,
-      "rationale": "Fresh Google News RSS monitoring found 25 relevant reports across 24 outlets; top signal: What to know about whey protein powder prices, potential shortages and alternatives - abcnews.com."
+      "americas_exposure": 66,
+      "trend": "rising",
+      "rationale": "Heat stress may affect agriculture; foodborne surveillance indicates active monitoring rather than shortage.",
+      "name": "Food & agriculture",
+      "weight": 8
     },
     {
       "key": "domestic",
-      "name": "Domestic institutional stress",
-      "threat": 59,
-      "impact": 42,
-      "americas_exposure": 60,
+      "threat": 56,
+      "impact": 39,
+      "americas_exposure": 70,
       "trend": "rising",
-      "weight": 6,
-      "rationale": "Fresh Google News RSS monitoring found 25 relevant reports across 18 outlets; top signal: Greenville City Council approves youth curfew & downtown hotel as residents call for officer’s firing - WITN."
+      "rationale": "Hawaii flooding, damage, and power loss create localized civilian disruption.",
+      "name": "Domestic institutional stress",
+      "weight": 6
     },
     {
       "key": "civil_unrest",
-      "name": "Civil unrest / public order",
-      "threat": 48,
-      "impact": 20,
+      "threat": 45,
+      "impact": 25,
       "americas_exposure": 55,
-      "trend": "rising",
-      "weight": 7,
-      "rationale": "Fresh GDELT monitoring found 30 relevant reports across 30 outlets; top signal: Tourists turn united kingdom cutest cathedral cities into riot zones."
+      "trend": "stable",
+      "rationale": "No evidence of material unrest-related disruption.",
+      "name": "Civil unrest / public order",
+      "weight": 7
     },
     {
       "key": "public_health",
+      "threat": 37,
+      "impact": 18,
+      "americas_exposure": 32,
+      "trend": "stable",
+      "rationale": "Heat and active foodborne investigations warrant monitoring; no broad health-service disruption is evidenced.",
       "name": "Public health / biological",
-      "threat": 43,
-      "impact": 25,
-      "americas_exposure": 30,
-      "trend": "rising",
-      "weight": 5,
-      "rationale": "Fresh Google News RSS monitoring found 25 relevant reports across 24 outlets; top signal: 2 deaths reported in cyclosporiasis outbreak in Michigan as cases surpass 11,000 - ABC7 New York."
+      "weight": 5
     },
     {
       "key": "natural",
-      "name": "Natural / environmental",
-      "threat": 52,
-      "impact": 45,
-      "americas_exposure": 37,
+      "threat": 48,
+      "impact": 44,
+      "americas_exposure": 52,
       "trend": "rising",
-      "weight": 5,
-      "rationale": "Fresh Google News RSS monitoring found 25 relevant reports across 22 outlets; top signal: Lucas Fire: Evacuation orders, warnings issued for wildfire near Mendocino-Lake county line - KCRA."
+      "rationale": "Hawaii hurricane impacts, an Andean weather closure, and U.S. rain/heat risks support a higher impact level.",
+      "name": "Natural / environmental",
+      "weight": 5
     }
   ],
   "hard_triggers": [
     {
-      "type": "emergency_civil_order",
+      "type": "grid_outage",
       "verified": true,
-      "scope": "multinational",
+      "scope": "regional",
       "status": "active",
-      "summary": "19 fresh reports from 13 independent outlets met the dashboard's verification rule for emergency civil order.",
-      "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOOTByb2Z3bjVxOVFWVW50dk4xUmU1M0pSRTZ0dzB2bXFfR2Y5VFo1VWVNQmI4X2YzbFVQa211alVwTFgyaS1ialNYeHV2TW8zNFowaEFJOTRGd2Y0QVJRTE1GX1dQNTBkV2gyb3dQaEFuOFRnVDl2c2NBQksyM19GcEN4VUQyeEdSQkNxYmxrelFpSU5BUlVzLVhwTG41VmxTSmRXbndxQi1nc0EzT0ItRnJheDFSZi10cU5YLUpwdDRpUQ?oc=5"
+      "summary": "Hurricane Lowell caused widespread power outages across Hawaii alongside flooding and damage.",
+      "source_url": "https://www.wpc.ncep.noaa.gov/?dom=prime",
+      "evidence_ids": [
+        "E10",
+        "E13"
+      ]
+    },
+    {
+      "type": "transport_shutdown",
+      "verified": true,
+      "scope": "regional",
+      "status": "active",
+      "summary": "Severe weather closed the Cristo Redentor international crossing, impeding Argentina–Chile corridor transit.",
+      "source_url": "https://www.wpc.ncep.noaa.gov/?dom=prime",
+      "evidence_ids": [
+        "E12",
+        "E13"
+      ]
     }
   ],
-  "verified_hard_trigger_count": 1,
-  "severe_hard_trigger_count": 1,
+  "verified_hard_trigger_count": 2,
+  "severe_hard_trigger_count": 0,
   "score_calibration": {
-    "raw_score": 63,
-    "published_score": 63,
+    "raw_score": 72,
+    "published_score": 72,
+    "previous_daily_anchor": 69,
     "rate_limit_applied": false,
-    "daily_rate_limit": null,
+    "daily_rate_limit": 6,
     "sustained_90_for_48h": false,
-    "high_impact_domain_count": 1
+    "high_impact_domain_count": 3
   },
   "score_components": {
-    "global_threat_pressure": 73,
-    "observed_civilian_disruption": 48,
-    "coupling": 80,
-    "momentum": 40,
-    "americas_exposure": 66
+    "global_threat_pressure": 77,
+    "observed_civilian_disruption": 52,
+    "coupling": 82,
+    "momentum": 91,
+    "americas_exposure": 74
   },
   "drivers": [
     {
@@ -214,12 +233,12 @@
       "note": "Primary driver"
     },
     {
-      "name": "Military / geopolitical",
+      "name": "Supply chain & transportation",
       "severity": "critical",
       "note": ""
     },
     {
-      "name": "Supply chain & transportation",
+      "name": "Military / geopolitical",
       "severity": "critical",
       "note": ""
     },
@@ -230,7 +249,7 @@
     },
     {
       "name": "Critical infrastructure / cyber",
-      "severity": "high",
+      "severity": "critical",
       "note": ""
     },
     {
@@ -241,116 +260,112 @@
   ],
   "areas_to_watch": [
     {
-      "name": "Energy security",
+      "name": "Hormuz and Bab el-Mandeb shipping",
       "severity": "critical",
-      "why": "Threat 89, observed impact 79, Americas exposure 82. Watch for multi-source evidence that raises observed impact or satisfies a hard-trigger rule."
+      "why": "Attacks and control near chokepoints threaten oil and commercial shipping flows."
     },
     {
-      "name": "Military / geopolitical",
-      "severity": "critical",
-      "why": "Threat 87, observed impact 65, Americas exposure 68. Watch for multi-source evidence that raises observed impact or satisfies a hard-trigger rule."
-    },
-    {
-      "name": "Supply chain & transportation",
-      "severity": "critical",
-      "why": "Threat 84, observed impact 63, Americas exposure 72. Watch for multi-source evidence that raises observed impact or satisfies a hard-trigger rule."
-    },
-    {
-      "name": "Global trade fragmentation",
-      "severity": "critical",
-      "why": "Threat 82, observed impact 50, Americas exposure 84. Watch for multi-source evidence that raises observed impact or satisfies a hard-trigger rule."
-    },
-    {
-      "name": "Critical infrastructure / cyber",
+      "name": "Americas fuel and import-price pass-through",
       "severity": "high",
-      "why": "Threat 77, observed impact 41, Americas exposure 74. Watch for multi-source evidence that raises observed impact or satisfies a hard-trigger rule."
+      "why": "Historic oil disruption and new tariffs can transmit rapidly into prices and availability."
     },
     {
-      "name": "Financial-system stress",
+      "name": "Hawaii recovery and U.S. weather hazards",
       "severity": "high",
-      "why": "Threat 72, observed impact 42, Americas exposure 70. Watch for multi-source evidence that raises observed impact or satisfies a hard-trigger rule."
+      "why": "Existing outages and forecast heat/rain may prolong or create localized disruptions."
+    },
+    {
+      "name": "Payment and financial-market infrastructure",
+      "severity": "medium",
+      "why": "Third-party dependency and AI-enabled cyber risks could amplify an incident, though no outage is reported."
+    },
+    {
+      "name": "Argentina–Chile freight corridor",
+      "severity": "medium",
+      "why": "Weather closure may delay cross-border transit if unsafe conditions persist."
     }
   ],
   "signals": [
     {
-      "title": "2 deaths reported in cyclosporiasis outbreak in Michigan as cases surpass 11,000 - ABC7 New York",
-      "summary": "Rule-based monitoring classified this as an observed-disruption signal in Public health / biological. It is one input among multiple sources, not a standalone alarm.",
-      "url": "https://news.google.com/rss/articles/CBMilwpBVV95cUxORFBxLVVsOE11LUp4a0lXLXhrZFJJT1NEaTJXQm1ITy1NYnozZnluUVZnN1pVRjBZQmVIR2JrTHlDdkluWFQ3OG1BNUZQUlRsWDBIVV9XTnJqUlJNazdDSXJGNno4RGdCV1Y5ci1EZDBmYlk0Ni0xSzZ5WDBiQ2NqTDNuSm8xMHg2TVktWWVEa3VJLXF6bEs0bGlKOTFIMGZLeDVVN2xqcEV4Ym5KaHc4Tlp0cndneWxrY3J0ZWpEanFLdzV3X0IwZ3pyanh1dFJBMDg1NzJzODRoN2pHWHJpWnFocUIxSTVacENDeGYzVkJIY2dMUmZGN090OERCRGFfTDZLVVo3b3l4ZzUwXzRJSGgtdThseWtWLW5tU09Bakwybk1odXFzdFNiTVg4UUZjNkRaeFd2V3VJSG1kNGc5YzJNN3EtTU1CUnNBNWt4cGVzS1E0TUd5bnRWSXpULXFoS2t0MjZ2MWYzc1dkR1ZUNUhuRXNRWlZSTE55blA5bDFsWnUxM05qX01jTzFfNGptV2VJaXRVek8wM0RsczQzcDRmMDBUWnQyWXhYRjJnVEVWQm9tYV9MT21YdElSV09ob0tWOFhjcDJ6b0pTeEptc2FWNDRKS2ZWcEF3d1lhRGNsVGplTTdVX3FZMWduMUtFV0RPVzVFOUtkYXlQZExEenFmTmM3d2pJRnR5eExDOTZINDNFSmVaTE9nSFEyakp4bnhKQmJ1allYS19BLUtURUNVSzEyUlBXVGZfVzNieEF1Q2tneGhHRDR0UnRkMjVsR0xNVVpRd3JhU3RIREVwS1ZxYVgxZTMzRjR3MENDdDhwWjBfd1FHZ1lnY3g3SVc2YlU3UnlUY2s0bHdGYTJTRm9IRHV6eEx5b1B3dFlPakxpcGJsb3RCWWJhUUtZb1Y1R042ZVlFQlJMQkY1MTdwNGhpQVhVRVQxb1VBZHFSRFgzbzFzenV5N2VKeUM2cUF1OUl6eGJtb3dMdE1OalJDQnQxX2dDVUlmWHE1WVN2NjRWWDVicldqaDNqdlhmSEl2UDF2UnZtWVN0Tk5WZ19qY3lQcmItcTBNSTU4eFgzRzNsUHUyMFdCQ0Zrbi1fdTFoaHJkQWF4alpqU3FBSDE1QzctVXE1eDk3cm9kRHprRm1jc3Z1a2l2VWJKZHIwY2RUX2swWEFOelRXSXhkOGpYZTVQMkRPQWxmdElGLWZ3UXRSU2JLbm9GU1Y2QXpsdEVWRTg5NlJRaF9BUHFqb2FNUDZycHZDMVJWQjEtMnNIc0QyeGVJRkNCU3dueVFwZUIxcWJ4bXBGNk1pcnBQRnhCbGx6NDJnUzVFTkZxcVVfTGhrRG1nYzg5dTdHQ09NZFRxVjlYUUJGOFk4WllEY2JfVjFNUkRwVkpCWDE4ZkRidG9ob2F3c1lnSFJMLUxfSTZNVmJUd0VVRk9KZ0NTOWtzY0dNakFHQ0wyWEJxbEt3VzVyekRIVVlCNWQtemxGd2Yya29kZG03UGFJa2diTkVMdEJ6VW5jNjZHMEJiWVU5RzVlUE14UmV1alBQN2JVR290V1Y1Z1Z0RW8xdnFMdVFMVlJ0Q1dqRlhQSG1hMzJiVXZmX2Z4bUloX1ZJWEYyaWVSengyaVlVbWFzR1dNWUVrZWhYU3o5UWs3dkFRN3JfTlZWemZRYUdNTWxDV1JucTduYmlrcGV5Sl9HZFUtc01OejA4U3FvNDN6N3dJUEtzZ3Nxc0xNQkJ3?oc=5",
-      "source": "ABC7 New York",
-      "published_at": "2026-09-11T12:06:33.000Z",
-      "category": "HEALTH",
+      "title": "Hormuz shipping risk remains high",
+      "summary": "MARAD says Iran continues threatening and striking commercial vessels, with risks to shipping in the Persian Gulf, Hormuz, and Gulf of Oman remaining high.",
+      "url": "https://www.maritime.dot.gov/msci/2026-004-persian-gulf-strait-hormuz-and-gulf-oman-iranian-attacks-commercial-vessels",
+      "source": "U.S. Maritime Administration",
+      "published_at": null,
+      "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "As diseases loom, CDC's response to measles deaths stirs fears about agency's reliability - NPR",
-      "summary": "Rule-based monitoring classified this as an observed-disruption signal in Public health / biological. It is one input among multiple sources, not a standalone alarm.",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNVHQycHNIbzVJSkdLUkNOb1d4XzZZX24wSHh1b3hJbWJkbkVZNnlSUUt5NGZ2cGxYZVdJT1JVOUFOSlYxUTc3UXN4NURGb3hyc21HOG5odnd5RHpYMG54dk1rT1JRR0p0dGFTUUgtOG52bWZ1dkl4M2RZZFNmWGd1MHkxZmdLWG1CdjAtaUlxZWtQZHRVaGFlalNDcnp6eS1haFlFX3pPTjNVRk9PUGlPMVFzbVRXTVpEbkpsUFpIbGNRYUh5YUxCcDFucw?oc=5",
-      "source": "NPR",
-      "published_at": "2026-09-11T15:34:51.000Z",
-      "category": "HEALTH",
+      "title": "Bab el-Mandeb pressure intensifies",
+      "summary": "Houthi control of Mokha and a nearby island places forces near Bab el-Mandeb, while Saudi tanker attacks have reduced the route’s fallback value.",
+      "url": "https://apnews.com/article/ab2e69eb2959979bae44eb4d45ae637e",
+      "source": "Associated Press",
+      "published_at": "2026-09-11T00:00:00.000Z",
+      "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Hawaii Governor Asks Trump for Help as State Copes With Hurricane’s Damage - The New York Times",
-      "summary": "Rule-based monitoring classified this as an observed-disruption signal in Natural / environmental. It is one input among multiple sources, not a standalone alarm.",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQT0VnbmNMRHFOSlJRbnVXSmZ2OU41dk1TQmgwM3ptUFhwV2I5VnJadDk0aG5DV1FQclQwckJXWENIV1Y4U09ERmlmV0l1LTZOcWNDSEVHT2ltMTBmQnhUTGtNRWktbThyV1BDcGlsZmtSTEpxa2F3ZTdObTFJS3lMSFVvVzVRV1ZI?oc=5",
-      "source": "The New York Times",
-      "published_at": "2026-09-11T01:08:33.000Z",
+      "title": "U.S. bans selected Canadian imports",
+      "summary": "The United States banned certain Canadian products and adjusted tariffs after citing Canada’s continued discriminatory treatment of U.S. exports.",
+      "url": "https://www.ustr.gov/about/policy-offices/press-office/press-releases/2026/september/ambassador-greer-issues-statement-president-trumps-response-canadas-continued-retaliation-against",
+      "source": "U.S. Trade Representative",
+      "published_at": "2026-09-08T00:00:00.000Z",
+      "category": "TRADE",
+      "impact": "up"
+    },
+    {
+      "title": "Forced-labor tariffs target 60 economies",
+      "summary": "USTR finalized tariffs on imports from 60 economies over inadequate forced-labor import bans, with exemptions possible for supply-sensitive products.",
+      "url": "https://ustr.gov/category/document-type/press-release",
+      "source": "U.S. Trade Representative",
+      "published_at": "2026-09-09T00:00:00.000Z",
+      "category": "TRADE",
+      "impact": "up"
+    },
+    {
+      "title": "AI cyber risk to finance",
+      "summary": "BIS warns frontier AI could shorten cyber-exploitation windows, increase breach likelihood, and amplify financial-sector dependence on shared cloud and software providers.",
+      "url": "https://www.bis.org/publications/fsi-paper-28-when-machines-attack-frontier-ai-cyber-threats-and-policy-responses-financial-sector",
+      "source": "Bank for International Settlements",
+      "published_at": "2026-09-09T00:00:00.000Z",
+      "category": "FINANCE",
+      "impact": "up"
+    },
+    {
+      "title": "Payment-infrastructure dependency risk",
+      "summary": "CPMI-IOSCO identified third-party-provider dependencies as a potential amplifier of disruption across interconnected payment and securities infrastructures.",
+      "url": "https://www.bis.org/media-releases/20260908-global-standard-setting-bodies-publish-toolkit-cyber-resilience-fmis-and-discussion-paper-fmis",
+      "source": "Bank for International Settlements",
+      "published_at": "2026-09-08T00:00:00.000Z",
+      "category": "FINANCE",
+      "impact": "up"
+    },
+    {
+      "title": "Hawaii flooding and outages",
+      "summary": "Hurricane Lowell reportedly caused flooding, road and building damage, downed trees, and widespread power outages across Hawaii on September 8.",
+      "url": "https://www.paho.org/en/health-emergencies/natural-hazards-monitoring?page=0",
+      "source": "PAHO/WHO",
+      "published_at": "2026-09-09T00:00:00.000Z",
+      "category": "CIVIL",
+      "impact": "up"
+    },
+    {
+      "title": "Andean border crossing closed",
+      "summary": "Severe weather closed the Cristo Redentor international crossing on September 8, with authorities warning that unsafe conditions could persist and impede corridor transit.",
+      "url": "https://www.argentina.gob.ar/noticias/cierre-sistema-integrado-cristo-redentor",
+      "source": "Government of Argentina",
+      "published_at": "2026-09-08T00:00:00.000Z",
       "category": "NATURAL",
-      "impact": "up"
-    },
-    {
-      "title": "Russia’s drone offensive | Impact of 9/11 | West Bank sanctions | Trump's US-Canada trade war - Channel 4 News | Substack",
-      "summary": "Rule-based monitoring classified this as an observed-disruption signal in Global trade fragmentation. It is one input among multiple sources, not a standalone alarm.",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5sM3BqSGNiRnpLSllyTC1WcFFWMmtMX1JGVnNhcWVjaDdPSXVFQVRaZTVabzVKamJkQWpySVdERV9fRHhSM0VEOWVUTDBvYVZ1a29SV1ZVREJXWUhLaGx3MDU2Tm5hSnVSTDkwdGc5SFpYWU43QUpTdw?oc=5",
-      "source": "Channel 4 News | Substack",
-      "published_at": "2026-09-11T16:11:17.000Z",
-      "category": "TRADE",
-      "impact": "up"
-    },
-    {
-      "title": "US-Canada trade war deepens as Washington adds new import bans - Muslim Network TV",
-      "summary": "Rule-based monitoring classified this as an observed-disruption signal in Global trade fragmentation. It is one input among multiple sources, not a standalone alarm.",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPVm9CbFRybEV4dW14eWQ5X2pYRDZiVXNBcXRkelBxRVFHSmRHU19JbUJCNjlHVTZHWWYtSjcwZkpabFFlLWN4dWVhMTBwcmtuT2FqU0lpdGcycG10RjJFVnNLaWlFeE1uUWtLTTJDbWxYS1AwRkRSbFQ4czUzdzBxRjA1NVowRTVwS3B5UDhQSHFmVWR1bGxR?oc=5",
-      "source": "Muslim Network TV",
-      "published_at": "2026-09-11T14:26:15.000Z",
-      "category": "TRADE",
-      "impact": "up"
-    },
-    {
-      "title": "NVIDIA’s Export Ban Backfires as Chinese Competitors Raise Prices 50% - 24/7 Wall St.",
-      "summary": "Rule-based monitoring classified this as an observed-disruption signal in Technology chokepoints. It is one input among multiple sources, not a standalone alarm.",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNd2JBZWpwa3lsVUtUbEdJZEJGNFk1eXREdnk4UHJlaHAzeDhhWGJBWXJ1SDFCSVRiR0RQeTBOd25mZS1JQlZsWFA2OE1WQnZkWVp5dXllZG4xM19YRnQ4Wjc4bVVoTG1GZFZjUEJSTGhKcm9GN1l0akFvSFhidURmN2dRZ3dVNVZyS1d0RUMwTmNWNm9vR25NRHhFS2Q3STczaG44S0FxSm5ObzE4WFVIWA?oc=5",
-      "source": "24/7 Wall St.",
-      "published_at": "2026-09-11T13:20:00.000Z",
-      "category": "TECH",
-      "impact": "up"
-    },
-    {
-      "title": "What to know about whey protein powder prices, potential shortages and alternatives - abcnews.com",
-      "summary": "Rule-based monitoring classified this as an observed-disruption signal in Food & agriculture. It is one input among multiple sources, not a standalone alarm.",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxONTl2N25idmFzM016REdzSmY1TmRMakVTS1M0Ny1UelE1Q2hPRXhhSkkzclJjZFJ6TjY1cnhBU1RxakdXYURydnJaZlE2VWt1VTlqNmFqMUtqclZLb0dvM0xFX3hLSklEVmdvX1lVRTV4enBuR3lGaGZnN1VSMmxWNmdydG9wSWlsODVSN2U2Z1B0UUZGNG92WkI5LXRBVm1fRFNvN25NYUo4NzjSAbABQVVfeXFMTWcxNk0tN0J2cTAwZ1NJTHV5M21CMjlyYi1nNE9SdGVtUnI0X3p2Smw0NUVqNm5XNVQxMXhsRWJ2dTllVUpneklpamoyNDN5ZFpoR195TVVyZ3dJWTdwZVJjd05QcTYteE9VOVdWY1JzVDBRUFR3aFVaeUExSjdfdGp6d1FmZ2paXzVuZWVjb3piU1luRVp2MUo2M2ZpYl8yY1daeFRhSWZBcWJDSE5jUG0?oc=5",
-      "source": "abcnews.com",
-      "published_at": "2026-09-11T04:38:23.000Z",
-      "category": "FOOD",
-      "impact": "up"
-    },
-    {
-      "title": "PA doc reports on measles-related deaths. Are cases in Bucks County? - phillyburbs.com",
-      "summary": "Rule-based monitoring classified this as an observed-disruption signal in Public health / biological. It is one input among multiple sources, not a standalone alarm.",
-      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPNV92Z0RlYk1VeTEtMnNpaDNXSEw4V1hteDNlU1hHdE1yNzkyalhVd2hOM0NlZFpnLVBOQmw1MzVraU5qbzJ6NTZQUDJfUG1BQVdLVmVQbXd2WjlXTXBSQ2J4OE5LZV90dXFkeGQ2V2RRYlZHSWxlbzh5UlZ0MFIxWlhYZ0FyUkhpckpQUHF2ZmdGZEFIcDlYeFpObmp4STF5OTVWS184VG5NdjNMSGMwRDFHaEhvS2xLejZ0eEVoVEpXcGNwSV9QM2lUcXJPZ0lMYnlkbHloQm5YaDhVSUR0SkpKMC12bDA?oc=5",
-      "source": "phillyburbs.com",
-      "published_at": "2026-09-11T08:47:00.000Z",
-      "category": "HEALTH",
       "impact": "up"
     }
   ],
   "preparedness_actions": [
-    "Build or maintain several weeks of normal food and household consumables.",
-    "Keep prescriptions and essential medical supplies current.",
-    "Maintain reasonable emergency cash alongside normal banking access.",
-    "Keep vehicles reasonably fueled and verify backup power.",
-    "Confirm family communications and meeting plans."
+    "Complete sensible, previously planned preparedness purchases while normal supply channels are functioning.",
+    "Maintain several weeks of food, household consumables, water capacity, and essential medical supplies.",
+    "Keep vehicles reasonably fueled and verify generator, battery, solar, or other backup-power capability.",
+    "Maintain diversified payment options and a reasonable amount of emergency cash.",
+    "Confirm family communications, transportation, and meeting plans.",
+    "Avoid panic buying; focus on resilience gaps that would be difficult to correct after disruption begins."
   ],
   "historical_analogs": [
     {
@@ -384,25 +399,331 @@
     },
     {
       "date": "2026-09-11",
-      "preparedness": 63,
-      "raw_preparedness": 63,
-      "threat": 73,
-      "impact": 48,
-      "americas": 66,
-      "conflict": 87,
-      "momentum": 40
+      "preparedness": 72,
+      "raw_preparedness": 72,
+      "threat": 77,
+      "impact": 52,
+      "americas": 74,
+      "conflict": 96,
+      "momentum": 91
     }
   ],
+  "evidence_quality": {
+    "evidence_count": 14,
+    "fresh_count": 11,
+    "unique_sources": 10,
+    "tier_a_sources": 7,
+    "clusters": 5,
+    "domains_covered": 11,
+    "confidence_cap": 88,
+    "publishable": true
+  },
+  "evidence_log": [
+    {
+      "id": "E1",
+      "title": "Hormuz shipping risk remains high",
+      "source": "U.S. Maritime Administration",
+      "url": "https://www.maritime.dot.gov/msci/2026-004-persian-gulf-strait-hormuz-and-gulf-oman-iranian-attacks-commercial-vessels",
+      "source_domain": "maritime.dot.gov",
+      "source_tier": "A",
+      "published_at": null,
+      "age_days": 999,
+      "cluster": "military_energy_shipping",
+      "domains": [
+        "military",
+        "energy",
+        "supply_chain"
+      ],
+      "geography": "Persian Gulf, Strait of Hormuz, Gulf of Oman",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "MARAD says Iran continues threatening and striking commercial vessels, with risks to shipping in the Persian Gulf, Hormuz, and Gulf of Oman remaining high.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E2",
+      "title": "Bab el-Mandeb pressure intensifies",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/ab2e69eb2959979bae44eb4d45ae637e",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-09-11T00:00:00.000Z",
+      "age_days": 0,
+      "cluster": "military_energy_shipping",
+      "domains": [
+        "military",
+        "energy",
+        "supply_chain",
+        "trade"
+      ],
+      "geography": "Yemen, Bab el-Mandeb, Red Sea",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "Houthi control of Mokha and a nearby island places forces near Bab el-Mandeb, while Saudi tanker attacks have reduced the route’s fallback value.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E3",
+      "title": "Alternative flows provide partial relief",
+      "source": "International Energy Agency",
+      "url": "https://www.iea.org/data-and-statistics/data-tools/middle-east-maritime-chokepoints-shipping-monitor",
+      "source_domain": "iea.org",
+      "source_tier": "A",
+      "published_at": "2026-09-09T00:00:00.000Z",
+      "age_days": 2,
+      "cluster": "military_energy_shipping",
+      "domains": [
+        "energy",
+        "supply_chain",
+        "trade"
+      ],
+      "geography": "Middle East maritime chokepoints",
+      "evidence_type": "stabilizer",
+      "materiality": "medium",
+      "fact": "IEA reports alternative routing has partly offset disruption, but the conflict remains the largest oil-supply disruption in global oil-market history.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E4",
+      "title": "U.S. bans selected Canadian imports",
+      "source": "U.S. Trade Representative",
+      "url": "https://www.ustr.gov/about/policy-offices/press-office/press-releases/2026/september/ambassador-greer-issues-statement-president-trumps-response-canadas-continued-retaliation-against",
+      "source_domain": "ustr.gov",
+      "source_tier": "A",
+      "published_at": "2026-09-08T00:00:00.000Z",
+      "age_days": 3,
+      "cluster": "trade_supply_technology",
+      "domains": [
+        "trade",
+        "supply_chain"
+      ],
+      "geography": "United States-Canada",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "The United States banned certain Canadian products and adjusted tariffs after citing Canada’s continued discriminatory treatment of U.S. exports.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E5",
+      "title": "Forced-labor tariffs target 60 economies",
+      "source": "U.S. Trade Representative",
+      "url": "https://ustr.gov/category/document-type/press-release",
+      "source_domain": "ustr.gov",
+      "source_tier": "A",
+      "published_at": "2026-09-09T00:00:00.000Z",
+      "age_days": 2,
+      "cluster": "trade_supply_technology",
+      "domains": [
+        "trade",
+        "supply_chain"
+      ],
+      "geography": "Global",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "USTR finalized tariffs on imports from 60 economies over inadequate forced-labor import bans, with exemptions possible for supply-sensitive products.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E6",
+      "title": "Rare-earth restrictions remain a supply risk",
+      "source": "U.S. Trade Representative",
+      "url": "https://ustr.gov/sites/default/files/files/Press/Releases/2026/2026%20NTE%20Report%20_%20Final.pdf",
+      "source_domain": "ustr.gov",
+      "source_tier": "A",
+      "published_at": "2026-04-01T00:00:00.000Z",
+      "age_days": 163,
+      "cluster": "trade_supply_technology",
+      "domains": [
+        "technology",
+        "supply_chain"
+      ],
+      "geography": "China and global markets",
+      "evidence_type": "forward",
+      "materiality": "high",
+      "fact": "USTR reports prior Chinese rare-earth export controls caused temporary factory shutdowns, highlighting continuing vulnerability in magnets and advanced-technology supply chains.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E7",
+      "title": "AI cyber risk to finance",
+      "source": "Bank for International Settlements",
+      "url": "https://www.bis.org/publications/fsi-paper-28-when-machines-attack-frontier-ai-cyber-threats-and-policy-responses-financial-sector",
+      "source_domain": "bis.org",
+      "source_tier": "C",
+      "published_at": "2026-09-09T00:00:00.000Z",
+      "age_days": 2,
+      "cluster": "cyber_infrastructure_finance",
+      "domains": [
+        "financial",
+        "technology",
+        "critical_infrastructure"
+      ],
+      "geography": "Global",
+      "evidence_type": "forward",
+      "materiality": "high",
+      "fact": "BIS warns frontier AI could shorten cyber-exploitation windows, increase breach likelihood, and amplify financial-sector dependence on shared cloud and software providers.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E8",
+      "title": "Payment-infrastructure dependency risk",
+      "source": "Bank for International Settlements",
+      "url": "https://www.bis.org/media-releases/20260908-global-standard-setting-bodies-publish-toolkit-cyber-resilience-fmis-and-discussion-paper-fmis",
+      "source_domain": "bis.org",
+      "source_tier": "C",
+      "published_at": "2026-09-08T00:00:00.000Z",
+      "age_days": 3,
+      "cluster": "cyber_infrastructure_finance",
+      "domains": [
+        "financial",
+        "technology",
+        "critical_infrastructure"
+      ],
+      "geography": "Global",
+      "evidence_type": "forward",
+      "materiality": "high",
+      "fact": "CPMI-IOSCO identified third-party-provider dependencies as a potential amplifier of disruption across interconnected payment and securities infrastructures.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E9",
+      "title": "Cyber-resilience stabilizer",
+      "source": "Bank for International Settlements",
+      "url": "https://www.bis.org/publications/cpmi-iosco-cyber-resilience-toolkit-practical-considerations-fmis",
+      "source_domain": "bis.org",
+      "source_tier": "C",
+      "published_at": "2026-09-08T00:00:00.000Z",
+      "age_days": 3,
+      "cluster": "cyber_infrastructure_finance",
+      "domains": [
+        "financial",
+        "technology"
+      ],
+      "geography": "Global",
+      "evidence_type": "stabilizer",
+      "materiality": "medium",
+      "fact": "CPMI-IOSCO released voluntary cyber-resilience tools to help financial-market infrastructures strengthen controls, response planning, and operational resilience.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E10",
+      "title": "Hawaii flooding and outages",
+      "source": "PAHO/WHO",
+      "url": "https://www.paho.org/en/health-emergencies/natural-hazards-monitoring?page=0",
+      "source_domain": "paho.org",
+      "source_tier": "C",
+      "published_at": "2026-09-09T00:00:00.000Z",
+      "age_days": 2,
+      "cluster": "americas_civil",
+      "domains": [
+        "domestic",
+        "critical_infrastructure",
+        "natural"
+      ],
+      "geography": "United States — Hawaii",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "Hurricane Lowell reportedly caused flooding, road and building damage, downed trees, and widespread power outages across Hawaii on September 8.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E12",
+      "title": "Andean border crossing closed",
+      "source": "Government of Argentina",
+      "url": "https://www.argentina.gob.ar/noticias/cierre-sistema-integrado-cristo-redentor",
+      "source_domain": "argentina.gob.ar",
+      "source_tier": "C",
+      "published_at": "2026-09-08T00:00:00.000Z",
+      "age_days": 3,
+      "cluster": "americas_civil",
+      "domains": [
+        "natural",
+        "trade",
+        "supply_chain"
+      ],
+      "geography": "Argentina–Chile border",
+      "evidence_type": "observed",
+      "materiality": "medium",
+      "fact": "Severe weather closed the Cristo Redentor international crossing on September 8, with authorities warning that unsafe conditions could persist and impede corridor transit.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E13",
+      "title": "Heavy-rain risk",
+      "source": "NOAA Weather Prediction Center",
+      "url": "https://www.wpc.ncep.noaa.gov/?dom=prime",
+      "source_domain": "wpc.ncep.noaa.gov",
+      "source_tier": "A",
+      "published_at": "2026-09-10T00:00:00.000Z",
+      "age_days": 1,
+      "cluster": "food_health_natural",
+      "domains": [
+        "natural"
+      ],
+      "geography": "United States",
+      "evidence_type": "forward",
+      "materiality": "medium",
+      "fact": "NOAA forecasts slight excessive-rainfall risk on September 11–12, including areas of the Southwest and central United States.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E14",
+      "title": "Heat-wave continuation",
+      "source": "NOAA Weather Prediction Center",
+      "url": "https://origin-east-www-wpc.woc.noaa.gov/",
+      "source_domain": "origin-east-www-wpc.woc.noaa.gov",
+      "source_tier": "A",
+      "published_at": "2026-09-08T00:00:00.000Z",
+      "age_days": 3,
+      "cluster": "food_health_natural",
+      "domains": [
+        "natural",
+        "public_health",
+        "food"
+      ],
+      "geography": "Southern and central United States",
+      "evidence_type": "forward",
+      "materiality": "medium",
+      "fact": "NOAA says a prolonged late-summer heat wave may persist across the southern Plains through the following weekend, posing heat and agricultural stress.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E15",
+      "title": "Foodborne surveillance",
+      "source": "CDC",
+      "url": "https://www.cdc.gov/foodborne-outbreaks/outbreaks/index.html",
+      "source_domain": "cdc.gov",
+      "source_tier": "A",
+      "published_at": "2026-09-02T00:00:00.000Z",
+      "age_days": 9,
+      "cluster": "food_health_natural",
+      "domains": [
+        "public_health",
+        "food"
+      ],
+      "geography": "United States",
+      "evidence_type": "stabilizer",
+      "materiality": "low",
+      "fact": "CDC’s latest update lists 40 active multistate foodborne investigations and says it coordinates responses with FDA and USDA-FSIS.",
+      "americas_relevant": true
+    }
+  ],
+  "api_usage": {
+    "research_model": "gpt-5.6-luna",
+    "assessment_model": "gpt-5.6-terra",
+    "web_search_calls": 6,
+    "estimated_run_cost_usd": 0.098322,
+    "estimated_period_spend_usd": 0.098322,
+    "allocated_90_day_budget_usd": 10,
+    "operational_stop_usd": 9
+  },
   "methodology": {
     "note": "All-hazards early-warning assessment. The score is a preparedness-urgency index, not the probability that a disaster, collapse, or war will occur.",
-    "formula": "Preparedness Urgency = 40% Global Threat Pressure + 25% Observed Civilian Disruption + 10% Cross-System Coupling + 10% Momentum/Persistence + 15% Americas Exposure. Domain scores are calculated deterministically from fresh multi-source news signals and smoothed against the prior day.",
-    "rate_limits": "Absent a verified hard trigger, published Preparedness Urgency moves by at most ±3 points per day. A verified hard trigger allows ±6; a verified national/multinational/global trigger can bypass the limit.",
-    "stage_guardrails": "HIGH ALERT begins at 80. IMMINENT DISRUPTION requires at least 90, observed disruption at least 75, and a verified severe hard trigger. ACTIVE DISRUPTION requires at least 97, observed disruption at least 85, at least three high-impact domains, and two verified severe hard triggers.",
+    "formula": "Preparedness Urgency = 40% Global Threat Pressure + 25% Observed Civilian Disruption + 10% Cross-System Coupling + 10% Momentum/Persistence + 15% Americas Exposure. Global threat, observed impact, and Americas exposure are weighted averages across all 12 domains.",
+    "rate_limits": "Absent a verified hard trigger, normal daily movement is limited to ±3 points. A verified but non-severe hard trigger allows up to ±6. A verified national, multinational, or global hard trigger can bypass the rate limit.",
+    "stage_guardrails": "HIGH ALERT begins at 80. IMMINENT DISRUPTION requires a score of at least 90, observed disruption of at least 75, and a verified severe hard trigger plus either 48-hour persistence or an active fast-onset trigger. ACTIVE DISRUPTION requires at least 97, observed disruption at least 85, three high-impact domains, and two verified severe triggers.",
     "civil_unrest": "Civil Unrest / Public Order is scored from observable violence, duration, geographic spread, emergency measures, infrastructure damage, and disruption to transport, commerce, public safety, or essential services. Peaceful protest and political ideology do not raise the score by themselves.",
-    "confidence": "Evidence confidence measures feed coverage and independent-source diversity; it does not increase preparedness urgency.",
-    "domains": "Military/geopolitical, energy, trade, supply chain/transportation, technology chokepoints, critical infrastructure/cyber, financial-system stress, food/agriculture, domestic institutional stress, civil unrest/public order, public health/biological, and natural/environmental.",
-    "data_engine": "Daily collection uses GDELT DOC 2.0 article metadata with Google News RSS fallback, plus USGS earthquake data. No paid AI API is required for routine updates."
-  },
-  "updater_version": "4.0-zero-credit",
-  "data_engine": "GDELT DOC 2.0 + Google News RSS fallback + USGS; deterministic rule-based scoring"
+    "confidence": "Evidence confidence is capped mechanically by source quality, recency, independence, cluster coverage, and actual web-search completion. It does not increase preparedness urgency.",
+    "pipeline": "GPT-5.6 Luna collects current evidence in paced, low-context, one-search cluster requests to stay below TPM limits. GPT-5.6 Terra evaluates only validated evidence with no web access. JavaScript validates hard triggers and calculates the final score mechanically."
+  }
 }
