@@ -5,7 +5,7 @@ import {
   previousDailyAnchor, previousDomains, applyDomainGuardrails, buildScore, normalizeHostname
 } from './dashboard-core.mjs';
 
-const SCRIPT_VERSION = '5.1';
+const SCRIPT_VERSION = '5.2';
 const TIME_ZONE = 'America/Indiana/Indianapolis';
 const API_KEY = process.env.OPENAI_API_KEY;
 const dashboardFile = new URL('../dashboard.json', import.meta.url);
@@ -160,10 +160,15 @@ function isTemporaryRateLimit(response, raw) {
   return code === 'rate_limit_exceeded' || msg.includes('rate limit reached') || msg.includes('tokens per min');
 }
 
+const TEST_MODE = process.env.DASHBOARD_TEST_MODE === '1';
+const BETWEEN_RESEARCH_CALLS_MS = TEST_MODE ? 0 : 15_000;
+const BEFORE_ASSESSMENT_MS = TEST_MODE ? 0 : 65_000;
+const RATE_LIMIT_COOLDOWN_MS = TEST_MODE ? 0 : 75_000;
+
 async function callResponses(body, label) {
-  const maxAttempts = 3;
-  const maxTotalWaitSeconds = 150;
-  let totalWaitSeconds = 0;
+  // One retry only. Failed requests count toward TPM, so repeated short retries can
+  // keep the rolling window saturated. A full cooldown is safer.
+  const maxAttempts = 2;
 
   for (let attempt = 1; attempt <= maxAttempts; attempt++) {
     const controller = new AbortController();
@@ -195,7 +200,7 @@ async function callResponses(body, label) {
       if (raw.status && raw.status !== 'completed') {
         throw new Error(`${label}: response status ${raw.status}; ${raw.incomplete_details?.reason || 'not completed'}`);
       }
-      if (attempt > 1) console.log(`${label}: temporary rate limit cleared on attempt ${attempt}.`);
+      if (attempt > 1) console.log(`${label}: rate-limit cooldown cleared the request.`);
       return raw;
     }
 
@@ -205,19 +210,19 @@ async function callResponses(body, label) {
     }
 
     const serverWait = parseRetrySeconds(response, raw);
-    const fallbackWait = 15 * (2 ** (attempt - 1));
-    const waitSeconds = Math.ceil(Math.max(serverWait ?? 0, fallbackWait) + 1);
+    const waitMs = Math.max(
+      RATE_LIMIT_COOLDOWN_MS,
+      Number.isFinite(serverWait) ? Math.ceil((serverWait + 5) * 1000) : 0
+    );
 
-    if (waitSeconds > 90 || totalWaitSeconds + waitSeconds > maxTotalWaitSeconds) {
-      throw new Error(`${label}: temporary API rate limit requires ${waitSeconds}s wait; refusing a long-running retry. ${msg}`);
-    }
-
-    totalWaitSeconds += waitSeconds;
-    console.warn(`${label}: temporary OpenAI rate limit. Waiting ${waitSeconds}s before retry ${attempt + 1}/${maxAttempts}.`);
-    await new Promise(resolve => setTimeout(resolve, waitSeconds * 1000));
+    console.warn(
+      `${label}: temporary TPM limit. Cooling down for ${Math.ceil(waitMs / 1000)}s ` +
+      `before the single retry.`
+    );
+    await new Promise(resolve => setTimeout(resolve, waitMs));
   }
 
-  throw new Error(`${label}: OpenAI request failed after bounded retries`);
+  throw new Error(`${label}: OpenAI request failed after bounded retry`);
 }
 
 const domainKeys = DOMAIN_DEFS.map(d => d.key);
@@ -253,6 +258,51 @@ const researchSchema = {
   },
   required: ['research_summary', 'coverage_clusters', 'evidence']
 };
+
+const RESEARCH_CLUSTERS = [
+  {
+    key: 'military_energy_shipping',
+    focus: 'military/geopolitical escalation, energy supply, oil/gas/LNG, maritime shipping, ports, and chokepoints',
+    domains: ['military', 'energy', 'supply_chain']
+  },
+  {
+    key: 'trade_supply_technology',
+    focus: 'tariffs, sanctions, trade restrictions, supply chains, freight, strategic technology, semiconductors, rare earths, and critical materials',
+    domains: ['trade', 'supply_chain', 'technology']
+  },
+  {
+    key: 'cyber_infrastructure_finance',
+    focus: 'cyber incidents, power/telecom/water infrastructure, payment systems, banking access, market liquidity, sovereign debt, and financial stress',
+    domains: ['critical_infrastructure', 'financial']
+  },
+  {
+    key: 'americas_civil',
+    focus: 'Americas civilian exposure, especially the U.S., Canada, Mexico, Central/South America and Caribbean; civil unrest only when violence, emergency measures, or material service/transport disruption is present',
+    domains: ['domestic', 'civil_unrest', 'trade', 'supply_chain', 'energy']
+  },
+  {
+    key: 'food_health_natural',
+    focus: 'food/agriculture/fertilizer, public-health outbreaks, and major natural/environmental hazards with material civilian consequences',
+    domains: ['food', 'public_health', 'natural']
+  }
+];
+
+function clusterResearchSchema(clusterKey) {
+  return {
+    type: 'object',
+    additionalProperties: false,
+    properties: {
+      research_summary: { type: 'string' },
+      evidence: {
+        type: 'array',
+        minItems: 2,
+        maxItems: 5,
+        items: evidenceItemSchema
+      }
+    },
+    required: ['research_summary', 'evidence']
+  };
+}
 
 const assessmentDomainSchema = {
   type: 'object',
@@ -349,46 +399,90 @@ let assessmentCost = 0;
 let searchCalls = 0;
 
 try {
-  console.log(`Research phase: Luna with a maximum of ${maxSearches} web searches.`);
-  const researchInput = `
-Date: ${today}. Focus on the last 24-72 hours; use up to 96 hours when needed for continuity.
-Cover these five clusters as efficiently as the ${maxSearches}-search ceiling permits:
-1) military/geopolitical + energy + maritime shipping/chokepoints
-2) trade + supply chain/transport + strategic technology/critical materials
-3) cyber + critical infrastructure + banking/payments/financial stress
-4) food/agriculture + public health + major natural/environmental hazards
-5) Americas civilian exposure + civil unrest/public order, with explicit attention to the U.S., Canada, Mexico, Central/South America and the Caribbean
-Return 12-18 strong evidence items if available. Evidence IDs must be E1, E2, E3... and unique.
+  const selectedClusters = RESEARCH_CLUSTERS.slice(0, maxSearches);
+  console.log(
+    `Research phase: ${selectedClusters.length} paced Luna requests, ` +
+    `one low-context web search per request.`
+  );
+
+  const collectedEvidence = [];
+  for (let i = 0; i < selectedClusters.length; i++) {
+    const spec = selectedClusters[i];
+    const researchInput = `
+Date: ${today}. Focus on the last 24-72 hours; use up to 96 hours only for continuity.
+Research ONLY this cluster: ${spec.focus}.
+Use exactly one web search. Return 2-5 of the strongest decision-useful facts.
+Prefer direct authoritative/high-quality sources. Include stabilizing evidence when material.
+Every evidence item must use cluster "${spec.key}" and one or more relevant domain keys.
+Keep each fact to one concise sentence.
 `;
 
-  const researchRaw = await callResponses({
-    model: 'gpt-5.6-luna',
-    instructions: stableResearchInstructions,
-    input: researchInput,
-    tools: [{ type: 'web_search' }],
-    tool_choice: 'auto',
-    max_tool_calls: maxSearches,
-    max_output_tokens: 2200,
-    reasoning: { effort: 'none' },
-    prompt_cache_key: 'bennett-dashboard-v5-research',
-    store: false,
-    text: {
-      verbosity: 'low',
-      format: { type: 'json_schema', name: 'dashboard_research', strict: true, schema: researchSchema }
-    }
-  }, 'Research');
+    console.log(`Research ${i + 1}/${selectedClusters.length}: ${spec.key}.`);
+    const raw = await callResponses({
+      model: 'gpt-5.6-luna',
+      instructions: stableResearchInstructions,
+      input: researchInput,
+      tools: [{ type: 'web_search', search_context_size: 'low' }],
+      tool_choice: 'required',
+      max_tool_calls: 1,
+      max_output_tokens: 700,
+      reasoning: { effort: 'none' },
+      prompt_cache_key: 'bennett-dashboard-v5.2-cluster-research',
+      store: false,
+      text: {
+        verbosity: 'low',
+        format: {
+          type: 'json_schema',
+          name: `dashboard_research_${spec.key}`,
+          strict: true,
+          schema: clusterResearchSchema(spec.key)
+        }
+      }
+    }, `Research:${spec.key}`);
 
-  searchCalls = webSearchCallCount(researchRaw);
-  researchCost = await recordCost('research', 'gpt-5.6-luna', researchRaw, searchCalls);
-  const researchText = extractOutputText(researchRaw);
-  if (!researchText) throw new Error('Research produced no structured output');
-  const research = JSON.parse(researchText);
-  const evidence = normalizeEvidence(research.evidence, today);
+    const calls = webSearchCallCount(raw);
+    if (calls < 1) throw new Error(`Research:${spec.key} completed without a web search call`);
+    searchCalls += calls;
+    researchCost += await recordCost(`research:${spec.key}`, 'gpt-5.6-luna', raw, calls);
+
+    const output = extractOutputText(raw);
+    if (!output) throw new Error(`Research:${spec.key} produced no structured output`);
+    const parsed = JSON.parse(output);
+    for (const item of parsed.evidence || []) {
+      collectedEvidence.push({
+        ...item,
+        cluster: spec.key
+      });
+    }
+
+    if (i < selectedClusters.length - 1 && BETWEEN_RESEARCH_CALLS_MS > 0) {
+      console.log(`Pacing TPM: waiting ${BETWEEN_RESEARCH_CALLS_MS / 1000}s before next research request.`);
+      await new Promise(resolve => setTimeout(resolve, BETWEEN_RESEARCH_CALLS_MS));
+    }
+  }
+
+  // Re-number evidence after merging cluster responses so IDs are unique and stable.
+  const mergedEvidence = collectedEvidence.map((item, index) => ({
+    ...item,
+    id: `E${index + 1}`
+  }));
+
+  const evidence = normalizeEvidence(mergedEvidence, today);
   const quality = evidenceQuality(evidence, searchCalls);
 
-  console.log(`Research quality: ${quality.evidence_count} evidence items, ${quality.unique_sources} sources, ${quality.tier_a_sources} Tier-A sources, ${quality.clusters}/5 clusters, ${searchCalls} web searches.`);
+  console.log(
+    `Research quality: ${quality.evidence_count} evidence items, ${quality.unique_sources} sources, ` +
+    `${quality.tier_a_sources} Tier-A sources, ${quality.clusters}/5 clusters, ${searchCalls} web searches.`
+  );
   if (!quality.publishable) {
     throw new Error(`Research quality gate failed: ${JSON.stringify(quality)}`);
+  }
+
+  // Clear the rolling TPM window before the Terra assessment. This is deliberate:
+  // reliability matters more than shaving ~65 seconds from a once-daily job.
+  if (BEFORE_ASSESSMENT_MS > 0) {
+    console.log(`TPM safety cooldown: waiting ${BEFORE_ASSESSMENT_MS / 1000}s before Terra assessment.`);
+    await new Promise(resolve => setTimeout(resolve, BEFORE_ASSESSMENT_MS));
   }
 
   const prevMap = previousDomains(current);
@@ -427,7 +521,7 @@ Keep rationales concise.
     model: 'gpt-5.6-terra',
     instructions: assessmentInstructions,
     input: assessmentInput,
-    max_output_tokens: 1700,
+    max_output_tokens: 1500,
     reasoning: { effort: 'none' },
     prompt_cache_key: 'bennett-dashboard-v5-assessment',
     store: false,
@@ -595,7 +689,7 @@ Keep rationales concise.
       stage_guardrails: 'HIGH ALERT begins at 80. IMMINENT DISRUPTION requires a score of at least 90, observed disruption of at least 75, and a verified severe hard trigger plus either 48-hour persistence or an active fast-onset trigger. ACTIVE DISRUPTION requires at least 97, observed disruption at least 85, three high-impact domains, and two verified severe triggers.',
       civil_unrest: 'Civil Unrest / Public Order is scored from observable violence, duration, geographic spread, emergency measures, infrastructure damage, and disruption to transport, commerce, public safety, or essential services. Peaceful protest and political ideology do not raise the score by themselves.',
       confidence: 'Evidence confidence is capped mechanically by source quality, recency, independence, cluster coverage, and actual web-search completion. It does not increase preparedness urgency.',
-      pipeline: 'GPT-5.6 Luna collects current evidence with a hard web-search-call ceiling. GPT-5.6 Terra evaluates only that evidence with no web access. JavaScript validates hard triggers and calculates the final score mechanically.'
+      pipeline: 'GPT-5.6 Luna collects current evidence in paced, low-context, one-search cluster requests to stay below TPM limits. GPT-5.6 Terra evaluates only validated evidence with no web access. JavaScript validates hard triggers and calculates the final score mechanically.'
     }
   };
 
