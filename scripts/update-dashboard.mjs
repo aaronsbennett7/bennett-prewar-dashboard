@@ -1,15 +1,11 @@
 import fs from "node:fs/promises";
 
-const SCRIPT_VERSION = "3.4";
-console.log(`Dashboard updater v${SCRIPT_VERSION} starting...`);
-
-const API_KEY = process.env.OPENAI_API_KEY;
-if (!API_KEY) throw new Error("Missing OPENAI_API_KEY");
-
+const SCRIPT_VERSION = "4.0-zero-credit";
+const TIME_ZONE = "America/Indiana/Indianapolis";
 const file = new URL("../dashboard.json", import.meta.url);
 const current = JSON.parse(await fs.readFile(file, "utf8"));
 
-const TIME_ZONE = "America/Indiana/Indianapolis";
+console.log(`Dashboard updater ${SCRIPT_VERSION} starting (no paid AI API required)...`);
 
 function localDate(timeZone = TIME_ZONE) {
   const parts = new Intl.DateTimeFormat("en-CA", {
@@ -19,24 +15,283 @@ function localDate(timeZone = TIME_ZONE) {
   return `${values.year}-${values.month}-${values.day}`;
 }
 
-function clamp(value, min = 0, max = 100) {
-  return Math.max(min, Math.min(max, value));
+const today = localDate();
+const nowIso = new Date().toISOString();
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+const clamp = (n, lo = 0, hi = 100) => Math.max(lo, Math.min(hi, n));
+const round = n => Math.round(n);
+
+const TRUSTED_DOMAINS = [
+  "reuters.com", "apnews.com", "bbc.com", "ft.com", "bloomberg.com", "wsj.com",
+  "nytimes.com", "washingtonpost.com", "cnbc.com", "cnn.com", "abcnews.go.com",
+  "npr.org", "theguardian.com", "aljazeera.com", "who.int", "imf.org", "worldbank.org",
+  "un.org", "nato.int", "europa.eu", "canada.ca", "gov.uk", "ustr.gov", "state.gov",
+  "treasury.gov", "federalreserve.gov", "cisa.gov", "weather.gov", "noaa.gov", "usgs.gov"
+];
+
+const SOURCE_NAMES = new Map([
+  ["reuters.com", "Reuters"], ["apnews.com", "Associated Press"], ["bbc.com", "BBC"],
+  ["ft.com", "Financial Times"], ["bloomberg.com", "Bloomberg"], ["wsj.com", "Wall Street Journal"],
+  ["cnbc.com", "CNBC"], ["cnn.com", "CNN"], ["npr.org", "NPR"], ["who.int", "WHO"],
+  ["imf.org", "IMF"], ["worldbank.org", "World Bank"], ["nato.int", "NATO"],
+  ["canada.ca", "Government of Canada"], ["ustr.gov", "USTR"], ["state.gov", "U.S. State Department"],
+  ["treasury.gov", "U.S. Treasury"], ["federalreserve.gov", "Federal Reserve"],
+  ["cisa.gov", "CISA"], ["weather.gov", "National Weather Service"], ["noaa.gov", "NOAA"],
+  ["usgs.gov", "USGS"]
+]);
+
+const AMERICAS_TERMS = [
+  "united states", "u.s.", " us ", "america", "canada", "mexico", "brazil", "argentina",
+  "colombia", "venezuela", "chile", "peru", "ecuador", "bolivia", "paraguay", "uruguay",
+  "guyana", "suriname", "panama", "costa rica", "guatemala", "honduras", "el salvador",
+  "nicaragua", "belize", "caribbean", "cuba", "haiti", "jamaica", "dominican", "puerto rico"
+];
+
+const AMERICAS_SOURCE_COUNTRIES = new Set([
+  "United States", "Canada", "Mexico", "Brazil", "Argentina", "Colombia", "Venezuela", "Chile",
+  "Peru", "Ecuador", "Bolivia", "Paraguay", "Uruguay", "Guyana", "Suriname", "Panama",
+  "Costa Rica", "Guatemala", "Honduras", "El Salvador", "Nicaragua", "Belize", "Cuba", "Haiti",
+  "Jamaica", "Dominican Republic", "Puerto Rico"
+]);
+
+const DOMAIN_CONFIG = {
+  energy: {
+    category: "ENERGY",
+    query: '(oil OR gas OR LNG OR refinery OR pipeline OR electricity OR "power grid") (shortage OR disruption OR attack OR closure OR outage OR rationing OR spike)',
+    threat: ["attack", "threat", "warning", "risk", "escalat", "strike", "sanction", "disrupt", "closure", "spike"],
+    impact: ["shortage", "ration", "outage", "closed", "closure", "halted", "shutdown", "blackout", "record high", "surge"]
+  },
+  military: {
+    category: "MILITARY",
+    query: '(war OR missile OR invasion OR blockade OR mobilization OR "military strike" OR attack) (NATO OR Russia OR Ukraine OR China OR Taiwan OR Iran OR Israel OR "United States")',
+    threat: ["war", "missile", "invasion", "blockade", "mobiliz", "strike", "attack", "escalat", "threat"],
+    impact: ["killed", "casualties", "struck", "attacked", "invaded", "blockade", "mobilization", "evacuation"]
+  },
+  supply_chain: {
+    category: "SUPPLY",
+    query: '("supply chain" OR shipping OR freight OR port OR rail OR trucking OR container) (disruption OR closure OR strike OR delay OR shortage OR reroute OR insurance)',
+    threat: ["risk", "strike", "delay", "rerout", "insurance", "disrupt", "closure", "threat"],
+    impact: ["closed", "closure", "shutdown", "halted", "shortage", "backlog", "suspended", "cancelled", "delays"]
+  },
+  trade: {
+    category: "TRADE",
+    query: '(tariff OR tariffs OR "trade war" OR embargo OR sanctions OR "export control" OR "import ban" OR retaliation)',
+    threat: ["tariff", "retaliat", "sanction", "embargo", "export control", "import ban", "trade war", "restriction"],
+    impact: ["effective", "takes effect", "ban", "blocked", "halted", "suspended", "shortage", "price increase"]
+  },
+  technology: {
+    category: "TECH",
+    query: '(semiconductor OR semiconductors OR "rare earth" OR chips OR "critical minerals" OR telecom) (shortage OR export OR restriction OR sanction OR disruption)',
+    threat: ["restriction", "sanction", "export", "ban", "risk", "shortage", "disrupt", "control"],
+    impact: ["shortage", "halted", "suspended", "stopped", "ban", "unavailable", "ration"]
+  },
+  critical_infrastructure: {
+    category: "CYBER",
+    query: '("power grid" OR utility OR telecom OR satellite OR GPS OR "subsea cable" OR water OR payments) (cyber OR attack OR outage OR sabotage OR disruption)',
+    threat: ["cyber", "attack", "sabotage", "threat", "risk", "target", "disrupt"],
+    impact: ["outage", "blackout", "offline", "down", "disrupted", "cut", "disabled", "failure"]
+  },
+  financial: {
+    category: "FINANCE",
+    query: '(bank OR banking OR bond OR credit OR liquidity OR debt OR payments OR market) (stress OR crisis OR default OR outage OR "capital controls" OR "bank run" OR "withdrawal limit")',
+    threat: ["stress", "crisis", "default", "liquidity", "bank run", "capital controls", "risk", "selloff"],
+    impact: ["default", "outage", "withdrawal limit", "capital controls", "bank run", "frozen", "suspended", "failed"]
+  },
+  food: {
+    category: "FOOD",
+    query: '(food OR grain OR wheat OR corn OR fertilizer OR agriculture OR livestock) (shortage OR "export ban" OR disruption OR rationing OR disease OR drought OR price)',
+    threat: ["drought", "disease", "export ban", "risk", "price", "disrupt", "shortage", "crop failure"],
+    impact: ["shortage", "ration", "export ban", "failed crop", "cull", "unavailable", "record price"]
+  },
+  domestic: {
+    category: "CIVIL",
+    query: '("state of emergency" OR "emergency powers" OR "government shutdown" OR "border closure" OR curfew OR "institutional crisis")',
+    threat: ["emergency", "shutdown", "closure", "curfew", "crisis", "breakdown", "instability"],
+    impact: ["closed", "shutdown", "curfew", "suspended", "emergency declared", "services halted"]
+  },
+  civil_unrest: {
+    category: "CIVIL",
+    query: '(riot OR riots OR "civil unrest" OR "violent protest" OR "general strike" OR curfew OR looting OR clashes) (transport OR port OR rail OR fuel OR infrastructure OR police OR government)',
+    threat: ["riot", "civil unrest", "violent", "strike", "curfew", "looting", "clashes", "tension"],
+    impact: ["closed", "shutdown", "curfew", "looting", "burned", "blocked", "halted", "disrupted", "deployed"]
+  },
+  public_health: {
+    category: "HEALTH",
+    query: '(outbreak OR epidemic OR pandemic OR Ebola OR "avian flu" OR H5N1 OR cholera OR measles OR polio) (WHO OR health OR cases OR deaths OR emergency)',
+    threat: ["outbreak", "epidemic", "pandemic", "spread", "emergency", "cases", "deaths", "warning"],
+    impact: ["emergency declared", "lockdown", "quarantine", "travel restriction", "deaths", "hospital surge", "shortage"]
+  },
+  natural: {
+    category: "NATURAL",
+    query: '(earthquake OR hurricane OR typhoon OR cyclone OR flood OR wildfire OR drought OR tsunami) (evacuation OR outage OR damage OR deaths OR port OR infrastructure)',
+    threat: ["hurricane", "typhoon", "cyclone", "wildfire", "flood", "earthquake", "tsunami", "drought", "warning"],
+    impact: ["evacuation", "outage", "damage", "deaths", "closed", "destroyed", "flooded", "landfall"]
+  }
+};
+
+function normalizeDomain(host) {
+  if (!host) return "";
+  return host.toLowerCase().replace(/^www\./, "");
 }
 
-function finiteScore(value, label) {
-  if (!Number.isFinite(value) || value < 0 || value > 100) {
-    throw new Error(`Invalid ${label}: ${value}`);
+function sourceName(domain, fallback = "News source") {
+  const d = normalizeDomain(domain);
+  for (const [key, val] of SOURCE_NAMES.entries()) {
+    if (d === key || d.endsWith(`.${key}`)) return val;
   }
-  return Math.round(value);
+  if (fallback && fallback !== d) return fallback;
+  return d || "News source";
+}
+
+function isTrusted(domain) {
+  const d = normalizeDomain(domain);
+  return TRUSTED_DOMAINS.some(x => d === x || d.endsWith(`.${x}`)) || d.endsWith(".gov") || d.endsWith(".mil");
+}
+
+function decodeEntities(s = "") {
+  return s
+    .replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;/g, "'")
+    .replace(/&lt;/g, "<").replace(/&gt;/g, ">");
+}
+
+function gdeltDateToIso(value) {
+  if (!value) return null;
+  const s = String(value);
+  const m = s.match(/^(\d{4})(\d{2})(\d{2})T?(\d{2})?(\d{2})?(\d{2})?Z?$/);
+  if (!m) return s;
+  const [, y, mo, d, h = "00", mi = "00", sec = "00"] = m;
+  return `${y}-${mo}-${d}T${h}:${mi}:${sec}Z`;
+}
+
+function containsAny(text, terms) {
+  const t = ` ${String(text || "").toLowerCase()} `;
+  return terms.filter(term => t.includes(term.toLowerCase()));
+}
+
+function isAmericas(article) {
+  if (AMERICAS_SOURCE_COUNTRIES.has(article.sourcecountry)) return true;
+  const t = ` ${String(article.title || "").toLowerCase()} `;
+  return AMERICAS_TERMS.some(x => t.includes(x));
+}
+
+async function fetchJson(url, timeoutMs = 20000) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const r = await fetch(url, {
+      signal: controller.signal,
+      headers: { "User-Agent": "BennettPreparednessDashboard/4.0" }
+    });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    return await r.json();
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+async function fetchGdelt(query) {
+  const params = new URLSearchParams({
+    query,
+    mode: "artlist",
+    maxrecords: "35",
+    timespan: "1d",
+    sort: "datedesc",
+    format: "json"
+  });
+  const url = `https://api.gdeltproject.org/api/v2/doc/doc?${params}`;
+  const data = await fetchJson(url);
+  const articles = Array.isArray(data?.articles) ? data.articles : [];
+  return articles.map(a => ({
+    title: decodeEntities(a.title || ""),
+    url: a.url || a.url_mobile || "",
+    domain: normalizeDomain(a.domain || ""),
+    source: sourceName(a.domain || ""),
+    sourcecountry: a.sourcecountry || "",
+    published_at: gdeltDateToIso(a.seendate || a.date || null),
+    provider: "GDELT"
+  })).filter(a => a.title && /^https?:\/\//i.test(a.url));
+}
+
+function xmlText(s = "") {
+  return decodeEntities(s.replace(/<!\[CDATA\[|\]\]>/g, "").replace(/<[^>]+>/g, "").trim());
+}
+
+async function fetchGoogleNews(query) {
+  const q = `${query} when:1d`;
+  const url = `https://news.google.com/rss/search?q=${encodeURIComponent(q)}&hl=en-US&gl=US&ceid=US:en`;
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 20000);
+  try {
+    const r = await fetch(url, { signal: controller.signal, headers: { "User-Agent": "BennettPreparednessDashboard/4.0" } });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const xml = await r.text();
+    const items = [...xml.matchAll(/<item>([\s\S]*?)<\/item>/gi)].slice(0, 25).map(m => m[1]);
+    return items.map(item => {
+      const title = xmlText(item.match(/<title>([\s\S]*?)<\/title>/i)?.[1] || "");
+      const link = xmlText(item.match(/<link>([\s\S]*?)<\/link>/i)?.[1] || "");
+      const pubDate = xmlText(item.match(/<pubDate>([\s\S]*?)<\/pubDate>/i)?.[1] || "");
+      const sourceMatch = item.match(/<source(?:\s+url="([^"]+)")?>([\s\S]*?)<\/source>/i);
+      const sourceUrl = sourceMatch?.[1] || "";
+      let domain = "news.google.com";
+      try { if (sourceUrl) domain = new URL(sourceUrl).hostname; } catch {}
+      return {
+        title,
+        url: link,
+        domain: normalizeDomain(domain),
+        source: xmlText(sourceMatch?.[2] || domain),
+        sourcecountry: "",
+        published_at: pubDate ? new Date(pubDate).toISOString() : null,
+        provider: "Google News RSS"
+      };
+    }).filter(a => a.title && /^https?:\/\//i.test(a.url));
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+function dedupeArticles(items) {
+  const seen = new Set();
+  const out = [];
+  for (const a of items) {
+    const key = `${a.url}|${a.title.toLowerCase().replace(/\W+/g, " ").slice(0, 100)}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(a);
+  }
+  return out;
+}
+
+function articleSeverity(article, cfg) {
+  const threatHits = containsAny(article.title, cfg.threat);
+  const impactHits = containsAny(article.title, cfg.impact);
+  let score = 0.5 + Math.min(2.0, threatHits.length * 0.65) + Math.min(2.6, impactHits.length * 1.05);
+  if (isTrusted(article.domain)) score += 0.45;
+  return {
+    score: Math.min(5, score),
+    threatHits,
+    impactHits,
+    trusted: isTrusted(article.domain),
+    americas: isAmericas(article)
+  };
+}
+
+function boundedMove(previous, target, normalLimit = 8) {
+  const blended = 0.65 * previous + 0.35 * target;
+  const delta = clamp(blended - previous, -normalLimit, normalLimit);
+  return round(clamp(previous + delta));
+}
+
+function mean(arr) {
+  if (!arr.length) return 0;
+  return arr.reduce((a, b) => a + b, 0) / arr.length;
 }
 
 function weightedMean(items, field) {
-  const totalWeight = items.reduce((sum, item) => sum + item.weight, 0);
-  if (!totalWeight) return 0;
-  return Math.round(items.reduce((sum, item) => sum + item[field] * item.weight, 0) / totalWeight);
+  const tw = items.reduce((s, x) => s + (x.weight || 1), 0);
+  return tw ? round(items.reduce((s, x) => s + x[field] * (x.weight || 1), 0) / tw) : 0;
 }
 
-function stageLabelForRegionalExposure(score) {
+function stageForRegional(score) {
   if (score >= 85) return "SEVERE";
   if (score >= 70) return "HIGH";
   if (score >= 55) return "ELEVATED";
@@ -44,459 +299,208 @@ function stageLabelForRegionalExposure(score) {
   return "STABLE";
 }
 
-const today = localDate();
+const domainResults = [];
+const allScoredArticles = [];
+const fetchFailures = [];
 
-const domainRubric = current.domains.map(d => ({
-  key: d.key,
-  name: d.name,
-  weight: d.weight,
-  previous_threat: d.threat,
-  previous_impact: d.impact,
-  previous_americas_exposure: d.americas_exposure ?? 0
-}));
+for (const old of current.domains) {
+  const cfg = DOMAIN_CONFIG[old.key];
+  if (!cfg) throw new Error(`Missing domain config for ${old.key}`);
 
-const prompt = `
-You are the research engine for an ALL-HAZARDS Global Disruption & Preparedness Dashboard dated ${today}.
+  let articles = [];
+  let provider = "GDELT";
+  try {
+    articles = await fetchGdelt(cfg.query);
+    if (!articles.length) throw new Error("No GDELT results");
+  } catch (err) {
+    console.warn(`${old.key}: GDELT unavailable (${err.message}); trying Google News RSS.`);
+    provider = "Google News RSS";
+    try {
+      articles = await fetchGoogleNews(cfg.query);
+    } catch (fallbackErr) {
+      console.warn(`${old.key}: fallback unavailable (${fallbackErr.message}).`);
+      fetchFailures.push(old.key);
+      articles = [];
+    }
+  }
 
-MISSION
-Estimate whether current conditions are deteriorating toward civilian-facing disruption severe enough that a prudent household in the Americas should advance normal preparedness BEFORE critical resources become difficult, expensive, unsafe, or unavailable.
+  articles = dedupeArticles(articles).slice(0, 30);
+  const scored = articles.map(a => ({ ...a, ...articleSeverity(a, cfg), domainKey: old.key, category: cfg.category }));
+  allScoredArticles.push(...scored);
 
-This is NOT a World War III probability score and must not be sensationalized. War is one hazard pathway among many. Give substantial attention to non-war pathways including:
-- global trade fragmentation, tariffs, retaliatory tariffs, embargoes, sanctions and export controls
-- energy supply, fuel availability, refining, pipelines, electricity markets and maritime chokepoints
-- supply-chain, freight, shipping, ports, rail, trucking and transportation disruption
-- strategic technology, semiconductors, rare earths and critical-material chokepoints
-- cyber threats to grid, water, telecom, satellites, GPS, finance, ports and subsea infrastructure
-- financial-system, sovereign-debt, liquidity, credit, banking and payment-system stress
-- food, fertilizer, agriculture and commodity supply risks
-- public-health / biological hazards
-- major natural / environmental shocks
-- domestic institutional instability and emergency measures
-- CIVIL UNREST / PUBLIC ORDER: riots, sustained violent unrest, politically motivated violence, major strikes, emergency deployments, curfews, road/rail/port/border closures, or disorder that materially affects commerce, transportation, infrastructure, public safety, or essential services
+  const uniqueSources = new Set(scored.map(a => a.domain || a.source)).size;
+  const trustedSources = new Set(scored.filter(a => a.trusted).map(a => a.domain || a.source)).size;
+  const topSeverity = [...scored].sort((a, b) => b.score - a.score).slice(0, 6).map(a => a.score);
+  const impactArticles = scored.filter(a => a.impactHits.length > 0);
+  const impactSources = new Set(impactArticles.map(a => a.domain || a.source)).size;
+  const impactSeverity = [...impactArticles].sort((a, b) => b.score - a.score).slice(0, 5).map(a => a.score);
+  const americasArticles = scored.filter(a => a.americas);
+  const americasSources = new Set(americasArticles.map(a => a.domain || a.source)).size;
+  const americasSeverity = [...americasArticles].sort((a, b) => b.score - a.score).slice(0, 5).map(a => a.score);
 
-AMERICAS FOCUS
-Explicitly research the United States, Canada, Mexico, Central America, South America and the Caribbean for conditions that could affect civilians. Include civil unrest/public order, critical infrastructure, energy/fuel exposure, trade restrictions, financial stress, transportation, food supply and public-health conditions.
+  let targetThreat;
+  let targetImpact;
+  let targetAmericas;
 
-For civil unrest/public order, remain politically neutral. Peaceful protest, controversial speech, partisan disagreement, elections, ideology, or demonstrations alone are NOT disruption. Raise scores only for observable factors such as violence, duration, geographic spread, emergency measures, disruption to transportation/commerce/essential services, infrastructure damage, supply access problems, or credible near-term escalation.
+  if (!scored.length) {
+    targetThreat = Math.max(20, (old.threat ?? 40) - 8);
+    targetImpact = Math.max(10, (old.impact ?? 25) - 7);
+    targetAmericas = Math.max(15, (old.americas_exposure ?? 30) - 7);
+  } else {
+    targetThreat = clamp(
+      12 + Math.min(36, uniqueSources * 4.5) + (mean(topSeverity) / 5) * 42 + Math.min(10, trustedSources * 2),
+      18, 95
+    );
+    if (scored.length < 4) targetThreat *= 0.82;
 
-RESEARCH
-Use web search for current reporting. Focus primarily on the past 24-72 hours, while preserving strategic context from the past several weeks when necessary.
-Prioritize Reuters, AP, official government sources, NATO, central banks, IMF/World Bank, WHO, UN agencies, IEA/EIA and similarly authoritative sources.
-Prefer direct source URLs over syndication mirrors.
-Do not inflate scores because many headlines cover the same event.
-Separate forward-looking threat from disruption already observed.
+    targetImpact = impactArticles.length
+      ? clamp(6 + Math.min(38, impactSources * 6) + (mean(impactSeverity) / 5) * 42, 8, 90)
+      : 12;
 
-DOMAIN DEFINITIONS
-For each supplied domain return:
-- threat: 0-100 = credible forward-looking potential for material civilian/global disruption.
-- impact: 0-100 = disruption ALREADY observable in prices, availability, outages, rationing, access restrictions, logistics, financial functioning, transportation, public safety, or essential services.
-- americas_exposure: 0-100 = how directly the current condition could affect people, infrastructure, prices, access, mobility, safety, or essential services in the Americas under the current baseline.
-- trend: rising | stable | easing
-- rationale: one concise evidence-based sentence.
+    targetAmericas = americasArticles.length
+      ? clamp(10 + Math.min(42, americasSources * 6) + (mean(americasSeverity) / 5) * 40, 12, 92)
+      : 18;
+  }
 
-Score exactly these domains:
-${JSON.stringify(domainRubric, null, 2)}
+  const threat = boundedMove(old.threat ?? 40, targetThreat, 8);
+  const impact = boundedMove(old.impact ?? 25, targetImpact, 7);
+  const americas_exposure = boundedMove(old.americas_exposure ?? 30, targetAmericas, 8);
+  const delta = threat - (old.threat ?? threat);
+  const trend = delta >= 3 ? "rising" : delta <= -3 ? "easing" : "stable";
 
-SCORING RUBRIC
-Threat:
-0-19 normal/background
-20-39 elevated but contained
-40-54 meaningful watch condition
-55-69 credible disruption pathway
-70-84 high / multiple leading indicators
-85-94 very high / material near-term pathway
-95-100 extreme / disruption pathway actively unfolding and difficult to contain
+  const top = [...scored].sort((a, b) => b.score - a.score)[0];
+  const rationale = top
+    ? `Fresh ${provider} monitoring found ${scored.length} relevant reports across ${uniqueSources} outlets; top signal: ${top.title.slice(0, 150)}.`
+    : `No usable fresh reporting was returned for this domain; the score was allowed to decay gradually rather than being guessed.`;
 
-Observed impact:
-0-19 little/no broad civilian impact
-20-39 measurable but limited impact
-40-54 material sector/regional effects
-55-69 broad price/logistics/access effects
-70-84 major disruption affecting multiple systems or regions
-85-94 severe widespread civilian/system impact
-95-100 broad systemic failure or active disaster
+  domainResults.push({
+    ...old,
+    threat,
+    impact,
+    americas_exposure,
+    trend,
+    rationale
+  });
 
-Americas exposure:
-0-19 weak or indirect Americas transmission
-20-39 plausible but limited transmission
-40-54 meaningful regional relevance
-55-69 material household/economic/infrastructure exposure
-70-84 high direct exposure or multiple transmission channels
-85-94 severe direct exposure with constrained alternatives
-95-100 widespread Americas system impairment already occurring or immediately unavoidable
-
-CROSS-SYSTEM COUPLING
-Return coupling_score 0-100. Score higher only when multiple domains are causally reinforcing one another (example: conflict -> shipping disruption -> energy shock -> inflation -> credit stress -> shortages). Do not score high merely because several unrelated risks coexist.
-
-EVIDENCE CONFIDENCE
-Return confidence_score 0-100 and a short confidence_rationale. Confidence measures quality, recency, independence, and directness of evidence, NOT severity. High confidence requires multiple authoritative or direct sources and clear observed facts. Speculative or contradictory reporting should lower confidence.
-
-PREPAREDNESS WINDOW
-Choose exactly one phrase describing the fastest credible civilian-facing impact horizon under the current baseline, not a prediction date:
-"Months", "Weeks to months", "Weeks", "Days to weeks", "Days", or "Immediate / ongoing".
-
-HARD TRIGGERS
-Return an array of 0-6 hard triggers. Include a trigger only when there is concrete evidence of a condition that can materially constrain civilian access or essential systems. Allowed types:
-- fuel_shortage
-- fuel_rationing
-- shipping_chokepoint_closure
-- major_port_closure
-- transport_shutdown
-- grid_outage
-- telecom_outage
-- payment_outage
-- capital_controls
-- bank_access_restrictions
-- food_shortage
-- medicine_shortage
-- emergency_civil_order
-- multiple_system_failures
-Each trigger must include verified true/false, scope local|regional|national|multinational|global, status developing|active|resolved, summary, and a direct source_url. Mark verified=true only when supported by authoritative or high-quality reporting. Do NOT use military tension by itself as a hard trigger.
-
-SIGNALS
-Return exactly 6 of the most decision-useful current signals. Each must include:
-- title
-- 1-2 sentence summary
-- direct URL
-- source/publisher
-- published_at as ISO-8601 timestamp when available; YYYY-MM-DD when only date is available; null only when truly unavailable
-- category: ENERGY | TRADE | SUPPLY | MILITARY | CYBER | FINANCE | FOOD | HEALTH | NATURAL | TECH | CIVIL | STABILIZER
-- impact: up | down | neutral
-Include Americas civil-unrest/public-order reporting when materially relevant.
-
-STABILIZERS
-Return exactly 3 current conditions genuinely limiting immediate disruption. Examples: functioning alternative supply routes, resilient financial plumbing, reserve capacity, effective emergency response, active diplomacy, restored transport, or declining unrest. Do not invent reassurance.
-
-AREAS TO WATCH
-Return exactly 5 concrete forward indicators. Each should have name, severity (critical|high|medium), and why.
-
-AMERICAS SUMMARY
-Return 2 concise sentences summarizing current civilian-facing stability/exposure in the Americas. Mention civil unrest/public order when it is materially relevant; otherwise explicitly note that broad disorder is not currently a leading driver.
-
-Return ONLY valid JSON with this exact shape:
-{
-  "summary": "2 concise sentences",
-  "primary_driver": "1 concise sentence",
-  "americas_summary": "2 concise sentences",
-  "coupling_score": 0,
-  "confidence_score": 0,
-  "confidence_rationale": "short text",
-  "preparedness_window": "Weeks",
-  "domains": [
-    {"key":"...", "threat":0, "impact":0, "americas_exposure":0, "trend":"rising|stable|easing", "rationale":"..."}
-  ],
-  "hard_triggers": [
-    {"type":"fuel_shortage", "verified":true, "scope":"national", "status":"active", "summary":"...", "source_url":"https://..."}
-  ],
-  "primary_stabilizers": ["...", "...", "..."],
-  "areas_to_watch": [
-    {"name":"...", "severity":"critical|high|medium", "why":"..."}
-  ],
-  "signals": [
-    {"title":"...", "summary":"...", "url":"https://...", "source":"Reuters", "published_at":"2026-09-10T12:34:56Z", "category":"ENERGY", "impact":"up|down|neutral"}
-  ]
+  await sleep(250);
 }
 
-OUTPUT BREVITY
-- Keep every domain rationale to 25 words or fewer.
-- Keep each signal summary to 35 words or fewer.
-- Keep each watch-area explanation to 30 words or fewer.
-- Keep the main summary to 55 words or fewer.
-- Keep Americas summary to 45 words or fewer.
-- Avoid repeating the same fact across fields.
+// Supplement natural-hazard coverage with authoritative USGS earthquake data.
+try {
+  const usgs = await fetchJson("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_day.geojson");
+  const strong = (usgs?.features || []).filter(f => Number(f?.properties?.mag) >= 6.0).slice(0, 5);
+  for (const f of strong) {
+    allScoredArticles.push({
+      title: `M${f.properties.mag} earthquake: ${f.properties.place || "location unavailable"}`,
+      url: f.properties.url,
+      domain: "usgs.gov",
+      source: "USGS",
+      sourcecountry: "",
+      published_at: new Date(f.properties.time).toISOString(),
+      provider: "USGS",
+      domainKey: "natural",
+      category: "NATURAL",
+      score: Number(f.properties.mag) >= 7 ? 4.6 : 3.6,
+      threatHits: ["earthquake"],
+      impactHits: Number(f.properties.mag) >= 7 ? ["major earthquake"] : [],
+      trusted: true,
+      americas: /Alaska|California|Mexico|Chile|Peru|Ecuador|Canada|Caribbean|Puerto Rico|United States/i.test(f.properties.place || "")
+    });
+  }
+} catch (err) {
+  console.warn(`USGS supplement unavailable: ${err.message}`);
+}
 
-IMPORTANT
-- Do NOT output the final Preparedness Urgency, Global Threat Pressure, Observed Civilian Disruption, Americas Exposure, Momentum, Conflict Escalation, or preparedness stage. They are calculated mechanically.
-- Do NOT use markdown.
-- Exactly one domain object for every supplied key.
-- A tariff dispute can raise trade threat without implying military escalation.
-- A cyber threat can be high while observed impact remains low if no outages have occurred.
-- Peaceful protest alone should not elevate Civil Unrest / Public Order.
-- Actual riots, prolonged violent disorder, curfews, emergency deployments, or strikes that disrupt ports/rail/fuel/essential services should raise civil-unrest impact and Americas exposure.
-- Active shortages, rationing, capital controls, payment failures, fuel shortages, broad outages, port closures or persistent transport shutdowns should raise observed impact.
-- Markets adapting, alternative routes functioning, reserve capacity, active trade flows and effective crisis-management channels are legitimate stabilizers.
-`;
-
-const MODEL_CANDIDATES = [
-  "gpt-5.6-terra",
-  "gpt-5.4-nano"
+const TRIGGERS = [
+  ["fuel_shortage", /\b(fuel|gasoline|diesel) shortage\b/i],
+  ["fuel_rationing", /\b(fuel|gasoline|diesel).*ration|ration.*\b(fuel|gasoline|diesel)\b/i],
+  ["shipping_chokepoint_closure", /\b(strait|canal|shipping lane|chokepoint).*(closed|closure|halted|blocked)|\b(closed|closure|halted|blocked).*(strait|canal|shipping lane|chokepoint)\b/i],
+  ["major_port_closure", /\b(port|harbor).*(closed|closure|shutdown|halted)|\b(closed|closure|shutdown|halted).*(port|harbor)\b/i],
+  ["transport_shutdown", /\b(rail|trucking|transport|airport|airspace).*(shutdown|halted|closed|suspended)\b/i],
+  ["grid_outage", /\b(blackout|power outage|grid failure|grid outage)\b/i],
+  ["telecom_outage", /\b(telecom|internet|communications).*(outage|down|failure|offline)\b/i],
+  ["payment_outage", /\b(payment|card payments|banking network).*(outage|down|offline|failure)\b/i],
+  ["capital_controls", /\bcapital controls\b/i],
+  ["bank_access_restrictions", /\b(withdrawal limits?|bank access restrictions?|bank holiday)\b/i],
+  ["food_shortage", /\b(food|grain|wheat|rice|corn).*(shortage|rationing)\b/i],
+  ["medicine_shortage", /\b(medicine|drug|medication).*(shortage|unavailable)\b/i],
+  ["emergency_civil_order", /\b(curfew|state of emergency|national guard|emergency deployment)\b/i]
 ];
 
-const baseBody = {
-  tools: [{
-    type: "web_search_preview",
-    search_context_size: "low"
-  }],
-  input: prompt,
-  reasoning: { effort: "none" },
-  max_output_tokens: 3200
-};
+const hard_triggers = [];
+for (const [type, pattern] of TRIGGERS) {
+  const matches = dedupeArticles(allScoredArticles.filter(a => pattern.test(a.title)));
+  const uniqueSources = new Set(matches.map(a => a.domain || a.source));
+  const trusted = matches.some(a => a.trusted);
+  const verified = uniqueSources.size >= 3 || (uniqueSources.size >= 2 && trusted);
+  if (!verified) continue;
+  const top = [...matches].sort((a, b) => b.score - a.score)[0];
+  const titleText = matches.map(a => a.title).join(" ").toLowerCase();
+  let scope = "regional";
+  if (/global|worldwide|multiple countries|international/i.test(titleText)) scope = "global";
+  else if (/nationwide|nationally|across the country|countrywide/i.test(titleText)) scope = "national";
+  else if (matches.filter(a => a.americas).length && matches.filter(a => !a.americas).length) scope = "multinational";
 
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-
-function parseRetrySeconds(errorText = "", response = null) {
-  const retryAfter = response?.headers?.get?.("retry-after");
-  if (retryAfter) {
-    const seconds = Number(retryAfter);
-    if (Number.isFinite(seconds) && seconds > 0) return seconds;
-  }
-
-  // Handle API messages such as "try again in 8.2s", "44m12s", or "81h8m38s".
-  const msg = errorText.match(/try again in\s+([^.\n]+(?:\.[0-9]+s)?)/i)?.[1] || "";
-  let seconds = 0;
-  const h = msg.match(/([0-9.]+)\s*h/i);
-  const m = msg.match(/([0-9.]+)\s*m/i);
-  const s = msg.match(/([0-9.]+)\s*s/i);
-  if (h) seconds += Number(h[1]) * 3600;
-  if (m) seconds += Number(m[1]) * 60;
-  if (s) seconds += Number(s[1]);
-  return Number.isFinite(seconds) && seconds > 0 ? seconds : null;
+  hard_triggers.push({
+    type,
+    verified: true,
+    scope,
+    status: "active",
+    summary: `${matches.length} fresh reports from ${uniqueSources.size} independent outlets met the dashboard's verification rule for ${type.replaceAll("_", " ")}.`,
+    source_url: top.url
+  });
 }
 
-async function callModel(model) {
-  const requestBody = { ...baseBody, model };
-  console.log(`Calling ${model}...`);
+const verifiedHardTriggerCount = hard_triggers.length;
+const severeHardTriggerCount = hard_triggers.filter(t => ["national", "multinational", "global"].includes(t.scope)).length;
 
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 180000);
+const globalThreat = weightedMean(domainResults, "threat");
+const observedImpact = weightedMean(domainResults, "impact");
+const americasExposure = weightedMean(domainResults, "americas_exposure");
+const conflictEscalation = domainResults.find(d => d.key === "military")?.threat ?? 0;
 
-  let response;
-  try {
-    response = await fetch("https://api.openai.com/v1/responses", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${API_KEY}`,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(requestBody),
-      signal: controller.signal
-    });
-  } catch (err) {
-    if (err?.name === "AbortError") {
-      throw new Error(`${model} request timed out after 180 seconds`);
-    }
-    throw err;
-  } finally {
-    clearTimeout(timeout);
-  }
+function d(key) { return domainResults.find(x => x.key === key); }
+let coupling = 25;
+if ((d("energy")?.threat ?? 0) >= 65 && (d("supply_chain")?.threat ?? 0) >= 60) coupling += 15;
+if ((d("energy")?.threat ?? 0) >= 65 && (d("financial")?.threat ?? 0) >= 55) coupling += 10;
+if ((d("trade")?.threat ?? 0) >= 65 && (d("supply_chain")?.threat ?? 0) >= 60) coupling += 10;
+if ((d("military")?.threat ?? 0) >= 70 && Math.max(d("energy")?.threat ?? 0, d("supply_chain")?.threat ?? 0) >= 60) coupling += 10;
+if ((d("critical_infrastructure")?.threat ?? 0) >= 70 && Math.max(d("financial")?.threat ?? 0, d("supply_chain")?.threat ?? 0) >= 55) coupling += 10;
+if ((d("civil_unrest")?.threat ?? 0) >= 65 && (d("supply_chain")?.threat ?? 0) >= 55) coupling += 10;
+coupling = clamp(coupling, 20, 90);
 
-  if (response.ok) {
-    console.log(`${model} completed successfully.`);
-    return response;
-  }
+const rising = domainResults.filter(x => x.trend === "rising").length;
+const easing = domainResults.filter(x => x.trend === "easing").length;
+const recentHistory = (current.history || []).slice(-3);
+const historySlope = recentHistory.length >= 2
+  ? recentHistory[recentHistory.length - 1].preparedness - recentHistory[0].preparedness
+  : 0;
+const momentum = round(clamp(45 + rising * 4 - easing * 3 + historySlope * 2, 20, 85));
 
-  const errorText = await response.text();
-  const retrySeconds = parseRetrySeconds(errorText, response);
-
-  const err = new Error(`OpenAI API ${response.status} (${model}): ${errorText}`);
-  err.status = response.status;
-  err.retrySeconds = retrySeconds;
-  throw err;
-}
-
-let response = null;
-let lastError = null;
-
-for (const model of MODEL_CANDIDATES) {
-  try {
-    response = await callModel(model);
-    break;
-  } catch (err) {
-    lastError = err;
-
-    if (err.status === 429) {
-      const retry = err.retrySeconds;
-      if (retry && retry <= 60) {
-        console.warn(`${model} rate-limited for about ${Math.ceil(retry)}s; waiting once before retry.`);
-        await sleep(Math.ceil(retry * 1000) + 1000);
-        try {
-          response = await callModel(model);
-          break;
-        } catch (retryErr) {
-          lastError = retryErr;
-        }
-      }
-
-      console.warn(`${model} is rate-limited; trying the next model instead of sleeping for hours.`);
-      continue;
-    }
-
-    // If the model is unavailable to this account, try the fallback model.
-    if (err.status === 404 || err.status === 403) {
-      console.warn(`${model} unavailable for this API account; trying fallback model.`);
-      continue;
-    }
-
-    throw err;
-  }
-}
-
-if (!response) {
-  throw lastError || new Error("No OpenAI model completed the dashboard update.");
-}
-
-const raw = await response.json();
-let text = raw.output_text || "";
-if (!text) {
-  for (const item of raw.output || []) {
-    if (item.type === "message") {
-      for (const c of item.content || []) {
-        if (c.type === "output_text") text += c.text;
-      }
-    }
-  }
-}
-text = text.trim().replace(/^```json\s*/i, "").replace(/```$/, "").trim();
-const update = JSON.parse(text);
-
-const allowedTrends = new Set(["rising", "stable", "easing"]);
-const allowedSeverity = new Set(["critical", "high", "medium"]);
-const allowedSignalImpact = new Set(["up", "down", "neutral"]);
-const allowedCategories = new Set(["ENERGY","TRADE","SUPPLY","MILITARY","CYBER","FINANCE","FOOD","HEALTH","NATURAL","TECH","CIVIL","STABILIZER"]);
-const allowedWindows = new Set(["Months","Weeks to months","Weeks","Days to weeks","Days","Immediate / ongoing"]);
-const allowedTriggerTypes = new Set([
-  "fuel_shortage","fuel_rationing","shipping_chokepoint_closure","major_port_closure","transport_shutdown",
-  "grid_outage","telecom_outage","payment_outage","capital_controls","bank_access_restrictions",
-  "food_shortage","medicine_shortage","emergency_civil_order","multiple_system_failures"
-]);
-const allowedScopes = new Set(["local","regional","national","multinational","global"]);
-const allowedTriggerStatus = new Set(["developing","active","resolved"]);
-
-if (!Array.isArray(update.domains) || update.domains.length !== current.domains.length) {
-  throw new Error("Invalid domain count");
-}
-
-const currentKeys = new Set(current.domains.map(d => d.key));
-const seen = new Set();
-for (const d of update.domains) {
-  if (!currentKeys.has(d.key) || seen.has(d.key)) throw new Error(`Invalid/duplicate domain key ${d.key}`);
-  seen.add(d.key);
-  finiteScore(d.threat, `${d.key} threat`);
-  finiteScore(d.impact, `${d.key} impact`);
-  finiteScore(d.americas_exposure, `${d.key} americas_exposure`);
-  if (!allowedTrends.has(d.trend)) throw new Error(`Invalid trend ${d.key}`);
-  if (typeof d.rationale !== "string" || d.rationale.length < 5) throw new Error(`Missing rationale ${d.key}`);
-}
-
-finiteScore(update.coupling_score, "coupling_score");
-finiteScore(update.confidence_score, "confidence_score");
-if (typeof update.confidence_rationale !== "string" || update.confidence_rationale.length < 5) throw new Error("Missing confidence rationale");
-if (!allowedWindows.has(update.preparedness_window)) throw new Error("Invalid preparedness_window");
-if (typeof update.americas_summary !== "string" || update.americas_summary.length < 10) throw new Error("Missing Americas summary");
-if (!Array.isArray(update.primary_stabilizers) || update.primary_stabilizers.length < 3) throw new Error("Need at least 3 stabilizers");
-if (!Array.isArray(update.areas_to_watch) || update.areas_to_watch.length < 5) throw new Error("Need at least 5 watch areas");
-if (!Array.isArray(update.signals) || update.signals.length < 6) throw new Error("Need at least 6 signals");
-if (!Array.isArray(update.hard_triggers)) throw new Error("hard_triggers must be an array");
-
-for (const w of update.areas_to_watch) {
-  if (!allowedSeverity.has(w.severity)) throw new Error(`Invalid watch severity ${w.severity}`);
-}
-for (const s of update.signals) {
-  if (!s.title || !s.summary || !s.url || !s.source) throw new Error("Signal missing required fields");
-  if (!/^https:\/\//i.test(s.url)) throw new Error(`Signal URL must be https: ${s.url}`);
-  if (!allowedSignalImpact.has(s.impact)) throw new Error(`Invalid signal impact ${s.impact}`);
-  if (!allowedCategories.has(s.category)) throw new Error(`Invalid category ${s.category}`);
-}
-for (const h of update.hard_triggers) {
-  if (!allowedTriggerTypes.has(h.type)) throw new Error(`Invalid hard trigger type ${h.type}`);
-  if (typeof h.verified !== "boolean") throw new Error("Hard trigger verified must be boolean");
-  if (!allowedScopes.has(h.scope)) throw new Error(`Invalid trigger scope ${h.scope}`);
-  if (!allowedTriggerStatus.has(h.status)) throw new Error(`Invalid trigger status ${h.status}`);
-  if (!h.summary || !/^https:\/\//i.test(h.source_url || "")) throw new Error("Hard trigger missing summary/source_url");
-}
-
-const mergedDomains = current.domains.map(old => {
-  const fresh = update.domains.find(d => d.key === old.key);
-  return {
-    ...old,
-    threat: finiteScore(fresh.threat, `${old.key} threat`),
-    impact: finiteScore(fresh.impact, `${old.key} impact`),
-    americas_exposure: finiteScore(fresh.americas_exposure, `${old.key} americas_exposure`),
-    trend: fresh.trend,
-    rationale: fresh.rationale
-  };
-});
-
-const globalThreatPressure = weightedMean(mergedDomains, "threat");
-const observedCivilianDisruption = weightedMean(mergedDomains, "impact");
-const americasExposure = weightedMean(mergedDomains, "americas_exposure");
-const couplingScore = finiteScore(update.coupling_score, "coupling_score");
-const confidenceScore = finiteScore(update.confidence_score, "confidence_score");
-const military = mergedDomains.find(d => d.key === "military");
-if (!military) throw new Error("Missing military domain");
-const conflictEscalation = military.threat;
-
-const risingWeight = mergedDomains.filter(d => d.trend === "rising").reduce((s,d)=>s+d.weight,0);
-const easingWeight = mergedDomains.filter(d => d.trend === "easing").reduce((s,d)=>s+d.weight,0);
-const totalWeight = mergedDomains.reduce((s,d)=>s+d.weight,0);
-const trendMomentum = clamp(Math.round(50 + 50 * ((risingWeight - easingWeight) / totalWeight)));
-
-const priorHistory = [...(current.history || [])]
-  .filter(h => h.date !== today && Number.isFinite(h.preparedness))
-  .sort((a,b)=>a.date.localeCompare(b.date));
-
-let historyMomentum = 50;
-if (priorHistory.length >= 2) {
-  const recent = priorHistory.slice(-3);
-  const first = recent[0];
-  const last = recent[recent.length - 1];
-  const days = Math.max(1, Math.round((new Date(last.date+"T12:00:00Z") - new Date(first.date+"T12:00:00Z")) / 86400000));
-  const avgDailyChange = (last.preparedness - first.preparedness) / days;
-  historyMomentum = clamp(Math.round(50 + avgDailyChange * 7));
-}
-const momentumScore = priorHistory.length >= 2
-  ? Math.round(0.65 * trendMomentum + 0.35 * historyMomentum)
-  : trendMomentum;
-
-let rawPreparednessUrgency = Math.round(
-  0.40 * globalThreatPressure +
-  0.25 * observedCivilianDisruption +
-  0.10 * couplingScore +
-  0.10 * momentumScore +
+const rawPreparedness = round(clamp(
+  0.40 * globalThreat +
+  0.25 * observedImpact +
+  0.10 * coupling +
+  0.10 * momentum +
   0.15 * americasExposure
-);
-rawPreparednessUrgency = clamp(rawPreparednessUrgency);
+));
 
-const verifiedTriggers = update.hard_triggers.filter(h => h.verified && h.status !== "resolved");
-const severeScopes = new Set(["national","multinational","global"]);
-const severeTriggers = verifiedTriggers.filter(h => severeScopes.has(h.scope));
-const fastOnsetTypes = new Set([
-  "fuel_shortage","fuel_rationing","shipping_chokepoint_closure","major_port_closure","transport_shutdown",
-  "grid_outage","telecom_outage","payment_outage","capital_controls","bank_access_restrictions",
-  "food_shortage","medicine_shortage","emergency_civil_order","multiple_system_failures"
-]);
-const immediateSevereTrigger = severeTriggers.some(h => fastOnsetTypes.has(h.type) && h.status === "active");
+const previousPublished = Number(current.preparedness_urgency ?? rawPreparedness);
+let dailyLimit = 3;
+if (verifiedHardTriggerCount > 0) dailyLimit = 6;
+if (severeHardTriggerCount > 0) dailyLimit = 100;
+const publishedPreparedness = severeHardTriggerCount > 0
+  ? rawPreparedness
+  : round(clamp(rawPreparedness, previousPublished - dailyLimit, previousPublished + dailyLimit));
 
-let preparednessUrgency = rawPreparednessUrgency;
-let rateLimitApplied = false;
-let rateLimit = null;
-const previousDayScore = priorHistory.length ? priorHistory[priorHistory.length - 1].preparedness : null;
+const highImpactDomains = domainResults.filter(x => x.impact >= 70).length;
+const sustained90 = [...(current.history || []), { date: today, preparedness: publishedPreparedness }]
+  .slice(-3)
+  .filter(x => x.preparedness >= 90).length >= 2;
 
-if (current.schema_version >= 3 && Number.isFinite(previousDayScore) && severeTriggers.length === 0) {
-  rateLimit = verifiedTriggers.length ? 6 : 3;
-  const limited = clamp(rawPreparednessUrgency, previousDayScore - rateLimit, previousDayScore + rateLimit);
-  preparednessUrgency = Math.round(limited);
-  rateLimitApplied = preparednessUrgency !== rawPreparednessUrgency;
-}
-
-const tentativeHistory = [...priorHistory, {
-  date: today,
-  preparedness: preparednessUrgency,
-  raw_preparedness: rawPreparednessUrgency,
-  threat: globalThreatPressure,
-  impact: observedCivilianDisruption,
-  americas: americasExposure,
-  conflict: conflictEscalation,
-  momentum: momentumScore
-}].sort((a,b)=>a.date.localeCompare(b.date));
-
-const lastThree = tentativeHistory.slice(-3);
-const sustained90For48h = lastThree.length >= 3 && lastThree.every(h => h.preparedness >= 90);
-const highImpactDomains = mergedDomains.filter(d => d.impact >= 70).length;
-
-function stageFor(score, observed, highImpacts, severeCount, sustained90, immediateTrigger) {
-  if (score >= 97 && observed >= 85 && highImpacts >= 3 && severeCount >= 2) return "ACTIVE DISRUPTION";
-  if (score >= 90 && observed >= 75 && severeCount >= 1 && (sustained90 || immediateTrigger)) return "IMMINENT DISRUPTION";
+function preparednessStage(score) {
+  if (score >= 97 && observedImpact >= 85 && highImpactDomains >= 3 && severeHardTriggerCount >= 2) return "ACTIVE DISRUPTION";
+  if (score >= 90 && observedImpact >= 75 && severeHardTriggerCount >= 1 && (sustained90 || hard_triggers.some(t => t.status === "active"))) return "IMMINENT DISRUPTION";
   if (score >= 80) return "HIGH ALERT";
   if (score >= 65) return "ACCELERATE";
   if (score >= 50) return "PREPARE";
@@ -504,17 +508,65 @@ function stageFor(score, observed, highImpacts, severeCount, sustained90, immedi
   return "NORMAL";
 }
 
-const preparednessStage = stageFor(
-  preparednessUrgency,
-  observedCivilianDisruption,
-  highImpactDomains,
-  severeTriggers.length,
-  sustained90For48h,
-  immediateSevereTrigger
-);
+const stage = preparednessStage(publishedPreparedness);
+const americasStage = stageForRegional(americasExposure);
 
-const confidenceLevel = confidenceScore >= 80 ? "HIGH" : confidenceScore >= 60 ? "MODERATE" : "LOW";
-const americasStage = stageLabelForRegionalExposure(americasExposure);
+// Confidence reflects feed coverage and source diversity, not severity.
+const uniqueAllSources = new Set(allScoredArticles.map(a => a.domain || a.source)).size;
+const trustedAllSources = new Set(allScoredArticles.filter(a => a.trusted).map(a => a.domain || a.source)).size;
+const domainsWithEvidence = domainResults.filter((x, i) => !fetchFailures.includes(current.domains[i]?.key)).length;
+const confidenceScore = round(clamp(
+  38 + domainsWithEvidence * 2 + Math.min(24, uniqueAllSources * 0.8) + Math.min(14, trustedAllSources * 1.8) - fetchFailures.length * 6,
+  30, 92
+));
+const confidenceLevel = confidenceScore >= 80 ? "HIGH" : confidenceScore >= 55 ? "MODERATE" : "LOW";
+const confidenceRationale = `${domainsWithEvidence}/${domainResults.length} domains returned fresh news coverage, spanning ${uniqueAllSources} unique outlets including ${trustedAllSources} high-authority sources; ${fetchFailures.length} domain feeds failed.`;
+
+const rankedDomains = [...domainResults].sort((a, b) =>
+  (0.45 * b.threat + 0.25 * b.impact + 0.30 * b.americas_exposure) -
+  (0.45 * a.threat + 0.25 * a.impact + 0.30 * a.americas_exposure)
+);
+const primary = rankedDomains[0];
+
+const signals = dedupeArticles([...allScoredArticles]
+  .sort((a, b) => (b.score + (b.trusted ? 0.7 : 0) + (b.americas ? 0.3 : 0)) - (a.score + (a.trusted ? 0.7 : 0) + (a.americas ? 0.3 : 0))))
+  .filter((a, idx, arr) => arr.findIndex(x => x.url === a.url) === idx)
+  .slice(0, 8)
+  .map(a => ({
+    title: a.title.slice(0, 190),
+    summary: `Rule-based monitoring classified this as ${a.impactHits?.length ? "an observed-disruption" : "a forward-risk"} signal in ${domainResults.find(x => x.key === a.domainKey)?.name || a.domainKey}. It is one input among multiple sources, not a standalone alarm.`,
+    url: a.url,
+    source: a.source || sourceName(a.domain),
+    published_at: a.published_at,
+    category: a.category || DOMAIN_CONFIG[a.domainKey]?.category || "STABILIZER",
+    impact: a.impactHits?.length ? "up" : "neutral"
+  }));
+
+const areasToWatch = rankedDomains.slice(0, 6).map(x => ({
+  name: x.name,
+  severity: x.threat >= 80 ? "critical" : x.threat >= 65 ? "high" : "medium",
+  why: `Threat ${x.threat}, observed impact ${x.impact}, Americas exposure ${x.americas_exposure}. Watch for multi-source evidence that raises observed impact or satisfies a hard-trigger rule.`
+}));
+
+const primaryStabilizers = [];
+if (!verifiedHardTriggerCount) primaryStabilizers.push("No event met the dashboard's multi-source hard-trigger verification rule in the current monitored feed.");
+if (observedImpact < globalThreat) primaryStabilizers.push("Observed civilian disruption remains below forward-looking threat pressure, indicating that several risks have not fully transmitted into day-to-day systems.");
+const lowImpactDomains = domainResults.filter(x => x.impact < 50).length;
+if (lowImpactDomains >= 6) primaryStabilizers.push(`${lowImpactDomains} of ${domainResults.length} domains remain below 50 on observed civilian impact.`);
+if (americasExposure < 75) primaryStabilizers.push("Aggregate Americas exposure remains below the dashboard's severe regional threshold.");
+if (fetchFailures.length === 0) primaryStabilizers.push("All monitored domain feeds returned usable fresh data on this run.");
+while (primaryStabilizers.length < 3) primaryStabilizers.push("The dashboard requires corroboration across independent sources before promoting single headlines into hard-trigger status.");
+
+const americasComponents = [...domainResults]
+  .sort((a, b) => b.americas_exposure - a.americas_exposure)
+  .slice(0, 6)
+  .map(x => ({ name: x.name, score: x.americas_exposure, trend: x.trend }));
+
+const preparednessWindow = severeHardTriggerCount >= 1 ? "Days" : verifiedHardTriggerCount >= 1 ? "Days to weeks" : observedImpact >= 65 ? "Days to weeks" : globalThreat >= 70 ? "Weeks" : "Weeks to months";
+
+const summary = `Preparedness urgency is ${publishedPreparedness} (${stage}). Fresh rule-based monitoring across ${uniqueAllSources} outlets places the highest combined pressure in ${rankedDomains.slice(0, 3).map(x => x.name).join(", ")}; ${verifiedHardTriggerCount ? `${verifiedHardTriggerCount} hard trigger(s) met multi-source verification.` : "no hard trigger met multi-source verification."}`;
+const americasSummary = `Americas exposure is ${americasExposure} (${americasStage}). The strongest regional transmission channels are ${americasComponents.slice(0, 3).map(x => x.name).join(", ")}; civil unrest is scored only when reporting shows violence, emergency measures, or material disruption to transport, commerce, safety, or essential services.`;
+const primaryDriver = `${primary.name} is the current leading driver with threat ${primary.threat}, observed impact ${primary.impact}, and Americas exposure ${primary.americas_exposure}.`;
 
 const actionSets = {
   "NORMAL": [
@@ -523,7 +575,7 @@ const actionSets = {
     "Periodically test flashlights, radios, backup batteries, and smoke/CO alarms."
   ],
   "WATCH": [
-    "Review household food, water, medication, fuel, communications, and backup-power readiness.",
+    "Review household food, water, medication, fuel, and backup-power readiness.",
     "Replace expiring supplies and identify difficult-to-source essentials.",
     "Confirm family communications and meeting plans."
   ],
@@ -543,111 +595,104 @@ const actionSets = {
     "Avoid panic buying; focus on resilience gaps that would be difficult to correct after disruption begins."
   ],
   "HIGH ALERT": [
-    "Finish high-priority preparedness gaps now while supplies and services remain broadly available.",
-    "Top off normal prescriptions, fuel, water storage, food, and backup-power readiness without hoarding.",
-    "Keep multiple payment methods and emergency cash accessible.",
-    "Review family communications, transportation, shelter, and contingency plans.",
-    "Monitor authoritative local and national emergency information more frequently.",
-    "Avoid speculative or fear-driven purchases; prioritize items with clear household utility."
+    "Finish previously planned resilience purchases without hoarding.",
+    "Verify essential medications, water, fuel, backup power, communications, and transportation plans.",
+    "Maintain flexible payment options and emergency cash.",
+    "Monitor authoritative local guidance for any verified disruption affecting your area."
   ],
   "IMMINENT DISRUPTION": [
-    "Complete previously planned essential purchases immediately where practical and lawful, without hoarding.",
-    "Secure normal prescriptions, fuel, water, food, backup power, and communications capability.",
-    "Keep additional payment options and emergency cash accessible.",
-    "Confirm transportation, family communications, shelter, and contingency plans.",
-    "Follow official emergency guidance for any affected region or infrastructure system."
+    "Complete essential preparedness actions immediately without panic buying.",
+    "Prioritize medications, water, fuel, backup power, communications, and transportation continuity.",
+    "Follow official emergency guidance for any affected system or region."
   ],
   "ACTIVE DISRUPTION": [
     "Follow official emergency instructions and prioritize immediate safety.",
-    "Conserve constrained fuel, power, water, food, and other essential resources.",
-    "Use established backup communications and power plans as needed.",
-    "Avoid unnecessary travel into affected areas and verify information through authoritative sources.",
-    "Assist nearby vulnerable people when safe to do so."
+    "Conserve constrained fuel, power, water, and essential resources.",
+    "Use established backup communications, power, and transportation plans as needed."
   ]
 };
 
-const americasComponents = [
-  "civil_unrest","trade","energy","critical_infrastructure","financial","supply_chain"
-].map(key => mergedDomains.find(d => d.key === key)).filter(Boolean)
- .sort((a,b)=>b.americas_exposure-a.americas_exposure)
- .map(d=>({name:d.name, score:d.americas_exposure, trend:d.trend}));
-
-const history = tentativeHistory.slice(-370);
+const history = [...(current.history || [])].filter(h => h.date !== today);
+history.push({
+  date: today,
+  preparedness: publishedPreparedness,
+  raw_preparedness: rawPreparedness,
+  threat: globalThreat,
+  impact: observedImpact,
+  americas: americasExposure,
+  conflict: conflictEscalation,
+  momentum
+});
+history.sort((a, b) => a.date.localeCompare(b.date));
+while (history.length > 370) history.shift();
 
 const next = {
   ...current,
-  schema_version: 3,
+  schema_version: 4,
   as_of: today,
-  updated_at: new Date().toISOString(),
-  preparedness_urgency: preparednessUrgency,
-  raw_preparedness_urgency: rawPreparednessUrgency,
-  preparedness_stage: preparednessStage,
-  global_threat_pressure: globalThreatPressure,
-  leading_threat_pressure: globalThreatPressure,
-  observed_civilian_disruption: observedCivilianDisruption,
+  updated_at: nowIso,
+  updater_version: SCRIPT_VERSION,
+  data_engine: "GDELT DOC 2.0 + Google News RSS fallback + USGS; deterministic rule-based scoring",
+  preparedness_urgency: publishedPreparedness,
+  raw_preparedness_urgency: rawPreparedness,
+  preparedness_stage: stage,
+  global_threat_pressure: globalThreat,
+  leading_threat_pressure: globalThreat,
+  observed_civilian_disruption: observedImpact,
   americas_exposure: americasExposure,
   americas_stage: americasStage,
-  americas_summary: update.americas_summary,
+  americas_summary: americasSummary,
   americas_components: americasComponents,
   conflict_escalation: conflictEscalation,
-  coupling_score: couplingScore,
-  momentum_score: momentumScore,
+  coupling_score: coupling,
+  momentum_score: momentum,
   confidence_score: confidenceScore,
   confidence_level: confidenceLevel,
-  confidence_rationale: update.confidence_rationale,
-  preparedness_window: update.preparedness_window,
-  summary: update.summary,
-  primary_driver: update.primary_driver,
-  primary_stabilizers: update.primary_stabilizers.slice(0, 5),
-  domains: mergedDomains,
-  hard_triggers: update.hard_triggers.slice(0, 6),
-  verified_hard_trigger_count: verifiedTriggers.length,
-  severe_hard_trigger_count: severeTriggers.length,
+  confidence_rationale: confidenceRationale,
+  preparedness_window: preparednessWindow,
+  summary,
+  primary_driver: primaryDriver,
+  primary_stabilizers: primaryStabilizers.slice(0, 5),
+  domains: domainResults,
+  hard_triggers,
+  verified_hard_trigger_count: verifiedHardTriggerCount,
+  severe_hard_trigger_count: severeHardTriggerCount,
   score_calibration: {
-    raw_score: rawPreparednessUrgency,
-    published_score: preparednessUrgency,
-    rate_limit_applied: rateLimitApplied,
-    daily_rate_limit: rateLimit,
-    sustained_90_for_48h: sustained90For48h,
+    raw_score: rawPreparedness,
+    published_score: publishedPreparedness,
+    rate_limit_applied: publishedPreparedness !== rawPreparedness,
+    daily_rate_limit: severeHardTriggerCount > 0 ? null : dailyLimit,
+    sustained_90_for_48h: sustained90,
     high_impact_domain_count: highImpactDomains
   },
   score_components: {
-    global_threat_pressure: globalThreatPressure,
-    observed_civilian_disruption: observedCivilianDisruption,
-    coupling: couplingScore,
-    momentum: momentumScore,
+    global_threat_pressure: globalThreat,
+    observed_civilian_disruption: observedImpact,
+    coupling,
+    momentum,
     americas_exposure: americasExposure
   },
-  drivers: [...mergedDomains]
-    .sort((a, b) => (b.threat + b.impact * 0.35) - (a.threat + a.impact * 0.35))
-    .slice(0, 6)
-    .map((d, i) => ({
-      name: d.name,
-      severity: d.threat >= 85 ? "critical" : d.threat >= 70 ? "high" : "medium",
-      note: i === 0 ? "Primary driver" : ""
-    })),
-  areas_to_watch: update.areas_to_watch.slice(0, 8),
-  signals: update.signals.slice(0, 10).map(s => ({
-    title: s.title,
-    summary: s.summary,
-    url: s.url,
-    source: s.source,
-    published_at: s.published_at || null,
-    category: s.category,
-    impact: s.impact
+  drivers: rankedDomains.slice(0, 6).map((x, i) => ({
+    name: x.name,
+    severity: x.threat >= 80 ? "critical" : x.threat >= 65 ? "high" : "medium",
+    note: i === 0 ? "Primary driver" : ""
   })),
-  preparedness_actions: actionSets[preparednessStage] || actionSets.WATCH,
+  areas_to_watch: areasToWatch,
+  signals,
+  preparedness_actions: actionSets[stage] || actionSets.WATCH,
   history,
   methodology: {
+    ...(current.methodology || {}),
     note: "All-hazards early-warning assessment. The score is a preparedness-urgency index, not the probability that a disaster, collapse, or war will occur.",
-    formula: "Preparedness Urgency = 40% Global Threat Pressure + 25% Observed Civilian Disruption + 10% Cross-System Coupling + 10% Momentum/Persistence + 15% Americas Exposure. Global threat, observed impact, and Americas exposure are weighted averages across all 12 domains.",
-    rate_limits: "Absent a verified hard trigger, normal daily movement is limited to ±3 points. A verified but non-severe hard trigger allows up to ±6. A verified national, multinational, or global hard trigger can bypass the rate limit.",
-    stage_guardrails: "HIGH ALERT begins at 80. IMMINENT DISRUPTION requires a score of at least 90, observed disruption of at least 75, and a verified severe hard trigger plus either 48-hour persistence or an active fast-onset trigger. ACTIVE DISRUPTION requires at least 97, observed disruption at least 85, three high-impact domains, and two verified severe triggers.",
+    formula: "Preparedness Urgency = 40% Global Threat Pressure + 25% Observed Civilian Disruption + 10% Cross-System Coupling + 10% Momentum/Persistence + 15% Americas Exposure. Domain scores are calculated deterministically from fresh multi-source news signals and smoothed against the prior day.",
+    data_engine: "Daily collection uses GDELT DOC 2.0 article metadata with Google News RSS fallback, plus USGS earthquake data. No paid AI API is required for routine updates.",
+    rate_limits: "Absent a verified hard trigger, published Preparedness Urgency moves by at most ±3 points per day. A verified hard trigger allows ±6; a verified national/multinational/global trigger can bypass the limit.",
+    stage_guardrails: "HIGH ALERT begins at 80. IMMINENT DISRUPTION requires at least 90, observed disruption at least 75, and a verified severe hard trigger. ACTIVE DISRUPTION requires at least 97, observed disruption at least 85, at least three high-impact domains, and two verified severe hard triggers.",
     civil_unrest: "Civil Unrest / Public Order is scored from observable violence, duration, geographic spread, emergency measures, infrastructure damage, and disruption to transport, commerce, public safety, or essential services. Peaceful protest and political ideology do not raise the score by themselves.",
-    confidence: "Evidence confidence is displayed separately and does not increase preparedness urgency.",
+    confidence: "Evidence confidence measures feed coverage and independent-source diversity; it does not increase preparedness urgency.",
     domains: "Military/geopolitical, energy, trade, supply chain/transportation, technology chokepoints, critical infrastructure/cyber, financial-system stress, food/agriculture, domestic institutional stress, civil unrest/public order, public health/biological, and natural/environmental."
   }
 };
 
 await fs.writeFile(file, JSON.stringify(next, null, 2) + "\n", "utf8");
-console.log(`Updated ${today}: raw=${rawPreparednessUrgency}, published=${preparednessUrgency}, stage=${preparednessStage}, threat=${globalThreatPressure}, impact=${observedCivilianDisruption}, Americas=${americasExposure}`);
+console.log(`Updated ${today}: preparedness ${previousPublished} -> ${publishedPreparedness} (raw ${rawPreparedness}); ${uniqueAllSources} sources; ${verifiedHardTriggerCount} hard trigger(s); failures: ${fetchFailures.length}.`);
