@@ -5,7 +5,7 @@ import {
   previousDailyAnchor, previousDomains, applyDomainGuardrails, buildScore, normalizeHostname
 } from './dashboard-core.mjs';
 
-const SCRIPT_VERSION = '5.0';
+const SCRIPT_VERSION = '5.1';
 const TIME_ZONE = 'America/Indiana/Indianapolis';
 const API_KEY = process.env.OPENAI_API_KEY;
 const dashboardFile = new URL('../dashboard.json', import.meta.url);
@@ -127,37 +127,97 @@ function webSearchCallCount(raw) {
   return (raw?.output || []).filter(item => item?.type === 'web_search_call').length;
 }
 
+function parseRetrySeconds(response, raw) {
+  const retryAfter = response?.headers?.get?.('retry-after');
+  if (retryAfter) {
+    const numeric = Number(retryAfter);
+    if (Number.isFinite(numeric) && numeric >= 0) return numeric;
+    const retryDate = Date.parse(retryAfter);
+    if (Number.isFinite(retryDate)) return Math.max(0, (retryDate - Date.now()) / 1000);
+  }
+
+  const msg = String(raw?.error?.message || '');
+  const match = msg.match(/try again in\s+((?:[0-9.]+h)?(?:[0-9.]+m)?(?:[0-9.]+s)?)/i);
+  if (!match?.[1]) return null;
+  const token = match[1];
+  let seconds = 0;
+  const h = token.match(/([0-9.]+)h/i);
+  const m = token.match(/([0-9.]+)m/i);
+  const sec = token.match(/([0-9.]+)s/i);
+  if (h) seconds += Number(h[1]) * 3600;
+  if (m) seconds += Number(m[1]) * 60;
+  if (sec) seconds += Number(sec[1]);
+  return Number.isFinite(seconds) && seconds >= 0 ? seconds : null;
+}
+
+function isTemporaryRateLimit(response, raw) {
+  if (response?.status !== 429) return false;
+  const code = String(raw?.error?.code || '');
+  const type = String(raw?.error?.type || '');
+  const msg = String(raw?.error?.message || '').toLowerCase();
+  if (['credit_balance_exhausted', 'organization_usage_limit_exceeded', 'organization_spend_limit_exceeded', 'project_spend_limit_exceeded'].includes(code)) return false;
+  if (type === 'insufficient_quota' && code !== 'rate_limit_exceeded') return false;
+  return code === 'rate_limit_exceeded' || msg.includes('rate limit reached') || msg.includes('tokens per min');
+}
+
 async function callResponses(body, label) {
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 240_000);
-  let response;
-  try {
-    response = await fetch('https://api.openai.com/v1/responses', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${API_KEY}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(body),
-      signal: controller.signal
-    });
-  } finally {
-    clearTimeout(timeout);
-  }
+  const maxAttempts = 3;
+  const maxTotalWaitSeconds = 150;
+  let totalWaitSeconds = 0;
 
-  const rawText = await response.text();
-  let raw;
-  try { raw = JSON.parse(rawText); }
-  catch { throw new Error(`${label}: non-JSON API response (${response.status})`); }
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 240_000);
+    let response;
+    try {
+      response = await fetch('https://api.openai.com/v1/responses', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${API_KEY}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(body),
+        signal: controller.signal
+      });
+    } catch (err) {
+      if (err?.name === 'AbortError') throw new Error(`${label}: OpenAI request timed out after 240 seconds`);
+      throw err;
+    } finally {
+      clearTimeout(timeout);
+    }
 
-  if (!response.ok) {
+    const rawText = await response.text();
+    let raw;
+    try { raw = JSON.parse(rawText); }
+    catch { throw new Error(`${label}: non-JSON API response (${response.status})`); }
+
+    if (response.ok) {
+      if (raw.status && raw.status !== 'completed') {
+        throw new Error(`${label}: response status ${raw.status}; ${raw.incomplete_details?.reason || 'not completed'}`);
+      }
+      if (attempt > 1) console.log(`${label}: temporary rate limit cleared on attempt ${attempt}.`);
+      return raw;
+    }
+
     const msg = raw?.error?.message || rawText.slice(0, 1000);
-    throw new Error(`${label}: OpenAI API ${response.status}: ${msg}`);
+    if (!isTemporaryRateLimit(response, raw) || attempt === maxAttempts) {
+      throw new Error(`${label}: OpenAI API ${response.status}: ${msg}`);
+    }
+
+    const serverWait = parseRetrySeconds(response, raw);
+    const fallbackWait = 15 * (2 ** (attempt - 1));
+    const waitSeconds = Math.ceil(Math.max(serverWait ?? 0, fallbackWait) + 1);
+
+    if (waitSeconds > 90 || totalWaitSeconds + waitSeconds > maxTotalWaitSeconds) {
+      throw new Error(`${label}: temporary API rate limit requires ${waitSeconds}s wait; refusing a long-running retry. ${msg}`);
+    }
+
+    totalWaitSeconds += waitSeconds;
+    console.warn(`${label}: temporary OpenAI rate limit. Waiting ${waitSeconds}s before retry ${attempt + 1}/${maxAttempts}.`);
+    await new Promise(resolve => setTimeout(resolve, waitSeconds * 1000));
   }
-  if (raw.status && raw.status !== 'completed') {
-    throw new Error(`${label}: response status ${raw.status}; ${raw.incomplete_details?.reason || 'not completed'}`);
-  }
-  return raw;
+
+  throw new Error(`${label}: OpenAI request failed after bounded retries`);
 }
 
 const domainKeys = DOMAIN_DEFS.map(d => d.key);
@@ -298,7 +358,7 @@ Cover these five clusters as efficiently as the ${maxSearches}-search ceiling pe
 3) cyber + critical infrastructure + banking/payments/financial stress
 4) food/agriculture + public health + major natural/environmental hazards
 5) Americas civilian exposure + civil unrest/public order, with explicit attention to the U.S., Canada, Mexico, Central/South America and the Caribbean
-Return 14-22 strong evidence items if available. Evidence IDs must be E1, E2, E3... and unique.
+Return 12-18 strong evidence items if available. Evidence IDs must be E1, E2, E3... and unique.
 `;
 
   const researchRaw = await callResponses({
@@ -308,7 +368,7 @@ Return 14-22 strong evidence items if available. Evidence IDs must be E1, E2, E3
     tools: [{ type: 'web_search' }],
     tool_choice: 'auto',
     max_tool_calls: maxSearches,
-    max_output_tokens: 3000,
+    max_output_tokens: 2200,
     reasoning: { effort: 'none' },
     prompt_cache_key: 'bennett-dashboard-v5-research',
     store: false,
@@ -367,7 +427,7 @@ Keep rationales concise.
     model: 'gpt-5.6-terra',
     instructions: assessmentInstructions,
     input: assessmentInput,
-    max_output_tokens: 2000,
+    max_output_tokens: 1700,
     reasoning: { effort: 'none' },
     prompt_cache_key: 'bennett-dashboard-v5-assessment',
     store: false,
