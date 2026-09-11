@@ -1,169 +1,408 @@
 {
-  "schema_version": 3,
-  "as_of": "2026-09-10",
-  "updated_at": "2026-09-10T18:45:00Z",
-  "preparedness_urgency": 69,
-  "raw_preparedness_urgency": 69,
-  "preparedness_stage": "ACCELERATE",
-  "global_threat_pressure": 76,
-  "leading_threat_pressure": 76,
-  "observed_civilian_disruption": 50,
-  "americas_exposure": 72,
-  "americas_stage": "HIGH",
-  "americas_summary": "Current Americas exposure is being driven more by trade, energy, supply-chain, cyber, and financial transmission than by broad public disorder. Civil unrest and public order are now monitored as a dedicated domain and will rise only when violence, duration, emergency measures, or disruption to essential services materially affects civilians.",
+  "schema_version": 4,
+  "as_of": "2026-09-11",
+  "updated_at": "2026-09-11T16:30:34.010Z",
+  "preparedness_urgency": 63,
+  "raw_preparedness_urgency": 63,
+  "preparedness_stage": "PREPARE",
+  "global_threat_pressure": 73,
+  "leading_threat_pressure": 73,
+  "observed_civilian_disruption": 48,
+  "americas_exposure": 66,
+  "americas_stage": "ELEVATED",
+  "americas_summary": "Americas exposure is 66 (ELEVATED). The strongest regional transmission channels are Global trade fragmentation, Energy security, Critical infrastructure / cyber; civil unrest is scored only when reporting shows violence, emergency measures, or material disruption to transport, commerce, safety, or essential services.",
   "americas_components": [
-    {"name":"Global trade fragmentation","score":92,"trend":"rising"},
-    {"name":"Energy security","score":90,"trend":"rising"},
-    {"name":"Critical infrastructure / cyber","score":82,"trend":"rising"},
-    {"name":"Supply chain & transportation","score":80,"trend":"rising"},
-    {"name":"Financial-system stress","score":78,"trend":"rising"},
-    {"name":"Civil unrest / public order","score":55,"trend":"stable"}
+    {
+      "name": "Global trade fragmentation",
+      "score": 84,
+      "trend": "easing"
+    },
+    {
+      "name": "Energy security",
+      "score": 82,
+      "trend": "easing"
+    },
+    {
+      "name": "Critical infrastructure / cyber",
+      "score": 74,
+      "trend": "easing"
+    },
+    {
+      "name": "Supply chain & transportation",
+      "score": 72,
+      "trend": "easing"
+    },
+    {
+      "name": "Financial-system stress",
+      "score": 70,
+      "trend": "easing"
+    },
+    {
+      "name": "Military / geopolitical",
+      "score": 68,
+      "trend": "easing"
+    }
   ],
-  "conflict_escalation": 95,
-  "coupling_score": 85,
-  "momentum_score": 70,
-  "confidence_score": 75,
-  "confidence_level": "MODERATE",
-  "confidence_rationale": "Multiple authoritative sources support the major energy, trade, shipping, and financial signals, while some downstream civilian impacts and civil-order pathways remain uncertain or uneven.",
-  "preparedness_window": "Days to weeks",
-  "summary": "Global threat conditions are severe, but broad civilian systems remain functional. The calibrated preparedness score emphasizes observed disruption, Americas exposure, persistence, and hard triggers so that high geopolitical stress does not automatically produce an imminent-disaster label.",
-  "primary_driver": "Energy and maritime disruption remain the strongest near-term transmission pathway into fuel, freight, inflation, and financial stress.",
+  "conflict_escalation": 87,
+  "coupling_score": 80,
+  "momentum_score": 40,
+  "confidence_score": 92,
+  "confidence_level": "HIGH",
+  "confidence_rationale": "12/12 domains returned fresh news coverage, spanning 248 unique outlets including 12 high-authority sources; 0 domain feeds failed.",
+  "preparedness_window": "Days",
+  "summary": "Preparedness urgency is 63 (PREPARE). Fresh rule-based monitoring across 248 outlets places the highest combined pressure in Energy security, Military / geopolitical, Supply chain & transportation; 1 hard trigger(s) met multi-source verification.",
+  "primary_driver": "Energy security is the current leading driver with threat 89, observed impact 79, and Americas exposure 82.",
   "primary_stabilizers": [
-    "Global financial markets, payment systems, and major exchanges remain operational.",
-    "Alternative trade and maritime routes remain partially functional.",
-    "No broad Americas civil-order breakdown is currently a leading systemic driver.",
-    "Food, banking, grid, and retail systems remain broadly functional in most of the Americas.",
-    "Government, central-bank, and emergency-management mechanisms remain active."
+    "Observed civilian disruption remains below forward-looking threat pressure, indicating that several risks have not fully transmitted into day-to-day systems.",
+    "8 of 12 domains remain below 50 on observed civilian impact.",
+    "Aggregate Americas exposure remains below the dashboard's severe regional threshold.",
+    "All monitored domain feeds returned usable fresh data on this run."
   ],
   "domains": [
     {
-      "key":"energy","name":"Energy security","threat":97,"impact":86,"americas_exposure":90,"trend":"rising","weight":11,
-      "rationale":"Energy and maritime chokepoint disruption is actively affecting oil prices, shipping risk, and downstream transport costs."
+      "key": "energy",
+      "name": "Energy security",
+      "threat": 89,
+      "impact": 79,
+      "americas_exposure": 82,
+      "trend": "easing",
+      "weight": 11,
+      "rationale": "Fresh Google News RSS monitoring found 25 relevant reports across 25 outlets; top signal: Costco Is Now Rationing Motor Oil Because the Global Shortage Is Getting Real - The Drive."
     },
     {
-      "key":"military","name":"Military / geopolitical","threat":95,"impact":72,"americas_exposure":70,"trend":"rising","weight":10,
-      "rationale":"Active interstate conflict creates substantial escalation risk, but the household score is moderated unless disruption transmits into civilian systems."
+      "key": "military",
+      "name": "Military / geopolitical",
+      "threat": 87,
+      "impact": 65,
+      "americas_exposure": 68,
+      "trend": "easing",
+      "weight": 10,
+      "rationale": "Fresh Google News RSS monitoring found 25 relevant reports across 21 outlets; top signal: More than 500,000 Russian troops killed in Ukraine, UK defense chief says - AP News."
     },
     {
-      "key":"supply_chain","name":"Supply chain & transportation","threat":92,"impact":70,"americas_exposure":80,"trend":"rising","weight":10,
-      "rationale":"Shipping, insurance, rerouting, and freight pressure create credible near-term availability and price effects."
+      "key": "supply_chain",
+      "name": "Supply chain & transportation",
+      "threat": 84,
+      "impact": 63,
+      "americas_exposure": 72,
+      "trend": "easing",
+      "weight": 10,
+      "rationale": "Fresh Google News RSS monitoring found 25 relevant reports across 25 outlets; top signal: Strike called over train safety concerns suspended - BBC."
     },
     {
-      "key":"trade","name":"Global trade fragmentation","threat":87,"impact":55,"americas_exposure":92,"trend":"rising","weight":10,
-      "rationale":"Tariffs, retaliation, import restrictions, and export controls are increasingly relevant to North American prices and supply chains."
+      "key": "trade",
+      "name": "Global trade fragmentation",
+      "threat": 82,
+      "impact": 50,
+      "americas_exposure": 84,
+      "trend": "easing",
+      "weight": 10,
+      "rationale": "Fresh Google News RSS monitoring found 25 relevant reports across 23 outlets; top signal: Russia’s drone offensive | Impact of 9/11 | West Bank sanctions | Trump's US-Canada trade war - Channel 4 News | Substack."
     },
     {
-      "key":"technology","name":"Technology chokepoints","threat":79,"impact":42,"americas_exposure":60,"trend":"stable","weight":7,
-      "rationale":"Critical-mineral and semiconductor concentration remains a meaningful disruption pathway without broad consumer shortages at present."
+      "key": "technology",
+      "name": "Technology chokepoints",
+      "threat": 74,
+      "impact": 43,
+      "americas_exposure": 52,
+      "trend": "easing",
+      "weight": 7,
+      "rationale": "Fresh Google News RSS monitoring found 25 relevant reports across 20 outlets; top signal: NVIDIA’s Export Ban Backfires as Chinese Competitors Raise Prices 50% - 24/7 Wall St.."
     },
     {
-      "key":"critical_infrastructure","name":"Critical infrastructure / cyber","threat":84,"impact":34,"americas_exposure":82,"trend":"rising","weight":11,
-      "rationale":"Grid, telecom, payment, satellite, port, and subsea infrastructure are high-consequence targets, while widespread outages are not currently observed."
+      "key": "critical_infrastructure",
+      "name": "Critical infrastructure / cyber",
+      "threat": 77,
+      "impact": 41,
+      "americas_exposure": 74,
+      "trend": "easing",
+      "weight": 11,
+      "rationale": "Fresh Google News RSS monitoring found 25 relevant reports across 24 outlets; top signal: State authorities warn they lack resources to address cyber threat to critical sectors - Cybersecurity Dive."
     },
     {
-      "key":"financial","name":"Financial-system stress","threat":75,"impact":48,"americas_exposure":78,"trend":"rising","weight":10,
-      "rationale":"Energy inflation and higher yields are tightening conditions, while core banking and payment systems continue functioning."
+      "key": "financial",
+      "name": "Financial-system stress",
+      "threat": 72,
+      "impact": 42,
+      "americas_exposure": 70,
+      "trend": "easing",
+      "weight": 10,
+      "rationale": "Fresh Google News RSS monitoring found 25 relevant reports across 21 outlets; top signal: Exploring The Standard Reserve: Can a Central Bank Run on Code Work? Will a Modified OHM Model Actually Succeed? - 深潮TechFlow."
     },
     {
-      "key":"food","name":"Food & agriculture","threat":63,"impact":34,"americas_exposure":65,"trend":"rising","weight":8,
-      "rationale":"Fuel, fertilizer, freight, and trade costs are increasing vulnerability without broad food shortages or rationing."
+      "key": "food",
+      "name": "Food & agriculture",
+      "threat": 64,
+      "impact": 35,
+      "americas_exposure": 57,
+      "trend": "stable",
+      "weight": 8,
+      "rationale": "Fresh Google News RSS monitoring found 25 relevant reports across 24 outlets; top signal: What to know about whey protein powder prices, potential shortages and alternatives - abcnews.com."
     },
     {
-      "key":"domestic","name":"Domestic institutional stress","threat":55,"impact":35,"americas_exposure":68,"trend":"stable","weight":6,
-      "rationale":"Policy friction and emergency measures can affect civilian access, but broad institutional failure is not evident."
+      "key": "domestic",
+      "name": "Domestic institutional stress",
+      "threat": 59,
+      "impact": 42,
+      "americas_exposure": 60,
+      "trend": "rising",
+      "weight": 6,
+      "rationale": "Fresh Google News RSS monitoring found 25 relevant reports across 18 outlets; top signal: Greenville City Council approves youth curfew & downtown hotel as residents call for officer’s firing - WITN."
     },
     {
-      "key":"civil_unrest","name":"Civil unrest / public order","threat":45,"impact":25,"americas_exposure":55,"trend":"stable","weight":7,
-      "rationale":"The domain now monitors riots, violent unrest, major strikes, curfews, emergency deployments, and essential-service disruption while excluding peaceful protest from elevated scoring."
+      "key": "civil_unrest",
+      "name": "Civil unrest / public order",
+      "threat": 48,
+      "impact": 20,
+      "americas_exposure": 55,
+      "trend": "rising",
+      "weight": 7,
+      "rationale": "Fresh GDELT monitoring found 30 relevant reports across 30 outlets; top signal: Tourists turn united kingdom cutest cathedral cities into riot zones."
     },
     {
-      "key":"public_health","name":"Public health / biological","threat":35,"impact":18,"americas_exposure":30,"trend":"stable","weight":5,
-      "rationale":"No current biological event is producing pandemic-scale disruption across the Americas."
+      "key": "public_health",
+      "name": "Public health / biological",
+      "threat": 43,
+      "impact": 25,
+      "americas_exposure": 30,
+      "trend": "rising",
+      "weight": 5,
+      "rationale": "Fresh Google News RSS monitoring found 25 relevant reports across 24 outlets; top signal: 2 deaths reported in cyclosporiasis outbreak in Michigan as cases surpass 11,000 - ABC7 New York."
     },
     {
-      "key":"natural","name":"Natural / environmental","threat":44,"impact":38,"americas_exposure":45,"trend":"rising","weight":5,
-      "rationale":"Localized natural hazards can be severe, but there is no current multi-region natural-disaster cascade driving global systemic risk."
+      "key": "natural",
+      "name": "Natural / environmental",
+      "threat": 52,
+      "impact": 45,
+      "americas_exposure": 37,
+      "trend": "rising",
+      "weight": 5,
+      "rationale": "Fresh Google News RSS monitoring found 25 relevant reports across 22 outlets; top signal: Lucas Fire: Evacuation orders, warnings issued for wildfire near Mendocino-Lake county line - KCRA."
     }
   ],
-  "hard_triggers": [],
-  "verified_hard_trigger_count": 0,
-  "severe_hard_trigger_count": 0,
+  "hard_triggers": [
+    {
+      "type": "emergency_civil_order",
+      "verified": true,
+      "scope": "multinational",
+      "status": "active",
+      "summary": "19 fresh reports from 13 independent outlets met the dashboard's verification rule for emergency civil order.",
+      "source_url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOOTByb2Z3bjVxOVFWVW50dk4xUmU1M0pSRTZ0dzB2bXFfR2Y5VFo1VWVNQmI4X2YzbFVQa211alVwTFgyaS1ialNYeHV2TW8zNFowaEFJOTRGd2Y0QVJRTE1GX1dQNTBkV2gyb3dQaEFuOFRnVDl2c2NBQksyM19GcEN4VUQyeEdSQkNxYmxrelFpSU5BUlVzLVhwTG41VmxTSmRXbndxQi1nc0EzT0ItRnJheDFSZi10cU5YLUpwdDRpUQ?oc=5"
+    }
+  ],
+  "verified_hard_trigger_count": 1,
+  "severe_hard_trigger_count": 1,
   "score_calibration": {
-    "raw_score": 69,
-    "published_score": 69,
+    "raw_score": 63,
+    "published_score": 63,
     "rate_limit_applied": false,
     "daily_rate_limit": null,
     "sustained_90_for_48h": false,
-    "high_impact_domain_count": 3
+    "high_impact_domain_count": 1
   },
   "score_components": {
-    "global_threat_pressure": 76,
-    "observed_civilian_disruption": 50,
-    "coupling": 85,
-    "momentum": 70,
-    "americas_exposure": 72
+    "global_threat_pressure": 73,
+    "observed_civilian_disruption": 48,
+    "coupling": 80,
+    "momentum": 40,
+    "americas_exposure": 66
   },
   "drivers": [
-    {"name":"Energy security","severity":"critical","note":"Primary driver"},
-    {"name":"Military / geopolitical","severity":"critical","note":""},
-    {"name":"Supply chain & transportation","severity":"critical","note":""},
-    {"name":"Global trade fragmentation","severity":"critical","note":""},
-    {"name":"Critical infrastructure / cyber","severity":"high","note":""},
-    {"name":"Financial-system stress","severity":"high","note":""}
+    {
+      "name": "Energy security",
+      "severity": "critical",
+      "note": "Primary driver"
+    },
+    {
+      "name": "Military / geopolitical",
+      "severity": "critical",
+      "note": ""
+    },
+    {
+      "name": "Supply chain & transportation",
+      "severity": "critical",
+      "note": ""
+    },
+    {
+      "name": "Global trade fragmentation",
+      "severity": "critical",
+      "note": ""
+    },
+    {
+      "name": "Critical infrastructure / cyber",
+      "severity": "high",
+      "note": ""
+    },
+    {
+      "name": "Financial-system stress",
+      "severity": "high",
+      "note": ""
+    }
   ],
   "areas_to_watch": [
-    {"name":"Hormuz traffic and energy flows","severity":"critical","why":"A sustained physical reduction in tanker or LNG movement could convert price stress into availability constraints."},
-    {"name":"U.S.–Canada and wider trade retaliation","severity":"high","why":"Expansion into energy, food, metals, vehicles, agricultural inputs, or critical goods could increase Americas exposure quickly."},
-    {"name":"Americas civil unrest and major strikes","severity":"high","why":"Watch for sustained violence, curfews, emergency deployments, or port, rail, trucking, border, fuel, or essential-service disruption."},
-    {"name":"Cyber incidents affecting utilities or payments","severity":"high","why":"A confirmed prolonged outage affecting power, water, telecom, ports, payments, GPS, or banking would rapidly raise observed disruption."},
-    {"name":"Financial stress and credit conditions","severity":"high","why":"Persistent inflation, funding stress, bank-access restrictions, or payment disruptions could amplify other supply shocks."},
-    {"name":"Food, fertilizer, and freight restrictions","severity":"medium","why":"Export restrictions or supply interruptions could transmit energy and trade stress into household essentials."}
+    {
+      "name": "Energy security",
+      "severity": "critical",
+      "why": "Threat 89, observed impact 79, Americas exposure 82. Watch for multi-source evidence that raises observed impact or satisfies a hard-trigger rule."
+    },
+    {
+      "name": "Military / geopolitical",
+      "severity": "critical",
+      "why": "Threat 87, observed impact 65, Americas exposure 68. Watch for multi-source evidence that raises observed impact or satisfies a hard-trigger rule."
+    },
+    {
+      "name": "Supply chain & transportation",
+      "severity": "critical",
+      "why": "Threat 84, observed impact 63, Americas exposure 72. Watch for multi-source evidence that raises observed impact or satisfies a hard-trigger rule."
+    },
+    {
+      "name": "Global trade fragmentation",
+      "severity": "critical",
+      "why": "Threat 82, observed impact 50, Americas exposure 84. Watch for multi-source evidence that raises observed impact or satisfies a hard-trigger rule."
+    },
+    {
+      "name": "Critical infrastructure / cyber",
+      "severity": "high",
+      "why": "Threat 77, observed impact 41, Americas exposure 74. Watch for multi-source evidence that raises observed impact or satisfies a hard-trigger rule."
+    },
+    {
+      "name": "Financial-system stress",
+      "severity": "high",
+      "why": "Threat 72, observed impact 42, Americas exposure 70. Watch for multi-source evidence that raises observed impact or satisfies a hard-trigger rule."
+    }
   ],
   "signals": [
     {
-      "title":"Hormuz shipping traffic remains severely constrained","summary":"Reduced maritime throughput is a direct transmission pathway into fuel, freight, insurance, and inflation pressure.","url":"https://www.reuters.com/world/middle-east/hormuz-shipping-traffic-single-digits-data-shows-2026-09-10/","source":"Reuters","published_at":"2026-09-10","category":"ENERGY","impact":"up"
+      "title": "2 deaths reported in cyclosporiasis outbreak in Michigan as cases surpass 11,000 - ABC7 New York",
+      "summary": "Rule-based monitoring classified this as an observed-disruption signal in Public health / biological. It is one input among multiple sources, not a standalone alarm.",
+      "url": "https://news.google.com/rss/articles/CBMilwpBVV95cUxORFBxLVVsOE11LUp4a0lXLXhrZFJJT1NEaTJXQm1ITy1NYnozZnluUVZnN1pVRjBZQmVIR2JrTHlDdkluWFQ3OG1BNUZQUlRsWDBIVV9XTnJqUlJNazdDSXJGNno4RGdCV1Y5ci1EZDBmYlk0Ni0xSzZ5WDBiQ2NqTDNuSm8xMHg2TVktWWVEa3VJLXF6bEs0bGlKOTFIMGZLeDVVN2xqcEV4Ym5KaHc4Tlp0cndneWxrY3J0ZWpEanFLdzV3X0IwZ3pyanh1dFJBMDg1NzJzODRoN2pHWHJpWnFocUIxSTVacENDeGYzVkJIY2dMUmZGN090OERCRGFfTDZLVVo3b3l4ZzUwXzRJSGgtdThseWtWLW5tU09Bakwybk1odXFzdFNiTVg4UUZjNkRaeFd2V3VJSG1kNGc5YzJNN3EtTU1CUnNBNWt4cGVzS1E0TUd5bnRWSXpULXFoS2t0MjZ2MWYzc1dkR1ZUNUhuRXNRWlZSTE55blA5bDFsWnUxM05qX01jTzFfNGptV2VJaXRVek8wM0RsczQzcDRmMDBUWnQyWXhYRjJnVEVWQm9tYV9MT21YdElSV09ob0tWOFhjcDJ6b0pTeEptc2FWNDRKS2ZWcEF3d1lhRGNsVGplTTdVX3FZMWduMUtFV0RPVzVFOUtkYXlQZExEenFmTmM3d2pJRnR5eExDOTZINDNFSmVaTE9nSFEyakp4bnhKQmJ1allYS19BLUtURUNVSzEyUlBXVGZfVzNieEF1Q2tneGhHRDR0UnRkMjVsR0xNVVpRd3JhU3RIREVwS1ZxYVgxZTMzRjR3MENDdDhwWjBfd1FHZ1lnY3g3SVc2YlU3UnlUY2s0bHdGYTJTRm9IRHV6eEx5b1B3dFlPakxpcGJsb3RCWWJhUUtZb1Y1R042ZVlFQlJMQkY1MTdwNGhpQVhVRVQxb1VBZHFSRFgzbzFzenV5N2VKeUM2cUF1OUl6eGJtb3dMdE1OalJDQnQxX2dDVUlmWHE1WVN2NjRWWDVicldqaDNqdlhmSEl2UDF2UnZtWVN0Tk5WZ19qY3lQcmItcTBNSTU4eFgzRzNsUHUyMFdCQ0Zrbi1fdTFoaHJkQWF4alpqU3FBSDE1QzctVXE1eDk3cm9kRHprRm1jc3Z1a2l2VWJKZHIwY2RUX2swWEFOelRXSXhkOGpYZTVQMkRPQWxmdElGLWZ3UXRSU2JLbm9GU1Y2QXpsdEVWRTg5NlJRaF9BUHFqb2FNUDZycHZDMVJWQjEtMnNIc0QyeGVJRkNCU3dueVFwZUIxcWJ4bXBGNk1pcnBQRnhCbGx6NDJnUzVFTkZxcVVfTGhrRG1nYzg5dTdHQ09NZFRxVjlYUUJGOFk4WllEY2JfVjFNUkRwVkpCWDE4ZkRidG9ob2F3c1lnSFJMLUxfSTZNVmJUd0VVRk9KZ0NTOWtzY0dNakFHQ0wyWEJxbEt3VzVyekRIVVlCNWQtemxGd2Yya29kZG03UGFJa2diTkVMdEJ6VW5jNjZHMEJiWVU5RzVlUE14UmV1alBQN2JVR290V1Y1Z1Z0RW8xdnFMdVFMVlJ0Q1dqRlhQSG1hMzJiVXZmX2Z4bUloX1ZJWEYyaWVSengyaVlVbWFzR1dNWUVrZWhYU3o5UWs3dkFRN3JfTlZWemZRYUdNTWxDV1JucTduYmlrcGV5Sl9HZFUtc01OejA4U3FvNDN6N3dJUEtzZ3Nxc0xNQkJ3?oc=5",
+      "source": "ABC7 New York",
+      "published_at": "2026-09-11T12:06:33.000Z",
+      "category": "HEALTH",
+      "impact": "up"
     },
     {
-      "title":"Oil remains above $100 amid supply concerns","summary":"High energy prices are already affecting inflation expectations and transport exposure even while broad physical shortages remain uneven.","url":"https://www.reuters.com/business/energy/brent-holds-above-100-tanker-attacks-deepen-supply-fear-2026-09-10/","source":"Reuters","published_at":"2026-09-10","category":"ENERGY","impact":"up"
+      "title": "As diseases loom, CDC's response to measles deaths stirs fears about agency's reliability - NPR",
+      "summary": "Rule-based monitoring classified this as an observed-disruption signal in Public health / biological. It is one input among multiple sources, not a standalone alarm.",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNVHQycHNIbzVJSkdLUkNOb1d4XzZZX24wSHh1b3hJbWJkbkVZNnlSUUt5NGZ2cGxYZVdJT1JVOUFOSlYxUTc3UXN4NURGb3hyc21HOG5odnd5RHpYMG54dk1rT1JRR0p0dGFTUUgtOG52bWZ1dkl4M2RZZFNmWGd1MHkxZmdLWG1CdjAtaUlxZWtQZHRVaGFlalNDcnp6eS1haFlFX3pPTjNVRk9PUGlPMVFzbVRXTVpEbkpsUFpIbGNRYUh5YUxCcDFucw?oc=5",
+      "source": "NPR",
+      "published_at": "2026-09-11T15:34:51.000Z",
+      "category": "HEALTH",
+      "impact": "up"
     },
     {
-      "title":"Canada counter-tariffs expand North American trade friction","summary":"Retaliatory tariffs increase direct Americas exposure through prices, industrial inputs, agriculture, and cross-border supply chains.","url":"https://www.canada.ca/en/department-finance/news/2026/08/list-of-products-from-the-united-states-subject-to-counter-tariffs-effective-september-8-2026.html","source":"Government of Canada","published_at":"2026-09-08","category":"TRADE","impact":"up"
+      "title": "Hawaii Governor Asks Trump for Help as State Copes With Hurricane’s Damage - The New York Times",
+      "summary": "Rule-based monitoring classified this as an observed-disruption signal in Natural / environmental. It is one input among multiple sources, not a standalone alarm.",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQT0VnbmNMRHFOSlJRbnVXSmZ2OU41dk1TQmgwM3ptUFhwV2I5VnJadDk0aG5DV1FQclQwckJXWENIV1Y4U09ERmlmV0l1LTZOcWNDSEVHT2ltMTBmQnhUTGtNRWktbThyV1BDcGlsZmtSTEpxa2F3ZTdObTFJS3lMSFVvVzVRV1ZI?oc=5",
+      "source": "The New York Times",
+      "published_at": "2026-09-11T01:08:33.000Z",
+      "category": "NATURAL",
+      "impact": "up"
     },
     {
-      "title":"U.S. retaliation adds targeted Canadian import restrictions","summary":"The dispute is broadening from tariff pressure toward direct product restrictions in selected sectors.","url":"https://www.ustr.gov/about/policy-offices/press-office/press-releases/2026/september/ambassador-greer-issues-statement-president-trumps-response-canadas-continued-retaliation-against","source":"USTR","published_at":"2026-09-08","category":"TRADE","impact":"up"
+      "title": "Russia’s drone offensive | Impact of 9/11 | West Bank sanctions | Trump's US-Canada trade war - Channel 4 News | Substack",
+      "summary": "Rule-based monitoring classified this as an observed-disruption signal in Global trade fragmentation. It is one input among multiple sources, not a standalone alarm.",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5sM3BqSGNiRnpLSllyTC1WcFFWMmtMX1JGVnNhcWVjaDdPSXVFQVRaZTVabzVKamJkQWpySVdERV9fRHhSM0VEOWVUTDBvYVZ1a29SV1ZVREJXWUhLaGx3MDU2Tm5hSnVSTDkwdGc5SFpYWU43QUpTdw?oc=5",
+      "source": "Channel 4 News | Substack",
+      "published_at": "2026-09-11T16:11:17.000Z",
+      "category": "TRADE",
+      "impact": "up"
     },
     {
-      "title":"Critical subsea infrastructure remains under heightened scrutiny","summary":"Undersea communications and energy infrastructure remain high-consequence targets, but broad service failure is not currently observed.","url":"https://www.reuters.com/world/europe/nato-allies-foil-russian-subsea-cable-sabotage-plot-2026-09-10/","source":"Reuters","published_at":"2026-09-10","category":"CYBER","impact":"up"
+      "title": "US-Canada trade war deepens as Washington adds new import bans - Muslim Network TV",
+      "summary": "Rule-based monitoring classified this as an observed-disruption signal in Global trade fragmentation. It is one input among multiple sources, not a standalone alarm.",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPVm9CbFRybEV4dW14eWQ5X2pYRDZiVXNBcXRkelBxRVFHSmRHU19JbUJCNjlHVTZHWWYtSjcwZkpabFFlLWN4dWVhMTBwcmtuT2FqU0lpdGcycG10RjJFVnNLaWlFeE1uUWtLTTJDbWxYS1AwRkRSbFQ4czUzdzBxRjA1NVowRTVwS3B5UDhQSHFmVWR1bGxR?oc=5",
+      "source": "Muslim Network TV",
+      "published_at": "2026-09-11T14:26:15.000Z",
+      "category": "TRADE",
+      "impact": "up"
     },
     {
-      "title":"Global financial plumbing remains functional despite energy shock","summary":"Market stress and higher yields are meaningful, but core banking, payments, and exchange operations remain functioning.","url":"https://www.reuters.com/world/china/imf-say-global-growth-track-reach-3-2026-risks-remain-high-2026-09-10/","source":"Reuters","published_at":"2026-09-10","category":"STABILIZER","impact":"down"
+      "title": "NVIDIA’s Export Ban Backfires as Chinese Competitors Raise Prices 50% - 24/7 Wall St.",
+      "summary": "Rule-based monitoring classified this as an observed-disruption signal in Technology chokepoints. It is one input among multiple sources, not a standalone alarm.",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNd2JBZWpwa3lsVUtUbEdJZEJGNFk1eXREdnk4UHJlaHAzeDhhWGJBWXJ1SDFCSVRiR0RQeTBOd25mZS1JQlZsWFA2OE1WQnZkWVp5dXllZG4xM19YRnQ4Wjc4bVVoTG1GZFZjUEJSTGhKcm9GN1l0akFvSFhidURmN2dRZ3dVNVZyS1d0RUMwTmNWNm9vR25NRHhFS2Q3STczaG44S0FxSm5ObzE4WFVIWA?oc=5",
+      "source": "24/7 Wall St.",
+      "published_at": "2026-09-11T13:20:00.000Z",
+      "category": "TECH",
+      "impact": "up"
+    },
+    {
+      "title": "What to know about whey protein powder prices, potential shortages and alternatives - abcnews.com",
+      "summary": "Rule-based monitoring classified this as an observed-disruption signal in Food & agriculture. It is one input among multiple sources, not a standalone alarm.",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxONTl2N25idmFzM016REdzSmY1TmRMakVTS1M0Ny1UelE1Q2hPRXhhSkkzclJjZFJ6TjY1cnhBU1RxakdXYURydnJaZlE2VWt1VTlqNmFqMUtqclZLb0dvM0xFX3hLSklEVmdvX1lVRTV4enBuR3lGaGZnN1VSMmxWNmdydG9wSWlsODVSN2U2Z1B0UUZGNG92WkI5LXRBVm1fRFNvN25NYUo4NzjSAbABQVVfeXFMTWcxNk0tN0J2cTAwZ1NJTHV5M21CMjlyYi1nNE9SdGVtUnI0X3p2Smw0NUVqNm5XNVQxMXhsRWJ2dTllVUpneklpamoyNDN5ZFpoR195TVVyZ3dJWTdwZVJjd05QcTYteE9VOVdWY1JzVDBRUFR3aFVaeUExSjdfdGp6d1FmZ2paXzVuZWVjb3piU1luRVp2MUo2M2ZpYl8yY1daeFRhSWZBcWJDSE5jUG0?oc=5",
+      "source": "abcnews.com",
+      "published_at": "2026-09-11T04:38:23.000Z",
+      "category": "FOOD",
+      "impact": "up"
+    },
+    {
+      "title": "PA doc reports on measles-related deaths. Are cases in Bucks County? - phillyburbs.com",
+      "summary": "Rule-based monitoring classified this as an observed-disruption signal in Public health / biological. It is one input among multiple sources, not a standalone alarm.",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPNV92Z0RlYk1VeTEtMnNpaDNXSEw4V1hteDNlU1hHdE1yNzkyalhVd2hOM0NlZFpnLVBOQmw1MzVraU5qbzJ6NTZQUDJfUG1BQVdLVmVQbXd2WjlXTXBSQ2J4OE5LZV90dXFkeGQ2V2RRYlZHSWxlbzh5UlZ0MFIxWlhYZ0FyUkhpckpQUHF2ZmdGZEFIcDlYeFpObmp4STF5OTVWS184VG5NdjNMSGMwRDFHaEhvS2xLejZ0eEVoVEpXcGNwSV9QM2lUcXJPZ0lMYnlkbHloQm5YaDhVSUR0SkpKMC12bDA?oc=5",
+      "source": "phillyburbs.com",
+      "published_at": "2026-09-11T08:47:00.000Z",
+      "category": "HEALTH",
+      "impact": "up"
     }
   ],
   "preparedness_actions": [
-    "Complete sensible, previously planned preparedness purchases while normal supply channels are functioning.",
-    "Maintain several weeks of food, household consumables, water capacity, and essential medical supplies.",
-    "Keep vehicles reasonably fueled and verify generator, battery, solar, or other backup-power capability.",
-    "Maintain diversified payment options and a reasonable amount of emergency cash.",
-    "Confirm family communications, transportation, and meeting plans.",
-    "Avoid panic buying; focus on resilience gaps that would be difficult to correct after disruption begins."
+    "Build or maintain several weeks of normal food and household consumables.",
+    "Keep prescriptions and essential medical supplies current.",
+    "Maintain reasonable emergency cash alongside normal banking access.",
+    "Keep vehicles reasonably fueled and verify backup power.",
+    "Confirm family communications and meeting plans."
   ],
   "historical_analogs": [
-    {"name":"1973 Oil Shock","score":85},
-    {"name":"2008 Financial Crisis","score":83},
-    {"name":"2020 Pandemic","score":82},
-    {"name":"1939 Europe","score":80}
+    {
+      "name": "1973 Oil Shock",
+      "score": 85
+    },
+    {
+      "name": "2008 Financial Crisis",
+      "score": 83
+    },
+    {
+      "name": "2020 Pandemic",
+      "score": 82
+    },
+    {
+      "name": "1939 Europe",
+      "score": 80
+    }
   ],
-  "historical_note":"Illustrative reference markers only. They are not used in the live score until formal back-testing is completed.",
+  "historical_note": "Illustrative reference markers only. They are not used in the live score until formal back-testing is completed.",
   "history": [
-    {"date":"2026-09-10","preparedness":69,"raw_preparedness":69,"threat":76,"impact":50,"americas":72,"conflict":95,"momentum":70}
+    {
+      "date": "2026-09-10",
+      "preparedness": 69,
+      "raw_preparedness": 69,
+      "threat": 76,
+      "impact": 50,
+      "americas": 72,
+      "conflict": 95,
+      "momentum": 70
+    },
+    {
+      "date": "2026-09-11",
+      "preparedness": 63,
+      "raw_preparedness": 63,
+      "threat": 73,
+      "impact": 48,
+      "americas": 66,
+      "conflict": 87,
+      "momentum": 40
+    }
   ],
   "methodology": {
-    "note":"All-hazards early-warning assessment. The score is a preparedness-urgency index, not the probability that a disaster, collapse, or war will occur.",
-    "formula":"Preparedness Urgency = 40% Global Threat Pressure + 25% Observed Civilian Disruption + 10% Cross-System Coupling + 10% Momentum/Persistence + 15% Americas Exposure. Global threat, observed impact, and Americas exposure are weighted averages across all 12 domains.",
-    "rate_limits":"Absent a verified hard trigger, normal daily movement is limited to ±3 points. A verified but non-severe hard trigger allows up to ±6. A verified national, multinational, or global hard trigger can bypass the rate limit.",
-    "stage_guardrails":"HIGH ALERT begins at 80. IMMINENT DISRUPTION requires a score of at least 90, observed disruption of at least 75, and a verified severe hard trigger plus either 48-hour persistence or an active fast-onset trigger. ACTIVE DISRUPTION requires at least 97, observed disruption at least 85, three high-impact domains, and two verified severe triggers.",
-    "civil_unrest":"Civil Unrest / Public Order is scored from observable violence, duration, geographic spread, emergency measures, infrastructure damage, and disruption to transport, commerce, public safety, or essential services. Peaceful protest and political ideology do not raise the score by themselves.",
-    "confidence":"Evidence confidence is displayed separately and does not increase preparedness urgency.",
-    "domains":"Military/geopolitical, energy, trade, supply chain/transportation, technology chokepoints, critical infrastructure/cyber, financial-system stress, food/agriculture, domestic institutional stress, civil unrest/public order, public health/biological, and natural/environmental."
-  }
+    "note": "All-hazards early-warning assessment. The score is a preparedness-urgency index, not the probability that a disaster, collapse, or war will occur.",
+    "formula": "Preparedness Urgency = 40% Global Threat Pressure + 25% Observed Civilian Disruption + 10% Cross-System Coupling + 10% Momentum/Persistence + 15% Americas Exposure. Domain scores are calculated deterministically from fresh multi-source news signals and smoothed against the prior day.",
+    "rate_limits": "Absent a verified hard trigger, published Preparedness Urgency moves by at most ±3 points per day. A verified hard trigger allows ±6; a verified national/multinational/global trigger can bypass the limit.",
+    "stage_guardrails": "HIGH ALERT begins at 80. IMMINENT DISRUPTION requires at least 90, observed disruption at least 75, and a verified severe hard trigger. ACTIVE DISRUPTION requires at least 97, observed disruption at least 85, at least three high-impact domains, and two verified severe hard triggers.",
+    "civil_unrest": "Civil Unrest / Public Order is scored from observable violence, duration, geographic spread, emergency measures, infrastructure damage, and disruption to transport, commerce, public safety, or essential services. Peaceful protest and political ideology do not raise the score by themselves.",
+    "confidence": "Evidence confidence measures feed coverage and independent-source diversity; it does not increase preparedness urgency.",
+    "domains": "Military/geopolitical, energy, trade, supply chain/transportation, technology chokepoints, critical infrastructure/cyber, financial-system stress, food/agriculture, domestic institutional stress, civil unrest/public order, public health/biological, and natural/environmental.",
+    "data_engine": "Daily collection uses GDELT DOC 2.0 article metadata with Google News RSS fallback, plus USGS earthquake data. No paid AI API is required for routine updates."
+  },
+  "updater_version": "4.0-zero-credit",
+  "data_engine": "GDELT DOC 2.0 + Google News RSS fallback + USGS; deterministic rule-based scoring"
 }
