@@ -1,6 +1,6 @@
 import fs from "node:fs/promises";
 
-const SCRIPT_VERSION = "3.3";
+const SCRIPT_VERSION = "3.4";
 console.log(`Dashboard updater v${SCRIPT_VERSION} starting...`);
 
 const API_KEY = process.env.OPENAI_API_KEY;
@@ -217,87 +217,124 @@ IMPORTANT
 - Markets adapting, alternative routes functioning, reserve capacity, active trade flows and effective crisis-management channels are legitimate stabilizers.
 `;
 
-const body = {
-  model: "gpt-5.6-luna",
-  tools: [{ type: "web_search" }],
+const MODEL_CANDIDATES = [
+  "gpt-5.6-terra",
+  "gpt-5.4-nano"
+];
+
+const baseBody = {
+  tools: [{
+    type: "web_search_preview",
+    search_context_size: "low"
+  }],
   input: prompt,
-  max_output_tokens: 4500
+  reasoning: { effort: "none" },
+  max_output_tokens: 3200
 };
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-async function callOpenAIWithRetry(requestBody) {
-  const maxAttempts = 3;
-
-  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
-    console.log(`OpenAI request attempt ${attempt}/${maxAttempts}...`);
-
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 180000);
-
-    let response;
-    try {
-      response = await fetch("https://api.openai.com/v1/responses", {
-        method: "POST",
-        headers: {
-          "Authorization": `Bearer ${API_KEY}`,
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(requestBody),
-        signal: controller.signal
-      });
-    } catch (err) {
-      if (err?.name === "AbortError") {
-        if (attempt === maxAttempts) throw new Error("OpenAI request timed out after 180 seconds");
-        const waitMs = 15000 * attempt;
-        console.warn(`OpenAI request timed out. Retrying in ${waitMs / 1000}s...`);
-        await sleep(waitMs);
-        continue;
-      }
-      throw err;
-    } finally {
-      clearTimeout(timeout);
-    }
-
-    if (response.ok) {
-      console.log("OpenAI request completed successfully.");
-      return response;
-    }
-
-    const errorText = await response.text();
-
-    if (response.status !== 429 || attempt === maxAttempts) {
-      throw new Error(`OpenAI API ${response.status}: ${errorText}`);
-    }
-
-    let delayMs = 15000 * attempt;
-
-    const retryAfter = response.headers.get("retry-after");
-    if (retryAfter) {
-      const seconds = Number(retryAfter);
-      if (Number.isFinite(seconds) && seconds > 0 && seconds <= 60) {
-        delayMs = Math.max(delayMs, Math.ceil(seconds * 1000));
-      }
-    }
-
-    const bodyDelay = errorText.match(/try again in\s+([0-9.]+)s/i);
-    if (bodyDelay) {
-      const seconds = Number(bodyDelay[1]);
-      if (Number.isFinite(seconds) && seconds > 0 && seconds <= 60) {
-        delayMs = Math.max(delayMs, Math.ceil(seconds * 1000) + 1000);
-      }
-    }
-
-    delayMs = Math.min(delayMs, 60000);
-    console.warn(`OpenAI rate limit (429). Retrying in ${Math.ceil(delayMs / 1000)}s...`);
-    console.warn(`429 details: ${errorText.slice(0, 1000)}`);
-    await sleep(delayMs);
+function parseRetrySeconds(errorText = "", response = null) {
+  const retryAfter = response?.headers?.get?.("retry-after");
+  if (retryAfter) {
+    const seconds = Number(retryAfter);
+    if (Number.isFinite(seconds) && seconds > 0) return seconds;
   }
 
-  throw new Error("OpenAI request failed after retries");
+  // Handle API messages such as "try again in 8.2s", "44m12s", or "81h8m38s".
+  const msg = errorText.match(/try again in\s+([^.\n]+(?:\.[0-9]+s)?)/i)?.[1] || "";
+  let seconds = 0;
+  const h = msg.match(/([0-9.]+)\s*h/i);
+  const m = msg.match(/([0-9.]+)\s*m/i);
+  const s = msg.match(/([0-9.]+)\s*s/i);
+  if (h) seconds += Number(h[1]) * 3600;
+  if (m) seconds += Number(m[1]) * 60;
+  if (s) seconds += Number(s[1]);
+  return Number.isFinite(seconds) && seconds > 0 ? seconds : null;
 }
 
-const response = await callOpenAIWithRetry(body);
+async function callModel(model) {
+  const requestBody = { ...baseBody, model };
+  console.log(`Calling ${model}...`);
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 180000);
+
+  let response;
+  try {
+    response = await fetch("https://api.openai.com/v1/responses", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${API_KEY}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(requestBody),
+      signal: controller.signal
+    });
+  } catch (err) {
+    if (err?.name === "AbortError") {
+      throw new Error(`${model} request timed out after 180 seconds`);
+    }
+    throw err;
+  } finally {
+    clearTimeout(timeout);
+  }
+
+  if (response.ok) {
+    console.log(`${model} completed successfully.`);
+    return response;
+  }
+
+  const errorText = await response.text();
+  const retrySeconds = parseRetrySeconds(errorText, response);
+
+  const err = new Error(`OpenAI API ${response.status} (${model}): ${errorText}`);
+  err.status = response.status;
+  err.retrySeconds = retrySeconds;
+  throw err;
+}
+
+let response = null;
+let lastError = null;
+
+for (const model of MODEL_CANDIDATES) {
+  try {
+    response = await callModel(model);
+    break;
+  } catch (err) {
+    lastError = err;
+
+    if (err.status === 429) {
+      const retry = err.retrySeconds;
+      if (retry && retry <= 60) {
+        console.warn(`${model} rate-limited for about ${Math.ceil(retry)}s; waiting once before retry.`);
+        await sleep(Math.ceil(retry * 1000) + 1000);
+        try {
+          response = await callModel(model);
+          break;
+        } catch (retryErr) {
+          lastError = retryErr;
+        }
+      }
+
+      console.warn(`${model} is rate-limited; trying the next model instead of sleeping for hours.`);
+      continue;
+    }
+
+    // If the model is unavailable to this account, try the fallback model.
+    if (err.status === 404 || err.status === 403) {
+      console.warn(`${model} unavailable for this API account; trying fallback model.`);
+      continue;
+    }
+
+    throw err;
+  }
+}
+
+if (!response) {
+  throw lastError || new Error("No OpenAI model completed the dashboard update.");
+}
+
 const raw = await response.json();
 let text = raw.output_text || "";
 if (!text) {
