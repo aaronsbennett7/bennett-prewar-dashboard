@@ -5,7 +5,7 @@ import {
   previousDailyAnchor, previousDomains, applyDomainGuardrails, buildScore, normalizeHostname
 } from './dashboard-core.mjs';
 
-const SCRIPT_VERSION = '5.2';
+const SCRIPT_VERSION = '5.3';
 const TIME_ZONE = 'America/Indiana/Indianapolis';
 const API_KEY = process.env.OPENAI_API_KEY;
 const dashboardFile = new URL('../dashboard.json', import.meta.url);
@@ -161,7 +161,7 @@ function isTemporaryRateLimit(response, raw) {
 }
 
 const TEST_MODE = process.env.DASHBOARD_TEST_MODE === '1';
-const BETWEEN_RESEARCH_CALLS_MS = TEST_MODE ? 0 : 15_000;
+const BETWEEN_RESEARCH_CALLS_MS = TEST_MODE ? 0 : 20_000;
 const BEFORE_ASSESSMENT_MS = TEST_MODE ? 0 : 65_000;
 const RATE_LIMIT_COOLDOWN_MS = TEST_MODE ? 0 : 75_000;
 
@@ -296,7 +296,7 @@ function clusterResearchSchema(clusterKey) {
       evidence: {
         type: 'array',
         minItems: 2,
-        maxItems: 5,
+        maxItems: 3,
         items: evidenceItemSchema
       }
     },
@@ -411,10 +411,10 @@ try {
     const researchInput = `
 Date: ${today}. Focus on the last 24-72 hours; use up to 96 hours only for continuity.
 Research ONLY this cluster: ${spec.focus}.
-Use exactly one web search. Return 2-5 of the strongest decision-useful facts.
+Use exactly one web search. Return exactly 2 or 3 of the strongest decision-useful facts.
 Prefer direct authoritative/high-quality sources. Include stabilizing evidence when material.
 Every evidence item must use cluster "${spec.key}" and one or more relevant domain keys.
-Keep each fact to one concise sentence.
+Keep each fact to one concise sentence of 30 words or fewer. Keep titles concise.
 `;
 
     console.log(`Research ${i + 1}/${selectedClusters.length}: ${spec.key}.`);
@@ -425,7 +425,7 @@ Keep each fact to one concise sentence.
       tools: [{ type: 'web_search', search_context_size: 'low' }],
       tool_choice: 'required',
       max_tool_calls: 1,
-      max_output_tokens: 700,
+      max_output_tokens: 1200,
       reasoning: { effort: 'none' },
       prompt_cache_key: 'bennett-dashboard-v5.2-cluster-research',
       store: false,
