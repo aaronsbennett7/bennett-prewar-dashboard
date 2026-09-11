@@ -1,5 +1,8 @@
 import fs from "node:fs/promises";
 
+const SCRIPT_VERSION = "3.3";
+console.log(`Dashboard updater v${SCRIPT_VERSION} starting...`);
+
 const API_KEY = process.env.OPENAI_API_KEY;
 if (!API_KEY) throw new Error("Missing OPENAI_API_KEY");
 
@@ -151,7 +154,7 @@ Return an array of 0-6 hard triggers. Include a trigger only when there is concr
 Each trigger must include verified true/false, scope local|regional|national|multinational|global, status developing|active|resolved, summary, and a direct source_url. Mark verified=true only when supported by authoritative or high-quality reporting. Do NOT use military tension by itself as a hard trigger.
 
 SIGNALS
-Return 6-10 of the most decision-useful current signals. Each must include:
+Return exactly 6 of the most decision-useful current signals. Each must include:
 - title
 - 1-2 sentence summary
 - direct URL
@@ -162,10 +165,10 @@ Return 6-10 of the most decision-useful current signals. Each must include:
 Include Americas civil-unrest/public-order reporting when materially relevant.
 
 STABILIZERS
-Return 3-5 current conditions genuinely limiting immediate disruption. Examples: functioning alternative supply routes, resilient financial plumbing, reserve capacity, effective emergency response, active diplomacy, restored transport, or declining unrest. Do not invent reassurance.
+Return exactly 3 current conditions genuinely limiting immediate disruption. Examples: functioning alternative supply routes, resilient financial plumbing, reserve capacity, effective emergency response, active diplomacy, restored transport, or declining unrest. Do not invent reassurance.
 
 AREAS TO WATCH
-Return 5-8 concrete forward indicators. Each should have name, severity (critical|high|medium), and why.
+Return exactly 5 concrete forward indicators. Each should have name, severity (critical|high|medium), and why.
 
 AMERICAS SUMMARY
 Return 2 concise sentences summarizing current civilian-facing stability/exposure in the Americas. Mention civil unrest/public order when it is materially relevant; otherwise explicitly note that broad disorder is not currently a leading driver.
@@ -194,6 +197,14 @@ Return ONLY valid JSON with this exact shape:
   ]
 }
 
+OUTPUT BREVITY
+- Keep every domain rationale to 25 words or fewer.
+- Keep each signal summary to 35 words or fewer.
+- Keep each watch-area explanation to 30 words or fewer.
+- Keep the main summary to 55 words or fewer.
+- Keep Americas summary to 45 words or fewer.
+- Avoid repeating the same fact across fields.
+
 IMPORTANT
 - Do NOT output the final Preparedness Urgency, Global Threat Pressure, Observed Civilian Disruption, Americas Exposure, Momentum, Conflict Escalation, or preparedness stage. They are calculated mechanically.
 - Do NOT use markdown.
@@ -210,43 +221,61 @@ const body = {
   model: "gpt-5.6-luna",
   tools: [{ type: "web_search" }],
   input: prompt,
-  // Keep the reserved output allowance well below the account TPM limit.
-  // The dashboard JSON normally needs far less than this.
-  max_output_tokens: 10000
+  max_output_tokens: 4500
 };
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 async function callOpenAIWithRetry(requestBody) {
-  const maxAttempts = 4;
+  const maxAttempts = 3;
 
   for (let attempt = 1; attempt <= maxAttempts; attempt++) {
-    const response = await fetch("https://api.openai.com/v1/responses", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${API_KEY}`,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(requestBody)
-    });
+    console.log(`OpenAI request attempt ${attempt}/${maxAttempts}...`);
 
-    if (response.ok) return response;
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 180000);
+
+    let response;
+    try {
+      response = await fetch("https://api.openai.com/v1/responses", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${API_KEY}`,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(requestBody),
+        signal: controller.signal
+      });
+    } catch (err) {
+      if (err?.name === "AbortError") {
+        if (attempt === maxAttempts) throw new Error("OpenAI request timed out after 180 seconds");
+        const waitMs = 15000 * attempt;
+        console.warn(`OpenAI request timed out. Retrying in ${waitMs / 1000}s...`);
+        await sleep(waitMs);
+        continue;
+      }
+      throw err;
+    } finally {
+      clearTimeout(timeout);
+    }
+
+    if (response.ok) {
+      console.log("OpenAI request completed successfully.");
+      return response;
+    }
 
     const errorText = await response.text();
 
-    // Retry only temporary rate-limit errors. Other API errors should fail immediately.
     if (response.status !== 429 || attempt === maxAttempts) {
       throw new Error(`OpenAI API ${response.status}: ${errorText}`);
     }
 
-    // Prefer the server's Retry-After header. If unavailable, use the
-    // "try again in Xs" value from the response body, otherwise exponential backoff.
-    let delayMs = 15000 * (2 ** (attempt - 1));
+    let delayMs = 15000 * attempt;
 
     const retryAfter = response.headers.get("retry-after");
     if (retryAfter) {
       const seconds = Number(retryAfter);
-      if (Number.isFinite(seconds) && seconds > 0) {
+      if (Number.isFinite(seconds) && seconds > 0 && seconds <= 60) {
         delayMs = Math.max(delayMs, Math.ceil(seconds * 1000));
       }
     }
@@ -254,18 +283,14 @@ async function callOpenAIWithRetry(requestBody) {
     const bodyDelay = errorText.match(/try again in\s+([0-9.]+)s/i);
     if (bodyDelay) {
       const seconds = Number(bodyDelay[1]);
-      if (Number.isFinite(seconds) && seconds > 0) {
+      if (Number.isFinite(seconds) && seconds > 0 && seconds <= 60) {
         delayMs = Math.max(delayMs, Math.ceil(seconds * 1000) + 1000);
       }
     }
 
-    // Small jitter prevents repeated synchronized retries.
-    delayMs += Math.floor(Math.random() * 1500);
-
-    console.warn(
-      `OpenAI rate limit (429), attempt ${attempt}/${maxAttempts}. ` +
-      `Retrying in ${Math.ceil(delayMs / 1000)}s...`
-    );
+    delayMs = Math.min(delayMs, 60000);
+    console.warn(`OpenAI rate limit (429). Retrying in ${Math.ceil(delayMs / 1000)}s...`);
+    console.warn(`429 details: ${errorText.slice(0, 1000)}`);
     await sleep(delayMs);
   }
 
