@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "engine_version": "5.0",
+  "date": "2026-09-11",
+  "status": "STALE",
+  "started_at": "2026-09-11T17:01:21.031Z",
+  "completed_at": "2026-09-11T17:02:02.892Z",
+  "message": "Research: OpenAI API 429: Rate limit reached for gpt-5.6-luna in organization org-EfYh4SWoCS7MwwsWN37OkxW3 on tokens per min (TPM): Limit 60000, Used 49873, Requested 38627. Please try again in 28.5s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.",
+  "dashboard_preserved": true,
+  "last_verified_update": "2026-09-11T16:30:34.010Z",
+  "web_search_calls": 0,
+  "estimated_partial_run_cost_usd": 0,
+  "estimated_period_spend_usd": 0,
+  "operational_stop_usd": 9
+}
