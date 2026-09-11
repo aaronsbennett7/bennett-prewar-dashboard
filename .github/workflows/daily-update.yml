@@ -9,9 +9,14 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: bennett-dashboard-daily
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 12
 
     steps:
       - name: Check out repository
@@ -22,19 +27,33 @@ jobs:
         with:
           node-version: "22"
 
+      - name: Run scoring regression tests
+        run: node scripts/test-dashboard-v5.mjs
+
       - name: Research and update dashboard
+        id: dashboard_update
+        continue-on-error: true
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: node scripts/update-dashboard.mjs
 
-      - name: Commit updated data
+      - name: Commit dashboard and audit state
+        if: always()
         run: |
           git config user.name "bennett-dashboard-bot"
           git config user.email "actions@users.noreply.github.com"
           git add dashboard.json
+          if [ -f api-budget.json ]; then git add api-budget.json; fi
+          if [ -f update-status.json ]; then git add update-status.json; fi
           if git diff --cached --quiet; then
-            echo "No dashboard changes."
+            echo "No generated changes to commit."
           else
-            git commit -m "Daily escalation dashboard update"
+            git commit -m "Daily preparedness dashboard update"
             git push
           fi
+
+      - name: Mark failed research as workflow failure
+        if: steps.dashboard_update.outcome == 'failure'
+        run: |
+          echo "The updater failed safely. dashboard.json was preserved; see update-status.json for the reason."
+          exit 1
