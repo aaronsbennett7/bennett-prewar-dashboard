@@ -2,32 +2,32 @@
   "schema_version": 5,
   "engine_version": "5.3",
   "data_status": "VERIFIED",
-  "as_of": "2026-09-13",
-  "updated_at": "2026-09-13T11:26:06.170Z",
-  "last_successful_update": "2026-09-13T11:26:06.170Z",
+  "as_of": "2026-09-14",
+  "updated_at": "2026-09-14T11:29:11.897Z",
+  "last_successful_update": "2026-09-14T11:29:11.897Z",
   "preparedness_urgency": 73,
   "raw_preparedness_urgency": 73,
   "preparedness_stage": "ACCELERATE",
   "global_threat_pressure": 79,
   "leading_threat_pressure": 79,
   "observed_civilian_disruption": 58,
-  "americas_exposure": 76,
+  "americas_exposure": 77,
   "americas_stage": "HIGH",
-  "americas_summary": "The Americas face elevated fuel, freight, commodity and manufacturing-price exposure, a recent regional Central American power outage, persistent security risks in parts of Mexico and the Caribbean, and localized U.S. weather disruption risk.",
+  "americas_summary": "The Americas remain highly exposed through oil prices, maritime freight, critical-mineral availability, and North American trade uncertainty. Direct U.S. foodborne-health impacts are easing after outbreak resolution.",
   "americas_components": [
     {
       "name": "Energy security",
-      "score": 94,
+      "score": 95,
       "trend": "rising"
     },
     {
       "name": "Supply chain & transportation",
-      "score": 87,
+      "score": 89,
       "trend": "rising"
     },
     {
       "name": "Military / geopolitical",
-      "score": 73,
+      "score": 74,
       "trend": "rising"
     },
     {
@@ -37,119 +37,119 @@
     },
     {
       "name": "Critical infrastructure / cyber",
-      "score": 85,
+      "score": 86,
       "trend": "rising"
     },
     {
       "name": "Financial-system stress",
-      "score": 83,
+      "score": 84,
       "trend": "stable"
     }
   ],
   "conflict_escalation": 98,
-  "coupling_score": 78,
-  "momentum_score": 78,
-  "confidence_score": 75,
+  "coupling_score": 86,
+  "momentum_score": 70,
+  "confidence_score": 72,
   "confidence_level": "MODERATE",
-  "confidence_rationale": "Fresh, multi-source evidence covers all domains, including several Tier A sources; direct outage and energy-shipping evidence is strong, though some reporting is republished through lower-tier hosts. Evidence gate: 13 items, 10 sources, 4 Tier-A sources, 5/5 clusters.",
+  "confidence_rationale": "Fresh, multi-cluster evidence includes several Tier A sources, though some key incident reporting is Tier C and direct evidence of broad civilian access constraints remains limited. Evidence gate: 13 items, 10 sources, 4 Tier-A sources, 5/5 clusters.",
   "preparedness_window": "Days to weeks",
-  "summary": "Maritime conflict is sustaining severe energy and shipping disruption, while rare-earth constraints and a Central American grid outage add regional exposure. Alternative oil routes and functioning financial infrastructure temper broader system-failure risk.",
-  "primary_driver": "Military-linked disruption to Middle East oil transport and maritime routes.",
+  "summary": "Severe energy and shipping disruption risk remains the primary preparedness concern, reinforced by Hormuz and Bab el-Mandeb incidents. U.S. critical-mineral supply constraints and North American trade uncertainty add exposure; the major foodborne outbreak is declared over.",
+  "primary_driver": "Military-linked maritime chokepoint disruption affecting energy and shipping",
   "primary_stabilizers": [
-    "Non-Iranian oil exports reportedly recovered to 8.4 million barrels daily, reaching 10.8 million through alternative routes despite continuing maritime disruption.",
-    "BRICS leaders opposed unilateral sanctions and rising tariffs, warning they undermine global trade and supply-chain stability.",
-    "ESMA reported key market infrastructures continued functioning during recent stress, while warning that cyber risks are becoming more important.",
-    "The FSB convened public-private collaboration on preparing financial institutions for significant operational disruptions and improving incident lessons-sharing.",
-    "CDC reports 40 active multistate foodborne investigations as of September 2, while coordinating response with FDA and USDA."
+    "Oman postponed regional talks intended to manage Strait of Hormuz shipping, indicating diplomatic engagement continues but has not yet produced a stabilizing agreement.",
+    "BIS lists a directive establishing allocation requirements and additional measures for recoverable critical minerals and materials.",
+    "The FSB convened authorities and industry on September 10 to improve operational resilience, incident lessons, and cross-sector continuity during significant disruptions.",
+    "ESMA reports key market infrastructures continued functioning during recent stress, while warning that geopolitical, cyber, valuation, and refinancing vulnerabilities remain.",
+    "Officials declared the outbreak over after linked lettuce left stores and restaurants and recent infections declined significantly."
   ],
   "domains": [
     {
       "key": "energy",
       "threat": 98,
-      "impact": 93,
-      "americas_exposure": 94,
+      "impact": 94,
+      "americas_exposure": 95,
       "trend": "rising",
-      "rationale": "Pipeline halt and vessel incidents threaten oil flows; alternative exports provide partial relief.",
+      "rationale": "Vessel strike in Hormuz and Saudi pipeline closure reports compound chokepoint-driven energy disruption risk.",
       "name": "Energy security",
       "weight": 11
     },
     {
       "key": "military",
       "threat": 98,
-      "impact": 80,
-      "americas_exposure": 73,
+      "impact": 82,
+      "americas_exposure": 74,
       "trend": "rising",
-      "rationale": "Strikes near Hormuz, Red Sea attacks, and Caribbean operations show active escalation.",
+      "rationale": "Reported Houthi seizure near Bab el-Mandeb and the Hormuz vessel strike show active maritime conflict.",
       "name": "Military / geopolitical",
       "weight": 10
     },
     {
       "key": "supply_chain",
-      "threat": 95,
-      "impact": 80,
-      "americas_exposure": 87,
+      "threat": 96,
+      "impact": 83,
+      "americas_exposure": 89,
       "trend": "rising",
-      "rationale": "Maritime disruption and withheld U.S.-bound rare-earth shipments constrain logistics and inputs.",
+      "rationale": "Two strategic maritime routes face disruption risk while rare-earth shipments to U.S. firms have halted.",
       "name": "Supply chain & transportation",
       "weight": 10
     },
     {
       "key": "trade",
-      "threat": 92,
-      "impact": 68,
+      "threat": 93,
+      "impact": 70,
       "americas_exposure": 95,
       "trend": "rising",
-      "rationale": "Shipping disruption and rare-earth trade constraints raise trade and price risks.",
+      "rationale": "Rare-earth restrictions and unsettled U.S.-Mexico trade talks add material trade and sourcing uncertainty.",
       "name": "Global trade fragmentation",
       "weight": 10
     },
     {
       "key": "technology",
-      "threat": 83,
-      "impact": 47,
-      "americas_exposure": 66,
+      "threat": 85,
+      "impact": 51,
+      "americas_exposure": 70,
       "trend": "rising",
-      "rationale": "Rare-earth shipment refusals and high prices increase exposure for technology supply chains.",
+      "rationale": "Tight critical-mineral supply and halted shipments raise risk to technology-dependent production; allocation measures may mitigate.",
       "name": "Technology chokepoints",
       "weight": 7
     },
     {
       "key": "critical_infrastructure",
-      "threat": 86,
-      "impact": 49,
-      "americas_exposure": 85,
+      "threat": 87,
+      "impact": 50,
+      "americas_exposure": 86,
       "trend": "rising",
-      "rationale": "Saudi pipeline shutdown and a regional Central American grid fault show infrastructure disruption.",
+      "rationale": "Energy and shipping disruption could affect essential-system inputs; no confirmed major Americas outage is reported.",
       "name": "Critical infrastructure / cyber",
       "weight": 11
     },
     {
       "key": "financial",
-      "threat": 80,
+      "threat": 81,
       "impact": 56,
-      "americas_exposure": 83,
+      "americas_exposure": 84,
       "trend": "stable",
-      "rationale": "Market infrastructure remains functional, though geopolitical and cyber vulnerabilities persist.",
+      "rationale": "Energy and conflict risks elevate market vulnerability, but available evidence indicates market infrastructure remains functioning.",
       "name": "Financial-system stress",
       "weight": 10
     },
     {
       "key": "food",
-      "threat": 66,
-      "impact": 36,
-      "americas_exposure": 68,
-      "trend": "stable",
-      "rationale": "Active foodborne investigations are under coordinated response; no broad food-access constraint evidenced.",
+      "threat": 61,
+      "impact": 25,
+      "americas_exposure": 62,
+      "trend": "easing",
+      "rationale": "The large lettuce-linked outbreak caused substantial harm but has been declared over and product removed.",
       "name": "Food & agriculture",
       "weight": 8
     },
     {
       "key": "domestic",
-      "threat": 58,
-      "impact": 43,
-      "americas_exposure": 72,
+      "threat": 59,
+      "impact": 44,
+      "americas_exposure": 73,
       "trend": "rising",
-      "rationale": "Central American outages, persistent security exposure, and U.S. snow risk affect local services and mobility.",
+      "rationale": "Caribbean counter-narcotics strike raises regional security concern but does not establish broad domestic disruption.",
       "name": "Domestic institutional stress",
       "weight": 6
     },
@@ -159,17 +159,17 @@
       "impact": 27,
       "americas_exposure": 56,
       "trend": "stable",
-      "rationale": "Persistent organized-crime violence elevates security exposure; no broad civil disorder is evidenced.",
+      "rationale": "No evidence of protests, disorder, or civilian access disruption was provided.",
       "name": "Civil unrest / public order",
       "weight": 7
     },
     {
       "key": "public_health",
-      "threat": 36,
-      "impact": 17,
-      "americas_exposure": 31,
-      "trend": "stable",
-      "rationale": "CDC investigations are active but response systems are operating and no generalized health-service disruption is shown.",
+      "threat": 32,
+      "impact": 20,
+      "americas_exposure": 30,
+      "trend": "easing",
+      "rationale": "Cyclospora outbreak caused major prior illness but officials report declining infections and outbreak resolution.",
       "name": "Public health / biological",
       "weight": 5
     },
@@ -179,55 +179,29 @@
       "impact": 48,
       "americas_exposure": 57,
       "trend": "rising",
-      "rationale": "Forecast heavy snow could disrupt travel and local services in affected U.S. areas.",
+      "rationale": "No new natural-hazard evidence was provided; continuity score retained.",
       "name": "Natural / environmental",
       "weight": 5
     }
   ],
-  "hard_triggers": [
-    {
-      "type": "grid_outage",
-      "verified": true,
-      "scope": "regional",
-      "status": "active",
-      "summary": "A regional grid fault caused outages across Honduras and Guatemala, with reported impacts extending to El Salvador and Nicaragua; operators declared an emergency before stabilization.",
-      "source_url": "https://www.wpc.ncep.noaa.gov/index.php?embed=true",
-      "evidence_ids": [
-        "E10",
-        "E13"
-      ]
-    },
-    {
-      "type": "shipping_chokepoint_closure",
-      "verified": true,
-      "scope": "regional",
-      "status": "developing",
-      "summary": "Attacks and vessel incidents are disrupting Red Sea and Hormuz maritime routes, although alternative oil routes remain active.",
-      "source_url": "https://apnews.com/article/aa034da0d8226f5a3b4794b10afb8b3b",
-      "evidence_ids": [
-        "E1",
-        "E2",
-        "E3"
-      ]
-    }
-  ],
-  "verified_hard_trigger_count": 2,
+  "hard_triggers": [],
+  "verified_hard_trigger_count": 0,
   "severe_hard_trigger_count": 0,
   "score_calibration": {
     "raw_score": 73,
     "published_score": 73,
     "previous_daily_anchor": 73,
     "rate_limit_applied": false,
-    "daily_rate_limit": 6,
+    "daily_rate_limit": 3,
     "sustained_90_for_48h": false,
-    "high_impact_domain_count": 3
+    "high_impact_domain_count": 4
   },
   "score_components": {
     "global_threat_pressure": 79,
     "observed_civilian_disruption": 58,
-    "coupling": 78,
-    "momentum": 78,
-    "americas_exposure": 76
+    "coupling": 86,
+    "momentum": 70,
+    "americas_exposure": 77
   },
   "drivers": [
     {
@@ -263,53 +237,53 @@
   ],
   "areas_to_watch": [
     {
-      "name": "Middle East oil and maritime routes",
+      "name": "Hormuz and Bab el-Mandeb maritime access",
       "severity": "critical",
-      "why": "Pipeline halt, Red Sea pressure, and Hormuz vessel incidents can rapidly transmit into fuel and freight costs."
+      "why": "Active incidents near both chokepoints could reinforce energy-price and shipping disruption."
     },
     {
-      "name": "Americas power resilience",
+      "name": "U.S. critical-mineral availability",
       "severity": "high",
-      "why": "The Central American grid fault demonstrates regional service vulnerability despite reported stabilization."
+      "why": "Reported halted Chinese shipments and elevated prices could constrain technology and industrial supply chains."
     },
     {
-      "name": "Critical-mineral supply to the United States",
+      "name": "North American trade arrangements",
       "severity": "high",
-      "why": "Chinese supplier refusals and high rare-earth prices may disrupt technology and manufacturing inputs."
+      "why": "Accelerated U.S.-Mexico talks following stalled Canadian negotiations create supply-chain uncertainty."
     },
     {
-      "name": "U.S. localized winter weather",
+      "name": "Foodborne outbreak follow-through",
       "severity": "medium",
-      "why": "Forecast heavy snow may affect travel and local services."
+      "why": "The outbreak is declared over, but monitoring is warranted for residual cases and supply-chain lessons."
     },
     {
-      "name": "Mexico and Caribbean civilian security",
+      "name": "Financial and cyber operational resilience",
       "severity": "medium",
-      "why": "Persistent organized-crime exposure and expanding counter-narcotics operations warrant monitoring."
+      "why": "Vulnerabilities remain, though no confirmed system outage or market-access restriction is reported."
     }
   ],
   "signals": [
     {
-      "title": "Hormuz vessel struck",
-      "summary": "An Iranian commercial vessel was struck near Qeshm Island, killing one and injuring four, while another vessel reportedly caught fire in the Strait of Hormuz.",
-      "url": "https://apnews.com/article/aa034da0d8226f5a3b4794b10afb8b3b",
-      "source": "Associated Press",
-      "published_at": "2026-09-13T00:00:00.000Z",
+      "title": "Houthis seize Red Sea islands",
+      "summary": "Houthi forces reportedly seized strategic Hanish islands near Bab el-Mandeb, tightening control over a major shipping chokepoint.",
+      "url": "https://apnews.com/article/8c18d82c109a8ea91347ce53c0096c53",
+      "source": "AP",
+      "published_at": "2026-09-14T00:00:00.000Z",
       "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Saudi oil pipeline halted",
-      "summary": "Saudi Arabia shut its East-West oil pipeline after an aerial attack as Houthis tightened control near the Bab el-Mandeb shipping chokepoint.",
-      "url": "https://au.marketscreener.com/news/world/saudis-shut-down-oil-pipeline-as-houthis-tighten-grip-on-red-sea-shipping-ce785bdfd080f12c",
+      "title": "Hormuz attack raises supply fears",
+      "summary": "A projectile reportedly struck a vessel in the Strait of Hormuz, while Saudi Arabia’s oil-pipeline closure compounded disruption risks to global energy supplies.",
+      "url": "https://www.investing.com/news/commodities-news/oil-prices-jump-more-than-3-after-new-strikes-on-saudi-strait-of-hormuz-4639616",
       "source": "Reuters",
-      "published_at": "2026-09-12T00:00:00.000Z",
-      "category": "ENERGY",
+      "published_at": "2026-09-14T00:00:00.000Z",
+      "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Rare-earth shipments withheld",
-      "summary": "Some Chinese suppliers are refusing U.S. rare-earth shipments over compliance concerns; selected materials remain near record prices amid tight supply.",
+      "title": "Rare-earth shipments disrupted",
+      "summary": "Some Chinese suppliers have halted rare-earth shipments to U.S. firms; several sensitive materials remain near record prices amid tight supply.",
       "url": "https://theedgemalaysia.com/node/816883",
       "source": "Reuters via The Edge Malaysia",
       "published_at": "2026-09-11T00:00:00.000Z",
@@ -317,39 +291,39 @@
       "impact": "up"
     },
     {
-      "title": "Central America power fault",
-      "summary": "A regional grid fault triggered outages in Honduras and Guatemala, with reported impacts extending to El Salvador and Nicaragua; operators declared an emergency before stabilization.",
-      "url": "https://efe.com/mundo/2026-09-10/apagon-centroamerica-guatemala-honduras/",
-      "source": "EFE",
-      "published_at": "2026-09-10T00:00:00.000Z",
-      "category": "CYBER",
-      "impact": "up"
-    },
-    {
-      "title": "Mexico violence advisory",
-      "summary": "Canada continues advising against non-essential travel to several Mexican states because of high violence and organized crime, indicating persistent civilian security exposure.",
-      "url": "https://travel.gc.ca/destinations/mexico",
-      "source": "Government of Canada",
-      "published_at": "2026-09-11T00:00:00.000Z",
-      "category": "CIVIL",
-      "impact": "up"
-    },
-    {
-      "title": "Caribbean strike escalation",
-      "summary": "A U.S. strike on an alleged drug-smuggling boat killed three people in the Caribbean, increasing potential civilian-security risks amid expanding regional counter-narcotics operations.",
-      "url": "https://apnews.com/article/b625fe79a901799707343ff5dd83b5f4",
+      "title": "Russia sanctions bill advances",
+      "summary": "A House package would authorize tariffs up to 100% on major purchasers of Russian oil or gas, but passage remains uncertain.",
+      "url": "https://apnews.com/article/3d18eaae67fa59ae3a67d1e31454513f",
       "source": "Associated Press",
+      "published_at": "2026-09-11T00:00:00.000Z",
+      "category": "TRADE",
+      "impact": "up"
+    },
+    {
+      "title": "Caribbean vessel strike",
+      "summary": "U.S. Southern Command said a U.S. strike on a vessel along Caribbean narco-trafficking routes killed three people; Reuters said it could not independently verify the account.",
+      "url": "https://theprint.in/world/us-strikes-vessel-in-caribbean-killing-three/3038652/",
+      "source": "Reuters",
       "published_at": "2026-09-10T00:00:00.000Z",
       "category": "CIVIL",
       "impact": "up"
     },
     {
-      "title": "Heavy-snow risk",
-      "summary": "NOAA forecasts a moderate heavy-snow risk for parts of the United States on September 13, potentially affecting travel and local services.",
-      "url": "https://www.wpc.ncep.noaa.gov/index.php?embed=true",
-      "source": "NOAA Weather Prediction Center",
-      "published_at": "2026-09-12T00:00:00.000Z",
-      "category": "NATURAL",
+      "title": "Mexico-U.S. trade talks",
+      "summary": "Washington and Mexico are accelerating bilateral trade talks after Canadian negotiations collapsed, creating continued uncertainty for North American supply chains.",
+      "url": "https://www.marketscreener.com/news/mexico-washington-sprint-toward-bilateral-trade-deal-before-us-elections-ce785bdfda80f52c",
+      "source": "Reuters",
+      "published_at": "2026-09-11T00:00:00.000Z",
+      "category": "TRADE",
+      "impact": "up"
+    },
+    {
+      "title": "Largest U.S. cyclospora outbreak",
+      "summary": "Contaminated iceberg lettuce sickened 12,883 people across 21 states, causing 570 hospitalizations and two deaths.",
+      "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/11/us-declares-end-of-largest-recorded-cyclosporiasis-outbreak",
+      "source": "Reuters via Internazionale",
+      "published_at": "2026-09-11T00:00:00.000Z",
+      "category": "FOOD",
       "impact": "up"
     }
   ],
@@ -420,27 +394,37 @@
       "americas": 76,
       "conflict": 98,
       "momentum": 78
+    },
+    {
+      "date": "2026-09-14",
+      "preparedness": 73,
+      "raw_preparedness": 73,
+      "threat": 79,
+      "impact": 58,
+      "americas": 77,
+      "conflict": 98,
+      "momentum": 70
     }
   ],
   "evidence_quality": {
     "evidence_count": 13,
-    "fresh_count": 12,
+    "fresh_count": 13,
     "unique_sources": 10,
     "tier_a_sources": 4,
     "clusters": 5,
-    "domains_covered": 12,
+    "domains_covered": 11,
     "confidence_cap": 75,
     "publishable": true
   },
   "evidence_log": [
     {
       "id": "E1",
-      "title": "Hormuz vessel struck",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/aa034da0d8226f5a3b4794b10afb8b3b",
+      "title": "Houthis seize Red Sea islands",
+      "source": "AP",
+      "url": "https://apnews.com/article/8c18d82c109a8ea91347ce53c0096c53",
       "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-09-13T00:00:00.000Z",
+      "published_at": "2026-09-14T00:00:00.000Z",
       "age_days": 0,
       "cluster": "military_energy_shipping",
       "domains": [
@@ -448,63 +432,63 @@
         "energy",
         "supply_chain"
       ],
-      "geography": "Strait of Hormuz",
+      "geography": "Yemen; Bab el-Mandeb",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "An Iranian commercial vessel was struck near Qeshm Island, killing one and injuring four, while another vessel reportedly caught fire in the Strait of Hormuz.",
+      "fact": "Houthi forces reportedly seized strategic Hanish islands near Bab el-Mandeb, tightening control over a major shipping chokepoint.",
       "americas_relevant": true
     },
     {
       "id": "E2",
-      "title": "Saudi oil pipeline halted",
+      "title": "Hormuz attack raises supply fears",
       "source": "Reuters",
-      "url": "https://au.marketscreener.com/news/world/saudis-shut-down-oil-pipeline-as-houthis-tighten-grip-on-red-sea-shipping-ce785bdfd080f12c",
-      "source_domain": "au.marketscreener.com",
+      "url": "https://www.investing.com/news/commodities-news/oil-prices-jump-more-than-3-after-new-strikes-on-saudi-strait-of-hormuz-4639616",
+      "source_domain": "investing.com",
       "source_tier": "C",
-      "published_at": "2026-09-12T00:00:00.000Z",
-      "age_days": 1,
+      "published_at": "2026-09-14T00:00:00.000Z",
+      "age_days": 0,
       "cluster": "military_energy_shipping",
       "domains": [
-        "energy",
         "military",
-        "critical_infrastructure"
+        "energy",
+        "supply_chain"
       ],
-      "geography": "Saudi Arabia / Red Sea",
+      "geography": "Strait of Hormuz; Saudi Arabia",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "Saudi Arabia shut its East-West oil pipeline after an aerial attack as Houthis tightened control near the Bab el-Mandeb shipping chokepoint.",
+      "fact": "A projectile reportedly struck a vessel in the Strait of Hormuz, while Saudi Arabia’s oil-pipeline closure compounded disruption risks to global energy supplies.",
       "americas_relevant": true
     },
     {
       "id": "E3",
-      "title": "Some oil continues moving",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/2b126da67b09de2f328846eb656abe0e",
+      "title": "Hormuz talks postponed",
+      "source": "AP",
+      "url": "https://apnews.com/article/27d276de911a983cdb1b81101ee56083",
       "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-09-11T00:00:00.000Z",
-      "age_days": 2,
+      "published_at": "2026-09-13T00:00:00.000Z",
+      "age_days": 1,
       "cluster": "military_energy_shipping",
       "domains": [
+        "military",
         "energy",
-        "supply_chain",
-        "trade"
+        "supply_chain"
       ],
-      "geography": "Persian Gulf",
+      "geography": "Strait of Hormuz; Oman",
       "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "Non-Iranian oil exports reportedly recovered to 8.4 million barrels daily, reaching 10.8 million through alternative routes despite continuing maritime disruption.",
+      "fact": "Oman postponed regional talks intended to manage Strait of Hormuz shipping, indicating diplomatic engagement continues but has not yet produced a stabilizing agreement.",
       "americas_relevant": true
     },
     {
       "id": "E4",
-      "title": "Rare-earth shipments withheld",
+      "title": "Rare-earth shipments disrupted",
       "source": "Reuters via The Edge Malaysia",
       "url": "https://theedgemalaysia.com/node/816883",
       "source_domain": "theedgemalaysia.com",
       "source_tier": "C",
       "published_at": "2026-09-11T00:00:00.000Z",
-      "age_days": 2,
+      "age_days": 3,
       "cluster": "trade_supply_technology",
       "domains": [
         "supply_chain",
@@ -514,59 +498,100 @@
       "geography": "China–United States",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "Some Chinese suppliers are refusing U.S. rare-earth shipments over compliance concerns; selected materials remain near record prices amid tight supply.",
+      "fact": "Some Chinese suppliers have halted rare-earth shipments to U.S. firms; several sensitive materials remain near record prices amid tight supply.",
       "americas_relevant": true
     },
     {
       "id": "E5",
-      "title": "Copper tariff decision stalls",
-      "source": "Reuters via MarketScreener",
-      "url": "https://www.marketscreener.com/news/white-house-copper-tariff-plan-stalls-amid-affordability-concerns-sources-say-ce785bdedd8df126",
-      "source_domain": "marketscreener.com",
-      "source_tier": "C",
-      "published_at": "2026-09-10T00:00:00.000Z",
+      "title": "Russia sanctions bill advances",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/3d18eaae67fa59ae3a67d1e31454513f",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-09-11T00:00:00.000Z",
       "age_days": 3,
       "cluster": "trade_supply_technology",
       "domains": [
         "trade",
         "supply_chain"
       ],
-      "geography": "United States",
+      "geography": "United States–Russia–global",
       "evidence_type": "forward",
-      "materiality": "medium",
-      "fact": "The White House has not decided on refined-copper tariffs, weighing domestic-mining incentives against higher manufacturing costs.",
+      "materiality": "high",
+      "fact": "A House package would authorize tariffs up to 100% on major purchasers of Russian oil or gas, but passage remains uncertain.",
       "americas_relevant": true
     },
     {
       "id": "E6",
-      "title": "BRICS opposes coercive measures",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/72e4329da3bc30ab7b231b2d11aae375",
-      "source_domain": "apnews.com",
+      "title": "Critical-minerals allocation rules",
+      "source": "Bureau of Industry and Security",
+      "url": "https://media.bis.gov/regulations/federal-register-notices",
+      "source_domain": "media.bis.gov",
       "source_tier": "A",
-      "published_at": "2026-09-13T00:00:00.000Z",
-      "age_days": 0,
+      "published_at": "2026-09-11T00:00:00.000Z",
+      "age_days": 3,
       "cluster": "trade_supply_technology",
       "domains": [
-        "trade",
         "supply_chain",
-        "technology"
+        "technology",
+        "trade"
       ],
-      "geography": "Global",
+      "geography": "United States",
       "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "BRICS leaders opposed unilateral sanctions and rising tariffs, warning they undermine global trade and supply-chain stability.",
+      "fact": "BIS lists a directive establishing allocation requirements and additional measures for recoverable critical minerals and materials.",
       "americas_relevant": true
     },
     {
       "id": "E7",
-      "title": "Financial infrastructure functioning",
+      "title": "ECB cyber-stress lessons",
+      "source": "European Central Bank Banking Supervision",
+      "url": "https://www.bankingsupervision.europa.eu/press/blog/2026/html/ssm.blog20260911~97fe7661d0.en.html",
+      "source_domain": "bankingsupervision.europa.eu",
+      "source_tier": "A",
+      "published_at": "2026-09-11T00:00:00.000Z",
+      "age_days": 3,
+      "cluster": "cyber_infrastructure_finance",
+      "domains": [
+        "technology",
+        "financial"
+      ],
+      "geography": "Euro area",
+      "evidence_type": "forward",
+      "materiality": "medium",
+      "fact": "The ECB says cyber incidents could cause bank income losses, higher costs, operational disruption, and wider market stress, requiring reliable information systems and capital planning.",
+      "americas_relevant": false
+    },
+    {
+      "id": "E8",
+      "title": "Financial-sector resilience coordination",
+      "source": "Financial Stability Board",
+      "url": "https://www.fsb.org/2026/09/fsb-hosts-roundtable-on-public-private-sector-collaboration-to-strengthen-operational-resilience/",
+      "source_domain": "fsb.org",
+      "source_tier": "C",
+      "published_at": "2026-09-11T00:00:00.000Z",
+      "age_days": 3,
+      "cluster": "cyber_infrastructure_finance",
+      "domains": [
+        "technology",
+        "financial",
+        "critical_infrastructure"
+      ],
+      "geography": "Global",
+      "evidence_type": "stabilizer",
+      "materiality": "medium",
+      "fact": "The FSB convened authorities and industry on September 10 to improve operational resilience, incident lessons, and cross-sector continuity during significant disruptions.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E9",
+      "title": "Markets functioning despite vulnerabilities",
       "source": "European Securities and Markets Authority",
       "url": "https://www.esma.europa.eu/press-news/esma-news/ongoing-geopolitical-and-economic-vulnerabilities-masked-strong-investor",
       "source_domain": "esma.europa.eu",
       "source_tier": "A",
       "published_at": "2026-09-10T00:00:00.000Z",
-      "age_days": 3,
+      "age_days": 4,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
         "financial",
@@ -575,118 +600,78 @@
       "geography": "European Union",
       "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "ESMA reported key market infrastructures continued functioning during recent stress, while warning that cyber risks are becoming more important.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E8",
-      "title": "Operational-resilience coordination",
-      "source": "Financial Stability Board",
-      "url": "https://www.fsb.org/2026/09/fsb-hosts-roundtable-on-public-private-sector-collaboration-to-strengthen-operational-resilience/",
-      "source_domain": "fsb.org",
-      "source_tier": "C",
-      "published_at": "2026-09-11T00:00:00.000Z",
-      "age_days": 2,
-      "cluster": "cyber_infrastructure_finance",
-      "domains": [
-        "financial",
-        "technology"
-      ],
-      "geography": "Global",
-      "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "The FSB convened public-private collaboration on preparing financial institutions for significant operational disruptions and improving incident lessons-sharing.",
-      "americas_relevant": true
+      "fact": "ESMA reports key market infrastructures continued functioning during recent stress, while warning that geopolitical, cyber, valuation, and refinancing vulnerabilities remain.",
+      "americas_relevant": false
     },
     {
       "id": "E10",
-      "title": "Central America power fault",
-      "source": "EFE",
-      "url": "https://efe.com/mundo/2026-09-10/apagon-centroamerica-guatemala-honduras/",
-      "source_domain": "efe.com",
+      "title": "Caribbean vessel strike",
+      "source": "Reuters",
+      "url": "https://theprint.in/world/us-strikes-vessel-in-caribbean-killing-three/3038652/",
+      "source_domain": "theprint.in",
       "source_tier": "C",
       "published_at": "2026-09-10T00:00:00.000Z",
-      "age_days": 3,
+      "age_days": 4,
       "cluster": "americas_civil",
       "domains": [
-        "critical_infrastructure",
-        "domestic"
+        "domestic",
+        "civil_unrest"
       ],
-      "geography": "Guatemala, Honduras, El Salvador, Nicaragua",
+      "geography": "Caribbean",
       "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "A regional grid fault triggered outages in Honduras and Guatemala, with reported impacts extending to El Salvador and Nicaragua; operators declared an emergency before stabilization.",
+      "materiality": "medium",
+      "fact": "U.S. Southern Command said a U.S. strike on a vessel along Caribbean narco-trafficking routes killed three people; Reuters said it could not independently verify the account.",
       "americas_relevant": true
     },
     {
       "id": "E11",
-      "title": "Mexico violence advisory",
-      "source": "Government of Canada",
-      "url": "https://travel.gc.ca/destinations/mexico",
-      "source_domain": "travel.gc.ca",
+      "title": "Mexico-U.S. trade talks",
+      "source": "Reuters",
+      "url": "https://www.marketscreener.com/news/mexico-washington-sprint-toward-bilateral-trade-deal-before-us-elections-ce785bdfda80f52c",
+      "source_domain": "marketscreener.com",
       "source_tier": "C",
       "published_at": "2026-09-11T00:00:00.000Z",
-      "age_days": 2,
+      "age_days": 3,
       "cluster": "americas_civil",
       "domains": [
-        "civil_unrest",
-        "domestic"
+        "trade",
+        "supply_chain"
       ],
-      "geography": "Mexico",
-      "evidence_type": "observed",
+      "geography": "United States; Mexico; Canada",
+      "evidence_type": "forward",
       "materiality": "medium",
-      "fact": "Canada continues advising against non-essential travel to several Mexican states because of high violence and organized crime, indicating persistent civilian security exposure.",
+      "fact": "Washington and Mexico are accelerating bilateral trade talks after Canadian negotiations collapsed, creating continued uncertainty for North American supply chains.",
       "americas_relevant": true
     },
     {
       "id": "E12",
-      "title": "Caribbean strike escalation",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/b625fe79a901799707343ff5dd83b5f4",
-      "source_domain": "apnews.com",
-      "source_tier": "A",
-      "published_at": "2026-09-10T00:00:00.000Z",
+      "title": "Largest U.S. cyclospora outbreak",
+      "source": "Reuters via Internazionale",
+      "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/11/us-declares-end-of-largest-recorded-cyclosporiasis-outbreak",
+      "source_domain": "internazionale.it",
+      "source_tier": "C",
+      "published_at": "2026-09-11T00:00:00.000Z",
       "age_days": 3,
-      "cluster": "americas_civil",
+      "cluster": "food_health_natural",
       "domains": [
-        "civil_unrest",
-        "domestic"
+        "food",
+        "public_health"
       ],
-      "geography": "Caribbean",
-      "evidence_type": "forward",
-      "materiality": "medium",
-      "fact": "A U.S. strike on an alleged drug-smuggling boat killed three people in the Caribbean, increasing potential civilian-security risks amid expanding regional counter-narcotics operations.",
+      "geography": "United States",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "Contaminated iceberg lettuce sickened 12,883 people across 21 states, causing 570 hospitalizations and two deaths.",
       "americas_relevant": true
     },
     {
       "id": "E13",
-      "title": "Heavy-snow risk",
-      "source": "NOAA Weather Prediction Center",
-      "url": "https://www.wpc.ncep.noaa.gov/index.php?embed=true",
-      "source_domain": "wpc.ncep.noaa.gov",
+      "title": "Outbreak declared over",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/9b2c348b2f378b7554b2abfbf1780550",
+      "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-09-12T00:00:00.000Z",
-      "age_days": 1,
-      "cluster": "food_health_natural",
-      "domains": [
-        "natural",
-        "domestic"
-      ],
-      "geography": "United States",
-      "evidence_type": "forward",
-      "materiality": "medium",
-      "fact": "NOAA forecasts a moderate heavy-snow risk for parts of the United States on September 13, potentially affecting travel and local services.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E14",
-      "title": "Foodborne surveillance",
-      "source": "CDC",
-      "url": "https://cdc.gov/foodborne-outbreaks/outbreaks/index.html",
-      "source_domain": "cdc.gov",
-      "source_tier": "A",
-      "published_at": "2026-09-02T00:00:00.000Z",
-      "age_days": 11,
+      "published_at": "2026-09-11T00:00:00.000Z",
+      "age_days": 3,
       "cluster": "food_health_natural",
       "domains": [
         "food",
@@ -694,17 +679,17 @@
       ],
       "geography": "United States",
       "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "CDC reports 40 active multistate foodborne investigations as of September 2, while coordinating response with FDA and USDA.",
+      "materiality": "high",
+      "fact": "Officials declared the outbreak over after linked lettuce left stores and restaurants and recent infections declined significantly.",
       "americas_relevant": true
     }
   ],
   "api_usage": {
     "research_model": "gpt-5.6-luna",
     "assessment_model": "gpt-5.6-terra",
-    "web_search_calls": 5,
-    "estimated_run_cost_usd": 0.087825,
-    "estimated_period_spend_usd": 0.284325,
+    "web_search_calls": 6,
+    "estimated_run_cost_usd": 0.096905,
+    "estimated_period_spend_usd": 0.38123,
     "allocated_90_day_budget_usd": 10,
     "operational_stop_usd": 9
   },

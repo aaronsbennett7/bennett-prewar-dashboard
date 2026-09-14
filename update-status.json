@@ -1,23 +1,23 @@
 {
   "schema_version": 1,
   "engine_version": "5.3",
-  "date": "2026-09-13",
+  "date": "2026-09-14",
   "status": "VERIFIED",
-  "started_at": "2026-09-13T11:22:55.490Z",
-  "completed_at": "2026-09-13T11:26:06.171Z",
+  "started_at": "2026-09-14T11:25:56.906Z",
+  "completed_at": "2026-09-14T11:29:11.898Z",
   "message": "Published verified v5 assessment: 73 ACCELERATE.",
   "research_quality": {
     "evidence_count": 13,
-    "fresh_count": 12,
+    "fresh_count": 13,
     "unique_sources": 10,
     "tier_a_sources": 4,
     "clusters": 5,
-    "domains_covered": 12,
+    "domains_covered": 11,
     "confidence_cap": 75,
     "publishable": true
   },
-  "web_search_calls": 5,
-  "estimated_run_cost_usd": 0.087825,
-  "estimated_period_spend_usd": 0.284325,
+  "web_search_calls": 6,
+  "estimated_run_cost_usd": 0.096905,
+  "estimated_period_spend_usd": 0.38123,
   "operational_stop_usd": 9
 }
