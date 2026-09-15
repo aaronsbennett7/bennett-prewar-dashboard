@@ -2,32 +2,32 @@
   "schema_version": 5,
   "engine_version": "5.3",
   "data_status": "VERIFIED",
-  "as_of": "2026-09-14",
-  "updated_at": "2026-09-14T20:12:19.752Z",
-  "last_successful_update": "2026-09-14T20:12:19.752Z",
-  "preparedness_urgency": 75,
-  "raw_preparedness_urgency": 75,
+  "as_of": "2026-09-15",
+  "updated_at": "2026-09-15T11:28:31.782Z",
+  "last_successful_update": "2026-09-15T11:28:31.782Z",
+  "preparedness_urgency": 76,
+  "raw_preparedness_urgency": 76,
   "preparedness_stage": "ACCELERATE",
-  "global_threat_pressure": 80,
-  "leading_threat_pressure": 80,
-  "observed_civilian_disruption": 62,
-  "americas_exposure": 78,
+  "global_threat_pressure": 81,
+  "leading_threat_pressure": 81,
+  "observed_civilian_disruption": 63,
+  "americas_exposure": 79,
   "americas_stage": "HIGH",
-  "americas_summary": "Americas exposure is high through oil prices, maritime supply chains, rare-earth access, higher borrowing costs, Cuba’s power crisis, and localized Hawaii food/fuel logistics disruption. U.S. New York-area transport delays are localized and temporary.",
+  "americas_summary": "Americas exposure is highest through fuel prices, refined-product availability, shipping costs, trade flows, and tighter U.S. borrowing conditions. Localized flash-flood risk affects parts of the central United States; Mexico disruptions may affect travel and mobility.",
   "americas_components": [
     {
       "name": "Energy security",
-      "score": 96,
+      "score": 97,
       "trend": "rising"
     },
     {
       "name": "Supply chain & transportation",
-      "score": 90,
+      "score": 92,
       "trend": "rising"
     },
     {
       "name": "Military / geopolitical",
-      "score": 75,
+      "score": 77,
       "trend": "rising"
     },
     {
@@ -36,99 +36,98 @@
       "trend": "rising"
     },
     {
-      "name": "Critical infrastructure / cyber",
-      "score": 87,
+      "name": "Financial-system stress",
+      "score": 88,
       "trend": "rising"
     },
     {
-      "name": "Financial-system stress",
-      "score": 86,
+      "name": "Critical infrastructure / cyber",
+      "score": 87,
       "trend": "rising"
     }
   ],
-  "conflict_escalation": 98,
+  "conflict_escalation": 99,
   "coupling_score": 82,
-  "momentum_score": 80,
-  "confidence_score": 84,
-  "confidence_level": "HIGH",
-  "confidence_rationale": "Fresh, mostly direct reporting from high-quality sources supports the principal energy, shipping, infrastructure, health, and port signals. Some market and rare-earth reporting is indirect through secondary hosts. Evidence gate: 14 items, 10 sources, 6 Tier-A sources, 5/5 clusters.",
+  "momentum_score": 77,
+  "confidence_score": 75,
+  "confidence_level": "MODERATE",
+  "confidence_rationale": "Fresh multi-source evidence directly documents the Saudi pipeline closure, reported vessel attack, financial-market stress, and NOAA hazards. Some reporting is indirect Reuters republication, limiting confidence. Evidence gate: 12 items, 9 sources, 4 Tier-A sources, 5/5 clusters.",
   "preparedness_window": "Days to weeks",
-  "summary": "Energy and maritime disruption remain the dominant, coupled risk, with direct supply-chain, trade, financial, and Americas exposure. Concrete outages affect Saudi exports, Cuba’s power system, and a Hawaiian island’s port access, but evidence supports partial shipping mitigation rather than a total regional stoppage.",
-  "primary_driver": "Drone damage to a Saudi oil pipeline and strengthened Houthi positioning near Bab el-Mandeb are increasing oil-export and maritime-route disruption risks.",
+  "summary": "Severe, ongoing energy and maritime-shipping disruption remains the main preparedness concern, reinforced by Saudi pipeline closure and reported Hormuz vessel attack. U.S. financial conditions and localized Mexico mobility and U.S. flood risks add secondary pressures.",
+  "primary_driver": "Middle East energy and maritime-route disruption constraining oil transport alternatives and elevating global supply risk.",
   "primary_stabilizers": [
-    "IEA monitoring indicates regional shipping flows continue evolving despite disruption, supporting partial rerouting and escorted-transit mitigation rather than a complete supply stoppage.",
-    "Allied agreements and the G7 Critical Minerals Action Plan are mobilizing an estimated $6.4 billion to diversify rare-earth supply chains.",
-    "The Reserve Bank of India reportedly intervened in foreign exchange markets and used swaps to limit rupee weakness and manage banking-system liquidity.",
-    "U.S. officials declared the country’s record cyclospora outbreak over, although its contamination source remains unknown."
+    "The United States and European Union announced an action plan intended to strengthen critical-minerals supply-chain resilience.",
+    "A U.S. Treasury buyback intended to support market liquidity attracted $5.2 billion of purchases against a $10.5 billion offer.",
+    "Core financial and payment systems remain under continuous monitoring; no unverified reassurance is treated as evidence."
   ],
   "domains": [
     {
       "key": "energy",
-      "threat": 98,
-      "impact": 95,
-      "americas_exposure": 96,
+      "threat": 99,
+      "impact": 97,
+      "americas_exposure": 97,
       "trend": "rising",
-      "rationale": "Saudi pipeline outage is expected to last weeks; Red Sea positioning raises export-route risk.",
+      "rationale": "Saudi East-West pipeline closure and reported Hormuz vessel attack constrain oil-routing options and supply flows.",
       "name": "Energy security",
       "weight": 11
     },
     {
       "key": "military",
-      "threat": 98,
-      "impact": 84,
-      "americas_exposure": 75,
+      "threat": 99,
+      "impact": 86,
+      "americas_exposure": 77,
       "trend": "rising",
-      "rationale": "Houthi seizure of strategic islands materially strengthens chokepoint pressure.",
+      "rationale": "Reported vessel attack and Houthi territorial gains raise risk to Hormuz and Bab el-Mandeb shipping.",
       "name": "Military / geopolitical",
       "weight": 10
     },
     {
       "key": "supply_chain",
-      "threat": 96,
-      "impact": 85,
-      "americas_exposure": 90,
+      "threat": 98,
+      "impact": 88,
+      "americas_exposure": 92,
       "trend": "rising",
-      "rationale": "Oil-export constraints, Red Sea risk, rare-earth shipment refusals, and Hawaii port damage disrupt supply routes.",
+      "rationale": "Pipeline outage and threats across Hormuz and Red Sea routes elevate tanker and cargo disruption risk.",
       "name": "Supply chain & transportation",
       "weight": 10
     },
     {
       "key": "trade",
-      "threat": 94,
-      "impact": 72,
+      "threat": 95,
+      "impact": 74,
       "americas_exposure": 95,
       "trend": "rising",
-      "rationale": "Maritime-route pressure and reported curtailed rare-earth shipments affect trade access.",
+      "rationale": "Energy-route disruption persists; proposed Russia-related tariffs and active export controls add trade risk.",
       "name": "Global trade fragmentation",
       "weight": 10
     },
     {
       "key": "technology",
       "threat": 86,
-      "impact": 53,
+      "impact": 54,
       "americas_exposure": 72,
-      "trend": "rising",
-      "rationale": "Some U.S.-bound rare-earth shipments reportedly halted; diversification efforts provide partial mitigation.",
+      "trend": "stable",
+      "rationale": "Export controls remain active; the reported UK customer-data breach shows cyber exposure but no Americas service disruption.",
       "name": "Technology chokepoints",
       "weight": 7
     },
     {
       "key": "critical_infrastructure",
       "threat": 88,
-      "impact": 57,
+      "impact": 58,
       "americas_exposure": 87,
       "trend": "rising",
-      "rationale": "Cuba’s power crisis harms basic services; Hawaii port damage and New York-area disruptions add localized strain.",
+      "rationale": "Mexico reporting identifies localized transport and airport-access disruption; energy logistics remain exposed.",
       "name": "Critical infrastructure / cyber",
       "weight": 11
     },
     {
       "key": "financial",
-      "threat": 83,
-      "impact": 60,
-      "americas_exposure": 86,
+      "threat": 85,
+      "impact": 64,
+      "americas_exposure": 88,
       "trend": "rising",
-      "rationale": "Higher sovereign yields, oil concerns, and equity declines are tightening financial conditions.",
+      "rationale": "U.S. 10-year yields at 5% raise government and corporate borrowing costs amid broad bond-market selling.",
       "name": "Financial-system stress",
       "weight": 10
     },
@@ -137,18 +136,18 @@
       "threat": 64,
       "impact": 31,
       "americas_exposure": 66,
-      "trend": "rising",
-      "rationale": "Hawaii port damage disrupts a small island’s main food route; U.S. cyclospora outbreak has ended.",
+      "trend": "stable",
+      "rationale": "No direct food availability or price disruption is evidenced; weather risk could become locally consequential.",
       "name": "Food & agriculture",
       "weight": 8
     },
     {
       "key": "domestic",
-      "threat": 60,
-      "impact": 47,
-      "americas_exposure": 74,
+      "threat": 62,
+      "impact": 49,
+      "americas_exposure": 76,
       "trend": "rising",
-      "rationale": "Cuba’s power crisis affects basic services; New York-area travel changes cause localized delays.",
+      "rationale": "Mexico mobility disruptions and imminent U.S. flash-flood risk support modestly higher domestic disruption.",
       "name": "Domestic institutional stress",
       "weight": 6
     },
@@ -158,7 +157,7 @@
       "impact": 27,
       "americas_exposure": 56,
       "trend": "stable",
-      "rationale": "No evidence of material civil-unrest disruption.",
+      "rationale": "Mexico protests may disrupt mobility, but evidence does not establish broader civil-unrest escalation.",
       "name": "Civil unrest / public order",
       "weight": 7
     },
@@ -168,64 +167,53 @@
       "impact": 22,
       "americas_exposure": 32,
       "trend": "stable",
-      "rationale": "Bundibugyo transmission is expanding in East Africa, while the U.S. cyclospora outbreak is over.",
+      "rationale": "No direct public-health disruption is evidenced.",
       "name": "Public health / biological",
       "weight": 5
     },
     {
       "key": "natural",
-      "threat": 55,
+      "threat": 59,
       "impact": 55,
-      "americas_exposure": 62,
+      "americas_exposure": 66,
       "trend": "rising",
-      "rationale": "Hurricane Lowell damaged a Hawaiian island’s sole cargo port, disrupting food and fuel access.",
+      "rationale": "NOAA forecasts moderate flash-flood risk in Iowa and additional excessive-rainfall risk across central U.S. areas.",
       "name": "Natural / environmental",
       "weight": 5
     }
   ],
   "hard_triggers": [
     {
-      "type": "major_port_closure",
+      "type": "shipping_chokepoint_closure",
       "verified": true,
-      "scope": "local",
-      "status": "active",
-      "summary": "Hurricane Lowell damaged a small Hawaiian island’s only cargo port, disrupting its primary inbound supply route while repairs proceed.",
-      "source_url": "https://www.panynj.gov/port-authority/en/press-room/press-release-archives/2026-press-releases/weekly-travel-advisory-for-sept--11-to-17.html",
-      "evidence_ids": [
-        "E9",
-        "E14"
-      ]
-    },
-    {
-      "type": "grid_outage",
-      "verified": true,
-      "scope": "national",
-      "status": "active",
-      "summary": "Cuba’s severe power crisis is increasingly harming basic services; regional fuel-export disruption is an additional energy-system stressor.",
-      "source_url": "https://apnews.com/article/8c18d82c109a8ea91347ce53c0096c53",
+      "scope": "multinational",
+      "status": "developing",
+      "summary": "Saudi Arabia's East-West oil pipeline is closed, reducing bypass capacity for Hormuz, while a vessel attack was reported in Hormuz and threats are rising near Bab el-Mandeb.",
+      "source_url": "https://apnews.com/article/efa431e2fa771e34880c8453c62ffb92",
       "evidence_ids": [
         "E1",
-        "E10"
+        "E2",
+        "E3"
       ]
     }
   ],
-  "verified_hard_trigger_count": 2,
+  "verified_hard_trigger_count": 1,
   "severe_hard_trigger_count": 1,
   "score_calibration": {
-    "raw_score": 75,
-    "published_score": 75,
-    "previous_daily_anchor": 73,
+    "raw_score": 76,
+    "published_score": 76,
+    "previous_daily_anchor": 75,
     "rate_limit_applied": false,
     "daily_rate_limit": null,
     "sustained_90_for_48h": false,
     "high_impact_domain_count": 4
   },
   "score_components": {
-    "global_threat_pressure": 80,
-    "observed_civilian_disruption": 62,
+    "global_threat_pressure": 81,
+    "observed_civilian_disruption": 63,
     "coupling": 82,
-    "momentum": 80,
-    "americas_exposure": 78
+    "momentum": 77,
+    "americas_exposure": 79
   },
   "drivers": [
     {
@@ -249,105 +237,105 @@
       "note": ""
     },
     {
-      "name": "Critical infrastructure / cyber",
+      "name": "Financial-system stress",
       "severity": "critical",
       "note": ""
     },
     {
-      "name": "Financial-system stress",
-      "severity": "high",
+      "name": "Critical infrastructure / cyber",
+      "severity": "critical",
       "note": ""
     }
   ],
   "areas_to_watch": [
     {
-      "name": "Red Sea and Saudi export infrastructure",
+      "name": "Hormuz, Red Sea, and Bab el-Mandeb energy shipping",
       "severity": "critical",
-      "why": "Pipeline outage and strengthened Houthi chokepoint position may deepen oil and shipping disruption."
+      "why": "Pipeline closure, reported vessel attack, and expanding Houthi control increase risk of further oil and tanker disruption."
     },
     {
-      "name": "Hawaii essential-supply access",
+      "name": "U.S. financial conditions",
       "severity": "high",
-      "why": "Damage to the island’s sole cargo port disrupts food and fuel deliveries."
+      "why": "Treasury yields at 5% increase borrowing costs and may tighten credit conditions."
     },
     {
-      "name": "Cuba power system",
+      "name": "Central U.S. flash flooding",
       "severity": "high",
-      "why": "Severe power crisis is harming basic services."
+      "why": "NOAA maintains a moderate excessive-rainfall risk in Iowa, with broader central U.S. rainfall risks."
     },
     {
-      "name": "Rare-earth access to the United States",
-      "severity": "high",
-      "why": "Reported shipment refusals and near-record sensitive-material prices could affect industrial supply."
-    },
-    {
-      "name": "Global rates and oil-linked market stress",
+      "name": "Mexico mobility and transport access",
       "severity": "medium",
-      "why": "Rising sovereign yields and oil concerns increase borrowing-cost and volatility risks."
+      "why": "Organized-crime violence and protests can disrupt roads, public transit, and airport access."
+    },
+    {
+      "name": "Americas fuel and freight costs",
+      "severity": "high",
+      "why": "Sustained Middle East route disruption can transmit rapidly through oil prices, tanker availability, and shipping costs."
     }
   ],
   "signals": [
     {
-      "title": "Saudi pipeline outage",
-      "summary": "A drone-damaged Saudi oil pipeline is expected to remain mostly offline for weeks, forcing Yanbu exports to rely on limited storage.",
-      "url": "https://apnews.com/article/8c18d82c109a8ea91347ce53c0096c53",
+      "title": "Saudi East-West pipeline remains offline",
+      "summary": "Saudi Arabia closed its East-West oil pipeline after an attack, increasing pressure on global energy supplies and limiting an alternative to Hormuz.",
+      "url": "https://apnews.com/article/efa431e2fa771e34880c8453c62ffb92",
       "source": "Associated Press",
       "published_at": "2026-09-14T00:00:00.000Z",
       "category": "ENERGY",
       "impact": "up"
     },
     {
-      "title": "Houthi gains threaten Red Sea route",
-      "summary": "Houthi forces seized two strategic Red Sea islands, strengthening their position near the Bab el-Mandeb shipping chokepoint and increasing pressure on Saudi exports.",
-      "url": "https://apnews.com/article/b95a5a6c73a26bbbb1caddcbf365ca62",
-      "source": "Associated Press",
-      "published_at": "2026-09-14T00:00:00.000Z",
+      "title": "Hormuz vessel attack reported",
+      "summary": "Maritime trackers reported a ship attack in the Strait of Hormuz, intensifying concerns over threats to oil and tanker movements.",
+      "url": "https://www.investing.com/news/commodities-news/new-report-of-attack-on-strait-of-hormuz-shipping-fans-fears-of-threats-to-oil-supplies-4898701",
+      "source": "Reuters",
+      "published_at": "2026-09-13T00:00:00.000Z",
       "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Some rare-earth shipments to U.S. halted",
-      "summary": "Some Chinese rare-earth suppliers reportedly declined U.S. shipments amid geopolitical compliance concerns, while sensitive-material prices remained near record highs.",
-      "url": "https://www.miningweekly.com/article/china-rare-earth-firms-halt-some-us-shipments-over-geopolitical-worries-sources-say-2026-09-04",
-      "source": "Reuters via Mining Weekly",
-      "published_at": "2026-09-04T00:00:00.000Z",
-      "category": "SUPPLY",
+      "title": "Houthi gains threaten Red Sea route",
+      "summary": "Houthi seizure of strategic Red Sea islands and the port of Mokha threatens shipping through Bab el-Mandeb and could further pressure oil supplies.",
+      "url": "https://apnews.com/article/bfee618a925924b8562f9fb0a58538b7",
+      "source": "Associated Press",
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Global bond selloff nears 5% Treasury yield",
-      "summary": "Global sovereign yields rose sharply, with the U.S. 10-year Treasury near 5%, increasing borrowing costs and market-stress risks.",
-      "url": "https://www.marketscreener.com/news/global-bond-selloff-keeps-10-year-us-yield-near-5-on-oil-rate-hike-fears-ce785bdfda81f422",
-      "source": "Reuters via MarketScreener",
+      "title": "Russia sanctions bill advances",
+      "summary": "A U.S. House vote is expected on a bill allowing tariffs up to 100% on major purchasers of Russian oil or gas, but passage remains uncertain.",
+      "url": "https://apnews.com/article/3d18eaae67fa59ae3a67d1e31454513f",
+      "source": "Associated Press",
       "published_at": "2026-09-11T00:00:00.000Z",
-      "category": "FINANCE",
+      "category": "TRADE",
       "impact": "up"
     },
     {
-      "title": "Asian markets slide as oil and rate risks rise",
-      "summary": "Asian equities fell on renewed oil-supply concerns as investors priced possible U.S. and Japanese rate hikes, tightening financial conditions.",
-      "url": "https://live.euronext.com/en/financial-news/shares-skid-asia-oil-rises-rate-hikes-loom",
-      "source": "Reuters via Euronext",
+      "title": "Export controls remain active",
+      "summary": "BIS regulations continue restricting exports, reexports, and transfers involving certain supercomputer and semiconductor-manufacturing end uses.",
+      "url": "https://www.bis.gov/regulations/ear/744",
+      "source": "U.S. Bureau of Industry and Security",
+      "published_at": "2026-09-14T00:00:00.000Z",
+      "category": "TECH",
+      "impact": "up"
+    },
+    {
+      "title": "U.S. bond yields reach 5%",
+      "summary": "The U.S. 10-year Treasury yield reached 5%, reflecting a broad bond selloff and increasing government and corporate borrowing costs.",
+      "url": "https://au.investing.com/news/economy-news/five-spots-to-watch-as-the-bond-market-hits-5-4641169",
+      "source": "Reuters",
       "published_at": "2026-09-14T00:00:00.000Z",
       "category": "FINANCE",
       "impact": "up"
     },
     {
-      "title": "New York-area travel delays",
-      "summary": "Port Authority warned travelers of September 11–17 lane closures, reroutes, and airport roadway changes causing localized delays around New York-area facilities.",
-      "url": "https://www.panynj.gov/port-authority/en/press-room/press-release-archives/2026-press-releases/weekly-travel-advisory-for-sept--11-to-17.html",
-      "source": "Port Authority of New York and New Jersey",
-      "published_at": "2026-09-11T00:00:00.000Z",
-      "category": "CIVIL",
-      "impact": "up"
-    },
-    {
-      "title": "Cuba power crisis",
-      "summary": "UN humanitarian officials reported Cuba’s severe power crisis is increasingly harming basic services, indicating continuing civilian exposure beyond isolated outages.",
-      "url": "https://www.globalsecurity.org/military/library/news/2026/09/mil-260910-unbrief01.htm",
-      "source": "United Nations briefing",
-      "published_at": "2026-09-10T00:00:00.000Z",
-      "category": "CYBER",
+      "title": "Revolut customer-data breach",
+      "summary": "Revolut confirmed sensitive customer information was disclosed after attackers used fraudulent requests from a legitimate government email domain.",
+      "url": "https://www.lse.co.uk/news/revolut-confirms-sensitive-customer-data-breach-falling-for-fake-government-requests-aw6p46r.html",
+      "source": "Reuters",
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "category": "TECH",
       "impact": "up"
     }
   ],
@@ -428,48 +416,78 @@
       "americas": 78,
       "conflict": 98,
       "momentum": 80
+    },
+    {
+      "date": "2026-09-15",
+      "preparedness": 76,
+      "raw_preparedness": 76,
+      "threat": 81,
+      "impact": 63,
+      "americas": 79,
+      "conflict": 99,
+      "momentum": 77
     }
   ],
   "evidence_quality": {
-    "evidence_count": 14,
-    "fresh_count": 11,
-    "unique_sources": 10,
-    "tier_a_sources": 6,
+    "evidence_count": 12,
+    "fresh_count": 12,
+    "unique_sources": 9,
+    "tier_a_sources": 4,
     "clusters": 5,
-    "domains_covered": 11,
-    "confidence_cap": 88,
+    "domains_covered": 10,
+    "confidence_cap": 75,
     "publishable": true
   },
   "evidence_log": [
     {
       "id": "E1",
-      "title": "Saudi pipeline outage",
+      "title": "Saudi East-West pipeline remains offline",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/8c18d82c109a8ea91347ce53c0096c53",
+      "url": "https://apnews.com/article/efa431e2fa771e34880c8453c62ffb92",
       "source_domain": "apnews.com",
       "source_tier": "A",
       "published_at": "2026-09-14T00:00:00.000Z",
-      "age_days": 0,
+      "age_days": 1,
       "cluster": "military_energy_shipping",
       "domains": [
         "energy",
-        "military",
         "supply_chain"
       ],
       "geography": "Saudi Arabia / Red Sea",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "A drone-damaged Saudi oil pipeline is expected to remain mostly offline for weeks, forcing Yanbu exports to rely on limited storage.",
+      "fact": "Saudi Arabia closed its East-West oil pipeline after an attack, increasing pressure on global energy supplies and limiting an alternative to Hormuz.",
       "americas_relevant": true
     },
     {
       "id": "E2",
+      "title": "Hormuz vessel attack reported",
+      "source": "Reuters",
+      "url": "https://www.investing.com/news/commodities-news/new-report-of-attack-on-strait-of-hormuz-shipping-fans-fears-of-threats-to-oil-supplies-4898701",
+      "source_domain": "investing.com",
+      "source_tier": "C",
+      "published_at": "2026-09-13T00:00:00.000Z",
+      "age_days": 2,
+      "cluster": "military_energy_shipping",
+      "domains": [
+        "military",
+        "energy",
+        "supply_chain"
+      ],
+      "geography": "Strait of Hormuz",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "Maritime trackers reported a ship attack in the Strait of Hormuz, intensifying concerns over threats to oil and tanker movements.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E3",
       "title": "Houthi gains threaten Red Sea route",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/b95a5a6c73a26bbbb1caddcbf365ca62",
+      "url": "https://apnews.com/article/bfee618a925924b8562f9fb0a58538b7",
       "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-09-14T00:00:00.000Z",
+      "published_at": "2026-09-15T00:00:00.000Z",
       "age_days": 0,
       "cluster": "military_energy_shipping",
       "domains": [
@@ -477,259 +495,201 @@
         "energy",
         "supply_chain"
       ],
-      "geography": "Yemen / Bab el-Mandeb",
-      "evidence_type": "observed",
+      "geography": "Yemen / Red Sea",
+      "evidence_type": "forward",
       "materiality": "high",
-      "fact": "Houthi forces seized two strategic Red Sea islands, strengthening their position near the Bab el-Mandeb shipping chokepoint and increasing pressure on Saudi exports.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E3",
-      "title": "Escort and bypass capacity",
-      "source": "International Energy Agency",
-      "url": "https://www.iea.org/data-and-statistics/data-tools/middle-east-maritime-chokepoints-shipping-monitor",
-      "source_domain": "iea.org",
-      "source_tier": "A",
-      "published_at": "2026-09-14T00:00:00.000Z",
-      "age_days": 0,
-      "cluster": "military_energy_shipping",
-      "domains": [
-        "energy",
-        "supply_chain",
-        "trade"
-      ],
-      "geography": "Middle East maritime routes",
-      "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "IEA monitoring indicates regional shipping flows continue evolving despite disruption, supporting partial rerouting and escorted-transit mitigation rather than a complete supply stoppage.",
+      "fact": "Houthi seizure of strategic Red Sea islands and the port of Mokha threatens shipping through Bab el-Mandeb and could further pressure oil supplies.",
       "americas_relevant": true
     },
     {
       "id": "E4",
-      "title": "Some rare-earth shipments to U.S. halted",
-      "source": "Reuters via Mining Weekly",
-      "url": "https://www.miningweekly.com/article/china-rare-earth-firms-halt-some-us-shipments-over-geopolitical-worries-sources-say-2026-09-04",
-      "source_domain": "miningweekly.com",
-      "source_tier": "C",
-      "published_at": "2026-09-04T00:00:00.000Z",
-      "age_days": 10,
+      "title": "Russia sanctions bill advances",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/3d18eaae67fa59ae3a67d1e31454513f",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-09-11T00:00:00.000Z",
+      "age_days": 4,
       "cluster": "trade_supply_technology",
       "domains": [
-        "supply_chain",
         "trade",
-        "technology"
+        "energy",
+        "supply_chain"
       ],
-      "geography": "China–United States",
-      "evidence_type": "observed",
+      "geography": "United States/Russia/China/India",
+      "evidence_type": "forward",
       "materiality": "high",
-      "fact": "Some Chinese rare-earth suppliers reportedly declined U.S. shipments amid geopolitical compliance concerns, while sensitive-material prices remained near record highs.",
+      "fact": "A U.S. House vote is expected on a bill allowing tariffs up to 100% on major purchasers of Russian oil or gas, but passage remains uncertain.",
       "americas_relevant": true
     },
     {
       "id": "E5",
-      "title": "Allied financing targets rare-earth resilience",
-      "source": "IMF",
-      "url": "https://www.imf.org/-/media/files/publications/weo/2026/april/english/commodityspecialfeature.pdf",
-      "source_domain": "imf.org",
+      "title": "Export controls remain active",
+      "source": "U.S. Bureau of Industry and Security",
+      "url": "https://www.bis.gov/regulations/ear/744",
+      "source_domain": "bis.gov",
       "source_tier": "A",
-      "published_at": "2026-04-01T00:00:00.000Z",
-      "age_days": 166,
+      "published_at": "2026-09-14T00:00:00.000Z",
+      "age_days": 1,
       "cluster": "trade_supply_technology",
       "domains": [
-        "supply_chain",
+        "technology",
         "trade",
-        "technology"
+        "supply_chain"
       ],
-      "geography": "Global",
-      "evidence_type": "stabilizer",
+      "geography": "United States/global",
+      "evidence_type": "observed",
       "materiality": "medium",
-      "fact": "Allied agreements and the G7 Critical Minerals Action Plan are mobilizing an estimated $6.4 billion to diversify rare-earth supply chains.",
+      "fact": "BIS regulations continue restricting exports, reexports, and transfers involving certain supercomputer and semiconductor-manufacturing end uses.",
       "americas_relevant": true
     },
     {
       "id": "E6",
-      "title": "Global bond selloff nears 5% Treasury yield",
-      "source": "Reuters via MarketScreener",
-      "url": "https://www.marketscreener.com/news/global-bond-selloff-keeps-10-year-us-yield-near-5-on-oil-rate-hike-fears-ce785bdfda81f422",
-      "source_domain": "marketscreener.com",
-      "source_tier": "C",
-      "published_at": "2026-09-11T00:00:00.000Z",
-      "age_days": 3,
-      "cluster": "cyber_infrastructure_finance",
+      "title": "Critical-minerals resilience action",
+      "source": "Office of the U.S. Trade Representative",
+      "url": "https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/september",
+      "source_domain": "ustr.gov",
+      "source_tier": "A",
+      "published_at": "2026-09-14T00:00:00.000Z",
+      "age_days": 1,
+      "cluster": "trade_supply_technology",
       "domains": [
-        "financial"
+        "trade",
+        "supply_chain",
+        "technology"
       ],
-      "geography": "Global / United States",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "Global sovereign yields rose sharply, with the U.S. 10-year Treasury near 5%, increasing borrowing costs and market-stress risks.",
+      "geography": "United States/EU",
+      "evidence_type": "stabilizer",
+      "materiality": "medium",
+      "fact": "The United States and European Union announced an action plan intended to strengthen critical-minerals supply-chain resilience.",
       "americas_relevant": true
     },
     {
       "id": "E7",
-      "title": "Asian markets slide as oil and rate risks rise",
-      "source": "Reuters via Euronext",
-      "url": "https://live.euronext.com/en/financial-news/shares-skid-asia-oil-rises-rate-hikes-loom",
-      "source_domain": "live.euronext.com",
+      "title": "U.S. bond yields reach 5%",
+      "source": "Reuters",
+      "url": "https://au.investing.com/news/economy-news/five-spots-to-watch-as-the-bond-market-hits-5-4641169",
+      "source_domain": "au.investing.com",
       "source_tier": "C",
       "published_at": "2026-09-14T00:00:00.000Z",
-      "age_days": 0,
-      "cluster": "cyber_infrastructure_finance",
-      "domains": [
-        "financial",
-        "energy"
-      ],
-      "geography": "Asia / Global",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "Asian equities fell on renewed oil-supply concerns as investors priced possible U.S. and Japanese rate hikes, tightening financial conditions.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E8",
-      "title": "Central-bank actions cushion currency and liquidity stress",
-      "source": "Reuters via MarketScreener",
-      "url": "https://www.marketscreener.com/news/rupee-to-extend-slide-oil-rally-surging-us-yields-chip-away-at-rbi-support-ce785bdfd88fff23",
-      "source_domain": "marketscreener.com",
-      "source_tier": "C",
-      "published_at": "2026-09-11T00:00:00.000Z",
-      "age_days": 3,
+      "age_days": 1,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
         "financial"
       ],
-      "geography": "India",
-      "evidence_type": "stabilizer",
+      "geography": "United States/global",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "The U.S. 10-year Treasury yield reached 5%, reflecting a broad bond selloff and increasing government and corporate borrowing costs.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E8",
+      "title": "Revolut customer-data breach",
+      "source": "Reuters",
+      "url": "https://www.lse.co.uk/news/revolut-confirms-sensitive-customer-data-breach-falling-for-fake-government-requests-aw6p46r.html",
+      "source_domain": "lse.co.uk",
+      "source_tier": "C",
+      "published_at": "2026-09-12T00:00:00.000Z",
+      "age_days": 3,
+      "cluster": "cyber_infrastructure_finance",
+      "domains": [
+        "technology",
+        "financial"
+      ],
+      "geography": "United Kingdom",
+      "evidence_type": "observed",
       "materiality": "medium",
-      "fact": "The Reserve Bank of India reportedly intervened in foreign exchange markets and used swaps to limit rupee weakness and manage banking-system liquidity.",
+      "fact": "Revolut confirmed sensitive customer information was disclosed after attackers used fraudulent requests from a legitimate government email domain.",
       "americas_relevant": false
     },
     {
       "id": "E9",
-      "title": "New York-area travel delays",
-      "source": "Port Authority of New York and New Jersey",
-      "url": "https://www.panynj.gov/port-authority/en/press-room/press-release-archives/2026-press-releases/weekly-travel-advisory-for-sept--11-to-17.html",
-      "source_domain": "panynj.gov",
-      "source_tier": "A",
+      "title": "U.S. bond-buyback support undersubscribed",
+      "source": "Reuters",
+      "url": "https://ca.marketscreener.com/news/global-bond-selloff-pushes-10-year-us-yield-toward-5-on-oil-rate-hike-fears-ce785bdfdb8bf727",
+      "source_domain": "ca.marketscreener.com",
+      "source_tier": "C",
       "published_at": "2026-09-11T00:00:00.000Z",
-      "age_days": 3,
-      "cluster": "americas_civil",
+      "age_days": 4,
+      "cluster": "cyber_infrastructure_finance",
       "domains": [
-        "domestic",
-        "critical_infrastructure"
+        "financial"
       ],
-      "geography": "United States—New York/New Jersey",
-      "evidence_type": "observed",
+      "geography": "United States",
+      "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "Port Authority warned travelers of September 11–17 lane closures, reroutes, and airport roadway changes causing localized delays around New York-area facilities.",
+      "fact": "A U.S. Treasury buyback intended to support market liquidity attracted $5.2 billion of purchases against a $10.5 billion offer.",
       "americas_relevant": true
     },
     {
       "id": "E10",
-      "title": "Cuba power crisis",
-      "source": "United Nations briefing",
-      "url": "https://www.globalsecurity.org/military/library/news/2026/09/mil-260910-unbrief01.htm",
-      "source_domain": "globalsecurity.org",
+      "title": "Mexico violence and mobility risk",
+      "source": "Government of Canada",
+      "url": "https://travel.gc.ca/destinations/mexico",
+      "source_domain": "travel.gc.ca",
       "source_tier": "C",
-      "published_at": "2026-09-10T00:00:00.000Z",
+      "published_at": "2026-09-11T00:00:00.000Z",
       "age_days": 4,
       "cluster": "americas_civil",
       "domains": [
-        "critical_infrastructure",
-        "domestic"
+        "civil_unrest",
+        "domestic",
+        "critical_infrastructure"
       ],
-      "geography": "Cuba",
+      "geography": "Mexico",
       "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "UN humanitarian officials reported Cuba’s severe power crisis is increasingly harming basic services, indicating continuing civilian exposure beyond isolated outages.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E11",
-      "title": "U.S. emergency continuation",
-      "source": "Federal Register",
-      "url": "https://public-inspection.federalregister.gov/2026-18589.pdf",
-      "source_domain": "public-inspection.federalregister.gov",
-      "source_tier": "A",
-      "published_at": "2026-09-09T00:00:00.000Z",
-      "age_days": 5,
-      "cluster": "americas_civil",
-      "domains": [
-        "domestic"
-      ],
-      "geography": "United States",
-      "evidence_type": "stabilizer",
-      "materiality": "low",
-      "fact": "The U.S. formally continued its post-September 11 national emergency through September 14, 2027, maintaining existing authorities addressing terrorism threats.",
+      "materiality": "medium",
+      "fact": "Canada reports organized-crime violence and protests in Mexico can disrupt traffic, public transportation, and airport access.",
       "americas_relevant": true
     },
     {
       "id": "E12",
-      "title": "Cyclospora outbreak ends",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/9b2c348b2f378b7554b2abfbf1780550",
-      "source_domain": "apnews.com",
+      "title": "Iowa flash-flood threat",
+      "source": "NOAA Weather Prediction Center",
+      "url": "https://www.wpc.ncep.noaa.gov/qpf/ero.php?opt=curr",
+      "source_domain": "wpc.ncep.noaa.gov",
       "source_tier": "A",
-      "published_at": "2026-09-11T00:00:00.000Z",
-      "age_days": 3,
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "age_days": 0,
       "cluster": "food_health_natural",
       "domains": [
-        "food",
-        "public_health"
+        "natural",
+        "domestic"
       ],
-      "geography": "United States",
-      "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "U.S. officials declared the country’s record cyclospora outbreak over, although its contamination source remains unknown.",
+      "geography": "Iowa, United States",
+      "evidence_type": "forward",
+      "materiality": "high",
+      "fact": "NOAA maintained a moderate excessive-rainfall risk over portions of Iowa, with localized rainfall above three inches potentially causing overnight flash flooding.",
       "americas_relevant": true
     },
     {
       "id": "E13",
-      "title": "Bundibugyo outbreak expands",
-      "source": "World Health Organization",
-      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON617",
-      "source_domain": "who.int",
+      "title": "Central U.S. heavy-rain risk",
+      "source": "NOAA Weather Prediction Center",
+      "url": "https://www.wpc.ncep.noaa.gov/qpf/ero.php?day=2&opt=curr&source=post_page---------------------------",
+      "source_domain": "wpc.ncep.noaa.gov",
       "source_tier": "A",
-      "published_at": "2026-09-10T00:00:00.000Z",
-      "age_days": 4,
+      "published_at": "2026-09-14T00:00:00.000Z",
+      "age_days": 1,
       "cluster": "food_health_natural",
       "domains": [
-        "public_health"
+        "natural",
+        "domestic"
       ],
-      "geography": "Democratic Republic of the Congo and Uganda",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "WHO reports 6,778 confirmed Bundibugyo virus cases and 3,269 deaths by September 7, with transmission expanding to a 61st health zone.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E14",
-      "title": "Hawaii port disruption",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/022ea2c63c979c08586ccb47063d691d",
-      "source_domain": "apnews.com",
-      "source_tier": "A",
-      "published_at": "2026-09-10T00:00:00.000Z",
-      "age_days": 4,
-      "cluster": "food_health_natural",
-      "domains": [
-        "food",
-        "supply_chain",
-        "natural"
-      ],
-      "geography": "Hawaii, United States",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "Hurricane Lowell damaged a small Hawaiian island’s only cargo port, disrupting its primary incoming food and fuel route while repairs began.",
+      "geography": "Central Plains, Missouri Valley, Southwest United States",
+      "evidence_type": "forward",
+      "materiality": "medium",
+      "fact": "NOAA forecast slight excessive-rainfall risks across parts of the Central Plains, Missouri Valley, and Southwest from September 15–16.",
       "americas_relevant": true
     }
   ],
   "api_usage": {
     "research_model": "gpt-5.6-luna",
     "assessment_model": "gpt-5.6-terra",
-    "web_search_calls": 5,
-    "estimated_run_cost_usd": 0.090008,
-    "estimated_period_spend_usd": 0.559161,
+    "web_search_calls": 8,
+    "estimated_run_cost_usd": 0.118239,
+    "estimated_period_spend_usd": 0.6774,
     "allocated_90_day_budget_usd": 10,
     "operational_stop_usd": 9
   },
