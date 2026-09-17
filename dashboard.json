@@ -2,18 +2,18 @@
   "schema_version": 5,
   "engine_version": "5.3",
   "data_status": "VERIFIED",
-  "as_of": "2026-09-16",
-  "updated_at": "2026-09-16T11:28:31.851Z",
-  "last_successful_update": "2026-09-16T11:28:31.851Z",
-  "preparedness_urgency": 76,
-  "raw_preparedness_urgency": 76,
+  "as_of": "2026-09-17",
+  "updated_at": "2026-09-17T11:28:14.726Z",
+  "last_successful_update": "2026-09-17T11:28:14.726Z",
+  "preparedness_urgency": 77,
+  "raw_preparedness_urgency": 77,
   "preparedness_stage": "ACCELERATE",
-  "global_threat_pressure": 81,
-  "leading_threat_pressure": 81,
-  "observed_civilian_disruption": 64,
-  "americas_exposure": 79,
+  "global_threat_pressure": 82,
+  "leading_threat_pressure": 82,
+  "observed_civilian_disruption": 65,
+  "americas_exposure": 80,
   "americas_stage": "HIGH",
-  "americas_summary": "The Americas face elevated exposure through oil-price inflation, shipping and trade costs, rare-earth supply constraints, and tighter U.S. financial conditions. Direct regional disruption evidenced is limited to localized weather damage in Panama and a concluded U.S. foodborne outbreak.",
+  "americas_summary": "The Americas face high exposure through oil and LNG prices, freight/logistics disruption, critical-mineral constraints, and financial volatility. Evidence does not establish widespread fuel shortages, rationing, or essential-service failures in the Americas.",
   "americas_components": [
     {
       "name": "Energy security",
@@ -37,7 +37,7 @@
     },
     {
       "name": "Financial-system stress",
-      "score": 89,
+      "score": 90,
       "trend": "rising"
     },
     {
@@ -47,99 +47,97 @@
     }
   ],
   "conflict_escalation": 99,
-  "coupling_score": 84,
-  "momentum_score": 78,
+  "coupling_score": 82,
+  "momentum_score": 75,
   "confidence_score": 75,
   "confidence_level": "MODERATE",
-  "confidence_rationale": "Fresh, direct AP reporting supports the core energy/maritime assessment; observed financial and supply signals add support. Several secondary-source items and limited direct Americas disruption constrain confidence. Evidence gate: 13 items, 8 sources, 2 Tier-A sources, 5/5 clusters.",
+  "confidence_rationale": "Fresh, cross-domain evidence includes AP, WHO, and official sources, supplemented by indirect Reuters republications. Direct evidence is strong for energy/shipping disruption but limited for Americas-level civilian access impacts. Evidence gate: 12 items, 9 sources, 3 Tier-A sources, 5/5 clusters.",
   "preparedness_window": "Days to weeks",
-  "summary": "Energy and maritime disruption remain the dominant, tightly linked risk: Saudi export constraints and renewed Red Sea attacks are lifting oil prices and threatening shipping. U.S. financial conditions have tightened, while rare-earth shipment friction persists. No evidence shows broad regional system failure, rationing, or Americas infrastructure outages.",
-  "primary_driver": "Saudi pipeline outage and renewed Red Sea attacks affecting oil exports, shipping risk, and prices.",
+  "summary": "Severe energy and shipping disruption around Hormuz and Saudi export infrastructure remains the main civilian-risk driver, with direct price and supply-chain exposure for the Americas. Alternative Saudi loadings offer partial mitigation; no verified Americas-wide access constraint is evidenced.",
+  "primary_driver": "Middle East oil-export and maritime disruption affecting global energy flows, freight, prices, and financial conditions.",
   "primary_stabilizers": [
-    "Turkey and Pakistan reported receiving no Saudi support request, indicating no publicly confirmed broader military coalition response to the latest escalation.",
-    "After sharp declines in April and May, rare-earth export volumes recovered from June to pre-export-control levels, according to the IEA.",
-    "The Reserve Bank of India likely sold dollars and used currency swaps to contain rupee volatility amid rising oil prices and U.S. rate expectations.",
-    "Governments are activating contingency plans for water, energy, transport, firefighting, and flood response as El Niño-related drought, heat, and flooding risks increase.",
-    "FDA says outbreak-linked iceberg lettuce was recalled and is no longer available, while inspections and traceback continue with Mexican authorities."
+    "Saudi Arabia is offering additional crude cargoes via ship-to-ship transfers off Oman’s Sohar port, easing fears after Yanbu loadings were suspended.",
+    "A U.S.-China agreement suspended some retaliatory tariffs and rare-earth export controls for one year, but baseline tariffs and strategic restrictions remain.",
+    "U.S. officials declared the largest recorded cyclospora outbreak over after contaminated lettuce sickened thousands; the contamination source remains under investigation."
   ],
   "domains": [
     {
       "key": "energy",
       "threat": 99,
-      "impact": 97,
+      "impact": 96,
       "americas_exposure": 97,
       "trend": "rising",
-      "rationale": "Saudi pipeline damage constrains exports for weeks; attacks are raising oil prices and Red Sea risk.",
+      "rationale": "Hormuz traffic has slowed after tanker attacks and Saudi pipeline closure threatens major export flows; alternative loadings provide partial relief.",
       "name": "Energy security",
       "weight": 11
     },
     {
       "key": "military",
       "threat": 99,
-      "impact": 86,
+      "impact": 87,
       "americas_exposure": 77,
       "trend": "rising",
-      "rationale": "Renewed Houthi attacks on Saudi infrastructure and shipping sustain escalation risk.",
+      "rationale": "Tanker attacks and resulting maritime disruption indicate active conflict-linked risk to commercial movement.",
       "name": "Military / geopolitical",
       "weight": 10
     },
     {
       "key": "supply_chain",
       "threat": 98,
-      "impact": 88,
+      "impact": 89,
       "americas_exposure": 92,
       "trend": "rising",
-      "rationale": "Oil-export constraints and Red Sea risk compound existing U.S.-bound rare-earth shipment withholding.",
+      "rationale": "Hormuz slowdown, impaired Saudi export routing, and constrained rare-earth shipments are disrupting key inputs and logistics.",
       "name": "Supply chain & transportation",
       "weight": 10
     },
     {
       "key": "trade",
-      "threat": 95,
-      "impact": 75,
+      "threat": 96,
+      "impact": 77,
       "americas_exposure": 95,
       "trend": "rising",
-      "rationale": "Maritime risk and higher oil costs disrupt trade conditions; prospective Russia sanctions add uncertainty.",
+      "rationale": "Energy-route disruption and constrained U.S.-bound rare-earth flows are active; proposed Russia-related tariffs add escalation risk.",
       "name": "Global trade fragmentation",
       "weight": 10
     },
     {
       "key": "technology",
-      "threat": 86,
-      "impact": 55,
-      "americas_exposure": 72,
-      "trend": "stable",
-      "rationale": "Some U.S.-bound rare-earth shipments are withheld, though export-volume recovery moderates the signal.",
+      "threat": 87,
+      "impact": 57,
+      "americas_exposure": 74,
+      "trend": "rising",
+      "rationale": "Tight rare-earth and specialized-material supply affects U.S. technology inputs; market-debt vulnerabilities add forward risk.",
       "name": "Technology chokepoints",
       "weight": 7
     },
     {
       "key": "critical_infrastructure",
       "threat": 88,
-      "impact": 58,
+      "impact": 60,
       "americas_exposure": 87,
       "trend": "rising",
-      "rationale": "Energy and shipping disruptions elevate infrastructure dependence risk; Panama damage is localized.",
+      "rationale": "Saudi export pipeline impairment and Panama storm incidents demonstrate infrastructure stress; wider Americas effects remain indirect.",
       "name": "Critical infrastructure / cyber",
       "weight": 11
     },
     {
       "key": "financial",
-      "threat": 86,
-      "impact": 66,
-      "americas_exposure": 89,
+      "threat": 88,
+      "impact": 69,
+      "americas_exposure": 90,
       "trend": "rising",
-      "rationale": "Treasury yields above 5%, falling equities, debt concerns, and oil-price pressure show tighter conditions.",
+      "rationale": "Oil-price and yield increases have already reduced global risk appetite; AI-linked debt vulnerabilities reinforce market sensitivity.",
       "name": "Financial-system stress",
       "weight": 10
     },
     {
       "key": "food",
-      "threat": 64,
-      "impact": 31,
-      "americas_exposure": 66,
+      "threat": 65,
+      "impact": 30,
+      "americas_exposure": 67,
       "trend": "stable",
-      "rationale": "The large U.S. cyclospora outbreak has ended and recalled lettuce is unavailable; source investigation continues.",
+      "rationale": "El Niño contingency planning sustains forward food risk, while the U.S. cyclospora outbreak has been declared over.",
       "name": "Food & agriculture",
       "weight": 8
     },
@@ -148,8 +146,8 @@
       "threat": 62,
       "impact": 49,
       "americas_exposure": 76,
-      "trend": "rising",
-      "rationale": "Persistent energy-price and financial pressure could strain households, but no new direct domestic disruption is evidenced.",
+      "trend": "stable",
+      "rationale": "No new direct evidence of broad domestic access restrictions or service disruption in the Americas.",
       "name": "Domestic institutional stress",
       "weight": 6
     },
@@ -159,27 +157,27 @@
       "impact": 27,
       "americas_exposure": 56,
       "trend": "stable",
-      "rationale": "No evidence of material civil-unrest disruption.",
+      "rationale": "No evidence of material unrest-related civilian disruption.",
       "name": "Civil unrest / public order",
       "weight": 7
     },
     {
       "key": "public_health",
-      "threat": 35,
-      "impact": 23,
-      "americas_exposure": 32,
+      "threat": 36,
+      "impact": 24,
+      "americas_exposure": 33,
       "trend": "stable",
-      "rationale": "The U.S. cyclospora outbreak ended; recalled product is no longer available.",
+      "rationale": "The U.S. cyclospora outbreak ended; the Bundibugyo outbreak is severe but no Americas exposure is evidenced.",
       "name": "Public health / biological",
       "weight": 5
     },
     {
       "key": "natural",
-      "threat": 59,
-      "impact": 55,
-      "americas_exposure": 66,
+      "threat": 61,
+      "impact": 57,
+      "americas_exposure": 68,
       "trend": "rising",
-      "rationale": "Localized Panama storm damage and regional El Niño hazards sustain a rising seasonal risk.",
+      "rationale": "Panama rainfall and wind incidents are active, and regional El Niño planning indicates elevated seasonal hazard risk.",
       "name": "Natural / environmental",
       "weight": 5
     }
@@ -188,8 +186,8 @@
   "verified_hard_trigger_count": 0,
   "severe_hard_trigger_count": 0,
   "score_calibration": {
-    "raw_score": 76,
-    "published_score": 76,
+    "raw_score": 77,
+    "published_score": 77,
     "previous_daily_anchor": 76,
     "rate_limit_applied": false,
     "daily_rate_limit": 3,
@@ -197,11 +195,11 @@
     "high_impact_domain_count": 4
   },
   "score_components": {
-    "global_threat_pressure": 81,
-    "observed_civilian_disruption": 64,
-    "coupling": 84,
-    "momentum": 78,
-    "americas_exposure": 79
+    "global_threat_pressure": 82,
+    "observed_civilian_disruption": 65,
+    "coupling": 82,
+    "momentum": 75,
+    "americas_exposure": 80
   },
   "drivers": [
     {
@@ -237,53 +235,62 @@
   ],
   "areas_to_watch": [
     {
-      "name": "Red Sea and Saudi export infrastructure",
+      "name": "Hormuz and Saudi export routing",
       "severity": "critical",
-      "why": "Pipeline outage and attacks could further constrain oil flows and commercial shipping."
+      "why": "Sustained maritime slowdown and impaired pipeline routing could intensify global fuel, freight, and inflation pressures."
     },
     {
-      "name": "U.S. financial conditions",
+      "name": "Critical-mineral availability for U.S. industry",
       "severity": "high",
-      "why": "Higher Treasury yields and oil-driven risk aversion may tighten borrowing and market conditions."
+      "why": "Some Chinese suppliers are declining licensed U.S. shipments while specialized materials remain tight and expensive."
     },
     {
-      "name": "Critical-mineral trade",
+      "name": "Americas weather and El Niño impacts",
+      "severity": "medium",
+      "why": "Panama incidents and regional contingency planning point to possible transport, water, food, and energy disruptions."
+    },
+    {
+      "name": "Global financial spillovers",
       "severity": "high",
-      "why": "Selective U.S.-bound rare-earth shipment withholding may affect industrial and technology supply chains."
+      "why": "Oil-price shocks, higher yields, and reduced risk appetite could transmit rapidly into Americas markets and borrowing costs."
     },
     {
-      "name": "Americas weather preparedness",
+      "name": "Public-health outbreak monitoring",
       "severity": "medium",
-      "why": "Panama damage and El Niño-related regional hazards warrant monitoring of water, energy, and transport impacts."
-    },
-    {
-      "name": "Foodborne-source investigation",
-      "severity": "medium",
-      "why": "The cyclospora outbreak is over, but its source remains unresolved."
+      "why": "The overseas Bundibugyo outbreak remains severe, though no Americas exposure is established."
     }
   ],
   "signals": [
     {
-      "title": "Saudi pipeline offline",
-      "summary": "A damaged Saudi oil pipeline is expected to remain mostly offline for weeks, constraining exports through Yanbu while Houthi advances threaten Red Sea routes.",
-      "url": "https://apnews.com/article/8c18d82c109a8ea91347ce53c0096c53",
-      "source": "Associated Press",
-      "published_at": "2026-09-14T00:00:00.000Z",
+      "title": "Hormuz traffic slows",
+      "summary": "Shipping through the Strait of Hormuz slowed after tanker attacks, threatening a corridor that previously carried roughly one-fifth of global crude oil and LNG shipments.",
+      "url": "https://www.gulf-times.com/article/731298/business/shipping-slows-through-strait-of-hormuz-after-tanker-attacks",
+      "source": "Reuters via Gulf Times",
+      "published_at": "2026-09-17T00:00:00.000Z",
       "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Red Sea escalation",
-      "summary": "Renewed Houthi attacks on Saudi infrastructure and shipping are driving oil-price increases and raising risks around the Bab el-Mandeb chokepoint.",
-      "url": "https://apnews.com/article/5696629010c86b8cc83f69cbd093e3f1",
+      "title": "Saudi pipeline remains impaired",
+      "summary": "Saudi Arabia’s East-West oil pipeline closure risks removing 2.6–4 million barrels per day from flows through Red Sea port Yanbu.",
+      "url": "https://apnews.com/article/efa431e2fa771e34880c8453c62ffb92",
       "source": "Associated Press",
       "published_at": "2026-09-15T00:00:00.000Z",
       "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Chinese suppliers withhold some U.S. rare-earth shipments",
-      "summary": "Some Chinese suppliers have declined U.S.-bound rare-earth shipments, while yttrium, indium phosphide, and tungsten remain tightly supplied and expensive.",
+      "title": "House passes Russia sanctions package",
+      "summary": "The House passed sanctions legislation allowing tariffs up to 100% on major buyers of Russian energy, potentially widening global trade restrictions.",
+      "url": "https://apnews.com/article/f377fc956c442195dfcf50571b01a1c4",
+      "source": "AP",
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "category": "TRADE",
+      "impact": "up"
+    },
+    {
+      "title": "Rare-earth shipments remain constrained",
+      "summary": "Some Chinese suppliers have declined licensed U.S. rare-earth shipments, while yttrium, indium phosphide, and tungsten remain expensive amid tight supply.",
       "url": "https://www.miningweekly.com/article/china-rare-earth-firms-halt-some-us-shipments-over-geopolitical-worries-sources-say-2026-09-04",
       "source": "Reuters via Mining Weekly",
       "published_at": "2026-09-04T00:00:00.000Z",
@@ -291,26 +298,26 @@
       "impact": "up"
     },
     {
-      "title": "House may advance Russia sanctions package",
-      "summary": "A proposed U.S. sanctions package could authorize tariffs up to 100% on major purchasers of Russian oil or gas, but House passage remains uncertain.",
-      "url": "https://apnews.com/article/3d18eaae67fa59a3e67d1e31454513f",
-      "source": "Associated Press",
-      "published_at": "2026-09-11T00:00:00.000Z",
-      "category": "TRADE",
-      "impact": "up"
-    },
-    {
-      "title": "Treasury yield breaches 5%",
-      "summary": "U.S. stocks fell as the benchmark Treasury yield exceeded 5%, while debt concerns and surging oil reduced risk appetite.",
-      "url": "https://www.kitco.com/news/off-the-wire/2026-09-15/wall-street-ends-lower-oil-spikes-and-benchmark-treasury-yield",
+      "title": "Global shares fall as oil and yields rise",
+      "summary": "Global stocks declined as surging oil prices and higher government-bond yields reduced risk appetite ahead of major central-bank meetings.",
+      "url": "https://www.kitco.com/news/off-the-wire/2026-09-14/world-shares-slide-oil-prices-jump-and-bond-yields-climb",
       "source": "Reuters via Kitco",
-      "published_at": "2026-09-15T20:48:00.000Z",
+      "published_at": "2026-09-14T00:00:00.000Z",
       "category": "FINANCE",
       "impact": "up"
     },
     {
-      "title": "Panama rainfall damage",
-      "summary": "Heavy rain and strong winds damaged homes in Coclé, Colón, and Chiriquí, affecting about 15 people, according to Panama’s civil-protection system.",
+      "title": "BIS flags vulnerability in AI-linked markets",
+      "summary": "The BIS said AI-linked market momentum showed vulnerability, while rising AI-company debt may be adding pressure to government borrowing costs.",
+      "url": "https://www.lse.co.uk/news/bis-says-global-market-ai-momentum-showing-signs-of-vulnerability-34wajker9l1ca7p.html",
+      "source": "Reuters via LSE",
+      "published_at": "2026-09-14T00:00:00.000Z",
+      "category": "FINANCE",
+      "impact": "up"
+    },
+    {
+      "title": "Panama rainfall incidents",
+      "summary": "Heavy rainfall and strong winds caused multiple reported incidents in Coclé, Colón, and Chiriquí on September 13, according to Panama’s civil-protection system.",
       "url": "https://www.paho.org/en/health-emergencies/natural-hazards-monitoring?page=0",
       "source": "PAHO/WHO",
       "published_at": "2026-09-14T00:00:00.000Z",
@@ -318,12 +325,12 @@
       "impact": "up"
     },
     {
-      "title": "Record U.S. outbreak ends",
-      "summary": "U.S. officials declared the largest recorded cyclospora outbreak over after nearly 20,000 laboratory-confirmed cases since May 1, while its source remains unresolved.",
-      "url": "https://apnews.com/article/9b2c348b2f378b7554b2abfbf1780550",
+      "title": "El Niño contingency planning",
+      "summary": "Latin American governments are activating contingency plans for potential El Niño drought, heat, flooding, wildfire, food-security, water, energy, and transport impacts.",
+      "url": "https://apnews.com/article/67500aefa69ca35a067bc24628168c26",
       "source": "Associated Press",
-      "published_at": "2026-09-11T00:00:00.000Z",
-      "category": "FOOD",
+      "published_at": "2026-07-17T00:00:00.000Z",
+      "category": "NATURAL",
       "impact": "up"
     }
   ],
@@ -424,13 +431,23 @@
       "americas": 79,
       "conflict": 99,
       "momentum": 78
+    },
+    {
+      "date": "2026-09-17",
+      "preparedness": 77,
+      "raw_preparedness": 77,
+      "threat": 82,
+      "impact": 65,
+      "americas": 80,
+      "conflict": 99,
+      "momentum": 75
     }
   ],
   "evidence_quality": {
-    "evidence_count": 13,
+    "evidence_count": 12,
     "fresh_count": 8,
-    "unique_sources": 8,
-    "tier_a_sources": 2,
+    "unique_sources": 9,
+    "tier_a_sources": 3,
     "clusters": 5,
     "domains_covered": 10,
     "confidence_cap": 75,
@@ -439,193 +456,179 @@
   "evidence_log": [
     {
       "id": "E1",
-      "title": "Saudi pipeline offline",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/8c18d82c109a8ea91347ce53c0096c53",
-      "source_domain": "apnews.com",
-      "source_tier": "A",
-      "published_at": "2026-09-14T00:00:00.000Z",
-      "age_days": 2,
-      "cluster": "military_energy_shipping",
-      "domains": [
-        "military",
-        "energy",
-        "supply_chain"
-      ],
-      "geography": "Saudi Arabia; Red Sea",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "A damaged Saudi oil pipeline is expected to remain mostly offline for weeks, constraining exports through Yanbu while Houthi advances threaten Red Sea routes.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E2",
-      "title": "Red Sea escalation",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/5696629010c86b8cc83f69cbd093e3f1",
-      "source_domain": "apnews.com",
-      "source_tier": "A",
-      "published_at": "2026-09-15T00:00:00.000Z",
-      "age_days": 1,
-      "cluster": "military_energy_shipping",
-      "domains": [
-        "military",
-        "energy",
-        "trade"
-      ],
-      "geography": "Saudi Arabia; Yemen; Bab el-Mandeb",
-      "evidence_type": "forward",
-      "materiality": "high",
-      "fact": "Renewed Houthi attacks on Saudi infrastructure and shipping are driving oil-price increases and raising risks around the Bab el-Mandeb chokepoint.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E3",
-      "title": "Maritime security response",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/895320bde6dc589cebb628b63832c38a",
-      "source_domain": "apnews.com",
-      "source_tier": "A",
-      "published_at": "2026-09-16T00:00:00.000Z",
+      "title": "Hormuz traffic slows",
+      "source": "Reuters via Gulf Times",
+      "url": "https://www.gulf-times.com/article/731298/business/shipping-slows-through-strait-of-hormuz-after-tanker-attacks",
+      "source_domain": "gulf-times.com",
+      "source_tier": "C",
+      "published_at": "2026-09-17T00:00:00.000Z",
       "age_days": 0,
       "cluster": "military_energy_shipping",
       "domains": [
         "military",
         "energy",
+        "supply_chain",
         "trade"
       ],
-      "geography": "Saudi Arabia; Yemen; Red Sea",
+      "geography": "Strait of Hormuz",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "Shipping through the Strait of Hormuz slowed after tanker attacks, threatening a corridor that previously carried roughly one-fifth of global crude oil and LNG shipments.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E2",
+      "title": "Saudi pipeline remains impaired",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/efa431e2fa771e34880c8453c62ffb92",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "age_days": 2,
+      "cluster": "military_energy_shipping",
+      "domains": [
+        "military",
+        "energy",
+        "critical_infrastructure",
+        "trade"
+      ],
+      "geography": "Saudi Arabia / Red Sea",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "Saudi Arabia’s East-West oil pipeline closure risks removing 2.6–4 million barrels per day from flows through Red Sea port Yanbu.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E3",
+      "title": "Alternative crude loadings",
+      "source": "Reuters via MarketScreener",
+      "url": "https://uk.marketscreener.com/news/oil-prices-extend-losses-as-fears-of-middle-east-supply-disruptions-ease-ce785bd3d98aff26",
+      "source_domain": "uk.marketscreener.com",
+      "source_tier": "C",
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "age_days": 0,
+      "cluster": "military_energy_shipping",
+      "domains": [
+        "energy",
+        "supply_chain",
+        "trade"
+      ],
+      "geography": "Saudi Arabia / Oman",
       "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "Turkey and Pakistan reported receiving no Saudi support request, indicating no publicly confirmed broader military coalition response to the latest escalation.",
+      "fact": "Saudi Arabia is offering additional crude cargoes via ship-to-ship transfers off Oman’s Sohar port, easing fears after Yanbu loadings were suspended.",
       "americas_relevant": true
     },
     {
       "id": "E4",
-      "title": "Chinese suppliers withhold some U.S. rare-earth shipments",
+      "title": "House passes Russia sanctions package",
+      "source": "AP",
+      "url": "https://apnews.com/article/f377fc956c442195dfcf50571b01a1c4",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "age_days": 1,
+      "cluster": "trade_supply_technology",
+      "domains": [
+        "trade",
+        "supply_chain"
+      ],
+      "geography": "United States/Russia/China/India",
+      "evidence_type": "forward",
+      "materiality": "high",
+      "fact": "The House passed sanctions legislation allowing tariffs up to 100% on major buyers of Russian energy, potentially widening global trade restrictions.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E5",
+      "title": "Rare-earth shipments remain constrained",
       "source": "Reuters via Mining Weekly",
       "url": "https://www.miningweekly.com/article/china-rare-earth-firms-halt-some-us-shipments-over-geopolitical-worries-sources-say-2026-09-04",
       "source_domain": "miningweekly.com",
       "source_tier": "C",
       "published_at": "2026-09-04T00:00:00.000Z",
-      "age_days": 12,
+      "age_days": 13,
       "cluster": "trade_supply_technology",
       "domains": [
         "supply_chain",
-        "trade",
-        "technology"
+        "technology",
+        "trade"
       ],
-      "geography": "China–United States",
+      "geography": "China/United States",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "Some Chinese suppliers have declined U.S.-bound rare-earth shipments, while yttrium, indium phosphide, and tungsten remain tightly supplied and expensive.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E5",
-      "title": "Rare-earth export volumes partially recover",
-      "source": "International Energy Agency",
-      "url": "https://iea.blob.core.windows.net/assets/6854a939-19c6-4ac1-98af-aa1b4094cbbc/EnergyTechnologyPerspectives2026.pdf",
-      "source_domain": "iea.blob.core.windows.net",
-      "source_tier": "C",
-      "published_at": "2026-04-01T00:00:00.000Z",
-      "age_days": 168,
-      "cluster": "trade_supply_technology",
-      "domains": [
-        "supply_chain",
-        "technology"
-      ],
-      "geography": "Global",
-      "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "After sharp declines in April and May, rare-earth export volumes recovered from June to pre-export-control levels, according to the IEA.",
+      "fact": "Some Chinese suppliers have declined licensed U.S. rare-earth shipments, while yttrium, indium phosphide, and tungsten remain expensive amid tight supply.",
       "americas_relevant": true
     },
     {
       "id": "E6",
-      "title": "House may advance Russia sanctions package",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/3d18eaae67fa59a3e67d1e31454513f",
-      "source_domain": "apnews.com",
+      "title": "Trade agreement temporarily stabilizes flows",
+      "source": "Council of the European Union",
+      "url": "https://data.consilium.europa.eu/doc/document/ST-5898-2026-ADD-1/en/pdf",
+      "source_domain": "data.consilium.europa.eu",
       "source_tier": "A",
-      "published_at": "2026-09-11T00:00:00.000Z",
-      "age_days": 5,
+      "published_at": "2026-02-12T00:00:00.000Z",
+      "age_days": 217,
       "cluster": "trade_supply_technology",
       "domains": [
-        "trade"
+        "trade",
+        "supply_chain",
+        "technology"
       ],
-      "geography": "United States–Russia and major Russian energy buyers",
-      "evidence_type": "forward",
+      "geography": "United States/China",
+      "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "A proposed U.S. sanctions package could authorize tariffs up to 100% on major purchasers of Russian oil or gas, but House passage remains uncertain.",
+      "fact": "A U.S.-China agreement suspended some retaliatory tariffs and rare-earth export controls for one year, but baseline tariffs and strategic restrictions remain.",
       "americas_relevant": true
     },
     {
       "id": "E7",
-      "title": "Treasury yield breaches 5%",
+      "title": "Global shares fall as oil and yields rise",
       "source": "Reuters via Kitco",
-      "url": "https://www.kitco.com/news/off-the-wire/2026-09-15/wall-street-ends-lower-oil-spikes-and-benchmark-treasury-yield",
+      "url": "https://www.kitco.com/news/off-the-wire/2026-09-14/world-shares-slide-oil-prices-jump-and-bond-yields-climb",
       "source_domain": "kitco.com",
       "source_tier": "C",
-      "published_at": "2026-09-15T20:48:00.000Z",
-      "age_days": 1,
-      "cluster": "cyber_infrastructure_finance",
-      "domains": [
-        "financial"
-      ],
-      "geography": "United States",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "U.S. stocks fell as the benchmark Treasury yield exceeded 5%, while debt concerns and surging oil reduced risk appetite.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E8",
-      "title": "RBI acts to limit rupee volatility",
-      "source": "Reuters via MarketScreener",
-      "url": "https://www.marketscreener.com/news/indian-central-bank-likely-intervenes-to-shield-rupee-as-oil-prices-climb-ce785bdcda8bf227",
-      "source_domain": "marketscreener.com",
-      "source_tier": "C",
-      "published_at": "2026-09-15T02:07:00.000Z",
-      "age_days": 1,
-      "cluster": "cyber_infrastructure_finance",
-      "domains": [
-        "financial"
-      ],
-      "geography": "India",
-      "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "The Reserve Bank of India likely sold dollars and used currency swaps to contain rupee volatility amid rising oil prices and U.S. rate expectations.",
-      "americas_relevant": false
-    },
-    {
-      "id": "E9",
-      "title": "BIS liquidity data updated",
-      "source": "Bank for International Settlements",
-      "url": "https://data.bis.org/bulkdownload",
-      "source_domain": "data.bis.org",
-      "source_tier": "C",
       "published_at": "2026-09-14T00:00:00.000Z",
-      "age_days": 2,
+      "age_days": 3,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
         "financial"
       ],
       "geography": "Global",
-      "evidence_type": "stabilizer",
-      "materiality": "low",
-      "fact": "The BIS released updated global liquidity and debt-service datasets on September 14, providing current monitoring inputs for financial-stress assessment.",
+      "evidence_type": "observed",
+      "materiality": "medium",
+      "fact": "Global stocks declined as surging oil prices and higher government-bond yields reduced risk appetite ahead of major central-bank meetings.",
       "americas_relevant": true
     },
     {
-      "id": "E10",
-      "title": "Panama rainfall damage",
+      "id": "E8",
+      "title": "BIS flags vulnerability in AI-linked markets",
+      "source": "Reuters via LSE",
+      "url": "https://www.lse.co.uk/news/bis-says-global-market-ai-momentum-showing-signs-of-vulnerability-34wajker9l1ca7p.html",
+      "source_domain": "lse.co.uk",
+      "source_tier": "C",
+      "published_at": "2026-09-14T00:00:00.000Z",
+      "age_days": 3,
+      "cluster": "cyber_infrastructure_finance",
+      "domains": [
+        "financial",
+        "technology"
+      ],
+      "geography": "Global",
+      "evidence_type": "forward",
+      "materiality": "medium",
+      "fact": "The BIS said AI-linked market momentum showed vulnerability, while rising AI-company debt may be adding pressure to government borrowing costs.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E9",
+      "title": "Panama rainfall incidents",
       "source": "PAHO/WHO",
       "url": "https://www.paho.org/en/health-emergencies/natural-hazards-monitoring?page=0",
       "source_domain": "paho.org",
       "source_tier": "C",
       "published_at": "2026-09-14T00:00:00.000Z",
-      "age_days": 2,
+      "age_days": 3,
       "cluster": "americas_civil",
       "domains": [
         "natural",
@@ -634,77 +637,76 @@
       "geography": "Panama",
       "evidence_type": "observed",
       "materiality": "medium",
-      "fact": "Heavy rain and strong winds damaged homes in Coclé, Colón, and Chiriquí, affecting about 15 people, according to Panama’s civil-protection system.",
+      "fact": "Heavy rainfall and strong winds caused multiple reported incidents in Coclé, Colón, and Chiriquí on September 13, according to Panama’s civil-protection system.",
       "americas_relevant": true
     },
     {
-      "id": "E12",
-      "title": "Regional El Niño preparedness",
+      "id": "E10",
+      "title": "El Niño contingency planning",
       "source": "Associated Press",
       "url": "https://apnews.com/article/67500aefa69ca35a067bc24628168c26",
       "source_domain": "apnews.com",
       "source_tier": "A",
       "published_at": "2026-07-17T00:00:00.000Z",
-      "age_days": 61,
+      "age_days": 62,
       "cluster": "americas_civil",
       "domains": [
         "natural",
         "food",
         "critical_infrastructure"
       ],
-      "geography": "Latin America and the Caribbean",
-      "evidence_type": "stabilizer",
+      "geography": "Latin America and Caribbean",
+      "evidence_type": "forward",
       "materiality": "medium",
-      "fact": "Governments are activating contingency plans for water, energy, transport, firefighting, and flood response as El Niño-related drought, heat, and flooding risks increase.",
+      "fact": "Latin American governments are activating contingency plans for potential El Niño drought, heat, flooding, wildfire, food-security, water, energy, and transport impacts.",
       "americas_relevant": true
     },
     {
-      "id": "E13",
-      "title": "Record U.S. outbreak ends",
+      "id": "E11",
+      "title": "Cyclospora outbreak ends",
       "source": "Associated Press",
       "url": "https://apnews.com/article/9b2c348b2f378b7554b2abfbf1780550",
       "source_domain": "apnews.com",
       "source_tier": "A",
       "published_at": "2026-09-11T00:00:00.000Z",
-      "age_days": 5,
+      "age_days": 6,
       "cluster": "food_health_natural",
       "domains": [
         "food",
         "public_health"
       ],
       "geography": "United States",
-      "evidence_type": "observed",
+      "evidence_type": "stabilizer",
       "materiality": "high",
-      "fact": "U.S. officials declared the largest recorded cyclospora outbreak over after nearly 20,000 laboratory-confirmed cases since May 1, while its source remains unresolved.",
+      "fact": "U.S. officials declared the largest recorded cyclospora outbreak over after contaminated lettuce sickened thousands; the contamination source remains under investigation.",
       "americas_relevant": true
     },
     {
-      "id": "E14",
-      "title": "Recalled lettuce no longer available",
-      "source": "FDA",
-      "url": "https://www.fda.gov/food/outbreaks-foodborne-illness/post-outbreak-response-activities-multistate-outbreaks-cyclospora-illnesses",
-      "source_domain": "fda.gov",
+      "id": "E12",
+      "title": "Bundibugyo outbreak persists",
+      "source": "World Health Organization",
+      "url": "https://www.who.int/emergencies/alert-and-response",
+      "source_domain": "who.int",
       "source_tier": "A",
-      "published_at": "2026-09-12T00:00:00.000Z",
-      "age_days": 4,
+      "published_at": "2026-09-15T00:00:00.000Z",
+      "age_days": 2,
       "cluster": "food_health_natural",
       "domains": [
-        "food",
         "public_health"
       ],
-      "geography": "United States/Mexico",
-      "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "FDA says outbreak-linked iceberg lettuce was recalled and is no longer available, while inspections and traceback continue with Mexican authorities.",
-      "americas_relevant": true
+      "geography": "Democratic Republic of the Congo, Uganda, France",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "WHO reported 7,279 confirmed Bundibugyo virus cases and 3,512 confirmed deaths across affected countries through September 13.",
+      "americas_relevant": false
     }
   ],
   "api_usage": {
     "research_model": "gpt-5.6-luna",
     "assessment_model": "gpt-5.6-terra",
-    "web_search_calls": 5,
-    "estimated_run_cost_usd": 0.087277,
-    "estimated_period_spend_usd": 0.764676,
+    "web_search_calls": 8,
+    "estimated_run_cost_usd": 0.117522,
+    "estimated_period_spend_usd": 0.882197,
     "allocated_90_day_budget_usd": 10,
     "operational_stop_usd": 9
   },
