@@ -4,7 +4,7 @@
   "period_end": "2026-12-09",
   "allocated_usd": 10,
   "operational_stop_usd": 9,
-  "estimated_spent_usd": 0.968123,
+  "estimated_spent_usd": 1.055919,
   "entries": [
     {
       "run_id": "34628365224",
@@ -713,6 +713,66 @@
       "output_tokens": 987,
       "web_search_calls": 0,
       "estimated_cost_usd": 0.01873
+    },
+    {
+      "run_id": "35439917488",
+      "date": "2026-09-19",
+      "timestamp": "2026-09-19T11:22:23.240Z",
+      "stage": "research:military_energy_shipping",
+      "model": "gpt-5.6-luna",
+      "input_tokens": 13390,
+      "cached_input_tokens": 0,
+      "output_tokens": 564,
+      "web_search_calls": 1,
+      "estimated_cost_usd": 0.013597
+    },
+    {
+      "run_id": "35439917488",
+      "date": "2026-09-19",
+      "timestamp": "2026-09-19T11:22:52.766Z",
+      "stage": "research:trade_supply_technology",
+      "model": "gpt-5.6-luna",
+      "input_tokens": 13387,
+      "cached_input_tokens": 0,
+      "output_tokens": 547,
+      "web_search_calls": 2,
+      "estimated_cost_usd": 0.023576
+    },
+    {
+      "run_id": "35439917488",
+      "date": "2026-09-19",
+      "timestamp": "2026-09-19T11:23:18.985Z",
+      "stage": "research:cyber_infrastructure_finance",
+      "model": "gpt-5.6-luna",
+      "input_tokens": 13346,
+      "cached_input_tokens": 0,
+      "output_tokens": 512,
+      "web_search_calls": 1,
+      "estimated_cost_usd": 0.013526
+    },
+    {
+      "run_id": "35439917488",
+      "date": "2026-09-19",
+      "timestamp": "2026-09-19T11:23:48.035Z",
+      "stage": "research:americas_civil",
+      "model": "gpt-5.6-luna",
+      "input_tokens": 13478,
+      "cached_input_tokens": 0,
+      "output_tokens": 523,
+      "web_search_calls": 2,
+      "estimated_cost_usd": 0.023566
+    },
+    {
+      "run_id": "35439917488",
+      "date": "2026-09-19",
+      "timestamp": "2026-09-19T11:24:13.604Z",
+      "stage": "research:food_health_natural",
+      "model": "gpt-5.6-luna",
+      "input_tokens": 13282,
+      "cached_input_tokens": 0,
+      "output_tokens": 527,
+      "web_search_calls": 1,
+      "estimated_cost_usd": 0.013531
     }
   ]
 }
