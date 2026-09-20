@@ -2,18 +2,18 @@
   "schema_version": 5,
   "engine_version": "5.3",
   "data_status": "VERIFIED",
-  "as_of": "2026-09-18",
-  "updated_at": "2026-09-18T11:26:45.636Z",
-  "last_successful_update": "2026-09-18T11:26:45.636Z",
-  "preparedness_urgency": 77,
-  "raw_preparedness_urgency": 77,
+  "as_of": "2026-09-20",
+  "updated_at": "2026-09-20T11:25:42.127Z",
+  "last_successful_update": "2026-09-20T11:25:42.127Z",
+  "preparedness_urgency": 79,
+  "raw_preparedness_urgency": 79,
   "preparedness_stage": "ACCELERATE",
-  "global_threat_pressure": 82,
-  "leading_threat_pressure": 82,
-  "observed_civilian_disruption": 66,
-  "americas_exposure": 81,
+  "global_threat_pressure": 83,
+  "leading_threat_pressure": 83,
+  "observed_civilian_disruption": 68,
+  "americas_exposure": 82,
   "americas_stage": "HIGH",
-  "americas_summary": "Americas exposure is highest through fuel prices, petroleum availability, freight costs, trade flows, and U.S.-bound vessel cyber risk. PJM is operating under a precautionary emergency generation order, but no blackout is reported.",
+  "americas_summary": "The Americas face elevated exposure through energy prices and shipping, active infrastructure/cyber incidents in the U.S., Cuba’s nationwide power outage, and El Niño/flood-related risks to food, health, and transport.",
   "americas_components": [
     {
       "name": "Energy security",
@@ -33,173 +33,186 @@
     {
       "name": "Global trade fragmentation",
       "score": 96,
+      "trend": "stable"
+    },
+    {
+      "name": "Critical infrastructure / cyber",
+      "score": 91,
       "trend": "rising"
     },
     {
       "name": "Financial-system stress",
       "score": 90,
       "trend": "stable"
-    },
-    {
-      "name": "Critical infrastructure / cyber",
-      "score": 89,
-      "trend": "rising"
     }
   ],
   "conflict_escalation": 99,
-  "coupling_score": 84,
-  "momentum_score": 72,
-  "confidence_score": 75,
-  "confidence_level": "MODERATE",
-  "confidence_rationale": "Fresh, mostly Tier A reporting directly supports energy, shipping, grid, health, and trade assessments; vessel-cyber reporting is lower-tier and broader civilian effects remain uncorroborated. Evidence gate: 11 items, 6 sources, 5 Tier-A sources, 5/5 clusters.",
+  "coupling_score": 86,
+  "momentum_score": 77,
+  "confidence_score": 82,
+  "confidence_level": "HIGH",
+  "confidence_rationale": "Fresh, geographically diverse evidence supports the assessment, including multiple Tier A reports; several cyber and market items rely on syndicated Tier C links. Evidence gate: 14 items, 8 sources, 3 Tier-A sources, 5/5 clusters.",
   "preparedness_window": "Days to weeks",
-  "summary": "Energy and maritime logistics remain the dominant, tightly linked disruption risk, with direct Americas price and supply exposure. U.S. grid stress and vessel cyber incidents add localized infrastructure risk; no broad Americas civilian-service disruption is corroborated.",
-  "primary_driver": "Escalating disruption risk across Hormuz, Bab el-Mandeb, and Saudi export routes, compounded by an active Saudi pipeline closure.",
+  "summary": "Severe energy and maritime disruption remains the primary preparedness concern, reinforced by cyber incidents and constrained critical-mineral flows. Direct Americas impacts include Cuba’s nationwide blackout, U.S.-bound vessel compromises, Colorado water-system manipulation, and weather-related flood risk.",
+  "primary_driver": "Attacks and threats affecting Hormuz, Red Sea routes, and Saudi export infrastructure are sustaining high global energy and shipping disruption risk.",
   "primary_stabilizers": [
-    "The Federal Reserve released its September 15–16 FOMC statement and projections, providing current monetary-policy guidance amid ongoing financial-system monitoring.",
-    "The reviewed 24–72-hour coverage did not corroborate additional major violence, emergency measures, or material civilian-service disruption across the Americas.",
-    "CDC says the lettuce-linked cyclospora outbreak ended September 11, with contaminated products no longer available and recent infections significantly declining."
+    "U.S. and Chinese officials are discussing extending the tariff truce and improving flows of Chinese rare-earth magnets and critical minerals.",
+    "Higher energy costs and government-bond yields are pressuring markets, but Reuters reported the rise remained orderly rather than a liquidity crisis.",
+    "USGS reported a magnitude-4.1 earthquake near Pāhala caused light shaking, with no expected building or infrastructure damage and no apparent effect on Mauna Loa or Kīlauea."
   ],
   "domains": [
     {
       "key": "energy",
       "threat": 99,
-      "impact": 97,
+      "impact": 98,
       "americas_exposure": 98,
       "trend": "rising",
-      "rationale": "Saudi pipeline closure and threatened maritime routes put major oil export volumes at risk.",
+      "rationale": "Saudi pipeline shutdown, tanker attack, chokepoint pressure, and Cuba blackout show active energy disruption.",
       "name": "Energy security",
       "weight": 11
     },
     {
       "key": "military",
       "threat": 99,
-      "impact": 89,
+      "impact": 90,
       "americas_exposure": 79,
       "trend": "rising",
-      "rationale": "Tanker strike and Houthi territorial gains intensify risks around key shipping chokepoints.",
+      "rationale": "Tanker strike, pipeline attack, and expanded Houthi maritime leverage sustain escalation risk.",
       "name": "Military / geopolitical",
       "weight": 10
     },
     {
       "key": "supply_chain",
       "threat": 98,
-      "impact": 91,
+      "impact": 92,
       "americas_exposure": 94,
       "trend": "rising",
-      "rationale": "Oil-route disruption, vessel cyber incidents, and constrained rare-earth shipments pressure logistics.",
+      "rationale": "Maritime attacks, pipeline disruption, vessel cyber incidents, and constrained rare-earth shipments affect flows.",
       "name": "Supply chain & transportation",
       "weight": 10
     },
     {
       "key": "trade",
-      "threat": 97,
-      "impact": 79,
+      "threat": 96,
+      "impact": 80,
       "americas_exposure": 96,
-      "trend": "rising",
-      "rationale": "Russian-oil sanctions legislation, Red Sea risk, and rare-earth tightness threaten trade costs and flows.",
+      "trend": "stable",
+      "rationale": "Critical-mineral constraints persist, while U.S.-China talks may preserve a tariff truce and improve flows.",
       "name": "Global trade fragmentation",
       "weight": 10
     },
     {
       "key": "technology",
-      "threat": 88,
-      "impact": 59,
-      "americas_exposure": 76,
+      "threat": 89,
+      "impact": 62,
+      "americas_exposure": 78,
       "trend": "rising",
-      "rationale": "Rare-earth supply tightness and reported vessel network compromises raise technology and operational risk.",
+      "rationale": "Rare-earth constraints and confirmed cyber access to U.S. water and vessel systems raise exposure.",
       "name": "Technology chokepoints",
       "weight": 7
     },
     {
       "key": "critical_infrastructure",
-      "threat": 89,
-      "impact": 63,
-      "americas_exposure": 89,
+      "threat": 91,
+      "impact": 70,
+      "americas_exposure": 91,
       "trend": "rising",
-      "rationale": "PJM emergency generation dispatch and compromised U.S.-bound vessels show active operational stress.",
+      "rationale": "Colorado water-system manipulation, compromised vessels, and Cuba’s nationwide grid collapse show active disruption.",
       "name": "Critical infrastructure / cyber",
       "weight": 11
     },
     {
       "key": "financial",
-      "threat": 88,
-      "impact": 68,
+      "threat": 87,
+      "impact": 67,
       "americas_exposure": 90,
       "trend": "stable",
-      "rationale": "Energy and trade shocks remain a material financial risk; current Fed guidance is a stabilizer.",
+      "rationale": "Energy and yield pressures persist, but markets are reported orderly rather than in liquidity crisis.",
       "name": "Financial-system stress",
       "weight": 10
     },
     {
       "key": "food",
-      "threat": 65,
-      "impact": 31,
-      "americas_exposure": 67,
-      "trend": "stable",
-      "rationale": "A limited multistate sprout-linked Salmonella outbreak is active; a separate lettuce outbreak has ended.",
+      "threat": 69,
+      "impact": 34,
+      "americas_exposure": 70,
+      "trend": "rising",
+      "rationale": "El Niño food-insecurity exposure and Midwest flooding risk could disrupt agriculture and distribution.",
       "name": "Food & agriculture",
       "weight": 8
     },
     {
       "key": "domestic",
-      "threat": 61,
-      "impact": 47,
-      "americas_exposure": 75,
-      "trend": "stable",
-      "rationale": "No corroborated new major Americas emergency measures or broad civilian-service disruption.",
+      "threat": 63,
+      "impact": 50,
+      "americas_exposure": 76,
+      "trend": "rising",
+      "rationale": "Cuba blackout is an active essential-services disruption; Bolivia emergency reflects blockade risk.",
       "name": "Domestic institutional stress",
       "weight": 6
     },
     {
       "key": "civil_unrest",
-      "threat": 45,
-      "impact": 26,
-      "americas_exposure": 55,
-      "trend": "stable",
-      "rationale": "No evidence of material civil-unrest disruption in the Americas during the review window.",
+      "threat": 49,
+      "impact": 27,
+      "americas_exposure": 56,
+      "trend": "rising",
+      "rationale": "Bolivia cites risk of renewed blockades, but no new blockade disruption is documented.",
       "name": "Civil unrest / public order",
       "weight": 7
     },
     {
       "key": "public_health",
-      "threat": 36,
-      "impact": 25,
-      "americas_exposure": 34,
-      "trend": "stable",
-      "rationale": "CDC reports 22 Salmonella cases and two hospitalizations; the separate cyclospora event is resolved.",
+      "threat": 43,
+      "impact": 27,
+      "americas_exposure": 42,
+      "trend": "rising",
+      "rationale": "PAHO reports strengthening El Niño affecting or exposing millions across the Americas.",
       "name": "Public health / biological",
       "weight": 5
     },
     {
       "key": "natural",
-      "threat": 61,
-      "impact": 57,
-      "americas_exposure": 68,
+      "threat": 66,
+      "impact": 59,
+      "americas_exposure": 70,
       "trend": "rising",
-      "rationale": "Hot weather and planned transmission outages are contributing to Mid-Atlantic grid stress.",
+      "rationale": "Moderate Midwest excessive-rainfall risk raises near-term flooding and transport/agricultural disruption potential.",
       "name": "Natural / environmental",
       "weight": 5
     }
   ],
-  "hard_triggers": [],
-  "verified_hard_trigger_count": 0,
-  "severe_hard_trigger_count": 0,
+  "hard_triggers": [
+    {
+      "type": "grid_outage",
+      "verified": true,
+      "scope": "national",
+      "status": "active",
+      "summary": "Cuba’s national electrical grid collapsed, leaving millions without power during gradual restoration.",
+      "source_url": "https://apnews.com/article/efa431e2fa771e34880c8453c62ffb92",
+      "evidence_ids": [
+        "E2",
+        "E10"
+      ]
+    }
+  ],
+  "verified_hard_trigger_count": 1,
+  "severe_hard_trigger_count": 1,
   "score_calibration": {
-    "raw_score": 77,
-    "published_score": 77,
+    "raw_score": 79,
+    "published_score": 79,
     "previous_daily_anchor": 77,
     "rate_limit_applied": false,
-    "daily_rate_limit": 3,
+    "daily_rate_limit": null,
     "sustained_90_for_48h": false,
-    "high_impact_domain_count": 4
+    "high_impact_domain_count": 5
   },
   "score_components": {
-    "global_threat_pressure": 82,
-    "observed_civilian_disruption": 66,
-    "coupling": 84,
-    "momentum": 72,
-    "americas_exposure": 81
+    "global_threat_pressure": 83,
+    "observed_civilian_disruption": 68,
+    "coupling": 86,
+    "momentum": 77,
+    "americas_exposure": 82
   },
   "drivers": [
     {
@@ -223,47 +236,47 @@
       "note": ""
     },
     {
-      "name": "Financial-system stress",
+      "name": "Critical infrastructure / cyber",
       "severity": "critical",
       "note": ""
     },
     {
-      "name": "Critical infrastructure / cyber",
+      "name": "Financial-system stress",
       "severity": "critical",
       "note": ""
     }
   ],
   "areas_to_watch": [
     {
-      "name": "Hormuz, Gulf of Oman, and Bab el-Mandeb shipping",
+      "name": "Hormuz–Red Sea maritime energy routes",
       "severity": "critical",
-      "why": "Tanker strike, Houthi gains, and Saudi pipeline closure create reinforcing oil and shipping disruption risk."
+      "why": "Tanker attack, pipeline outage, and chokepoint leverage could further disrupt oil and shipping flows."
     },
     {
-      "name": "U.S. fuel and freight markets",
+      "name": "Americas critical infrastructure cyber resilience",
       "severity": "high",
-      "why": "Major export-route risks can rapidly transmit into petroleum and transport costs."
+      "why": "Manipulation of Colorado water equipment and compromise indicators on U.S.-bound vessels show active targeting."
     },
     {
-      "name": "Mid-Atlantic power system",
+      "name": "Cuba power restoration",
       "severity": "high",
-      "why": "DOE-directed backup generation reflects near-term blackout risk under heat and transmission constraints."
+      "why": "Nationwide blackout remains an active essential-services disruption."
     },
     {
-      "name": "U.S.-bound maritime cyber security",
-      "severity": "high",
-      "why": "Two vessels were boarded after reported network compromise indicators."
-    },
-    {
-      "name": "Rare-earth supply to U.S. industry",
+      "name": "El Niño and Midwest flooding",
       "severity": "medium",
-      "why": "Some suppliers declined shipments and specialty-material prices remain elevated."
+      "why": "Health, food-security, flash-flood, transport, and agricultural effects may expand."
+    },
+    {
+      "name": "Critical minerals supply to North America",
+      "severity": "high",
+      "why": "Some U.S.-bound rare-earth shipments are constrained amid near-record sensitive-material prices."
     }
   ],
   "signals": [
     {
-      "title": "Tanker struck near Oman",
-      "summary": "Iran said it struck an oil tanker near Oman; crew were safe, no pollution was reported, and U.S. forces are guiding some commercial ships through the area.",
+      "title": "Hormuz tanker attacks",
+      "summary": "A tanker was reportedly struck while transiting the Strait of Hormuz, while South Korea considered expanding naval protection for Gulf of Aden shipping.",
       "url": "https://apnews.com/article/024350a0820dfc5dd433b4e13445fab5",
       "source": "Associated Press",
       "published_at": "2026-09-18T00:00:00.000Z",
@@ -271,17 +284,8 @@
       "impact": "up"
     },
     {
-      "title": "Houthi gains threaten Bab el-Mandeb",
-      "summary": "Houthi forces reportedly captured Mokha and nearby islands, increasing their leverage over Bab el-Mandeb and threatening Saudi oil exports through the Red Sea.",
-      "url": "https://apnews.com/article/22e64e72775886625da676aee92edca2",
-      "source": "Associated Press",
-      "published_at": "2026-09-17T00:00:00.000Z",
-      "category": "MILITARY",
-      "impact": "up"
-    },
-    {
-      "title": "Saudi pipeline closure risks exports",
-      "summary": "Saudi Arabia’s East-West oil pipeline closure places an estimated 2.6–4 million barrels per day routed through Yanbu at risk, compounding maritime supply disruption.",
+      "title": "Saudi pipeline remains disrupted",
+      "summary": "Saudi Arabia shut its East-West oil pipeline after an attack, placing an estimated 2.6–4 million barrels per day of Red Sea-linked flows at risk.",
       "url": "https://apnews.com/article/efa431e2fa771e34880c8453c62ffb92",
       "source": "Associated Press",
       "published_at": "2026-09-15T00:00:00.000Z",
@@ -289,35 +293,35 @@
       "impact": "up"
     },
     {
-      "title": "Russia sanctions bill advances",
-      "summary": "The U.S. House passed sanctions legislation that could impose tariffs up to 100% on major purchasers of Russian oil or gas.",
-      "url": "https://apnews.com/article/f377fc956c442195dfcf50571b01a1c4",
+      "title": "Bab el-Mandeb threat expands",
+      "summary": "Houthi forces reportedly captured Mokha and nearby islands, increasing their leverage over the Bab el-Mandeb maritime chokepoint and Saudi export routes.",
+      "url": "https://apnews.com/article/22e64e72775886625da676aee92edca2",
       "source": "Associated Press",
-      "published_at": "2026-09-16T00:00:00.000Z",
-      "category": "TRADE",
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Rare-earth shipments remain uncertain",
-      "summary": "Some Chinese rare-earth suppliers reportedly declined U.S. shipments, while prices for several specialty materials remained near record highs amid tight supply.",
-      "url": "https://www.reuters.com",
-      "source": "Reuters",
+      "title": "Rare-earth shipments remain constrained",
+      "summary": "Some Chinese rare-earth suppliers have declined U.S. shipments, while prices for sensitive materials remain near record highs amid tight supply.",
+      "url": "https://www.marketscreener.com/news/china-rare-earth-firms-halt-some-us-shipments-over-geopolitical-worries-sources-say-ce785adbd8f526",
+      "source": "Reuters via MarketScreener",
       "published_at": "2026-09-04T00:00:00.000Z",
       "category": "SUPPLY",
       "impact": "up"
     },
     {
-      "title": "Mid-Atlantic grid emergency order",
-      "summary": "DOE ordered PJM to dispatch additional and backup generation through September 18 to reduce blackout risk during hot weather and planned transmission outages.",
-      "url": "https://www.energy.gov/articles/energy-secretary-secures-mid-atlantic-grid-due-anticipated-stressed-system-conditions",
-      "source": "U.S. Department of Energy",
-      "published_at": "2026-09-17T00:00:00.000Z",
+      "title": "Colorado water systems targeted",
+      "summary": "Foreign hackers manipulated equipment in two Colorado local water systems during August, according to the governor’s office.",
+      "url": "https://www.investing.com/news/general-news/foreign-hackers-targeted-colorado-water-systems-in-august-governors-office-says-4908010",
+      "source": "Reuters",
+      "published_at": "2026-09-18T00:00:00.000Z",
       "category": "CYBER",
       "impact": "up"
     },
     {
-      "title": "Cyber compromise reported on U.S.-bound vessels",
-      "summary": "U.S. Coast Guard and FBI personnel boarded two commercial vessels bound for the United States after indications hackers had accessed their computer networks.",
+      "title": "Cyber-compromised vessels",
+      "summary": "U.S. Coast Guard and FBI personnel boarded two U.S.-bound vessels after indications that hackers had accessed their computer networks.",
       "url": "https://www.investing.com/news/world-news/two-usbound-vessels-apparently-compromised-by-hackers-us-officials-say-4906185",
       "source": "Reuters",
       "published_at": "2026-09-17T00:00:00.000Z",
@@ -325,12 +329,21 @@
       "impact": "up"
     },
     {
-      "title": "Salmonella linked to broccoli sprouts",
-      "summary": "CDC reports 22 Salmonella cases across four states, with two hospitalizations, linked to recalled Evergreen Fresh Sprouts broccoli sprouts.",
-      "url": "https://cdc.gov/salmonella/outbreaks/broccoli-sprouts-09-26/investigation.html",
-      "source": "CDC",
-      "published_at": "2026-09-09T00:00:00.000Z",
-      "category": "FOOD",
+      "title": "Cuba nationwide blackout",
+      "summary": "Cuba’s electrical grid collapsed nationwide on September 18, leaving millions without power while authorities began gradual restoration.",
+      "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/19/cuba-energy-grid-suffers-nationwide-collapse",
+      "source": "Reuters via Internazionale",
+      "published_at": "2026-09-19T00:00:00.000Z",
+      "category": "CYBER",
+      "impact": "up"
+    },
+    {
+      "title": "El Niño health exposure",
+      "summary": "PAHO reports strengthening El Niño, with over 5.2 million people affected, exposed, or facing acute food insecurity across the Americas.",
+      "url": "https://www.paho.org/en/news/18-9-2026-paho-strengthening-nino-raises-growing-health-risks-across-americas",
+      "source": "PAHO/WHO",
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "category": "HEALTH",
       "impact": "up"
     }
   ],
@@ -451,254 +464,325 @@
       "americas": 81,
       "conflict": 99,
       "momentum": 72
+    },
+    {
+      "date": "2026-09-20",
+      "preparedness": 79,
+      "raw_preparedness": 79,
+      "threat": 83,
+      "impact": 68,
+      "americas": 82,
+      "conflict": 99,
+      "momentum": 77
     }
   ],
   "evidence_quality": {
-    "evidence_count": 11,
-    "fresh_count": 8,
-    "unique_sources": 6,
-    "tier_a_sources": 5,
+    "evidence_count": 14,
+    "fresh_count": 11,
+    "unique_sources": 8,
+    "tier_a_sources": 3,
     "clusters": 5,
-    "domains_covered": 11,
-    "confidence_cap": 75,
+    "domains_covered": 12,
+    "confidence_cap": 88,
     "publishable": true
   },
   "evidence_log": [
     {
       "id": "E1",
-      "title": "Tanker struck near Oman",
+      "title": "Hormuz tanker attacks",
       "source": "Associated Press",
       "url": "https://apnews.com/article/024350a0820dfc5dd433b4e13445fab5",
       "source_domain": "apnews.com",
       "source_tier": "A",
       "published_at": "2026-09-18T00:00:00.000Z",
-      "age_days": 0,
+      "age_days": 2,
       "cluster": "military_energy_shipping",
       "domains": [
         "military",
         "energy",
         "supply_chain"
       ],
-      "geography": "Strait of Hormuz / Gulf of Oman",
+      "geography": "Strait of Hormuz",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "Iran said it struck an oil tanker near Oman; crew were safe, no pollution was reported, and U.S. forces are guiding some commercial ships through the area.",
+      "fact": "A tanker was reportedly struck while transiting the Strait of Hormuz, while South Korea considered expanding naval protection for Gulf of Aden shipping.",
       "americas_relevant": true
     },
     {
       "id": "E2",
-      "title": "Houthi gains threaten Bab el-Mandeb",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/22e64e72775886625da676aee92edca2",
-      "source_domain": "apnews.com",
-      "source_tier": "A",
-      "published_at": "2026-09-17T00:00:00.000Z",
-      "age_days": 1,
-      "cluster": "military_energy_shipping",
-      "domains": [
-        "military",
-        "energy",
-        "trade",
-        "supply_chain"
-      ],
-      "geography": "Yemen / Bab el-Mandeb",
-      "evidence_type": "forward",
-      "materiality": "high",
-      "fact": "Houthi forces reportedly captured Mokha and nearby islands, increasing their leverage over Bab el-Mandeb and threatening Saudi oil exports through the Red Sea.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E3",
-      "title": "Saudi pipeline closure risks exports",
+      "title": "Saudi pipeline remains disrupted",
       "source": "Associated Press",
       "url": "https://apnews.com/article/efa431e2fa771e34880c8453c62ffb92",
       "source_domain": "apnews.com",
       "source_tier": "A",
       "published_at": "2026-09-15T00:00:00.000Z",
-      "age_days": 3,
+      "age_days": 5,
       "cluster": "military_energy_shipping",
       "domains": [
         "energy",
         "military",
         "supply_chain"
       ],
-      "geography": "Saudi Arabia / Yanbu",
+      "geography": "Saudi Arabia and Red Sea",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "Saudi Arabia’s East-West oil pipeline closure places an estimated 2.6–4 million barrels per day routed through Yanbu at risk, compounding maritime supply disruption.",
+      "fact": "Saudi Arabia shut its East-West oil pipeline after an attack, placing an estimated 2.6–4 million barrels per day of Red Sea-linked flows at risk.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E3",
+      "title": "Bab el-Mandeb threat expands",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/22e64e72775886625da676aee92edca2",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "age_days": 3,
+      "cluster": "military_energy_shipping",
+      "domains": [
+        "military",
+        "energy",
+        "supply_chain"
+      ],
+      "geography": "Yemen, Red Sea, Bab el-Mandeb",
+      "evidence_type": "forward",
+      "materiality": "high",
+      "fact": "Houthi forces reportedly captured Mokha and nearby islands, increasing their leverage over the Bab el-Mandeb maritime chokepoint and Saudi export routes.",
       "americas_relevant": true
     },
     {
       "id": "E4",
-      "title": "Russia sanctions bill advances",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/f377fc956c442195dfcf50571b01a1c4",
-      "source_domain": "apnews.com",
-      "source_tier": "A",
-      "published_at": "2026-09-16T00:00:00.000Z",
-      "age_days": 2,
+      "title": "U.S.-China talks target tariffs and minerals",
+      "source": "Reuters via MarketScreener",
+      "url": "https://www.marketscreener.com/news/us-treasury-s-bessent-china-s-he-to-launch-talks-on-ai-trade-critical-minerals-ce785adad18ff127",
+      "source_domain": "marketscreener.com",
+      "source_tier": "C",
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "age_days": 0,
       "cluster": "trade_supply_technology",
       "domains": [
         "trade",
-        "financial",
-        "energy",
+        "technology",
         "supply_chain"
       ],
-      "geography": "United States/Russia/global",
+      "geography": "United States-China",
       "evidence_type": "forward",
       "materiality": "high",
-      "fact": "The U.S. House passed sanctions legislation that could impose tariffs up to 100% on major purchasers of Russian oil or gas.",
+      "fact": "U.S. and Chinese officials are discussing extending the tariff truce and improving flows of Chinese rare-earth magnets and critical minerals.",
       "americas_relevant": true
     },
     {
       "id": "E5",
-      "title": "Rare-earth shipments remain uncertain",
-      "source": "Reuters",
-      "url": "https://www.reuters.com",
-      "source_domain": "reuters.com",
-      "source_tier": "A",
+      "title": "Rare-earth shipments remain constrained",
+      "source": "Reuters via MarketScreener",
+      "url": "https://www.marketscreener.com/news/china-rare-earth-firms-halt-some-us-shipments-over-geopolitical-worries-sources-say-ce785adbd8f526",
+      "source_domain": "marketscreener.com",
+      "source_tier": "C",
       "published_at": "2026-09-04T00:00:00.000Z",
-      "age_days": 14,
+      "age_days": 16,
+      "cluster": "trade_supply_technology",
+      "domains": [
+        "supply_chain",
+        "technology"
+      ],
+      "geography": "China-United States",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "Some Chinese rare-earth suppliers have declined U.S. shipments, while prices for sensitive materials remain near record highs amid tight supply.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E6",
+      "title": "Critical-mineral restrictions threaten downstream industry",
+      "source": "International Energy Agency via Reuters",
+      "url": "https://www.reddit.com/r/RareEarthNews/comments/1uxwsqy/chinas_rare_earth_curbs_endanger_65_trillion_of_downstream_production_outside_the_country_according_to_the_iea",
+      "source_domain": "reddit.com",
+      "source_tier": "C",
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "age_days": 66,
       "cluster": "trade_supply_technology",
       "domains": [
         "supply_chain",
         "technology",
         "trade"
       ],
-      "geography": "China/United States",
-      "evidence_type": "observed",
+      "geography": "Global",
+      "evidence_type": "forward",
       "materiality": "high",
-      "fact": "Some Chinese rare-earth suppliers reportedly declined U.S. shipments, while prices for several specialty materials remained near record highs amid tight supply.",
+      "fact": "The IEA warned that full implementation of China’s rare-earth controls could expose about $6.5 trillion in downstream automotive, technology, defense, and energy production.",
       "americas_relevant": true
     },
     {
       "id": "E7",
-      "title": "Mid-Atlantic grid emergency order",
-      "source": "U.S. Department of Energy",
-      "url": "https://www.energy.gov/articles/energy-secretary-secures-mid-atlantic-grid-due-anticipated-stressed-system-conditions",
-      "source_domain": "energy.gov",
-      "source_tier": "A",
-      "published_at": "2026-09-17T00:00:00.000Z",
-      "age_days": 1,
+      "title": "Colorado water systems targeted",
+      "source": "Reuters",
+      "url": "https://www.investing.com/news/general-news/foreign-hackers-targeted-colorado-water-systems-in-august-governors-office-says-4908010",
+      "source_domain": "investing.com",
+      "source_tier": "C",
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "age_days": 2,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
         "critical_infrastructure",
-        "energy"
+        "technology"
       ],
-      "geography": "United States — Mid-Atlantic",
-      "evidence_type": "forward",
+      "geography": "Colorado, United States",
+      "evidence_type": "observed",
       "materiality": "high",
-      "fact": "DOE ordered PJM to dispatch additional and backup generation through September 18 to reduce blackout risk during hot weather and planned transmission outages.",
+      "fact": "Foreign hackers manipulated equipment in two Colorado local water systems during August, according to the governor’s office.",
       "americas_relevant": true
     },
     {
       "id": "E8",
-      "title": "Federal Reserve maintains financial-system support",
-      "source": "Federal Reserve",
-      "url": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20260916.htm",
-      "source_domain": "federalreserve.gov",
-      "source_tier": "A",
-      "published_at": "2026-09-16T00:00:00.000Z",
-      "age_days": 2,
-      "cluster": "cyber_infrastructure_finance",
-      "domains": [
-        "financial"
-      ],
-      "geography": "United States",
-      "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "The Federal Reserve released its September 15–16 FOMC statement and projections, providing current monetary-policy guidance amid ongoing financial-system monitoring.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E9",
-      "title": "Cyber compromise reported on U.S.-bound vessels",
+      "title": "Cyber-compromised vessels",
       "source": "Reuters",
       "url": "https://www.investing.com/news/world-news/two-usbound-vessels-apparently-compromised-by-hackers-us-officials-say-4906185",
       "source_domain": "investing.com",
       "source_tier": "C",
       "published_at": "2026-09-17T00:00:00.000Z",
-      "age_days": 1,
-      "cluster": "americas_civil",
+      "age_days": 3,
+      "cluster": "cyber_infrastructure_finance",
       "domains": [
         "critical_infrastructure",
         "supply_chain",
         "technology"
       ],
-      "geography": "United States / Gulf of Mexico",
+      "geography": "Gulf of Mexico, United States",
       "evidence_type": "observed",
       "materiality": "medium",
-      "fact": "U.S. Coast Guard and FBI personnel boarded two commercial vessels bound for the United States after indications hackers had accessed their computer networks.",
+      "fact": "U.S. Coast Guard and FBI personnel boarded two U.S.-bound vessels after indications that hackers had accessed their computer networks.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E9",
+      "title": "Markets stressed but orderly",
+      "source": "Reuters",
+      "url": "https://www.investing.com/news/commodities-news/rising-oil-rates-and-yields-brew-up-stagflation-cocktail-for-markets-4905605",
+      "source_domain": "investing.com",
+      "source_tier": "C",
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "age_days": 3,
+      "cluster": "cyber_infrastructure_finance",
+      "domains": [
+        "financial",
+        "trade"
+      ],
+      "geography": "Global",
+      "evidence_type": "stabilizer",
+      "materiality": "medium",
+      "fact": "Higher energy costs and government-bond yields are pressuring markets, but Reuters reported the rise remained orderly rather than a liquidity crisis.",
       "americas_relevant": true
     },
     {
       "id": "E10",
-      "title": "No corroborated new civilian disruption found",
-      "source": "Search review",
-      "url": "https://www.reuters.com/",
-      "source_domain": "reuters.com",
-      "source_tier": "A",
-      "published_at": "2026-09-18T00:00:00.000Z",
-      "age_days": 0,
+      "title": "Cuba nationwide blackout",
+      "source": "Reuters via Internazionale",
+      "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/19/cuba-energy-grid-suffers-nationwide-collapse",
+      "source_domain": "internazionale.it",
+      "source_tier": "C",
+      "published_at": "2026-09-19T00:00:00.000Z",
+      "age_days": 1,
       "cluster": "americas_civil",
       "domains": [
-        "domestic",
-        "civil_unrest",
-        "critical_infrastructure"
+        "critical_infrastructure",
+        "energy",
+        "domestic"
       ],
-      "geography": "Americas",
-      "evidence_type": "stabilizer",
-      "materiality": "low",
-      "fact": "The reviewed 24–72-hour coverage did not corroborate additional major violence, emergency measures, or material civilian-service disruption across the Americas.",
+      "geography": "Cuba",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "Cuba’s electrical grid collapsed nationwide on September 18, leaving millions without power while authorities began gradual restoration.",
       "americas_relevant": true
     },
     {
       "id": "E11",
-      "title": "Salmonella linked to broccoli sprouts",
-      "source": "CDC",
-      "url": "https://cdc.gov/salmonella/outbreaks/broccoli-sprouts-09-26/investigation.html",
-      "source_domain": "cdc.gov",
-      "source_tier": "A",
-      "published_at": "2026-09-09T00:00:00.000Z",
-      "age_days": 9,
-      "cluster": "food_health_natural",
+      "title": "El Niño health exposure",
+      "source": "PAHO/WHO",
+      "url": "https://www.paho.org/en/news/18-9-2026-paho-strengthening-nino-raises-growing-health-risks-across-americas",
+      "source_domain": "paho.org",
+      "source_tier": "C",
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "age_days": 2,
+      "cluster": "americas_civil",
       "domains": [
+        "public_health",
         "food",
-        "public_health"
+        "natural"
       ],
-      "geography": "United States",
-      "evidence_type": "observed",
-      "materiality": "medium",
-      "fact": "CDC reports 22 Salmonella cases across four states, with two hospitalizations, linked to recalled Evergreen Fresh Sprouts broccoli sprouts.",
+      "geography": "Americas",
+      "evidence_type": "forward",
+      "materiality": "high",
+      "fact": "PAHO reports strengthening El Niño, with over 5.2 million people affected, exposed, or facing acute food insecurity across the Americas.",
       "americas_relevant": true
     },
     {
       "id": "E12",
-      "title": "Cyclospora outbreak ended",
-      "source": "CDC",
-      "url": "https://cdc.gov/cyclosporiasis/outbreaks/07-26/investigation.html",
-      "source_domain": "cdc.gov",
+      "title": "Bolivia blockade risk",
+      "source": "Reuters via Investing.com",
+      "url": "https://www.investing.com/news/economy-news/bolivia-extends-state-of-emergency-over-risks-of-new-blockades-4905670",
+      "source_domain": "investing.com",
+      "source_tier": "C",
+      "published_at": "2026-09-17T00:00:00.000Z",
+      "age_days": 3,
+      "cluster": "americas_civil",
+      "domains": [
+        "civil_unrest",
+        "supply_chain",
+        "food",
+        "domestic"
+      ],
+      "geography": "Bolivia",
+      "evidence_type": "forward",
+      "materiality": "medium",
+      "fact": "Bolivia extended its state of emergency for 90 days, citing risks that renewed road blockades could disrupt food, fuel, medicine, and economic activity.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E13",
+      "title": "Midwest flooding risk",
+      "source": "NOAA/NWS Weather Prediction Center",
+      "url": "https://origin-east-www-wpc.woc.noaa.gov/",
+      "source_domain": "origin-east-www-wpc.woc.noaa.gov",
       "source_tier": "A",
-      "published_at": "2026-09-11T00:00:00.000Z",
-      "age_days": 7,
+      "published_at": "2026-09-19T00:00:00.000Z",
+      "age_days": 1,
       "cluster": "food_health_natural",
       "domains": [
-        "food",
-        "public_health"
+        "natural",
+        "food"
       ],
-      "geography": "United States",
-      "evidence_type": "stabilizer",
+      "geography": "United States Midwest and Ohio Valley",
+      "evidence_type": "forward",
       "materiality": "high",
-      "fact": "CDC says the lettuce-linked cyclospora outbreak ended September 11, with contaminated products no longer available and recent infections significantly declining.",
+      "fact": "NOAA maintained a Moderate Excessive Rainfall Risk for parts of eastern Iowa, northern Illinois, Wisconsin, Michigan, and northern Indiana, threatening flash flooding and possible transport or agricultural disruption.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E14",
+      "title": "Hawaii earthquake stabilizer",
+      "source": "USGS Hawaiian Volcano Observatory",
+      "url": "https://volcanoes.usgs.gov/hans-public/notice/DOI-USGS-HVO-2026-09-18T06%3A56%3A18%2B00%3A00",
+      "source_domain": "volcanoes.usgs.gov",
+      "source_tier": "A",
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "age_days": 2,
+      "cluster": "food_health_natural",
+      "domains": [
+        "natural"
+      ],
+      "geography": "Hawaii, United States",
+      "evidence_type": "stabilizer",
+      "materiality": "medium",
+      "fact": "USGS reported a magnitude-4.1 earthquake near Pāhala caused light shaking, with no expected building or infrastructure damage and no apparent effect on Mauna Loa or Kīlauea.",
       "americas_relevant": true
     }
   ],
   "api_usage": {
     "research_model": "gpt-5.6-luna",
     "assessment_model": "gpt-5.6-terra",
-    "web_search_calls": 5,
-    "estimated_run_cost_usd": 0.085925,
-    "estimated_period_spend_usd": 0.968123,
+    "web_search_calls": 7,
+    "estimated_run_cost_usd": 0.109413,
+    "estimated_period_spend_usd": 1.165331,
     "allocated_90_day_budget_usd": 10,
     "operational_stop_usd": 9
   },
