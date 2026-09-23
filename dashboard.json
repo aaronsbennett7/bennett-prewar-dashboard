@@ -2,22 +2,22 @@
   "schema_version": 5,
   "engine_version": "5.3",
   "data_status": "VERIFIED",
-  "as_of": "2026-09-21",
-  "updated_at": "2026-09-21T11:28:21.462Z",
-  "last_successful_update": "2026-09-21T11:28:21.462Z",
-  "preparedness_urgency": 79,
-  "raw_preparedness_urgency": 79,
-  "preparedness_stage": "ACCELERATE",
+  "as_of": "2026-09-23",
+  "updated_at": "2026-09-23T11:28:11.056Z",
+  "last_successful_update": "2026-09-23T11:28:11.056Z",
+  "preparedness_urgency": 80,
+  "raw_preparedness_urgency": 80,
+  "preparedness_stage": "HIGH ALERT",
   "global_threat_pressure": 84,
   "leading_threat_pressure": 84,
-  "observed_civilian_disruption": 69,
-  "americas_exposure": 83,
+  "observed_civilian_disruption": 70,
+  "americas_exposure": 84,
   "americas_stage": "HIGH",
-  "americas_summary": "The Americas face high exposure through fuel and import prices, supply chains, climate-linked water and food stress, cyber risk, Cuba’s grid failure, and elevated U.S. measles activity.",
+  "americas_summary": "Americas exposure remains highest in energy, trade/supply chains, infrastructure, and finance. Cuba’s nationwide blackout is an active regional essential-service disruption; Hurricane Polo and El Niño add near-term weather, health, and food risks.",
   "americas_components": [
     {
       "name": "Energy security",
-      "score": 98,
+      "score": 97,
       "trend": "rising"
     },
     {
@@ -32,7 +32,7 @@
     },
     {
       "name": "Global trade fragmentation",
-      "score": 96,
+      "score": 95,
       "trend": "stable"
     },
     {
@@ -42,113 +42,113 @@
     },
     {
       "name": "Financial-system stress",
-      "score": 90,
+      "score": 89,
       "trend": "stable"
     }
   ],
-  "conflict_escalation": 99,
+  "conflict_escalation": 98,
   "coupling_score": 82,
   "momentum_score": 76,
-  "confidence_score": 78,
-  "confidence_level": "MODERATE",
-  "confidence_rationale": "Fresh, multi-source evidence covers all domains, including direct reporting and primary public-health/weather sources; several media links are republished through lower-tier hosts and some impacts remain indirect. Evidence gate: 15 items, 11 sources, 4 Tier-A sources, 5/5 clusters.",
+  "confidence_score": 84,
+  "confidence_level": "HIGH",
+  "confidence_rationale": "Fresh, multi-source evidence directly supports observed chokepoint disruption and the Cuban outage; several forward-looking assessments support weather, food, health, and technology risks. Some Reuters reporting is syndicated through lower-tier hosts. Evidence gate: 14 items, 12 sources, 4 Tier-A sources, 5/5 clusters.",
   "preparedness_window": "Days to weeks",
-  "summary": "Severe but uneven disruption persists around Hormuz, with reduced shipping and elevated energy/supply risks; Americas infrastructure, health, and climate risks add regional pressure. Partial oil-flow recovery and trade talks are stabilizers.",
-  "primary_driver": "Reduced Strait of Hormuz traffic following a tanker strike, sustaining energy and shipping disruption risk.",
+  "summary": "Severe but mixed all-hazards picture: active Gulf chokepoint disruption and Cuba’s nationwide grid collapse coexist with partial energy and financial stabilizers. El Niño and Hurricane Polo elevate Americas weather, health, and food risks.",
+  "primary_driver": "Continuing Hormuz and Bab el-Mandeb disruption is reinforcing energy-market, shipping, and supply-chain stress.",
   "primary_stabilizers": [
-    "Oil prices fell on diplomatic hopes as Saudi exports partially recovered, while analysts estimated regional flows remained below normal but substantially above their wartime low.",
-    "U.S. and Chinese officials began talks on tariff reductions, AI safeguards, and improving rare-earth and critical-mineral flows before a Trump-Xi summit.",
-    "Asian shares edged higher and oil eased on supply hopes, although thin trading and French debt-risk premiums signaled continuing liquidity sensitivity.",
-    "NOAA’s September 28–October 4 outlook posts no broad U.S. hazards, while monitoring possible heavy rain across Florida and the Gulf."
+    "Saudi Arabia is restoring its East-West pipeline after drone attacks, improving Gulf crude supply prospects and easing immediate oil-market pressure.",
+    "G20 energy ministers reported consensus on supply-chain security, infrastructure development, and resilience measures, offering a multilateral stabilizer amid trade tensions.",
+    "Federal Reserve Vice Chair Jefferson said discount-window improvements support liquidity and reduce forced Treasury sales during market stress.",
+    "After Nepal’s floods disrupted vaccination, authorities resumed immunization, delivered oral-cholera vaccine to over 50,000 people, and strengthened outbreak surveillance."
   ],
   "domains": [
     {
       "key": "energy",
-      "threat": 99,
-      "impact": 96,
-      "americas_exposure": 98,
+      "threat": 97,
+      "impact": 94,
+      "americas_exposure": 97,
       "trend": "rising",
-      "rationale": "Hormuz traffic remains sharply reduced after a tanker strike; partial Saudi export recovery moderates immediate impact.",
+      "rationale": "Dual chokepoint disruption remains active, though Saudi pipeline restoration eases some immediate supply pressure.",
       "name": "Energy security",
       "weight": 11
     },
     {
       "key": "military",
-      "threat": 99,
-      "impact": 91,
+      "threat": 98,
+      "impact": 90,
       "americas_exposure": 80,
       "trend": "rising",
-      "rationale": "Tanker strike in Hormuz demonstrates an active maritime security hazard with global spillover potential.",
+      "rationale": "Continuing regional attacks and conditional Hormuz reopening sustain escalation risk.",
       "name": "Military / geopolitical",
       "weight": 10
     },
     {
       "key": "supply_chain",
-      "threat": 98,
-      "impact": 91,
+      "threat": 97,
+      "impact": 90,
       "americas_exposure": 94,
       "trend": "rising",
-      "rationale": "Reduced Hormuz transits constrain a major commodity route; critical-mineral chokepoints remain acute.",
+      "rationale": "Hormuz and Bab el-Mandeb disruptions are rattling global supply chains; mineral negotiations remain unresolved.",
       "name": "Supply chain & transportation",
       "weight": 10
     },
     {
       "key": "trade",
-      "threat": 95,
-      "impact": 79,
-      "americas_exposure": 96,
+      "threat": 93,
+      "impact": 78,
+      "americas_exposure": 95,
       "trend": "stable",
-      "rationale": "Hormuz disruption and Russia sanctions pressure trade, while U.S.-China tariff and minerals talks provide a stabilizer.",
+      "rationale": "U.S.–China tariff and critical-mineral issues remain active, partly offset by negotiations and G20 resilience measures.",
       "name": "Global trade fragmentation",
       "weight": 10
     },
     {
       "key": "technology",
-      "threat": 89,
+      "threat": 88,
       "impact": 63,
-      "americas_exposure": 78,
+      "americas_exposure": 77,
       "trend": "rising",
-      "rationale": "Colorado utility control compromises and rare-earth dependence sustain technology-sector risk.",
+      "rationale": "Critical-mineral restrictions and AI safeguards remain central to U.S.–China talks; external ICT dependency is a cited vulnerability.",
       "name": "Technology chokepoints",
       "weight": 7
     },
     {
       "key": "critical_infrastructure",
-      "threat": 92,
-      "impact": 76,
+      "threat": 91,
+      "impact": 79,
       "americas_exposure": 92,
       "trend": "rising",
-      "rationale": "Cuba’s nationwide grid collapse is major observed regional disruption; Colorado water-system intrusions show cyber exposure without service loss.",
+      "rationale": "Cuba’s nationwide grid collapse is active; Hurricane Polo threatens flooding and infrastructure impacts in Mexico.",
       "name": "Critical infrastructure / cyber",
       "weight": 11
     },
     {
       "key": "financial",
-      "threat": 87,
-      "impact": 67,
-      "americas_exposure": 90,
+      "threat": 85,
+      "impact": 66,
+      "americas_exposure": 89,
       "trend": "stable",
-      "rationale": "High global sovereign yields and fragile liquidity persist, though markets retain partial stabilizers.",
+      "rationale": "External ICT, cyber, and private-credit vulnerabilities persist, while Fed liquidity tools are a meaningful U.S. stabilizer.",
       "name": "Financial-system stress",
       "weight": 10
     },
     {
       "key": "food",
-      "threat": 72,
-      "impact": 35,
-      "americas_exposure": 73,
+      "threat": 77,
+      "impact": 42,
+      "americas_exposure": 76,
       "trend": "rising",
-      "rationale": "Strengthening El Niño threatens regional water availability and agriculture, with effects mainly forward-looking.",
+      "rationale": "Strengthening El Niño is increasing agricultural and food-security risks, including reported acute food insecurity in the Americas.",
       "name": "Food & agriculture",
       "weight": 8
     },
     {
       "key": "domestic",
-      "threat": 65,
-      "impact": 57,
-      "americas_exposure": 77,
+      "threat": 67,
+      "impact": 59,
+      "americas_exposure": 78,
       "trend": "rising",
-      "rationale": "Cuba’s grid collapse creates acute civilian service disruption; regional violence concerns remain material.",
+      "rationale": "Cuban power loss and Mexico evacuation preparations indicate civilian-service and displacement pressures.",
       "name": "Domestic institutional stress",
       "weight": 6
     },
@@ -158,27 +158,27 @@
       "impact": 27,
       "americas_exposure": 56,
       "trend": "stable",
-      "rationale": "Evidence identifies violence and organized-crime travel risk, but not a documented increase in protest or unrest disruption.",
+      "rationale": "No evidence of material unrest-related civilian disruption.",
       "name": "Civil unrest / public order",
       "weight": 7
     },
     {
       "key": "public_health",
-      "threat": 51,
-      "impact": 39,
-      "americas_exposure": 50,
+      "threat": 58,
+      "impact": 43,
+      "americas_exposure": 59,
       "trend": "rising",
-      "rationale": "Elevated U.S. measles cases and El Niño-linked regional health risks raise exposure; DRC Ebola expansion remains geographically indirect.",
+      "rationale": "PAHO identifies growing Americas disease and disaster-health risks under strengthening El Niño.",
       "name": "Public health / biological",
       "weight": 5
     },
     {
       "key": "natural",
-      "threat": 67,
-      "impact": 58,
-      "americas_exposure": 72,
+      "threat": 74,
+      "impact": 62,
+      "americas_exposure": 78,
       "trend": "rising",
-      "rationale": "Strengthening El Niño raises Americas drought and water risks, while NOAA shows no broad near-term U.S. hazard.",
+      "rationale": "Hurricane Polo threatens severe flooding in Mexico, while El Niño raises wider drought, flood, heat, and wildfire risk.",
       "name": "Natural / environmental",
       "weight": 5
     }
@@ -188,20 +188,20 @@
       "type": "shipping_chokepoint_closure",
       "verified": true,
       "scope": "multinational",
-      "status": "developing",
-      "summary": "Hormuz remains open but traffic is sharply constrained following a tanker strike, creating an active multinational shipping access constraint.",
-      "source_url": "https://apnews.com/article/82714681bde58c6525c2d7a1bc587b25",
+      "status": "active",
+      "summary": "Disruptions through both Hormuz and Bab el-Mandeb are affecting oil markets and global supply chains; Hormuz reopening remains conditional.",
+      "source_url": "https://apnews.com/article/f1ef966c0f89e8dd13806768e3af4a0f",
       "evidence_ids": [
-        "E1",
-        "E2"
+        "E2",
+        "E3"
       ]
     }
   ],
   "verified_hard_trigger_count": 1,
   "severe_hard_trigger_count": 1,
   "score_calibration": {
-    "raw_score": 79,
-    "published_score": 79,
+    "raw_score": 80,
+    "published_score": 80,
     "previous_daily_anchor": 79,
     "rate_limit_applied": false,
     "daily_rate_limit": null,
@@ -210,10 +210,10 @@
   },
   "score_components": {
     "global_threat_pressure": 84,
-    "observed_civilian_disruption": 69,
+    "observed_civilian_disruption": 70,
     "coupling": 82,
     "momentum": 76,
-    "americas_exposure": 83
+    "americas_exposure": 84
   },
   "drivers": [
     {
@@ -249,102 +249,102 @@
   ],
   "areas_to_watch": [
     {
-      "name": "Strait of Hormuz energy and shipping",
+      "name": "Hormuz and Bab el-Mandeb transit",
       "severity": "critical",
-      "why": "Traffic remains severely reduced after a tanker strike, with direct energy and freight implications."
+      "why": "Active dual-chokepoint disruption continues to affect energy and supply chains; reopening is conditional."
     },
     {
-      "name": "Cuba electricity and essential services",
-      "severity": "critical",
-      "why": "Reported nationwide grid collapse is causing acute civilian disruption."
-    },
-    {
-      "name": "Americas El Niño water and food stress",
+      "name": "Cuba power restoration",
       "severity": "high",
-      "why": "PAHO reports alerts and drought risks affecting water, agriculture, and health."
+      "why": "Nationwide grid failure remains an essential-service constraint."
     },
     {
-      "name": "Critical minerals and U.S.-China trade talks",
+      "name": "Mexico Hurricane Polo impacts",
       "severity": "high",
-      "why": "Rare-earth chokepoints remain consequential despite ongoing negotiations."
+      "why": "Flooding, mudslides, and possible evacuations are imminent risks."
     },
     {
-      "name": "Financial-market liquidity",
+      "name": "Americas El Niño effects",
+      "severity": "high",
+      "why": "PAHO reports growing drought, flood, wildfire, food-security, and disease risks."
+    },
+    {
+      "name": "U.S.–China critical-mineral talks",
       "severity": "medium",
-      "why": "High yields and thin trading signal fragility, though no direct access restriction is reported."
+      "why": "Negotiations may either reduce or prolong technology and industrial supply-chain constraints."
     }
   ],
   "signals": [
     {
-      "title": "Tanker hit entering Hormuz",
-      "summary": "A tanker was struck by an unknown projectile while entering the Strait of Hormuz, injuring two crew members; the vessel continued toward port.",
-      "url": "https://apnews.com/article/82714681bde58c6525c2d7a1bc587b25",
-      "source": "Associated Press",
-      "published_at": "2026-09-21T00:00:00.000Z",
+      "title": "Hormuz reopening conditional",
+      "summary": "An Iranian official said Hormuz could reopen within seven days if Washington eases military pressure and lifts its blockade on Iranian ports.",
+      "url": "https://hk.marketscreener.com/news/trump-says-iran-deal-nearing-tehran-offers-hormuz-reopening-ce785ad8d180f223",
+      "source": "Reuters",
+      "published_at": "2026-09-23T00:00:00.000Z",
       "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Hormuz traffic remains sharply reduced",
-      "summary": "Only 17 commodity vessels transited Hormuz over the weekend, down from 37 the prior weekend, though one Qatar-loaded LNG tanker exited the strait.",
-      "url": "https://www.aol.com/articles/vessels-trickle-strait-hormuz-mideast-023441000.html",
-      "source": "Reuters",
-      "published_at": "2026-09-21T00:00:00.000Z",
-      "category": "ENERGY",
+      "title": "Dual chokepoint disruption",
+      "summary": "Gulf officials said disruptions through Hormuz and Bab el-Mandeb are rattling oil markets and global supply chains amid continuing regional attacks.",
+      "url": "https://apnews.com/article/f1ef966c0f89e8dd13806768e3af4a0f",
+      "source": "AP",
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Rare earths remain a strategic chokepoint",
-      "summary": "Rare-earth elements including yttrium and dysprosium remain critical chokepoints for automakers, chipmakers, and defense contractors, shaping U.S. negotiating posture.",
-      "url": "https://www.marketscreener.com/news/rare-earths-force-trump-to-be-less-hostile-before-xi-summit-ce785ad3d081f427",
+      "title": "Rare-earth flows central to U.S.–China talks",
+      "summary": "U.S.–China tensions include China’s prior restrictions on critical minerals used in electric vehicles, fighter jets, and high-technology supply chains.",
+      "url": "https://apnews.com/article/e560910c897fedb0448eda4cdbfdbaea",
+      "source": "Associated Press",
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "category": "TRADE",
+      "impact": "up"
+    },
+    {
+      "title": "Summit preparations target minerals and tariffs",
+      "summary": "Negotiators are addressing a trade-truce extension, Chinese rare-earth magnet and critical-mineral flows, tariffs, and artificial-intelligence safeguards before the September 24 summit.",
+      "url": "https://www.marketscreener.com/news/us-treasury-s-bessent-china-s-he-to-launch-talks-on-ai-trade-critical-minerals-ce785adad18ff127",
       "source": "Reuters via MarketScreener",
-      "published_at": "2026-09-21T00:00:00.000Z",
-      "category": "SUPPLY",
+      "published_at": "2026-09-20T00:00:00.000Z",
+      "category": "TRADE",
       "impact": "up"
     },
     {
-      "title": "Colorado water systems targeted",
-      "summary": "Foreign hackers altered controls at two Colorado water utilities, but officials reported no public-safety, water-quality, or service impact.",
-      "url": "https://www.investing.com/news/general-news/foreign-hackers-targeted-colorado-water-systems-in-august-governors-office-says-4908010",
-      "source": "Reuters",
+      "title": "EU flags cyber and dependency risks",
+      "summary": "EU supervisors identified reliance on external ICT and payment providers, cyber threats, and private-credit opacity as key financial-stability vulnerabilities.",
+      "url": "https://www.eba.europa.eu/publications-and-media/press-releases/esas-call-vigilance-over-external-dependencies-cyber-threats-and-private-credit-risks",
+      "source": "European Banking Authority",
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "category": "TECH",
+      "impact": "up"
+    },
+    {
+      "title": "Hurricane Polo threatens Mexico",
+      "summary": "Hurricane Polo’s rainbands reached Mexico’s Pacific coast, with life-threatening flooding and mudslides possible in Guerrero and Michoacán and preventive evacuations prepared.",
+      "url": "https://d2233.cms.socastsrm.com/2026/09/23/outer-rainbands-of-major-hurricane-polo-reach-mexicos-coast/",
+      "source": "Reuters via Thomson Reuters syndication",
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "category": "NATURAL",
+      "impact": "up"
+    },
+    {
+      "title": "Cuba grid collapse",
+      "summary": "Cuba’s electrical grid collapsed nationwide on September 18, leaving millions without power while authorities began gradual restoration efforts.",
+      "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/18/cuba-energy-grid-suffers-nationwide-collapse",
+      "source": "Reuters via Internazionale",
       "published_at": "2026-09-18T00:00:00.000Z",
       "category": "CYBER",
       "impact": "up"
     },
     {
-      "title": "Bond yields and liquidity strain",
-      "summary": "Global government-bond yields reached financial-crisis-era highs, while Reuters described the rise as orderly but increasingly fragile.",
-      "url": "https://www.marketscreener.com/news/rising-oil-rates-and-yields-brew-up-stagflation-cocktail-for-markets-ce785bd3dd8ef522",
-      "source": "Reuters",
-      "published_at": "2026-09-18T00:00:00.000Z",
-      "category": "FINANCE",
-      "impact": "up"
-    },
-    {
-      "title": "El Niño health and water risks",
-      "summary": "PAHO reports strengthening El Niño, with eight jurisdictions issuing alerts or emergencies and drought threatening water, agriculture, and food security across the region.",
-      "url": "https://www.paho.org/en/news/18-9-2026-paho-strengthening-nino-raises-growing-health-risks-across-americas",
-      "source": "PAHO/WHO",
-      "published_at": "2026-09-18T00:00:00.000Z",
-      "category": "HEALTH",
-      "impact": "up"
-    },
-    {
-      "title": "Cuba national grid collapse",
-      "summary": "Cuba’s electrical grid reportedly collapsed on September 18 after transmission-line failure, leaving millions without power and creating acute civilian service disruption.",
-      "url": "https://thenewsnow.news/en/region/central-america.html",
-      "source": "The News Now",
-      "published_at": "2026-09-19T00:00:00.000Z",
-      "category": "CYBER",
-      "impact": "up"
-    },
-    {
-      "title": "DRC Ebola outbreak expanding",
-      "summary": "WHO reported 6,757 confirmed Bundibugyo Ebola cases and 3,267 deaths in the DRC by September 7, with expansion to 61 health zones.",
-      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON617",
-      "source": "WHO",
-      "published_at": "2026-09-10T00:00:00.000Z",
-      "category": "HEALTH",
+      "title": "El Niño threatens food security",
+      "summary": "Forecast extreme El Niño conditions could bring drought, heat, flooding, and fertilizer-related pressures that threaten Asian agriculture and raise global food prices.",
+      "url": "https://apnews.com/article/31c88df9ce8f67bcbfe3ea7f39431d57",
+      "source": "Associated Press",
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "category": "FOOD",
       "impact": "up"
     }
   ],
@@ -485,27 +485,57 @@
       "americas": 83,
       "conflict": 99,
       "momentum": 76
+    },
+    {
+      "date": "2026-09-23",
+      "preparedness": 80,
+      "raw_preparedness": 80,
+      "threat": 84,
+      "impact": 70,
+      "americas": 84,
+      "conflict": 98,
+      "momentum": 76
     }
   ],
   "evidence_quality": {
-    "evidence_count": 15,
-    "fresh_count": 13,
-    "unique_sources": 11,
+    "evidence_count": 14,
+    "fresh_count": 11,
+    "unique_sources": 12,
     "tier_a_sources": 4,
     "clusters": 5,
-    "domains_covered": 12,
+    "domains_covered": 11,
     "confidence_cap": 88,
     "publishable": true
   },
   "evidence_log": [
     {
       "id": "E1",
-      "title": "Tanker hit entering Hormuz",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/82714681bde58c6525c2d7a1bc587b25",
-      "source_domain": "apnews.com",
-      "source_tier": "A",
-      "published_at": "2026-09-21T00:00:00.000Z",
+      "title": "Saudi pipeline supply resumes",
+      "source": "Reuters",
+      "url": "https://currently.att.yahoo.com/att/oil-falls-increased-gulf-supply-014402051.html",
+      "source_domain": "currently.att.yahoo.com",
+      "source_tier": "C",
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "age_days": 0,
+      "cluster": "military_energy_shipping",
+      "domains": [
+        "energy",
+        "supply_chain"
+      ],
+      "geography": "Saudi Arabia / Red Sea",
+      "evidence_type": "stabilizer",
+      "materiality": "high",
+      "fact": "Saudi Arabia is restoring its East-West pipeline after drone attacks, improving Gulf crude supply prospects and easing immediate oil-market pressure.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E2",
+      "title": "Hormuz reopening conditional",
+      "source": "Reuters",
+      "url": "https://hk.marketscreener.com/news/trump-says-iran-deal-nearing-tehran-offers-hormuz-reopening-ce785ad8d180f223",
+      "source_domain": "hk.marketscreener.com",
+      "source_tier": "C",
+      "published_at": "2026-09-23T00:00:00.000Z",
       "age_days": 0,
       "cluster": "military_energy_shipping",
       "domains": [
@@ -513,183 +543,225 @@
         "energy",
         "supply_chain"
       ],
-      "geography": "Strait of Hormuz",
-      "evidence_type": "observed",
+      "geography": "Strait of Hormuz / Gulf",
+      "evidence_type": "forward",
       "materiality": "high",
-      "fact": "A tanker was struck by an unknown projectile while entering the Strait of Hormuz, injuring two crew members; the vessel continued toward port.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E2",
-      "title": "Hormuz traffic remains sharply reduced",
-      "source": "Reuters",
-      "url": "https://www.aol.com/articles/vessels-trickle-strait-hormuz-mideast-023441000.html",
-      "source_domain": "aol.com",
-      "source_tier": "C",
-      "published_at": "2026-09-21T00:00:00.000Z",
-      "age_days": 0,
-      "cluster": "military_energy_shipping",
-      "domains": [
-        "energy",
-        "supply_chain",
-        "trade"
-      ],
-      "geography": "Strait of Hormuz",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "Only 17 commodity vessels transited Hormuz over the weekend, down from 37 the prior weekend, though one Qatar-loaded LNG tanker exited the strait.",
+      "fact": "An Iranian official said Hormuz could reopen within seven days if Washington eases military pressure and lifts its blockade on Iranian ports.",
       "americas_relevant": true
     },
     {
       "id": "E3",
-      "title": "Some Middle East oil flows recover",
-      "source": "Reuters",
-      "url": "https://uk.marketscreener.com/news/oil-hits-over-1-week-low-on-hopes-of-boost-to-diplomacy-in-iran-war-ce785adad08df727",
-      "source_domain": "uk.marketscreener.com",
-      "source_tier": "C",
-      "published_at": "2026-09-21T00:00:00.000Z",
-      "age_days": 0,
+      "title": "Dual chokepoint disruption",
+      "source": "AP",
+      "url": "https://apnews.com/article/f1ef966c0f89e8dd13806768e3af4a0f",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "age_days": 1,
       "cluster": "military_energy_shipping",
       "domains": [
+        "military",
         "energy",
-        "trade"
+        "supply_chain"
       ],
-      "geography": "Middle East",
-      "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "Oil prices fell on diplomatic hopes as Saudi exports partially recovered, while analysts estimated regional flows remained below normal but substantially above their wartime low.",
+      "geography": "Hormuz / Bab el-Mandeb",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "Gulf officials said disruptions through Hormuz and Bab el-Mandeb are rattling oil markets and global supply chains amid continuing regional attacks.",
       "americas_relevant": true
     },
     {
       "id": "E4",
-      "title": "U.S.-China talks target tariffs and critical minerals",
+      "title": "Rare-earth flows central to U.S.–China talks",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/e560910c897fedb0448eda4cdbfdbaea",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "age_days": 1,
+      "cluster": "trade_supply_technology",
+      "domains": [
+        "trade",
+        "supply_chain",
+        "technology"
+      ],
+      "geography": "United States–China",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "U.S.–China tensions include China’s prior restrictions on critical minerals used in electric vehicles, fighter jets, and high-technology supply chains.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E5",
+      "title": "Summit preparations target minerals and tariffs",
       "source": "Reuters via MarketScreener",
       "url": "https://www.marketscreener.com/news/us-treasury-s-bessent-china-s-he-to-launch-talks-on-ai-trade-critical-minerals-ce785adad18ff127",
       "source_domain": "marketscreener.com",
       "source_tier": "C",
       "published_at": "2026-09-20T00:00:00.000Z",
-      "age_days": 1,
+      "age_days": 3,
       "cluster": "trade_supply_technology",
       "domains": [
         "trade",
         "supply_chain",
         "technology"
       ],
-      "geography": "United States-China",
-      "evidence_type": "stabilizer",
+      "geography": "United States–China",
+      "evidence_type": "forward",
       "materiality": "high",
-      "fact": "U.S. and Chinese officials began talks on tariff reductions, AI safeguards, and improving rare-earth and critical-mineral flows before a Trump-Xi summit.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E5",
-      "title": "Rare earths remain a strategic chokepoint",
-      "source": "Reuters via MarketScreener",
-      "url": "https://www.marketscreener.com/news/rare-earths-force-trump-to-be-less-hostile-before-xi-summit-ce785ad3d081f427",
-      "source_domain": "marketscreener.com",
-      "source_tier": "C",
-      "published_at": "2026-09-21T00:00:00.000Z",
-      "age_days": 0,
-      "cluster": "trade_supply_technology",
-      "domains": [
-        "supply_chain",
-        "technology",
-        "trade"
-      ],
-      "geography": "United States-China",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "Rare-earth elements including yttrium and dysprosium remain critical chokepoints for automakers, chipmakers, and defense contractors, shaping U.S. negotiating posture.",
+      "fact": "Negotiators are addressing a trade-truce extension, Chinese rare-earth magnet and critical-mineral flows, tariffs, and artificial-intelligence safeguards before the September 24 summit.",
       "americas_relevant": true
     },
     {
       "id": "E6",
-      "title": "New Russia sanctions increase trade pressure",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/d1715ad5e8feccba76bfae51c5f28c45",
-      "source_domain": "apnews.com",
+      "title": "G20 endorses supply-chain security",
+      "source": "The White House",
+      "url": "https://www.whitehouse.gov/releases/2026/09/g20-energy-abundance-ministerial-concludes-with-four-consensus-outcomes/",
+      "source_domain": "whitehouse.gov",
       "source_tier": "A",
-      "published_at": "2026-09-18T00:00:00.000Z",
-      "age_days": 3,
+      "published_at": "2026-09-21T00:00:00.000Z",
+      "age_days": 2,
       "cluster": "trade_supply_technology",
       "domains": [
-        "trade",
-        "supply_chain"
+        "supply_chain",
+        "trade"
       ],
-      "geography": "United States-Russia",
-      "evidence_type": "forward",
+      "geography": "G20",
+      "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "President Trump signed a broad Russia sanctions package targeting officials and major economic sectors, with potential implications for international trade and supply chains.",
+      "fact": "G20 energy ministers reported consensus on supply-chain security, infrastructure development, and resilience measures, offering a multilateral stabilizer amid trade tensions.",
       "americas_relevant": true
     },
     {
       "id": "E7",
-      "title": "Colorado water systems targeted",
-      "source": "Reuters",
-      "url": "https://www.investing.com/news/general-news/foreign-hackers-targeted-colorado-water-systems-in-august-governors-office-says-4908010",
-      "source_domain": "investing.com",
-      "source_tier": "C",
-      "published_at": "2026-09-18T00:00:00.000Z",
-      "age_days": 3,
+      "title": "EU flags cyber and dependency risks",
+      "source": "European Banking Authority",
+      "url": "https://www.eba.europa.eu/publications-and-media/press-releases/esas-call-vigilance-over-external-dependencies-cyber-threats-and-private-credit-risks",
+      "source_domain": "eba.europa.eu",
+      "source_tier": "A",
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "age_days": 0,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
-        "critical_infrastructure",
-        "technology"
+        "technology",
+        "financial"
       ],
-      "geography": "United States—Colorado",
-      "evidence_type": "observed",
-      "materiality": "medium",
-      "fact": "Foreign hackers altered controls at two Colorado water utilities, but officials reported no public-safety, water-quality, or service impact.",
-      "americas_relevant": true
+      "geography": "European Union",
+      "evidence_type": "forward",
+      "materiality": "high",
+      "fact": "EU supervisors identified reliance on external ICT and payment providers, cyber threats, and private-credit opacity as key financial-stability vulnerabilities.",
+      "americas_relevant": false
     },
     {
       "id": "E8",
-      "title": "Bond yields and liquidity strain",
+      "title": "Fed discount window supports liquidity",
       "source": "Reuters",
-      "url": "https://www.marketscreener.com/news/rising-oil-rates-and-yields-brew-up-stagflation-cocktail-for-markets-ce785bd3dd8ef522",
-      "source_domain": "marketscreener.com",
+      "url": "https://ca.marketscreener.com/news/news/fed-s-discount-window-supports-market-liquidity-jefferson-says-ce785ad9df88f42c",
+      "source_domain": "ca.marketscreener.com",
       "source_tier": "C",
-      "published_at": "2026-09-18T00:00:00.000Z",
-      "age_days": 3,
-      "cluster": "cyber_infrastructure_finance",
-      "domains": [
-        "financial"
-      ],
-      "geography": "Global",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "Global government-bond yields reached financial-crisis-era highs, while Reuters described the rise as orderly but increasingly fragile.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E9",
-      "title": "Markets retain stabilizers",
-      "source": "Reuters",
-      "url": "https://www.investing.com/news/stock-market-news/tech-leads-shares-higher-oil-eases-4908206",
-      "source_domain": "investing.com",
-      "source_tier": "C",
-      "published_at": "2026-09-20T00:00:00.000Z",
+      "published_at": "2026-09-22T00:00:00.000Z",
       "age_days": 1,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
         "financial"
       ],
-      "geography": "Asia and global markets",
+      "geography": "United States",
       "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "Asian shares edged higher and oil eased on supply hopes, although thin trading and French debt-risk premiums signaled continuing liquidity sensitivity.",
+      "materiality": "high",
+      "fact": "Federal Reserve Vice Chair Jefferson said discount-window improvements support liquidity and reduce forced Treasury sales during market stress.",
       "americas_relevant": true
     },
     {
+      "id": "E9",
+      "title": "India liquidity surplus falls",
+      "source": "Reuters",
+      "url": "https://uk.marketscreener.com/news/indian-central-bank-likely-defending-rupee-conducting-swaps-to-drain-excess-cash-ce785ad9da8af020",
+      "source_domain": "uk.marketscreener.com",
+      "source_tier": "C",
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "age_days": 0,
+      "cluster": "cyber_infrastructure_finance",
+      "domains": [
+        "financial"
+      ],
+      "geography": "India",
+      "evidence_type": "observed",
+      "materiality": "medium",
+      "fact": "India’s banking-system liquidity surplus fell 60% from its September 6 peak as the central bank used bond sales and foreign-exchange swaps.",
+      "americas_relevant": false
+    },
+    {
       "id": "E10",
-      "title": "El Niño health and water risks",
-      "source": "PAHO/WHO",
+      "title": "Hurricane Polo threatens Mexico",
+      "source": "Reuters via Thomson Reuters syndication",
+      "url": "https://d2233.cms.socastsrm.com/2026/09/23/outer-rainbands-of-major-hurricane-polo-reach-mexicos-coast/",
+      "source_domain": "d2233.cms.socastsrm.com",
+      "source_tier": "C",
+      "published_at": "2026-09-23T00:00:00.000Z",
+      "age_days": 0,
+      "cluster": "americas_civil",
+      "domains": [
+        "natural",
+        "critical_infrastructure",
+        "domestic"
+      ],
+      "geography": "Mexico",
+      "evidence_type": "forward",
+      "materiality": "high",
+      "fact": "Hurricane Polo’s rainbands reached Mexico’s Pacific coast, with life-threatening flooding and mudslides possible in Guerrero and Michoacán and preventive evacuations prepared.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E11",
+      "title": "Cuba grid collapse",
+      "source": "Reuters via Internazionale",
+      "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/18/cuba-energy-grid-suffers-nationwide-collapse",
+      "source_domain": "internazionale.it",
+      "source_tier": "C",
+      "published_at": "2026-09-18T00:00:00.000Z",
+      "age_days": 5,
+      "cluster": "americas_civil",
+      "domains": [
+        "critical_infrastructure",
+        "energy",
+        "domestic"
+      ],
+      "geography": "Cuba",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "Cuba’s electrical grid collapsed nationwide on September 18, leaving millions without power while authorities began gradual restoration efforts.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E13",
+      "title": "El Niño threatens food security",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/31c88df9ce8f67bcbfe3ea7f39431d57",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-09-22T00:00:00.000Z",
+      "age_days": 1,
+      "cluster": "food_health_natural",
+      "domains": [
+        "food",
+        "natural"
+      ],
+      "geography": "Asia and global",
+      "evidence_type": "forward",
+      "materiality": "high",
+      "fact": "Forecast extreme El Niño conditions could bring drought, heat, flooding, and fertilizer-related pressures that threaten Asian agriculture and raise global food prices.",
+      "americas_relevant": false
+    },
+    {
+      "id": "E14",
+      "title": "El Niño health risks rise",
+      "source": "Pan American Health Organization",
       "url": "https://www.paho.org/en/news/18-9-2026-paho-strengthening-nino-raises-growing-health-risks-across-americas",
       "source_domain": "paho.org",
       "source_tier": "C",
       "published_at": "2026-09-18T00:00:00.000Z",
-      "age_days": 3,
-      "cluster": "americas_civil",
+      "age_days": 5,
+      "cluster": "food_health_natural",
       "domains": [
         "public_health",
         "food",
@@ -698,113 +770,36 @@
       "geography": "Americas",
       "evidence_type": "forward",
       "materiality": "high",
-      "fact": "PAHO reports strengthening El Niño, with eight jurisdictions issuing alerts or emergencies and drought threatening water, agriculture, and food security across the region.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E11",
-      "title": "Cuba national grid collapse",
-      "source": "The News Now",
-      "url": "https://thenewsnow.news/en/region/central-america.html",
-      "source_domain": "thenewsnow.news",
-      "source_tier": "C",
-      "published_at": "2026-09-19T00:00:00.000Z",
-      "age_days": 2,
-      "cluster": "americas_civil",
-      "domains": [
-        "critical_infrastructure",
-        "domestic"
-      ],
-      "geography": "Cuba",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "Cuba’s electrical grid reportedly collapsed on September 18 after transmission-line failure, leaving millions without power and creating acute civilian service disruption.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E12",
-      "title": "Mexico violence advisory",
-      "source": "Government of Canada",
-      "url": "https://travel.gc.ca/destinations/mexico?gsid=cb39e826-d5c8-4c5e-85f6-bf667a1f198d",
-      "source_domain": "travel.gc.ca",
-      "source_tier": "C",
-      "published_at": "2026-09-17T00:00:00.000Z",
-      "age_days": 4,
-      "cluster": "americas_civil",
-      "domains": [
-        "civil_unrest",
-        "domestic"
-      ],
-      "geography": "Mexico",
-      "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "Canada’s updated advisory identifies multiple Mexican states where non-essential travel should be avoided because of high violence and organized crime.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E13",
-      "title": "DRC Ebola outbreak expanding",
-      "source": "WHO",
-      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON617",
-      "source_domain": "who.int",
-      "source_tier": "A",
-      "published_at": "2026-09-10T00:00:00.000Z",
-      "age_days": 11,
-      "cluster": "food_health_natural",
-      "domains": [
-        "public_health"
-      ],
-      "geography": "Democratic Republic of the Congo",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "WHO reported 6,757 confirmed Bundibugyo Ebola cases and 3,267 deaths in the DRC by September 7, with expansion to 61 health zones.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E14",
-      "title": "U.S. near-term hazard outlook limited",
-      "source": "NOAA Climate Prediction Center",
-      "url": "https://cpc.ncep.noaa.gov/products/predictions/threats/threats.php",
-      "source_domain": "cpc.ncep.noaa.gov",
-      "source_tier": "A",
-      "published_at": "2026-09-20T00:00:00.000Z",
-      "age_days": 1,
-      "cluster": "food_health_natural",
-      "domains": [
-        "natural"
-      ],
-      "geography": "United States",
-      "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "NOAA’s September 28–October 4 outlook posts no broad U.S. hazards, while monitoring possible heavy rain across Florida and the Gulf.",
+      "fact": "PAHO reports more than 5.2 million people affected, exposed, or acutely food insecure as strengthening El Niño drives drought, wildfires, flooding, and disease risks.",
       "americas_relevant": true
     },
     {
       "id": "E15",
-      "title": "U.S. measles burden remains elevated",
-      "source": "CDC",
-      "url": "https://www.cdc.gov/measles/data-research/",
-      "source_domain": "cdc.gov",
+      "title": "Nepal flood response stabilizes",
+      "source": "World Health Organization",
+      "url": "https://www.who.int/nepal/news/detail/16-09-2026-who-supports-immunization-programme-continuity-in-nepal-s-flood-affected-areas",
+      "source_domain": "who.int",
       "source_tier": "A",
-      "published_at": "2026-09-11T00:00:00.000Z",
-      "age_days": 10,
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "age_days": 7,
       "cluster": "food_health_natural",
       "domains": [
-        "public_health"
+        "public_health",
+        "natural"
       ],
-      "geography": "United States",
-      "evidence_type": "observed",
+      "geography": "Nepal",
+      "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "CDC reported 3,294 confirmed U.S. measles cases through September 10, 2026, across 47 jurisdictions.",
-      "americas_relevant": true
+      "fact": "After Nepal’s floods disrupted vaccination, authorities resumed immunization, delivered oral-cholera vaccine to over 50,000 people, and strengthened outbreak surveillance.",
+      "americas_relevant": false
     }
   ],
   "api_usage": {
     "research_model": "gpt-5.6-luna",
     "assessment_model": "gpt-5.6-terra",
     "web_search_calls": 7,
-    "estimated_run_cost_usd": 0.11156,
-    "estimated_period_spend_usd": 1.27689,
+    "estimated_run_cost_usd": 0.109529,
+    "estimated_period_spend_usd": 1.464255,
     "allocated_90_day_budget_usd": 10,
     "operational_stop_usd": 9
   },
