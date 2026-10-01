@@ -2,26 +2,26 @@
   "schema_version": 5,
   "engine_version": "5.3",
   "data_status": "VERIFIED",
-  "as_of": "2026-09-30",
-  "updated_at": "2026-09-30T11:29:08.611Z",
-  "last_successful_update": "2026-09-30T11:29:08.611Z",
-  "preparedness_urgency": 84,
-  "raw_preparedness_urgency": 84,
+  "as_of": "2026-10-01",
+  "updated_at": "2026-10-01T11:30:46.381Z",
+  "last_successful_update": "2026-10-01T11:30:46.381Z",
+  "preparedness_urgency": 83,
+  "raw_preparedness_urgency": 83,
   "preparedness_stage": "HIGH ALERT",
-  "global_threat_pressure": 88,
-  "leading_threat_pressure": 88,
+  "global_threat_pressure": 87,
+  "leading_threat_pressure": 87,
   "observed_civilian_disruption": 78,
   "americas_exposure": 87,
   "americas_stage": "SEVERE",
-  "americas_summary": "The Americas face high exposure to energy-price, shipping, trade, and critical-mineral disruptions. Mexico has active localized storm restrictions and industrial interruption; U.S. public-health and financial-system evidence is stabilizing overall.",
+  "americas_summary": "The Americas face high exposure through energy, shipping, trade and critical-mineral prices. Mexico faces localized hurricane-related transport and public-safety disruption; Southern Plains flooding is an imminent localized risk.",
   "americas_components": [
     {
-      "name": "Energy security",
+      "name": "Supply chain & transportation",
       "score": 97,
       "trend": "rising"
     },
     {
-      "name": "Supply chain & transportation",
+      "name": "Energy security",
       "score": 97,
       "trend": "rising"
     },
@@ -33,42 +33,43 @@
     {
       "name": "Global trade fragmentation",
       "score": 97,
-      "trend": "rising"
+      "trend": "stable"
     },
     {
       "name": "Critical infrastructure / cyber",
       "score": 92,
-      "trend": "rising"
+      "trend": "stable"
     },
     {
       "name": "Natural / environmental",
-      "score": 89,
+      "score": 90,
       "trend": "rising"
     }
   ],
   "conflict_escalation": 97,
-  "coupling_score": 89,
-  "momentum_score": 72,
-  "confidence_score": 82,
+  "coupling_score": 84,
+  "momentum_score": 69,
+  "confidence_score": 86,
   "confidence_level": "HIGH",
-  "confidence_rationale": "Fresh evidence spans five clusters, including four Tier-A sources. Several key energy and trade reports are secondary Reuters republications, and direct Americas disruption evidence is more limited outside Mexico. Evidence gate: 15 items, 11 sources, 4 Tier-A sources, 5/5 clusters.",
+  "confidence_rationale": "Fresh, multi-source evidence directly supports maritime, trade, technology and weather assessments; evidence of broad civilian outages or shortages remains limited. Evidence gate: 15 items, 13 sources, 7 Tier-A sources, 5/5 clusters.",
   "preparedness_window": "Days to weeks",
-  "summary": "Severe, ongoing maritime-energy disruption and constrained strategic-mineral supply remain the principal cross-border risks. Americas impacts are direct through energy, trade, and supply chains; Mexico also faces localized storm disruption. No evidence supports widespread financial, infrastructure, or health-system failure in the Americas.",
-  "primary_driver": "Continued Hormuz disruption, compounded by heightened Bab el-Mandeb risk, is constraining LNG movement and global shipping.",
+  "summary": "High disruption risk remains concentrated in energy and maritime supply chains, with commodity and technology inputs tightening. Americas impacts are most concrete in North American rare-earth prices and Mexico storm disruption; no broad Americas system failure is evidenced.",
+  "primary_driver": "Unresolved Hormuz reopening and rising Bab el-Mandeb risk, compounded by tight rare-earth supply.",
   "primary_stabilizers": [
-    "A Qatar-linked LNG carrier reappeared beyond Hormuz, indicating limited maritime movement despite continuing uncertainty around the chokepoint.",
-    "Washington and Beijing agreed to establish an AI-safety channel and continue trade talks, potentially reducing escalation risk in strategic technology.",
-    "The Federal Reserve convened a two-day community-bank cyber workshop covering incident response, AI risks, and cybersecurity practices; no active disruption was reported.",
-    "U.S. regulators published resolution-plan feedback for 15 banking organizations, indicating ongoing supervisory preparation for orderly failure management."
+    "Owners of Canada’s first major LNG export terminal approved a C$33 billion expansion intended to double capacity and broaden overseas energy supply.",
+    "The United States and China identified $30 billion of products each for potentially reduced tariffs, indicating limited near-term trade de-escalation.",
+    "The BIS reports banks hold stronger capital, larger liquidity buffers, and more stable funding, improving resilience against sovereign-debt and market-liquidity shocks.",
+    "Mexico deployed about 7,000 military personnel and opened temporary shelters as Polo threatened flooding and mudslides across affected regions.",
+    "CDC reports no U.S. cases linked to the DRC Ebola outbreak and assesses the risk to Americans and travelers as low."
   ],
   "domains": [
     {
       "key": "energy",
       "threat": 98,
-      "impact": 95,
+      "impact": 94,
       "americas_exposure": 97,
       "trend": "rising",
-      "rationale": "Hormuz closures continue disrupting Qatar LNG deliveries; Bab el-Mandeb risk broadens tanker exposure.",
+      "rationale": "Hormuz reopening remains unresolved and Bab el-Mandeb risk threatens energy flows; Canadian LNG expansion is a longer-term offset.",
       "name": "Energy security",
       "weight": 11
     },
@@ -78,7 +79,7 @@
       "impact": 93,
       "americas_exposure": 83,
       "trend": "rising",
-      "rationale": "Houthi territorial gains extend operational reach toward Bab el-Mandeb.",
+      "rationale": "Unresolved Hormuz negotiations and reported missile interceptions sustain regional escalation risk.",
       "name": "Military / geopolitical",
       "weight": 10
     },
@@ -88,37 +89,37 @@
       "impact": 95,
       "americas_exposure": 97,
       "trend": "rising",
-      "rationale": "LNG disruption, chokepoint risk, and constrained rare-earth shipments impair global supply routes.",
+      "rationale": "Two maritime chokepoint risks coincide with observed North American rare-earth price increases.",
       "name": "Supply chain & transportation",
       "weight": 10
     },
     {
       "key": "trade",
-      "threat": 95,
-      "impact": 85,
+      "threat": 94,
+      "impact": 84,
       "americas_exposure": 97,
-      "trend": "rising",
-      "rationale": "Two maritime chokepoints face disruption risk; strategic-material trade remains constrained.",
+      "trend": "stable",
+      "rationale": "Chokepoint exposure and export controls persist, while the U.S.-China tariff framework offers limited de-escalation.",
       "name": "Global trade fragmentation",
       "weight": 10
     },
     {
       "key": "technology",
-      "threat": 90,
-      "impact": 72,
-      "americas_exposure": 83,
-      "trend": "stable",
-      "rationale": "Tight rare-earth inputs sustain technology exposure, partly offset by renewed U.S.-China dialogue.",
+      "threat": 91,
+      "impact": 74,
+      "americas_exposure": 85,
+      "trend": "rising",
+      "rationale": "Rare-earth tightening and continuing semiconductor controls raise input and technology-access pressure.",
       "name": "Technology chokepoints",
       "weight": 7
     },
     {
       "key": "critical_infrastructure",
-      "threat": 91,
-      "impact": 81,
+      "threat": 90,
+      "impact": 80,
       "americas_exposure": 92,
-      "trend": "rising",
-      "rationale": "Storm restrictions and expected short-duration utility/telecom outages are active risks in Baja California Sur.",
+      "trend": "stable",
+      "rationale": "Polo threatens localized Mexican transport and public infrastructure; no broad outage is evidenced.",
       "name": "Critical infrastructure / cyber",
       "weight": 11
     },
@@ -128,27 +129,27 @@
       "impact": 72,
       "americas_exposure": 90,
       "trend": "stable",
-      "rationale": "Oil-linked currency pressure is observed abroad, while U.S. supervisory and cyber preparedness evidence is stabilizing.",
+      "rationale": "External payment and ICT dependencies remain vulnerabilities, moderated by bank capital and liquidity buffers.",
       "name": "Financial-system stress",
       "weight": 10
     },
     {
       "key": "food",
       "threat": 83,
-      "impact": 57,
+      "impact": 58,
       "americas_exposure": 81,
       "trend": "rising",
-      "rationale": "Multiple active U.S. foodborne investigations indicate localized food-safety disruption, not broad scarcity.",
+      "rationale": "Active U.S. sprout-linked outbreaks and Southern Plains flood risk support localized food disruption concern.",
       "name": "Food & agriculture",
       "weight": 8
     },
     {
       "key": "domestic",
       "threat": 73,
-      "impact": 67,
+      "impact": 68,
       "americas_exposure": 81,
       "trend": "rising",
-      "rationale": "Baja evacuations, coastal restrictions, and a temporary auto-production halt show localized disruption.",
+      "rationale": "Mexico's storm response, shelters and travel warnings reflect localized public-safety and mobility disruption.",
       "name": "Domestic institutional stress",
       "weight": 6
     },
@@ -158,27 +159,27 @@
       "impact": 49,
       "americas_exposure": 63,
       "trend": "stable",
-      "rationale": "No evidence of unrest-driven civilian access or service disruption.",
+      "rationale": "No evidence indicates material civilian unrest or related access disruption.",
       "name": "Civil unrest / public order",
       "weight": 7
     },
     {
       "key": "public_health",
-      "threat": 66,
-      "impact": 59,
+      "threat": 65,
+      "impact": 60,
       "americas_exposure": 67,
       "trend": "stable",
-      "rationale": "Large DRC Ebola outbreak and active U.S. foodborne investigations persist; CDC assesses U.S. Ebola risk as low.",
+      "rationale": "Foodborne outbreaks are under surveillance; CDC assesses Ebola risk to Americans as low with no U.S. linked cases.",
       "name": "Public health / biological",
       "weight": 5
     },
     {
       "key": "natural",
-      "threat": 88,
-      "impact": 78,
-      "americas_exposure": 89,
+      "threat": 89,
+      "impact": 80,
+      "americas_exposure": 90,
       "trend": "rising",
-      "rationale": "Hurricane Polo has prompted evacuations, maritime restrictions, and anticipated flooding in Mexico.",
+      "rationale": "Polo creates acute Mexico hazards, while NOAA forecasts a moderate flash-flood risk in the Southern Plains.",
       "name": "Natural / environmental",
       "weight": 5
     }
@@ -187,29 +188,29 @@
   "verified_hard_trigger_count": 0,
   "severe_hard_trigger_count": 0,
   "score_calibration": {
-    "raw_score": 84,
-    "published_score": 84,
-    "previous_daily_anchor": 83,
+    "raw_score": 83,
+    "published_score": 83,
+    "previous_daily_anchor": 84,
     "rate_limit_applied": false,
     "daily_rate_limit": 3,
     "sustained_90_for_48h": false,
     "high_impact_domain_count": 8
   },
   "score_components": {
-    "global_threat_pressure": 88,
+    "global_threat_pressure": 87,
     "observed_civilian_disruption": 78,
-    "coupling": 89,
-    "momentum": 72,
+    "coupling": 84,
+    "momentum": 69,
     "americas_exposure": 87
   },
   "drivers": [
     {
-      "name": "Energy security",
+      "name": "Supply chain & transportation",
       "severity": "critical",
       "note": "Primary driver"
     },
     {
-      "name": "Supply chain & transportation",
+      "name": "Energy security",
       "severity": "critical",
       "note": ""
     },
@@ -236,93 +237,102 @@
   ],
   "areas_to_watch": [
     {
-      "name": "Strait of Hormuz and Qatar LNG flows",
+      "name": "Persian Gulf and Strait of Hormuz",
       "severity": "critical",
-      "why": "Force majeure remains in effect amid continuing closures; limited vessel movement does not restore reliable throughput."
+      "why": "Reopening conditions remain unresolved, sustaining energy and shipping disruption risk."
     },
     {
-      "name": "Bab el-Mandeb and Red Sea shipping",
+      "name": "Bab el-Mandeb and Red Sea",
       "severity": "high",
-      "why": "Houthi gains near the Red Sea increase tanker-passage and trade-route exposure."
+      "why": "Regional missile activity and Houthi-control concerns threaten shipping and energy security."
     },
     {
-      "name": "Baja California Sur, Mexico",
+      "name": "North American critical minerals",
       "severity": "high",
-      "why": "Hurricane Polo is driving evacuations, coastal restrictions, and localized industrial and utility risk."
+      "why": "Rare-earth prices reached new highs amid tighter Chinese exports and stockpiling."
     },
     {
-      "name": "Rare-earth supply to the United States",
+      "name": "Mexico and U.S. Southern Plains weather",
       "severity": "high",
-      "why": "Some Chinese suppliers are refusing shipments and key materials remain expensive and tight."
+      "why": "Polo-related impacts and imminent flash-flood risk may disrupt transport and essential services."
     },
     {
-      "name": "DRC Ebola outbreak",
-      "severity": "high",
-      "why": "WHO reports a large, deadly outbreak, though CDC assesses current U.S. risk as low."
+      "name": "Financial-sector ICT dependencies",
+      "severity": "medium",
+      "why": "Supervisors identify common-provider and payment-system dependencies as a cyber-amplified vulnerability."
     }
   ],
   "signals": [
     {
-      "title": "Qatar LNG force majeure extended",
-      "summary": "QatarEnergy extended force majeure for some European and Asian LNG buyers because Strait of Hormuz closures continued disrupting deliveries.",
-      "url": "https://prodadmin.pgjonline.com/news/2026/september/qatarenergy-extends-lng-force-majeure-for-european-asian-buyers",
-      "source": "Reuters via PGJ Online",
-      "published_at": "2026-09-28T00:00:00.000Z",
-      "category": "ENERGY",
-      "impact": "up"
-    },
-    {
-      "title": "Houthi reach toward Bab el-Mandeb",
-      "summary": "Houthi forces captured Mokha and Red Sea islands, extending reach toward Bab el-Mandeb and threatening tanker passage and global trade.",
-      "url": "https://apnews.com/article/049d586b6e8ca0a0394bc013e3322da3",
+      "title": "Hormuz reopening talks continue",
+      "summary": "Mediators are pursuing a U.S.-Iran arrangement to reopen the Strait of Hormuz, but major conditions remain unresolved after earlier proposals failed.",
+      "url": "https://apnews.com/article/871504dbd98d9b08b226b9805d8f4606",
       "source": "Associated Press",
-      "published_at": "2026-09-29T00:00:00.000Z",
+      "published_at": "2026-09-28T00:00:00.000Z",
       "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Rare-earth shipments remain constrained",
-      "summary": "Some Chinese suppliers have refused U.S. rare-earth shipments, while yttrium, indium phosphide, and tungsten remain expensive amid tight supplies.",
-      "url": "https://theedgemalaysia.com/node/816883",
-      "source": "Reuters via The Edge Malaysia",
-      "published_at": "2026-09-04T00:00:00.000Z",
-      "category": "SUPPLY",
-      "impact": "up"
-    },
-    {
-      "title": "Critical-mineral dependence persists",
-      "summary": "Reuters assessed that U.S. reliance on China for rare-earth processing could persist into the 2030s despite domestic mining and processing expansion.",
-      "url": "https://www.investing.com/news/stock-market-news/analysischinas-rare-earths-dominance-to-overshadow-trumps-talks-with-xi-4914520",
-      "source": "Reuters via Investing.com",
+      "title": "Bab el-Mandeb risk rises",
+      "summary": "Yemen’s government warned that Houthi control near Bab el-Mandeb threatens global supply chains and energy security; Saudi Arabia reported missile interceptions.",
+      "url": "https://apnews.com/article/d19776cf1a68b45d28b1402f3a47b8cd",
+      "source": "Associated Press",
       "published_at": "2026-09-24T00:00:00.000Z",
+      "category": "MILITARY",
+      "impact": "up"
+    },
+    {
+      "title": "Rare-earth market tightening",
+      "summary": "North American rare-earth oxide prices reached new highs as buyers competed for limited non-Chinese material amid tighter Chinese exports and stockpiling.",
+      "url": "https://www.spglobal.com/energy/en/news-research/latest-news/metals/093026-north-american-rare-earths-at-new-highs-on-us-stockpiling-tight-chinese-exports",
+      "source": "S&P Global",
+      "published_at": "2026-09-30T00:00:00.000Z",
       "category": "SUPPLY",
       "impact": "up"
     },
     {
-      "title": "RBI supports rupee amid oil pressure",
-      "summary": "Reuters reported the rupee near 96 per dollar as Reserve Bank intervention countered oil-related pressure, while reserves reportedly fell $15 billion week over week.",
-      "url": "https://www.marketscreener.com/news/rupee-pressured-by-iran-talks-impasse-a-reliable-buffer-ce785adcdb88f120",
-      "source": "Reuters via MarketScreener",
-      "published_at": "2026-09-28T00:00:00.000Z",
+      "title": "Semiconductor export controls",
+      "summary": "U.S. export-control rules continue restricting semiconductor manufacturing, supercomputer, and military-intelligence transactions involving designated Chinese users.",
+      "url": "https://www.bis.gov/regulations/ear/744",
+      "source": "U.S. Bureau of Industry and Security",
+      "published_at": "2026-09-25T00:00:00.000Z",
+      "category": "TECH",
+      "impact": "up"
+    },
+    {
+      "title": "Financial-system cyber dependencies remain elevated",
+      "summary": "European supervisors flag dependence on external ICT providers and payment systems as key financial vulnerabilities, alongside rising AI-enabled cyber risk.",
+      "url": "https://www.eba.europa.eu/publications-and-media/press-releases/esas-call-vigilance-over-external-dependencies-cyber-threats-and-private-credit-risks",
+      "source": "European Banking Authority",
+      "published_at": "2026-09-24T00:00:00.000Z",
       "category": "FINANCE",
       "impact": "up"
     },
     {
-      "title": "Polo disrupts Baja services",
-      "summary": "Hurricane Polo prompted evacuations and warnings in Baja California Sur; General Motors suspended Ramos Arizpe production because of storm-related disruption, with restart expected Tuesday.",
-      "url": "https://www.aol.com/articles/mexicos-pacific-coast-braces-hurricane-104655000.html",
-      "source": "Reuters via AOL",
+      "title": "Polo disrupts northwest Mexico",
+      "summary": "Hurricane Polo threatened Baja California Sur with destructive winds, flash flooding, storm surge, and transport disruption around its landfall.",
+      "url": "https://ca.marketscreener.com/news/mexico-s-pacific-coast-braces-for-hurricane-polo-s-life-threatening-landfall-ce785adcdc89f420",
+      "source": "Reuters via MarketScreener",
       "published_at": "2026-09-28T00:00:00.000Z",
-      "category": "CIVIL",
+      "category": "NATURAL",
       "impact": "up"
     },
     {
-      "title": "Mexico restricts coastal activity",
-      "summary": "Authorities restricted beach access and suspended maritime activity in high-risk Baja California Sur areas, while warning that power and internet outages could last several hours.",
-      "url": "https://www.marketscreener.com/news/mexico-s-pacific-coast-braces-for-hurricane-polo-s-life-threatening-landfall-ce785adcdc89f420",
-      "source": "Reuters via MarketScreener",
-      "published_at": "2026-09-28T00:00:00.000Z",
-      "category": "CIVIL",
+      "title": "Canada updates Mexico travel warning",
+      "summary": "Canada advised avoiding non-essential travel in parts of northwestern Mexico, warning disasters may disrupt traffic, public transportation, and airports.",
+      "url": "https://travel.gc.ca/destinations/mexico",
+      "source": "Government of Canada",
+      "published_at": "2026-09-29T00:00:00.000Z",
+      "category": "NATURAL",
+      "impact": "up"
+    },
+    {
+      "title": "Southern Plains flash-flood threat",
+      "summary": "NOAA forecasts a moderate excessive-rainfall risk across the Southern Plains from October 1–2, including flash-flood-prone areas along the Texas I-35 corridor.",
+      "url": "https://origin-east-www-wpc.woc.noaa.gov/qpf/ero.php?day=2&opt=curr",
+      "source": "NOAA Weather Prediction Center",
+      "published_at": "2026-09-30T00:00:00.000Z",
+      "category": "NATURAL",
       "impact": "up"
     }
   ],
@@ -543,13 +553,23 @@
       "americas": 87,
       "conflict": 97,
       "momentum": 72
+    },
+    {
+      "date": "2026-10-01",
+      "preparedness": 83,
+      "raw_preparedness": 83,
+      "threat": 87,
+      "impact": 78,
+      "americas": 87,
+      "conflict": 97,
+      "momentum": 69
     }
   ],
   "evidence_quality": {
     "evidence_count": 15,
-    "fresh_count": 11,
-    "unique_sources": 11,
-    "tier_a_sources": 4,
+    "fresh_count": 10,
+    "unique_sources": 13,
+    "tier_a_sources": 7,
     "clusters": 5,
     "domains_covered": 11,
     "confidence_cap": 88,
@@ -558,12 +578,56 @@
   "evidence_log": [
     {
       "id": "E1",
-      "title": "Qatar LNG force majeure extended",
-      "source": "Reuters via PGJ Online",
-      "url": "https://prodadmin.pgjonline.com/news/2026/september/qatarenergy-extends-lng-force-majeure-for-european-asian-buyers",
-      "source_domain": "prodadmin.pgjonline.com",
-      "source_tier": "C",
+      "title": "Hormuz reopening talks continue",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/871504dbd98d9b08b226b9805d8f4606",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
       "published_at": "2026-09-28T00:00:00.000Z",
+      "age_days": 3,
+      "cluster": "military_energy_shipping",
+      "domains": [
+        "military",
+        "energy",
+        "trade",
+        "supply_chain"
+      ],
+      "geography": "Persian Gulf / Strait of Hormuz",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "Mediators are pursuing a U.S.-Iran arrangement to reopen the Strait of Hormuz, but major conditions remain unresolved after earlier proposals failed.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E2",
+      "title": "Bab el-Mandeb risk rises",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/d19776cf1a68b45d28b1402f3a47b8cd",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-09-24T00:00:00.000Z",
+      "age_days": 7,
+      "cluster": "military_energy_shipping",
+      "domains": [
+        "military",
+        "energy",
+        "trade",
+        "supply_chain"
+      ],
+      "geography": "Red Sea / Bab el-Mandeb",
+      "evidence_type": "forward",
+      "materiality": "high",
+      "fact": "Yemen’s government warned that Houthi control near Bab el-Mandeb threatens global supply chains and energy security; Saudi Arabia reported missile interceptions.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E3",
+      "title": "Canadian LNG capacity expansion",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/c24b8dbafb7bfe568ac242f1deb6f3b2",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-09-29T00:00:00.000Z",
       "age_days": 2,
       "cluster": "military_energy_shipping",
       "domains": [
@@ -571,265 +635,242 @@
         "supply_chain",
         "trade"
       ],
-      "geography": "Persian Gulf; Europe; Asia",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "QatarEnergy extended force majeure for some European and Asian LNG buyers because Strait of Hormuz closures continued disrupting deliveries.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E2",
-      "title": "Houthi reach toward Bab el-Mandeb",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/049d586b6e8ca0a0394bc013e3322da3",
-      "source_domain": "apnews.com",
-      "source_tier": "A",
-      "published_at": "2026-09-29T00:00:00.000Z",
-      "age_days": 1,
-      "cluster": "military_energy_shipping",
-      "domains": [
-        "military",
-        "energy",
-        "trade"
-      ],
-      "geography": "Yemen; Bab el-Mandeb; Red Sea",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "Houthi forces captured Mokha and Red Sea islands, extending reach toward Bab el-Mandeb and threatening tanker passage and global trade.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E3",
-      "title": "Partial LNG traffic resumes",
-      "source": "Reuters via Business Recorder",
-      "url": "https://www.brecorder.com/news/40441719/qatar-linked-lng-traffic-thru-hormuz-picks-up",
-      "source_domain": "brecorder.com",
-      "source_tier": "C",
-      "published_at": "2026-09-29T00:00:00.000Z",
-      "age_days": 1,
-      "cluster": "military_energy_shipping",
-      "domains": [
-        "energy",
-        "supply_chain",
-        "trade"
-      ],
-      "geography": "Qatar; Strait of Hormuz; Indian Ocean",
+      "geography": "Canada / Pacific LNG trade",
       "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "A Qatar-linked LNG carrier reappeared beyond Hormuz, indicating limited maritime movement despite continuing uncertainty around the chokepoint.",
+      "fact": "Owners of Canada’s first major LNG export terminal approved a C$33 billion expansion intended to double capacity and broaden overseas energy supply.",
       "americas_relevant": true
     },
     {
       "id": "E4",
-      "title": "Rare-earth shipments remain constrained",
-      "source": "Reuters via The Edge Malaysia",
-      "url": "https://theedgemalaysia.com/node/816883",
-      "source_domain": "theedgemalaysia.com",
-      "source_tier": "C",
-      "published_at": "2026-09-04T00:00:00.000Z",
-      "age_days": 26,
-      "cluster": "trade_supply_technology",
-      "domains": [
-        "supply_chain",
-        "trade",
-        "technology"
-      ],
-      "geography": "China–United States",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "Some Chinese suppliers have refused U.S. rare-earth shipments, while yttrium, indium phosphide, and tungsten remain expensive amid tight supplies.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E5",
-      "title": "AI and trade channels established",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/e8f858ed9094b99bc8d3d339f9899f31",
-      "source_domain": "apnews.com",
+      "title": "U.S.-China tariff framework",
+      "source": "The White House",
+      "url": "https://www.whitehouse.gov/releases/2026/09/u-s-china-board-of-trade/",
+      "source_domain": "whitehouse.gov",
       "source_tier": "A",
-      "published_at": "2026-09-26T00:00:00.000Z",
+      "published_at": "2026-09-27T00:00:00.000Z",
       "age_days": 4,
       "cluster": "trade_supply_technology",
       "domains": [
         "trade",
-        "technology",
         "supply_chain"
       ],
-      "geography": "China–United States",
+      "geography": "United States-China",
       "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "Washington and Beijing agreed to establish an AI-safety channel and continue trade talks, potentially reducing escalation risk in strategic technology.",
+      "materiality": "high",
+      "fact": "The United States and China identified $30 billion of products each for potentially reduced tariffs, indicating limited near-term trade de-escalation.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E5",
+      "title": "Rare-earth market tightening",
+      "source": "S&P Global",
+      "url": "https://www.spglobal.com/energy/en/news-research/latest-news/metals/093026-north-american-rare-earths-at-new-highs-on-us-stockpiling-tight-chinese-exports",
+      "source_domain": "spglobal.com",
+      "source_tier": "C",
+      "published_at": "2026-09-30T00:00:00.000Z",
+      "age_days": 1,
+      "cluster": "trade_supply_technology",
+      "domains": [
+        "supply_chain",
+        "technology"
+      ],
+      "geography": "North America-China",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "North American rare-earth oxide prices reached new highs as buyers competed for limited non-Chinese material amid tighter Chinese exports and stockpiling.",
       "americas_relevant": true
     },
     {
       "id": "E6",
-      "title": "Critical-mineral dependence persists",
-      "source": "Reuters via Investing.com",
-      "url": "https://www.investing.com/news/stock-market-news/analysischinas-rare-earths-dominance-to-overshadow-trumps-talks-with-xi-4914520",
-      "source_domain": "investing.com",
-      "source_tier": "C",
-      "published_at": "2026-09-24T00:00:00.000Z",
+      "title": "Semiconductor export controls",
+      "source": "U.S. Bureau of Industry and Security",
+      "url": "https://www.bis.gov/regulations/ear/744",
+      "source_domain": "bis.gov",
+      "source_tier": "A",
+      "published_at": "2026-09-25T00:00:00.000Z",
       "age_days": 6,
       "cluster": "trade_supply_technology",
       "domains": [
-        "supply_chain",
-        "trade",
-        "technology"
+        "technology",
+        "trade"
       ],
-      "geography": "Global, centered on China–United States",
-      "evidence_type": "forward",
-      "materiality": "high",
-      "fact": "Reuters assessed that U.S. reliance on China for rare-earth processing could persist into the 2030s despite domestic mining and processing expansion.",
+      "geography": "United States-China",
+      "evidence_type": "observed",
+      "materiality": "medium",
+      "fact": "U.S. export-control rules continue restricting semiconductor manufacturing, supercomputer, and military-intelligence transactions involving designated Chinese users.",
       "americas_relevant": true
     },
     {
       "id": "E7",
-      "title": "Fed hosts community-bank cyber workshop",
-      "source": "Federal Reserve Board",
-      "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260929a.htm",
-      "source_domain": "federalreserve.gov",
-      "source_tier": "A",
-      "published_at": "2026-09-29T00:00:00.000Z",
-      "age_days": 1,
+      "title": "Payment outage could amplify liquidity stress",
+      "source": "Reserve Bank of Australia",
+      "url": "https://www.rba.gov.au/publications/fsr/2026/oct/focus-topic-operational-risk-and-financial-stability.html",
+      "source_domain": "rba.gov.au",
+      "source_tier": "C",
+      "published_at": "2026-10-01T00:00:00.000Z",
+      "age_days": 0,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
         "financial",
         "technology"
       ],
-      "geography": "United States",
-      "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "The Federal Reserve convened a two-day community-bank cyber workshop covering incident response, AI risks, and cybersecurity practices; no active disruption was reported.",
-      "americas_relevant": true
+      "geography": "Australia",
+      "evidence_type": "forward",
+      "materiality": "high",
+      "fact": "The RBA’s October review finds a cyber-induced outage at a common banking service provider could block payments, create liquidity pressure, and trigger forced asset sales.",
+      "americas_relevant": false
     },
     {
       "id": "E8",
-      "title": "Fed publishes resolution-plan feedback",
-      "source": "Federal Reserve Board",
-      "url": "https://www.federalreserve.gov/newsevents/pressreleases/2026-press.htm",
-      "source_domain": "federalreserve.gov",
+      "title": "Financial-system cyber dependencies remain elevated",
+      "source": "European Banking Authority",
+      "url": "https://www.eba.europa.eu/publications-and-media/press-releases/esas-call-vigilance-over-external-dependencies-cyber-threats-and-private-credit-risks",
+      "source_domain": "eba.europa.eu",
       "source_tier": "A",
-      "published_at": "2026-09-29T00:00:00.000Z",
-      "age_days": 1,
+      "published_at": "2026-09-24T00:00:00.000Z",
+      "age_days": 7,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
-        "financial"
+        "financial",
+        "technology"
       ],
-      "geography": "United States",
-      "evidence_type": "stabilizer",
+      "geography": "European Union",
+      "evidence_type": "forward",
       "materiality": "medium",
-      "fact": "U.S. regulators published resolution-plan feedback for 15 banking organizations, indicating ongoing supervisory preparation for orderly failure management.",
+      "fact": "European supervisors flag dependence on external ICT providers and payment systems as key financial vulnerabilities, alongside rising AI-enabled cyber risk.",
       "americas_relevant": true
     },
     {
       "id": "E9",
-      "title": "RBI supports rupee amid oil pressure",
-      "source": "Reuters via MarketScreener",
-      "url": "https://www.marketscreener.com/news/rupee-pressured-by-iran-talks-impasse-a-reliable-buffer-ce785adcdb88f120",
-      "source_domain": "marketscreener.com",
+      "title": "Bank resilience provides a stabilizer",
+      "source": "Bank for International Settlements",
+      "url": "https://www.bis.org/publications/aer-2026/high-public-debt-shifting-financial-markets",
+      "source_domain": "bis.org",
       "source_tier": "C",
-      "published_at": "2026-09-28T00:00:00.000Z",
-      "age_days": 2,
+      "published_at": "2026-07-01T00:00:00.000Z",
+      "age_days": 92,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
         "financial"
       ],
-      "geography": "India",
-      "evidence_type": "observed",
+      "geography": "Global",
+      "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "Reuters reported the rupee near 96 per dollar as Reserve Bank intervention countered oil-related pressure, while reserves reportedly fell $15 billion week over week.",
-      "americas_relevant": false
+      "fact": "The BIS reports banks hold stronger capital, larger liquidity buffers, and more stable funding, improving resilience against sovereign-debt and market-liquidity shocks.",
+      "americas_relevant": true
     },
     {
       "id": "E10",
-      "title": "Polo disrupts Baja services",
-      "source": "Reuters via AOL",
-      "url": "https://www.aol.com/articles/mexicos-pacific-coast-braces-hurricane-104655000.html",
-      "source_domain": "aol.com",
+      "title": "Polo disrupts northwest Mexico",
+      "source": "Reuters via MarketScreener",
+      "url": "https://ca.marketscreener.com/news/mexico-s-pacific-coast-braces-for-hurricane-polo-s-life-threatening-landfall-ce785adcdc89f420",
+      "source_domain": "ca.marketscreener.com",
       "source_tier": "C",
       "published_at": "2026-09-28T00:00:00.000Z",
-      "age_days": 2,
+      "age_days": 3,
       "cluster": "americas_civil",
       "domains": [
-        "domestic",
+        "natural",
         "critical_infrastructure",
-        "natural"
+        "domestic"
       ],
       "geography": "Mexico",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "Hurricane Polo prompted evacuations and warnings in Baja California Sur; General Motors suspended Ramos Arizpe production because of storm-related disruption, with restart expected Tuesday.",
+      "fact": "Hurricane Polo threatened Baja California Sur with destructive winds, flash flooding, storm surge, and transport disruption around its landfall.",
       "americas_relevant": true
     },
     {
       "id": "E11",
-      "title": "Mexico restricts coastal activity",
+      "title": "Mexico shelters and deploys forces",
       "source": "Reuters via MarketScreener",
-      "url": "https://www.marketscreener.com/news/mexico-s-pacific-coast-braces-for-hurricane-polo-s-life-threatening-landfall-ce785adcdc89f420",
+      "url": "https://www.marketscreener.com/news/hurricane-polo-bears-down-on-mexico-life-threatening-flooding-feared-ce785addd988ff27",
       "source_domain": "marketscreener.com",
       "source_tier": "C",
       "published_at": "2026-09-28T00:00:00.000Z",
-      "age_days": 2,
+      "age_days": 3,
       "cluster": "americas_civil",
       "domains": [
+        "natural",
         "domestic",
-        "critical_infrastructure",
-        "natural"
-      ],
-      "geography": "Mexico",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "Authorities restricted beach access and suspended maritime activity in high-risk Baja California Sur areas, while warning that power and internet outages could last several hours.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E12",
-      "title": "Emergency preparations deployed",
-      "source": "Reuters via MarketScreener",
-      "url": "https://uk.marketscreener.com/news/hurricane-polo-bears-down-on-mexico-life-threatening-flooding-feared-ce785addd988ff27",
-      "source_domain": "uk.marketscreener.com",
-      "source_tier": "C",
-      "published_at": "2026-09-28T00:00:00.000Z",
-      "age_days": 2,
-      "cluster": "americas_civil",
-      "domains": [
-        "domestic",
-        "natural"
+        "critical_infrastructure"
       ],
       "geography": "Mexico",
       "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "Mexico deployed about 7,000 military personnel and opened temporary shelters as authorities prepared for life-threatening flooding and mudslides from Hurricane Polo.",
+      "fact": "Mexico deployed about 7,000 military personnel and opened temporary shelters as Polo threatened flooding and mudslides across affected regions.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E12",
+      "title": "Canada updates Mexico travel warning",
+      "source": "Government of Canada",
+      "url": "https://travel.gc.ca/destinations/mexico",
+      "source_domain": "travel.gc.ca",
+      "source_tier": "C",
+      "published_at": "2026-09-29T00:00:00.000Z",
+      "age_days": 2,
+      "cluster": "americas_civil",
+      "domains": [
+        "natural",
+        "domestic",
+        "critical_infrastructure"
+      ],
+      "geography": "Mexico",
+      "evidence_type": "forward",
+      "materiality": "medium",
+      "fact": "Canada advised avoiding non-essential travel in parts of northwestern Mexico, warning disasters may disrupt traffic, public transportation, and airports.",
       "americas_relevant": true
     },
     {
       "id": "E13",
-      "title": "Ebola outbreak expanding",
-      "source": "WHO",
-      "url": "https://www.who.int/emergencies/alert-and-response",
-      "source_domain": "who.int",
+      "title": "Southern Plains flash-flood threat",
+      "source": "NOAA Weather Prediction Center",
+      "url": "https://origin-east-www-wpc.woc.noaa.gov/qpf/ero.php?day=2&opt=curr",
+      "source_domain": "origin-east-www-wpc.woc.noaa.gov",
       "source_tier": "A",
-      "published_at": "2026-09-29T00:00:00.000Z",
+      "published_at": "2026-09-30T00:00:00.000Z",
       "age_days": 1,
       "cluster": "food_health_natural",
       "domains": [
-        "public_health"
+        "natural",
+        "food"
       ],
-      "geography": "Democratic Republic of the Congo; Uganda; France",
-      "evidence_type": "observed",
+      "geography": "United States—Texas and southeastern Oklahoma",
+      "evidence_type": "forward",
       "materiality": "high",
-      "fact": "WHO reported 8,137 suspected, probable, and confirmed Bundibugyo cases and 3,926 deaths through September 27, 2026.",
+      "fact": "NOAA forecasts a moderate excessive-rainfall risk across the Southern Plains from October 1–2, including flash-flood-prone areas along the Texas I-35 corridor.",
       "americas_relevant": true
     },
     {
       "id": "E14",
-      "title": "CDC foodborne investigations active",
+      "title": "Ebola outbreak remains externally contained",
       "source": "CDC",
-      "url": "https://www.cdc.gov/foodborne-outbreaks/outbreaks/",
+      "url": "https://www.cdc.gov/ebola/situation-summary/index.html",
       "source_domain": "cdc.gov",
       "source_tier": "A",
       "published_at": "2026-09-23T00:00:00.000Z",
-      "age_days": 7,
+      "age_days": 8,
+      "cluster": "food_health_natural",
+      "domains": [
+        "public_health"
+      ],
+      "geography": "Democratic Republic of the Congo; United States",
+      "evidence_type": "stabilizer",
+      "materiality": "medium",
+      "fact": "CDC reports no U.S. cases linked to the DRC Ebola outbreak and assesses the risk to Americans and travelers as low.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E15",
+      "title": "Sprout-linked outbreaks under surveillance",
+      "source": "CDC",
+      "url": "https://portugues.cdc.gov/outbreaks/",
+      "source_domain": "portugues.cdc.gov",
+      "source_tier": "A",
+      "published_at": "2026-09-30T00:00:00.000Z",
+      "age_days": 1,
       "cluster": "food_health_natural",
       "domains": [
         "food",
@@ -838,35 +879,16 @@
       "geography": "United States",
       "evidence_type": "observed",
       "materiality": "medium",
-      "fact": "CDC’s active-investigation list includes multistate outbreaks linked to sprouts, shell eggs, jalapeños, lettuce, blueberries, infant formula, dairy, and other foods.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E15",
-      "title": "U.S. Ebola risk remains low",
-      "source": "CDC",
-      "url": "https://www.cdc.gov/ebola/situation-summary/index.html",
-      "source_domain": "cdc.gov",
-      "source_tier": "A",
-      "published_at": "2026-09-23T00:00:00.000Z",
-      "age_days": 7,
-      "cluster": "food_health_natural",
-      "domains": [
-        "public_health"
-      ],
-      "geography": "United States; Democratic Republic of the Congo",
-      "evidence_type": "stabilizer",
-      "materiality": "high",
-      "fact": "CDC reported no U.S. cases linked to the DRC outbreak and assessed the risk to Americans and travelers as low.",
+      "fact": "CDC’s current outbreak list includes a September Salmonella outbreak linked to broccoli sprouts and an August E. coli/S​​almonella outbreak linked to alfalfa sprouts.",
       "americas_relevant": true
     }
   ],
   "api_usage": {
     "research_model": "gpt-5.6-luna",
     "assessment_model": "gpt-5.6-terra",
-    "web_search_calls": 7,
-    "estimated_run_cost_usd": 0.109933,
-    "estimated_period_spend_usd": 2.149118,
+    "web_search_calls": 5,
+    "estimated_run_cost_usd": 0.088113,
+    "estimated_period_spend_usd": 2.23723,
     "allocated_90_day_budget_usd": 10,
     "operational_stop_usd": 9
   },
