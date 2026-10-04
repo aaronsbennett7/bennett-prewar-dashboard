@@ -2,9 +2,9 @@
   "schema_version": 5,
   "engine_version": "5.3",
   "data_status": "VERIFIED",
-  "as_of": "2026-10-02",
-  "updated_at": "2026-10-02T11:29:31.409Z",
-  "last_successful_update": "2026-10-02T11:29:31.409Z",
+  "as_of": "2026-10-04",
+  "updated_at": "2026-10-04T18:02:31.649Z",
+  "last_successful_update": "2026-10-04T18:02:31.649Z",
   "preparedness_urgency": 84,
   "raw_preparedness_urgency": 84,
   "preparedness_stage": "HIGH ALERT",
@@ -13,7 +13,7 @@
   "observed_civilian_disruption": 79,
   "americas_exposure": 87,
   "americas_stage": "SEVERE",
-  "americas_summary": "Americas exposure is highest through energy and shipping-linked prices and availability, plus Hurricane Rachel’s near-term effects in Mexico and potentially the southern United States. A multistate sprout outbreak is causing limited, targeted health and food disruption.",
+  "americas_summary": "The Americas face elevated fuel-price and import-logistics exposure, active weather-related local closures and flood risks, a significant U.S. measles burden, a foodborne illness outbreak, and tighter financial conditions. Evidence does not establish widespread fuel rationing, payment restrictions, or national infrastructure failure.",
   "americas_components": [
     {
       "name": "Supply chain & transportation",
@@ -48,19 +48,18 @@
   ],
   "conflict_escalation": 98,
   "coupling_score": 82,
-  "momentum_score": 73,
-  "confidence_score": 84,
+  "momentum_score": 75,
+  "confidence_score": 86,
   "confidence_level": "HIGH",
-  "confidence_rationale": "Fresh, direct Tier A reporting supports Hormuz disruption, hurricane closures, and the outbreak; some critical-mineral and financial-risk evidence is lower-tier or forward-looking. Evidence gate: 14 items, 8 sources, 5 Tier-A sources, 5/5 clusters.",
+  "confidence_rationale": "Fresh, high-materiality reporting from AP, NOAA, CDC, and official U.S. sources directly supports most major assessments; financial-market evidence relies on lower-tier republication. Evidence gate: 15 items, 9 sources, 6 Tier-A sources, 5/5 clusters.",
   "preparedness_window": "Days to weeks",
-  "summary": "Hormuz shipping disruption remains the main cross-border civilian risk, while Hurricane Rachel creates immediate localized Americas disruption risk. Foodborne illness is contained but active.",
-  "primary_driver": "Effective closure of the Strait of Hormuz disrupting a major oil and gas shipping corridor.",
+  "summary": "Severe, sustained Hormuz disruption remains the primary global civilian-risk driver, reinforcing energy, shipping, trade, and supply-chain pressure. Americas-facing natural, health, and financial stresses are also active, though major systemwide access failures are not evidenced.",
+  "primary_driver": "Virtual closure of the Strait of Hormuz disrupting a major oil-and-gas shipping route.",
   "primary_stabilizers": [
-    "Mediators continue pursuing an agreement that could reopen Hormuz and manage shipping traffic, despite major unresolved conditions between Washington and Tehran.",
-    "Washington and Beijing agreed to continue reducing reciprocal tariffs on roughly $30 billion of goods, mainly non-sensitive products.",
-    "U.S. banks retain historically high capital and liquidity, although sophisticated cybercrime and state-backed threats remain concerns.",
-    "The National Hurricane Center continues regional tropical monitoring, supporting early warning and preparedness across Mexico, Central America, the Caribbean, and nearby U.S. waters.",
-    "Traceback identified alfalfa seed lot SAL2-24JB; suppliers recalled the lot, while CDC advises consumers not to eat, sell, or serve affected sprouts."
+    "G7 countries plan to release 100 million barrels of oil and diesel, adding emergency supply as war-related disruption drives prices higher.",
+    "Mediators continue pursuing a U.S.-Iran arrangement that could reopen the Strait of Hormuz, though major conditions and implementation hurdles remain.",
+    "Brazil’s Senate approved rare-earth regulations that could support new exploration and diversify supply, though China remains dominant in critical-mineral processing.",
+    "BIS reports that stronger bank resilience has increased systemic buffers, although market liquidity can still dry up during stress."
   ],
   "domains": [
     {
@@ -69,7 +68,7 @@
       "impact": 95,
       "americas_exposure": 97,
       "trend": "rising",
-      "rationale": "Hormuz remains virtually closed, disrupting a corridor that carried about one-fifth of traded oil and gas.",
+      "rationale": "Hormuz remains virtually closed, constraining a major oil-and-gas route; emergency G7 releases provide partial relief.",
       "name": "Energy security",
       "weight": 11
     },
@@ -79,7 +78,7 @@
       "impact": 94,
       "americas_exposure": 84,
       "trend": "rising",
-      "rationale": "Shipping disruption persists and the U.S. is deploying additional forces amid potential renewed strikes.",
+      "rationale": "Attacks continue to sustain the Hormuz disruption, despite an active diplomatic channel.",
       "name": "Military / geopolitical",
       "weight": 10
     },
@@ -89,7 +88,7 @@
       "impact": 96,
       "americas_exposure": 97,
       "trend": "rising",
-      "rationale": "Hormuz disruption and constrained rare-earth shipments create concurrent logistics and input risks.",
+      "rationale": "Hormuz shipping disruption and unresolved trade disputes maintain severe logistics and input risk.",
       "name": "Supply chain & transportation",
       "weight": 10
     },
@@ -99,7 +98,7 @@
       "impact": 85,
       "americas_exposure": 97,
       "trend": "stable",
-      "rationale": "Hormuz constrains trade flows, partly offset by continued U.S.–China tariff reductions.",
+      "rationale": "Shipping disruption and stalled G20 discussions sustain trade friction; emergency fuel supply is a mitigant.",
       "name": "Global trade fragmentation",
       "weight": 10
     },
@@ -109,7 +108,7 @@
       "impact": 74,
       "americas_exposure": 85,
       "trend": "rising",
-      "rationale": "Tight rare-earth inputs and cyber risks remain material, though no broad technology-service outage is evidenced.",
+      "rationale": "Semiconductor-related import vulnerability and potential GOES service interference preserve elevated risk.",
       "name": "Technology chokepoints",
       "weight": 7
     },
@@ -119,7 +118,7 @@
       "impact": 81,
       "americas_exposure": 92,
       "trend": "rising",
-      "rationale": "Hurricane-related port closures are active in Baja California Sur; wider power disruption remains a near-term risk.",
+      "rationale": "Weather radar outages, coastal port closure, and potential satellite-service interference show localized operational strain.",
       "name": "Critical infrastructure / cyber",
       "weight": 11
     },
@@ -129,7 +128,7 @@
       "impact": 72,
       "americas_exposure": 90,
       "trend": "rising",
-      "rationale": "Cyber and sovereign-market vulnerabilities are forward risks; no current Americas banking-access constraint is reported.",
+      "rationale": "Elevated sovereign yields, weaker bank shares, and wider credit protection costs indicate active market stress.",
       "name": "Financial-system stress",
       "weight": 10
     },
@@ -139,7 +138,7 @@
       "impact": 59,
       "americas_exposure": 81,
       "trend": "stable",
-      "rationale": "A recalled sprout product caused multistate illnesses, but traceback and recall limit broader food-access implications.",
+      "rationale": "A large cyclospora outbreak linked to Mexican lettuce production is causing widespread illness, without evidence of broad shortages.",
       "name": "Food & agriculture",
       "weight": 8
     },
@@ -149,7 +148,7 @@
       "impact": 69,
       "americas_exposure": 81,
       "trend": "rising",
-      "rationale": "Local port and beach closures and flood warnings in Baja California Sur are active.",
+      "rationale": "Hurricane-related closures and expected road impacts create localized civilian disruption in Mexico.",
       "name": "Domestic institutional stress",
       "weight": 6
     },
@@ -159,7 +158,7 @@
       "impact": 49,
       "americas_exposure": 63,
       "trend": "stable",
-      "rationale": "No evidence of material civilian unrest disruption.",
+      "rationale": "No evidence provided of material unrest-related civilian disruption.",
       "name": "Civil unrest / public order",
       "weight": 7
     },
@@ -168,8 +167,8 @@
       "threat": 65,
       "impact": 62,
       "americas_exposure": 68,
-      "trend": "stable",
-      "rationale": "CDC reports 76 illnesses and six hospitalizations; recalls and source tracing are active mitigations.",
+      "trend": "rising",
+      "rationale": "High U.S. measles cases, foodborne illness, and an ongoing California heat wave elevate health burdens.",
       "name": "Public health / biological",
       "weight": 5
     },
@@ -179,7 +178,7 @@
       "impact": 82,
       "americas_exposure": 92,
       "trend": "rising",
-      "rationale": "Category 3 Hurricane Rachel threatens rain, wind, flooding, and power disruptions; local closures are already in effect.",
+      "rationale": "Gulf flood watch, Hurricane Rachel impacts, and California heat hazard support high active regional risk.",
       "name": "Natural / environmental",
       "weight": 5
     }
@@ -190,7 +189,7 @@
   "score_calibration": {
     "raw_score": 84,
     "published_score": 84,
-    "previous_daily_anchor": 83,
+    "previous_daily_anchor": 84,
     "rate_limit_applied": false,
     "daily_rate_limit": 3,
     "sustained_90_for_48h": false,
@@ -200,7 +199,7 @@
     "global_threat_pressure": 88,
     "observed_civilian_disruption": 79,
     "coupling": 82,
-    "momentum": 73,
+    "momentum": 75,
     "americas_exposure": 87
   },
   "drivers": [
@@ -237,35 +236,35 @@
   ],
   "areas_to_watch": [
     {
-      "name": "Strait of Hormuz energy and shipping access",
+      "name": "Hormuz energy and shipping access",
       "severity": "critical",
-      "why": "Sustained closure can propagate into fuel, freight, and commodity disruptions."
+      "why": "Continued near-closure could deepen fuel, freight, and trade disruption despite emergency releases."
     },
     {
-      "name": "Hurricane Rachel impacts in Mexico and nearby U.S. areas",
+      "name": "Americas weather and infrastructure operations",
       "severity": "high",
-      "why": "Category 3 conditions and existing closures create imminent flood, power, and transport risks."
+      "why": "Flood, hurricane, heat, radar outage, and satellite-interference signals may compound local service disruption."
     },
     {
-      "name": "Critical-mineral availability",
+      "name": "U.S. public-health burden",
       "severity": "high",
-      "why": "Shipment hesitation and licensing uncertainty threaten electronics and defense supply inputs."
+      "why": "Measles outbreaks and the cyclospora event are already producing widespread illness."
     },
     {
-      "name": "Financial and infrastructure cyber resilience",
+      "name": "Global financial conditions",
       "severity": "medium",
-      "why": "Systemic risk is credible but no actual service or access disruption is evidenced."
+      "why": "Higher sovereign yields and widening credit stress could tighten household and business financing."
     },
     {
-      "name": "Sprout outbreak recall effectiveness",
+      "name": "Trade and critical-mineral inputs",
       "severity": "medium",
-      "why": "Illnesses span 16 states, though the contaminated seed lot has been identified and recalled."
+      "why": "Unresolved tariff disputes and concentrated processing capacity retain technology supply risk."
     }
   ],
   "signals": [
     {
-      "title": "Hormuz remains effectively closed",
-      "summary": "AP reports shipping has been disrupted and the Strait of Hormuz virtually closed since the Iran war began, affecting a corridor formerly carrying about one-fifth of traded oil and gas.",
+      "title": "Hormuz shipping remains disrupted",
+      "summary": "Shipping through the Strait of Hormuz remains virtually closed after attacks, disrupting a route that previously carried about one-fifth of globally traded oil and gas.",
       "url": "https://apnews.com/article/af2443646cf96ff01b8b1becff3f3e0e",
       "source": "Associated Press",
       "published_at": "2026-10-01T00:00:00.000Z",
@@ -273,66 +272,66 @@
       "impact": "up"
     },
     {
-      "title": "U.S. reinforces Middle East deployment",
-      "summary": "The United States is sending roughly 9,000 additional troops aboard ships toward the Middle East as Washington weighs possible renewed strikes on Iran.",
-      "url": "https://apnews.com/article/42c23e9af0333f4bc3b4f419cc3a603e",
-      "source": "Associated Press",
+      "title": "G20 trade talks stall",
+      "summary": "G20 trade ministers failed to agree on overcapacity and forced-labor measures, leaving tariff disputes affecting steel, batteries, autos, and semiconductors unresolved.",
+      "url": "https://apnews.com/article/a49cd9e6132e9ad7937b7b35f08e0470",
+      "source": "AP",
       "published_at": "2026-10-01T00:00:00.000Z",
-      "category": "MILITARY",
-      "impact": "up"
-    },
-    {
-      "title": "Rare-earth shipment hesitation",
-      "summary": "Some Chinese rare-earth suppliers declined U.S. shipments amid compliance fears, while yttrium, indium phosphide, and tungsten remained tightly supplied.",
-      "url": "https://www.marketscreener.com/news/china-rare-earth-firms-halt-some-us-shipments-over-geopolitical-worries-sources-say-ce785adedd89f623",
-      "source": "Reuters via MarketScreener",
-      "published_at": "2026-09-04T00:00:00.000Z",
-      "category": "SUPPLY",
-      "impact": "up"
-    },
-    {
-      "title": "Critical-mineral licensing risk",
-      "summary": "The latest U.S.–China extension provided temporary relief but left defense and electronics manufacturers exposed to future critical-mineral licensing risks.",
-      "url": "https://commoditynews.morgandowney.com/news/2026-09-30",
-      "source": "Reuters summary",
-      "published_at": "2026-09-30T00:00:00.000Z",
       "category": "TRADE",
       "impact": "up"
     },
     {
-      "title": "Financial-system cyber risk",
-      "summary": "The RBA warns cyberattacks on key institutions could coincide with financial stress and produce complex system-wide consequences.",
-      "url": "https://www.rba.gov.au/publications/fsr/2026/oct/financial-stability-assessment.html",
-      "source": "Reserve Bank of Australia",
-      "published_at": "2026-10-01T00:00:00.000Z",
-      "category": "TECH",
-      "impact": "up"
-    },
-    {
-      "title": "Sovereign-market vulnerability",
-      "summary": "Elevated sovereign debt and leveraged bond-market participation could amplify stress through rapid deleveraging and impaired repo-market functioning.",
-      "url": "https://www.rba.gov.au/publications/fsr/2026/oct/the-global-macro-financial-environment.html",
-      "source": "Reserve Bank of Australia",
+      "title": "Global bond-market stress",
+      "summary": "Global sovereign yields surged, European bank stocks fell as much as 3%, and junk-bond default protection reached its highest level since early April.",
+      "url": "https://in.marketscreener.com/news/global-bonds-gripped-by-fiscal-worries-us-10-year-yield-hits-24-year-high-ce785ad3df8ff725",
+      "source": "Reuters via MarketScreener",
       "published_at": "2026-10-01T00:00:00.000Z",
       "category": "FINANCE",
       "impact": "up"
     },
     {
-      "title": "Rachel reaches Category 3",
-      "summary": "Hurricane Rachel strengthened to Category 3 off Mexico, with northern Mexico and parts of the United States facing potential rain, wind, and power disruptions.",
-      "url": "https://apnews.com/article/8752e5abd8b0a52aa01976a4cf3f1462",
-      "source": "Associated Press",
+      "title": "U.S. Treasury volatility",
+      "summary": "The 10-year Treasury yield reached 5.3445%, its highest since 2002, while Treasuries recorded their worst quarter since 1994.",
+      "url": "https://www.lse.co.uk/news/us-stocks-wall-street-dips-surging-treasury-yields-outweigh-software-gains-l1p5ucmygtv9reg.html",
+      "source": "Reuters via LSE",
       "published_at": "2026-10-01T00:00:00.000Z",
+      "category": "FINANCE",
+      "impact": "up"
+    },
+    {
+      "title": "Gulf Coast flood risk",
+      "summary": "NOAA reported a Gulf Coast flood watch while radar outages affected Tallahassee and Mobile weather offices during excessive-rainfall operations.",
+      "url": "https://www.ospo.noaa.gov/data/messages/2026/10/MSG_20261003_1630.html",
+      "source": "NOAA National Oceanic and Atmospheric Administration",
+      "published_at": "2026-10-03T16:30:00.000Z",
       "category": "NATURAL",
       "impact": "up"
     },
     {
-      "title": "Cabo San Lucas closures",
-      "summary": "Cabo San Lucas authorities closed ports and beaches and warned of flooding through October 4 as Hurricane Rachel approached Baja California Sur.",
+      "title": "Mexico coastal closures",
+      "summary": "Hurricane Rachel prompted Cabo San Lucas authorities to close the port and beaches; officials warned of flooding, mudslides, dangerous surf, and road impacts.",
       "url": "https://mx.usembassy.gov/weather-alert-hurricane-rachel-cabo-san-lucas-closes-ports-and-beaches/",
-      "source": "U.S. Embassy in Mexico",
+      "source": "U.S. Embassy and Consulates in Mexico",
       "published_at": "2026-09-30T00:00:00.000Z",
       "category": "NATURAL",
+      "impact": "up"
+    },
+    {
+      "title": "GOES data-interference risk",
+      "summary": "NOAA forecast periodic solar radio interference through October 12 that may disrupt selected GOES telemetry, search-and-rescue, and data-rebroadcast services.",
+      "url": "https://www.ospo.noaa.gov/data/messages/2026/10/MSG_20261002_1230.html",
+      "source": "NOAA Office of Satellite and Product Operations",
+      "published_at": "2026-10-02T12:30:00.000Z",
+      "category": "CYBER",
+      "impact": "neutral"
+    },
+    {
+      "title": "Cyclospora linked to Mexican farm",
+      "summary": "FDA inspectors detected cyclospora at a Mexican farm linked to the largest U.S. foodborne cyclospora outbreak, involving lettuce and widespread illness.",
+      "url": "https://apnews.com/article/be4d04bfac36426fc341703fa7636892",
+      "source": "Associated Press",
+      "published_at": "2026-10-02T00:00:00.000Z",
+      "category": "FOOD",
       "impact": "up"
     }
   ],
@@ -573,13 +572,23 @@
       "americas": 87,
       "conflict": 98,
       "momentum": 73
+    },
+    {
+      "date": "2026-10-04",
+      "preparedness": 84,
+      "raw_preparedness": 84,
+      "threat": 88,
+      "impact": 79,
+      "americas": 87,
+      "conflict": 98,
+      "momentum": 75
     }
   ],
   "evidence_quality": {
-    "evidence_count": 14,
+    "evidence_count": 15,
     "fresh_count": 11,
-    "unique_sources": 8,
-    "tier_a_sources": 5,
+    "unique_sources": 9,
+    "tier_a_sources": 6,
     "clusters": 5,
     "domains_covered": 11,
     "confidence_cap": 88,
@@ -588,13 +597,13 @@
   "evidence_log": [
     {
       "id": "E1",
-      "title": "Hormuz remains effectively closed",
+      "title": "Hormuz shipping remains disrupted",
       "source": "Associated Press",
       "url": "https://apnews.com/article/af2443646cf96ff01b8b1becff3f3e0e",
       "source_domain": "apnews.com",
       "source_tier": "A",
       "published_at": "2026-10-01T00:00:00.000Z",
-      "age_days": 1,
+      "age_days": 3,
       "cluster": "military_energy_shipping",
       "domains": [
         "military",
@@ -602,283 +611,301 @@
         "supply_chain",
         "trade"
       ],
-      "geography": "Persian Gulf / Strait of Hormuz",
+      "geography": "Strait of Hormuz / Persian Gulf",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "AP reports shipping has been disrupted and the Strait of Hormuz virtually closed since the Iran war began, affecting a corridor formerly carrying about one-fifth of traded oil and gas.",
+      "fact": "Shipping through the Strait of Hormuz remains virtually closed after attacks, disrupting a route that previously carried about one-fifth of globally traded oil and gas.",
       "americas_relevant": true
     },
     {
       "id": "E2",
-      "title": "U.S. reinforces Middle East deployment",
+      "title": "G7 announces emergency fuel release",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/42c23e9af0333f4bc3b4f419cc3a603e",
+      "url": "https://apnews.com/article/774a360d1646d9ce8aba764fdd9959d2",
       "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-10-01T00:00:00.000Z",
-      "age_days": 1,
+      "published_at": "2026-10-02T00:00:00.000Z",
+      "age_days": 2,
       "cluster": "military_energy_shipping",
       "domains": [
-        "military",
         "energy",
         "trade"
       ],
-      "geography": "Middle East",
-      "evidence_type": "forward",
+      "geography": "G7 / global energy markets",
+      "evidence_type": "stabilizer",
       "materiality": "high",
-      "fact": "The United States is sending roughly 9,000 additional troops aboard ships toward the Middle East as Washington weighs possible renewed strikes on Iran.",
+      "fact": "G7 countries plan to release 100 million barrels of oil and diesel, adding emergency supply as war-related disruption drives prices higher.",
       "americas_relevant": true
     },
     {
       "id": "E3",
-      "title": "Diplomacy offers reopening path",
+      "title": "Diplomatic off-ramp remains active",
       "source": "Associated Press",
       "url": "https://apnews.com/article/871504dbd98d9b08b226b9805d8f4606",
       "source_domain": "apnews.com",
       "source_tier": "A",
       "published_at": "2026-09-28T00:00:00.000Z",
-      "age_days": 4,
+      "age_days": 6,
       "cluster": "military_energy_shipping",
       "domains": [
         "military",
         "energy",
         "trade"
       ],
-      "geography": "Strait of Hormuz / Middle East",
+      "geography": "United States / Iran / Strait of Hormuz",
       "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "Mediators continue pursuing an agreement that could reopen Hormuz and manage shipping traffic, despite major unresolved conditions between Washington and Tehran.",
+      "fact": "Mediators continue pursuing a U.S.-Iran arrangement that could reopen the Strait of Hormuz, though major conditions and implementation hurdles remain.",
       "americas_relevant": true
     },
     {
       "id": "E4",
-      "title": "U.S.–China tariff relief",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/e8f858ed9094b99bc8d3d339f9899f31",
+      "title": "G20 trade talks stall",
+      "source": "AP",
+      "url": "https://apnews.com/article/a49cd9e6132e9ad7937b7b35f08e0470",
       "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-09-26T00:00:00.000Z",
-      "age_days": 6,
+      "published_at": "2026-10-01T00:00:00.000Z",
+      "age_days": 3,
       "cluster": "trade_supply_technology",
       "domains": [
         "trade",
         "supply_chain",
         "technology"
       ],
-      "geography": "United States–China",
-      "evidence_type": "stabilizer",
+      "geography": "Global/United States",
+      "evidence_type": "observed",
       "materiality": "high",
-      "fact": "Washington and Beijing agreed to continue reducing reciprocal tariffs on roughly $30 billion of goods, mainly non-sensitive products.",
+      "fact": "G20 trade ministers failed to agree on overcapacity and forced-labor measures, leaving tariff disputes affecting steel, batteries, autos, and semiconductors unresolved.",
       "americas_relevant": true
     },
     {
       "id": "E5",
-      "title": "Rare-earth shipment hesitation",
-      "source": "Reuters via MarketScreener",
-      "url": "https://www.marketscreener.com/news/china-rare-earth-firms-halt-some-us-shipments-over-geopolitical-worries-sources-say-ce785adedd89f623",
-      "source_domain": "marketscreener.com",
-      "source_tier": "C",
-      "published_at": "2026-09-04T00:00:00.000Z",
-      "age_days": 28,
+      "title": "Polysilicon import restrictions",
+      "source": "White House",
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/08/adjusting-imports-of-polysilicon-and-its-derivatives-into-the-united-states/",
+      "source_domain": "whitehouse.gov",
+      "source_tier": "A",
+      "published_at": "2026-08-01T00:00:00.000Z",
+      "age_days": 64,
       "cluster": "trade_supply_technology",
       "domains": [
-        "supply_chain",
-        "technology"
+        "trade",
+        "technology",
+        "supply_chain"
       ],
-      "geography": "China–United States",
-      "evidence_type": "observed",
+      "geography": "United States",
+      "evidence_type": "forward",
       "materiality": "high",
-      "fact": "Some Chinese rare-earth suppliers declined U.S. shipments amid compliance fears, while yttrium, indium phosphide, and tungsten remained tightly supplied.",
+      "fact": "U.S. policy identifies polysilicon imports as a semiconductor and defense supply-chain vulnerability while allowing possible tariff adjustments for countries adopting equivalent measures.",
       "americas_relevant": true
     },
     {
       "id": "E6",
-      "title": "Critical-mineral licensing risk",
-      "source": "Reuters summary",
-      "url": "https://commoditynews.morgandowney.com/news/2026-09-30",
-      "source_domain": "commoditynews.morgandowney.com",
-      "source_tier": "C",
-      "published_at": "2026-09-30T00:00:00.000Z",
-      "age_days": 2,
+      "title": "Rare-earth supply diversification",
+      "source": "AP",
+      "url": "https://apnews.com/article/23c269b2738ded4a6c4cd2f696f83102",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-09-03T00:00:00.000Z",
+      "age_days": 31,
       "cluster": "trade_supply_technology",
       "domains": [
-        "trade",
         "supply_chain",
+        "trade",
         "technology"
       ],
-      "geography": "United States–China",
-      "evidence_type": "forward",
-      "materiality": "high",
-      "fact": "The latest U.S.–China extension provided temporary relief but left defense and electronics manufacturers exposed to future critical-mineral licensing risks.",
+      "geography": "Brazil/United States/China",
+      "evidence_type": "stabilizer",
+      "materiality": "medium",
+      "fact": "Brazil’s Senate approved rare-earth regulations that could support new exploration and diversify supply, though China remains dominant in critical-mineral processing.",
       "americas_relevant": true
     },
     {
       "id": "E7",
-      "title": "Financial-system cyber risk",
-      "source": "Reserve Bank of Australia",
-      "url": "https://www.rba.gov.au/publications/fsr/2026/oct/financial-stability-assessment.html",
-      "source_domain": "rba.gov.au",
+      "title": "Global bond-market stress",
+      "source": "Reuters via MarketScreener",
+      "url": "https://in.marketscreener.com/news/global-bonds-gripped-by-fiscal-worries-us-10-year-yield-hits-24-year-high-ce785ad3df8ff725",
+      "source_domain": "in.marketscreener.com",
       "source_tier": "C",
       "published_at": "2026-10-01T00:00:00.000Z",
-      "age_days": 1,
-      "cluster": "cyber_infrastructure_finance",
-      "domains": [
-        "technology",
-        "financial",
-        "critical_infrastructure"
-      ],
-      "geography": "Global",
-      "evidence_type": "forward",
-      "materiality": "high",
-      "fact": "The RBA warns cyberattacks on key institutions could coincide with financial stress and produce complex system-wide consequences.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E8",
-      "title": "Banking resilience remains strong",
-      "source": "Office of the Comptroller of the Currency",
-      "url": "https://www.occ.treas.gov/publications-and-resources/publications/semiannual-risk-perspective/files/semiannual-risk-perspective-spring-2026.html",
-      "source_domain": "occ.treas.gov",
-      "source_tier": "A",
-      "published_at": "2026-05-07T00:00:00.000Z",
-      "age_days": 148,
-      "cluster": "cyber_infrastructure_finance",
-      "domains": [
-        "financial",
-        "technology"
-      ],
-      "geography": "United States",
-      "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "U.S. banks retain historically high capital and liquidity, although sophisticated cybercrime and state-backed threats remain concerns.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E9",
-      "title": "Sovereign-market vulnerability",
-      "source": "Reserve Bank of Australia",
-      "url": "https://www.rba.gov.au/publications/fsr/2026/oct/the-global-macro-financial-environment.html",
-      "source_domain": "rba.gov.au",
-      "source_tier": "C",
-      "published_at": "2026-10-01T00:00:00.000Z",
-      "age_days": 1,
+      "age_days": 3,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
         "financial"
       ],
       "geography": "Global",
-      "evidence_type": "forward",
+      "evidence_type": "observed",
       "materiality": "high",
-      "fact": "Elevated sovereign debt and leveraged bond-market participation could amplify stress through rapid deleveraging and impaired repo-market functioning.",
+      "fact": "Global sovereign yields surged, European bank stocks fell as much as 3%, and junk-bond default protection reached its highest level since early April.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E8",
+      "title": "U.S. Treasury volatility",
+      "source": "Reuters via LSE",
+      "url": "https://www.lse.co.uk/news/us-stocks-wall-street-dips-surging-treasury-yields-outweigh-software-gains-l1p5ucmygtv9reg.html",
+      "source_domain": "lse.co.uk",
+      "source_tier": "C",
+      "published_at": "2026-10-01T00:00:00.000Z",
+      "age_days": 3,
+      "cluster": "cyber_infrastructure_finance",
+      "domains": [
+        "financial"
+      ],
+      "geography": "United States",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "The 10-year Treasury yield reached 5.3445%, its highest since 2002, while Treasuries recorded their worst quarter since 1994.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E9",
+      "title": "Financial-system stabilizers",
+      "source": "Bank for International Settlements",
+      "url": "https://www.bis.org/publ/arpdf/ar2026e.pdf",
+      "source_domain": "bis.org",
+      "source_tier": "C",
+      "published_at": "2026-07-01T00:00:00.000Z",
+      "age_days": 95,
+      "cluster": "cyber_infrastructure_finance",
+      "domains": [
+        "financial"
+      ],
+      "geography": "Global",
+      "evidence_type": "stabilizer",
+      "materiality": "medium",
+      "fact": "BIS reports that stronger bank resilience has increased systemic buffers, although market liquidity can still dry up during stress.",
       "americas_relevant": true
     },
     {
       "id": "E10",
-      "title": "Rachel reaches Category 3",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/8752e5abd8b0a52aa01976a4cf3f1462",
-      "source_domain": "apnews.com",
+      "title": "Gulf Coast flood risk",
+      "source": "NOAA National Oceanic and Atmospheric Administration",
+      "url": "https://www.ospo.noaa.gov/data/messages/2026/10/MSG_20261003_1630.html",
+      "source_domain": "ospo.noaa.gov",
       "source_tier": "A",
-      "published_at": "2026-10-01T00:00:00.000Z",
+      "published_at": "2026-10-03T16:30:00.000Z",
       "age_days": 1,
       "cluster": "americas_civil",
       "domains": [
         "natural",
         "critical_infrastructure"
       ],
-      "geography": "Mexico; southern United States",
-      "evidence_type": "forward",
-      "materiality": "high",
-      "fact": "Hurricane Rachel strengthened to Category 3 off Mexico, with northern Mexico and parts of the United States facing potential rain, wind, and power disruptions.",
+      "geography": "United States Gulf Coast",
+      "evidence_type": "observed",
+      "materiality": "medium",
+      "fact": "NOAA reported a Gulf Coast flood watch while radar outages affected Tallahassee and Mobile weather offices during excessive-rainfall operations.",
       "americas_relevant": true
     },
     {
       "id": "E11",
-      "title": "Cabo San Lucas closures",
-      "source": "U.S. Embassy in Mexico",
+      "title": "Mexico coastal closures",
+      "source": "U.S. Embassy and Consulates in Mexico",
       "url": "https://mx.usembassy.gov/weather-alert-hurricane-rachel-cabo-san-lucas-closes-ports-and-beaches/",
       "source_domain": "mx.usembassy.gov",
       "source_tier": "A",
       "published_at": "2026-09-30T00:00:00.000Z",
-      "age_days": 2,
+      "age_days": 4,
       "cluster": "americas_civil",
       "domains": [
         "natural",
         "critical_infrastructure",
         "domestic"
       ],
-      "geography": "Baja California Sur, Mexico",
+      "geography": "Cabo San Lucas, Mexico",
       "evidence_type": "observed",
       "materiality": "medium",
-      "fact": "Cabo San Lucas authorities closed ports and beaches and warned of flooding through October 4 as Hurricane Rachel approached Baja California Sur.",
+      "fact": "Hurricane Rachel prompted Cabo San Lucas authorities to close the port and beaches; officials warned of flooding, mudslides, dangerous surf, and road impacts.",
       "americas_relevant": true
     },
     {
       "id": "E12",
-      "title": "Preparedness measures active",
-      "source": "National Hurricane Center",
-      "url": "https://www.nhc.noaa.gov/text/refresh/MIATWDAT%2Bshtml/261656_MIATWDAT.shtml",
-      "source_domain": "nhc.noaa.gov",
+      "title": "GOES data-interference risk",
+      "source": "NOAA Office of Satellite and Product Operations",
+      "url": "https://www.ospo.noaa.gov/data/messages/2026/10/MSG_20261002_1230.html",
+      "source_domain": "ospo.noaa.gov",
       "source_tier": "A",
-      "published_at": "2026-10-01T00:00:00.000Z",
-      "age_days": 1,
+      "published_at": "2026-10-02T12:30:00.000Z",
+      "age_days": 2,
       "cluster": "americas_civil",
       "domains": [
+        "critical_infrastructure",
+        "technology",
         "natural"
       ],
-      "geography": "Mexico, Central America, Caribbean",
-      "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "The National Hurricane Center continues regional tropical monitoring, supporting early warning and preparedness across Mexico, Central America, the Caribbean, and nearby U.S. waters.",
+      "geography": "United States and Atlantic-Caribbean region",
+      "evidence_type": "forward",
+      "materiality": "low",
+      "fact": "NOAA forecast periodic solar radio interference through October 12 that may disrupt selected GOES telemetry, search-and-rescue, and data-rebroadcast services.",
       "americas_relevant": true
     },
     {
       "id": "E13",
-      "title": "Sprout outbreak expands",
-      "source": "CDC",
-      "url": "https://www.cdc.gov/ecoli/outbreaks/alfalfa-sprouts-08-26/investigation.html",
-      "source_domain": "cdc.gov",
+      "title": "Cyclospora linked to Mexican farm",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/be4d04bfac36426fc341703fa7636892",
+      "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-10-01T00:00:00.000Z",
-      "age_days": 1,
+      "published_at": "2026-10-02T00:00:00.000Z",
+      "age_days": 2,
       "cluster": "food_health_natural",
       "domains": [
         "food",
+        "public_health"
+      ],
+      "geography": "United States and Mexico",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "FDA inspectors detected cyclospora at a Mexican farm linked to the largest U.S. foodborne cyclospora outbreak, involving lettuce and widespread illness.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E14",
+      "title": "U.S. measles burden remains high",
+      "source": "CDC",
+      "url": "https://www.cdc.gov/measles/data-research/",
+      "source_domain": "cdc.gov",
+      "source_tier": "A",
+      "published_at": "2026-10-02T00:00:00.000Z",
+      "age_days": 2,
+      "cluster": "food_health_natural",
+      "domains": [
         "public_health"
       ],
       "geography": "United States",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "CDC reports 76 illnesses across 16 states, six hospitalizations, and recalled alfalfa sprouts linked to concurrent E. coli and Salmonella infections.",
+      "fact": "CDC reported 3,887 confirmed U.S. measles cases through October 1, 2026, including 42 outbreaks and 95% of cases outbreak-associated.",
       "americas_relevant": true
     },
     {
-      "id": "E14",
-      "title": "Contaminated seed traced",
-      "source": "CDC",
-      "url": "https://www.cdc.gov/ecoli/outbreaks/alfalfa-sprouts-08-26/index.html",
-      "source_domain": "cdc.gov",
+      "id": "E15",
+      "title": "California heat hazard continues",
+      "source": "NOAA Weather Prediction Center",
+      "url": "https://www.wpc.ncep.noaa.gov/",
+      "source_domain": "wpc.ncep.noaa.gov",
       "source_tier": "A",
-      "published_at": "2026-10-01T00:00:00.000Z",
-      "age_days": 1,
+      "published_at": "2026-10-04T00:00:00.000Z",
+      "age_days": 0,
       "cluster": "food_health_natural",
       "domains": [
-        "food",
+        "natural",
         "public_health"
       ],
-      "geography": "United States",
-      "evidence_type": "stabilizer",
+      "geography": "California, United States",
+      "evidence_type": "forward",
       "materiality": "medium",
-      "fact": "Traceback identified alfalfa seed lot SAL2-24JB; suppliers recalled the lot, while CDC advises consumers not to eat, sell, or serve affected sprouts.",
+      "fact": "NOAA’s October 4 hazards outlook continued issuing key messages for a California heat wave, indicating ongoing heat-related civilian health risk.",
       "americas_relevant": true
     }
   ],
   "api_usage": {
     "research_model": "gpt-5.6-luna",
     "assessment_model": "gpt-5.6-terra",
-    "web_search_calls": 6,
-    "estimated_run_cost_usd": 0.098499,
-    "estimated_period_spend_usd": 2.335729,
+    "web_search_calls": 8,
+    "estimated_run_cost_usd": 0.119786,
+    "estimated_period_spend_usd": 2.542621,
     "allocated_90_day_budget_usd": 10,
     "operational_stop_usd": 9
   },
