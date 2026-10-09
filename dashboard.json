@@ -2,32 +2,37 @@
   "schema_version": 5,
   "engine_version": "5.3",
   "data_status": "VERIFIED",
-  "as_of": "2026-10-06",
-  "updated_at": "2026-10-06T11:30:40.926Z",
-  "last_successful_update": "2026-10-06T11:30:40.926Z",
+  "as_of": "2026-10-09",
+  "updated_at": "2026-10-09T11:30:39.504Z",
+  "last_successful_update": "2026-10-09T11:30:39.504Z",
   "preparedness_urgency": 83,
   "raw_preparedness_urgency": 83,
   "preparedness_stage": "HIGH ALERT",
   "global_threat_pressure": 88,
   "leading_threat_pressure": 88,
   "observed_civilian_disruption": 79,
-  "americas_exposure": 87,
+  "americas_exposure": 88,
   "americas_stage": "SEVERE",
-  "americas_summary": "Americas exposure is highest through oil, freight, critical-mineral, and weather-related coastal impacts. Active U.S./Mexico weather threats are concrete but localized; CDC reports low current U.S. Ebola risk.",
+  "americas_summary": "Americas exposure is highest through oil prices, maritime logistics, critical-mineral supply risk, and imminent Gulf Coast hurricane and flooding impacts.",
   "americas_components": [
+    {
+      "name": "Energy security",
+      "score": 98,
+      "trend": "rising"
+    },
     {
       "name": "Supply chain & transportation",
       "score": 97,
       "trend": "rising"
     },
     {
-      "name": "Energy security",
-      "score": 97,
-      "trend": "rising"
-    },
-    {
       "name": "Military / geopolitical",
       "score": 84,
+      "trend": "stable"
+    },
+    {
+      "name": "Natural / environmental",
+      "score": 96,
       "trend": "rising"
     },
     {
@@ -36,48 +41,44 @@
       "trend": "stable"
     },
     {
-      "name": "Natural / environmental",
-      "score": 93,
-      "trend": "rising"
-    },
-    {
       "name": "Critical infrastructure / cyber",
-      "score": 92,
+      "score": 94,
       "trend": "rising"
     }
   ],
-  "conflict_escalation": 98,
-  "coupling_score": 74,
-  "momentum_score": 75,
-  "confidence_score": 72,
+  "conflict_escalation": 97,
+  "coupling_score": 82,
+  "momentum_score": 68,
+  "confidence_score": 75,
   "confidence_level": "MODERATE",
-  "confidence_rationale": "Fresh, direct reporting from NOAA, CDC, AP, and official institutions supports key signals, though several major maritime and commodity claims rely on secondary Reuters republication and no broad Americas disruption is documented. Evidence gate: 13 items, 13 sources, 8 Tier-A sources, 5/5 clusters.",
-  "preparedness_window": "Days to weeks",
-  "summary": "Severe maritime-security and commodity-shipping risk persists alongside active Americas weather hazards; evidence does not establish broad civilian access failures in the Americas.",
-  "primary_driver": "Escalating attacks and combat risk around Hormuz, the Gulf of Aden, and Bab el-Mandeb threaten energy and shipping flows.",
+  "confidence_rationale": "Fresh, direct reporting from AP, NOAA, Treasury, and maritime reporting supports the assessment; several supply-chain and food signals are indirect or older. Evidence gate: 13 items, 9 sources, 5 Tier-A sources, 5/5 clusters.",
+  "preparedness_window": "Days",
+  "summary": "Severe energy and maritime-shipping disruption around Hormuz persists, while an imminent Gulf Coast hurricane creates acute U.S. weather risk. No confirmed U.S. payment, banking, telecom, or grid disruption is reported.",
+  "primary_driver": "Record tanker attacks near Hormuz, amplifying oil-price and shipping risks alongside Gulf Coast hurricane threats.",
   "primary_stabilizers": [
-    "The U.S.-China arrangement suspends expanded Chinese rare-earth export controls for one year, through November 10, 2026.",
-    "As of October 5, NOAA recorded eight named Atlantic storms, no hurricanes, no direct deaths, and no U.S. damage during the 2026 season.",
-    "The Federal Reserve’s financial-stability assessment identifies cyber disruption as capable of degrading market liquidity, undermining confidence, and forcing asset sales."
+    "President Trump said the United States would not resume military strikes on Iran before the November 3 midterm elections.",
+    "Brazil’s Senate advanced rare-earth regulation, supporting potential diversification away from China-dominated critical-mineral supply chains.",
+    "Treasury’s Financial Stability Oversight Council said the U.S. financial system remained resilient and able to support economic growth.",
+    "NOAA activated Critical Weather Day operations through October 10 to support tropical-cyclone forecasting and emergency coordination across the Central Gulf Coast."
   ],
   "domains": [
     {
       "key": "energy",
       "threat": 98,
-      "impact": 95,
-      "americas_exposure": 97,
+      "impact": 96,
+      "americas_exposure": 98,
       "trend": "rising",
-      "rationale": "Daily attacks near Hormuz/Gulf of Aden and Bab el-Mandeb fighting sustain acute oil-shipping risk.",
+      "rationale": "Repeated Hormuz tanker attacks and a >5% oil-price rise heighten supply and price risk.",
       "name": "Energy security",
       "weight": 11
     },
     {
       "key": "military",
-      "threat": 98,
+      "threat": 97,
       "impact": 94,
       "americas_exposure": 84,
-      "trend": "rising",
-      "rationale": "Combat and claimed attacks around Red Sea and Saudi facilities are intensifying maritime-security risk.",
+      "trend": "stable",
+      "rationale": "Tanker attacks remain intense, though the stated U.S. strike pause is a near-term stabilizer.",
       "name": "Military / geopolitical",
       "weight": 10
     },
@@ -87,7 +88,7 @@
       "impact": 96,
       "americas_exposure": 97,
       "trend": "rising",
-      "rationale": "Kinetic shipping threats and tight critical-mineral supplies reinforce logistics disruption risk.",
+      "rationale": "Hormuz attacks disrupt energy shipping; rare-earth controls add manufacturing exposure.",
       "name": "Supply chain & transportation",
       "weight": 10
     },
@@ -97,7 +98,7 @@
       "impact": 85,
       "americas_exposure": 97,
       "trend": "stable",
-      "rationale": "Rare-earth shipment constraints persist, partly offset by the temporary suspension of expanded controls.",
+      "rationale": "Sanctions and rare-earth controls sustain trade friction, without new confirmed broad access disruption.",
       "name": "Global trade fragmentation",
       "weight": 10
     },
@@ -107,47 +108,47 @@
       "impact": 74,
       "americas_exposure": 85,
       "trend": "rising",
-      "rationale": "Critical-mineral tightness and financial-sector breaches sustain technology dependency risk.",
+      "rationale": "Expanded rare-earth controls raise semiconductor and advanced-manufacturing compliance and sourcing risk.",
       "name": "Technology chokepoints",
       "weight": 7
     },
     {
       "key": "critical_infrastructure",
-      "threat": 91,
+      "threat": 93,
       "impact": 81,
-      "americas_exposure": 92,
+      "americas_exposure": 94,
       "trend": "rising",
-      "rationale": "Active hurricane, possible Gulf development, and heavy-rain forecast raise localized infrastructure risk.",
+      "rationale": "Hurricane and flooding threats create near-term Gulf Coast infrastructure risk; no confirmed outage is reported.",
       "name": "Critical infrastructure / cyber",
       "weight": 11
     },
     {
       "key": "financial",
-      "threat": 88,
+      "threat": 87,
       "impact": 72,
       "americas_exposure": 90,
-      "trend": "rising",
-      "rationale": "South Korean bank breaches and documented cyber-payment dependencies sustain financial-service risk.",
+      "trend": "stable",
+      "rationale": "Energy-price and sanctions risks persist, tempered by Treasury's resilience assessment and no confirmed access restrictions.",
       "name": "Financial-system stress",
       "weight": 10
     },
     {
       "key": "food",
-      "threat": 83,
+      "threat": 84,
       "impact": 59,
-      "americas_exposure": 81,
-      "trend": "stable",
-      "rationale": "No new evidence establishes food shortages or Americas food-access disruption.",
+      "americas_exposure": 82,
+      "trend": "rising",
+      "rationale": "Regional food-production stress and El Niño risks raise forward pressure, including Central America.",
       "name": "Food & agriculture",
       "weight": 8
     },
     {
       "key": "domestic",
-      "threat": 74,
+      "threat": 76,
       "impact": 69,
-      "americas_exposure": 81,
+      "americas_exposure": 84,
       "trend": "rising",
-      "rationale": "Weather hazards may disrupt localized travel and services, but no broad domestic emergency constraint is reported.",
+      "rationale": "Imminent Gulf Coast hurricane and flash-flood conditions elevate emergency and mobility risk.",
       "name": "Domestic institutional stress",
       "weight": 6
     },
@@ -157,7 +158,7 @@
       "impact": 49,
       "americas_exposure": 63,
       "trend": "stable",
-      "rationale": "No evidence of material civil-unrest disruption.",
+      "rationale": "No evidence of material unrest-related civilian disruption.",
       "name": "Civil unrest / public order",
       "weight": 7
     },
@@ -166,18 +167,18 @@
       "threat": 65,
       "impact": 62,
       "americas_exposure": 68,
-      "trend": "rising",
-      "rationale": "DRC Ebola expansion raises monitoring needs, while CDC assesses current U.S. risk as low with no associated cases.",
+      "trend": "stable",
+      "rationale": "No fresh evidence of a public-health access or service disruption.",
       "name": "Public health / biological",
       "weight": 5
     },
     {
       "key": "natural",
-      "threat": 92,
-      "impact": 83,
-      "americas_exposure": 93,
+      "threat": 96,
+      "impact": 84,
+      "americas_exposure": 96,
       "trend": "rising",
-      "rationale": "Hurricane Rachel, Gulf development potential, and forecast heavy Gulf/Southeast rainfall create near-term regional hazards.",
+      "rationale": "Rapidly strengthening Hurricane Isaias and significant flash-flood risk present imminent hazards.",
       "name": "Natural / environmental",
       "weight": 5
     }
@@ -188,7 +189,7 @@
   "score_calibration": {
     "raw_score": 83,
     "published_score": 83,
-    "previous_daily_anchor": 84,
+    "previous_daily_anchor": 83,
     "rate_limit_applied": false,
     "daily_rate_limit": 3,
     "sustained_90_for_48h": false,
@@ -197,18 +198,18 @@
   "score_components": {
     "global_threat_pressure": 88,
     "observed_civilian_disruption": 79,
-    "coupling": 74,
-    "momentum": 75,
-    "americas_exposure": 87
+    "coupling": 82,
+    "momentum": 68,
+    "americas_exposure": 88
   },
   "drivers": [
     {
-      "name": "Supply chain & transportation",
+      "name": "Energy security",
       "severity": "critical",
       "note": "Primary driver"
     },
     {
-      "name": "Energy security",
+      "name": "Supply chain & transportation",
       "severity": "critical",
       "note": ""
     },
@@ -218,12 +219,12 @@
       "note": ""
     },
     {
-      "name": "Global trade fragmentation",
+      "name": "Natural / environmental",
       "severity": "critical",
       "note": ""
     },
     {
-      "name": "Natural / environmental",
+      "name": "Global trade fragmentation",
       "severity": "critical",
       "note": ""
     },
@@ -235,102 +236,102 @@
   ],
   "areas_to_watch": [
     {
-      "name": "Hormuz, Gulf of Aden, and Bab el-Mandeb shipping lanes",
+      "name": "Strait of Hormuz energy and tanker traffic",
       "severity": "critical",
-      "why": "Repeated attacks and nearby fighting could rapidly disrupt energy and commercial shipping."
+      "why": "Record tanker attacks and rising oil prices could further constrain energy shipping and raise Americas fuel costs."
     },
     {
-      "name": "U.S. Gulf Coast, Southeast, and Baja California",
+      "name": "U.S. Gulf Coast hurricane and flooding",
+      "severity": "critical",
+      "why": "Hurricane conditions and moderate flash-flood risk are forecast within days."
+    },
+    {
+      "name": "Rare-earth supply chains",
       "severity": "high",
-      "why": "Hurricane, tropical-development, and heavy-rain hazards may affect travel, marine activity, and local infrastructure."
+      "why": "Expanded Chinese export controls could affect semiconductor, defense, and advanced manufacturing inputs."
     },
     {
-      "name": "Critical-mineral supply to the United States",
-      "severity": "high",
-      "why": "Some shipments remain constrained and several strategic materials are tight at elevated prices."
-    },
-    {
-      "name": "Financial-sector cyber resilience",
+      "name": "Central American food-security exposure",
       "severity": "medium",
-      "why": "Recent bank breaches and concentrated technology dependencies warrant monitoring for access disruptions."
+      "why": "El Niño-linked drought and flood risk could pressure agricultural output and migration drivers."
     },
     {
-      "name": "DRC Ebola outbreak",
+      "name": "Financial and infrastructure continuity",
       "severity": "medium",
-      "why": "Outbreak growth is significant, though CDC reports no associated U.S. cases and low domestic risk."
+      "why": "No confirmed disruption, but energy and storm shocks warrant monitoring for localized knock-on effects."
     }
   ],
   "signals": [
     {
-      "title": "Bab el-Mandeb fighting intensifies",
-      "summary": "Saudi-backed forces retook areas near Bab el-Mandeb as Houthis claimed attacks on Saudi facilities, increasing risks around a vital Red Sea shipping chokepoint.",
-      "url": "https://apnews.com/article/e87beb84a0d146e4f0546b50508f7e32",
-      "source": "Associated Press",
-      "published_at": "2026-10-05T00:00:00.000Z",
+      "title": "Hormuz tanker attacks intensify",
+      "summary": "Oil prices rose more than 5% as attacks on Gulf shipping intensified, while roughly one-quarter of U.S. Gulf oil output was shut in by a hurricane.",
+      "url": "https://www.investing.com/news/commodities-news/oil-jumps-as-middle-east-supply-concerns-persist-amid-shipping-attacks-4938452",
+      "source": "Reuters via Investing.com",
+      "published_at": "2026-10-08T00:00:00.000Z",
       "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Hormuz maritime threat elevated",
-      "summary": "Maritime authorities reported at least daily attacks near Hormuz or the Gulf of Aden since October 2, while commercial traffic faces an increasingly unpredictable kinetic threat.",
-      "url": "https://www.marketscreener.com/news/middle-east-oil-exports-top-pre-war-levels-in-september-but-tanker-attacks-increase-ce785ddbd18ef622",
-      "source": "Reuters via MarketScreener",
-      "published_at": "2026-10-05T00:00:00.000Z",
-      "category": "ENERGY",
+      "title": "Record weekly tanker attacks",
+      "summary": "Maritime security sources recorded at least 12 attacks on oil, LNG, and LPG tankers around Hormuz from September 28 through October 5.",
+      "url": "https://gcaptain.com/attacks-on-tankers-in-hormuz-hit-highest-of-any-week-since-start-of-iran-war-sources-say/",
+      "source": "Reuters via gCaptain",
+      "published_at": "2026-10-07T00:00:00.000Z",
+      "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Rare-earth shipments remain constrained",
-      "summary": "Some Chinese rare-earth suppliers are declining U.S. shipments, while yttrium, indium phosphide, and tungsten remain tight and near record prices.",
-      "url": "https://www.miningweekly.com/article/china-rare-earth-firms-halt-some-us-shipments-over-geopolitical-worries-sources-say-2026-09-04",
-      "source": "Reuters via Mining Weekly",
-      "published_at": "2026-09-04T00:00:00.000Z",
-      "category": "SUPPLY",
+      "title": "Russian sanctions implementation urged",
+      "summary": "U.S. senators urged faster implementation of recently enacted Russia sanctions, citing continued financial flows supporting Russia’s war effort.",
+      "url": "https://apnews.com/article/b322eec6b33610ebf4048daa5d621483",
+      "source": "AP",
+      "published_at": "2026-10-07T00:00:00.000Z",
+      "category": "TRADE",
       "impact": "up"
     },
     {
-      "title": "South Korea probes bank breaches",
-      "summary": "South Korea expanded on-site investigations after breaches at Shinhan and other financial institutions, ordering tighter access controls and comprehensive security inspections.",
-      "url": "https://www.streetinsider.com/Reuters/South%2BKorean%2Bpresident%2Borders%2Bprobe%2Binto%2Bdata%2Bleaks%2Bacross%2Bfinancial%2Bindustry/27144354.html",
-      "source": "Reuters",
-      "published_at": "2026-10-04T00:00:00.000Z",
-      "category": "TECH",
+      "title": "Rare-earth export controls expand",
+      "summary": "China expanded rare-earth export controls to additional elements and processing technologies, increasing compliance risk for semiconductor, defense, and advanced-manufacturing supply chains.",
+      "url": "https://www.investing.com/news/commodities-news/china-tightens-rare-earth-export-controls-4278569",
+      "source": "Reuters via Investing.com",
+      "published_at": null,
+      "category": "TRADE",
       "impact": "up"
     },
     {
-      "title": "BIS warns of banking technology dependencies",
-      "summary": "BIS warned that cyber incidents or failures affecting core banking, payment applications, cloud providers, or data centers can block customer access to essential financial services.",
-      "url": "https://www.bis.org/speeches/20261005-digital-banking-resilient-banking-technology-cyber-security-and-ai-pillars-trust",
-      "source": "Bank for International Settlements",
-      "published_at": "2026-10-05T00:00:00.000Z",
-      "category": "TECH",
-      "impact": "up"
-    },
-    {
-      "title": "Hurricane Rachel affects Baja California",
-      "summary": "Hurricane Rachel remained an active eastern Pacific hazard near Mexico, with marine warnings and potential coastal travel impacts.",
-      "url": "https://www.nhc.noaa.gov/",
+      "title": "Isaias strengthening before Gulf landfall",
+      "summary": "NOAA reported Hurricane Isaias near 110 mph, strengthening rapidly, with preparations urged before dangerous Gulf Coast conditions on October 9.",
+      "url": "https://prod-west.nhc.woc.noaa.gov/mobile/",
       "source": "NOAA National Hurricane Center",
-      "published_at": "2026-10-06T00:00:00.000Z",
+      "published_at": "2026-10-09T00:00:00.000Z",
       "category": "NATURAL",
       "impact": "up"
     },
     {
-      "title": "Gulf disturbance may develop",
-      "summary": "A southwestern Gulf disturbance had a likely chance of tropical-depression formation within two days, warranting monitoring for coastal impacts.",
-      "url": "https://prod-east.nhc.woc.noaa.gov/mobile/text/refresh/MIATWDAT%2Bhtml/010609_MIATWDAT.html",
-      "source": "NOAA National Hurricane Center",
-      "published_at": "2026-10-06T00:00:00.000Z",
+      "title": "Flash-flood threat across Gulf Coast",
+      "summary": "The Weather Prediction Center placed southern Alabama, the Florida Panhandle and southwest Georgia under moderate excessive-rainfall risk, warning of significant flash flooding.",
+      "url": "https://www.wpc.ncep.noaa.gov/",
+      "source": "NOAA Weather Prediction Center",
+      "published_at": "2026-10-09T00:00:00.000Z",
       "category": "NATURAL",
       "impact": "up"
     },
     {
-      "title": "Ebola outbreak expanding",
-      "summary": "CDC says the DRC Ebola outbreak is spreading substantially faster than previous outbreaks, while no associated U.S. cases have been reported and domestic risk remains low.",
-      "url": "https://www.cdc.gov/ebola/situation-summary/index.html",
-      "source": "CDC",
-      "published_at": "2026-10-05T00:00:00.000Z",
-      "category": "HEALTH",
+      "title": "Regional food-production funding gap",
+      "summary": "FAO reports conflict and economic shocks are undermining food production, while only 23% of its 2026–2028 emergency-response funding requirement is funded.",
+      "url": "https://www.fao.org/newsroom/detail/fao-calls-for-urgent-investment-to-protect-food-production-as-crises-deepen-across-the-near-east-and-north-africa/en/?=1",
+      "source": "FAO",
+      "published_at": "2026-10-07T00:00:00.000Z",
+      "category": "FOOD",
+      "impact": "up"
+    },
+    {
+      "title": "El Niño food-security risk",
+      "summary": "WFP warns intensifying 2026–27 El Niño could worsen drought, floods, and agricultural losses, including knock-on effects in Central America’s Dry Corridor.",
+      "url": "https://www.wfp.org/stories/how-record-breaking-el-nino-could-deepen-global-hunger",
+      "source": "World Food Programme",
+      "published_at": "2026-10-07T00:00:00.000Z",
+      "category": "FOOD",
       "impact": "up"
     }
   ],
@@ -591,27 +592,37 @@
       "americas": 87,
       "conflict": 98,
       "momentum": 75
+    },
+    {
+      "date": "2026-10-09",
+      "preparedness": 83,
+      "raw_preparedness": 83,
+      "threat": 88,
+      "impact": 79,
+      "americas": 88,
+      "conflict": 97,
+      "momentum": 68
     }
   ],
   "evidence_quality": {
     "evidence_count": 13,
     "fresh_count": 9,
-    "unique_sources": 13,
-    "tier_a_sources": 8,
+    "unique_sources": 9,
+    "tier_a_sources": 5,
     "clusters": 5,
-    "domains_covered": 9,
+    "domains_covered": 10,
     "confidence_cap": 75,
     "publishable": true
   },
   "evidence_log": [
     {
       "id": "E1",
-      "title": "Bab el-Mandeb fighting intensifies",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/e87beb84a0d146e4f0546b50508f7e32",
-      "source_domain": "apnews.com",
-      "source_tier": "A",
-      "published_at": "2026-10-05T00:00:00.000Z",
+      "title": "Hormuz tanker attacks intensify",
+      "source": "Reuters via Investing.com",
+      "url": "https://www.investing.com/news/commodities-news/oil-jumps-as-middle-east-supply-concerns-persist-amid-shipping-attacks-4938452",
+      "source_domain": "investing.com",
+      "source_tier": "C",
+      "published_at": "2026-10-08T00:00:00.000Z",
       "age_days": 1,
       "cluster": "military_energy_shipping",
       "domains": [
@@ -619,251 +630,255 @@
         "energy",
         "supply_chain"
       ],
-      "geography": "Yemen / Bab el-Mandeb",
+      "geography": "Strait of Hormuz and Persian Gulf",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "Saudi-backed forces retook areas near Bab el-Mandeb as Houthis claimed attacks on Saudi facilities, increasing risks around a vital Red Sea shipping chokepoint.",
+      "fact": "Oil prices rose more than 5% as attacks on Gulf shipping intensified, while roughly one-quarter of U.S. Gulf oil output was shut in by a hurricane.",
       "americas_relevant": true
     },
     {
       "id": "E2",
-      "title": "Hormuz maritime threat elevated",
-      "source": "Reuters via MarketScreener",
-      "url": "https://www.marketscreener.com/news/middle-east-oil-exports-top-pre-war-levels-in-september-but-tanker-attacks-increase-ce785ddbd18ef622",
-      "source_domain": "marketscreener.com",
+      "title": "Record weekly tanker attacks",
+      "source": "Reuters via gCaptain",
+      "url": "https://gcaptain.com/attacks-on-tankers-in-hormuz-hit-highest-of-any-week-since-start-of-iran-war-sources-say/",
+      "source_domain": "gcaptain.com",
       "source_tier": "C",
-      "published_at": "2026-10-05T00:00:00.000Z",
+      "published_at": "2026-10-07T00:00:00.000Z",
+      "age_days": 2,
+      "cluster": "military_energy_shipping",
+      "domains": [
+        "military",
+        "energy",
+        "supply_chain"
+      ],
+      "geography": "Strait of Hormuz",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "Maritime security sources recorded at least 12 attacks on oil, LNG, and LPG tankers around Hormuz from September 28 through October 5.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E3",
+      "title": "U.S. strike pause before elections",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/422b1799a1a06466279ac265f560e014",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-10-08T00:00:00.000Z",
       "age_days": 1,
       "cluster": "military_energy_shipping",
       "domains": [
-        "energy",
-        "military",
-        "supply_chain",
-        "trade"
+        "military"
       ],
-      "geography": "Strait of Hormuz / Gulf of Aden",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "Maritime authorities reported at least daily attacks near Hormuz or the Gulf of Aden since October 2, while commercial traffic faces an increasingly unpredictable kinetic threat.",
+      "geography": "United States and Iran",
+      "evidence_type": "stabilizer",
+      "materiality": "medium",
+      "fact": "President Trump said the United States would not resume military strikes on Iran before the November 3 midterm elections.",
       "americas_relevant": true
     },
     {
       "id": "E4",
-      "title": "Rare-earth shipments remain constrained",
-      "source": "Reuters via Mining Weekly",
-      "url": "https://www.miningweekly.com/article/china-rare-earth-firms-halt-some-us-shipments-over-geopolitical-worries-sources-say-2026-09-04",
-      "source_domain": "miningweekly.com",
-      "source_tier": "C",
-      "published_at": "2026-09-04T00:00:00.000Z",
-      "age_days": 32,
+      "title": "Russian sanctions implementation urged",
+      "source": "AP",
+      "url": "https://apnews.com/article/b322eec6b33610ebf4048daa5d621483",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-10-07T00:00:00.000Z",
+      "age_days": 2,
       "cluster": "trade_supply_technology",
       "domains": [
-        "supply_chain",
         "trade",
-        "technology"
+        "financial",
+        "supply_chain"
       ],
-      "geography": "China–United States",
+      "geography": "United States/Russia/Ukraine",
       "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "Some Chinese rare-earth suppliers are declining U.S. shipments, while yttrium, indium phosphide, and tungsten remain tight and near record prices.",
+      "materiality": "medium",
+      "fact": "U.S. senators urged faster implementation of recently enacted Russia sanctions, citing continued financial flows supporting Russia’s war effort.",
       "americas_relevant": true
     },
     {
       "id": "E5",
-      "title": "Rare-earth controls temporarily suspended",
-      "source": "European Commission",
-      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=SWD:2026:30:FIN",
-      "source_domain": "eur-lex.europa.eu",
-      "source_tier": "A",
+      "title": "Rare-earth export controls expand",
+      "source": "Reuters via Investing.com",
+      "url": "https://www.investing.com/news/commodities-news/china-tightens-rare-earth-export-controls-4278569",
+      "source_domain": "investing.com",
+      "source_tier": "C",
       "published_at": null,
       "age_days": 999,
       "cluster": "trade_supply_technology",
       "domains": [
         "trade",
-        "supply_chain",
-        "technology"
+        "technology",
+        "supply_chain"
       ],
-      "geography": "China–United States",
-      "evidence_type": "stabilizer",
+      "geography": "China/global",
+      "evidence_type": "forward",
       "materiality": "high",
-      "fact": "The U.S.-China arrangement suspends expanded Chinese rare-earth export controls for one year, through November 10, 2026.",
+      "fact": "China expanded rare-earth export controls to additional elements and processing technologies, increasing compliance risk for semiconductor, defense, and advanced-manufacturing supply chains.",
       "americas_relevant": true
     },
     {
       "id": "E6",
-      "title": "Export restrictions are structurally widespread",
-      "source": "OECD",
-      "url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/04/oecd-inventory-of-export-restrictions-on-critical-raw-materials-2026_2cedac0b/d5ca8f62-en.pdf",
-      "source_domain": "oecd.org",
-      "source_tier": "C",
-      "published_at": "2026-04-01T00:00:00.000Z",
-      "age_days": 188,
+      "title": "Critical-mineral diversification advances",
+      "source": "AP",
+      "url": "https://apnews.com/article/23c269b2738ded4a6c4cd2f696f83102",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-09-03T00:00:00.000Z",
+      "age_days": 36,
       "cluster": "trade_supply_technology",
       "domains": [
         "trade",
         "supply_chain"
       ],
-      "geography": "Global",
-      "evidence_type": "forward",
+      "geography": "Brazil/United States/global",
+      "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "OECD reports sharp increases in export restrictions affecting tantalum, lithium, tin, manganese, nickel, cobalt, vanadium, and niobium.",
+      "fact": "Brazil’s Senate advanced rare-earth regulation, supporting potential diversification away from China-dominated critical-mineral supply chains.",
       "americas_relevant": true
     },
     {
       "id": "E7",
-      "title": "South Korea probes bank breaches",
-      "source": "Reuters",
-      "url": "https://www.streetinsider.com/Reuters/South%2BKorean%2Bpresident%2Borders%2Bprobe%2Binto%2Bdata%2Bleaks%2Bacross%2Bfinancial%2Bindustry/27144354.html",
-      "source_domain": "streetinsider.com",
-      "source_tier": "C",
-      "published_at": "2026-10-04T00:00:00.000Z",
-      "age_days": 2,
-      "cluster": "cyber_infrastructure_finance",
-      "domains": [
-        "technology",
-        "financial"
-      ],
-      "geography": "South Korea",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "South Korea expanded on-site investigations after breaches at Shinhan and other financial institutions, ordering tighter access controls and comprehensive security inspections.",
-      "americas_relevant": false
-    },
-    {
-      "id": "E8",
-      "title": "BIS warns of banking technology dependencies",
-      "source": "Bank for International Settlements",
-      "url": "https://www.bis.org/speeches/20261005-digital-banking-resilient-banking-technology-cyber-security-and-ai-pillars-trust",
-      "source_domain": "bis.org",
-      "source_tier": "C",
-      "published_at": "2026-10-05T00:00:00.000Z",
-      "age_days": 1,
-      "cluster": "cyber_infrastructure_finance",
-      "domains": [
-        "technology",
-        "financial"
-      ],
-      "geography": "Global",
-      "evidence_type": "forward",
-      "materiality": "medium",
-      "fact": "BIS warned that cyber incidents or failures affecting core banking, payment applications, cloud providers, or data centers can block customer access to essential financial services.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E9",
-      "title": "Fed identifies cyber-liquidity channel",
-      "source": "Federal Reserve",
-      "url": "https://www.federalreserve.gov/publications/2026-may-financial-stability-report-near-term-risks.htm",
-      "source_domain": "federalreserve.gov",
+      "title": "Financial system remains resilient",
+      "source": "U.S. Department of the Treasury",
+      "url": "https://home.treasury.gov/news/press-releases/sb0638/",
+      "source_domain": "home.treasury.gov",
       "source_tier": "A",
-      "published_at": "2026-05-01T00:00:00.000Z",
-      "age_days": 158,
+      "published_at": "2026-09-29T00:00:00.000Z",
+      "age_days": 10,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
-        "technology",
         "financial"
       ],
       "geography": "United States",
       "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "The Federal Reserve’s financial-stability assessment identifies cyber disruption as capable of degrading market liquidity, undermining confidence, and forcing asset sales.",
+      "fact": "Treasury’s Financial Stability Oversight Council said the U.S. financial system remained resilient and able to support economic growth.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E8",
+      "title": "No recent disruption confirmed",
+      "source": "Search of Reuters, AP, CISA, DOE, FCC, FDIC, and Treasury results",
+      "url": "https://home.treasury.gov/news/",
+      "source_domain": "home.treasury.gov",
+      "source_tier": "A",
+      "published_at": null,
+      "age_days": 999,
+      "cluster": "cyber_infrastructure_finance",
+      "domains": [
+        "technology",
+        "critical_infrastructure",
+        "financial"
+      ],
+      "geography": "United States and global",
+      "evidence_type": "observed",
+      "materiality": "low",
+      "fact": "The retrieved authoritative coverage contained no confirmed disruption during October 6–9, 2026 to listed cyber, infrastructure, payment, banking, or market systems.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E9",
+      "title": "Isaias strengthening before Gulf landfall",
+      "source": "NOAA National Hurricane Center",
+      "url": "https://prod-west.nhc.woc.noaa.gov/mobile/",
+      "source_domain": "prod-west.nhc.woc.noaa.gov",
+      "source_tier": "A",
+      "published_at": "2026-10-09T00:00:00.000Z",
+      "age_days": 0,
+      "cluster": "americas_civil",
+      "domains": [
+        "natural",
+        "critical_infrastructure",
+        "domestic"
+      ],
+      "geography": "United States Gulf Coast; northern Gulf of Mexico; northeastern Mexico",
+      "evidence_type": "forward",
+      "materiality": "high",
+      "fact": "NOAA reported Hurricane Isaias near 110 mph, strengthening rapidly, with preparations urged before dangerous Gulf Coast conditions on October 9.",
       "americas_relevant": true
     },
     {
       "id": "E10",
-      "title": "Hurricane Rachel affects Baja California",
-      "source": "NOAA National Hurricane Center",
-      "url": "https://www.nhc.noaa.gov/",
-      "source_domain": "nhc.noaa.gov",
+      "title": "Flash-flood threat across Gulf Coast",
+      "source": "NOAA Weather Prediction Center",
+      "url": "https://www.wpc.ncep.noaa.gov/",
+      "source_domain": "wpc.ncep.noaa.gov",
       "source_tier": "A",
-      "published_at": "2026-10-06T00:00:00.000Z",
+      "published_at": "2026-10-09T00:00:00.000Z",
       "age_days": 0,
       "cluster": "americas_civil",
       "domains": [
         "natural",
+        "domestic",
         "critical_infrastructure"
       ],
-      "geography": "Mexico; U.S. Pacific interests",
-      "evidence_type": "observed",
-      "materiality": "medium",
-      "fact": "Hurricane Rachel remained an active eastern Pacific hazard near Mexico, with marine warnings and potential coastal travel impacts.",
+      "geography": "Southern Alabama, Florida Panhandle, southwest Georgia and Southeast United States",
+      "evidence_type": "forward",
+      "materiality": "high",
+      "fact": "The Weather Prediction Center placed southern Alabama, the Florida Panhandle and southwest Georgia under moderate excessive-rainfall risk, warning of significant flash flooding.",
       "americas_relevant": true
     },
     {
       "id": "E11",
-      "title": "Gulf disturbance may develop",
-      "source": "NOAA National Hurricane Center",
-      "url": "https://prod-east.nhc.woc.noaa.gov/mobile/text/refresh/MIATWDAT%2Bhtml/010609_MIATWDAT.html",
-      "source_domain": "prod-east.nhc.woc.noaa.gov",
+      "title": "Federal weather operations activated",
+      "source": "NOAA National Centers for Environmental Prediction",
+      "url": "https://www.nco.ncep.noaa.gov/status/cwd/",
+      "source_domain": "nco.ncep.noaa.gov",
       "source_tier": "A",
-      "published_at": "2026-10-06T00:00:00.000Z",
-      "age_days": 0,
+      "published_at": "2026-10-08T00:00:00.000Z",
+      "age_days": 1,
       "cluster": "americas_civil",
       "domains": [
         "natural",
+        "domestic",
         "critical_infrastructure"
       ],
-      "geography": "Gulf of Mexico; Mexico; United States",
-      "evidence_type": "forward",
+      "geography": "Central Gulf Coast, United States",
+      "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "A southwestern Gulf disturbance had a likely chance of tropical-depression formation within two days, warranting monitoring for coastal impacts.",
+      "fact": "NOAA activated Critical Weather Day operations through October 10 to support tropical-cyclone forecasting and emergency coordination across the Central Gulf Coast.",
       "americas_relevant": true
     },
     {
       "id": "E13",
-      "title": "Ebola outbreak expanding",
-      "source": "CDC",
-      "url": "https://www.cdc.gov/ebola/situation-summary/index.html",
-      "source_domain": "cdc.gov",
-      "source_tier": "A",
-      "published_at": "2026-10-05T00:00:00.000Z",
-      "age_days": 1,
+      "title": "Regional food-production funding gap",
+      "source": "FAO",
+      "url": "https://www.fao.org/newsroom/detail/fao-calls-for-urgent-investment-to-protect-food-production-as-crises-deepen-across-the-near-east-and-north-africa/en/?=1",
+      "source_domain": "fao.org",
+      "source_tier": "C",
+      "published_at": "2026-10-07T00:00:00.000Z",
+      "age_days": 2,
       "cluster": "food_health_natural",
       "domains": [
-        "public_health"
+        "food",
+        "supply_chain"
       ],
-      "geography": "Democratic Republic of the Congo",
+      "geography": "Near East and North Africa",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "CDC says the DRC Ebola outbreak is spreading substantially faster than previous outbreaks, while no associated U.S. cases have been reported and domestic risk remains low.",
-      "americas_relevant": true
+      "fact": "FAO reports conflict and economic shocks are undermining food production, while only 23% of its 2026–2028 emergency-response funding requirement is funded.",
+      "americas_relevant": false
     },
     {
       "id": "E14",
-      "title": "Gulf Coast flood risk rising",
-      "source": "NOAA Weather Prediction Center",
-      "url": "https://origin-east-www-wpc.woc.noaa.gov/",
-      "source_domain": "origin-east-www-wpc.woc.noaa.gov",
-      "source_tier": "A",
-      "published_at": "2026-10-06T00:00:00.000Z",
-      "age_days": 0,
+      "title": "El Niño food-security risk",
+      "source": "World Food Programme",
+      "url": "https://www.wfp.org/stories/how-record-breaking-el-nino-could-deepen-global-hunger",
+      "source_domain": "wfp.org",
+      "source_tier": "C",
+      "published_at": "2026-10-07T00:00:00.000Z",
+      "age_days": 2,
       "cluster": "food_health_natural",
       "domains": [
+        "food",
         "natural"
       ],
-      "geography": "United States Gulf Coast and Southeast",
+      "geography": "Global, including Central America",
       "evidence_type": "forward",
-      "materiality": "high",
-      "fact": "NOAA forecasts a growing risk of 3–7 inches of rain across the northern Gulf Coast, Lower Mississippi Valley, Tennessee Valley, and Southeast this weekend.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E15",
-      "title": "Atlantic season currently quiet",
-      "source": "NOAA National Hurricane Center",
-      "url": "https://test-nhc-west.woc.noaa.gov/data/tcr/",
-      "source_domain": "test-nhc-west.woc.noaa.gov",
-      "source_tier": "A",
-      "published_at": "2026-10-05T00:00:00.000Z",
-      "age_days": 1,
-      "cluster": "food_health_natural",
-      "domains": [
-        "natural"
-      ],
-      "geography": "North Atlantic and United States",
-      "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "As of October 5, NOAA recorded eight named Atlantic storms, no hurricanes, no direct deaths, and no U.S. damage during the 2026 season.",
+      "fact": "WFP warns intensifying 2026–27 El Niño could worsen drought, floods, and agricultural losses, including knock-on effects in Central America’s Dry Corridor.",
       "americas_relevant": true
     }
   ],
@@ -871,8 +886,8 @@
     "research_model": "gpt-5.6-luna",
     "assessment_model": "gpt-5.6-terra",
     "web_search_calls": 6,
-    "estimated_run_cost_usd": 0.097538,
-    "estimated_period_spend_usd": 2.71765,
+    "estimated_run_cost_usd": 0.097042,
+    "estimated_period_spend_usd": 2.970436,
     "allocated_90_day_budget_usd": 10,
     "operational_stop_usd": 9
   },
