@@ -2,18 +2,18 @@
   "schema_version": 5,
   "engine_version": "5.3",
   "data_status": "VERIFIED",
-  "as_of": "2026-10-09",
-  "updated_at": "2026-10-09T11:30:39.504Z",
-  "last_successful_update": "2026-10-09T11:30:39.504Z",
-  "preparedness_urgency": 83,
-  "raw_preparedness_urgency": 83,
+  "as_of": "2026-10-10",
+  "updated_at": "2026-10-10T16:16:46.866Z",
+  "last_successful_update": "2026-10-10T16:16:46.866Z",
+  "preparedness_urgency": 84,
+  "raw_preparedness_urgency": 84,
   "preparedness_stage": "HIGH ALERT",
   "global_threat_pressure": 88,
   "leading_threat_pressure": 88,
-  "observed_civilian_disruption": 79,
+  "observed_civilian_disruption": 80,
   "americas_exposure": 88,
   "americas_stage": "SEVERE",
-  "americas_summary": "Americas exposure is highest through oil prices, maritime logistics, critical-mineral supply risk, and imminent Gulf Coast hurricane and flooding impacts.",
+  "americas_summary": "The Americas face high exposure to energy and freight-price shocks, U.S. yield pressure, Gulf hurricane hazards, U.S. measles outbreaks, and localized Panama earthquake impacts. No evidence shows a broad Americas transport, payment, grid, or canal-access failure.",
   "americas_components": [
     {
       "name": "Energy security",
@@ -28,57 +28,58 @@
     {
       "name": "Military / geopolitical",
       "score": 84,
-      "trend": "stable"
+      "trend": "rising"
     },
     {
       "name": "Natural / environmental",
-      "score": 96,
+      "score": 97,
       "trend": "rising"
     },
     {
       "name": "Global trade fragmentation",
-      "score": 97,
+      "score": 96,
       "trend": "stable"
     },
     {
       "name": "Critical infrastructure / cyber",
       "score": 94,
-      "trend": "rising"
+      "trend": "stable"
     }
   ],
   "conflict_escalation": 97,
   "coupling_score": 82,
-  "momentum_score": 68,
+  "momentum_score": 71,
   "confidence_score": 75,
   "confidence_level": "MODERATE",
-  "confidence_rationale": "Fresh, direct reporting from AP, NOAA, Treasury, and maritime reporting supports the assessment; several supply-chain and food signals are indirect or older. Evidence gate: 13 items, 9 sources, 5 Tier-A sources, 5/5 clusters.",
-  "preparedness_window": "Days",
-  "summary": "Severe energy and maritime-shipping disruption around Hormuz persists, while an imminent Gulf Coast hurricane creates acute U.S. weather risk. No confirmed U.S. payment, banking, telecom, or grid disruption is reported.",
-  "primary_driver": "Record tanker attacks near Hormuz, amplifying oil-price and shipping risks alongside Gulf Coast hurricane threats.",
+  "confidence_rationale": "Fresh, high-materiality reporting from the IEA, IMO, NWS, WHO, CDC, and AP supports core findings; some financial and canal reporting is lower-tier or indirect. Evidence gate: 14 items, 10 sources, 7 Tier-A sources, 5/5 clusters.",
+  "preparedness_window": "Immediate / ongoing",
+  "summary": "Severe, ongoing energy and maritime disruption remains the main civilian-risk driver, with confirmed Hormuz incidents and historic-scale oil-market disruption. Americas exposure remains high through fuel, freight, and price channels; new Panama earthquake impacts are locally significant but canal operations remain normal.",
+  "primary_driver": "Middle East maritime conflict disrupting oil, gas, and commodity flows through Hormuz.",
   "primary_stabilizers": [
-    "President Trump said the United States would not resume military strikes on Iran before the November 3 midterm elections.",
-    "Brazil’s Senate advanced rare-earth regulation, supporting potential diversification away from China-dominated critical-mineral supply chains.",
-    "Treasury’s Financial Stability Oversight Council said the U.S. financial system remained resilient and able to support economic growth.",
-    "NOAA activated Critical Weather Day operations through October 10 to support tropical-cyclone forecasting and emergency coordination across the Central Gulf Coast."
+    "Saudi and UAE pipelines can bypass an estimated 4.7 million barrels per day, only partially offsetting Hormuz flows that averaged 20.9 million barrels per day in 2025.",
+    "The EU and China reached an initial trade understanding including lower tariffs and measures intended to facilitate rare-earth and permanent-magnet exports.",
+    "Thirty-two countries had active policies by April 2026 to strengthen critical-mineral and clean-technology supply-chain resilience and diversification.",
+    "Treasury’s payment-automation system continues maintaining routing data for banks and credit unions accepting ACH payments, indicating ongoing payment-processing continuity.",
+    "Despite earthquake damage and evacuations, Panama Canal operations remained normal, limiting immediate regional trade disruption."
   ],
   "domains": [
     {
       "key": "energy",
       "threat": 98,
-      "impact": 96,
+      "impact": 97,
       "americas_exposure": 98,
       "trend": "rising",
-      "rationale": "Repeated Hormuz tanker attacks and a >5% oil-price rise heighten supply and price risk.",
+      "rationale": "Historic-scale oil disruption persists; bypass pipelines cover only a fraction of Hormuz flows.",
       "name": "Energy security",
       "weight": 11
     },
     {
       "key": "military",
       "threat": 97,
-      "impact": 94,
+      "impact": 95,
       "americas_exposure": 84,
-      "trend": "stable",
-      "rationale": "Tanker attacks remain intense, though the stated U.S. strike pause is a near-term stabilizer.",
+      "trend": "rising",
+      "rationale": "IMO confirms continuing vessel incidents near Hormuz.",
       "name": "Military / geopolitical",
       "weight": 10
     },
@@ -88,17 +89,17 @@
       "impact": 96,
       "americas_exposure": 97,
       "trend": "rising",
-      "rationale": "Hormuz attacks disrupt energy shipping; rare-earth controls add manufacturing exposure.",
+      "rationale": "Oil, gas, and commodity flows remain impeded despite partial trade and diversification offsets.",
       "name": "Supply chain & transportation",
       "weight": 10
     },
     {
       "key": "trade",
-      "threat": 94,
+      "threat": 93,
       "impact": 85,
-      "americas_exposure": 97,
+      "americas_exposure": 96,
       "trend": "stable",
-      "rationale": "Sanctions and rare-earth controls sustain trade friction, without new confirmed broad access disruption.",
+      "rationale": "Chokepoint disruption persists, while the EU-China interim deal provides a material offset.",
       "name": "Global trade fragmentation",
       "weight": 10
     },
@@ -107,28 +108,28 @@
       "threat": 91,
       "impact": 74,
       "americas_exposure": 85,
-      "trend": "rising",
-      "rationale": "Expanded rare-earth controls raise semiconductor and advanced-manufacturing compliance and sourcing risk.",
+      "trend": "stable",
+      "rationale": "Critical-mineral concentration remains a major forward risk; diversification policies temper it.",
       "name": "Technology chokepoints",
       "weight": 7
     },
     {
       "key": "critical_infrastructure",
-      "threat": 93,
-      "impact": 81,
+      "threat": 92,
+      "impact": 82,
       "americas_exposure": 94,
-      "trend": "rising",
-      "rationale": "Hurricane and flooding threats create near-term Gulf Coast infrastructure risk; no confirmed outage is reported.",
+      "trend": "stable",
+      "rationale": "Panama earthquakes caused building damage and evacuations, but canal operations remain normal.",
       "name": "Critical infrastructure / cyber",
       "weight": 11
     },
     {
       "key": "financial",
-      "threat": 87,
-      "impact": 72,
-      "americas_exposure": 90,
-      "trend": "stable",
-      "rationale": "Energy-price and sanctions risks persist, tempered by Treasury's resilience assessment and no confirmed access restrictions.",
+      "threat": 88,
+      "impact": 74,
+      "americas_exposure": 91,
+      "trend": "rising",
+      "rationale": "European sovereign stress and rising U.S. yields indicate elevated market-pressure conditions.",
       "name": "Financial-system stress",
       "weight": 10
     },
@@ -138,17 +139,17 @@
       "impact": 59,
       "americas_exposure": 82,
       "trend": "rising",
-      "rationale": "Regional food-production stress and El Niño risks raise forward pressure, including Central America.",
+      "rationale": "Commodity-flow disruption sustains forward food-price and availability risk; no new shortage evidence.",
       "name": "Food & agriculture",
       "weight": 8
     },
     {
       "key": "domestic",
       "threat": 76,
-      "impact": 69,
+      "impact": 70,
       "americas_exposure": 84,
       "trend": "rising",
-      "rationale": "Imminent Gulf Coast hurricane and flash-flood conditions elevate emergency and mobility risk.",
+      "rationale": "Panama earthquake damage and evacuations add localized civilian disruption.",
       "name": "Domestic institutional stress",
       "weight": 6
     },
@@ -158,27 +159,27 @@
       "impact": 49,
       "americas_exposure": 63,
       "trend": "stable",
-      "rationale": "No evidence of material unrest-related civilian disruption.",
+      "rationale": "No new evidence of material unrest-related civilian access disruption.",
       "name": "Civil unrest / public order",
       "weight": 7
     },
     {
       "key": "public_health",
-      "threat": 65,
-      "impact": 62,
-      "americas_exposure": 68,
-      "trend": "stable",
-      "rationale": "No fresh evidence of a public-health access or service disruption.",
+      "threat": 67,
+      "impact": 65,
+      "americas_exposure": 70,
+      "trend": "rising",
+      "rationale": "Large regional Ebola outbreak and active U.S. measles outbreaks elevate health-system risk.",
       "name": "Public health / biological",
       "weight": 5
     },
     {
       "key": "natural",
-      "threat": 96,
-      "impact": 84,
-      "americas_exposure": 96,
+      "threat": 97,
+      "impact": 86,
+      "americas_exposure": 97,
       "trend": "rising",
-      "rationale": "Rapidly strengthening Hurricane Isaias and significant flash-flood risk present imminent hazards.",
+      "rationale": "Panama earthquakes caused damage; Hurricane Isaias threatens severe Gulf Coast impacts.",
       "name": "Natural / environmental",
       "weight": 5
     }
@@ -187,19 +188,19 @@
   "verified_hard_trigger_count": 0,
   "severe_hard_trigger_count": 0,
   "score_calibration": {
-    "raw_score": 83,
-    "published_score": 83,
+    "raw_score": 84,
+    "published_score": 84,
     "previous_daily_anchor": 83,
     "rate_limit_applied": false,
     "daily_rate_limit": 3,
     "sustained_90_for_48h": false,
-    "high_impact_domain_count": 8
+    "high_impact_domain_count": 9
   },
   "score_components": {
     "global_threat_pressure": 88,
-    "observed_civilian_disruption": 79,
+    "observed_civilian_disruption": 80,
     "coupling": 82,
-    "momentum": 68,
+    "momentum": 71,
     "americas_exposure": 88
   },
   "drivers": [
@@ -236,102 +237,102 @@
   ],
   "areas_to_watch": [
     {
-      "name": "Strait of Hormuz energy and tanker traffic",
+      "name": "Hormuz energy and shipping flows",
       "severity": "critical",
-      "why": "Record tanker attacks and rising oil prices could further constrain energy shipping and raise Americas fuel costs."
+      "why": "Confirmed maritime incidents and historically large oil-market disruption could further constrain fuel and freight."
     },
     {
-      "name": "U.S. Gulf Coast hurricane and flooding",
-      "severity": "critical",
-      "why": "Hurricane conditions and moderate flash-flood risk are forecast within days."
-    },
-    {
-      "name": "Rare-earth supply chains",
+      "name": "U.S. Gulf Coast hurricane impacts",
       "severity": "high",
-      "why": "Expanded Chinese export controls could affect semiconductor, defense, and advanced manufacturing inputs."
+      "why": "NWS warns of life-threatening surge, destructive winds, and flooding."
     },
     {
-      "name": "Central American food-security exposure",
-      "severity": "medium",
-      "why": "El Niño-linked drought and flood risk could pressure agricultural output and migration drivers."
+      "name": "Americas health surveillance",
+      "severity": "high",
+      "why": "U.S. measles outbreaks are ongoing while Ebola expansion raises cross-border monitoring demands."
     },
     {
-      "name": "Financial and infrastructure continuity",
+      "name": "Panama earthquake recovery",
       "severity": "medium",
-      "why": "No confirmed disruption, but energy and storm shocks warrant monitoring for localized knock-on effects."
+      "why": "Building damage and evacuations are confirmed, though canal operations remain normal."
+    },
+    {
+      "name": "Sovereign-yield and inflation pressure",
+      "severity": "medium",
+      "why": "European spread widening and rising U.S. long yields may amplify financial and price stress."
     }
   ],
   "signals": [
     {
-      "title": "Hormuz tanker attacks intensify",
-      "summary": "Oil prices rose more than 5% as attacks on Gulf shipping intensified, while roughly one-quarter of U.S. Gulf oil output was shut in by a hurricane.",
-      "url": "https://www.investing.com/news/commodities-news/oil-jumps-as-middle-east-supply-concerns-persist-amid-shipping-attacks-4938452",
+      "title": "Hormuz incidents continue",
+      "summary": "The IMO recorded 100 confirmed Middle East maritime incidents by October 9, including multiple damaged vessels in or near the Strait of Hormuz during October.",
+      "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-highlighted-incidents.aspx",
+      "source": "International Maritime Organization",
+      "published_at": "2026-10-09T00:00:00.000Z",
+      "category": "MILITARY",
+      "impact": "up"
+    },
+    {
+      "title": "Energy flows remain disrupted",
+      "summary": "The IEA says the regional war created the largest disruption in global oil-market supply history while impeding natural-gas and commodity flows.",
+      "url": "https://www.iea.org/data-and-statistics/data-tools/middle-east-maritime-chokepoints-shipping-monitor",
+      "source": "International Energy Agency",
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "category": "ENERGY",
+      "impact": "up"
+    },
+    {
+      "title": "Critical-mineral concentration risk",
+      "summary": "The IEA warns that expanded rare-earth controls could jeopardize an estimated $6.5 trillion in downstream production outside China if fully implemented.",
+      "url": "https://www.iea.org/news/supply-concentration-export-restrictions-and-declining-investment-put-critical-mineral-security-at-risk",
+      "source": "International Energy Agency",
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "category": "SUPPLY",
+      "impact": "up"
+    },
+    {
+      "title": "European bond-market stress",
+      "summary": "Reuters reported the French-German 10-year yield spread exceeded 140 basis points, its widest since 2012, amid heightened sovereign-debt concerns.",
+      "url": "https://www.investing.com/news/commodities-news/morning-bid-bonds-bombs-and-barricades-4940727",
       "source": "Reuters via Investing.com",
+      "published_at": "2026-10-09T00:00:00.000Z",
+      "category": "FINANCE",
+      "impact": "up"
+    },
+    {
+      "title": "U.S. Treasury-yield pressure",
+      "summary": "U.S. long-term Treasury yields resumed climbing on October 7, contributing to lower equity markets and renewed concern about inflation and debt levels.",
+      "url": "https://www.investing.com/news/economy-news/wall-street-futures-slip-as-yields-and-oil-rebound-fed-minutes-in-focus-4936151",
+      "source": "Reuters via Investing.com",
+      "published_at": "2026-10-07T00:00:00.000Z",
+      "category": "FINANCE",
+      "impact": "up"
+    },
+    {
+      "title": "Panama earthquake damages buildings",
+      "summary": "Two powerful earthquakes and aftershocks damaged buildings and prompted evacuations across Panama on October 9.",
+      "url": "https://apnews.com/article/e4e5dc85829714db88a74de3b7019d55",
+      "source": "Associated Press",
+      "published_at": "2026-10-09T00:00:00.000Z",
+      "category": "CYBER",
+      "impact": "up"
+    },
+    {
+      "title": "Hurricane Isaias threatens Gulf Coast",
+      "summary": "NWS warned that Hurricane Isaias could bring life-threatening storm surge, devastating winds, and flooding to Florida Panhandle and Alabama communities.",
+      "url": "https://forecast.weather.gov/product.php?format=txt&glossary=1&issuedby=MOB&product=AFD&site=MFR&version=1",
+      "source": "National Weather Service",
+      "published_at": "2026-10-09T00:00:00.000Z",
+      "category": "NATURAL",
+      "impact": "up"
+    },
+    {
+      "title": "Ebola expands across borders",
+      "summary": "WHO reported 8,728 confirmed Bundibugyo virus cases and 4,205 deaths in DRC, plus an imported fatal case in Kenya prompting regional contact tracing.",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON619",
+      "source": "World Health Organization",
       "published_at": "2026-10-08T00:00:00.000Z",
-      "category": "MILITARY",
-      "impact": "up"
-    },
-    {
-      "title": "Record weekly tanker attacks",
-      "summary": "Maritime security sources recorded at least 12 attacks on oil, LNG, and LPG tankers around Hormuz from September 28 through October 5.",
-      "url": "https://gcaptain.com/attacks-on-tankers-in-hormuz-hit-highest-of-any-week-since-start-of-iran-war-sources-say/",
-      "source": "Reuters via gCaptain",
-      "published_at": "2026-10-07T00:00:00.000Z",
-      "category": "MILITARY",
-      "impact": "up"
-    },
-    {
-      "title": "Russian sanctions implementation urged",
-      "summary": "U.S. senators urged faster implementation of recently enacted Russia sanctions, citing continued financial flows supporting Russia’s war effort.",
-      "url": "https://apnews.com/article/b322eec6b33610ebf4048daa5d621483",
-      "source": "AP",
-      "published_at": "2026-10-07T00:00:00.000Z",
-      "category": "TRADE",
-      "impact": "up"
-    },
-    {
-      "title": "Rare-earth export controls expand",
-      "summary": "China expanded rare-earth export controls to additional elements and processing technologies, increasing compliance risk for semiconductor, defense, and advanced-manufacturing supply chains.",
-      "url": "https://www.investing.com/news/commodities-news/china-tightens-rare-earth-export-controls-4278569",
-      "source": "Reuters via Investing.com",
-      "published_at": null,
-      "category": "TRADE",
-      "impact": "up"
-    },
-    {
-      "title": "Isaias strengthening before Gulf landfall",
-      "summary": "NOAA reported Hurricane Isaias near 110 mph, strengthening rapidly, with preparations urged before dangerous Gulf Coast conditions on October 9.",
-      "url": "https://prod-west.nhc.woc.noaa.gov/mobile/",
-      "source": "NOAA National Hurricane Center",
-      "published_at": "2026-10-09T00:00:00.000Z",
-      "category": "NATURAL",
-      "impact": "up"
-    },
-    {
-      "title": "Flash-flood threat across Gulf Coast",
-      "summary": "The Weather Prediction Center placed southern Alabama, the Florida Panhandle and southwest Georgia under moderate excessive-rainfall risk, warning of significant flash flooding.",
-      "url": "https://www.wpc.ncep.noaa.gov/",
-      "source": "NOAA Weather Prediction Center",
-      "published_at": "2026-10-09T00:00:00.000Z",
-      "category": "NATURAL",
-      "impact": "up"
-    },
-    {
-      "title": "Regional food-production funding gap",
-      "summary": "FAO reports conflict and economic shocks are undermining food production, while only 23% of its 2026–2028 emergency-response funding requirement is funded.",
-      "url": "https://www.fao.org/newsroom/detail/fao-calls-for-urgent-investment-to-protect-food-production-as-crises-deepen-across-the-near-east-and-north-africa/en/?=1",
-      "source": "FAO",
-      "published_at": "2026-10-07T00:00:00.000Z",
-      "category": "FOOD",
-      "impact": "up"
-    },
-    {
-      "title": "El Niño food-security risk",
-      "summary": "WFP warns intensifying 2026–27 El Niño could worsen drought, floods, and agricultural losses, including knock-on effects in Central America’s Dry Corridor.",
-      "url": "https://www.wfp.org/stories/how-record-breaking-el-nino-could-deepen-global-hunger",
-      "source": "World Food Programme",
-      "published_at": "2026-10-07T00:00:00.000Z",
-      "category": "FOOD",
+      "category": "HEALTH",
       "impact": "up"
     }
   ],
@@ -602,13 +603,23 @@
       "americas": 88,
       "conflict": 97,
       "momentum": 68
+    },
+    {
+      "date": "2026-10-10",
+      "preparedness": 84,
+      "raw_preparedness": 84,
+      "threat": 88,
+      "impact": 80,
+      "americas": 88,
+      "conflict": 97,
+      "momentum": 71
     }
   ],
   "evidence_quality": {
-    "evidence_count": 13,
+    "evidence_count": 14,
     "fresh_count": 9,
-    "unique_sources": 9,
-    "tier_a_sources": 5,
+    "unique_sources": 10,
+    "tier_a_sources": 7,
     "clusters": 5,
     "domains_covered": 10,
     "confidence_cap": 75,
@@ -617,12 +628,12 @@
   "evidence_log": [
     {
       "id": "E1",
-      "title": "Hormuz tanker attacks intensify",
-      "source": "Reuters via Investing.com",
-      "url": "https://www.investing.com/news/commodities-news/oil-jumps-as-middle-east-supply-concerns-persist-amid-shipping-attacks-4938452",
-      "source_domain": "investing.com",
+      "title": "Hormuz incidents continue",
+      "source": "International Maritime Organization",
+      "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-highlighted-incidents.aspx",
+      "source_domain": "imo.org",
       "source_tier": "C",
-      "published_at": "2026-10-08T00:00:00.000Z",
+      "published_at": "2026-10-09T00:00:00.000Z",
       "age_days": 1,
       "cluster": "military_energy_shipping",
       "domains": [
@@ -630,255 +641,269 @@
         "energy",
         "supply_chain"
       ],
-      "geography": "Strait of Hormuz and Persian Gulf",
+      "geography": "Strait of Hormuz / Middle East",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "Oil prices rose more than 5% as attacks on Gulf shipping intensified, while roughly one-quarter of U.S. Gulf oil output was shut in by a hurricane.",
+      "fact": "The IMO recorded 100 confirmed Middle East maritime incidents by October 9, including multiple damaged vessels in or near the Strait of Hormuz during October.",
       "americas_relevant": true
     },
     {
       "id": "E2",
-      "title": "Record weekly tanker attacks",
-      "source": "Reuters via gCaptain",
-      "url": "https://gcaptain.com/attacks-on-tankers-in-hormuz-hit-highest-of-any-week-since-start-of-iran-war-sources-say/",
-      "source_domain": "gcaptain.com",
-      "source_tier": "C",
-      "published_at": "2026-10-07T00:00:00.000Z",
-      "age_days": 2,
+      "title": "Energy flows remain disrupted",
+      "source": "International Energy Agency",
+      "url": "https://www.iea.org/data-and-statistics/data-tools/middle-east-maritime-chokepoints-shipping-monitor",
+      "source_domain": "iea.org",
+      "source_tier": "A",
+      "published_at": "2026-09-16T00:00:00.000Z",
+      "age_days": 24,
       "cluster": "military_energy_shipping",
       "domains": [
-        "military",
         "energy",
-        "supply_chain"
+        "supply_chain",
+        "trade"
       ],
-      "geography": "Strait of Hormuz",
+      "geography": "Middle East maritime chokepoints",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "Maritime security sources recorded at least 12 attacks on oil, LNG, and LPG tankers around Hormuz from September 28 through October 5.",
+      "fact": "The IEA says the regional war created the largest disruption in global oil-market supply history while impeding natural-gas and commodity flows.",
       "americas_relevant": true
     },
     {
       "id": "E3",
-      "title": "U.S. strike pause before elections",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/422b1799a1a06466279ac265f560e014",
-      "source_domain": "apnews.com",
+      "title": "Partial bypass capacity",
+      "source": "U.S. Energy Information Administration",
+      "url": "https://www.eia.gov/international/analysis/special-topics/World_Oil_Transit_Chokepoints",
+      "source_domain": "eia.gov",
       "source_tier": "A",
-      "published_at": "2026-10-08T00:00:00.000Z",
-      "age_days": 1,
+      "published_at": "2026-10-05T00:00:00.000Z",
+      "age_days": 5,
       "cluster": "military_energy_shipping",
       "domains": [
-        "military"
+        "energy",
+        "trade",
+        "supply_chain"
       ],
-      "geography": "United States and Iran",
+      "geography": "Persian Gulf / Strait of Hormuz",
       "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "President Trump said the United States would not resume military strikes on Iran before the November 3 midterm elections.",
+      "fact": "Saudi and UAE pipelines can bypass an estimated 4.7 million barrels per day, only partially offsetting Hormuz flows that averaged 20.9 million barrels per day in 2025.",
       "americas_relevant": true
     },
     {
       "id": "E4",
-      "title": "Russian sanctions implementation urged",
-      "source": "AP",
-      "url": "https://apnews.com/article/b322eec6b33610ebf4048daa5d621483",
+      "title": "EU-China interim trade deal",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/54c9c71e85f92dc0003780fc53f0b250",
       "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-10-07T00:00:00.000Z",
-      "age_days": 2,
+      "published_at": "2026-10-09T00:00:00.000Z",
+      "age_days": 1,
       "cluster": "trade_supply_technology",
       "domains": [
         "trade",
-        "financial",
         "supply_chain"
       ],
-      "geography": "United States/Russia/Ukraine",
-      "evidence_type": "observed",
-      "materiality": "medium",
-      "fact": "U.S. senators urged faster implementation of recently enacted Russia sanctions, citing continued financial flows supporting Russia’s war effort.",
+      "geography": "China-European Union",
+      "evidence_type": "stabilizer",
+      "materiality": "high",
+      "fact": "The EU and China reached an initial trade understanding including lower tariffs and measures intended to facilitate rare-earth and permanent-magnet exports.",
       "americas_relevant": true
     },
     {
       "id": "E5",
-      "title": "Rare-earth export controls expand",
-      "source": "Reuters via Investing.com",
-      "url": "https://www.investing.com/news/commodities-news/china-tightens-rare-earth-export-controls-4278569",
-      "source_domain": "investing.com",
-      "source_tier": "C",
-      "published_at": null,
-      "age_days": 999,
+      "title": "Critical-mineral concentration risk",
+      "source": "International Energy Agency",
+      "url": "https://www.iea.org/news/supply-concentration-export-restrictions-and-declining-investment-put-critical-mineral-security-at-risk",
+      "source_domain": "iea.org",
+      "source_tier": "A",
+      "published_at": "2026-08-10T00:00:00.000Z",
+      "age_days": 61,
       "cluster": "trade_supply_technology",
       "domains": [
-        "trade",
-        "technology",
-        "supply_chain"
+        "supply_chain",
+        "technology"
       ],
-      "geography": "China/global",
+      "geography": "Global",
       "evidence_type": "forward",
       "materiality": "high",
-      "fact": "China expanded rare-earth export controls to additional elements and processing technologies, increasing compliance risk for semiconductor, defense, and advanced-manufacturing supply chains.",
+      "fact": "The IEA warns that expanded rare-earth controls could jeopardize an estimated $6.5 trillion in downstream production outside China if fully implemented.",
       "americas_relevant": true
     },
     {
       "id": "E6",
-      "title": "Critical-mineral diversification advances",
-      "source": "AP",
-      "url": "https://apnews.com/article/23c269b2738ded4a6c4cd2f696f83102",
-      "source_domain": "apnews.com",
+      "title": "Diversification response",
+      "source": "International Energy Agency",
+      "url": "https://www.iea.org/reports/state-of-energy-policy-2026/executive-summary",
+      "source_domain": "iea.org",
       "source_tier": "A",
-      "published_at": "2026-09-03T00:00:00.000Z",
-      "age_days": 36,
+      "published_at": "2026-10-03T00:00:00.000Z",
+      "age_days": 7,
       "cluster": "trade_supply_technology",
       "domains": [
-        "trade",
-        "supply_chain"
+        "supply_chain",
+        "technology"
       ],
-      "geography": "Brazil/United States/global",
+      "geography": "Global",
       "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "Brazil’s Senate advanced rare-earth regulation, supporting potential diversification away from China-dominated critical-mineral supply chains.",
+      "fact": "Thirty-two countries had active policies by April 2026 to strengthen critical-mineral and clean-technology supply-chain resilience and diversification.",
       "americas_relevant": true
     },
     {
       "id": "E7",
-      "title": "Financial system remains resilient",
-      "source": "U.S. Department of the Treasury",
-      "url": "https://home.treasury.gov/news/press-releases/sb0638/",
-      "source_domain": "home.treasury.gov",
-      "source_tier": "A",
-      "published_at": "2026-09-29T00:00:00.000Z",
-      "age_days": 10,
+      "title": "European bond-market stress",
+      "source": "Reuters via Investing.com",
+      "url": "https://www.investing.com/news/commodities-news/morning-bid-bonds-bombs-and-barricades-4940727",
+      "source_domain": "investing.com",
+      "source_tier": "C",
+      "published_at": "2026-10-09T00:00:00.000Z",
+      "age_days": 1,
+      "cluster": "cyber_infrastructure_finance",
+      "domains": [
+        "financial"
+      ],
+      "geography": "Europe",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "Reuters reported the French-German 10-year yield spread exceeded 140 basis points, its widest since 2012, amid heightened sovereign-debt concerns.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E8",
+      "title": "U.S. Treasury-yield pressure",
+      "source": "Reuters via Investing.com",
+      "url": "https://www.investing.com/news/economy-news/wall-street-futures-slip-as-yields-and-oil-rebound-fed-minutes-in-focus-4936151",
+      "source_domain": "investing.com",
+      "source_tier": "C",
+      "published_at": "2026-10-07T00:00:00.000Z",
+      "age_days": 3,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
         "financial"
       ],
       "geography": "United States",
-      "evidence_type": "stabilizer",
+      "evidence_type": "observed",
       "materiality": "medium",
-      "fact": "Treasury’s Financial Stability Oversight Council said the U.S. financial system remained resilient and able to support economic growth.",
+      "fact": "U.S. long-term Treasury yields resumed climbing on October 7, contributing to lower equity markets and renewed concern about inflation and debt levels.",
       "americas_relevant": true
     },
     {
-      "id": "E8",
-      "title": "No recent disruption confirmed",
-      "source": "Search of Reuters, AP, CISA, DOE, FCC, FDIC, and Treasury results",
-      "url": "https://home.treasury.gov/news/",
-      "source_domain": "home.treasury.gov",
+      "id": "E9",
+      "title": "Payment-system resilience",
+      "source": "U.S. Department of the Treasury",
+      "url": "https://fiscal.treasury.gov/payments-from-government/payment-automation-manager-pam/payment-request-formats",
+      "source_domain": "fiscal.treasury.gov",
       "source_tier": "A",
       "published_at": null,
       "age_days": 999,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
-        "technology",
-        "critical_infrastructure",
-        "financial"
+        "financial",
+        "critical_infrastructure"
       ],
-      "geography": "United States and global",
-      "evidence_type": "observed",
+      "geography": "United States",
+      "evidence_type": "stabilizer",
       "materiality": "low",
-      "fact": "The retrieved authoritative coverage contained no confirmed disruption during October 6–9, 2026 to listed cyber, infrastructure, payment, banking, or market systems.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E9",
-      "title": "Isaias strengthening before Gulf landfall",
-      "source": "NOAA National Hurricane Center",
-      "url": "https://prod-west.nhc.woc.noaa.gov/mobile/",
-      "source_domain": "prod-west.nhc.woc.noaa.gov",
-      "source_tier": "A",
-      "published_at": "2026-10-09T00:00:00.000Z",
-      "age_days": 0,
-      "cluster": "americas_civil",
-      "domains": [
-        "natural",
-        "critical_infrastructure",
-        "domestic"
-      ],
-      "geography": "United States Gulf Coast; northern Gulf of Mexico; northeastern Mexico",
-      "evidence_type": "forward",
-      "materiality": "high",
-      "fact": "NOAA reported Hurricane Isaias near 110 mph, strengthening rapidly, with preparations urged before dangerous Gulf Coast conditions on October 9.",
+      "fact": "Treasury’s payment-automation system continues maintaining routing data for banks and credit unions accepting ACH payments, indicating ongoing payment-processing continuity.",
       "americas_relevant": true
     },
     {
       "id": "E10",
-      "title": "Flash-flood threat across Gulf Coast",
-      "source": "NOAA Weather Prediction Center",
-      "url": "https://www.wpc.ncep.noaa.gov/",
-      "source_domain": "wpc.ncep.noaa.gov",
+      "title": "Panama earthquake damages buildings",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/e4e5dc85829714db88a74de3b7019d55",
+      "source_domain": "apnews.com",
       "source_tier": "A",
       "published_at": "2026-10-09T00:00:00.000Z",
-      "age_days": 0,
+      "age_days": 1,
       "cluster": "americas_civil",
       "domains": [
+        "critical_infrastructure",
         "natural",
-        "domestic",
-        "critical_infrastructure"
+        "domestic"
       ],
-      "geography": "Southern Alabama, Florida Panhandle, southwest Georgia and Southeast United States",
-      "evidence_type": "forward",
+      "geography": "Panama",
+      "evidence_type": "observed",
       "materiality": "high",
-      "fact": "The Weather Prediction Center placed southern Alabama, the Florida Panhandle and southwest Georgia under moderate excessive-rainfall risk, warning of significant flash flooding.",
+      "fact": "Two powerful earthquakes and aftershocks damaged buildings and prompted evacuations across Panama on October 9.",
       "americas_relevant": true
     },
     {
       "id": "E11",
-      "title": "Federal weather operations activated",
-      "source": "NOAA National Centers for Environmental Prediction",
-      "url": "https://www.nco.ncep.noaa.gov/status/cwd/",
-      "source_domain": "nco.ncep.noaa.gov",
-      "source_tier": "A",
-      "published_at": "2026-10-08T00:00:00.000Z",
-      "age_days": 1,
+      "title": "Panama Canal remains operational",
+      "source": "Reuters",
+      "url": "https://theprint.in/world/powerful-quake-hits-panama-damages-homes-canal-operations-normal/3067249/",
+      "source_domain": "theprint.in",
+      "source_tier": "C",
+      "published_at": "2026-10-10T00:00:00.000Z",
+      "age_days": 0,
       "cluster": "americas_civil",
       "domains": [
-        "natural",
-        "domestic",
-        "critical_infrastructure"
+        "critical_infrastructure",
+        "trade",
+        "natural"
       ],
-      "geography": "Central Gulf Coast, United States",
+      "geography": "Panama",
       "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "NOAA activated Critical Weather Day operations through October 10 to support tropical-cyclone forecasting and emergency coordination across the Central Gulf Coast.",
+      "materiality": "high",
+      "fact": "Despite earthquake damage and evacuations, Panama Canal operations remained normal, limiting immediate regional trade disruption.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E12",
+      "title": "Hurricane Isaias threatens Gulf Coast",
+      "source": "National Weather Service",
+      "url": "https://forecast.weather.gov/product.php?format=txt&glossary=1&issuedby=MOB&product=AFD&site=MFR&version=1",
+      "source_domain": "forecast.weather.gov",
+      "source_tier": "A",
+      "published_at": "2026-10-09T00:00:00.000Z",
+      "age_days": 1,
+      "cluster": "food_health_natural",
+      "domains": [
+        "natural"
+      ],
+      "geography": "U.S. Gulf Coast",
+      "evidence_type": "forward",
+      "materiality": "high",
+      "fact": "NWS warned that Hurricane Isaias could bring life-threatening storm surge, devastating winds, and flooding to Florida Panhandle and Alabama communities.",
       "americas_relevant": true
     },
     {
       "id": "E13",
-      "title": "Regional food-production funding gap",
-      "source": "FAO",
-      "url": "https://www.fao.org/newsroom/detail/fao-calls-for-urgent-investment-to-protect-food-production-as-crises-deepen-across-the-near-east-and-north-africa/en/?=1",
-      "source_domain": "fao.org",
-      "source_tier": "C",
-      "published_at": "2026-10-07T00:00:00.000Z",
+      "title": "Ebola expands across borders",
+      "source": "World Health Organization",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON619",
+      "source_domain": "who.int",
+      "source_tier": "A",
+      "published_at": "2026-10-08T00:00:00.000Z",
       "age_days": 2,
       "cluster": "food_health_natural",
       "domains": [
-        "food",
-        "supply_chain"
+        "public_health"
       ],
-      "geography": "Near East and North Africa",
+      "geography": "Democratic Republic of the Congo, Kenya, Uganda",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "FAO reports conflict and economic shocks are undermining food production, while only 23% of its 2026–2028 emergency-response funding requirement is funded.",
-      "americas_relevant": false
+      "fact": "WHO reported 8,728 confirmed Bundibugyo virus cases and 4,205 deaths in DRC, plus an imported fatal case in Kenya prompting regional contact tracing.",
+      "americas_relevant": true
     },
     {
       "id": "E14",
-      "title": "El Niño food-security risk",
-      "source": "World Food Programme",
-      "url": "https://www.wfp.org/stories/how-record-breaking-el-nino-could-deepen-global-hunger",
-      "source_domain": "wfp.org",
-      "source_tier": "C",
-      "published_at": "2026-10-07T00:00:00.000Z",
-      "age_days": 2,
+      "title": "U.S. measles burden remains high",
+      "source": "Centers for Disease Control and Prevention",
+      "url": "https://www.cdc.gov/measles/data-research/index.html",
+      "source_domain": "cdc.gov",
+      "source_tier": "A",
+      "published_at": "2026-10-09T00:00:00.000Z",
+      "age_days": 1,
       "cluster": "food_health_natural",
       "domains": [
-        "food",
-        "natural"
+        "public_health"
       ],
-      "geography": "Global, including Central America",
-      "evidence_type": "forward",
+      "geography": "United States",
+      "evidence_type": "observed",
       "materiality": "medium",
-      "fact": "WFP warns intensifying 2026–27 El Niño could worsen drought, floods, and agricultural losses, including knock-on effects in Central America’s Dry Corridor.",
+      "fact": "CDC reported 4,080 confirmed U.S. measles cases through October 8, including 42 outbreaks during 2026.",
       "americas_relevant": true
     }
   ],
@@ -886,8 +911,8 @@
     "research_model": "gpt-5.6-luna",
     "assessment_model": "gpt-5.6-terra",
     "web_search_calls": 6,
-    "estimated_run_cost_usd": 0.097042,
-    "estimated_period_spend_usd": 2.970436,
+    "estimated_run_cost_usd": 0.097513,
+    "estimated_period_spend_usd": 3.06795,
     "allocated_90_day_budget_usd": 10,
     "operational_stop_usd": 9
   },
