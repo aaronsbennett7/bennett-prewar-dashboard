@@ -2,18 +2,18 @@
   "schema_version": 5,
   "engine_version": "5.3",
   "data_status": "VERIFIED",
-  "as_of": "2026-10-10",
-  "updated_at": "2026-10-10T16:16:46.866Z",
-  "last_successful_update": "2026-10-10T16:16:46.866Z",
-  "preparedness_urgency": 84,
-  "raw_preparedness_urgency": 84,
+  "as_of": "2026-10-11",
+  "updated_at": "2026-10-11T16:41:35.432Z",
+  "last_successful_update": "2026-10-11T16:41:35.432Z",
+  "preparedness_urgency": 85,
+  "raw_preparedness_urgency": 85,
   "preparedness_stage": "HIGH ALERT",
-  "global_threat_pressure": 88,
-  "leading_threat_pressure": 88,
-  "observed_civilian_disruption": 80,
-  "americas_exposure": 88,
+  "global_threat_pressure": 89,
+  "leading_threat_pressure": 89,
+  "observed_civilian_disruption": 81,
+  "americas_exposure": 89,
   "americas_stage": "SEVERE",
-  "americas_summary": "The Americas face high exposure to energy and freight-price shocks, U.S. yield pressure, Gulf hurricane hazards, U.S. measles outbreaks, and localized Panama earthquake impacts. No evidence shows a broad Americas transport, payment, grid, or canal-access failure.",
+  "americas_summary": "Americas exposure remains very high through oil and shipping costs, supply-chain dependence, financial volatility, and immediate Mexico/Southwest U.S. flood and transport hazards.",
   "americas_components": [
     {
       "name": "Energy security",
@@ -26,13 +26,13 @@
       "trend": "rising"
     },
     {
-      "name": "Military / geopolitical",
-      "score": 84,
+      "name": "Natural / environmental",
+      "score": 98,
       "trend": "rising"
     },
     {
-      "name": "Natural / environmental",
-      "score": 97,
+      "name": "Military / geopolitical",
+      "score": 85,
       "trend": "rising"
     },
     {
@@ -42,25 +42,24 @@
     },
     {
       "name": "Critical infrastructure / cyber",
-      "score": 94,
-      "trend": "stable"
+      "score": 95,
+      "trend": "rising"
     }
   ],
-  "conflict_escalation": 97,
-  "coupling_score": 82,
-  "momentum_score": 71,
-  "confidence_score": 75,
-  "confidence_level": "MODERATE",
-  "confidence_rationale": "Fresh, high-materiality reporting from the IEA, IMO, NWS, WHO, CDC, and AP supports core findings; some financial and canal reporting is lower-tier or indirect. Evidence gate: 14 items, 10 sources, 7 Tier-A sources, 5/5 clusters.",
+  "conflict_escalation": 98,
+  "coupling_score": 86,
+  "momentum_score": 75,
+  "confidence_score": 84,
+  "confidence_level": "HIGH",
+  "confidence_rationale": "Fresh, high-quality AP, NOAA, CDC, EIA, and market evidence directly supports key conditions; some supply-chain and market reporting is lower-tier or older. Evidence gate: 14 items, 9 sources, 6 Tier-A sources, 5/5 clusters.",
   "preparedness_window": "Immediate / ongoing",
-  "summary": "Severe, ongoing energy and maritime disruption remains the main civilian-risk driver, with confirmed Hormuz incidents and historic-scale oil-market disruption. Americas exposure remains high through fuel, freight, and price channels; new Panama earthquake impacts are locally significant but canal operations remain normal.",
-  "primary_driver": "Middle East maritime conflict disrupting oil, gas, and commodity flows through Hormuz.",
+  "summary": "Severe, multi-domain disruption persists: constrained Hormuz shipping and oil risk, active regional strikes, market strain, rare-earth frictions, and immediate hurricane/flood hazards in North America.",
+  "primary_driver": "Middle East conflict is reinforcing energy, shipping, trade, and financial stress; concurrent North American hurricanes create direct near-term disruption risk.",
   "primary_stabilizers": [
-    "Saudi and UAE pipelines can bypass an estimated 4.7 million barrels per day, only partially offsetting Hormuz flows that averaged 20.9 million barrels per day in 2025.",
-    "The EU and China reached an initial trade understanding including lower tariffs and measures intended to facilitate rare-earth and permanent-magnet exports.",
-    "Thirty-two countries had active policies by April 2026 to strengthen critical-mineral and clean-technology supply-chain resilience and diversification.",
-    "Treasury’s payment-automation system continues maintaining routing data for banks and credit unions accepting ACH payments, indicating ongoing payment-processing continuity.",
-    "Despite earthquake damage and evacuations, Panama Canal operations remained normal, limiting immediate regional trade disruption."
+    "Pipeline bypasses, overland routes, ship-to-ship transfers, and future UAE capacity are expected to gradually reduce Middle East oil-flow constraints.",
+    "EU and China reached a preliminary trade deal reportedly covering lower tariffs and measures to stabilize rare-earth supply chains.",
+    "A well-received 30-year U.S. Treasury auction indicated investors still demanded long-term government debt despite the broader bond-market selloff.",
+    "CDC assessed general U.S. human risk from New World screwworm as very low, while exposed populations in affected areas face low risk over three months."
   ],
   "domains": [
     {
@@ -69,17 +68,17 @@
       "impact": 97,
       "americas_exposure": 98,
       "trend": "rising",
-      "rationale": "Historic-scale oil disruption persists; bypass pipelines cover only a fraction of Hormuz flows.",
+      "rationale": "Hormuz traffic remains depressed and insurance risk elevated; strikes sustain regional oil-infrastructure risk despite bypass routes.",
       "name": "Energy security",
       "weight": 11
     },
     {
       "key": "military",
-      "threat": 97,
-      "impact": 95,
-      "americas_exposure": 84,
+      "threat": 98,
+      "impact": 96,
+      "americas_exposure": 85,
       "trend": "rising",
-      "rationale": "IMO confirms continuing vessel incidents near Hormuz.",
+      "rationale": "Fresh strike on Riyadh airport and continued Hormuz risk show active escalation with global spillovers.",
       "name": "Military / geopolitical",
       "weight": 10
     },
@@ -89,47 +88,47 @@
       "impact": 96,
       "americas_exposure": 97,
       "trend": "rising",
-      "rationale": "Oil, gas, and commodity flows remain impeded despite partial trade and diversification offsets.",
+      "rationale": "Constrained Hormuz transit and reported U.S.-bound rare-earth shipment halts sustain logistics and materials disruption.",
       "name": "Supply chain & transportation",
       "weight": 10
     },
     {
       "key": "trade",
-      "threat": 93,
+      "threat": 92,
       "impact": 85,
       "americas_exposure": 96,
       "trend": "stable",
-      "rationale": "Chokepoint disruption persists, while the EU-China interim deal provides a material offset.",
+      "rationale": "Shipping constraints persist, while the EU-China interim deal provides a meaningful rare-earth and tariff stabilizer.",
       "name": "Global trade fragmentation",
       "weight": 10
     },
     {
       "key": "technology",
       "threat": 91,
-      "impact": 74,
+      "impact": 75,
       "americas_exposure": 85,
       "trend": "stable",
-      "rationale": "Critical-mineral concentration remains a major forward risk; diversification policies temper it.",
+      "rationale": "Rare-earth shipment and export-control risks remain, partly offset by reported EU-China supply-chain measures.",
       "name": "Technology chokepoints",
       "weight": 7
     },
     {
       "key": "critical_infrastructure",
-      "threat": 92,
-      "impact": 82,
-      "americas_exposure": 94,
-      "trend": "stable",
-      "rationale": "Panama earthquakes caused building damage and evacuations, but canal operations remain normal.",
+      "threat": 93,
+      "impact": 84,
+      "americas_exposure": 95,
+      "trend": "rising",
+      "rationale": "Riyadh airport strike and Hurricane Simon create direct aviation, transport, flooding, and infrastructure disruption risks.",
       "name": "Critical infrastructure / cyber",
       "weight": 11
     },
     {
       "key": "financial",
       "threat": 88,
-      "impact": 74,
+      "impact": 75,
       "americas_exposure": 91,
       "trend": "rising",
-      "rationale": "European sovereign stress and rising U.S. yields indicate elevated market-pressure conditions.",
+      "rationale": "Oil volatility, sovereign-bond pressure, and banking strain unsettle markets; Treasury demand is a partial stabilizer.",
       "name": "Financial-system stress",
       "weight": 10
     },
@@ -139,17 +138,17 @@
       "impact": 59,
       "americas_exposure": 82,
       "trend": "rising",
-      "rationale": "Commodity-flow disruption sustains forward food-price and availability risk; no new shortage evidence.",
+      "rationale": "Storm flooding may affect regional distribution and agriculture; CDC assesses screwworm human risk as very low.",
       "name": "Food & agriculture",
       "weight": 8
     },
     {
       "key": "domestic",
-      "threat": 76,
-      "impact": 70,
-      "americas_exposure": 84,
+      "threat": 78,
+      "impact": 73,
+      "americas_exposure": 86,
       "trend": "rising",
-      "rationale": "Panama earthquake damage and evacuations add localized civilian disruption.",
+      "rationale": "Hurricane Simon and Southwest excessive-rainfall threats create direct risks to housing, mobility, and emergency services.",
       "name": "Domestic institutional stress",
       "weight": 6
     },
@@ -159,49 +158,62 @@
       "impact": 49,
       "americas_exposure": 63,
       "trend": "stable",
-      "rationale": "No new evidence of material unrest-related civilian access disruption.",
+      "rationale": "No new evidence of material civil-unrest disruption.",
       "name": "Civil unrest / public order",
       "weight": 7
     },
     {
       "key": "public_health",
-      "threat": 67,
-      "impact": 65,
-      "americas_exposure": 70,
+      "threat": 68,
+      "impact": 66,
+      "americas_exposure": 71,
       "trend": "rising",
-      "rationale": "Large regional Ebola outbreak and active U.S. measles outbreaks elevate health-system risk.",
+      "rationale": "Elevated U.S. measles activity persists; screwworm assessment is a countervailing low-risk signal.",
       "name": "Public health / biological",
       "weight": 5
     },
     {
       "key": "natural",
-      "threat": 97,
-      "impact": 86,
-      "americas_exposure": 97,
+      "threat": 98,
+      "impact": 90,
+      "americas_exposure": 98,
       "trend": "rising",
-      "rationale": "Panama earthquakes caused damage; Hurricane Isaias threatens severe Gulf Coast impacts.",
+      "rationale": "Hurricane Simon threatens Mexico with extreme wind and flooding, while U.S. excessive-rainfall risks remain material.",
       "name": "Natural / environmental",
       "weight": 5
     }
   ],
-  "hard_triggers": [],
-  "verified_hard_trigger_count": 0,
+  "hard_triggers": [
+    {
+      "type": "transport_shutdown",
+      "verified": true,
+      "scope": "regional",
+      "status": "developing",
+      "summary": "Hurricane Simon and associated flooding threats create a concrete near-term risk of regional transport disruption in west-central Mexico and the Southwest U.S.",
+      "source_url": "https://www.nhc.noaa.gov/",
+      "evidence_ids": [
+        "E10",
+        "E11"
+      ]
+    }
+  ],
+  "verified_hard_trigger_count": 1,
   "severe_hard_trigger_count": 0,
   "score_calibration": {
-    "raw_score": 84,
-    "published_score": 84,
-    "previous_daily_anchor": 83,
+    "raw_score": 85,
+    "published_score": 85,
+    "previous_daily_anchor": 84,
     "rate_limit_applied": false,
-    "daily_rate_limit": 3,
+    "daily_rate_limit": 6,
     "sustained_90_for_48h": false,
     "high_impact_domain_count": 9
   },
   "score_components": {
-    "global_threat_pressure": 88,
-    "observed_civilian_disruption": 80,
-    "coupling": 82,
-    "momentum": 71,
-    "americas_exposure": 88
+    "global_threat_pressure": 89,
+    "observed_civilian_disruption": 81,
+    "coupling": 86,
+    "momentum": 75,
+    "americas_exposure": 89
   },
   "drivers": [
     {
@@ -215,12 +227,12 @@
       "note": ""
     },
     {
-      "name": "Military / geopolitical",
+      "name": "Natural / environmental",
       "severity": "critical",
       "note": ""
     },
     {
-      "name": "Natural / environmental",
+      "name": "Military / geopolitical",
       "severity": "critical",
       "note": ""
     },
@@ -237,102 +249,102 @@
   ],
   "areas_to_watch": [
     {
-      "name": "Hormuz energy and shipping flows",
+      "name": "Hormuz and Middle East energy/shipping routes",
       "severity": "critical",
-      "why": "Confirmed maritime incidents and historically large oil-market disruption could further constrain fuel and freight."
+      "why": "Traffic remains constrained amid active strike escalation and elevated tanker risk."
     },
     {
-      "name": "U.S. Gulf Coast hurricane impacts",
+      "name": "West-central Mexico and Southwest U.S. flooding",
+      "severity": "critical",
+      "why": "Hurricane Simon and NOAA excessive-rainfall outlooks indicate immediate life-safety and transport risks."
+    },
+    {
+      "name": "Rare-earth and technology supply chains",
       "severity": "high",
-      "why": "NWS warns of life-threatening surge, destructive winds, and flooding."
+      "why": "Reported U.S.-bound shipment stoppages remain a materials-access risk despite the EU-China deal."
     },
     {
-      "name": "Americas health surveillance",
+      "name": "Financial-market transmission",
       "severity": "high",
-      "why": "U.S. measles outbreaks are ongoing while Ebola expansion raises cross-border monitoring demands."
+      "why": "Oil volatility and sovereign-bond strain could tighten funding conditions."
     },
     {
-      "name": "Panama earthquake recovery",
+      "name": "U.S. measles activity",
       "severity": "medium",
-      "why": "Building damage and evacuations are confirmed, though canal operations remain normal."
-    },
-    {
-      "name": "Sovereign-yield and inflation pressure",
-      "severity": "medium",
-      "why": "European spread widening and rising U.S. long yields may amplify financial and price stress."
+      "why": "CDC data indicate sustained elevated outbreak activity."
     }
   ],
   "signals": [
     {
-      "title": "Hormuz incidents continue",
-      "summary": "The IMO recorded 100 confirmed Middle East maritime incidents by October 9, including multiple damaged vessels in or near the Strait of Hormuz during October.",
-      "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-highlighted-incidents.aspx",
-      "source": "International Maritime Organization",
-      "published_at": "2026-10-09T00:00:00.000Z",
+      "title": "Riyadh airport struck again",
+      "summary": "A fresh strike on Riyadh’s passenger terminal underscores escalation risks to Saudi aviation, oil infrastructure, and shipping through the Bab el-Mandeb alternative route.",
+      "url": "https://apnews.com/article/d2e0868ffb18d883c16465d7d6a87ccb",
+      "source": "Associated Press",
+      "published_at": "2026-10-11T00:00:00.000Z",
       "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Energy flows remain disrupted",
-      "summary": "The IEA says the regional war created the largest disruption in global oil-market supply history while impeding natural-gas and commodity flows.",
-      "url": "https://www.iea.org/data-and-statistics/data-tools/middle-east-maritime-chokepoints-shipping-monitor",
-      "source": "International Energy Agency",
-      "published_at": "2026-09-16T00:00:00.000Z",
-      "category": "ENERGY",
+      "title": "Hormuz traffic remains constrained",
+      "summary": "Ship traffic through the Strait of Hormuz remains well below prewar levels, while protected tanker voyages face sharply higher risk and insurance costs.",
+      "url": "https://apnews.com/article/f5481939341ce51a5a3841498b030260",
+      "source": "Associated Press",
+      "published_at": "2026-10-10T00:00:00.000Z",
+      "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Critical-mineral concentration risk",
-      "summary": "The IEA warns that expanded rare-earth controls could jeopardize an estimated $6.5 trillion in downstream production outside China if fully implemented.",
-      "url": "https://www.iea.org/news/supply-concentration-export-restrictions-and-declining-investment-put-critical-mineral-security-at-risk",
-      "source": "International Energy Agency",
-      "published_at": "2026-08-10T00:00:00.000Z",
+      "title": "Chinese suppliers halt some U.S. shipments",
+      "summary": "Some Chinese rare-earth suppliers reportedly stopped shipments to U.S. companies amid geopolitical compliance concerns, while sensitive-material prices remained near record highs.",
+      "url": "https://theedgemalaysia.com/node/816883",
+      "source": "Reuters",
+      "published_at": "2026-09-04T00:00:00.000Z",
       "category": "SUPPLY",
       "impact": "up"
     },
     {
-      "title": "European bond-market stress",
-      "summary": "Reuters reported the French-German 10-year yield spread exceeded 140 basis points, its widest since 2012, amid heightened sovereign-debt concerns.",
-      "url": "https://www.investing.com/news/commodities-news/morning-bid-bonds-bombs-and-barricades-4940727",
-      "source": "Reuters via Investing.com",
-      "published_at": "2026-10-09T00:00:00.000Z",
+      "title": "Sovereign-bond strain persists",
+      "summary": "Global shares fell as sovereign-bond strains, elevated oil prices, and competing technology debt issuance pressured funding conditions and parts of Europe’s banking sector.",
+      "url": "https://live.euronext.com/en/financial-news/shares-slip-oil-spikes-and-bond-bashing-rumbles-on",
+      "source": "Reuters via Euronext",
+      "published_at": "2026-10-08T00:00:00.000Z",
       "category": "FINANCE",
       "impact": "up"
     },
     {
-      "title": "U.S. Treasury-yield pressure",
-      "summary": "U.S. long-term Treasury yields resumed climbing on October 7, contributing to lower equity markets and renewed concern about inflation and debt levels.",
-      "url": "https://www.investing.com/news/economy-news/wall-street-futures-slip-as-yields-and-oil-rebound-fed-minutes-in-focus-4936151",
-      "source": "Reuters via Investing.com",
-      "published_at": "2026-10-07T00:00:00.000Z",
-      "category": "FINANCE",
-      "impact": "up"
-    },
-    {
-      "title": "Panama earthquake damages buildings",
-      "summary": "Two powerful earthquakes and aftershocks damaged buildings and prompted evacuations across Panama on October 9.",
-      "url": "https://apnews.com/article/e4e5dc85829714db88a74de3b7019d55",
+      "title": "Markets remain unsettled",
+      "summary": "Oil volatility, falling technology shares, and reversing bond yields kept markets unsettled, although strong Treasury-auction demand showed continued willingness to buy U.S. government debt.",
+      "url": "https://apnews.com/article/6a096d714c874db13632794a32cebaa6",
       "source": "Associated Press",
-      "published_at": "2026-10-09T00:00:00.000Z",
-      "category": "CYBER",
+      "published_at": "2026-10-08T00:00:00.000Z",
+      "category": "FINANCE",
       "impact": "up"
     },
     {
-      "title": "Hurricane Isaias threatens Gulf Coast",
-      "summary": "NWS warned that Hurricane Isaias could bring life-threatening storm surge, devastating winds, and flooding to Florida Panhandle and Alabama communities.",
-      "url": "https://forecast.weather.gov/product.php?format=txt&glossary=1&issuedby=MOB&product=AFD&site=MFR&version=1",
-      "source": "National Weather Service",
-      "published_at": "2026-10-09T00:00:00.000Z",
+      "title": "Hurricane Simon near Mexico coast",
+      "summary": "Extremely dangerous Hurricane Simon was near Mexico’s west-central coast with 145–155 mph winds, threatening life-threatening rain, flooding, mudslides, and transport disruption.",
+      "url": "https://www.nhc.noaa.gov/",
+      "source": "NOAA National Hurricane Center",
+      "published_at": "2026-10-11T00:00:00.000Z",
       "category": "NATURAL",
       "impact": "up"
     },
     {
-      "title": "Ebola expands across borders",
-      "summary": "WHO reported 8,728 confirmed Bundibugyo virus cases and 4,205 deaths in DRC, plus an imported fatal case in Kenya prompting regional contact tracing.",
-      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON619",
-      "source": "World Health Organization",
+      "title": "Southwest U.S. heavy-rain threat",
+      "summary": "NOAA placed the Great Basin and Southwest under a moderate excessive-rainfall risk, with potential for runoff, flash flooding, and travel disruption through October 12.",
+      "url": "https://origin-east-www-wpc.woc.noaa.gov/",
+      "source": "NOAA Weather Prediction Center",
+      "published_at": "2026-10-11T00:00:00.000Z",
+      "category": "NATURAL",
+      "impact": "up"
+    },
+    {
+      "title": "Hurricane Isaias drives heavy-rain risk",
+      "summary": "NOAA issued excessive-rainfall outlooks linked to Hurricane Isaias, including a Day 2 Moderate Risk, indicating potential material flooding and civilian disruption.",
+      "url": "https://www.wpc.ncep.noaa.gov/index.shtml?trk=article-ssr-frontend-pulse_little-text-block",
+      "source": "NOAA Weather Prediction Center",
       "published_at": "2026-10-08T00:00:00.000Z",
-      "category": "HEALTH",
+      "category": "NATURAL",
       "impact": "up"
     }
   ],
@@ -613,80 +625,91 @@
       "americas": 88,
       "conflict": 97,
       "momentum": 71
+    },
+    {
+      "date": "2026-10-11",
+      "preparedness": 85,
+      "raw_preparedness": 85,
+      "threat": 89,
+      "impact": 81,
+      "americas": 89,
+      "conflict": 98,
+      "momentum": 75
     }
   ],
   "evidence_quality": {
     "evidence_count": 14,
-    "fresh_count": 9,
-    "unique_sources": 10,
-    "tier_a_sources": 7,
+    "fresh_count": 11,
+    "unique_sources": 9,
+    "tier_a_sources": 6,
     "clusters": 5,
-    "domains_covered": 10,
-    "confidence_cap": 75,
+    "domains_covered": 11,
+    "confidence_cap": 88,
     "publishable": true
   },
   "evidence_log": [
     {
       "id": "E1",
-      "title": "Hormuz incidents continue",
-      "source": "International Maritime Organization",
-      "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-highlighted-incidents.aspx",
-      "source_domain": "imo.org",
-      "source_tier": "C",
-      "published_at": "2026-10-09T00:00:00.000Z",
+      "title": "Riyadh airport struck again",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/d2e0868ffb18d883c16465d7d6a87ccb",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-10-11T00:00:00.000Z",
+      "age_days": 0,
+      "cluster": "military_energy_shipping",
+      "domains": [
+        "military",
+        "energy",
+        "critical_infrastructure"
+      ],
+      "geography": "Saudi Arabia / Red Sea",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "A fresh strike on Riyadh’s passenger terminal underscores escalation risks to Saudi aviation, oil infrastructure, and shipping through the Bab el-Mandeb alternative route.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E2",
+      "title": "Hormuz traffic remains constrained",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/f5481939341ce51a5a3841498b030260",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-10-10T00:00:00.000Z",
       "age_days": 1,
       "cluster": "military_energy_shipping",
       "domains": [
         "military",
         "energy",
-        "supply_chain"
+        "supply_chain",
+        "trade"
       ],
-      "geography": "Strait of Hormuz / Middle East",
+      "geography": "Strait of Hormuz / Persian Gulf",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "The IMO recorded 100 confirmed Middle East maritime incidents by October 9, including multiple damaged vessels in or near the Strait of Hormuz during October.",
+      "fact": "Ship traffic through the Strait of Hormuz remains well below prewar levels, while protected tanker voyages face sharply higher risk and insurance costs.",
       "americas_relevant": true
     },
     {
-      "id": "E2",
-      "title": "Energy flows remain disrupted",
-      "source": "International Energy Agency",
-      "url": "https://www.iea.org/data-and-statistics/data-tools/middle-east-maritime-chokepoints-shipping-monitor",
-      "source_domain": "iea.org",
+      "id": "E3",
+      "title": "Workarounds sustain oil flows",
+      "source": "U.S. Energy Information Administration",
+      "url": "https://www.eia.gov/outlooks/steo/archives/oct26.pdf",
+      "source_domain": "eia.gov",
       "source_tier": "A",
-      "published_at": "2026-09-16T00:00:00.000Z",
-      "age_days": 24,
+      "published_at": "2026-10-06T00:00:00.000Z",
+      "age_days": 5,
       "cluster": "military_energy_shipping",
       "domains": [
         "energy",
         "supply_chain",
         "trade"
       ],
-      "geography": "Middle East maritime chokepoints",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "The IEA says the regional war created the largest disruption in global oil-market supply history while impeding natural-gas and commodity flows.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E3",
-      "title": "Partial bypass capacity",
-      "source": "U.S. Energy Information Administration",
-      "url": "https://www.eia.gov/international/analysis/special-topics/World_Oil_Transit_Chokepoints",
-      "source_domain": "eia.gov",
-      "source_tier": "A",
-      "published_at": "2026-10-05T00:00:00.000Z",
-      "age_days": 5,
-      "cluster": "military_energy_shipping",
-      "domains": [
-        "energy",
-        "trade",
-        "supply_chain"
-      ],
-      "geography": "Persian Gulf / Strait of Hormuz",
+      "geography": "Middle East / Global",
       "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "Saudi and UAE pipelines can bypass an estimated 4.7 million barrels per day, only partially offsetting Hormuz flows that averaged 20.9 million barrels per day in 2025.",
+      "fact": "Pipeline bypasses, overland routes, ship-to-ship transfers, and future UAE capacity are expected to gradually reduce Middle East oil-flow constraints.",
       "americas_relevant": true
     },
     {
@@ -697,205 +720,208 @@
       "source_domain": "apnews.com",
       "source_tier": "A",
       "published_at": "2026-10-09T00:00:00.000Z",
-      "age_days": 1,
+      "age_days": 2,
       "cluster": "trade_supply_technology",
       "domains": [
         "trade",
-        "supply_chain"
+        "supply_chain",
+        "technology"
       ],
-      "geography": "China-European Union",
+      "geography": "European Union-China",
       "evidence_type": "stabilizer",
       "materiality": "high",
-      "fact": "The EU and China reached an initial trade understanding including lower tariffs and measures intended to facilitate rare-earth and permanent-magnet exports.",
+      "fact": "EU and China reached a preliminary trade deal reportedly covering lower tariffs and measures to stabilize rare-earth supply chains.",
       "americas_relevant": true
     },
     {
       "id": "E5",
-      "title": "Critical-mineral concentration risk",
-      "source": "International Energy Agency",
-      "url": "https://www.iea.org/news/supply-concentration-export-restrictions-and-declining-investment-put-critical-mineral-security-at-risk",
-      "source_domain": "iea.org",
-      "source_tier": "A",
-      "published_at": "2026-08-10T00:00:00.000Z",
-      "age_days": 61,
+      "title": "Chinese suppliers halt some U.S. shipments",
+      "source": "Reuters",
+      "url": "https://theedgemalaysia.com/node/816883",
+      "source_domain": "theedgemalaysia.com",
+      "source_tier": "C",
+      "published_at": "2026-09-04T00:00:00.000Z",
+      "age_days": 37,
       "cluster": "trade_supply_technology",
       "domains": [
         "supply_chain",
         "technology"
       ],
-      "geography": "Global",
-      "evidence_type": "forward",
+      "geography": "China-United States",
+      "evidence_type": "observed",
       "materiality": "high",
-      "fact": "The IEA warns that expanded rare-earth controls could jeopardize an estimated $6.5 trillion in downstream production outside China if fully implemented.",
+      "fact": "Some Chinese rare-earth suppliers reportedly stopped shipments to U.S. companies amid geopolitical compliance concerns, while sensitive-material prices remained near record highs.",
       "americas_relevant": true
     },
     {
       "id": "E6",
-      "title": "Diversification response",
-      "source": "International Energy Agency",
-      "url": "https://www.iea.org/reports/state-of-energy-policy-2026/executive-summary",
-      "source_domain": "iea.org",
+      "title": "Rare-earth controls target chips",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/dad99d532f858f04d750d0b8c50e5ed6",
+      "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-10-03T00:00:00.000Z",
-      "age_days": 7,
+      "published_at": "2025-10-09T00:00:00.000Z",
+      "age_days": 367,
       "cluster": "trade_supply_technology",
       "domains": [
-        "supply_chain",
-        "technology"
+        "trade",
+        "technology",
+        "supply_chain"
       ],
-      "geography": "Global",
-      "evidence_type": "stabilizer",
+      "geography": "China-global",
+      "evidence_type": "forward",
       "materiality": "medium",
-      "fact": "Thirty-two countries had active policies by April 2026 to strengthen critical-mineral and clean-technology supply-chain resilience and diversification.",
+      "fact": "China’s expanded rare-earth and related-technology export controls could intensify pressure on high-tech and military supply chains, despite prospective diversification efforts.",
       "americas_relevant": true
     },
     {
       "id": "E7",
-      "title": "European bond-market stress",
-      "source": "Reuters via Investing.com",
-      "url": "https://www.investing.com/news/commodities-news/morning-bid-bonds-bombs-and-barricades-4940727",
-      "source_domain": "investing.com",
+      "title": "Sovereign-bond strain persists",
+      "source": "Reuters via Euronext",
+      "url": "https://live.euronext.com/en/financial-news/shares-slip-oil-spikes-and-bond-bashing-rumbles-on",
+      "source_domain": "live.euronext.com",
       "source_tier": "C",
-      "published_at": "2026-10-09T00:00:00.000Z",
-      "age_days": 1,
+      "published_at": "2026-10-08T00:00:00.000Z",
+      "age_days": 3,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
         "financial"
       ],
-      "geography": "Europe",
+      "geography": "Global; France, Italy, Greece",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "Reuters reported the French-German 10-year yield spread exceeded 140 basis points, its widest since 2012, amid heightened sovereign-debt concerns.",
+      "fact": "Global shares fell as sovereign-bond strains, elevated oil prices, and competing technology debt issuance pressured funding conditions and parts of Europe’s banking sector.",
       "americas_relevant": true
     },
     {
       "id": "E8",
-      "title": "U.S. Treasury-yield pressure",
-      "source": "Reuters via Investing.com",
-      "url": "https://www.investing.com/news/economy-news/wall-street-futures-slip-as-yields-and-oil-rebound-fed-minutes-in-focus-4936151",
-      "source_domain": "investing.com",
+      "title": "Markets remain unsettled",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/6a096d714c874db13632794a32cebaa6",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-10-08T00:00:00.000Z",
+      "age_days": 3,
+      "cluster": "cyber_infrastructure_finance",
+      "domains": [
+        "financial"
+      ],
+      "geography": "United States and global markets",
+      "evidence_type": "observed",
+      "materiality": "medium",
+      "fact": "Oil volatility, falling technology shares, and reversing bond yields kept markets unsettled, although strong Treasury-auction demand showed continued willingness to buy U.S. government debt.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E9",
+      "title": "Near-term stabilizer: Treasury demand",
+      "source": "Reuters via MarketScreener",
+      "url": "https://uk.marketscreener.com/news/shares-slip-as-oil-spikes-and-bond-bashing-rumbles-on-ce785ddfda8ef520",
+      "source_domain": "uk.marketscreener.com",
       "source_tier": "C",
-      "published_at": "2026-10-07T00:00:00.000Z",
+      "published_at": "2026-10-08T00:00:00.000Z",
       "age_days": 3,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
         "financial"
       ],
       "geography": "United States",
-      "evidence_type": "observed",
-      "materiality": "medium",
-      "fact": "U.S. long-term Treasury yields resumed climbing on October 7, contributing to lower equity markets and renewed concern about inflation and debt levels.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E9",
-      "title": "Payment-system resilience",
-      "source": "U.S. Department of the Treasury",
-      "url": "https://fiscal.treasury.gov/payments-from-government/payment-automation-manager-pam/payment-request-formats",
-      "source_domain": "fiscal.treasury.gov",
-      "source_tier": "A",
-      "published_at": null,
-      "age_days": 999,
-      "cluster": "cyber_infrastructure_finance",
-      "domains": [
-        "financial",
-        "critical_infrastructure"
-      ],
-      "geography": "United States",
       "evidence_type": "stabilizer",
-      "materiality": "low",
-      "fact": "Treasury’s payment-automation system continues maintaining routing data for banks and credit unions accepting ACH payments, indicating ongoing payment-processing continuity.",
+      "materiality": "medium",
+      "fact": "A well-received 30-year U.S. Treasury auction indicated investors still demanded long-term government debt despite the broader bond-market selloff.",
       "americas_relevant": true
     },
     {
       "id": "E10",
-      "title": "Panama earthquake damages buildings",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/e4e5dc85829714db88a74de3b7019d55",
-      "source_domain": "apnews.com",
+      "title": "Hurricane Simon near Mexico coast",
+      "source": "NOAA National Hurricane Center",
+      "url": "https://www.nhc.noaa.gov/",
+      "source_domain": "nhc.noaa.gov",
       "source_tier": "A",
-      "published_at": "2026-10-09T00:00:00.000Z",
-      "age_days": 1,
+      "published_at": "2026-10-11T00:00:00.000Z",
+      "age_days": 0,
       "cluster": "americas_civil",
       "domains": [
-        "critical_infrastructure",
         "natural",
+        "critical_infrastructure",
         "domestic"
       ],
-      "geography": "Panama",
+      "geography": "Mexico: west-central Pacific coast",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "Two powerful earthquakes and aftershocks damaged buildings and prompted evacuations across Panama on October 9.",
+      "fact": "Extremely dangerous Hurricane Simon was near Mexico’s west-central coast with 145–155 mph winds, threatening life-threatening rain, flooding, mudslides, and transport disruption.",
       "americas_relevant": true
     },
     {
       "id": "E11",
-      "title": "Panama Canal remains operational",
-      "source": "Reuters",
-      "url": "https://theprint.in/world/powerful-quake-hits-panama-damages-homes-canal-operations-normal/3067249/",
-      "source_domain": "theprint.in",
-      "source_tier": "C",
-      "published_at": "2026-10-10T00:00:00.000Z",
+      "title": "Southwest U.S. heavy-rain threat",
+      "source": "NOAA Weather Prediction Center",
+      "url": "https://origin-east-www-wpc.woc.noaa.gov/",
+      "source_domain": "origin-east-www-wpc.woc.noaa.gov",
+      "source_tier": "A",
+      "published_at": "2026-10-11T00:00:00.000Z",
       "age_days": 0,
       "cluster": "americas_civil",
       "domains": [
+        "natural",
         "critical_infrastructure",
-        "trade",
-        "natural"
+        "domestic"
       ],
-      "geography": "Panama",
-      "evidence_type": "stabilizer",
-      "materiality": "high",
-      "fact": "Despite earthquake damage and evacuations, Panama Canal operations remained normal, limiting immediate regional trade disruption.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E12",
-      "title": "Hurricane Isaias threatens Gulf Coast",
-      "source": "National Weather Service",
-      "url": "https://forecast.weather.gov/product.php?format=txt&glossary=1&issuedby=MOB&product=AFD&site=MFR&version=1",
-      "source_domain": "forecast.weather.gov",
-      "source_tier": "A",
-      "published_at": "2026-10-09T00:00:00.000Z",
-      "age_days": 1,
-      "cluster": "food_health_natural",
-      "domains": [
-        "natural"
-      ],
-      "geography": "U.S. Gulf Coast",
+      "geography": "United States: Great Basin and Southwest",
       "evidence_type": "forward",
       "materiality": "high",
-      "fact": "NWS warned that Hurricane Isaias could bring life-threatening storm surge, devastating winds, and flooding to Florida Panhandle and Alabama communities.",
+      "fact": "NOAA placed the Great Basin and Southwest under a moderate excessive-rainfall risk, with potential for runoff, flash flooding, and travel disruption through October 12.",
       "americas_relevant": true
     },
     {
       "id": "E13",
-      "title": "Ebola expands across borders",
-      "source": "World Health Organization",
-      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON619",
-      "source_domain": "who.int",
+      "title": "New World screwworm risk remains low",
+      "source": "CDC",
+      "url": "https://www.cdc.gov/cfa-qualitative-assessments/php/data-research/risk-to-people-in-the-united-states-from-the-new-world-screwworm-outbreak-2026.html",
+      "source_domain": "cdc.gov",
       "source_tier": "A",
-      "published_at": "2026-10-08T00:00:00.000Z",
-      "age_days": 2,
+      "published_at": "2026-10-07T00:00:00.000Z",
+      "age_days": 4,
       "cluster": "food_health_natural",
       "domains": [
-        "public_health"
+        "public_health",
+        "food"
       ],
-      "geography": "Democratic Republic of the Congo, Kenya, Uganda",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "WHO reported 8,728 confirmed Bundibugyo virus cases and 4,205 deaths in DRC, plus an imported fatal case in Kenya prompting regional contact tracing.",
+      "geography": "United States",
+      "evidence_type": "stabilizer",
+      "materiality": "medium",
+      "fact": "CDC assessed general U.S. human risk from New World screwworm as very low, while exposed populations in affected areas face low risk over three months.",
       "americas_relevant": true
     },
     {
       "id": "E14",
-      "title": "U.S. measles burden remains high",
-      "source": "Centers for Disease Control and Prevention",
-      "url": "https://www.cdc.gov/measles/data-research/index.html",
+      "title": "Hurricane Isaias drives heavy-rain risk",
+      "source": "NOAA Weather Prediction Center",
+      "url": "https://www.wpc.ncep.noaa.gov/index.shtml?trk=article-ssr-frontend-pulse_little-text-block",
+      "source_domain": "wpc.ncep.noaa.gov",
+      "source_tier": "A",
+      "published_at": "2026-10-08T00:00:00.000Z",
+      "age_days": 3,
+      "cluster": "food_health_natural",
+      "domains": [
+        "natural",
+        "domestic"
+      ],
+      "geography": "United States",
+      "evidence_type": "forward",
+      "materiality": "high",
+      "fact": "NOAA issued excessive-rainfall outlooks linked to Hurricane Isaias, including a Day 2 Moderate Risk, indicating potential material flooding and civilian disruption.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E15",
+      "title": "Measles activity remains elevated",
+      "source": "CDC",
+      "url": "https://www.cdc.gov/measles/data-research/?mod=article_inline",
       "source_domain": "cdc.gov",
       "source_tier": "A",
-      "published_at": "2026-10-09T00:00:00.000Z",
-      "age_days": 1,
+      "published_at": "2026-10-08T00:00:00.000Z",
+      "age_days": 3,
       "cluster": "food_health_natural",
       "domains": [
         "public_health"
@@ -903,16 +929,16 @@
       "geography": "United States",
       "evidence_type": "observed",
       "materiality": "medium",
-      "fact": "CDC reported 4,080 confirmed U.S. measles cases through October 8, including 42 outbreaks during 2026.",
+      "fact": "CDC recorded 132 weekly measles cases for the week beginning September 6 and 158 for August 30, showing sustained elevated U.S. outbreak activity.",
       "americas_relevant": true
     }
   ],
   "api_usage": {
     "research_model": "gpt-5.6-luna",
     "assessment_model": "gpt-5.6-terra",
-    "web_search_calls": 6,
-    "estimated_run_cost_usd": 0.097513,
-    "estimated_period_spend_usd": 3.06795,
+    "web_search_calls": 5,
+    "estimated_run_cost_usd": 0.088777,
+    "estimated_period_spend_usd": 3.156728,
     "allocated_90_day_budget_usd": 10,
     "operational_stop_usd": 9
   },
