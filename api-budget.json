@@ -4,7 +4,7 @@
   "period_end": "2026-12-09",
   "allocated_usd": 10,
   "operational_stop_usd": 9,
-  "estimated_spent_usd": 3.156728,
+  "estimated_spent_usd": 3.243518,
   "entries": [
     {
       "run_id": "34628365224",
@@ -2297,6 +2297,78 @@
       "output_tokens": 1049,
       "web_search_calls": 0,
       "estimated_cost_usd": 0.020789
+    },
+    {
+      "run_id": "38303148150",
+      "date": "2026-10-12",
+      "timestamp": "2026-10-12T20:16:53.533Z",
+      "stage": "research:military_energy_shipping",
+      "model": "gpt-5.6-luna",
+      "input_tokens": 13404,
+      "cached_input_tokens": 0,
+      "output_tokens": 585,
+      "web_search_calls": 1,
+      "estimated_cost_usd": 0.013628
+    },
+    {
+      "run_id": "38303148150",
+      "date": "2026-10-12",
+      "timestamp": "2026-10-12T20:17:20.055Z",
+      "stage": "research:trade_supply_technology",
+      "model": "gpt-5.6-luna",
+      "input_tokens": 13506,
+      "cached_input_tokens": 0,
+      "output_tokens": 591,
+      "web_search_calls": 1,
+      "estimated_cost_usd": 0.013656
+    },
+    {
+      "run_id": "38303148150",
+      "date": "2026-10-12",
+      "timestamp": "2026-10-12T20:17:46.695Z",
+      "stage": "research:cyber_infrastructure_finance",
+      "model": "gpt-5.6-luna",
+      "input_tokens": 13455,
+      "cached_input_tokens": 0,
+      "output_tokens": 575,
+      "web_search_calls": 1,
+      "estimated_cost_usd": 0.013626
+    },
+    {
+      "run_id": "38303148150",
+      "date": "2026-10-12",
+      "timestamp": "2026-10-12T20:18:13.528Z",
+      "stage": "research:americas_civil",
+      "model": "gpt-5.6-luna",
+      "input_tokens": 13409,
+      "cached_input_tokens": 0,
+      "output_tokens": 500,
+      "web_search_calls": 1,
+      "estimated_cost_usd": 0.013528
+    },
+    {
+      "run_id": "38303148150",
+      "date": "2026-10-12",
+      "timestamp": "2026-10-12T20:18:38.615Z",
+      "stage": "research:food_health_natural",
+      "model": "gpt-5.6-luna",
+      "input_tokens": 13337,
+      "cached_input_tokens": 0,
+      "output_tokens": 471,
+      "web_search_calls": 1,
+      "estimated_cost_usd": 0.013478
+    },
+    {
+      "run_id": "38303148150",
+      "date": "2026-10-12",
+      "timestamp": "2026-10-12T20:19:53.382Z",
+      "stage": "assessment",
+      "model": "gpt-5.6-terra",
+      "input_tokens": 3076,
+      "cached_input_tokens": 0,
+      "output_tokens": 932,
+      "web_search_calls": 0,
+      "estimated_cost_usd": 0.018873
     }
   ]
 }
