@@ -2,9 +2,9 @@
   "schema_version": 5,
   "engine_version": "5.3",
   "data_status": "VERIFIED",
-  "as_of": "2026-10-14",
-  "updated_at": "2026-10-14T15:52:19.261Z",
-  "last_successful_update": "2026-10-14T15:52:19.261Z",
+  "as_of": "2026-10-15",
+  "updated_at": "2026-10-15T15:38:17.505Z",
+  "last_successful_update": "2026-10-15T15:38:17.505Z",
   "preparedness_urgency": 84,
   "raw_preparedness_urgency": 84,
   "preparedness_stage": "HIGH ALERT",
@@ -13,7 +13,7 @@
   "observed_civilian_disruption": 82,
   "americas_exposure": 89,
   "americas_stage": "SEVERE",
-  "americas_summary": "The Americas face elevated exposure through energy and freight prices, supply delays, critical-mineral and semiconductor constraints, and active U.S./territorial weather and drought impacts. Evidence does not establish broad Americas-wide fuel, payment, food, or transport access failures.",
+  "americas_summary": "Americas exposure remains high through energy and shipping prices, supply chains, Mexico storm impacts, and stressed U.S. grid conditions; no evidence shows broad U.S. outages, bank-access restrictions, or essential-goods shortages.",
   "americas_components": [
     {
       "name": "Energy security",
@@ -21,13 +21,13 @@
       "trend": "rising"
     },
     {
-      "name": "Supply chain & transportation",
-      "score": 97,
+      "name": "Natural / environmental",
+      "score": 98,
       "trend": "rising"
     },
     {
-      "name": "Natural / environmental",
-      "score": 98,
+      "name": "Supply chain & transportation",
+      "score": 97,
       "trend": "rising"
     },
     {
@@ -42,25 +42,25 @@
     },
     {
       "name": "Global trade fragmentation",
-      "score": 94,
+      "score": 93,
       "trend": "stable"
     }
   ],
   "conflict_escalation": 98,
-  "coupling_score": 82,
-  "momentum_score": 69,
+  "coupling_score": 78,
+  "momentum_score": 70,
   "confidence_score": 75,
   "confidence_level": "MODERATE",
-  "confidence_rationale": "Fresh, direct reporting from AP and U.S. agencies supports key conditions; some global risk claims rely on lower-tier or forward-looking sources. Evidence gate: 14 items, 12 sources, 9 Tier-A sources, 5/5 clusters.",
+  "confidence_rationale": "Fresh, direct reporting from AP, DOE, CDC, and official U.S. sources supports the assessment, though shipping incident reporting is syndicated tier-C and several stabilizers are older. Evidence gate: 13 items, 8 sources, 6 Tier-A sources, 5/5 clusters.",
   "preparedness_window": "Days to weeks",
-  "summary": "Severe, ongoing maritime-energy disruption and active U.S. weather impacts remain the principal civilian-risk picture. Protected crude transits and disaster logistics support provide partial mitigation, but do not remove constraints.",
-  "primary_driver": "Attacks and severe shipping constraints around Hormuz and the wider Red Sea/Gulf energy corridor.",
+  "summary": "Severe global shipping and energy risk persists alongside active Mexico flood impacts and a near-term hurricane threat; U.S. grid measures and trade/financial stabilizers limit evidence of broader Americas system failure.",
+  "primary_driver": "Attacks on commercial shipping near the Strait of Hormuz, with potential energy and logistics spillovers.",
   "primary_stabilizers": [
-    "U.S. forces helped Gulf partners move more than 19 million barrels of crude through Hormuz on Monday despite a severe merchant-shipping threat.",
-    "EU and China reached an initial trade understanding reportedly including lower tariffs and measures to stabilize rare-earth supply chains.",
-    "The Federal Reserve issued supervisory guidance on community banks’ engagement with core technology service providers supporting banking operations.",
-    "FMCSA emergency declarations and waivers remain active for Alabama and Florida, supporting disaster-area transportation and vital supplies through November 5, 2026.",
-    "USDA coordinates emergency food distributions and nutrition assistance when disasters disrupt commercial food access or create household hardship."
+    "An interim EU-China trade deal reportedly includes measures to stabilize rare-earth supply chains and lower tariffs on selected European goods entering China.",
+    "The U.S.-EU action plan proposes coordinated trade measures and investment to diversify critical-mineral and rare-earth supply chains beyond concentrated sources.",
+    "DOE reported securing the Mid-Atlantic grid ahead of anticipated stressed conditions, with no outage or cyber disruption reported.",
+    "The Federal Reserve said aggregate bank liquidity remained toward the high end of its historical distribution despite a modest decline at large banks.",
+    "The Energy Department ordered PJM to dispatch additional and backup generation through October 16 to mitigate elevated mid-Atlantic blackout risk."
   ],
   "domains": [
     {
@@ -69,7 +69,7 @@
       "impact": 97,
       "americas_exposure": 98,
       "trend": "rising",
-      "rationale": "Hormuz oil/LNG traffic remains severely constrained amid increased vessel attacks; protected crude transits offer limited mitigation.",
+      "rationale": "Hormuz ship attacks and an attack-linked Aramco fire sustain oil-flow and fuel-price risk; Saudi gasoline lines indicate localized disruption fears.",
       "name": "Energy security",
       "weight": 11
     },
@@ -79,7 +79,7 @@
       "impact": 97,
       "americas_exposure": 86,
       "trend": "rising",
-      "rationale": "Attacks on shipping and an Aramco office demonstrate continuing regional strike capability.",
+      "rationale": "Projectile strikes sank two commercial vessels near Hormuz and reporting indicates evolving attack tactics.",
       "name": "Military / geopolitical",
       "weight": 10
     },
@@ -89,27 +89,27 @@
       "impact": 96,
       "americas_exposure": 97,
       "trend": "rising",
-      "rationale": "Severe maritime constraints persist; food, fuel, fertilizer, and mineral-route disruptions remain credible.",
+      "rationale": "Vessel losses and severe maritime threat conditions threaten a critical shipping corridor, despite rare-earth supply stabilizers.",
       "name": "Supply chain & transportation",
       "weight": 10
     },
     {
       "key": "trade",
-      "threat": 88,
+      "threat": 87,
       "impact": 84,
-      "americas_exposure": 94,
+      "americas_exposure": 93,
       "trend": "stable",
-      "rationale": "Shipping disruption and active export controls persist, partly offset by the EU-China interim understanding.",
+      "rationale": "Advanced-chip controls remain active; EU-China measures and U.S.-EU mineral planning provide partial offsets.",
       "name": "Global trade fragmentation",
       "weight": 10
     },
     {
       "key": "technology",
-      "threat": 88,
+      "threat": 87,
       "impact": 74,
-      "americas_exposure": 84,
+      "americas_exposure": 83,
       "trend": "stable",
-      "rationale": "Semiconductor controls and concentrated mineral supply remain constraints; no new civilian technology outage is evidenced.",
+      "rationale": "Advanced-computing export restrictions sustain compliance and sourcing pressure; mineral-supply measures are stabilizing.",
       "name": "Technology chokepoints",
       "weight": 7
     },
@@ -119,37 +119,37 @@
       "impact": 86,
       "americas_exposure": 94,
       "trend": "rising",
-      "rationale": "Oil-sector targeting and active U.S. flood response sustain infrastructure risk and localized disruption.",
+      "rationale": "Mexico flooding and an approaching major storm create infrastructure risk; PJM backup generation mitigates, rather than confirms, U.S. grid disruption.",
       "name": "Critical infrastructure / cyber",
       "weight": 11
     },
     {
       "key": "financial",
-      "threat": 88,
+      "threat": 87,
       "impact": 76,
-      "americas_exposure": 91,
+      "americas_exposure": 90,
       "trend": "stable",
-      "rationale": "IMF flags plausible cyber, yield, and market-shock pathways; no new bank-access or payment disruption is evidenced.",
+      "rationale": "No observed access restriction or payment disruption; Federal Reserve liquidity evidence is supportive but dated.",
       "name": "Financial-system stress",
       "weight": 10
     },
     {
       "key": "food",
-      "threat": 88,
-      "impact": 62,
+      "threat": 87,
+      "impact": 63,
       "americas_exposure": 86,
       "trend": "rising",
-      "rationale": "Puerto Rico/USVI drought is causing agricultural losses and higher feed costs; trade-route risks raise forward pressure.",
+      "rationale": "A recalled-sprout outbreak has caused multistate illnesses and hospitalizations; no evidence of broad food availability disruption.",
       "name": "Food & agriculture",
       "weight": 8
     },
     {
       "key": "domestic",
-      "threat": 79,
-      "impact": 75,
-      "americas_exposure": 87,
+      "threat": 80,
+      "impact": 76,
+      "americas_exposure": 88,
       "trend": "rising",
-      "rationale": "Flood-response activity and forecast heavy rain/snow indicate continuing localized U.S. disruption.",
+      "rationale": "Fatal Mexico flooding and the approaching hurricane elevate near-term civilian and emergency-response pressure.",
       "name": "Domestic institutional stress",
       "weight": 6
     },
@@ -159,61 +159,48 @@
       "impact": 49,
       "americas_exposure": 63,
       "trend": "stable",
-      "rationale": "No evidence of material civil-unrest disruption.",
+      "rationale": "No evidence of material civil unrest or related access constraints.",
       "name": "Civil unrest / public order",
       "weight": 7
     },
     {
       "key": "public_health",
       "threat": 67,
-      "impact": 65,
+      "impact": 66,
       "americas_exposure": 70,
       "trend": "stable",
-      "rationale": "Disaster food-assistance capacity is available; no new material public-health access disruption is evidenced.",
+      "rationale": "CDC reports 76 outbreak cases across 16 states and six hospitalizations; impact remains targeted.",
       "name": "Public health / biological",
       "weight": 5
     },
     {
       "key": "natural",
       "threat": 98,
-      "impact": 95,
+      "impact": 96,
       "americas_exposure": 98,
       "trend": "rising",
-      "rationale": "Active U.S. flooding, forecast heavy precipitation/snow, and Puerto Rico/USVI drought show concurrent natural-hazard impacts.",
+      "rationale": "Recent Mexican flooding was fatal, and Hurricane Trudy is forecast to approach Mexico as a major storm within days.",
       "name": "Natural / environmental",
       "weight": 5
     }
   ],
-  "hard_triggers": [
-    {
-      "type": "shipping_chokepoint_closure",
-      "verified": true,
-      "scope": "multinational",
-      "status": "active",
-      "summary": "Merchant traffic carrying oil and LNG through the Strait of Hormuz remains severely constrained amid increased attacks, despite protected crude movements.",
-      "source_url": "https://apnews.com/article/3e6e5f152048c035081eac369f62ed4f",
-      "evidence_ids": [
-        "E1",
-        "E3"
-      ]
-    }
-  ],
-  "verified_hard_trigger_count": 1,
-  "severe_hard_trigger_count": 1,
+  "hard_triggers": [],
+  "verified_hard_trigger_count": 0,
+  "severe_hard_trigger_count": 0,
   "score_calibration": {
     "raw_score": 84,
     "published_score": 84,
     "previous_daily_anchor": 84,
     "rate_limit_applied": false,
-    "daily_rate_limit": null,
+    "daily_rate_limit": 3,
     "sustained_90_for_48h": false,
     "high_impact_domain_count": 9
   },
   "score_components": {
     "global_threat_pressure": 88,
     "observed_civilian_disruption": 82,
-    "coupling": 82,
-    "momentum": 69,
+    "coupling": 78,
+    "momentum": 70,
     "americas_exposure": 89
   },
   "drivers": [
@@ -223,12 +210,12 @@
       "note": "Primary driver"
     },
     {
-      "name": "Supply chain & transportation",
+      "name": "Natural / environmental",
       "severity": "critical",
       "note": ""
     },
     {
-      "name": "Natural / environmental",
+      "name": "Supply chain & transportation",
       "severity": "critical",
       "note": ""
     },
@@ -250,103 +237,103 @@
   ],
   "areas_to_watch": [
     {
-      "name": "Hormuz and Gulf energy shipping",
+      "name": "Strait of Hormuz shipping and energy flows",
       "severity": "critical",
-      "why": "Attacks and severe traffic constraints can rapidly transmit into fuel and freight markets."
+      "why": "Confirmed vessel sinkings and evolving attacks could rapidly amplify freight, fuel, and commodity disruption."
     },
     {
-      "name": "U.S. flood and winter-weather areas",
+      "name": "Mexico Pacific coast storm and flood impacts",
       "severity": "high",
-      "why": "Active response operations and forecast hazards may disrupt local transport and essential services."
+      "why": "Existing fatal flooding and a strengthening major hurricane create immediate risk to communities and infrastructure."
     },
     {
-      "name": "Puerto Rico and U.S. Virgin Islands drought",
+      "name": "Mid-Atlantic grid conditions",
       "severity": "high",
-      "why": "Water and agricultural stress is already producing crop, livestock, and cost impacts."
+      "why": "DOE-ordered backup generation indicates elevated stress through October 16, though no outage is reported."
     },
     {
-      "name": "Critical-mineral and semiconductor supply chains",
+      "name": "U.S. foodborne outbreak",
       "severity": "medium",
-      "why": "Concentrated supply and persistent controls sustain downstream production risk."
+      "why": "Multistate recalled-sprout outbreak remains active, with illnesses and hospitalizations but no general food shortage."
     },
     {
-      "name": "Financial and core-service cyber resilience",
+      "name": "Technology and critical-mineral trade flows",
       "severity": "medium",
-      "why": "IMF-identified shock pathways remain plausible, while oversight measures are strengthening."
+      "why": "Export controls persist, while EU-China and U.S.-EU initiatives may reduce some sourcing stress."
     }
   ],
   "signals": [
     {
-      "title": "Iran shifts tactics against shipping",
-      "summary": "Iran has adopted new tactics against vessels in the Strait of Hormuz; attacks have increased while traffic carrying oil and LNG remains severely constrained.",
-      "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/10/14/iran-shifting-tactics-to-step-up-attacks-on-shipping-before-us-vote-officials-say",
-      "source": "Reuters via Internazionale",
+      "title": "Two ships sink near Hormuz",
+      "summary": "A container ship and dry-bulk carrier sank near the Strait of Hormuz after separate projectile strikes, while officials reported no injuries.",
+      "url": "https://www.investing.com/news/commodities-news/two-ships-sink-near-hormuz-after-being-hit-by-projectiles-amid-surge-in-attacks-4950603",
+      "source": "Reuters via Investing.com",
       "published_at": "2026-10-14T00:00:00.000Z",
       "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Houthi strike hits Aramco offices",
-      "summary": "A Houthi strike hit Aramco executive offices in Saudi Arabia, demonstrating continued reach against oil-sector infrastructure amid a broader Red Sea escalation.",
-      "url": "https://apnews.com/article/c81a91347c00b17097c8fafde7e4eeec",
+      "title": "Iran changes shipping-attack tactics",
+      "summary": "Iran reportedly changed tactics against commercial shipping, while maritime authorities maintained a severe threat rating for the Strait of Hormuz.",
+      "url": "https://www.brecorder.com/news/40444134",
+      "source": "Reuters via Business Recorder",
+      "published_at": "2026-10-14T00:00:00.000Z",
+      "category": "MILITARY",
+      "impact": "up"
+    },
+    {
+      "title": "Attack targets Aramco compound",
+      "summary": "Saudi Arabia reported a limited fire in an administrative Aramco building after an attack, while witnesses reported gasoline lines amid shortage fears.",
+      "url": "https://apnews.com/article/307d49abfe63ff66c99c318d94ca3e15",
       "source": "Associated Press",
-      "published_at": "2026-10-14T00:00:00.000Z",
+      "published_at": "2026-10-13T00:00:00.000Z",
       "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Critical-mineral chokepoints remain concentrated",
-      "summary": "IEA warns concentrated critical-mineral supply chains remain exposed; fully disrupted battery-grade graphite trade could endanger over $300 billion in annual downstream production outside China.",
-      "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2026/executive-summary",
-      "source": "IEA",
-      "published_at": "2026-09-30T00:00:00.000Z",
-      "category": "SUPPLY",
-      "impact": "up"
-    },
-    {
-      "title": "Semiconductor export controls remain active",
-      "summary": "U.S. export rules currently retain restrictions involving supercomputing and semiconductor-manufacturing end uses, indicating persistent technology-transfer constraints.",
+      "title": "Advanced-chip controls remain active",
+      "summary": "U.S. export rules continue restricting semiconductor manufacturing, supercomputer, and advanced-computing end uses, sustaining compliance pressure across global technology supply chains.",
       "url": "https://www.bis.gov/regulations/ear/744",
       "source": "U.S. Bureau of Industry and Security",
-      "published_at": "2026-10-12T00:00:00.000Z",
+      "published_at": "2026-10-13T00:00:00.000Z",
       "category": "TECH",
       "impact": "up"
     },
     {
-      "title": "IMF flags cyber and debt risks",
-      "summary": "The IMF identified a major cyberattack, rising sovereign yields, and an AI-driven selloff as plausible near-term catalysts for abrupt financial-market stress.",
-      "url": "https://www.investing.com/news/economy-news/imf-cites-ai-slowdown-spiking-yields-as-looming-global-market-risks-4945345",
-      "source": "Reuters via Investing.com",
-      "published_at": "2026-10-12T00:00:00.000Z",
-      "category": "FINANCE",
+      "title": "Trudy threatens Mexico",
+      "summary": "Hurricane Trudy strengthened near Mexico’s Pacific coast Thursday, with a major storm expected to approach southwestern and west-central Mexico this weekend.",
+      "url": "https://apnews.com/article/6eb987f5a1ef914582d95b07fce244da",
+      "source": "Associated Press",
+      "published_at": "2026-10-15T00:00:00.000Z",
+      "category": "NATURAL",
       "impact": "up"
     },
     {
-      "title": "Flood response continues",
-      "summary": "USGS reported active flood-response deployments in Nevada and continuing post-storm flooding responses in North Carolina, Florida, and California.",
-      "url": "https://water.usgs.gov/alerts/",
-      "source": "USGS",
-      "published_at": "2026-10-13T00:00:00.000Z",
-      "category": "CYBER",
-      "impact": "up"
-    },
-    {
-      "title": "Heavy-rain hazard persists",
-      "summary": "NOAA forecast a moderate excessive-rainfall risk and high heavy-snow risk across parts of the United States on October 14, 2026.",
-      "url": "https://www.wpc.ncep.noaa.gov/",
-      "source": "NOAA Weather Prediction Center",
+      "title": "Mexico flooding deaths rise",
+      "summary": "Flooding from Hurricane Simon and remnants of Rachel killed six people in Mexico, while authorities maintained flood alerts and preventive measures in affected Pacific states.",
+      "url": "https://apnews.com/article/1276142fb7db0f50d0f61d86ae7fa977",
+      "source": "Associated Press",
       "published_at": "2026-10-14T00:00:00.000Z",
-      "category": "CIVIL",
+      "category": "NATURAL",
       "impact": "up"
     },
     {
-      "title": "Puerto Rico drought strains agriculture",
-      "summary": "Persistent drought has depleted farm soil moisture and water supplies, causing livestock losses, crop damage, rising feed costs, and heightened wildfire risk.",
-      "url": "https://www.drought.gov/drought-status-updates/drought-update-puerto-rico-and-us-virgin-islands-2026-10-08",
-      "source": "U.S. Drought Monitor / NOAA",
-      "published_at": "2026-10-08T00:00:00.000Z",
+      "title": "Multistate sprout outbreak persists",
+      "summary": "CDC reports 76 cases across 16 states, including six hospitalizations, in an E. coli and Salmonella outbreak linked to recalled alfalfa sprouts.",
+      "url": "https://www.cdc.gov/ecoli/outbreaks/alfalfa-sprouts-08-26/investigation.html",
+      "source": "CDC",
+      "published_at": "2026-10-01T00:00:00.000Z",
       "category": "FOOD",
       "impact": "up"
+    },
+    {
+      "title": "Active foodborne investigations",
+      "summary": "CDC’s latest surveillance lists 31 active multistate investigations: one Campylobacter, eight E. coli, six Listeria, and sixteen Salmonella investigations.",
+      "url": "https://www.cdc.gov/foodborne-outbreaks/outbreaks/index.html",
+      "source": "CDC",
+      "published_at": "2026-10-07T00:00:00.000Z",
+      "category": "STABILIZER",
+      "impact": "down"
     }
   ],
   "preparedness_actions": [
@@ -666,13 +653,23 @@
       "americas": 89,
       "conflict": 98,
       "momentum": 69
+    },
+    {
+      "date": "2026-10-15",
+      "preparedness": 84,
+      "raw_preparedness": 84,
+      "threat": 88,
+      "impact": 82,
+      "americas": 89,
+      "conflict": 98,
+      "momentum": 70
     }
   ],
   "evidence_quality": {
-    "evidence_count": 14,
+    "evidence_count": 13,
     "fresh_count": 8,
-    "unique_sources": 12,
-    "tier_a_sources": 9,
+    "unique_sources": 8,
+    "tier_a_sources": 6,
     "clusters": 5,
     "domains_covered": 11,
     "confidence_cap": 75,
@@ -681,117 +678,75 @@
   "evidence_log": [
     {
       "id": "E1",
-      "title": "Iran shifts tactics against shipping",
-      "source": "Reuters via Internazionale",
-      "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/10/14/iran-shifting-tactics-to-step-up-attacks-on-shipping-before-us-vote-officials-say",
-      "source_domain": "internazionale.it",
+      "title": "Two ships sink near Hormuz",
+      "source": "Reuters via Investing.com",
+      "url": "https://www.investing.com/news/commodities-news/two-ships-sink-near-hormuz-after-being-hit-by-projectiles-amid-surge-in-attacks-4950603",
+      "source_domain": "investing.com",
       "source_tier": "C",
       "published_at": "2026-10-14T00:00:00.000Z",
-      "age_days": 0,
+      "age_days": 1,
       "cluster": "military_energy_shipping",
       "domains": [
         "military",
         "energy",
         "supply_chain"
       ],
-      "geography": "Strait of Hormuz / Gulf",
+      "geography": "Strait of Hormuz",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "Iran has adopted new tactics against vessels in the Strait of Hormuz; attacks have increased while traffic carrying oil and LNG remains severely constrained.",
+      "fact": "A container ship and dry-bulk carrier sank near the Strait of Hormuz after separate projectile strikes, while officials reported no injuries.",
       "americas_relevant": true
     },
     {
       "id": "E2",
-      "title": "Houthi strike hits Aramco offices",
+      "title": "Iran changes shipping-attack tactics",
+      "source": "Reuters via Business Recorder",
+      "url": "https://www.brecorder.com/news/40444134",
+      "source_domain": "brecorder.com",
+      "source_tier": "C",
+      "published_at": "2026-10-14T00:00:00.000Z",
+      "age_days": 1,
+      "cluster": "military_energy_shipping",
+      "domains": [
+        "military",
+        "energy",
+        "supply_chain"
+      ],
+      "geography": "Strait of Hormuz",
+      "evidence_type": "forward",
+      "materiality": "high",
+      "fact": "Iran reportedly changed tactics against commercial shipping, while maritime authorities maintained a severe threat rating for the Strait of Hormuz.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E3",
+      "title": "Attack targets Aramco compound",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/c81a91347c00b17097c8fafde7e4eeec",
+      "url": "https://apnews.com/article/307d49abfe63ff66c99c318d94ca3e15",
       "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-10-14T00:00:00.000Z",
-      "age_days": 0,
+      "published_at": "2026-10-13T00:00:00.000Z",
+      "age_days": 2,
       "cluster": "military_energy_shipping",
       "domains": [
         "military",
         "energy",
         "critical_infrastructure"
       ],
-      "geography": "Saudi Arabia / Yemen",
+      "geography": "Saudi Arabia",
       "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "A Houthi strike hit Aramco executive offices in Saudi Arabia, demonstrating continued reach against oil-sector infrastructure amid a broader Red Sea escalation.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E3",
-      "title": "Protected crude transits continue",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/3e6e5f152048c035081eac369f62ed4f",
-      "source_domain": "apnews.com",
-      "source_tier": "A",
-      "published_at": "2026-10-13T00:00:00.000Z",
-      "age_days": 1,
-      "cluster": "military_energy_shipping",
-      "domains": [
-        "energy",
-        "military",
-        "trade"
-      ],
-      "geography": "Strait of Hormuz / Gulf",
-      "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "U.S. forces helped Gulf partners move more than 19 million barrels of crude through Hormuz on Monday despite a severe merchant-shipping threat.",
+      "fact": "Saudi Arabia reported a limited fire in an administrative Aramco building after an attack, while witnesses reported gasoline lines amid shortage fears.",
       "americas_relevant": true
     },
     {
       "id": "E4",
-      "title": "EU–China interim trade understanding",
-      "source": "AP",
-      "url": "https://apnews.com/article/54c9c71e85f92dc0003780fc53f0b250",
-      "source_domain": "apnews.com",
-      "source_tier": "A",
-      "published_at": "2026-10-09T00:00:00.000Z",
-      "age_days": 5,
-      "cluster": "trade_supply_technology",
-      "domains": [
-        "trade",
-        "supply_chain",
-        "technology"
-      ],
-      "geography": "European Union–China",
-      "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "EU and China reached an initial trade understanding reportedly including lower tariffs and measures to stabilize rare-earth supply chains.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E5",
-      "title": "Critical-mineral chokepoints remain concentrated",
-      "source": "IEA",
-      "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2026/executive-summary",
-      "source_domain": "iea.org",
-      "source_tier": "A",
-      "published_at": "2026-09-30T00:00:00.000Z",
-      "age_days": 14,
-      "cluster": "trade_supply_technology",
-      "domains": [
-        "supply_chain",
-        "trade",
-        "technology"
-      ],
-      "geography": "Global",
-      "evidence_type": "forward",
-      "materiality": "high",
-      "fact": "IEA warns concentrated critical-mineral supply chains remain exposed; fully disrupted battery-grade graphite trade could endanger over $300 billion in annual downstream production outside China.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E6",
-      "title": "Semiconductor export controls remain active",
+      "title": "Advanced-chip controls remain active",
       "source": "U.S. Bureau of Industry and Security",
       "url": "https://www.bis.gov/regulations/ear/744",
       "source_domain": "bis.gov",
       "source_tier": "A",
-      "published_at": "2026-10-12T00:00:00.000Z",
+      "published_at": "2026-10-13T00:00:00.000Z",
       "age_days": 2,
       "cluster": "trade_supply_technology",
       "domains": [
@@ -799,163 +754,185 @@
         "trade",
         "supply_chain"
       ],
-      "geography": "United States and controlled destinations",
+      "geography": "United States/global",
       "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "U.S. export rules continue restricting semiconductor manufacturing, supercomputer, and advanced-computing end uses, sustaining compliance pressure across global technology supply chains.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E5",
+      "title": "EU-China deal supports rare-earth flows",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/54c9c71e85f92dc0003780fc53f0b250",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-10-09T00:00:00.000Z",
+      "age_days": 6,
+      "cluster": "trade_supply_technology",
+      "domains": [
+        "trade",
+        "supply_chain",
+        "technology"
+      ],
+      "geography": "European Union/China",
+      "evidence_type": "stabilizer",
+      "materiality": "high",
+      "fact": "An interim EU-China trade deal reportedly includes measures to stabilize rare-earth supply chains and lower tariffs on selected European goods entering China.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E6",
+      "title": "Critical-mineral resilience policy advances",
+      "source": "U.S. Trade Representative",
+      "url": "https://ustr.gov/sites/default/files/files/Press/Releases/2026/U.S.-EU%20Critical%20Minerals%20Action%20Plan.pdf",
+      "source_domain": "ustr.gov",
+      "source_tier": "A",
+      "published_at": "2026-05-15T00:00:00.000Z",
+      "age_days": 153,
+      "cluster": "trade_supply_technology",
+      "domains": [
+        "supply_chain",
+        "trade",
+        "technology"
+      ],
+      "geography": "United States/European Union",
+      "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "U.S. export rules currently retain restrictions involving supercomputing and semiconductor-manufacturing end uses, indicating persistent technology-transfer constraints.",
+      "fact": "The U.S.-EU action plan proposes coordinated trade measures and investment to diversify critical-mineral and rare-earth supply chains beyond concentrated sources.",
       "americas_relevant": true
     },
     {
       "id": "E7",
-      "title": "IMF flags cyber and debt risks",
-      "source": "Reuters via Investing.com",
-      "url": "https://www.investing.com/news/economy-news/imf-cites-ai-slowdown-spiking-yields-as-looming-global-market-risks-4945345",
-      "source_domain": "investing.com",
-      "source_tier": "C",
+      "title": "Mid-Atlantic grid preparedness",
+      "source": "U.S. Department of Energy",
+      "url": "https://www.energy.gov/ceser/office-cybersecurity-energy-security-and-emergency-response",
+      "source_domain": "energy.gov",
+      "source_tier": "A",
       "published_at": "2026-10-12T00:00:00.000Z",
-      "age_days": 2,
+      "age_days": 3,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
-        "financial",
-        "technology"
+        "energy",
+        "critical_infrastructure"
       ],
-      "geography": "Global",
-      "evidence_type": "forward",
-      "materiality": "high",
-      "fact": "The IMF identified a major cyberattack, rising sovereign yields, and an AI-driven selloff as plausible near-term catalysts for abrupt financial-market stress.",
+      "geography": "United States",
+      "evidence_type": "stabilizer",
+      "materiality": "medium",
+      "fact": "DOE reported securing the Mid-Atlantic grid ahead of anticipated stressed conditions, with no outage or cyber disruption reported.",
       "americas_relevant": true
     },
     {
-      "id": "E9",
-      "title": "Fed strengthens core-provider oversight",
+      "id": "E8",
+      "title": "Bank liquidity remains strong",
       "source": "Federal Reserve",
-      "url": "https://www.federalreserve.gov/supervisionreg/srletters/SR2607.htm",
+      "url": "https://www.federalreserve.gov/publications/2026-may-financial-stability-report-funding-risks.htm",
       "source_domain": "federalreserve.gov",
       "source_tier": "A",
-      "published_at": "2026-10-05T00:00:00.000Z",
-      "age_days": 9,
+      "published_at": "2026-05-01T00:00:00.000Z",
+      "age_days": 167,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
-        "technology",
         "financial"
       ],
       "geography": "United States",
       "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "The Federal Reserve issued supervisory guidance on community banks’ engagement with core technology service providers supporting banking operations.",
+      "fact": "The Federal Reserve said aggregate bank liquidity remained toward the high end of its historical distribution despite a modest decline at large banks.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E9",
+      "title": "Trudy threatens Mexico",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/6eb987f5a1ef914582d95b07fce244da",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-10-15T00:00:00.000Z",
+      "age_days": 0,
+      "cluster": "americas_civil",
+      "domains": [
+        "natural",
+        "domestic",
+        "critical_infrastructure"
+      ],
+      "geography": "Mexico",
+      "evidence_type": "forward",
+      "materiality": "high",
+      "fact": "Hurricane Trudy strengthened near Mexico’s Pacific coast Thursday, with a major storm expected to approach southwestern and west-central Mexico this weekend.",
       "americas_relevant": true
     },
     {
       "id": "E10",
-      "title": "Flood response continues",
-      "source": "USGS",
-      "url": "https://water.usgs.gov/alerts/",
-      "source_domain": "water.usgs.gov",
+      "title": "Mexico flooding deaths rise",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/1276142fb7db0f50d0f61d86ae7fa977",
+      "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-10-13T00:00:00.000Z",
+      "published_at": "2026-10-14T00:00:00.000Z",
       "age_days": 1,
       "cluster": "americas_civil",
       "domains": [
-        "critical_infrastructure",
+        "natural",
         "domestic",
-        "natural"
+        "critical_infrastructure"
       ],
-      "geography": "United States",
+      "geography": "Mexico",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "USGS reported active flood-response deployments in Nevada and continuing post-storm flooding responses in North Carolina, Florida, and California.",
+      "fact": "Flooding from Hurricane Simon and remnants of Rachel killed six people in Mexico, while authorities maintained flood alerts and preventive measures in affected Pacific states.",
       "americas_relevant": true
     },
     {
       "id": "E11",
-      "title": "Emergency transport relief",
-      "source": "Federal Motor Carrier Safety Administration",
-      "url": "https://www.fmcsa.dot.gov/emergency-declarations",
-      "source_domain": "fmcsa.dot.gov",
+      "title": "Mid-Atlantic grid stabilized",
+      "source": "U.S. Department of Energy",
+      "url": "https://www.energy.gov/articles/energy-secretary-secures-mid-atlantic-grid-ahead-anticipated-stressed-system-conditions",
+      "source_domain": "energy.gov",
       "source_tier": "A",
-      "published_at": "2026-10-11T00:00:00.000Z",
+      "published_at": "2026-10-12T00:00:00.000Z",
       "age_days": 3,
       "cluster": "americas_civil",
       "domains": [
+        "energy",
         "critical_infrastructure",
         "domestic"
       ],
       "geography": "United States",
       "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "FMCSA emergency declarations and waivers remain active for Alabama and Florida, supporting disaster-area transportation and vital supplies through November 5, 2026.",
+      "fact": "The Energy Department ordered PJM to dispatch additional and backup generation through October 16 to mitigate elevated mid-Atlantic blackout risk.",
       "americas_relevant": true
     },
     {
       "id": "E12",
-      "title": "Heavy-rain hazard persists",
-      "source": "NOAA Weather Prediction Center",
-      "url": "https://www.wpc.ncep.noaa.gov/",
-      "source_domain": "wpc.ncep.noaa.gov",
+      "title": "Multistate sprout outbreak persists",
+      "source": "CDC",
+      "url": "https://www.cdc.gov/ecoli/outbreaks/alfalfa-sprouts-08-26/investigation.html",
+      "source_domain": "cdc.gov",
       "source_tier": "A",
-      "published_at": "2026-10-14T00:00:00.000Z",
-      "age_days": 0,
-      "cluster": "americas_civil",
+      "published_at": "2026-10-01T00:00:00.000Z",
+      "age_days": 14,
+      "cluster": "food_health_natural",
       "domains": [
-        "domestic",
-        "critical_infrastructure",
-        "natural"
+        "food",
+        "public_health"
       ],
       "geography": "United States",
-      "evidence_type": "forward",
+      "evidence_type": "observed",
       "materiality": "medium",
-      "fact": "NOAA forecast a moderate excessive-rainfall risk and high heavy-snow risk across parts of the United States on October 14, 2026.",
+      "fact": "CDC reports 76 cases across 16 states, including six hospitalizations, in an E. coli and Salmonella outbreak linked to recalled alfalfa sprouts.",
       "americas_relevant": true
     },
     {
       "id": "E13",
-      "title": "Puerto Rico drought strains agriculture",
-      "source": "U.S. Drought Monitor / NOAA",
-      "url": "https://www.drought.gov/drought-status-updates/drought-update-puerto-rico-and-us-virgin-islands-2026-10-08",
-      "source_domain": "drought.gov",
+      "title": "Active foodborne investigations",
+      "source": "CDC",
+      "url": "https://www.cdc.gov/foodborne-outbreaks/outbreaks/index.html",
+      "source_domain": "cdc.gov",
       "source_tier": "A",
-      "published_at": "2026-10-08T00:00:00.000Z",
-      "age_days": 6,
-      "cluster": "food_health_natural",
-      "domains": [
-        "food",
-        "natural"
-      ],
-      "geography": "Puerto Rico and U.S. Virgin Islands",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "Persistent drought has depleted farm soil moisture and water supplies, causing livestock losses, crop damage, rising feed costs, and heightened wildfire risk.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E14",
-      "title": "Trade disruption threatens food inputs",
-      "source": "World Food Programme",
-      "url": "https://www.wfp.org/stories/what-do-disruptions-major-trade-routes-mean-food-security",
-      "source_domain": "wfp.org",
-      "source_tier": "C",
-      "published_at": "2026-10-08T00:00:00.000Z",
-      "age_days": 6,
-      "cluster": "food_health_natural",
-      "domains": [
-        "food",
-        "supply_chain"
-      ],
-      "geography": "Global",
-      "evidence_type": "forward",
-      "materiality": "high",
-      "fact": "WFP warns disruptions across major trade routes are delaying food, fuel, and fertilizer supplies, raising costs and threatening food security, especially for vulnerable communities.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E15",
-      "title": "Disaster food assistance remains available",
-      "source": "U.S. Department of Agriculture",
-      "url": "https://www.fna.usda.gov/usda-foods-disaster-factsheet",
-      "source_domain": "fna.usda.gov",
-      "source_tier": "A",
-      "published_at": null,
-      "age_days": 999,
+      "published_at": "2026-10-07T00:00:00.000Z",
+      "age_days": 8,
       "cluster": "food_health_natural",
       "domains": [
         "food",
@@ -963,8 +940,8 @@
       ],
       "geography": "United States",
       "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "USDA coordinates emergency food distributions and nutrition assistance when disasters disrupt commercial food access or create household hardship.",
+      "materiality": "low",
+      "fact": "CDC’s latest surveillance lists 31 active multistate investigations: one Campylobacter, eight E. coli, six Listeria, and sixteen Salmonella investigations.",
       "americas_relevant": true
     }
   ],
@@ -972,8 +949,8 @@
     "research_model": "gpt-5.6-luna",
     "assessment_model": "gpt-5.6-terra",
     "web_search_calls": 6,
-    "estimated_run_cost_usd": 0.098726,
-    "estimated_period_spend_usd": 3.439279,
+    "estimated_run_cost_usd": 0.097793,
+    "estimated_period_spend_usd": 3.537073,
     "allocated_90_day_budget_usd": 10,
     "operational_stop_usd": 9
   },
