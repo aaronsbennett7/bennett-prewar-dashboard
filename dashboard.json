@@ -2,18 +2,18 @@
   "schema_version": 5,
   "engine_version": "5.3",
   "data_status": "VERIFIED",
-  "as_of": "2026-10-19",
-  "updated_at": "2026-10-19T17:30:49.025Z",
-  "last_successful_update": "2026-10-19T17:30:49.025Z",
-  "preparedness_urgency": 84,
-  "raw_preparedness_urgency": 84,
+  "as_of": "2026-10-20",
+  "updated_at": "2026-10-20T15:41:40.813Z",
+  "last_successful_update": "2026-10-20T15:41:40.813Z",
+  "preparedness_urgency": 83,
+  "raw_preparedness_urgency": 83,
   "preparedness_stage": "HIGH ALERT",
-  "global_threat_pressure": 88,
-  "leading_threat_pressure": 88,
+  "global_threat_pressure": 87,
+  "leading_threat_pressure": 87,
   "observed_civilian_disruption": 82,
   "americas_exposure": 88,
   "americas_stage": "SEVERE",
-  "americas_summary": "Americas exposure remains very high for energy, supply chains, infrastructure and natural hazards. Mexico and Panama have observed disaster impacts; evidence does not establish continent-wide fuel, banking, telecom or food access disruption.",
+  "americas_summary": "Americas exposure remains high through energy and shipping-price transmission, critical-mineral supply constraints, and direct hurricane/public-health impacts. Evidence supports localized rather than continent-wide access constraints.",
   "americas_components": [
     {
       "name": "Energy security",
@@ -47,20 +47,20 @@
     }
   ],
   "conflict_escalation": 98,
-  "coupling_score": 82,
-  "momentum_score": 66,
+  "coupling_score": 78,
+  "momentum_score": 64,
   "confidence_score": 75,
   "confidence_level": "MODERATE",
-  "confidence_rationale": "Fresh, multi-source evidence covers most domains, including several Tier A sources, but several key financial and technology claims rely on Tier C reporting and direct Americas-system disruption evidence is limited. Evidence gate: 13 items, 10 sources, 4 Tier-A sources, 5/5 clusters.",
+  "confidence_rationale": "Fresh, multi-cluster evidence includes several Tier A sources and direct observations, though some claims are forward-looking and financial/rare-earth evidence is lower-tier or less direct. Evidence gate: 14 items, 8 sources, 4 Tier-A sources, 5/5 clusters.",
   "preparedness_window": "Days to weeks",
-  "summary": "Severe, multi-domain disruption remains concentrated in energy, shipping, infrastructure and natural hazards; no new evidence verifies Americas-wide systemic access failures.",
-  "primary_driver": "Conflict-linked shipping and energy risks compounded by active natural-disaster impacts in the Americas.",
+  "summary": "Severe, active disruption risk remains concentrated in energy-linked shipping, conflict spillovers, and hurricane impacts in the Americas. No new evidence confirms broad Americas-wide essential-service failure.",
+  "primary_driver": "Attacks and escalating threats around major maritime routes, alongside active hurricane-related risks in Mexico and ongoing U.S. emergency response.",
   "primary_stabilizers": [
-    "NATO, EU, partners and industry met to improve responses to sabotage, drone incidents and cyberattacks targeting critical infrastructure, especially energy.",
-    "The U.S. paused newly enacted Russia sanctions and potential secondary tariffs, reducing immediate disruption risk for affected energy-linked trade flows.",
-    "EU-China talks produced preliminary understandings to facilitate Chinese rare-earth and permanent-magnet export licensing, potentially easing technology supply-chain bottlenecks.",
-    "The Bank of England is working with banks on deeper cyber-recovery capabilities and assessing quantum-encryption risks, indicating active resilience measures rather than confirmed systemic disruption.",
-    "USDA scheduled its October 19, 2026 Crop Progress release, maintaining current official monitoring of U.S. crop conditions and agricultural production."
+    "The White House paused newly enacted Russia sanctions and possible tariffs, delaying restrictions that could affect energy and international trade flows.",
+    "EU and China agreed an initial trade framework reportedly including measures to stabilize rare-earth supply chains and reduce some tariffs.",
+    "UK authorities and 38 major financial firms completed a sector-wide cloud-outage simulation to strengthen coordinated response to systemic operational disruption.",
+    "CMS activated healthcare flexibilities for Alabama and Florida after Hurricane Isaias, supporting continued hospital operations and access to care in affected areas.",
+    "HHS declared a public health emergency for Florida and Alabama and deployed response support following continuing impacts from Hurricane Isaias."
   ],
   "domains": [
     {
@@ -69,7 +69,7 @@
       "impact": 97,
       "americas_exposure": 98,
       "trend": "rising",
-      "rationale": "Chokepoint and regional oil-infrastructure risks remain elevated; resilience coordination is ongoing.",
+      "rationale": "Bab el-Mandeb threats and Black Sea vessel attacks sustain risk to oil flows and prices.",
       "name": "Energy security",
       "weight": 11
     },
@@ -79,7 +79,7 @@
       "impact": 97,
       "americas_exposure": 86,
       "trend": "rising",
-      "rationale": "Attacks on Black Sea cargo vessels caused deaths and missing crew; Red Sea-area risks persist.",
+      "rationale": "Multiple commercial-vessel attacks and regional escalation signals persist.",
       "name": "Military / geopolitical",
       "weight": 10
     },
@@ -89,27 +89,27 @@
       "impact": 96,
       "americas_exposure": 97,
       "trend": "rising",
-      "rationale": "Cargo attacks threaten shipping routes; semiconductor inputs remain exposed despite easing talks.",
+      "rationale": "Attacked cargo vessels and tight rare-earth supply maintain severe logistics and input risk.",
       "name": "Supply chain & transportation",
       "weight": 10
     },
     {
       "key": "trade",
-      "threat": 83,
-      "impact": 80,
-      "americas_exposure": 89,
+      "threat": 81,
+      "impact": 78,
+      "americas_exposure": 88,
       "trend": "easing",
-      "rationale": "Shipping risks persist, but paused U.S. measures and preliminary EU-China licensing understandings reduce near-term pressure.",
+      "rationale": "Shipping threats persist, but paused Russia measures and EU-China framework provide partial relief.",
       "name": "Global trade fragmentation",
       "weight": 10
     },
     {
       "key": "technology",
-      "threat": 88,
+      "threat": 87,
       "impact": 75,
       "americas_exposure": 83,
       "trend": "stable",
-      "rationale": "Rare-earth dependency and cyber risk remain material; no new verified technology-service disruption.",
+      "rationale": "Rare-earth constraints and payment-outage warnings remain material; no broad technology outage is evidenced.",
       "name": "Technology chokepoints",
       "weight": 7
     },
@@ -119,7 +119,7 @@
       "impact": 88,
       "americas_exposure": 94,
       "trend": "rising",
-      "rationale": "Flooding and road closures in Mexico and earthquake damage in Panama add to ongoing energy and cyber risks.",
+      "rationale": "Hurricane Trudy presents near-term risks to power, transport, and essential services in Mexico.",
       "name": "Critical infrastructure / cyber",
       "weight": 11
     },
@@ -129,17 +129,17 @@
       "impact": 76,
       "americas_exposure": 89,
       "trend": "stable",
-      "rationale": "Selective credit repricing is reported, while cited stress testing and recovery planning indicate resilience; no systemic access failure verified.",
+      "rationale": "India's payment disruption was contained; systemic cyber/liquidity vulnerability remains forward-looking.",
       "name": "Financial-system stress",
       "weight": 10
     },
     {
       "key": "food",
-      "threat": 85,
-      "impact": 63,
+      "threat": 84,
+      "impact": 64,
       "americas_exposure": 84,
       "trend": "stable",
-      "rationale": "No new food-access disruption is evidenced; U.S. crop monitoring continues.",
+      "rationale": "A multistate oyster-linked Salmonella outbreak is active but geographically and product limited.",
       "name": "Food & agriculture",
       "weight": 8
     },
@@ -149,7 +149,7 @@
       "impact": 79,
       "americas_exposure": 89,
       "trend": "rising",
-      "rationale": "Panama earthquake damage affected more than 27,000 households and required supply deliveries.",
+      "rationale": "Hurricane-related emergency actions and near-term Mexican impacts sustain domestic-service risk.",
       "name": "Domestic institutional stress",
       "weight": 6
     },
@@ -159,17 +159,17 @@
       "impact": 49,
       "americas_exposure": 63,
       "trend": "stable",
-      "rationale": "No evidence of material civil-unrest-related disruption.",
+      "rationale": "No evidence of material civilian disruption from unrest.",
       "name": "Civil unrest / public order",
       "weight": 7
     },
     {
       "key": "public_health",
-      "threat": 69,
+      "threat": 68,
       "impact": 68,
       "americas_exposure": 71,
-      "trend": "rising",
-      "rationale": "Bundibugyo outbreak remains large and cross-border, though no Americas impact is evidenced.",
+      "trend": "stable",
+      "rationale": "Oyster outbreak causes confirmed illnesses, while national influenza activity remains low and response capacity is active.",
       "name": "Public health / biological",
       "weight": 5
     },
@@ -179,7 +179,7 @@
       "impact": 97,
       "americas_exposure": 98,
       "trend": "rising",
-      "rationale": "Hurricane flooding and road closures in Mexico plus significant earthquake damage in Panama show active regional impacts.",
+      "rationale": "Category 2 Hurricane Trudy creates immediate evacuation, transport, power, and service risks in Mexico.",
       "name": "Natural / environmental",
       "weight": 5
     }
@@ -188,8 +188,8 @@
   "verified_hard_trigger_count": 0,
   "severe_hard_trigger_count": 0,
   "score_calibration": {
-    "raw_score": 84,
-    "published_score": 84,
+    "raw_score": 83,
+    "published_score": 83,
     "previous_daily_anchor": 84,
     "rate_limit_applied": false,
     "daily_rate_limit": 3,
@@ -197,10 +197,10 @@
     "high_impact_domain_count": 9
   },
   "score_components": {
-    "global_threat_pressure": 88,
+    "global_threat_pressure": 87,
     "observed_civilian_disruption": 82,
-    "coupling": 82,
-    "momentum": 66,
+    "coupling": 78,
+    "momentum": 64,
     "americas_exposure": 88
   },
   "drivers": [
@@ -237,35 +237,35 @@
   ],
   "areas_to_watch": [
     {
-      "name": "Maritime energy chokepoints",
+      "name": "Maritime energy and cargo chokepoints",
       "severity": "critical",
-      "why": "Black Sea attacks and Bab el-Mandeb risks could further constrain shipping and energy flows."
+      "why": "Commercial-vessel attacks and Bab el-Mandeb escalation could compound energy, shipping, and trade disruption."
     },
     {
-      "name": "Americas disaster recovery",
+      "name": "Mexico Pacific hurricane impacts",
       "severity": "high",
-      "why": "Flooding, road closures and widespread housing damage may prolong local essential-service and logistics impacts."
+      "why": "Hurricane Trudy poses immediate risks to evacuation, power, transport, and essential services."
     },
     {
-      "name": "Cyber-financial transmission",
+      "name": "Critical-mineral availability",
       "severity": "high",
-      "why": "Cyber and market-stress risks are credible, but systemic outages or payment restrictions are not verified."
+      "why": "Reported U.S.-bound rare-earth shipment halts and elevated prices could affect industrial and technology supply chains."
     },
     {
-      "name": "Rare-earth and semiconductor inputs",
+      "name": "Payment-system operational resilience",
       "severity": "medium",
-      "why": "Export-control dependency remains a supply risk despite preliminary EU-China easing measures."
+      "why": "A contained RTGS disruption and official warnings underscore outage and liquidity-contagion risk."
     },
     {
-      "name": "Bundibugyo outbreak spread",
+      "name": "Foodborne illness response",
       "severity": "medium",
-      "why": "Large active outbreak with cases across multiple countries warrants monitoring for further international spread."
+      "why": "The multistate oyster-linked Salmonella outbreak remains active, though limited in scale."
     }
   ],
   "signals": [
     {
-      "title": "Black Sea cargo vessels attacked",
-      "summary": "Drone attacks struck at least seven cargo vessels in October, killing two people and leaving 25 missing while threatening Black Sea shipping routes.",
+      "title": "Black Sea commercial vessels attacked",
+      "summary": "Drone attacks hit at least seven cargo vessels this month, including an oil-and-chemical tanker and a corn carrier, raising NATO escalation concerns.",
       "url": "https://apnews.com/article/866f21a940311b13abd9425457edf388",
       "source": "Associated Press",
       "published_at": "2026-10-16T00:00:00.000Z",
@@ -273,57 +273,66 @@
       "impact": "up"
     },
     {
-      "title": "Houthi capability threatens chokepoints",
-      "summary": "Houthi strikes on Saudi Arabia and territorial gains near a key shipping chokepoint increase risks to regional oil infrastructure and trade routes.",
-      "url": "https://apnews.com/article/27173d5eaf4e27e5d5d41d0e6a98768b",
+      "title": "Houthi advances threaten Bab el-Mandeb",
+      "summary": "Egypt agreed to support Saudi Arabia against escalating Houthi attacks near oil infrastructure and the Bab el-Mandeb shipping chokepoint.",
+      "url": "https://apnews.com/article/f7d499cb13525df2bc7eb318e0fc1404",
       "source": "Associated Press",
-      "published_at": "2026-10-17T00:00:00.000Z",
+      "published_at": "2026-10-18T00:00:00.000Z",
       "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "ASML supplier faces Chinese restrictions",
-      "summary": "China’s restrictions on a German ASML supplier reportedly threaten operations, illustrating semiconductor exposure to rare-earth and export-control dependencies.",
-      "url": "https://www.tomshardware.com/tech-industry/semiconductors/eu-negotiates-sanction-swap-with-china-to-rescue-critical-asml-supplier-german-coatings-firm-faces-shutdown-without-chinese-rare-earths",
-      "source": "Tom's Hardware",
-      "published_at": "2026-10-15T00:00:00.000Z",
-      "category": "TECH",
+      "title": "Arctic security and shipping competition",
+      "summary": "The EU announced expanded Arctic security and infrastructure plans amid Russian military buildup, emerging shipping routes, and concerns over shadow-fleet oil transport.",
+      "url": "https://apnews.com/article/799fa8fff89f9c8cbf440fc53b37fc5d",
+      "source": "Associated Press",
+      "published_at": "2026-10-20T00:00:00.000Z",
+      "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "IMF flags cyber and debt risks",
-      "summary": "IMF identified cyberattacks, rising sovereign yields, and an AI-driven selloff as plausible catalysts for abrupt financial-market stress; bank capital remained broadly resilient in stress tests.",
-      "url": "https://www.investing.com/news/economy-news/imf-cites-ai-slowdown-spiking-yields-as-looming-global-market-risks-4945345",
+      "title": "Rare-earth supply remains tight",
+      "summary": "Some Chinese suppliers reportedly halted U.S. rare-earth shipments amid geopolitical concerns, while sensitive materials remained near record prices and supply stayed tight.",
+      "url": "https://www.investing.com/news/stock-market-news/china-rare-earth-firms-halt-some-us-shipments-over-geopolitical-worries-sources-say-4888882",
       "source": "Reuters via Investing.com",
-      "published_at": "2026-10-13T00:00:00.000Z",
+      "published_at": "2026-09-04T00:00:00.000Z",
+      "category": "SUPPLY",
+      "impact": "up"
+    },
+    {
+      "title": "RTGS payment disruption",
+      "summary": "Central Bank of India isolated systems after an RTGS outward-payment glitch affecting October 15–17; it reported no customer financial losses.",
+      "url": "https://economictimes.indiatimes.com/industry/banking/finance/banking/central-bank-of-india-reports-technical-glitch-in-rtgs-outward-system/articleshow/135053338.cms",
+      "source": "The Economic Times",
+      "published_at": "2026-10-19T00:00:00.000Z",
       "category": "FINANCE",
       "impact": "up"
     },
     {
-      "title": "Trudy cleanup begins",
-      "summary": "Hurricane Trudy weakened near Mexico, while coastal flooding and road closures were reported in Tabasco amid additional severe-weather warnings.",
-      "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/10/19/hurricane-trudy-lashes-mexico-s-pacific-coast-but-is-set-to-weaken-tonight",
-      "source": "Reuters",
-      "published_at": "2026-10-19T00:00:00.000Z",
+      "title": "Cyber and liquidity vulnerability",
+      "summary": "The RBA warns cyber or third-party outages could block payments, erode confidence, trigger liquidity shortfalls, and force asset sales.",
+      "url": "https://www.rba.gov.au/publications/fsr/2026/oct/focus-topic-operational-risk-and-financial-stability.html",
+      "source": "Reserve Bank of Australia",
+      "published_at": "2026-10-20T00:00:00.000Z",
+      "category": "TECH",
+      "impact": "up"
+    },
+    {
+      "title": "Hurricane Trudy nears Mexico",
+      "summary": "Category 2 Hurricane Trudy approached Mexico’s southwestern and west-central Pacific coast, creating near-term risks to evacuations, transport, power, and essential services.",
+      "url": "https://apnews.com/article/13abd259860be97941f0ef0b72990c31",
+      "source": "Associated Press",
+      "published_at": "2026-10-17T00:00:00.000Z",
       "category": "NATURAL",
       "impact": "up"
     },
     {
-      "title": "Panama earthquake recovery",
-      "summary": "More than 27,000 Panamanian households reported earthquake damage; authorities had delivered supplies to 57 communities by October 16.",
-      "url": "https://www.reutersconnect.com/item/panama-more-than-27000-people-have-homes-affected-by-a-75-magnitude-earthquake/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX09XTFRBQzRVWjdIVUE5TEJMVURaNE4yR09CRkFVUk4",
-      "source": "Reuters Connect",
+      "title": "Multistate oyster Salmonella outbreak",
+      "summary": "CDC reports 27 Salmonella cases across 12 states, five hospitalizations, and advises avoiding recalled raw oysters from Virginia’s Little Wicomico River.",
+      "url": "https://www.cdc.gov/salmonella/outbreaks/oysters-10-26/investigation.html",
+      "source": "CDC",
       "published_at": "2026-10-19T00:00:00.000Z",
-      "category": "NATURAL",
-      "impact": "up"
-    },
-    {
-      "title": "Bundibugyo outbreak persists",
-      "summary": "WHO reported 9,300 suspected, probable, and confirmed Bundibugyo virus cases and 334 deaths through October 15, 2026, with cases also recorded in Uganda, Kenya, and France.",
-      "url": "https://www.who.int/emergencies/alert-and-response",
-      "source": "WHO",
-      "published_at": "2026-10-15T00:00:00.000Z",
-      "category": "HEALTH",
+      "category": "FOOD",
       "impact": "up"
     }
   ],
@@ -684,12 +693,22 @@
       "americas": 88,
       "conflict": 98,
       "momentum": 66
+    },
+    {
+      "date": "2026-10-20",
+      "preparedness": 83,
+      "raw_preparedness": 83,
+      "threat": 87,
+      "impact": 82,
+      "americas": 88,
+      "conflict": 98,
+      "momentum": 64
     }
   ],
   "evidence_quality": {
-    "evidence_count": 13,
-    "fresh_count": 12,
-    "unique_sources": 10,
+    "evidence_count": 14,
+    "fresh_count": 9,
+    "unique_sources": 8,
     "tier_a_sources": 4,
     "clusters": 5,
     "domains_covered": 11,
@@ -699,13 +718,13 @@
   "evidence_log": [
     {
       "id": "E1",
-      "title": "Black Sea cargo vessels attacked",
+      "title": "Black Sea commercial vessels attacked",
       "source": "Associated Press",
       "url": "https://apnews.com/article/866f21a940311b13abd9425457edf388",
       "source_domain": "apnews.com",
       "source_tier": "A",
       "published_at": "2026-10-16T00:00:00.000Z",
-      "age_days": 3,
+      "age_days": 4,
       "cluster": "military_energy_shipping",
       "domains": [
         "military",
@@ -715,17 +734,17 @@
       "geography": "Black Sea; Romania and Bulgaria",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "Drone attacks struck at least seven cargo vessels in October, killing two people and leaving 25 missing while threatening Black Sea shipping routes.",
+      "fact": "Drone attacks hit at least seven cargo vessels this month, including an oil-and-chemical tanker and a corn carrier, raising NATO escalation concerns.",
       "americas_relevant": true
     },
     {
       "id": "E2",
-      "title": "Houthi capability threatens chokepoints",
+      "title": "Houthi advances threaten Bab el-Mandeb",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/27173d5eaf4e27e5d5d41d0e6a98768b",
+      "url": "https://apnews.com/article/f7d499cb13525df2bc7eb318e0fc1404",
       "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-10-17T00:00:00.000Z",
+      "published_at": "2026-10-18T00:00:00.000Z",
       "age_days": 2,
       "cluster": "military_energy_shipping",
       "domains": [
@@ -736,28 +755,29 @@
       "geography": "Yemen; Saudi Arabia; Bab el-Mandeb",
       "evidence_type": "forward",
       "materiality": "high",
-      "fact": "Houthi strikes on Saudi Arabia and territorial gains near a key shipping chokepoint increase risks to regional oil infrastructure and trade routes.",
+      "fact": "Egypt agreed to support Saudi Arabia against escalating Houthi attacks near oil infrastructure and the Bab el-Mandeb shipping chokepoint.",
       "americas_relevant": true
     },
     {
       "id": "E3",
-      "title": "NATO strengthens energy infrastructure resilience",
-      "source": "NATO",
-      "url": "https://www.nato.int/en/news-and-events/articles/news/2026/10/19/nato-allies-and-partners-meet-in-bucharest-to-strengthen-response-to-russias-hybrid-activities",
-      "source_domain": "nato.int",
+      "title": "Arctic security and shipping competition",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/799fa8fff89f9c8cbf440fc53b37fc5d",
+      "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-10-19T00:00:00.000Z",
+      "published_at": "2026-10-20T00:00:00.000Z",
       "age_days": 0,
       "cluster": "military_energy_shipping",
       "domains": [
         "military",
         "energy",
-        "critical_infrastructure"
+        "supply_chain",
+        "trade"
       ],
-      "geography": "NATO; Europe",
-      "evidence_type": "stabilizer",
+      "geography": "Arctic; Europe; Russia",
+      "evidence_type": "forward",
       "materiality": "medium",
-      "fact": "NATO, EU, partners and industry met to improve responses to sabotage, drone incidents and cyberattacks targeting critical infrastructure, especially energy.",
+      "fact": "The EU announced expanded Arctic security and infrastructure plans amid Russian military buildup, emerging shipping routes, and concerns over shadow-fleet oil transport.",
       "americas_relevant": true
     },
     {
@@ -768,7 +788,7 @@
       "source_domain": "apnews.com",
       "source_tier": "A",
       "published_at": "2026-10-17T00:00:00.000Z",
-      "age_days": 2,
+      "age_days": 3,
       "cluster": "trade_supply_technology",
       "domains": [
         "trade",
@@ -776,19 +796,39 @@
       ],
       "geography": "United States/Russia",
       "evidence_type": "observed",
-      "materiality": "medium",
-      "fact": "The U.S. paused newly enacted Russia sanctions and potential secondary tariffs, reducing immediate disruption risk for affected energy-linked trade flows.",
+      "materiality": "high",
+      "fact": "The White House paused newly enacted Russia sanctions and possible tariffs, delaying restrictions that could affect energy and international trade flows.",
       "americas_relevant": true
     },
     {
       "id": "E5",
-      "title": "EU-China rare-earth talks",
+      "title": "Rare-earth supply remains tight",
+      "source": "Reuters via Investing.com",
+      "url": "https://www.investing.com/news/stock-market-news/china-rare-earth-firms-halt-some-us-shipments-over-geopolitical-worries-sources-say-4888882",
+      "source_domain": "investing.com",
+      "source_tier": "C",
+      "published_at": "2026-09-04T00:00:00.000Z",
+      "age_days": 46,
+      "cluster": "trade_supply_technology",
+      "domains": [
+        "supply_chain",
+        "technology"
+      ],
+      "geography": "China/United States",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "Some Chinese suppliers reportedly halted U.S. rare-earth shipments amid geopolitical concerns, while sensitive materials remained near record prices and supply stayed tight.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E6",
+      "title": "EU-China supply-chain talks",
       "source": "Associated Press",
       "url": "https://apnews.com/article/54c9c71e85f92dc0003780fc53f0b250",
       "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-10-16T00:00:00.000Z",
-      "age_days": 3,
+      "published_at": "2026-10-09T00:00:00.000Z",
+      "age_days": 11,
       "cluster": "trade_supply_technology",
       "domains": [
         "trade",
@@ -797,169 +837,169 @@
       ],
       "geography": "European Union/China",
       "evidence_type": "stabilizer",
-      "materiality": "high",
-      "fact": "EU-China talks produced preliminary understandings to facilitate Chinese rare-earth and permanent-magnet export licensing, potentially easing technology supply-chain bottlenecks.",
-      "americas_relevant": false
-    },
-    {
-      "id": "E6",
-      "title": "ASML supplier faces Chinese restrictions",
-      "source": "Tom's Hardware",
-      "url": "https://www.tomshardware.com/tech-industry/semiconductors/eu-negotiates-sanction-swap-with-china-to-rescue-critical-asml-supplier-german-coatings-firm-faces-shutdown-without-chinese-rare-earths",
-      "source_domain": "tomshardware.com",
-      "source_tier": "C",
-      "published_at": "2026-10-15T00:00:00.000Z",
-      "age_days": 4,
-      "cluster": "trade_supply_technology",
-      "domains": [
-        "technology",
-        "supply_chain",
-        "trade"
-      ],
-      "geography": "European Union/China",
-      "evidence_type": "forward",
-      "materiality": "high",
-      "fact": "China’s restrictions on a German ASML supplier reportedly threaten operations, illustrating semiconductor exposure to rare-earth and export-control dependencies.",
+      "materiality": "medium",
+      "fact": "EU and China agreed an initial trade framework reportedly including measures to stabilize rare-earth supply chains and reduce some tariffs.",
       "americas_relevant": false
     },
     {
       "id": "E7",
-      "title": "IMF flags cyber and debt risks",
-      "source": "Reuters via Investing.com",
-      "url": "https://www.investing.com/news/economy-news/imf-cites-ai-slowdown-spiking-yields-as-looming-global-market-risks-4945345",
-      "source_domain": "investing.com",
+      "title": "RTGS payment disruption",
+      "source": "The Economic Times",
+      "url": "https://economictimes.indiatimes.com/industry/banking/finance/banking/central-bank-of-india-reports-technical-glitch-in-rtgs-outward-system/articleshow/135053338.cms",
+      "source_domain": "economictimes.indiatimes.com",
       "source_tier": "C",
-      "published_at": "2026-10-13T00:00:00.000Z",
-      "age_days": 6,
+      "published_at": "2026-10-19T00:00:00.000Z",
+      "age_days": 1,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
         "financial",
-        "technology",
-        "critical_infrastructure"
+        "technology"
       ],
-      "geography": "Global",
-      "evidence_type": "forward",
-      "materiality": "high",
-      "fact": "IMF identified cyberattacks, rising sovereign yields, and an AI-driven selloff as plausible catalysts for abrupt financial-market stress; bank capital remained broadly resilient in stress tests.",
-      "americas_relevant": true
+      "geography": "India",
+      "evidence_type": "observed",
+      "materiality": "medium",
+      "fact": "Central Bank of India isolated systems after an RTGS outward-payment glitch affecting October 15–17; it reported no customer financial losses.",
+      "americas_relevant": false
     },
     {
       "id": "E8",
-      "title": "BoE strengthens cyber recovery planning",
-      "source": "Reuters via MarketScreener",
-      "url": "https://uk.marketscreener.com/news/banks-need-bare-metal-recovery-in-face-of-ai-risks-says-boe-s-breeden-ce785dd3da89f32c",
-      "source_domain": "uk.marketscreener.com",
+      "title": "Cyber and liquidity vulnerability",
+      "source": "Reserve Bank of Australia",
+      "url": "https://www.rba.gov.au/publications/fsr/2026/oct/focus-topic-operational-risk-and-financial-stability.html",
+      "source_domain": "rba.gov.au",
       "source_tier": "C",
-      "published_at": "2026-10-15T00:00:00.000Z",
-      "age_days": 4,
+      "published_at": "2026-10-20T00:00:00.000Z",
+      "age_days": 0,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
-        "financial",
         "technology",
-        "critical_infrastructure"
+        "financial"
       ],
-      "geography": "United Kingdom",
-      "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "The Bank of England is working with banks on deeper cyber-recovery capabilities and assessing quantum-encryption risks, indicating active resilience measures rather than confirmed systemic disruption.",
+      "geography": "Australia / global",
+      "evidence_type": "forward",
+      "materiality": "high",
+      "fact": "The RBA warns cyber or third-party outages could block payments, erode confidence, trigger liquidity shortfalls, and force asset sales.",
       "americas_relevant": true
     },
     {
       "id": "E9",
-      "title": "Selective credit stress, no systemic failure verified",
-      "source": "Economic Risk & Financial Stability Watch",
-      "url": "https://www.reddit.com/r/financial/comments/1x8a1yb/economic_risk_financial_stability_watch/",
-      "source_domain": "reddit.com",
+      "title": "Financial-system stabilizer",
+      "source": "Bank of England",
+      "url": "https://www.bankofengland.co.uk/news/2026/october/cmorg-holds-sector-wide-cloud-outage-simulation-exercise",
+      "source_domain": "bankofengland.co.uk",
       "source_tier": "C",
-      "published_at": "2026-10-17T00:00:00.000Z",
-      "age_days": 2,
+      "published_at": "2026-10-08T00:00:00.000Z",
+      "age_days": 12,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
+        "technology",
         "financial"
       ],
-      "geography": "United States/Canada",
-      "evidence_type": "observed",
+      "geography": "United Kingdom",
+      "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "Available reporting describes intensified selective AI-related credit repricing but does not verify widespread banking outages, payment disruption, or generalized market-liquidity failure.",
+      "fact": "UK authorities and 38 major financial firms completed a sector-wide cloud-outage simulation to strengthen coordinated response to systemic operational disruption.",
       "americas_relevant": true
     },
     {
       "id": "E10",
-      "title": "Trudy cleanup begins",
-      "source": "Reuters",
-      "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/10/19/hurricane-trudy-lashes-mexico-s-pacific-coast-but-is-set-to-weaken-tonight",
-      "source_domain": "internazionale.it",
-      "source_tier": "C",
-      "published_at": "2026-10-19T00:00:00.000Z",
-      "age_days": 0,
+      "title": "Hurricane Trudy nears Mexico",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/13abd259860be97941f0ef0b72990c31",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-10-17T00:00:00.000Z",
+      "age_days": 3,
       "cluster": "americas_civil",
       "domains": [
         "natural",
-        "critical_infrastructure"
+        "critical_infrastructure",
+        "domestic"
       ],
       "geography": "Mexico",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "Hurricane Trudy weakened near Mexico, while coastal flooding and road closures were reported in Tabasco amid additional severe-weather warnings.",
+      "fact": "Category 2 Hurricane Trudy approached Mexico’s southwestern and west-central Pacific coast, creating near-term risks to evacuations, transport, power, and essential services.",
       "americas_relevant": true
     },
     {
       "id": "E11",
-      "title": "Panama earthquake recovery",
-      "source": "Reuters Connect",
-      "url": "https://www.reutersconnect.com/item/panama-more-than-27000-people-have-homes-affected-by-a-75-magnitude-earthquake/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX09XTFRBQzRVWjdIVUE5TEJMVURaNE4yR09CRkFVUk4",
-      "source_domain": "reutersconnect.com",
-      "source_tier": "C",
-      "published_at": "2026-10-19T00:00:00.000Z",
-      "age_days": 0,
+      "title": "U.S. hurricane health emergency support",
+      "source": "Centers for Medicare & Medicaid Services",
+      "url": "https://www.cms.gov/newsroom/news-alert/cms-announces-resources-flexibilities-assist-public-health-emergency-alabama-florida",
+      "source_domain": "cms.gov",
+      "source_tier": "A",
+      "published_at": "2026-10-15T00:00:00.000Z",
+      "age_days": 5,
       "cluster": "americas_civil",
       "domains": [
-        "natural",
+        "public_health",
         "domestic",
         "critical_infrastructure"
       ],
-      "geography": "Panama",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "More than 27,000 Panamanian households reported earthquake damage; authorities had delivered supplies to 57 communities by October 16.",
+      "geography": "United States",
+      "evidence_type": "stabilizer",
+      "materiality": "medium",
+      "fact": "CMS activated healthcare flexibilities for Alabama and Florida after Hurricane Isaias, supporting continued hospital operations and access to care in affected areas.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E12",
+      "title": "Federal health emergency response",
+      "source": "Administration for Strategic Preparedness and Response",
+      "url": "https://akaprod-www.aspr.gov/readiness-response/responses/responds-hurricane-isaias",
+      "source_domain": "akaprod-www.aspr.gov",
+      "source_tier": "A",
+      "published_at": "2026-10-13T00:00:00.000Z",
+      "age_days": 7,
+      "cluster": "americas_civil",
+      "domains": [
+        "public_health",
+        "domestic"
+      ],
+      "geography": "United States",
+      "evidence_type": "stabilizer",
+      "materiality": "medium",
+      "fact": "HHS declared a public health emergency for Florida and Alabama and deployed response support following continuing impacts from Hurricane Isaias.",
       "americas_relevant": true
     },
     {
       "id": "E13",
-      "title": "Bundibugyo outbreak persists",
-      "source": "WHO",
-      "url": "https://www.who.int/emergencies/alert-and-response",
-      "source_domain": "who.int",
+      "title": "Multistate oyster Salmonella outbreak",
+      "source": "CDC",
+      "url": "https://www.cdc.gov/salmonella/outbreaks/oysters-10-26/investigation.html",
+      "source_domain": "cdc.gov",
       "source_tier": "A",
-      "published_at": "2026-10-15T00:00:00.000Z",
+      "published_at": "2026-10-19T00:00:00.000Z",
+      "age_days": 1,
+      "cluster": "food_health_natural",
+      "domains": [
+        "food",
+        "public_health"
+      ],
+      "geography": "United States",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "CDC reports 27 Salmonella cases across 12 states, five hospitalizations, and advises avoiding recalled raw oysters from Virginia’s Little Wicomico River.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E14",
+      "title": "U.S. influenza remains low",
+      "source": "CDC",
+      "url": "https://www.cdc.gov/fluview/surveillance/2026-week-40.html",
+      "source_domain": "cdc.gov",
+      "source_tier": "A",
+      "published_at": "2026-10-16T00:00:00.000Z",
       "age_days": 4,
       "cluster": "food_health_natural",
       "domains": [
         "public_health"
       ],
-      "geography": "Democratic Republic of the Congo, Uganda, Kenya, France",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "WHO reported 9,300 suspected, probable, and confirmed Bundibugyo virus cases and 334 deaths through October 15, 2026, with cases also recorded in Uganda, Kenya, and France.",
-      "americas_relevant": false
-    },
-    {
-      "id": "E14",
-      "title": "U.S. crop reporting continues",
-      "source": "USDA NASS",
-      "url": "https://www.nass.usda.gov/Publications/Reports_by_Release_Day/",
-      "source_domain": "nass.usda.gov",
-      "source_tier": "A",
-      "published_at": "2026-10-19T00:00:00.000Z",
-      "age_days": 0,
-      "cluster": "food_health_natural",
-      "domains": [
-        "food"
-      ],
       "geography": "United States",
       "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "USDA scheduled its October 19, 2026 Crop Progress release, maintaining current official monitoring of U.S. crop conditions and agricultural production.",
+      "fact": "Seasonal influenza activity is increasing but remains low nationally; CDC reported no new confirmed human novel-influenza infections as of October 14.",
       "americas_relevant": true
     }
   ],
@@ -967,8 +1007,8 @@
     "research_model": "gpt-5.6-luna",
     "assessment_model": "gpt-5.6-terra",
     "web_search_calls": 5,
-    "estimated_run_cost_usd": 0.087564,
-    "estimated_period_spend_usd": 3.886795,
+    "estimated_run_cost_usd": 0.087448,
+    "estimated_period_spend_usd": 3.974244,
     "allocated_90_day_budget_usd": 10,
     "operational_stop_usd": 9
   },

@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "engine_version": "5.3",
-  "date": "2026-10-19",
+  "date": "2026-10-20",
   "status": "VERIFIED",
-  "started_at": "2026-10-19T17:27:35.443Z",
-  "completed_at": "2026-10-19T17:30:49.027Z",
-  "message": "Published verified v5 assessment: 84 HIGH ALERT.",
+  "started_at": "2026-10-20T15:38:25.574Z",
+  "completed_at": "2026-10-20T15:41:40.813Z",
+  "message": "Published verified v5 assessment: 83 HIGH ALERT.",
   "research_quality": {
-    "evidence_count": 13,
-    "fresh_count": 12,
-    "unique_sources": 10,
+    "evidence_count": 14,
+    "fresh_count": 9,
+    "unique_sources": 8,
     "tier_a_sources": 4,
     "clusters": 5,
     "domains_covered": 11,
@@ -17,7 +17,7 @@
     "publishable": true
   },
   "web_search_calls": 5,
-  "estimated_run_cost_usd": 0.087564,
-  "estimated_period_spend_usd": 3.886795,
+  "estimated_run_cost_usd": 0.087448,
+  "estimated_period_spend_usd": 3.974244,
   "operational_stop_usd": 9
 }
