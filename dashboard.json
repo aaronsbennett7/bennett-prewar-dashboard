@@ -2,18 +2,18 @@
   "schema_version": 5,
   "engine_version": "5.3",
   "data_status": "VERIFIED",
-  "as_of": "2026-10-20",
-  "updated_at": "2026-10-20T15:41:40.813Z",
-  "last_successful_update": "2026-10-20T15:41:40.813Z",
-  "preparedness_urgency": 83,
-  "raw_preparedness_urgency": 83,
+  "as_of": "2026-10-24",
+  "updated_at": "2026-10-24T14:33:03.992Z",
+  "last_successful_update": "2026-10-24T14:33:03.992Z",
+  "preparedness_urgency": 84,
+  "raw_preparedness_urgency": 84,
   "preparedness_stage": "HIGH ALERT",
-  "global_threat_pressure": 87,
-  "leading_threat_pressure": 87,
+  "global_threat_pressure": 88,
+  "leading_threat_pressure": 88,
   "observed_civilian_disruption": 82,
   "americas_exposure": 88,
   "americas_stage": "SEVERE",
-  "americas_summary": "Americas exposure remains high through energy and shipping-price transmission, critical-mineral supply constraints, and direct hurricane/public-health impacts. Evidence supports localized rather than continent-wide access constraints.",
+  "americas_summary": "The Americas face high exposure through energy and freight prices, supply dependencies, U.S. storm outages, and regional instability; no evidence establishes broad Americas-wide service failure.",
   "americas_components": [
     {
       "name": "Energy security",
@@ -47,20 +47,19 @@
     }
   ],
   "conflict_escalation": 98,
-  "coupling_score": 78,
-  "momentum_score": 64,
-  "confidence_score": 75,
-  "confidence_level": "MODERATE",
-  "confidence_rationale": "Fresh, multi-cluster evidence includes several Tier A sources and direct observations, though some claims are forward-looking and financial/rare-earth evidence is lower-tier or less direct. Evidence gate: 14 items, 8 sources, 4 Tier-A sources, 5/5 clusters.",
+  "coupling_score": 84,
+  "momentum_score": 71,
+  "confidence_score": 86,
+  "confidence_level": "HIGH",
+  "confidence_rationale": "Fresh, high-materiality reporting from AP, IEA, WHO, NOAA, and U.S. agencies supports the assessment across all domains, though several infrastructure and finance reports are indirect to the Americas. Evidence gate: 15 items, 12 sources, 8 Tier-A sources, 5/5 clusters.",
   "preparedness_window": "Days to weeks",
-  "summary": "Severe, active disruption risk remains concentrated in energy-linked shipping, conflict spillovers, and hurricane impacts in the Americas. No new evidence confirms broad Americas-wide essential-service failure.",
-  "primary_driver": "Attacks and escalating threats around major maritime routes, alongside active hurricane-related risks in Mexico and ongoing U.S. emergency response.",
+  "summary": "Severe, multi-domain disruption remains centered on Gulf energy shipping, with active U.S. storm recovery and elevated health and infrastructure risks. Strategic oil releases and financial resilience provide partial buffers.",
+  "primary_driver": "Attacks and stranded shipping around the Strait of Hormuz threaten oil, gas, fertilizer, and wider freight flows.",
   "primary_stabilizers": [
-    "The White House paused newly enacted Russia sanctions and possible tariffs, delaying restrictions that could affect energy and international trade flows.",
-    "EU and China agreed an initial trade framework reportedly including measures to stabilize rare-earth supply chains and reduce some tariffs.",
-    "UK authorities and 38 major financial firms completed a sector-wide cloud-outage simulation to strengthen coordinated response to systemic operational disruption.",
-    "CMS activated healthcare flexibilities for Alabama and Florida after Hurricane Isaias, supporting continued hospital operations and access to care in affected areas.",
-    "HHS declared a public health emergency for Florida and Alabama and deployed response support following continuing impacts from Hurricane Isaias."
+    "IEA members had released about 330 million barrels and planned further releases, including more than 20 million barrels of diesel, to ease tight markets.",
+    "EU and China reached an interim understanding to facilitate rare-earth and permanent-magnet export licensing while lowering selected tariffs on European goods.",
+    "The IMF said markets remained resilient and banks broadly robust, but cyberattacks, higher sovereign yields, and AI-related correction risks could amplify financial stress.",
+    "Federal emergency transport waivers remained available for disaster-area supply deliveries, supporting recovery after U.S. storm impacts."
   ],
   "domains": [
     {
@@ -69,7 +68,7 @@
       "impact": 97,
       "americas_exposure": 98,
       "trend": "rising",
-      "rationale": "Bab el-Mandeb threats and Black Sea vessel attacks sustain risk to oil flows and prices.",
+      "rationale": "Tanker attacks and Hormuz/Bab el-Mandeb threats endanger oil and gas shipments; strategic releases cushion supply.",
       "name": "Energy security",
       "weight": 11
     },
@@ -79,7 +78,7 @@
       "impact": 97,
       "americas_exposure": 86,
       "trend": "rising",
-      "rationale": "Multiple commercial-vessel attacks and regional escalation signals persist.",
+      "rationale": "Reported attacks on seven tankers and continued maritime threats show active conflict effects.",
       "name": "Military / geopolitical",
       "weight": 10
     },
@@ -89,17 +88,17 @@
       "impact": 96,
       "americas_exposure": 97,
       "trend": "rising",
-      "rationale": "Attacked cargo vessels and tight rare-earth supply maintain severe logistics and input risk.",
+      "rationale": "Stranded vessels, affected crews, and threatened energy and fertilizer routes disrupt maritime logistics.",
       "name": "Supply chain & transportation",
       "weight": 10
     },
     {
       "key": "trade",
-      "threat": 81,
+      "threat": 82,
       "impact": 78,
       "americas_exposure": 88,
-      "trend": "easing",
-      "rationale": "Shipping threats persist, but paused Russia measures and EU-China framework provide partial relief.",
+      "trend": "stable",
+      "rationale": "Expanded U.S. outbound-investment proposal raises restrictions risk; EU-China licensing deal offsets some strain.",
       "name": "Global trade fragmentation",
       "weight": 10
     },
@@ -109,7 +108,7 @@
       "impact": 75,
       "americas_exposure": 83,
       "trend": "stable",
-      "rationale": "Rare-earth constraints and payment-outage warnings remain material; no broad technology outage is evidenced.",
+      "rationale": "U.S. restrictions target advanced technologies; cloud and cyber-risk evidence reinforces systemic exposure.",
       "name": "Technology chokepoints",
       "weight": 7
     },
@@ -119,7 +118,7 @@
       "impact": 88,
       "americas_exposure": 94,
       "trend": "rising",
-      "rationale": "Hurricane Trudy presents near-term risks to power, transport, and essential services in Mexico.",
+      "rationale": "Florida outages persist and maritime disruption affects energy-linked infrastructure; cloud outage illustrates dependency risk.",
       "name": "Critical infrastructure / cyber",
       "weight": 11
     },
@@ -129,7 +128,7 @@
       "impact": 76,
       "americas_exposure": 89,
       "trend": "stable",
-      "rationale": "India's payment disruption was contained; systemic cyber/liquidity vulnerability remains forward-looking.",
+      "rationale": "European cloud outage interrupted bank access, while IMF reports broadly resilient banks amid cyber and market vulnerabilities.",
       "name": "Financial-system stress",
       "weight": 10
     },
@@ -139,7 +138,7 @@
       "impact": 64,
       "americas_exposure": 84,
       "trend": "stable",
-      "rationale": "A multistate oyster-linked Salmonella outbreak is active but geographically and product limited.",
+      "rationale": "Threatened fertilizer shipping and 29 active U.S. foodborne investigations sustain risk without documented broad shortages.",
       "name": "Food & agriculture",
       "weight": 8
     },
@@ -149,27 +148,27 @@
       "impact": 79,
       "americas_exposure": 89,
       "trend": "rising",
-      "rationale": "Hurricane-related emergency actions and near-term Mexican impacts sustain domestic-service risk.",
+      "rationale": "Florida storm damage and outages remain material; Haiti violence adds regional security pressure.",
       "name": "Domestic institutional stress",
       "weight": 6
     },
     {
       "key": "civil_unrest",
-      "threat": 58,
-      "impact": 49,
-      "americas_exposure": 63,
-      "trend": "stable",
-      "rationale": "No evidence of material civilian disruption from unrest.",
+      "threat": 59,
+      "impact": 51,
+      "americas_exposure": 64,
+      "trend": "rising",
+      "rationale": "Gang violence, kidnappings, and gunfire in Haiti are active localized public-safety disruptions.",
       "name": "Civil unrest / public order",
       "weight": 7
     },
     {
       "key": "public_health",
-      "threat": 68,
-      "impact": 68,
-      "americas_exposure": 71,
-      "trend": "stable",
-      "rationale": "Oyster outbreak causes confirmed illnesses, while national influenza activity remains low and response capacity is active.",
+      "threat": 72,
+      "impact": 70,
+      "americas_exposure": 72,
+      "trend": "rising",
+      "rationale": "Large Ebola outbreak with cross-border imported cases raises international health risk; U.S. foodborne investigations remain active.",
       "name": "Public health / biological",
       "weight": 5
     },
@@ -179,28 +178,53 @@
       "impact": 97,
       "americas_exposure": 98,
       "trend": "rising",
-      "rationale": "Category 2 Hurricane Trudy creates immediate evacuation, transport, power, and service risks in Mexico.",
+      "rationale": "Florida storm impacts persist, while NOAA flags near-term U.S. heavy snow and excessive-rainfall hazards.",
       "name": "Natural / environmental",
       "weight": 5
     }
   ],
-  "hard_triggers": [],
-  "verified_hard_trigger_count": 0,
-  "severe_hard_trigger_count": 0,
+  "hard_triggers": [
+    {
+      "type": "shipping_chokepoint_closure",
+      "verified": true,
+      "scope": "multinational",
+      "status": "active",
+      "summary": "Attacks, stranded ships, affected crews, and renewed threats are constraining traffic through Hormuz and connected regional shipping routes.",
+      "source_url": "https://apnews.com/article/2abebce2fca2c085e0e0ee717e42cf28",
+      "evidence_ids": [
+        "E1",
+        "E2"
+      ]
+    },
+    {
+      "type": "grid_outage",
+      "verified": true,
+      "scope": "regional",
+      "status": "active",
+      "summary": "Hurricane damage and downed lines left more than 400,000 Florida Panhandle customers without power; recovery support remains available.",
+      "source_url": "https://www.flnb.uscourts.gov/orders/ao-26-002",
+      "evidence_ids": [
+        "E11",
+        "E12"
+      ]
+    }
+  ],
+  "verified_hard_trigger_count": 2,
+  "severe_hard_trigger_count": 1,
   "score_calibration": {
-    "raw_score": 83,
-    "published_score": 83,
-    "previous_daily_anchor": 84,
+    "raw_score": 84,
+    "published_score": 84,
+    "previous_daily_anchor": 83,
     "rate_limit_applied": false,
-    "daily_rate_limit": 3,
+    "daily_rate_limit": null,
     "sustained_90_for_48h": false,
-    "high_impact_domain_count": 9
+    "high_impact_domain_count": 10
   },
   "score_components": {
-    "global_threat_pressure": 87,
+    "global_threat_pressure": 88,
     "observed_civilian_disruption": 82,
-    "coupling": 78,
-    "momentum": 64,
+    "coupling": 84,
+    "momentum": 71,
     "americas_exposure": 88
   },
   "drivers": [
@@ -237,102 +261,102 @@
   ],
   "areas_to_watch": [
     {
-      "name": "Maritime energy and cargo chokepoints",
+      "name": "Hormuz and Bab el-Mandeb maritime access",
       "severity": "critical",
-      "why": "Commercial-vessel attacks and Bab el-Mandeb escalation could compound energy, shipping, and trade disruption."
+      "why": "Further attacks or restrictions could rapidly tighten oil, gas, fertilizer, and freight availability."
     },
     {
-      "name": "Mexico Pacific hurricane impacts",
+      "name": "U.S. storm impacts and new weather hazards",
       "severity": "high",
-      "why": "Hurricane Trudy poses immediate risks to evacuation, power, transport, and essential services."
+      "why": "Florida recovery remains incomplete as NOAA identifies heavy snow and flood risks in other areas."
     },
     {
-      "name": "Critical-mineral availability",
+      "name": "Cross-border Ebola outbreak",
       "severity": "high",
-      "why": "Reported U.S.-bound rare-earth shipment halts and elevated prices could affect industrial and technology supply chains."
+      "why": "High case and death counts plus imported cases warrant close monitoring for further spread."
     },
     {
-      "name": "Payment-system operational resilience",
+      "name": "Cloud concentration in financial services",
       "severity": "medium",
-      "why": "A contained RTGS disruption and official warnings underscore outage and liquidity-contagion risk."
+      "why": "The London outage demonstrated how a single cloud power event can disrupt bank access."
     },
     {
-      "name": "Foodborne illness response",
-      "severity": "medium",
-      "why": "The multistate oyster-linked Salmonella outbreak remains active, though limited in scale."
+      "name": "Haiti security conditions",
+      "severity": "high",
+      "why": "Gang violence and kidnappings continue to create regional safety and mobility risks."
     }
   ],
   "signals": [
     {
-      "title": "Black Sea commercial vessels attacked",
-      "summary": "Drone attacks hit at least seven cargo vessels this month, including an oil-and-chemical tanker and a corn carrier, raising NATO escalation concerns.",
-      "url": "https://apnews.com/article/866f21a940311b13abd9425457edf388",
+      "title": "Tanker attacks reported in Hormuz",
+      "summary": "Iran reported attacks on seven oil tankers, while renewed threats to Hormuz and Bab el-Mandeb endangered regional oil, gas, and fertilizer shipments.",
+      "url": "https://apnews.com/article/2abebce2fca2c085e0e0ee717e42cf28",
       "source": "Associated Press",
-      "published_at": "2026-10-16T00:00:00.000Z",
+      "published_at": "2026-10-22T00:00:00.000Z",
       "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Houthi advances threaten Bab el-Mandeb",
-      "summary": "Egypt agreed to support Saudi Arabia against escalating Houthi attacks near oil infrastructure and the Bab el-Mandeb shipping chokepoint.",
-      "url": "https://apnews.com/article/f7d499cb13525df2bc7eb318e0fc1404",
-      "source": "Associated Press",
-      "published_at": "2026-10-18T00:00:00.000Z",
+      "title": "Seafarers and vessels remain affected",
+      "summary": "The IMO said about 20,000 seafarers, port workers, and offshore crews remain affected, with ships stranded and an evacuation plan paused.",
+      "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-strait-of-hormuz.aspx",
+      "source": "International Maritime Organization",
+      "published_at": "2026-10-22T00:00:00.000Z",
       "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Arctic security and shipping competition",
-      "summary": "The EU announced expanded Arctic security and infrastructure plans amid Russian military buildup, emerging shipping routes, and concerns over shadow-fleet oil transport.",
-      "url": "https://apnews.com/article/799fa8fff89f9c8cbf440fc53b37fc5d",
+      "title": "Outbound investment rule proposed",
+      "summary": "U.S. Treasury proposed expanding outbound-investment restrictions covering semiconductors, quantum computing, artificial intelligence, and potentially Russia-related activity.",
+      "url": "https://apnews.com/article/b742c292ff8eb19e6a4c8cf03d4d66b9",
       "source": "Associated Press",
-      "published_at": "2026-10-20T00:00:00.000Z",
-      "category": "MILITARY",
+      "published_at": "2026-10-22T00:00:00.000Z",
+      "category": "TRADE",
       "impact": "up"
     },
     {
-      "title": "Rare-earth supply remains tight",
-      "summary": "Some Chinese suppliers reportedly halted U.S. rare-earth shipments amid geopolitical concerns, while sensitive materials remained near record prices and supply stayed tight.",
-      "url": "https://www.investing.com/news/stock-market-news/china-rare-earth-firms-halt-some-us-shipments-over-geopolitical-worries-sources-say-4888882",
-      "source": "Reuters via Investing.com",
-      "published_at": "2026-09-04T00:00:00.000Z",
-      "category": "SUPPLY",
+      "title": "Cloud outage disrupted bank access",
+      "summary": "A Google Cloud power event in London left millions of bank customers unable to access key services for hours; Revolut, Lloyds, and HSBC were affected.",
+      "url": "https://www.investing.com/news/stock-market-news/europes-financial-regulators-query-google-over-cloud-outage-that-hit-banks-4963664",
+      "source": "Reuters",
+      "published_at": "2026-10-21T00:00:00.000Z",
+      "category": "CYBER",
       "impact": "up"
     },
     {
-      "title": "RTGS payment disruption",
-      "summary": "Central Bank of India isolated systems after an RTGS outward-payment glitch affecting October 15–17; it reported no customer financial losses.",
-      "url": "https://economictimes.indiatimes.com/industry/banking/finance/banking/central-bank-of-india-reports-technical-glitch-in-rtgs-outward-system/articleshow/135053338.cms",
-      "source": "The Economic Times",
-      "published_at": "2026-10-19T00:00:00.000Z",
-      "category": "FINANCE",
-      "impact": "up"
-    },
-    {
-      "title": "Cyber and liquidity vulnerability",
-      "summary": "The RBA warns cyber or third-party outages could block payments, erode confidence, trigger liquidity shortfalls, and force asset sales.",
-      "url": "https://www.rba.gov.au/publications/fsr/2026/oct/focus-topic-operational-risk-and-financial-stability.html",
-      "source": "Reserve Bank of Australia",
-      "published_at": "2026-10-20T00:00:00.000Z",
-      "category": "TECH",
-      "impact": "up"
-    },
-    {
-      "title": "Hurricane Trudy nears Mexico",
-      "summary": "Category 2 Hurricane Trudy approached Mexico’s southwestern and west-central Pacific coast, creating near-term risks to evacuations, transport, power, and essential services.",
-      "url": "https://apnews.com/article/13abd259860be97941f0ef0b72990c31",
+      "title": "Haiti gang attack prompts rescue operation",
+      "summary": "Gang gunfire and kidnappings in Haiti prompted El Salvador to launch a military operation to rescue four Salvadoran aviation technicians.",
+      "url": "https://gmg-wkmg-prod.cdn.arcpublishing.com/news/world/2026/10/21/bukele-says-military-operation-launched-to-rescue-salvadorans-held-by-gangs-in-haiti/",
       "source": "Associated Press",
-      "published_at": "2026-10-17T00:00:00.000Z",
+      "published_at": "2026-10-21T00:00:00.000Z",
+      "category": "CIVIL",
+      "impact": "up"
+    },
+    {
+      "title": "Florida hurricane impacts persist",
+      "summary": "Hurricane Isaias left damage, downed power lines, and outages affecting over 400,000 customers in Florida’s Panhandle.",
+      "url": "https://www.flnb.uscourts.gov/orders/ao-26-002",
+      "source": "U.S. Bankruptcy Court, Northern District of Florida",
+      "published_at": "2026-10-09T00:00:00.000Z",
       "category": "NATURAL",
       "impact": "up"
     },
     {
-      "title": "Multistate oyster Salmonella outbreak",
-      "summary": "CDC reports 27 Salmonella cases across 12 states, five hospitalizations, and advises avoiding recalled raw oysters from Virginia’s Little Wicomico River.",
-      "url": "https://www.cdc.gov/salmonella/outbreaks/oysters-10-26/investigation.html",
-      "source": "CDC",
-      "published_at": "2026-10-19T00:00:00.000Z",
-      "category": "FOOD",
+      "title": "Ebola spreads across borders",
+      "summary": "WHO reports 9,704 confirmed Bundibugyo Ebola cases and 4,687 deaths in DRC, with imported cases in Kenya and Nigeria by October 20.",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON622",
+      "source": "WHO",
+      "published_at": "2026-10-23T00:00:00.000Z",
+      "category": "HEALTH",
+      "impact": "up"
+    },
+    {
+      "title": "Winter storm and flood hazards",
+      "summary": "NOAA forecasts high heavy-snow risk and slight excessive-rainfall risk across parts of the United States on October 24, including California and the Four Corners.",
+      "url": "https://www.wpc.ncep.noaa.gov/",
+      "source": "NOAA Weather Prediction Center",
+      "published_at": "2026-10-24T00:00:00.000Z",
+      "category": "NATURAL",
       "impact": "up"
     }
   ],
@@ -703,312 +727,339 @@
       "americas": 88,
       "conflict": 98,
       "momentum": 64
+    },
+    {
+      "date": "2026-10-24",
+      "preparedness": 84,
+      "raw_preparedness": 84,
+      "threat": 88,
+      "impact": 82,
+      "americas": 88,
+      "conflict": 98,
+      "momentum": 71
     }
   ],
   "evidence_quality": {
-    "evidence_count": 14,
-    "fresh_count": 9,
-    "unique_sources": 8,
-    "tier_a_sources": 4,
+    "evidence_count": 15,
+    "fresh_count": 10,
+    "unique_sources": 12,
+    "tier_a_sources": 8,
     "clusters": 5,
-    "domains_covered": 11,
-    "confidence_cap": 75,
+    "domains_covered": 12,
+    "confidence_cap": 88,
     "publishable": true
   },
   "evidence_log": [
     {
       "id": "E1",
-      "title": "Black Sea commercial vessels attacked",
+      "title": "Tanker attacks reported in Hormuz",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/866f21a940311b13abd9425457edf388",
+      "url": "https://apnews.com/article/2abebce2fca2c085e0e0ee717e42cf28",
       "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-10-16T00:00:00.000Z",
-      "age_days": 4,
-      "cluster": "military_energy_shipping",
-      "domains": [
-        "military",
-        "supply_chain",
-        "trade"
-      ],
-      "geography": "Black Sea; Romania and Bulgaria",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "Drone attacks hit at least seven cargo vessels this month, including an oil-and-chemical tanker and a corn carrier, raising NATO escalation concerns.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E2",
-      "title": "Houthi advances threaten Bab el-Mandeb",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/f7d499cb13525df2bc7eb318e0fc1404",
-      "source_domain": "apnews.com",
-      "source_tier": "A",
-      "published_at": "2026-10-18T00:00:00.000Z",
+      "published_at": "2026-10-22T00:00:00.000Z",
       "age_days": 2,
       "cluster": "military_energy_shipping",
       "domains": [
         "military",
         "energy",
-        "trade"
+        "supply_chain"
       ],
-      "geography": "Yemen; Saudi Arabia; Bab el-Mandeb",
-      "evidence_type": "forward",
+      "geography": "Strait of Hormuz and Gulf",
+      "evidence_type": "observed",
       "materiality": "high",
-      "fact": "Egypt agreed to support Saudi Arabia against escalating Houthi attacks near oil infrastructure and the Bab el-Mandeb shipping chokepoint.",
+      "fact": "Iran reported attacks on seven oil tankers, while renewed threats to Hormuz and Bab el-Mandeb endangered regional oil, gas, and fertilizer shipments.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E2",
+      "title": "Seafarers and vessels remain affected",
+      "source": "International Maritime Organization",
+      "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-strait-of-hormuz.aspx",
+      "source_domain": "imo.org",
+      "source_tier": "C",
+      "published_at": "2026-10-22T00:00:00.000Z",
+      "age_days": 2,
+      "cluster": "military_energy_shipping",
+      "domains": [
+        "military",
+        "supply_chain",
+        "critical_infrastructure"
+      ],
+      "geography": "Strait of Hormuz and Middle East",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "The IMO said about 20,000 seafarers, port workers, and offshore crews remain affected, with ships stranded and an evacuation plan paused.",
       "americas_relevant": true
     },
     {
       "id": "E3",
-      "title": "Arctic security and shipping competition",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/799fa8fff89f9c8cbf440fc53b37fc5d",
-      "source_domain": "apnews.com",
+      "title": "Strategic stocks cushion oil shock",
+      "source": "International Energy Agency",
+      "url": "https://www.iea.org/news/iea-governing-board-statement-on-energy-markets-and-security",
+      "source_domain": "iea.org",
       "source_tier": "A",
-      "published_at": "2026-10-20T00:00:00.000Z",
-      "age_days": 0,
+      "published_at": "2026-10-15T00:00:00.000Z",
+      "age_days": 9,
       "cluster": "military_energy_shipping",
       "domains": [
-        "military",
         "energy",
-        "supply_chain",
-        "trade"
+        "supply_chain"
       ],
-      "geography": "Arctic; Europe; Russia",
-      "evidence_type": "forward",
-      "materiality": "medium",
-      "fact": "The EU announced expanded Arctic security and infrastructure plans amid Russian military buildup, emerging shipping routes, and concerns over shadow-fleet oil transport.",
+      "geography": "Global",
+      "evidence_type": "stabilizer",
+      "materiality": "high",
+      "fact": "IEA members had released about 330 million barrels and planned further releases, including more than 20 million barrels of diesel, to ease tight markets.",
       "americas_relevant": true
     },
     {
       "id": "E4",
-      "title": "Russia sanctions paused",
+      "title": "Outbound investment rule proposed",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/e50c561ab805883bb4e484c092d8fadd",
+      "url": "https://apnews.com/article/b742c292ff8eb19e6a4c8cf03d4d66b9",
       "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-10-17T00:00:00.000Z",
-      "age_days": 3,
+      "published_at": "2026-10-22T00:00:00.000Z",
+      "age_days": 2,
+      "cluster": "trade_supply_technology",
+      "domains": [
+        "trade",
+        "technology",
+        "supply_chain"
+      ],
+      "geography": "United States-China",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "U.S. Treasury proposed expanding outbound-investment restrictions covering semiconductors, quantum computing, artificial intelligence, and potentially Russia-related activity.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E5",
+      "title": "Wind imports face security review",
+      "source": "Reuters",
+      "url": "https://www.marketscreener.com/news/trump-says-wind-turbine-imports-threaten-national-security-ce785cdedf81f024",
+      "source_domain": "marketscreener.com",
+      "source_tier": "C",
+      "published_at": "2026-10-22T00:00:00.000Z",
+      "age_days": 2,
       "cluster": "trade_supply_technology",
       "domains": [
         "trade",
         "supply_chain"
       ],
-      "geography": "United States/Russia",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "The White House paused newly enacted Russia sanctions and possible tariffs, delaying restrictions that could affect energy and international trade flows.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E5",
-      "title": "Rare-earth supply remains tight",
-      "source": "Reuters via Investing.com",
-      "url": "https://www.investing.com/news/stock-market-news/china-rare-earth-firms-halt-some-us-shipments-over-geopolitical-worries-sources-say-4888882",
-      "source_domain": "investing.com",
-      "source_tier": "C",
-      "published_at": "2026-09-04T00:00:00.000Z",
-      "age_days": 46,
-      "cluster": "trade_supply_technology",
-      "domains": [
-        "supply_chain",
-        "technology"
-      ],
-      "geography": "China/United States",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "Some Chinese suppliers reportedly halted U.S. rare-earth shipments amid geopolitical concerns, while sensitive materials remained near record prices and supply stayed tight.",
+      "geography": "United States",
+      "evidence_type": "forward",
+      "materiality": "medium",
+      "fact": "President Trump designated wind-turbine imports and components a national-security threat, ordering negotiations and a 180-day review rather than immediate tariffs.",
       "americas_relevant": true
     },
     {
       "id": "E6",
-      "title": "EU-China supply-chain talks",
+      "title": "EU-China trade stabilization",
       "source": "Associated Press",
       "url": "https://apnews.com/article/54c9c71e85f92dc0003780fc53f0b250",
       "source_domain": "apnews.com",
       "source_tier": "A",
       "published_at": "2026-10-09T00:00:00.000Z",
-      "age_days": 11,
+      "age_days": 15,
       "cluster": "trade_supply_technology",
       "domains": [
         "trade",
         "supply_chain",
-        "technology"
+        "critical_infrastructure"
       ],
-      "geography": "European Union/China",
+      "geography": "European Union-China",
       "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "EU and China agreed an initial trade framework reportedly including measures to stabilize rare-earth supply chains and reduce some tariffs.",
+      "fact": "EU and China reached an interim understanding to facilitate rare-earth and permanent-magnet export licensing while lowering selected tariffs on European goods.",
       "americas_relevant": false
     },
     {
       "id": "E7",
-      "title": "RTGS payment disruption",
-      "source": "The Economic Times",
-      "url": "https://economictimes.indiatimes.com/industry/banking/finance/banking/central-bank-of-india-reports-technical-glitch-in-rtgs-outward-system/articleshow/135053338.cms",
-      "source_domain": "economictimes.indiatimes.com",
+      "title": "Cloud outage disrupted bank access",
+      "source": "Reuters",
+      "url": "https://www.investing.com/news/stock-market-news/europes-financial-regulators-query-google-over-cloud-outage-that-hit-banks-4963664",
+      "source_domain": "investing.com",
       "source_tier": "C",
-      "published_at": "2026-10-19T00:00:00.000Z",
+      "published_at": "2026-10-21T00:00:00.000Z",
+      "age_days": 3,
+      "cluster": "cyber_infrastructure_finance",
+      "domains": [
+        "critical_infrastructure",
+        "financial",
+        "technology"
+      ],
+      "geography": "Europe",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "A Google Cloud power event in London left millions of bank customers unable to access key services for hours; Revolut, Lloyds, and HSBC were affected.",
+      "americas_relevant": false
+    },
+    {
+      "id": "E8",
+      "title": "Central bank flags cyber contagion",
+      "source": "Reuters",
+      "url": "https://www.marketscreener.com/news/stock-market-news/bank-of-japan-warns-of-risks-from-ai-market-shock-cyberattacks-ce785cded080fe2c",
+      "source_domain": "marketscreener.com",
+      "source_tier": "C",
+      "published_at": "2026-10-23T00:00:00.000Z",
       "age_days": 1,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
         "financial",
         "technology"
       ],
-      "geography": "India",
-      "evidence_type": "observed",
+      "geography": "Japan",
+      "evidence_type": "forward",
       "materiality": "medium",
-      "fact": "Central Bank of India isolated systems after an RTGS outward-payment glitch affecting October 15–17; it reported no customer financial losses.",
+      "fact": "The Bank of Japan warned cyber incidents could spread across financial institutions, making cybersecurity a macroprudential concern alongside AI-driven market shocks.",
       "americas_relevant": false
     },
     {
-      "id": "E8",
-      "title": "Cyber and liquidity vulnerability",
-      "source": "Reserve Bank of Australia",
-      "url": "https://www.rba.gov.au/publications/fsr/2026/oct/focus-topic-operational-risk-and-financial-stability.html",
-      "source_domain": "rba.gov.au",
-      "source_tier": "C",
-      "published_at": "2026-10-20T00:00:00.000Z",
-      "age_days": 0,
-      "cluster": "cyber_infrastructure_finance",
-      "domains": [
-        "technology",
-        "financial"
-      ],
-      "geography": "Australia / global",
-      "evidence_type": "forward",
-      "materiality": "high",
-      "fact": "The RBA warns cyber or third-party outages could block payments, erode confidence, trigger liquidity shortfalls, and force asset sales.",
-      "americas_relevant": true
-    },
-    {
       "id": "E9",
-      "title": "Financial-system stabilizer",
-      "source": "Bank of England",
-      "url": "https://www.bankofengland.co.uk/news/2026/october/cmorg-holds-sector-wide-cloud-outage-simulation-exercise",
-      "source_domain": "bankofengland.co.uk",
-      "source_tier": "C",
-      "published_at": "2026-10-08T00:00:00.000Z",
-      "age_days": 12,
+      "title": "IMF sees resilience, but vulnerabilities",
+      "source": "IMF",
+      "url": "https://www.imf.org/en/blogs/articles/2026/10/12/global-financial-markets-face-rising-risks-from-ai-bond-yields-and-cyberattacks",
+      "source_domain": "imf.org",
+      "source_tier": "A",
+      "published_at": "2026-10-13T00:00:00.000Z",
+      "age_days": 11,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
-        "technology",
         "financial"
       ],
-      "geography": "United Kingdom",
+      "geography": "Global",
       "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "UK authorities and 38 major financial firms completed a sector-wide cloud-outage simulation to strengthen coordinated response to systemic operational disruption.",
+      "fact": "The IMF said markets remained resilient and banks broadly robust, but cyberattacks, higher sovereign yields, and AI-related correction risks could amplify financial stress.",
       "americas_relevant": true
     },
     {
       "id": "E10",
-      "title": "Hurricane Trudy nears Mexico",
+      "title": "Haiti gang attack prompts rescue operation",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/13abd259860be97941f0ef0b72990c31",
-      "source_domain": "apnews.com",
-      "source_tier": "A",
-      "published_at": "2026-10-17T00:00:00.000Z",
+      "url": "https://gmg-wkmg-prod.cdn.arcpublishing.com/news/world/2026/10/21/bukele-says-military-operation-launched-to-rescue-salvadorans-held-by-gangs-in-haiti/",
+      "source_domain": "gmg-wkmg-prod.cdn.arcpublishing.com",
+      "source_tier": "C",
+      "published_at": "2026-10-21T00:00:00.000Z",
       "age_days": 3,
+      "cluster": "americas_civil",
+      "domains": [
+        "civil_unrest",
+        "domestic"
+      ],
+      "geography": "Haiti",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "Gang gunfire and kidnappings in Haiti prompted El Salvador to launch a military operation to rescue four Salvadoran aviation technicians.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E11",
+      "title": "Florida hurricane impacts persist",
+      "source": "U.S. Bankruptcy Court, Northern District of Florida",
+      "url": "https://www.flnb.uscourts.gov/orders/ao-26-002",
+      "source_domain": "flnb.uscourts.gov",
+      "source_tier": "A",
+      "published_at": "2026-10-09T00:00:00.000Z",
+      "age_days": 15,
       "cluster": "americas_civil",
       "domains": [
         "natural",
         "critical_infrastructure",
         "domestic"
       ],
-      "geography": "Mexico",
+      "geography": "United States—Florida Panhandle",
       "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "Category 2 Hurricane Trudy approached Mexico’s southwestern and west-central Pacific coast, creating near-term risks to evacuations, transport, power, and essential services.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E11",
-      "title": "U.S. hurricane health emergency support",
-      "source": "Centers for Medicare & Medicaid Services",
-      "url": "https://www.cms.gov/newsroom/news-alert/cms-announces-resources-flexibilities-assist-public-health-emergency-alabama-florida",
-      "source_domain": "cms.gov",
-      "source_tier": "A",
-      "published_at": "2026-10-15T00:00:00.000Z",
-      "age_days": 5,
-      "cluster": "americas_civil",
-      "domains": [
-        "public_health",
-        "domestic",
-        "critical_infrastructure"
-      ],
-      "geography": "United States",
-      "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "CMS activated healthcare flexibilities for Alabama and Florida after Hurricane Isaias, supporting continued hospital operations and access to care in affected areas.",
+      "fact": "Hurricane Isaias left damage, downed power lines, and outages affecting over 400,000 customers in Florida’s Panhandle.",
       "americas_relevant": true
     },
     {
       "id": "E12",
-      "title": "Federal health emergency response",
-      "source": "Administration for Strategic Preparedness and Response",
-      "url": "https://akaprod-www.aspr.gov/readiness-response/responses/responds-hurricane-isaias",
-      "source_domain": "akaprod-www.aspr.gov",
+      "title": "Transport relief supports recovery",
+      "source": "Federal Motor Carrier Safety Administration",
+      "url": "https://www.fmcsa.dot.gov/emergency-declarations",
+      "source_domain": "fmcsa.dot.gov",
       "source_tier": "A",
-      "published_at": "2026-10-13T00:00:00.000Z",
-      "age_days": 7,
+      "published_at": "2026-10-11T00:00:00.000Z",
+      "age_days": 13,
       "cluster": "americas_civil",
       "domains": [
-        "public_health",
-        "domestic"
+        "supply_chain",
+        "critical_infrastructure"
       ],
       "geography": "United States",
       "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "HHS declared a public health emergency for Florida and Alabama and deployed response support following continuing impacts from Hurricane Isaias.",
+      "materiality": "low",
+      "fact": "Federal emergency transport waivers remained available for disaster-area supply deliveries, supporting recovery after U.S. storm impacts.",
       "americas_relevant": true
     },
     {
       "id": "E13",
-      "title": "Multistate oyster Salmonella outbreak",
+      "title": "Ebola spreads across borders",
+      "source": "WHO",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON622",
+      "source_domain": "who.int",
+      "source_tier": "A",
+      "published_at": "2026-10-23T00:00:00.000Z",
+      "age_days": 1,
+      "cluster": "food_health_natural",
+      "domains": [
+        "public_health"
+      ],
+      "geography": "Democratic Republic of the Congo, Kenya, Nigeria",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "WHO reports 9,704 confirmed Bundibugyo Ebola cases and 4,687 deaths in DRC, with imported cases in Kenya and Nigeria by October 20.",
+      "americas_relevant": false
+    },
+    {
+      "id": "E14",
+      "title": "Winter storm and flood hazards",
+      "source": "NOAA Weather Prediction Center",
+      "url": "https://www.wpc.ncep.noaa.gov/",
+      "source_domain": "wpc.ncep.noaa.gov",
+      "source_tier": "A",
+      "published_at": "2026-10-24T00:00:00.000Z",
+      "age_days": 0,
+      "cluster": "food_health_natural",
+      "domains": [
+        "natural"
+      ],
+      "geography": "United States",
+      "evidence_type": "forward",
+      "materiality": "medium",
+      "fact": "NOAA forecasts high heavy-snow risk and slight excessive-rainfall risk across parts of the United States on October 24, including California and the Four Corners.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E15",
+      "title": "Foodborne outbreak monitoring",
       "source": "CDC",
-      "url": "https://www.cdc.gov/salmonella/outbreaks/oysters-10-26/investigation.html",
+      "url": "https://www.cdc.gov/foodborne-outbreaks/outbreaks/",
       "source_domain": "cdc.gov",
       "source_tier": "A",
-      "published_at": "2026-10-19T00:00:00.000Z",
-      "age_days": 1,
+      "published_at": "2026-10-21T00:00:00.000Z",
+      "age_days": 3,
       "cluster": "food_health_natural",
       "domains": [
         "food",
         "public_health"
       ],
       "geography": "United States",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "CDC reports 27 Salmonella cases across 12 states, five hospitalizations, and advises avoiding recalled raw oysters from Virginia’s Little Wicomico River.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E14",
-      "title": "U.S. influenza remains low",
-      "source": "CDC",
-      "url": "https://www.cdc.gov/fluview/surveillance/2026-week-40.html",
-      "source_domain": "cdc.gov",
-      "source_tier": "A",
-      "published_at": "2026-10-16T00:00:00.000Z",
-      "age_days": 4,
-      "cluster": "food_health_natural",
-      "domains": [
-        "public_health"
-      ],
-      "geography": "United States",
       "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "Seasonal influenza activity is increasing but remains low nationally; CDC reported no new confirmed human novel-influenza infections as of October 14.",
+      "fact": "CDC’s latest monitoring lists 29 active multistate foodborne investigations, including 18 Salmonella, 7 E. coli, 3 Listeria, and 1 Campylobacter investigation.",
       "americas_relevant": true
     }
   ],
   "api_usage": {
     "research_model": "gpt-5.6-luna",
     "assessment_model": "gpt-5.6-terra",
-    "web_search_calls": 5,
-    "estimated_run_cost_usd": 0.087448,
-    "estimated_period_spend_usd": 3.974244,
+    "web_search_calls": 7,
+    "estimated_run_cost_usd": 0.110406,
+    "estimated_period_spend_usd": 4.326574,
     "allocated_90_day_budget_usd": 10,
     "operational_stop_usd": 9
   },
