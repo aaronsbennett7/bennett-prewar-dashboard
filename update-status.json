@@ -1,23 +1,15 @@
 {
   "schema_version": 1,
   "engine_version": "5.3",
-  "date": "2026-10-25",
-  "status": "VERIFIED",
-  "started_at": "2026-10-25T14:56:37.354Z",
-  "completed_at": "2026-10-25T14:59:53.778Z",
-  "message": "Published verified v5 assessment: 84 HIGH ALERT.",
-  "research_quality": {
-    "evidence_count": 13,
-    "fresh_count": 8,
-    "unique_sources": 11,
-    "tier_a_sources": 5,
-    "clusters": 5,
-    "domains_covered": 11,
-    "confidence_cap": 75,
-    "publishable": true
-  },
-  "web_search_calls": 5,
-  "estimated_run_cost_usd": 0.087973,
-  "estimated_period_spend_usd": 4.414547,
+  "date": "2026-10-26",
+  "status": "STALE",
+  "started_at": "2026-10-26T17:20:46.266Z",
+  "completed_at": "2026-10-26T17:22:50.379Z",
+  "message": "Research quality gate failed: {\"evidence_count\":14,\"fresh_count\":6,\"unique_sources\":11,\"tier_a_sources\":6,\"clusters\":5,\"domains_covered\":12,\"confidence_cap\":45,\"publishable\":false}",
+  "dashboard_preserved": true,
+  "last_verified_update": "2026-10-25T14:59:53.777Z",
+  "web_search_calls": 7,
+  "estimated_partial_run_cost_usd": 0.088133,
+  "estimated_period_spend_usd": 4.50268,
   "operational_stop_usd": 9
 }
