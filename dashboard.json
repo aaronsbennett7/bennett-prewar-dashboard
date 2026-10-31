@@ -2,9 +2,9 @@
   "schema_version": 5,
   "engine_version": "5.3",
   "data_status": "VERIFIED",
-  "as_of": "2026-10-25",
-  "updated_at": "2026-10-25T14:59:53.777Z",
-  "last_successful_update": "2026-10-25T14:59:53.777Z",
+  "as_of": "2026-10-31",
+  "updated_at": "2026-10-31T16:07:21.772Z",
+  "last_successful_update": "2026-10-31T16:07:21.772Z",
   "preparedness_urgency": 84,
   "raw_preparedness_urgency": 84,
   "preparedness_stage": "HIGH ALERT",
@@ -13,7 +13,7 @@
   "observed_civilian_disruption": 83,
   "americas_exposure": 88,
   "americas_stage": "SEVERE",
-  "americas_summary": "The Americas face direct fuel-price, freight, trade, and supply-chain exposure, alongside localized flood impacts in Colorado and regional security spillover from Haiti. Evidence does not establish an Americas-wide infrastructure, banking, food, or health access failure.",
+  "americas_summary": "Americas exposure is high through oil and shipping markets and through active flood impacts in Mexico, Haiti, the Dominican Republic, and Jamaica. A possible Los Angeles–Long Beach strike is a near-term domestic logistics risk, not yet an active closure.",
   "americas_components": [
     {
       "name": "Energy security",
@@ -42,25 +42,23 @@
     },
     {
       "name": "Global trade fragmentation",
-      "score": 89,
+      "score": 90,
       "trend": "rising"
     }
   ],
   "conflict_escalation": 98,
-  "coupling_score": 72,
+  "coupling_score": 78,
   "momentum_score": 73,
   "confidence_score": 75,
   "confidence_level": "MODERATE",
-  "confidence_rationale": "Fresh, multi-source reporting supports energy, shipping, trade, flooding, and Haiti assessments; several high-severity maritime claims remain unconfirmed, and some cyber/payment evidence is indirect or non-Americas-specific. Evidence gate: 13 items, 11 sources, 5 Tier-A sources, 5/5 clusters.",
+  "confidence_rationale": "Fresh, high-materiality reporting from AP and multiple institutional sources supports the core assessment; several Americas disaster details are from lower-tier sources, and key escalation risks remain forward-looking. Evidence gate: 12 items, 9 sources, 6 Tier-A sources, 5/5 clusters.",
   "preparedness_window": "Days to weeks",
-  "summary": "Severe energy and shipping stress remains the main civilian-disruption risk, moderated by continued protected tanker transits and bypass capacity. Colorado flooding is an active U.S. disruption; no verified systemic financial or payments outage is evidenced.",
-  "primary_driver": "Middle East maritime insecurity driving oil-price and shipping-cost pressure amid partial Hormuz mitigation.",
+  "summary": "Severe, ongoing disruption risk is concentrated in Middle East energy/shipping and active flood emergencies in parts of the Americas. No evidence establishes a Hormuz closure, U.S. port closure, or Americas-wide essential-service failure.",
+  "primary_driver": "Reported tanker mine strikes and fires in the Strait of Hormuz, compounded by threats of broader regional retaliation.",
   "primary_stabilizers": [
-    "Some tanker operators continued night transits through a U.S.-protected lane, while Saudi Arabia tripled oil flows through a pipeline bypassing Hormuz.",
-    "The United States identified imported wind-turbine components as a security concern but directed negotiations rather than imposing new tariffs immediately.",
-    "China’s expanded rare-earth and critical-mineral export controls remain suspended through November 10, 2026, providing temporary supply-chain relief.",
-    "The IMF says global financial markets and banks remain broadly resilient, despite elevated cyber, sovereign-yield, leverage, and liquidity risks.",
-    "USGS reported California volcanoes at normal background levels, while Kīlauea activity remained confined largely within a closed park area."
+    "The IMF says financial markets remain resilient and global banks broadly robust, despite elevated cyber, sovereign-yield, leverage, and liquidity risks.",
+    "CDC reported the 2026 iceberg-lettuce Cyclospora outbreak ended, with contaminated products no longer available and infections sharply declining.",
+    "The single search produced no authoritative report of a new food, outbreak, fertilizer, or major natural-hazard disruption during October 28–31, 2026."
   ],
   "domains": [
     {
@@ -69,7 +67,7 @@
       "impact": 97,
       "americas_exposure": 98,
       "trend": "rising",
-      "rationale": "Oil prices and shipping costs rose amid Hormuz attacks; protected transits and Saudi bypass flows partly mitigate risk.",
+      "rationale": "Reported tanker mine strikes and fires in Hormuz create immediate oil-shipping disruption risk.",
       "name": "Energy security",
       "weight": 11
     },
@@ -79,7 +77,7 @@
       "impact": 97,
       "americas_exposure": 86,
       "trend": "rising",
-      "rationale": "Reported tanker damage and continuing attacks sustain a high maritime-security risk, though tanker claims lack independent confirmation.",
+      "rationale": "Tanker attacks and stated threat of geographically unlimited retaliation sustain acute escalation risk.",
       "name": "Military / geopolitical",
       "weight": 10
     },
@@ -89,17 +87,17 @@
       "impact": 96,
       "americas_exposure": 97,
       "trend": "rising",
-      "rationale": "Maritime insecurity and rising shipping costs continue to threaten global freight; partial Hormuz routing mitigation persists.",
+      "rationale": "Hormuz tanker incidents and possible LA–Long Beach strike create maritime logistics risk.",
       "name": "Supply chain & transportation",
       "weight": 10
     },
     {
       "key": "trade",
-      "threat": 84,
+      "threat": 85,
       "impact": 80,
-      "americas_exposure": 89,
+      "americas_exposure": 90,
       "trend": "rising",
-      "rationale": "New U.S. authority for tariffs on major Russian-energy buyers adds direct trade disruption risk.",
+      "rationale": "Shipping insecurity, rising transpacific rates, and prospective semiconductor tariffs pressure trade flows.",
       "name": "Global trade fragmentation",
       "weight": 10
     },
@@ -109,7 +107,7 @@
       "impact": 75,
       "americas_exposure": 83,
       "trend": "stable",
-      "rationale": "Payment-provider outage risk remains elevated, while rare-earth restrictions remain temporarily suspended.",
+      "rationale": "Systemic cyber risk persists; semiconductor tariff action is scheduled well beyond the near term.",
       "name": "Technology chokepoints",
       "weight": 7
     },
@@ -119,7 +117,7 @@
       "impact": 88,
       "americas_exposure": 94,
       "trend": "rising",
-      "rationale": "Colorado flooding is causing continuing civilian and infrastructure impacts; payment-outage risk remains forward-looking.",
+      "rationale": "Flooding has isolated communities and disabled water systems in Caribbean locations.",
       "name": "Critical infrastructure / cyber",
       "weight": 11
     },
@@ -129,27 +127,27 @@
       "impact": 76,
       "americas_exposure": 89,
       "trend": "stable",
-      "rationale": "Markets and banks are broadly resilient; India’s limited RTGS glitch was resolved without reported customer losses.",
+      "rationale": "Euro-area funding conditions worsened, but IMF assesses banks and markets as broadly resilient.",
       "name": "Financial-system stress",
       "weight": 10
     },
     {
       "key": "food",
       "threat": 84,
-      "impact": 64,
+      "impact": 63,
       "americas_exposure": 84,
       "trend": "stable",
-      "rationale": "Afghan fertilizer-price pressure is a forward food-security risk, without evidence of Americas food-access disruption.",
+      "rationale": "No new qualifying food disruption is evidenced; the U.S. Cyclospora outbreak has ended.",
       "name": "Food & agriculture",
       "weight": 8
     },
     {
       "key": "domestic",
       "threat": 82,
-      "impact": 80,
+      "impact": 81,
       "americas_exposure": 89,
       "trend": "rising",
-      "rationale": "Colorado’s expanded flood emergency shows continuing localized U.S. civilian disruption; Haiti insecurity adds regional concern.",
+      "rationale": "Flood emergencies have caused evacuations, sheltering, isolation, injuries, and deaths in the Americas.",
       "name": "Domestic institutional stress",
       "weight": 6
     },
@@ -159,7 +157,7 @@
       "impact": 54,
       "americas_exposure": 66,
       "trend": "rising",
-      "rationale": "Haitian gang violence includes attacks and kidnappings, representing an active regional public-safety threat.",
+      "rationale": "No fresh evidence of material civil-unrest disruption; potential labor action remains prospective.",
       "name": "Civil unrest / public order",
       "weight": 7
     },
@@ -169,7 +167,7 @@
       "impact": 70,
       "americas_exposure": 72,
       "trend": "stable",
-      "rationale": "No fresh evidence establishes a material public-health service disruption or outbreak.",
+      "rationale": "Flood response and sheltering elevate localized health needs, while the cited U.S. outbreak is resolved.",
       "name": "Public health / biological",
       "weight": 5
     },
@@ -179,7 +177,7 @@
       "impact": 97,
       "americas_exposure": 98,
       "trend": "rising",
-      "rationale": "Flood emergency expansion across 12 Colorado counties indicates active impacts; U.S. volcanic activity is largely stable.",
+      "rationale": "Active flooding across Mexico and Caribbean locations has caused displacement, isolation, casualties, and service disruption.",
       "name": "Natural / environmental",
       "weight": 5
     }
@@ -199,7 +197,7 @@
   "score_components": {
     "global_threat_pressure": 88,
     "observed_civilian_disruption": 83,
-    "coupling": 72,
+    "coupling": 78,
     "momentum": 73,
     "americas_exposure": 88
   },
@@ -231,108 +229,108 @@
     },
     {
       "name": "Global trade fragmentation",
-      "severity": "high",
+      "severity": "critical",
       "note": ""
     }
   ],
   "areas_to_watch": [
     {
-      "name": "Hormuz and Gulf shipping",
+      "name": "Strait of Hormuz and regional energy shipping",
       "severity": "critical",
-      "why": "Tanker incidents, higher oil prices, and elevated shipping costs could further constrain energy and freight flows."
+      "why": "Reported tanker mine strikes and fires could further impair oil transport and energy markets."
     },
     {
-      "name": "Colorado flooding",
+      "name": "Los Angeles–Long Beach port complex",
       "severity": "high",
-      "why": "The emergency now covers 12 southwestern counties, indicating continuing localized civilian and infrastructure impacts."
+      "why": "Authorized strike action could begin November 1, risking cargo and transport disruption."
     },
     {
-      "name": "Payments and critical service concentration",
-      "severity": "medium",
-      "why": "A provider or cyber outage could propagate through payments and liquidity, but no systemic Americas incident is evidenced."
-    },
-    {
-      "name": "Haiti security",
+      "name": "Flood-affected Mexico and Caribbean communities",
       "severity": "high",
-      "why": "Gang attacks and kidnappings are sustaining regional safety and operational risks."
+      "why": "Evacuations, isolation, shelters, and water-system outages require continuing response."
     },
     {
-      "name": "Trade measures and critical minerals",
+      "name": "Financial and payment-system cyber resilience",
       "severity": "medium",
-      "why": "New tariff authority raises risk, though suspended rare-earth controls provide temporary relief through November 10."
+      "why": "IMF identifies potentially systemic disruption from a major cyberattack despite current market resilience."
+    },
+    {
+      "name": "Euro-area bank funding conditions",
+      "severity": "medium",
+      "why": "Banks reported worsening funding access and anticipate further deterioration."
     }
   ],
   "signals": [
     {
-      "title": "Tankers damaged in Hormuz",
-      "summary": "Iran reported seven oil tankers damaged or burning in the Strait of Hormuz, while AP said the claims were not independently confirmed.",
-      "url": "https://apnews.com/article/2abebce2fca2c085e0e0ee717e42cf28",
+      "title": "Tankers reportedly strike mines",
+      "summary": "Iran reported four oil tankers struck mines and caught fire in the Strait of Hormuz, while Houthi forces reportedly attacked Aden with ballistic missiles.",
+      "url": "https://apnews.com/article/7f7f34ceb62f294a450e48ace0bd56e0",
       "source": "Associated Press",
-      "published_at": "2026-10-22T00:00:00.000Z",
+      "published_at": "2026-10-30T00:00:00.000Z",
       "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Oil prices and shipping costs rise",
-      "summary": "Brent reached its highest level since April as Houthi attacks and an UAE oil spill intensified concern over Middle Eastern supply disruption.",
-      "url": "https://uk.marketscreener.com/news/commodities-news/brent-crude-hits-more-than-five-month-high-on-concern-over-middle-east-escalation-ce785dded18bf321",
-      "source": "Reuters via MarketScreener; IEA",
-      "published_at": "2026-10-23T00:00:00.000Z",
-      "category": "ENERGY",
+      "title": "Iran threatens immediate response",
+      "summary": "Iran’s supreme leader threatened an immediate, geographically unlimited response to potential U.S. or Israeli attacks, raising risks to regional shipping and energy infrastructure.",
+      "url": "https://apnews.com/article/15c0556b92c8c23beb9b8854b4c124f4",
+      "source": "Associated Press",
+      "published_at": "2026-10-31T00:00:00.000Z",
+      "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Russia-oil buyer tariff threat",
-      "summary": "The United States authorized additional 100% tariffs on goods from the five largest buyers of Russian crude oil or natural gas.",
-      "url": "https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/",
-      "source": "The White House",
-      "published_at": "2026-10-18T00:00:00.000Z",
-      "category": "TRADE",
+      "title": "West Coast strike risk",
+      "summary": "A Los Angeles–Long Beach security union authorized a strike potentially beginning November 1, while transpacific container rates rose 3–9%.",
+      "url": "https://www.freightos.com/freight-resources/union-approves-la-long-beach-port-strike-container-rates-still-under-pressure-october-28-2026-update/",
+      "source": "Freightos",
+      "published_at": "2026-10-28T00:00:00.000Z",
+      "category": "SUPPLY",
       "impact": "up"
     },
     {
-      "title": "Cyber-payment contagion risk",
-      "summary": "The RBA warns a cyber or provider outage interrupting bank payments could create liquidity pressure, confidence loss, and forced asset sales.",
-      "url": "https://www.rba.gov.au/publications/fsr/2026/oct/focus-topic-operational-risk-and-financial-stability.html",
-      "source": "Reserve Bank of Australia",
-      "published_at": "2026-10-25T00:00:00.000Z",
+      "title": "Cyber risk is systemic",
+      "summary": "The IMF warns a major cyberattack on a financial institution, payment system, cloud provider, or software platform could disrupt payments, trading, deposits, or critical services.",
+      "url": "https://www.imf.org/en/blogs/articles/2026/10/12/global-financial-markets-face-rising-risks-from-ai-bond-yields-and-cyberattacks",
+      "source": "IMF Blog",
+      "published_at": "2026-10-13T00:00:00.000Z",
       "category": "TECH",
       "impact": "up"
     },
     {
-      "title": "Recent payment-system glitch",
-      "summary": "Central Bank of India isolated an RTGS outward-payment glitch affecting October 15–17; it reported no customer financial loss and no confirmed cyber cause.",
-      "url": "https://economictimes.indiatimes.com/industry/banking/finance/banking/central-bank-of-india-reports-technical-glitch-in-rtgs-outward-system/articleshow/135053338.cms",
-      "source": "The Economic Times",
-      "published_at": "2026-10-19T00:00:00.000Z",
+      "title": "Bank funding access deteriorates",
+      "summary": "Euro-area banks reported worsening access to retail funding, debt securities, and money markets in Q3, while anticipating further deterioration in Q4.",
+      "url": "https://www.ecb.europa.eu/stats/ecb_surveys/bank_lending_survey/html/ecb.blssurvey2026q3~c6a731e213.bg.html",
+      "source": "European Central Bank Bank Lending Survey",
+      "published_at": "2026-10-27T00:00:00.000Z",
       "category": "FINANCE",
       "impact": "up"
     },
     {
-      "title": "Haiti gangs attack international force",
-      "summary": "Gangs attacked an armored vehicle near Port-au-Prince, kidnapped four Salvadoran technicians, and prompted El Salvador to launch a military rescue operation.",
-      "url": "https://ny1.com/nyc/all-boroughs/ap-top-news/2026/10/21/el-salvadors-bukele-announces-military-operation-to-rescue-hostages-held-by-gangs-in-haiti",
-      "source": "Associated Press",
-      "published_at": "2026-10-21T00:00:00.000Z",
+      "title": "Mexico floods",
+      "summary": "Flooding affected 109 municipalities; evacuations exceeded 13,800 people, while 19 localities remained isolated and 108 shelters housed 4,351 people.",
+      "url": "https://www.paho.org/es/monitoreo-amenazas-naturales/monitoreo-amenazas-naturales-27-octubre-2026",
+      "source": "PAHO/WHO",
+      "published_at": "2026-10-27T00:00:00.000Z",
       "category": "CIVIL",
       "impact": "up"
     },
     {
-      "title": "Colorado flood emergency expanded",
-      "summary": "Colorado expanded its flood disaster emergency to 12 southwestern counties, indicating continuing material civilian and infrastructure impacts.",
-      "url": "https://ftp.cpc.ncep.noaa.gov/fews/DroughtMonitor/hazard_news/index.html",
-      "source": "NOAA hazard tracker citing Colorado government reporting",
-      "published_at": "2026-10-24T00:00:00.000Z",
-      "category": "NATURAL",
+      "title": "Haiti heavy rains",
+      "summary": "Heavy rainfall left at least eight dead, 40 injured, five missing, and 11,884 families affected, with shelters and emergency response activated.",
+      "url": "https://www.paho.org/en/health-emergencies/natural-hazards-monitoring?page=0",
+      "source": "PAHO/WHO",
+      "published_at": "2026-10-29T00:00:00.000Z",
+      "category": "CIVIL",
       "impact": "up"
     },
     {
-      "title": "Afghanistan fertilizer-price risk",
-      "summary": "FAO reported rising fertilizer prices threaten Afghanistan’s 2027 wheat harvest as farmers prepare for planting.",
-      "url": "https://www.fao.org/emergencies/resources-repository/news/detail/en",
-      "source": "Food and Agriculture Organization",
-      "published_at": "2026-10-22T00:00:00.000Z",
-      "category": "FOOD",
+      "title": "Regional flood continuity",
+      "summary": "Recent rains affected 2,670 people in the Dominican Republic, flooded 534 homes, cut off 32 communities, and disabled 28 water systems.",
+      "url": "https://humara.org/report/345b23a0-66da-4b4b-b032-5da3d94b7149",
+      "source": "Humara",
+      "published_at": "2026-10-30T00:00:00.000Z",
+      "category": "CYBER",
       "impact": "up"
     }
   ],
@@ -723,13 +721,23 @@
       "americas": 88,
       "conflict": 98,
       "momentum": 73
+    },
+    {
+      "date": "2026-10-31",
+      "preparedness": 84,
+      "raw_preparedness": 84,
+      "threat": 88,
+      "impact": 83,
+      "americas": 88,
+      "conflict": 98,
+      "momentum": 73
     }
   ],
   "evidence_quality": {
-    "evidence_count": 13,
+    "evidence_count": 12,
     "fresh_count": 8,
-    "unique_sources": 11,
-    "tier_a_sources": 5,
+    "unique_sources": 9,
+    "tier_a_sources": 6,
     "clusters": 5,
     "domains_covered": 11,
     "confidence_cap": 75,
@@ -738,13 +746,13 @@
   "evidence_log": [
     {
       "id": "E1",
-      "title": "Tankers damaged in Hormuz",
+      "title": "Tankers reportedly strike mines",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/2abebce2fca2c085e0e0ee717e42cf28",
+      "url": "https://apnews.com/article/7f7f34ceb62f294a450e48ace0bd56e0",
       "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-10-22T00:00:00.000Z",
-      "age_days": 3,
+      "published_at": "2026-10-30T00:00:00.000Z",
+      "age_days": 1,
       "cluster": "military_energy_shipping",
       "domains": [
         "military",
@@ -754,263 +762,241 @@
       "geography": "Strait of Hormuz",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "Iran reported seven oil tankers damaged or burning in the Strait of Hormuz, while AP said the claims were not independently confirmed.",
+      "fact": "Iran reported four oil tankers struck mines and caught fire in the Strait of Hormuz, while Houthi forces reportedly attacked Aden with ballistic missiles.",
       "americas_relevant": true
     },
     {
       "id": "E2",
-      "title": "Oil prices and shipping costs rise",
-      "source": "Reuters via MarketScreener; IEA",
-      "url": "https://uk.marketscreener.com/news/commodities-news/brent-crude-hits-more-than-five-month-high-on-concern-over-middle-east-escalation-ce785dded18bf321",
-      "source_domain": "uk.marketscreener.com",
-      "source_tier": "C",
-      "published_at": "2026-10-23T00:00:00.000Z",
-      "age_days": 2,
-      "cluster": "military_energy_shipping",
-      "domains": [
-        "energy",
-        "military",
-        "trade"
-      ],
-      "geography": "Middle East and global markets",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "Brent reached its highest level since April as Houthi attacks and an UAE oil spill intensified concern over Middle Eastern supply disruption.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E3",
-      "title": "Partial shipping mitigation",
+      "title": "Iran threatens immediate response",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/dde5b98a8bf961224514994b02babce9",
+      "url": "https://apnews.com/article/15c0556b92c8c23beb9b8854b4c124f4",
       "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-10-22T00:00:00.000Z",
-      "age_days": 3,
+      "published_at": "2026-10-31T00:00:00.000Z",
+      "age_days": 0,
       "cluster": "military_energy_shipping",
       "domains": [
-        "energy",
         "military",
-        "supply_chain"
+        "energy",
+        "trade"
       ],
-      "geography": "Strait of Hormuz and Gulf of Oman",
-      "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "Some tanker operators continued night transits through a U.S.-protected lane, while Saudi Arabia tripled oil flows through a pipeline bypassing Hormuz.",
+      "geography": "Middle East",
+      "evidence_type": "forward",
+      "materiality": "high",
+      "fact": "Iran’s supreme leader threatened an immediate, geographically unlimited response to potential U.S. or Israeli attacks, raising risks to regional shipping and energy infrastructure.",
       "americas_relevant": true
     },
     {
       "id": "E4",
-      "title": "Russia-oil buyer tariff threat",
-      "source": "The White House",
-      "url": "https://www.whitehouse.gov/presidential-actions/2026/10/implementing-the-lindsey-o-graham-sanctioning-russia-and-iran-act-of-2026/",
-      "source_domain": "whitehouse.gov",
-      "source_tier": "A",
-      "published_at": "2026-10-18T00:00:00.000Z",
-      "age_days": 7,
-      "cluster": "trade_supply_technology",
-      "domains": [
-        "trade",
-        "supply_chain",
-        "energy"
-      ],
-      "geography": "United States; Russia; major Russian-energy buyers",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "The United States authorized additional 100% tariffs on goods from the five largest buyers of Russian crude oil or natural gas.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E5",
-      "title": "Wind-component trade measure",
-      "source": "The White House",
-      "url": "https://www.whitehouse.gov/presidential-actions/2026/10/adjusting-imports-of-wind-turbines-and-their-parts-and-components-into-the-united-states/",
-      "source_domain": "whitehouse.gov",
-      "source_tier": "A",
-      "published_at": "2026-10-22T00:00:00.000Z",
+      "title": "West Coast strike risk",
+      "source": "Freightos",
+      "url": "https://www.freightos.com/freight-resources/union-approves-la-long-beach-port-strike-container-rates-still-under-pressure-october-28-2026-update/",
+      "source_domain": "freightos.com",
+      "source_tier": "C",
+      "published_at": "2026-10-28T00:00:00.000Z",
       "age_days": 3,
       "cluster": "trade_supply_technology",
       "domains": [
-        "trade",
         "supply_chain",
-        "technology"
+        "trade"
       ],
-      "geography": "United States; foreign wind-equipment suppliers",
-      "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "The United States identified imported wind-turbine components as a security concern but directed negotiations rather than imposing new tariffs immediately.",
+      "geography": "United States",
+      "evidence_type": "forward",
+      "materiality": "high",
+      "fact": "A Los Angeles–Long Beach security union authorized a strike potentially beginning November 1, while transpacific container rates rose 3–9%.",
       "americas_relevant": true
     },
     {
       "id": "E6",
-      "title": "Rare-earth restrictions remain suspended",
-      "source": "Hogan Lovells",
-      "url": "https://pdf.hoganlovells.com/en/publications/trumpxi-meeting-calmed-uschina-trade-tensions-with-initial-agreements",
-      "source_domain": "pdf.hoganlovells.com",
-      "source_tier": "C",
-      "published_at": null,
-      "age_days": 999,
+      "title": "Semiconductor tariff pathway",
+      "source": "U.S. Trade Representative",
+      "url": "https://ustr.gov/sites/default/files/files/Press/Releases/2026/National%20Trade%20Estimate%20Report%202026.pdf",
+      "source_domain": "ustr.gov",
+      "source_tier": "A",
+      "published_at": "2026-10-31T00:00:00.000Z",
+      "age_days": 0,
       "cluster": "trade_supply_technology",
       "domains": [
         "trade",
-        "supply_chain",
-        "technology"
+        "technology",
+        "supply_chain"
       ],
-      "geography": "China; United States; global manufacturers",
-      "evidence_type": "stabilizer",
+      "geography": "United States–China",
+      "evidence_type": "forward",
       "materiality": "high",
-      "fact": "China’s expanded rare-earth and critical-mineral export controls remain suspended through November 10, 2026, providing temporary supply-chain relief.",
+      "fact": "USTR set an initial zero tariff on Chinese semiconductors, with an additional tariff scheduled for June 23, 2027, above an existing 50% duty.",
       "americas_relevant": true
     },
     {
       "id": "E7",
-      "title": "No verified systemic incident found",
-      "source": "Search review",
-      "url": "https://www.imf.org/en/Publications/GFSR/Issues/2026/10/13/Global-Financial-Stability-Report-October-2026",
+      "title": "Financial markets remain resilient",
+      "source": "IMF Global Financial Stability Report, October 2026",
+      "url": "https://www.elibrary.imf.org/display/book/9798229055673/9798229055673.xml",
+      "source_domain": "elibrary.imf.org",
+      "source_tier": "A",
+      "published_at": "2026-10-13T00:00:00.000Z",
+      "age_days": 18,
+      "cluster": "cyber_infrastructure_finance",
+      "domains": [
+        "financial",
+        "technology"
+      ],
+      "geography": "Global",
+      "evidence_type": "stabilizer",
+      "materiality": "high",
+      "fact": "The IMF says financial markets remain resilient and global banks broadly robust, despite elevated cyber, sovereign-yield, leverage, and liquidity risks.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E8",
+      "title": "Cyber risk is systemic",
+      "source": "IMF Blog",
+      "url": "https://www.imf.org/en/blogs/articles/2026/10/12/global-financial-markets-face-rising-risks-from-ai-bond-yields-and-cyberattacks",
       "source_domain": "imf.org",
       "source_tier": "A",
       "published_at": "2026-10-13T00:00:00.000Z",
-      "age_days": 12,
+      "age_days": 18,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
         "technology",
         "financial"
       ],
       "geography": "Global",
-      "evidence_type": "stabilizer",
-      "materiality": "medium",
-      "fact": "The IMF says global financial markets and banks remain broadly resilient, despite elevated cyber, sovereign-yield, leverage, and liquidity risks.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E8",
-      "title": "Cyber-payment contagion risk",
-      "source": "Reserve Bank of Australia",
-      "url": "https://www.rba.gov.au/publications/fsr/2026/oct/focus-topic-operational-risk-and-financial-stability.html",
-      "source_domain": "rba.gov.au",
-      "source_tier": "C",
-      "published_at": "2026-10-25T00:00:00.000Z",
-      "age_days": 0,
-      "cluster": "cyber_infrastructure_finance",
-      "domains": [
-        "technology",
-        "financial",
-        "critical_infrastructure"
-      ],
-      "geography": "Australia; systemic relevance",
       "evidence_type": "forward",
       "materiality": "high",
-      "fact": "The RBA warns a cyber or provider outage interrupting bank payments could create liquidity pressure, confidence loss, and forced asset sales.",
+      "fact": "The IMF warns a major cyberattack on a financial institution, payment system, cloud provider, or software platform could disrupt payments, trading, deposits, or critical services.",
       "americas_relevant": true
     },
     {
       "id": "E9",
-      "title": "Recent payment-system glitch",
-      "source": "The Economic Times",
-      "url": "https://economictimes.indiatimes.com/industry/banking/finance/banking/central-bank-of-india-reports-technical-glitch-in-rtgs-outward-system/articleshow/135053338.cms",
-      "source_domain": "economictimes.indiatimes.com",
-      "source_tier": "C",
-      "published_at": "2026-10-19T00:00:00.000Z",
-      "age_days": 6,
+      "title": "Bank funding access deteriorates",
+      "source": "European Central Bank Bank Lending Survey",
+      "url": "https://www.ecb.europa.eu/stats/ecb_surveys/bank_lending_survey/html/ecb.blssurvey2026q3~c6a731e213.bg.html",
+      "source_domain": "ecb.europa.eu",
+      "source_tier": "A",
+      "published_at": "2026-10-27T00:00:00.000Z",
+      "age_days": 4,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
-        "financial",
-        "technology"
+        "financial"
       ],
-      "geography": "India",
+      "geography": "Euro area",
       "evidence_type": "observed",
       "materiality": "medium",
-      "fact": "Central Bank of India isolated an RTGS outward-payment glitch affecting October 15–17; it reported no customer financial loss and no confirmed cyber cause.",
+      "fact": "Euro-area banks reported worsening access to retail funding, debt securities, and money markets in Q3, while anticipating further deterioration in Q4.",
       "americas_relevant": false
     },
     {
       "id": "E10",
-      "title": "Haiti gangs attack international force",
-      "source": "Associated Press",
-      "url": "https://ny1.com/nyc/all-boroughs/ap-top-news/2026/10/21/el-salvadors-bukele-announces-military-operation-to-rescue-hostages-held-by-gangs-in-haiti",
-      "source_domain": "ny1.com",
+      "title": "Mexico floods",
+      "source": "PAHO/WHO",
+      "url": "https://www.paho.org/es/monitoreo-amenazas-naturales/monitoreo-amenazas-naturales-27-octubre-2026",
+      "source_domain": "paho.org",
       "source_tier": "C",
-      "published_at": "2026-10-21T00:00:00.000Z",
+      "published_at": "2026-10-27T00:00:00.000Z",
       "age_days": 4,
       "cluster": "americas_civil",
       "domains": [
-        "civil_unrest",
-        "domestic"
+        "domestic",
+        "critical_infrastructure",
+        "natural"
+      ],
+      "geography": "Mexico",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "Flooding affected 109 municipalities; evacuations exceeded 13,800 people, while 19 localities remained isolated and 108 shelters housed 4,351 people.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E11",
+      "title": "Haiti heavy rains",
+      "source": "PAHO/WHO",
+      "url": "https://www.paho.org/en/health-emergencies/natural-hazards-monitoring?page=0",
+      "source_domain": "paho.org",
+      "source_tier": "C",
+      "published_at": "2026-10-29T00:00:00.000Z",
+      "age_days": 2,
+      "cluster": "americas_civil",
+      "domains": [
+        "domestic",
+        "public_health",
+        "natural"
       ],
       "geography": "Haiti",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "Gangs attacked an armored vehicle near Port-au-Prince, kidnapped four Salvadoran technicians, and prompted El Salvador to launch a military rescue operation.",
+      "fact": "Heavy rainfall left at least eight dead, 40 injured, five missing, and 11,884 families affected, with shelters and emergency response activated.",
       "americas_relevant": true
     },
     {
       "id": "E12",
-      "title": "Colorado flood emergency expanded",
-      "source": "NOAA hazard tracker citing Colorado government reporting",
-      "url": "https://ftp.cpc.ncep.noaa.gov/fews/DroughtMonitor/hazard_news/index.html",
-      "source_domain": "ftp.cpc.ncep.noaa.gov",
-      "source_tier": "A",
-      "published_at": "2026-10-24T00:00:00.000Z",
+      "title": "Regional flood continuity",
+      "source": "Humara",
+      "url": "https://humara.org/report/345b23a0-66da-4b4b-b032-5da3d94b7149",
+      "source_domain": "humara.org",
+      "source_tier": "C",
+      "published_at": "2026-10-30T00:00:00.000Z",
       "age_days": 1,
-      "cluster": "food_health_natural",
+      "cluster": "americas_civil",
       "domains": [
-        "natural",
+        "critical_infrastructure",
         "domestic",
-        "critical_infrastructure"
+        "natural"
       ],
-      "geography": "Colorado, United States",
+      "geography": "Dominican Republic and Jamaica",
       "evidence_type": "observed",
       "materiality": "medium",
-      "fact": "Colorado expanded its flood disaster emergency to 12 southwestern counties, indicating continuing material civilian and infrastructure impacts.",
+      "fact": "Recent rains affected 2,670 people in the Dominican Republic, flooded 534 homes, cut off 32 communities, and disabled 28 water systems.",
       "americas_relevant": true
     },
     {
       "id": "E13",
-      "title": "Afghanistan fertilizer-price risk",
-      "source": "Food and Agriculture Organization",
-      "url": "https://www.fao.org/emergencies/resources-repository/news/detail/en",
-      "source_domain": "fao.org",
-      "source_tier": "C",
-      "published_at": "2026-10-22T00:00:00.000Z",
-      "age_days": 3,
+      "title": "Cyclospora outbreak ended",
+      "source": "CDC",
+      "url": "https://www.cdc.gov/cyclosporiasis/outbreaks/07-26/index.html",
+      "source_domain": "cdc.gov",
+      "source_tier": "A",
+      "published_at": "2026-09-11T00:00:00.000Z",
+      "age_days": 50,
       "cluster": "food_health_natural",
       "domains": [
         "food",
-        "supply_chain",
-        "trade"
-      ],
-      "geography": "Afghanistan",
-      "evidence_type": "forward",
-      "materiality": "medium",
-      "fact": "FAO reported rising fertilizer prices threaten Afghanistan’s 2027 wheat harvest as farmers prepare for planting.",
-      "americas_relevant": false
-    },
-    {
-      "id": "E14",
-      "title": "U.S. volcano activity stable",
-      "source": "U.S. Geological Survey",
-      "url": "https://www.usgs.gov/programs/VHP/volcano-updates",
-      "source_domain": "usgs.gov",
-      "source_tier": "A",
-      "published_at": "2026-10-20T00:00:00.000Z",
-      "age_days": 5,
-      "cluster": "food_health_natural",
-      "domains": [
-        "natural"
+        "public_health"
       ],
       "geography": "United States",
       "evidence_type": "stabilizer",
+      "materiality": "medium",
+      "fact": "CDC reported the 2026 iceberg-lettuce Cyclospora outbreak ended, with contaminated products no longer available and infections sharply declining.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E14",
+      "title": "No current qualifying hazard found",
+      "source": "Single-search review",
+      "url": "https://www.cdc.gov/orr/responses/index.html",
+      "source_domain": "cdc.gov",
+      "source_tier": "A",
+      "published_at": null,
+      "age_days": 999,
+      "cluster": "food_health_natural",
+      "domains": [
+        "food",
+        "public_health",
+        "natural"
+      ],
+      "geography": "Global",
+      "evidence_type": "stabilizer",
       "materiality": "low",
-      "fact": "USGS reported California volcanoes at normal background levels, while Kīlauea activity remained confined largely within a closed park area.",
+      "fact": "The single search produced no authoritative report of a new food, outbreak, fertilizer, or major natural-hazard disruption during October 28–31, 2026.",
       "americas_relevant": true
     }
   ],
   "api_usage": {
     "research_model": "gpt-5.6-luna",
     "assessment_model": "gpt-5.6-terra",
-    "web_search_calls": 5,
-    "estimated_run_cost_usd": 0.087973,
-    "estimated_period_spend_usd": 4.414547,
+    "web_search_calls": 7,
+    "estimated_run_cost_usd": 0.107805,
+    "estimated_period_spend_usd": 4.931829,
     "allocated_90_day_budget_usd": 10,
     "operational_stop_usd": 9
   },
