@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
   "engine_version": "5.3",
-  "date": "2026-11-06",
+  "date": "2026-11-07",
   "status": "STALE",
-  "started_at": "2026-11-06T19:21:18.051Z",
-  "completed_at": "2026-11-06T19:23:23.766Z",
-  "message": "Research quality gate failed: {\"evidence_count\":12,\"fresh_count\":10,\"unique_sources\":5,\"tier_a_sources\":5,\"clusters\":5,\"domains_covered\":9,\"confidence_cap\":45,\"publishable\":false}",
+  "started_at": "2026-11-07T17:44:03.078Z",
+  "completed_at": "2026-11-07T17:47:36.633Z",
+  "message": "Assessment: response status incomplete; max_output_tokens",
   "dashboard_preserved": true,
   "last_verified_update": "2026-11-04T19:46:13.564Z",
   "web_search_calls": 8,
-  "estimated_partial_run_cost_usd": 0.09788,
-  "estimated_period_spend_usd": 5.440842,
+  "estimated_partial_run_cost_usd": 0.098066,
+  "estimated_period_spend_usd": 5.538908,
   "operational_stop_usd": 9
 }
