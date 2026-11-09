@@ -2,18 +2,18 @@
   "schema_version": 5,
   "engine_version": "5.3",
   "data_status": "VERIFIED",
-  "as_of": "2026-11-08",
-  "updated_at": "2026-11-08T17:57:39.661Z",
-  "last_successful_update": "2026-11-08T17:57:39.661Z",
-  "preparedness_urgency": 85,
-  "raw_preparedness_urgency": 85,
+  "as_of": "2026-11-09",
+  "updated_at": "2026-11-09T22:21:13.682Z",
+  "last_successful_update": "2026-11-09T22:21:13.682Z",
+  "preparedness_urgency": 84,
+  "raw_preparedness_urgency": 84,
   "preparedness_stage": "HIGH ALERT",
-  "global_threat_pressure": 89,
-  "leading_threat_pressure": 89,
+  "global_threat_pressure": 88,
+  "leading_threat_pressure": 88,
   "observed_civilian_disruption": 83,
-  "americas_exposure": 89,
+  "americas_exposure": 88,
   "americas_stage": "SEVERE",
-  "americas_summary": "Americas exposure is highest through energy and shipping prices/supply, Texas and Central America flood risk, Haiti’s food-access crisis, and critical-mineral/technology dependencies.",
+  "americas_summary": "Americas exposure remains high through energy and shipping spillovers, a Puerto Rico grid emergency order, Southwest flood recovery, West Coast storm risk, Haiti insecurity, and prospective financial/cyber contagion.",
   "americas_components": [
     {
       "name": "Energy security",
@@ -21,13 +21,13 @@
       "trend": "rising"
     },
     {
-      "name": "Natural / environmental",
-      "score": 98,
+      "name": "Supply chain & transportation",
+      "score": 97,
       "trend": "rising"
     },
     {
-      "name": "Supply chain & transportation",
-      "score": 97,
+      "name": "Natural / environmental",
+      "score": 98,
       "trend": "rising"
     },
     {
@@ -42,24 +42,25 @@
     },
     {
       "name": "Global trade fragmentation",
-      "score": 91,
-      "trend": "rising"
+      "score": 89,
+      "trend": "stable"
     }
   ],
   "conflict_escalation": 98,
   "coupling_score": 82,
-  "momentum_score": 75,
-  "confidence_score": 84,
-  "confidence_level": "HIGH",
-  "confidence_rationale": "Fresh, high-quality reporting directly supports maritime, weather, Haiti food-access, and Ebola assessments; several technology/financial signals are indirect or lower-tier. Evidence gate: 15 items, 11 sources, 7 Tier-A sources, 5/5 clusters.",
+  "momentum_score": 70,
+  "confidence_score": 75,
+  "confidence_level": "MODERATE",
+  "confidence_rationale": "Fresh, multi-source evidence covers all domains, including several Tier A primary or official sources; direct evidence is strongest for shipping, Puerto Rico infrastructure, weather, and health. Some financial and technology risk remains forward-looking. Evidence gate: 14 items, 11 sources, 7 Tier-A sources, 5/5 clusters.",
   "preparedness_window": "Days to weeks",
-  "summary": "Severe, already-material disruption remains concentrated in Hormuz shipping/energy risk and Haiti food access, with weather and cyber/critical-mineral vulnerabilities adding near-term Americas exposure.",
-  "primary_driver": "Direct maritime incidents near the Strait of Hormuz continue to endanger commercial shipping and oil flows.",
+  "summary": "Severe, multi-domain disruption risk persists, led by active maritime security incidents, Puerto Rico grid emergency action, and near-term U.S. weather hazards. Some trade, food-price, and banking resilience signals moderate the outlook.",
+  "primary_driver": "Military risk to Gulf shipping with direct energy and supply-chain implications.",
   "primary_stabilizers": [
-    "Qatar and the United States pursued dialogue with Iran emphasizing maritime navigation and energy security, providing a diplomatic stabilizer amid ongoing escalation.",
-    "China reportedly suspended expanded rare-earth, lithium-battery, and related technology export controls until November 10, 2026, easing immediate disruption risk.",
-    "EU supervisors reported banks, insurers, and investment funds still have strong fundamentals, despite cyber, external-provider, and liquidity-mismatch vulnerabilities.",
-    "CDC declared the multistate Salmonella outbreak linked to broccoli sprouts and seeds over on November 4, after 34 cases, three hospitalizations, and no deaths."
+    "The IMO Council reaffirmed that vital shipping lanes should remain open and condemned attacks on merchant vessels, seafarers, and port infrastructure.",
+    "China extended waivers on expanded rare-earth export controls until January 10, 2027, preserving near-term access while negotiations continue.",
+    "The IMF said global banking systems would remain resilient in severe scenarios involving AI-market, energy-price, and bond-market shocks, though emerging-market vulnerabilities persist.",
+    "Floodwaters receded and some Colorado bridges and roads reopened, but officials maintained elevated flood risk and emergency measures in affected areas.",
+    "The World Bank reported September agricultural prices down 1%, cereal prices down 6%, and export prices up 3%, indicating some near-term market relief."
   ],
   "domains": [
     {
@@ -68,7 +69,7 @@
       "impact": 96,
       "americas_exposure": 98,
       "trend": "rising",
-      "rationale": "Tanker fire and reported mines near Hormuz reinforce acute oil-shipping disruption risk.",
+      "rationale": "Hormuz vessel attacks and a tanker explosion sustain acute oil-shipping risk; Puerto Rico remains under DOE emergency grid orders.",
       "name": "Energy security",
       "weight": 11
     },
@@ -78,7 +79,7 @@
       "impact": 98,
       "americas_exposure": 88,
       "trend": "rising",
-      "rationale": "U.S. engagement with a commercial vessel and mine reports show active maritime conflict risk.",
+      "rationale": "U.S. fire on a blockade-running commercial vessel and a tanker explosion demonstrate active maritime conflict risk.",
       "name": "Military / geopolitical",
       "weight": 10
     },
@@ -88,57 +89,57 @@
       "impact": 96,
       "americas_exposure": 97,
       "trend": "rising",
-      "rationale": "Hormuz incidents and reported critical-mineral shortfalls sustain logistics and industrial-input risk.",
+      "rationale": "Active incidents in the Strait of Hormuz threaten commercial transit; rare-earth waivers provide only near-term relief.",
       "name": "Supply chain & transportation",
       "weight": 10
     },
     {
       "key": "trade",
-      "threat": 87,
-      "impact": 82,
-      "americas_exposure": 91,
-      "trend": "rising",
-      "rationale": "Maritime insecurity and U.S.-China mineral-delivery friction threaten trade flows; temporary controls suspension moderates immediacy.",
+      "threat": 85,
+      "impact": 80,
+      "americas_exposure": 89,
+      "trend": "stable",
+      "rationale": "Rare-earth control waivers and softer food prices stabilize conditions, but U.S.-China implementation disputes persist.",
       "name": "Global trade fragmentation",
       "weight": 10
     },
     {
       "key": "technology",
-      "threat": 88,
-      "impact": 77,
-      "americas_exposure": 84,
-      "trend": "rising",
-      "rationale": "Rare-earth supply shortfalls and semiconductor sourcing alternatives indicate persistent dependency risk; payment cyber incident adds operational concern.",
+      "threat": 87,
+      "impact": 76,
+      "americas_exposure": 83,
+      "trend": "stable",
+      "rationale": "Contained French bank cyber incident and Fed cyber-risk warning sustain concern; rare-earth waiver eases near-term inputs.",
       "name": "Technology chokepoints",
       "weight": 7
     },
     {
       "key": "critical_infrastructure",
       "threat": 92,
-      "impact": 87,
+      "impact": 88,
       "americas_exposure": 94,
       "trend": "rising",
-      "rationale": "Weather threats to Texas and Central America add immediate infrastructure disruption potential alongside systemic cyber exposure.",
+      "rationale": "Puerto Rico emergency grid actions are active; Southwest recovery and forecast West Coast storms elevate outage risk.",
       "name": "Critical infrastructure / cyber",
       "weight": 11
     },
     {
       "key": "financial",
-      "threat": 86,
-      "impact": 77,
-      "americas_exposure": 89,
+      "threat": 84,
+      "impact": 75,
+      "americas_exposure": 87,
       "trend": "stable",
-      "rationale": "A French payment interruption demonstrates cyber exposure, while supervisory evidence supports broader financial resilience.",
+      "rationale": "A contained French transfer disruption and Fed warning show cyber vulnerability, while IMF resilience assessment moderates risk.",
       "name": "Financial-system stress",
       "weight": 10
     },
     {
       "key": "food",
-      "threat": 84,
-      "impact": 65,
-      "americas_exposure": 84,
+      "threat": 80,
+      "impact": 62,
+      "americas_exposure": 81,
       "trend": "stable",
-      "rationale": "Severe hunger and blocked food movement persist in Haiti; the U.S. Salmonella outbreak ending is a limited stabilizer.",
+      "rationale": "World Bank reports easing agricultural and cereal prices; no direct food-access constraint is evidenced.",
       "name": "Food & agriculture",
       "weight": 8
     },
@@ -148,72 +149,72 @@
       "impact": 81,
       "americas_exposure": 89,
       "trend": "stable",
-      "rationale": "Haiti’s violence-linked road blockages continue to constrain civilian access to food and services.",
+      "rationale": "Haiti faces sustained gang violence and escalation fears; U.S. weather emergencies create localized domestic disruption.",
       "name": "Domestic institutional stress",
       "weight": 6
     },
     {
       "key": "civil_unrest",
-      "threat": 63,
-      "impact": 57,
-      "americas_exposure": 67,
+      "threat": 66,
+      "impact": 60,
+      "americas_exposure": 69,
       "trend": "rising",
-      "rationale": "Gang violence in Haiti materially impedes food movement, though evidence does not establish broader Americas unrest.",
+      "rationale": "Continuing gang violence and security escalation risk in Haiti are materially disruptive, though evidence does not show broader regional unrest.",
       "name": "Civil unrest / public order",
       "weight": 7
     },
     {
       "key": "public_health",
-      "threat": 74,
-      "impact": 73,
-      "americas_exposure": 73,
+      "threat": 76,
+      "impact": 78,
+      "americas_exposure": 72,
       "trend": "rising",
-      "rationale": "Large active Ebola transmission in DRC raises international health risk; U.S. foodborne monitoring remains active.",
+      "rationale": "WHO reports sustained, large-scale Ebola transmission in DRC; no direct Americas access or service disruption is evidenced.",
       "name": "Public health / biological",
       "weight": 5
     },
     {
       "key": "natural",
       "threat": 98,
-      "impact": 96,
+      "impact": 95,
       "americas_exposure": 98,
       "trend": "rising",
-      "rationale": "Forecast intense Texas rainfall and Central American heavy-rain potential sustain acute regional hazard exposure.",
+      "rationale": "Southwest flood impacts remain under recovery, while NOAA identifies near-term West Coast flooding and wind-outage risk.",
       "name": "Natural / environmental",
       "weight": 5
     }
   ],
   "hard_triggers": [
     {
-      "type": "food_shortage",
+      "type": "multiple_system_failures",
       "verified": true,
-      "scope": "national",
+      "scope": "regional",
       "status": "active",
-      "summary": "Nearly six million Haitians face severe hunger, with violence and blocked roads restricting food movement to Port-au-Prince.",
-      "source_url": "https://apnews.com/article/e7054f6124e386240f10c9ff3ad45331",
+      "summary": "Puerto Rico is under DOE emergency orders for generation, vegetation management, and transmission assets, indicating an active regional power-system reliability constraint.",
+      "source_url": "https://www.energy.gov/ceser/2026-doe-202c-orders",
       "evidence_ids": [
-        "E12",
+        "E10",
         "E14"
       ]
     }
   ],
   "verified_hard_trigger_count": 1,
-  "severe_hard_trigger_count": 1,
+  "severe_hard_trigger_count": 0,
   "score_calibration": {
-    "raw_score": 85,
-    "published_score": 85,
+    "raw_score": 84,
+    "published_score": 84,
     "previous_daily_anchor": 85,
     "rate_limit_applied": false,
-    "daily_rate_limit": null,
+    "daily_rate_limit": 6,
     "sustained_90_for_48h": false,
     "high_impact_domain_count": 10
   },
   "score_components": {
-    "global_threat_pressure": 89,
+    "global_threat_pressure": 88,
     "observed_civilian_disruption": 83,
     "coupling": 82,
-    "momentum": 75,
-    "americas_exposure": 89
+    "momentum": 70,
+    "americas_exposure": 88
   },
   "drivers": [
     {
@@ -222,12 +223,12 @@
       "note": "Primary driver"
     },
     {
-      "name": "Natural / environmental",
+      "name": "Supply chain & transportation",
       "severity": "critical",
       "note": ""
     },
     {
-      "name": "Supply chain & transportation",
+      "name": "Natural / environmental",
       "severity": "critical",
       "note": ""
     },
@@ -249,35 +250,35 @@
   ],
   "areas_to_watch": [
     {
-      "name": "Strait of Hormuz maritime access",
+      "name": "Strait of Hormuz shipping and energy flows",
       "severity": "critical",
-      "why": "Direct vessel engagement, tanker fire, and reported mines could rapidly constrain oil and commercial shipping."
+      "why": "Recent vessel engagement and tanker explosion show active hazard to commercial transit."
     },
     {
-      "name": "Haiti food access",
+      "name": "Puerto Rico electric-grid reliability",
       "severity": "critical",
-      "why": "Severe hunger and blocked transport routes are already restricting food access."
+      "why": "Federal emergency orders are in force through February 5, 2027."
     },
     {
-      "name": "Texas and Central America rainfall",
+      "name": "West Coast atmospheric-river period",
       "severity": "high",
-      "why": "Forecast heavy rainfall may produce flash flooding and localized infrastructure disruption."
+      "why": "NOAA forecasts heavy precipitation, high winds, flooding, and possible outages on November 14–15."
     },
     {
-      "name": "Critical-mineral supply chains",
+      "name": "Ebola transmission in DRC",
       "severity": "high",
-      "why": "Reported shortfalls and continuing semiconductor dependency could disrupt industrial production."
+      "why": "WHO reports sustained transmission across 51 health zones with substantial confirmed cases and deaths."
     },
     {
-      "name": "Ebola outbreak in central and east Africa",
-      "severity": "high",
-      "why": "WHO reports extensive active transmission and high mortality, requiring continued international monitoring."
+      "name": "U.S.-China critical-minerals implementation",
+      "severity": "medium",
+      "why": "Export-control waivers are temporary and commitments remain contested."
     }
   ],
   "signals": [
     {
-      "title": "Gulf of Oman vessel fired upon",
-      "summary": "U.S. forces fired on a commercial vessel after it allegedly attempted to breach a blockade, highlighting direct military risk to regional shipping.",
+      "title": "Vessel disabled in Gulf of Oman",
+      "summary": "U.S. forces fired on a commercial vessel attempting to breach a blockade after visiting an Iranian port, highlighting continuing military risk to Gulf shipping.",
       "url": "https://apnews.com/article/bc902d3400cb5d022f8bafd247ef975b",
       "source": "Associated Press",
       "published_at": "2026-11-07T00:00:00.000Z",
@@ -285,66 +286,66 @@
       "impact": "up"
     },
     {
-      "title": "Tanker fire near Hormuz",
-      "summary": "A tanker caught fire near Oman and Iran reported two tankers striking mines, while commercial shipping risks remained elevated near the oil chokepoint.",
-      "url": "https://apnews.com/article/090d96e25872f5c63e105b9dd3e5dc60",
-      "source": "Associated Press",
+      "title": "Tanker explosion reported",
+      "summary": "UKMTO recorded a November 5 report of an explosion at a tanker’s waterline while transiting outbound through the Strait of Hormuz.",
+      "url": "https://www.ukmto.org/-/media/ukmto/products/jmic_advisory_update_112_08-nov.pdf",
+      "source": "UKMTO/JMIC",
       "published_at": "2026-11-08T00:00:00.000Z",
       "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "U.S. presses China on minerals",
-      "summary": "U.S. officials demanded China immediately fulfill Busan-agreement commitments on rare-earth and critical-mineral deliveries after reported supply shortfalls.",
-      "url": "https://in.marketscreener.com/news/us-urged-beijing-to-implement-commitments-of-busan-trade-deal-treasury-says-ce785fd2dd8af226",
-      "source": "Reuters via MarketScreener",
+      "title": "Implementation remains contested",
+      "summary": "U.S. officials urged China to fulfill commitments on agricultural purchases, rare earths, and other critical minerals, indicating unresolved implementation risk.",
+      "url": "https://apnews.com/article/685503bde099612212fb9d6f716422e4",
+      "source": "Associated Press",
       "published_at": "2026-11-06T00:00:00.000Z",
       "category": "TRADE",
       "impact": "up"
     },
     {
-      "title": "Semiconductor exposure persists",
-      "summary": "TSMC is seeking chipmaking equipment alternatives without Chinese rare-earth magnets, signaling continuing vulnerability in semiconductor manufacturing supply chains.",
-      "url": "https://www.reuters.com/world/china/tsmc-seeks-factory-equipment-alternatives-thwart-chinas-rare-earths-grip-sources-2026-10-22/",
-      "source": "Reuters via Reddit reproduction",
-      "published_at": "2026-10-22T00:00:00.000Z",
-      "category": "SUPPLY",
-      "impact": "up"
-    },
-    {
-      "title": "French bank payment attack",
-      "summary": "Crédit Mutuel Arkéa said a November 4 cyberattack via a service provider enabled unauthorized transfers, temporarily suspending some payments; most services resumed that morning.",
+      "title": "French bank transfer attack contained",
+      "summary": "Crédit Mutuel Arkéa said a third-party cyberattack enabled unauthorized transfers from a bank account; some transfers were briefly suspended, while customer deposits remained unaffected and most services resumed.",
       "url": "https://ncfacanada.org/ncfa-weekly-fintech-intelligence-oct-31-nov-6-2026/",
-      "source": "NCFA summary citing Crédit Mutuel Arkéa disclosure",
+      "source": "NCFA, citing Crédit Mutuel Arkéa disclosure",
+      "published_at": "2026-11-04T00:00:00.000Z",
+      "category": "FINANCE",
+      "impact": "up"
+    },
+    {
+      "title": "Cyber contagion could impair liquidity",
+      "summary": "The Federal Reserve warns a cyber disruption at a financial institution or third-party provider could degrade market liquidity, erode confidence, and force asset sales.",
+      "url": "https://www.federalreserve.gov/publications/2026-may-financial-stability-report-near-term-risks.htm",
+      "source": "Federal Reserve",
+      "published_at": "2026-05-08T00:00:00.000Z",
+      "category": "TECH",
+      "impact": "up"
+    },
+    {
+      "title": "Puerto Rico grid emergency order",
+      "summary": "DOE issued emergency orders requiring PREPA generation, vegetation management, and transmission-asset actions from November 8, 2026, through February 5, 2027.",
+      "url": "https://www.energy.gov/ceser/2026-doe-202c-orders",
+      "source": "U.S. Department of Energy",
       "published_at": "2026-11-06T00:00:00.000Z",
-      "category": "TECH",
+      "category": "CYBER",
       "impact": "up"
     },
     {
-      "title": "Cyber contagion remains a risk",
-      "summary": "The RBA warns an outage at a common financial-services provider could interrupt interbank payments, create liquidity pressure, and amplify stress through forced asset sales.",
-      "url": "https://www.rba.gov.au/publications/fsr/2026/oct/focus-topic-operational-risk-and-financial-stability.html",
-      "source": "Reserve Bank of Australia",
-      "published_at": null,
-      "category": "TECH",
+      "title": "Haiti security exposure persists",
+      "summary": "Haiti’s government faces scrutiny as Salvadoran troops deploy after an attack on Salvadoran technicians, amid continuing gang violence and fears of escalation.",
+      "url": "https://apnews.com/article/fefbf2e40c1eef1cac6b0281cef961d0",
+      "source": "Associated Press",
+      "published_at": "2026-11-03T00:00:00.000Z",
+      "category": "CIVIL",
       "impact": "up"
     },
     {
-      "title": "Texas flash-flood risk",
-      "summary": "NOAA forecasts increasingly widespread, intense downpours across south-central and southern Texas on November 8, with isolated flash-flooding possible.",
-      "url": "https://www.wpc.ncep.noaa.gov/discussions/hpcdiscussions.php?disc=pmdspd&os=io.",
-      "source": "NOAA Weather Prediction Center",
-      "published_at": "2026-11-07T00:00:00.000Z",
-      "category": "NATURAL",
-      "impact": "up"
-    },
-    {
-      "title": "Central America heavy-rain threat",
-      "summary": "The National Hurricane Center says a disturbance may bring heavy rain to parts of Central America this weekend, despite low development potential.",
-      "url": "https://prod-west-nhc.woc.noaa.gov/archive/xgtwo/gtwo_archive.php?basin=epac&current_issuance=202611080000&fdays=7",
-      "source": "National Hurricane Center",
-      "published_at": "2026-11-07T00:00:00.000Z",
-      "category": "NATURAL",
+      "title": "Ebola outbreak expanding in DRC",
+      "summary": "WHO reported 10,668 confirmed Bundibugyo Ebola cases and 5,198 deaths across 67 DRC health zones, with sustained transmission in 51 zones.",
+      "url": "https://www.who.int/india/home/emergencies/disease-outbreak-news/item/2026-DON625",
+      "source": "WHO",
+      "published_at": "2026-11-06T00:00:00.000Z",
+      "category": "HEALTH",
       "impact": "up"
     }
   ],
@@ -775,28 +776,38 @@
       "americas": 89,
       "conflict": 98,
       "momentum": 75
+    },
+    {
+      "date": "2026-11-09",
+      "preparedness": 84,
+      "raw_preparedness": 84,
+      "threat": 88,
+      "impact": 83,
+      "americas": 88,
+      "conflict": 98,
+      "momentum": 70
     }
   ],
   "evidence_quality": {
-    "evidence_count": 15,
-    "fresh_count": 12,
+    "evidence_count": 14,
+    "fresh_count": 8,
     "unique_sources": 11,
     "tier_a_sources": 7,
     "clusters": 5,
     "domains_covered": 12,
-    "confidence_cap": 88,
+    "confidence_cap": 75,
     "publishable": true
   },
   "evidence_log": [
     {
       "id": "E1",
-      "title": "Gulf of Oman vessel fired upon",
+      "title": "Vessel disabled in Gulf of Oman",
       "source": "Associated Press",
       "url": "https://apnews.com/article/bc902d3400cb5d022f8bafd247ef975b",
       "source_domain": "apnews.com",
       "source_tier": "A",
       "published_at": "2026-11-07T00:00:00.000Z",
-      "age_days": 1,
+      "age_days": 2,
       "cluster": "military_energy_shipping",
       "domains": [
         "military",
@@ -806,300 +817,278 @@
       "geography": "Gulf of Oman / Strait of Hormuz",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "U.S. forces fired on a commercial vessel after it allegedly attempted to breach a blockade, highlighting direct military risk to regional shipping.",
+      "fact": "U.S. forces fired on a commercial vessel attempting to breach a blockade after visiting an Iranian port, highlighting continuing military risk to Gulf shipping.",
       "americas_relevant": true
     },
     {
       "id": "E2",
-      "title": "Tanker fire near Hormuz",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/090d96e25872f5c63e105b9dd3e5dc60",
-      "source_domain": "apnews.com",
-      "source_tier": "A",
+      "title": "Tanker explosion reported",
+      "source": "UKMTO/JMIC",
+      "url": "https://www.ukmto.org/-/media/ukmto/products/jmic_advisory_update_112_08-nov.pdf",
+      "source_domain": "ukmto.org",
+      "source_tier": "C",
       "published_at": "2026-11-08T00:00:00.000Z",
-      "age_days": 0,
+      "age_days": 1,
       "cluster": "military_energy_shipping",
       "domains": [
         "military",
         "energy",
         "supply_chain"
       ],
-      "geography": "Strait of Hormuz / Sea of Oman",
+      "geography": "Strait of Hormuz",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "A tanker caught fire near Oman and Iran reported two tankers striking mines, while commercial shipping risks remained elevated near the oil chokepoint.",
+      "fact": "UKMTO recorded a November 5 report of an explosion at a tanker’s waterline while transiting outbound through the Strait of Hormuz.",
       "americas_relevant": true
     },
     {
       "id": "E3",
-      "title": "Diplomacy seeks maritime opening",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/ab62071e056c046fe6034216e14b8bb7",
-      "source_domain": "apnews.com",
-      "source_tier": "A",
+      "title": "International shipping protections reaffirmed",
+      "source": "International Maritime Organization",
+      "url": "https://www.imo.org/en/mediacentre/pressbriefings/pages/imo-council-c138-urges-stronger-protection-of-seafarers-amid-threats-to-global-shipping-.aspx",
+      "source_domain": "imo.org",
+      "source_tier": "C",
       "published_at": "2026-11-06T00:00:00.000Z",
-      "age_days": 2,
+      "age_days": 3,
       "cluster": "military_energy_shipping",
       "domains": [
         "military",
         "energy",
-        "trade"
+        "supply_chain"
       ],
-      "geography": "Gulf region",
+      "geography": "Global; Red Sea, Bab el-Mandab, Black Sea",
       "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "Qatar and the United States pursued dialogue with Iran emphasizing maritime navigation and energy security, providing a diplomatic stabilizer amid ongoing escalation.",
+      "fact": "The IMO Council reaffirmed that vital shipping lanes should remain open and condemned attacks on merchant vessels, seafarers, and port infrastructure.",
       "americas_relevant": true
     },
     {
       "id": "E4",
-      "title": "U.S. presses China on minerals",
-      "source": "Reuters via MarketScreener",
-      "url": "https://in.marketscreener.com/news/us-urged-beijing-to-implement-commitments-of-busan-trade-deal-treasury-says-ce785fd2dd8af226",
-      "source_domain": "in.marketscreener.com",
+      "title": "Rare-earth controls paused",
+      "source": "Reuters via Investing.com",
+      "url": "https://www.investing.com/news/commodities-news/china-extends-suspension-of-new-rare-earth-controls-until-january-5010878",
+      "source_domain": "investing.com",
       "source_tier": "C",
-      "published_at": "2026-11-06T00:00:00.000Z",
-      "age_days": 2,
+      "published_at": "2026-11-09T00:00:00.000Z",
+      "age_days": 0,
       "cluster": "trade_supply_technology",
       "domains": [
         "trade",
         "supply_chain",
         "technology"
       ],
-      "geography": "United States-China",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "U.S. officials demanded China immediately fulfill Busan-agreement commitments on rare-earth and critical-mineral deliveries after reported supply shortfalls.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E5",
-      "title": "Expanded controls temporarily suspended",
-      "source": "CFPAGuide summary of Chinese measures",
-      "url": "https://www.cfpaguide.com/pl/ireland/insights/global-supply-chain-horizons-06-january-2026",
-      "source_domain": "cfpaguide.com",
-      "source_tier": "C",
-      "published_at": "2026-11-07T00:00:00.000Z",
-      "age_days": 1,
-      "cluster": "trade_supply_technology",
-      "domains": [
-        "trade",
-        "supply_chain",
-        "technology"
-      ],
-      "geography": "China-global",
+      "geography": "China–United States",
       "evidence_type": "stabilizer",
       "materiality": "high",
-      "fact": "China reportedly suspended expanded rare-earth, lithium-battery, and related technology export controls until November 10, 2026, easing immediate disruption risk.",
+      "fact": "China extended waivers on expanded rare-earth export controls until January 10, 2027, preserving near-term access while negotiations continue.",
       "americas_relevant": true
     },
     {
       "id": "E6",
-      "title": "Semiconductor exposure persists",
-      "source": "Reuters via Reddit reproduction",
-      "url": "https://www.reuters.com/world/china/tsmc-seeks-factory-equipment-alternatives-thwart-chinas-rare-earths-grip-sources-2026-10-22/",
-      "source_domain": "reuters.com",
+      "title": "Implementation remains contested",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/685503bde099612212fb9d6f716422e4",
+      "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-10-22T00:00:00.000Z",
-      "age_days": 17,
+      "published_at": "2026-11-06T00:00:00.000Z",
+      "age_days": 3,
       "cluster": "trade_supply_technology",
       "domains": [
+        "trade",
         "supply_chain",
         "technology"
       ],
-      "geography": "Taiwan-China-global",
+      "geography": "China–United States",
       "evidence_type": "forward",
-      "materiality": "high",
-      "fact": "TSMC is seeking chipmaking equipment alternatives without Chinese rare-earth magnets, signaling continuing vulnerability in semiconductor manufacturing supply chains.",
+      "materiality": "medium",
+      "fact": "U.S. officials urged China to fulfill commitments on agricultural purchases, rare earths, and other critical minerals, indicating unresolved implementation risk.",
       "americas_relevant": true
     },
     {
       "id": "E7",
-      "title": "French bank payment attack",
-      "source": "NCFA summary citing Crédit Mutuel Arkéa disclosure",
+      "title": "French bank transfer attack contained",
+      "source": "NCFA, citing Crédit Mutuel Arkéa disclosure",
       "url": "https://ncfacanada.org/ncfa-weekly-fintech-intelligence-oct-31-nov-6-2026/",
       "source_domain": "ncfacanada.org",
       "source_tier": "C",
-      "published_at": "2026-11-06T00:00:00.000Z",
-      "age_days": 2,
-      "cluster": "cyber_infrastructure_finance",
-      "domains": [
-        "technology",
-        "financial"
-      ],
-      "geography": "France",
-      "evidence_type": "observed",
-      "materiality": "medium",
-      "fact": "Crédit Mutuel Arkéa said a November 4 cyberattack via a service provider enabled unauthorized transfers, temporarily suspending some payments; most services resumed that morning.",
-      "americas_relevant": false
-    },
-    {
-      "id": "E8",
-      "title": "Financial-sector resilience maintained",
-      "source": "European Supervisory Authorities",
-      "url": "https://www.esma.europa.eu/press-news/esma-news/esas-call-vigilance-over-external-dependencies-cyber-threats-and-private-credit",
-      "source_domain": "esma.europa.eu",
-      "source_tier": "A",
-      "published_at": null,
-      "age_days": 999,
+      "published_at": "2026-11-04T00:00:00.000Z",
+      "age_days": 5,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
         "financial",
         "technology"
       ],
-      "geography": "European Union",
-      "evidence_type": "stabilizer",
+      "geography": "France",
+      "evidence_type": "observed",
       "materiality": "medium",
-      "fact": "EU supervisors reported banks, insurers, and investment funds still have strong fundamentals, despite cyber, external-provider, and liquidity-mismatch vulnerabilities.",
+      "fact": "Crédit Mutuel Arkéa said a third-party cyberattack enabled unauthorized transfers from a bank account; some transfers were briefly suspended, while customer deposits remained unaffected and most services resumed.",
       "americas_relevant": false
     },
     {
-      "id": "E9",
-      "title": "Cyber contagion remains a risk",
-      "source": "Reserve Bank of Australia",
-      "url": "https://www.rba.gov.au/publications/fsr/2026/oct/focus-topic-operational-risk-and-financial-stability.html",
-      "source_domain": "rba.gov.au",
-      "source_tier": "C",
-      "published_at": null,
-      "age_days": 999,
+      "id": "E8",
+      "title": "Cyber contagion could impair liquidity",
+      "source": "Federal Reserve",
+      "url": "https://www.federalreserve.gov/publications/2026-may-financial-stability-report-near-term-risks.htm",
+      "source_domain": "federalreserve.gov",
+      "source_tier": "A",
+      "published_at": "2026-05-08T00:00:00.000Z",
+      "age_days": 185,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
         "technology",
         "financial"
       ],
-      "geography": "Australia and global financial system",
+      "geography": "United States",
       "evidence_type": "forward",
       "materiality": "high",
-      "fact": "The RBA warns an outage at a common financial-services provider could interrupt interbank payments, create liquidity pressure, and amplify stress through forced asset sales.",
+      "fact": "The Federal Reserve warns a cyber disruption at a financial institution or third-party provider could degrade market liquidity, erode confidence, and force asset sales.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E9",
+      "title": "Banks remain resilient under stress",
+      "source": "IMF",
+      "url": "https://www.imf.org/en/news/articles/2026/10/13/tr-101326-press-briefing-transcript-global-financial-stability-report-annual-meetings-2026",
+      "source_domain": "imf.org",
+      "source_tier": "A",
+      "published_at": "2026-10-13T00:00:00.000Z",
+      "age_days": 27,
+      "cluster": "cyber_infrastructure_finance",
+      "domains": [
+        "financial"
+      ],
+      "geography": "Global",
+      "evidence_type": "stabilizer",
+      "materiality": "medium",
+      "fact": "The IMF said global banking systems would remain resilient in severe scenarios involving AI-market, energy-price, and bond-market shocks, though emerging-market vulnerabilities persist.",
       "americas_relevant": true
     },
     {
       "id": "E10",
-      "title": "Texas flash-flood risk",
-      "source": "NOAA Weather Prediction Center",
-      "url": "https://www.wpc.ncep.noaa.gov/discussions/hpcdiscussions.php?disc=pmdspd&os=io.",
-      "source_domain": "wpc.ncep.noaa.gov",
+      "title": "Puerto Rico grid emergency order",
+      "source": "U.S. Department of Energy",
+      "url": "https://www.energy.gov/ceser/2026-doe-202c-orders",
+      "source_domain": "energy.gov",
       "source_tier": "A",
-      "published_at": "2026-11-07T00:00:00.000Z",
-      "age_days": 1,
+      "published_at": "2026-11-06T00:00:00.000Z",
+      "age_days": 3,
       "cluster": "americas_civil",
       "domains": [
-        "natural",
-        "critical_infrastructure"
+        "critical_infrastructure",
+        "energy"
       ],
-      "geography": "United States—Texas",
-      "evidence_type": "forward",
-      "materiality": "medium",
-      "fact": "NOAA forecasts increasingly widespread, intense downpours across south-central and southern Texas on November 8, with isolated flash-flooding possible.",
+      "geography": "Puerto Rico, United States",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "DOE issued emergency orders requiring PREPA generation, vegetation management, and transmission-asset actions from November 8, 2026, through February 5, 2027.",
       "americas_relevant": true
     },
     {
       "id": "E11",
-      "title": "Central America heavy-rain threat",
-      "source": "National Hurricane Center",
-      "url": "https://prod-west-nhc.woc.noaa.gov/archive/xgtwo/gtwo_archive.php?basin=epac&current_issuance=202611080000&fdays=7",
-      "source_domain": "prod-west-nhc.woc.noaa.gov",
-      "source_tier": "A",
-      "published_at": "2026-11-07T00:00:00.000Z",
-      "age_days": 1,
-      "cluster": "americas_civil",
-      "domains": [
-        "natural",
-        "critical_infrastructure"
-      ],
-      "geography": "Central America",
-      "evidence_type": "forward",
-      "materiality": "medium",
-      "fact": "The National Hurricane Center says a disturbance may bring heavy rain to parts of Central America this weekend, despite low development potential.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E12",
-      "title": "Haiti food-access crisis",
+      "title": "Haiti security exposure persists",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/e7054f6124e386240f10c9ff3ad45331",
+      "url": "https://apnews.com/article/fefbf2e40c1eef1cac6b0281cef961d0",
       "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-11-04T00:00:00.000Z",
-      "age_days": 4,
+      "published_at": "2026-11-03T00:00:00.000Z",
+      "age_days": 6,
       "cluster": "americas_civil",
       "domains": [
-        "food",
         "civil_unrest",
         "domestic"
       ],
       "geography": "Haiti",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "An IPC analysis reports nearly six million Haitians face severe hunger, with gang violence and blocked roads restricting food movement to Port-au-Prince.",
+      "fact": "Haiti’s government faces scrutiny as Salvadoran troops deploy after an attack on Salvadoran technicians, amid continuing gang violence and fears of escalation.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E12",
+      "title": "Flood recovery continues in Southwest",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/ee6777f8b21234d2243998b66294b92b",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-11-02T00:00:00.000Z",
+      "age_days": 7,
+      "cluster": "americas_civil",
+      "domains": [
+        "natural",
+        "critical_infrastructure"
+      ],
+      "geography": "Southwestern United States",
+      "evidence_type": "stabilizer",
+      "materiality": "medium",
+      "fact": "Floodwaters receded and some Colorado bridges and roads reopened, but officials maintained elevated flood risk and emergency measures in affected areas.",
       "americas_relevant": true
     },
     {
       "id": "E13",
-      "title": "Ebola transmission expanding",
+      "title": "Ebola outbreak expanding in DRC",
       "source": "WHO",
-      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON625",
+      "url": "https://www.who.int/india/home/emergencies/disease-outbreak-news/item/2026-DON625",
       "source_domain": "who.int",
       "source_tier": "A",
       "published_at": "2026-11-06T00:00:00.000Z",
-      "age_days": 2,
+      "age_days": 3,
       "cluster": "food_health_natural",
       "domains": [
         "public_health"
       ],
-      "geography": "Democratic Republic of the Congo, Kenya, Nigeria",
+      "geography": "Democratic Republic of the Congo; Kenya; Nigeria; United Kingdom",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "WHO reported 10,668 confirmed Bundibugyo Ebola cases and 5,198 deaths in DRC, with active transmission across 51 health zones as of November 3.",
+      "fact": "WHO reported 10,668 confirmed Bundibugyo Ebola cases and 5,198 deaths across 67 DRC health zones, with sustained transmission in 51 zones.",
       "americas_relevant": false
     },
     {
       "id": "E14",
-      "title": "Salmonella outbreak ended",
-      "source": "CDC",
-      "url": "https://www.cdc.gov/salmonella/outbreaks/broccoli-sprouts-09-26/investigation.html",
-      "source_domain": "cdc.gov",
+      "title": "West Coast atmospheric-river risk",
+      "source": "NOAA Climate Prediction Center",
+      "url": "https://www.cpc.ncep.noaa.gov/cpc_key_messages/CPC-Key-Message-1.html",
+      "source_domain": "cpc.ncep.noaa.gov",
       "source_tier": "A",
-      "published_at": "2026-11-04T00:00:00.000Z",
-      "age_days": 4,
+      "published_at": "2026-11-06T00:00:00.000Z",
+      "age_days": 3,
       "cluster": "food_health_natural",
       "domains": [
-        "food",
-        "public_health"
+        "natural",
+        "critical_infrastructure"
       ],
-      "geography": "United States",
-      "evidence_type": "stabilizer",
+      "geography": "Western United States",
+      "evidence_type": "forward",
       "materiality": "medium",
-      "fact": "CDC declared the multistate Salmonella outbreak linked to broccoli sprouts and seeds over on November 4, after 34 cases, three hospitalizations, and no deaths.",
+      "fact": "NOAA forecasts a 40–60% risk of heavy precipitation and high winds across parts of the West Coast on November 14–15, with possible flooding and outages.",
       "americas_relevant": true
     },
     {
       "id": "E15",
-      "title": "Foodborne monitoring continues",
-      "source": "CDC",
-      "url": "https://www.cdc.gov/foodborne-outbreaks/outbreaks/",
-      "source_domain": "cdc.gov",
+      "title": "Global food-price stabilizer",
+      "source": "World Bank",
+      "url": "https://www.worldbank.org/content/dam/theworldbankgroupasset/document/2026/Food%20and%20Nutrition%20Security%20Update_%20125%20October%202026.pdf",
+      "source_domain": "worldbank.org",
       "source_tier": "A",
-      "published_at": "2026-11-05T00:00:00.000Z",
-      "age_days": 3,
+      "published_at": "2026-11-02T00:00:00.000Z",
+      "age_days": 7,
       "cluster": "food_health_natural",
       "domains": [
         "food",
-        "public_health"
+        "trade"
       ],
-      "geography": "United States",
-      "evidence_type": "forward",
+      "geography": "Global",
+      "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "CDC listed 28 active multistate investigations on November 5: two Campylobacter, seven E. coli, three Listeria, and 16 Salmonella investigations.",
+      "fact": "The World Bank reported September agricultural prices down 1%, cereal prices down 6%, and export prices up 3%, indicating some near-term market relief.",
       "americas_relevant": true
     }
   ],
   "api_usage": {
     "research_model": "gpt-5.6-luna",
     "assessment_model": "gpt-5.6-terra",
-    "web_search_calls": 6,
-    "estimated_run_cost_usd": 0.099621,
-    "estimated_period_spend_usd": 5.638529,
+    "web_search_calls": 5,
+    "estimated_run_cost_usd": 0.089415,
+    "estimated_period_spend_usd": 5.727943,
     "allocated_90_day_budget_usd": 10,
     "operational_stop_usd": 9
   },
