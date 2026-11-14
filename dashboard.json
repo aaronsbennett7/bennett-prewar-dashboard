@@ -2,27 +2,32 @@
   "schema_version": 5,
   "engine_version": "5.3",
   "data_status": "VERIFIED",
-  "as_of": "2026-11-11",
-  "updated_at": "2026-11-11T19:36:40.484Z",
-  "last_successful_update": "2026-11-11T19:36:40.484Z",
-  "preparedness_urgency": 81,
-  "raw_preparedness_urgency": 81,
+  "as_of": "2026-11-14",
+  "updated_at": "2026-11-14T18:01:20.413Z",
+  "last_successful_update": "2026-11-14T18:01:20.413Z",
+  "preparedness_urgency": 83,
+  "raw_preparedness_urgency": 83,
   "preparedness_stage": "HIGH ALERT",
   "global_threat_pressure": 87,
   "leading_threat_pressure": 87,
-  "observed_civilian_disruption": 81,
+  "observed_civilian_disruption": 83,
   "americas_exposure": 87,
   "americas_stage": "SEVERE",
-  "americas_summary": "The Americas face direct exposure through energy and freight costs, critical-mineral and semiconductor dependencies, U.S. financial/cyber risk, Texas weather impacts, and localized hospital-access disruption. No evidence establishes broad regional shortages or systemwide service failure.",
+  "americas_summary": "Americas exposure is highest through global energy and shipping costs, U.S. aviation delays, western U.S. weather hazards, and severe humanitarian conditions in Haiti. No evidence shows broad regional fuel rationing, payment restrictions, or sustained infrastructure collapse.",
   "americas_components": [
     {
       "name": "Energy security",
-      "score": 98,
+      "score": 99,
       "trend": "rising"
     },
     {
       "name": "Supply chain & transportation",
-      "score": 97,
+      "score": 98,
+      "trend": "rising"
+    },
+    {
+      "name": "Military / geopolitical",
+      "score": 88,
       "trend": "rising"
     },
     {
@@ -31,93 +36,89 @@
       "trend": "rising"
     },
     {
-      "name": "Military / geopolitical",
-      "score": 87,
-      "trend": "stable"
-    },
-    {
       "name": "Critical infrastructure / cyber",
-      "score": 91,
+      "score": 92,
       "trend": "stable"
     },
     {
-      "name": "Technology chokepoints",
-      "score": 83,
-      "trend": "stable"
+      "name": "Domestic institutional stress",
+      "score": 89,
+      "trend": "rising"
     }
   ],
-  "conflict_escalation": 97,
-  "coupling_score": 78,
-  "momentum_score": 55,
-  "confidence_score": 75,
-  "confidence_level": "MODERATE",
-  "confidence_rationale": "Fresh, mostly Tier A reporting covers all domains and five clusters; direct evidence is strongest for maritime incidents, Texas hazards, and U.S. access measures. Several forward-looking risks remain conditional. Evidence gate: 13 items, 9 sources, 8 Tier-A sources, 5/5 clusters.",
+  "conflict_escalation": 98,
+  "coupling_score": 82,
+  "momentum_score": 65,
+  "confidence_score": 86,
+  "confidence_level": "HIGH",
+  "confidence_rationale": "Fresh, high-materiality reporting from AP and official sources directly supports the main disruptions; some financial and trade signals are older or indirect. Evidence gate: 14 items, 10 sources, 7 Tier-A sources, 5/5 clusters.",
   "preparedness_window": "Days to weeks",
-  "summary": "Severe, multi-domain disruption risk remains centered on maritime energy/shipping incidents, with active U.S. weather emergencies and localized domestic-access disruption. Trade measures and planned liquidity support provide limited offsets.",
-  "primary_driver": "Continuing attacks and incidents affecting maritime energy routes and oil-export infrastructure.",
+  "summary": "Severe, ongoing energy and shipping disruption centered on Hormuz remains the main civilian-risk driver, with elevated oil prices and tanker attacks. Americas impacts also include a temporary nationwide U.S. aviation shutdown, acute Haitian food insecurity, and near-term western U.S. storm hazards.",
+  "primary_driver": "Attacks on commercial tankers and persistent disruption risk in the Strait of Hormuz, reinforcing energy-price and shipping pressures.",
   "primary_stabilizers": [
-    "USTR extended suspension of targeted maritime fees and cargo-equipment duties through January 10, 2027, avoiding near-term shipping-cost increases and potential commercial disruption.",
-    "Treasury plans purchases of up to $70 billion in off-the-run securities and $25 billion in short-maturity securities during November 2026–January 2027.",
-    "CDC issued a temporary 30-day suspension on covered entries, citing Ebola-importation risk while an ongoing public-health assessment continues."
+    "Ukraine is prioritizing an energy ceasefire and reopening the Black Sea in Abu Dhabi talks, offering a potential stabilizer for regional energy and shipping risks.",
+    "China extended through January 10, 2027, the suspension of controls covering selected rare earths, related technologies, lithium-battery inputs, and synthetic graphite.",
+    "IMF reports U.S. Treasury-market liquidity metrics were favorable in recent months, while warning that leverage and sovereign-debt rollover risks remain.",
+    "NWS reports no active storms and no tropical-cyclone formation expected in the Atlantic, Caribbean, Gulf, or eastern and central Pacific during the next seven days."
   ],
   "domains": [
     {
       "key": "energy",
-      "threat": 98,
-      "impact": 97,
-      "americas_exposure": 98,
+      "threat": 99,
+      "impact": 98,
+      "americas_exposure": 99,
       "trend": "rising",
-      "rationale": "Hormuz vessel disruptions and the Ust-Luga oil-port fire threaten export flows and global fuel pricing.",
+      "rationale": "Tanker attacks and wary insurers continue to disrupt Hormuz traffic; oil remains over 40% above prewar levels.",
       "name": "Energy security",
       "weight": 11
     },
     {
       "key": "military",
-      "threat": 97,
-      "impact": 96,
-      "americas_exposure": 87,
-      "trend": "stable",
-      "rationale": "Maritime attacks continue and the Ust-Luga strike demonstrates sustained spillover against energy infrastructure.",
+      "threat": 98,
+      "impact": 97,
+      "americas_exposure": 88,
+      "trend": "rising",
+      "rationale": "Iran-linked attacks on commercial shipping are ongoing, though diplomacy offers a limited stabilizer elsewhere.",
       "name": "Military / geopolitical",
       "weight": 10
     },
     {
       "key": "supply_chain",
-      "threat": 98,
-      "impact": 96,
-      "americas_exposure": 97,
+      "threat": 99,
+      "impact": 97,
+      "americas_exposure": 98,
       "trend": "rising",
-      "rationale": "Disabled or redirected vessels and concentrated rare-earth processing sustain acute logistics and input risk.",
+      "rationale": "Attacks in a major maritime chokepoint are disrupting shipping conditions and raising logistics risk.",
       "name": "Supply chain & transportation",
       "weight": 10
     },
     {
       "key": "trade",
-      "threat": 78,
-      "impact": 73,
-      "americas_exposure": 82,
-      "trend": "easing",
-      "rationale": "Maritime disruption persists, but suspended U.S. maritime fees reduce near-term bilateral shipping-cost pressure.",
+      "threat": 77,
+      "impact": 74,
+      "americas_exposure": 83,
+      "trend": "stable",
+      "rationale": "Hormuz disruption pressures trade flows, partly offset by the extended pause in selected Chinese controls.",
       "name": "Global trade fragmentation",
       "weight": 10
     },
     {
       "key": "technology",
-      "threat": 87,
+      "threat": 86,
       "impact": 76,
       "americas_exposure": 83,
       "trend": "stable",
-      "rationale": "Rare-earth concentration and systemic financial cyber exposure remain material; no new broad technology outage is reported.",
+      "rationale": "Semiconductor export-control disputes persist; rare-earth and battery-input control suspensions provide relief.",
       "name": "Technology chokepoints",
       "weight": 7
     },
     {
       "key": "critical_infrastructure",
-      "threat": 90,
-      "impact": 84,
-      "americas_exposure": 91,
+      "threat": 89,
+      "impact": 86,
+      "americas_exposure": 92,
       "trend": "stable",
-      "rationale": "South Texas flooding requires emergency response, while no confirmed broad grid, telecom, or payment outage is reported.",
+      "rationale": "A nationwide FAA ground stop caused an acute but resumed U.S. air-transport disruption; storm outages remain possible.",
       "name": "Critical infrastructure / cyber",
       "weight": 11
     },
@@ -127,47 +128,47 @@
       "impact": 75,
       "americas_exposure": 86,
       "trend": "stable",
-      "rationale": "IMF identifies consequential cyber pathways, while planned Treasury purchases are a near-term liquidity stabilizer.",
+      "rationale": "Markets and Treasury liquidity remain resilient, while cyber, leverage, and sovereign-debt risks remain elevated.",
       "name": "Financial-system stress",
       "weight": 10
     },
     {
       "key": "food",
-      "threat": 79,
-      "impact": 60,
-      "americas_exposure": 80,
-      "trend": "stable",
-      "rationale": "Drought across parts of the southern U.S. sustains crop-weather risk, without reported food shortages.",
+      "threat": 80,
+      "impact": 66,
+      "americas_exposure": 81,
+      "trend": "rising",
+      "rationale": "Severe hunger in Haiti is worsening amid violence, displacement, high prices, and weather effects.",
       "name": "Food & agriculture",
       "weight": 8
     },
     {
       "key": "domestic",
       "threat": 81,
-      "impact": 79,
-      "americas_exposure": 88,
+      "impact": 81,
+      "americas_exposure": 89,
       "trend": "rising",
-      "rationale": "Flood response, wildfire activity, and immigration enforcement affecting an ER driveway show localized U.S. civilian-access strain.",
+      "rationale": "The FAA disruption affected U.S. and regional travel; migration activity near Mexico's southern border remains a forward concern.",
       "name": "Domestic institutional stress",
       "weight": 6
     },
     {
       "key": "civil_unrest",
-      "threat": 66,
-      "impact": 59,
-      "americas_exposure": 68,
+      "threat": 67,
+      "impact": 62,
+      "americas_exposure": 69,
       "trend": "rising",
-      "rationale": "Haiti operations could worsen civilian violence; U.S. enforcement arrests are observed, but no broad unrest disruption is evidenced.",
+      "rationale": "Gang violence and displacement in Haiti are materially disrupting civilians; migration gathering alone is not treated as unrest impact.",
       "name": "Civil unrest / public order",
       "weight": 7
     },
     {
       "key": "public_health",
-      "threat": 77,
-      "impact": 77,
-      "americas_exposure": 71,
+      "threat": 78,
+      "impact": 78,
+      "americas_exposure": 72,
       "trend": "stable",
-      "rationale": "Ebola-importation concern prompted temporary entry restrictions; the measure is precautionary and no domestic outbreak is reported.",
+      "rationale": "Ebola remains an international emergency in DRC, while Haiti's hunger crisis raises health vulnerability.",
       "name": "Public health / biological",
       "weight": 5
     },
@@ -177,28 +178,53 @@
       "impact": 92,
       "americas_exposure": 96,
       "trend": "rising",
-      "rationale": "Active South Texas flood threats, persistent wildfire danger, and substantial regional drought are concurrently documented.",
+      "rationale": "Western U.S. flooding, wind, snow, and outage risks are imminent; lack of tropical cyclone formation is a regional stabilizer.",
       "name": "Natural / environmental",
       "weight": 5
     }
   ],
-  "hard_triggers": [],
-  "verified_hard_trigger_count": 0,
-  "severe_hard_trigger_count": 0,
+  "hard_triggers": [
+    {
+      "type": "shipping_chokepoint_closure",
+      "verified": true,
+      "scope": "multinational",
+      "status": "active",
+      "summary": "Commercial shipping access through the Strait of Hormuz is materially constrained by repeated tanker attacks, fires, and insurer reluctance; traffic is disrupted rather than evidenced as fully closed.",
+      "source_url": "https://apnews.com/article/ade76bebaf22135168aac6eb3016bc19",
+      "evidence_ids": [
+        "E1",
+        "E2"
+      ]
+    },
+    {
+      "type": "transport_shutdown",
+      "verified": true,
+      "scope": "multinational",
+      "status": "developing",
+      "summary": "A U.S. nationwide FAA ground stop halted flights, with departures resumed but cascading delays and rebooking expected through Sunday across regional air networks.",
+      "source_url": "https://apnews.com/article/1fbf4992f0ddaa4c463b0e4990b6e291",
+      "evidence_ids": [
+        "E10",
+        "E14"
+      ]
+    }
+  ],
+  "verified_hard_trigger_count": 2,
+  "severe_hard_trigger_count": 2,
   "score_calibration": {
-    "raw_score": 81,
-    "published_score": 81,
+    "raw_score": 83,
+    "published_score": 83,
     "previous_daily_anchor": 81,
     "rate_limit_applied": false,
-    "daily_rate_limit": 3,
+    "daily_rate_limit": null,
     "sustained_90_for_48h": false,
     "high_impact_domain_count": 10
   },
   "score_components": {
     "global_threat_pressure": 87,
-    "observed_civilian_disruption": 81,
-    "coupling": 78,
-    "momentum": 55,
+    "observed_civilian_disruption": 83,
+    "coupling": 82,
+    "momentum": 65,
     "americas_exposure": 87
   },
   "drivers": [
@@ -213,12 +239,12 @@
       "note": ""
     },
     {
-      "name": "Natural / environmental",
+      "name": "Military / geopolitical",
       "severity": "critical",
       "note": ""
     },
     {
-      "name": "Military / geopolitical",
+      "name": "Natural / environmental",
       "severity": "critical",
       "note": ""
     },
@@ -228,109 +254,100 @@
       "note": ""
     },
     {
-      "name": "Technology chokepoints",
-      "severity": "critical",
+      "name": "Domestic institutional stress",
+      "severity": "high",
       "note": ""
     }
   ],
   "areas_to_watch": [
     {
-      "name": "Maritime energy and shipping routes",
+      "name": "Strait of Hormuz energy and commercial shipping",
       "severity": "critical",
-      "why": "Hormuz vessel disruption and damage to an oil-export port could rapidly raise fuel and freight stress."
+      "why": "Further attacks or insurer withdrawals could deepen oil-price, fuel, and shipping disruption."
     },
     {
-      "name": "Texas weather hazards",
+      "name": "U.S. and regional air travel recovery",
       "severity": "high",
-      "why": "Flood response, daily wildfire starts, and regional drought create overlapping local emergency burdens."
+      "why": "Cascading delays and rebooking may continue through the weekend after the ground stop."
     },
     {
-      "name": "Critical-mineral supply concentration",
+      "name": "Western U.S. storm impacts",
       "severity": "high",
-      "why": "Concentrated Chinese processing remains a direct vulnerability for North American industry and energy systems."
+      "why": "Heavy precipitation, high winds, snow, flooding, and localized power outages are possible."
     },
     {
-      "name": "Localized U.S. civilian access",
-      "severity": "medium",
-      "why": "Hospital-driveway obstruction indicates localized access risk, without evidence of broader service denial."
+      "name": "Haiti humanitarian conditions",
+      "severity": "high",
+      "why": "Severe hunger, violence, displacement, and high prices are compounding civilian vulnerability."
     },
     {
-      "name": "Haiti civilian-security conditions",
-      "severity": "medium",
-      "why": "The reported offensive could worsen violence and humanitarian conditions in the Caribbean."
+      "name": "Ebola outbreak in DRC",
+      "severity": "high",
+      "why": "The outbreak remains an international emergency with new hotspots despite slowing transmission in some areas."
     }
   ],
   "signals": [
     {
-      "title": "Hormuz tanker incident",
-      "summary": "JMIC reported a tanker explosion near the Strait of Hormuz and five merchant vessels disabled or redirected amid continuing maritime attacks.",
-      "url": "https://www.ukmto.org/-/media/ukmto/products/jmic_advisory_update_112_08-nov.pdf?rev=fab35b6555404e9a92944523318e299a",
-      "source": "UK Maritime Trade Operations / JMIC",
-      "published_at": "2026-11-08T00:00:00.000Z",
-      "category": "MILITARY",
-      "impact": "up"
-    },
-    {
-      "title": "Ust-Luga port strike",
-      "summary": "A Ukrainian drone attack reportedly caused a fire at Russia’s Ust-Luga oil-export port, injuring three workers and threatening regional export flows.",
-      "url": "https://apnews.com/article/7c8d1024302e0c6ad8be064eec852a64",
+      "title": "Tanker struck near UAE waters",
+      "summary": "Two tankers were hit inside the Strait of Hormuz and a third burned east of the chokepoint amid Iran-linked attacks on commercial shipping.",
+      "url": "https://apnews.com/article/ade76bebaf22135168aac6eb3016bc19",
       "source": "Associated Press",
-      "published_at": "2026-11-11T00:00:00.000Z",
+      "published_at": "2026-11-14T00:00:00.000Z",
       "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Rare-earth vulnerability persists",
-      "summary": "IEA says suspended Chinese rare-earth controls still leave concentrated processing and magnet capacity capable of threatening automotive, technology, defense, and energy supply chains.",
-      "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2026/executive-summary",
-      "source": "International Energy Agency",
-      "published_at": "2026-11-11T00:00:00.000Z",
-      "category": "SUPPLY",
+      "title": "Hormuz traffic remains disrupted",
+      "summary": "Repeated ship attacks have kept insurers wary, while oil prices remain more than 40% above prewar levels and Hormuz normally carries about one-fifth of global oil.",
+      "url": "https://www.cbsnews.com/live-updates/iran-war-us-nuclear-strait-of-hormuz/?intcid=CNI-00-10aaa3a",
+      "source": "CBS News, citing Reuters and UKMTO",
+      "published_at": "2026-11-13T00:00:00.000Z",
+      "category": "ENERGY",
       "impact": "up"
     },
     {
-      "title": "Financial cyber-risk remains systemic",
-      "summary": "The IMF warns that attacks on payments, trading, deposits, cloud providers, or financial-market utilities could rapidly impair credit and financial-service provision.",
-      "url": "https://www.imf.org/-/media/files/publications/gfsr/2026/october/english/ch1.pdf",
-      "source": "International Monetary Fund",
-      "published_at": "2026-10-01T00:00:00.000Z",
+      "title": "Nvidia export controls disputed",
+      "summary": "U.S. officials publicly disputed delays in restricting Nvidia semiconductor exports to a Singapore-based company accused of enabling Chinese access.",
+      "url": "https://apnews.com/article/17582a5098a5fb4c8fe866a084a6e52b",
+      "source": "Associated Press",
+      "published_at": "2026-11-13T00:00:00.000Z",
       "category": "TECH",
       "impact": "up"
     },
     {
-      "title": "Haiti offensive risks civilian escalation",
-      "summary": "Salvadoran forces’ Haiti offensive is raising concerns that opaque operations could worsen violence and affect civilians.",
-      "url": "https://apnews.com/article/5c8a5e284835778c31c9ff78c140afcd",
+      "title": "Financial markets resilient, risks elevated",
+      "summary": "IMF says markets remain resilient, but cyber incidents, rising sovereign yields, and private-credit liquidity pressures could trigger broader financial stress.",
+      "url": "https://mediacenter.imf.org/press-briefings/imf---global-financial-stability-report-annual-meetings--2026/s/f55368c1-983b-45b7-ba7c-1978f67c168c",
+      "source": "IMF",
+      "published_at": "2026-10-13T00:00:00.000Z",
+      "category": "FINANCE",
+      "impact": "up"
+    },
+    {
+      "title": "Cyber risk could impair financial services",
+      "summary": "The Federal Reserve warns a cyber event affecting financial institutions or critical providers could degrade liquidity, confidence, payments, and access to financial services.",
+      "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20260508.pdf",
+      "source": "Federal Reserve",
+      "published_at": "2026-05-08T00:00:00.000Z",
+      "category": "TECH",
+      "impact": "up"
+    },
+    {
+      "title": "FAA ground stop disrupts regional air travel",
+      "summary": "A U.S. nationwide FAA ground stop halted flights Friday; departures resumed, but airlines warned of cascading delays and rebooking through Sunday.",
+      "url": "https://apnews.com/article/1fbf4992f0ddaa4c463b0e4990b6e291",
+      "source": "Associated Press",
+      "published_at": "2026-11-14T00:00:00.000Z",
+      "category": "CYBER",
+      "impact": "up"
+    },
+    {
+      "title": "Haiti food insecurity worsens amid violence",
+      "summary": "Nearly six million Haitians face severe hunger, including almost two million at emergency levels, amid gang violence, displacement, high prices, and El Niño effects.",
+      "url": "https://apnews.com/article/e7054f6124e386240f10c9ff3ad45331",
       "source": "Associated Press",
       "published_at": "2026-11-11T00:00:00.000Z",
-      "category": "CIVIL",
-      "impact": "up"
-    },
-    {
-      "title": "Immigration enforcement disrupts access",
-      "summary": "Masked immigration officers blocked a Los Angeles hospital emergency-room driveway, while arrests continued in multiple U.S. communities.",
-      "url": "https://apnews.com/article/f3b9d1c9aab7d701c9b2c2550efa0332",
-      "source": "Associated Press",
-      "published_at": "2026-11-11T00:00:00.000Z",
-      "category": "CIVIL",
-      "impact": "up"
-    },
-    {
-      "title": "South Texas flooding",
-      "summary": "Heavy rainfall and flash-flooding threats continued across South Texas, with state emergency resources deployed for local storm response.",
-      "url": "https://olympus.soc.texas.gov/services/Sitrep/GetFile.aspx?id=17779",
-      "source": "Texas Division of Emergency Management",
-      "published_at": "2026-11-09T00:00:00.000Z",
-      "category": "NATURAL",
-      "impact": "up"
-    },
-    {
-      "title": "Texas wildfire danger",
-      "summary": "Despite recent rainfall, high wildfire danger persisted in parts of Texas, with new wildfire starts reported daily over several days.",
-      "url": "https://olympus.soc.texas.gov/services/Sitrep/GetFile.aspx?id=17775",
-      "source": "Texas Division of Emergency Management",
-      "published_at": "2026-11-09T00:00:00.000Z",
-      "category": "NATURAL",
+      "category": "FOOD",
       "impact": "up"
     }
   ],
@@ -791,131 +808,164 @@
       "americas": 87,
       "conflict": 97,
       "momentum": 55
+    },
+    {
+      "date": "2026-11-14",
+      "preparedness": 83,
+      "raw_preparedness": 83,
+      "threat": 87,
+      "impact": 83,
+      "americas": 87,
+      "conflict": 98,
+      "momentum": 65
     }
   ],
   "evidence_quality": {
-    "evidence_count": 13,
-    "fresh_count": 11,
-    "unique_sources": 9,
-    "tier_a_sources": 8,
+    "evidence_count": 14,
+    "fresh_count": 10,
+    "unique_sources": 10,
+    "tier_a_sources": 7,
     "clusters": 5,
     "domains_covered": 12,
-    "confidence_cap": 75,
+    "confidence_cap": 88,
     "publishable": true
   },
   "evidence_log": [
     {
       "id": "E1",
-      "title": "Hormuz tanker incident",
-      "source": "UK Maritime Trade Operations / JMIC",
-      "url": "https://www.ukmto.org/-/media/ukmto/products/jmic_advisory_update_112_08-nov.pdf?rev=fab35b6555404e9a92944523318e299a",
-      "source_domain": "ukmto.org",
-      "source_tier": "C",
-      "published_at": "2026-11-08T00:00:00.000Z",
-      "age_days": 3,
+      "title": "Tanker struck near UAE waters",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/ade76bebaf22135168aac6eb3016bc19",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-11-14T00:00:00.000Z",
+      "age_days": 0,
       "cluster": "military_energy_shipping",
       "domains": [
         "military",
         "energy",
         "supply_chain"
       ],
-      "geography": "Strait of Hormuz",
+      "geography": "Strait of Hormuz / UAE",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "JMIC reported a tanker explosion near the Strait of Hormuz and five merchant vessels disabled or redirected amid continuing maritime attacks.",
+      "fact": "Two tankers were hit inside the Strait of Hormuz and a third burned east of the chokepoint amid Iran-linked attacks on commercial shipping.",
       "americas_relevant": true
     },
     {
       "id": "E2",
-      "title": "Ust-Luga port strike",
+      "title": "Hormuz traffic remains disrupted",
+      "source": "CBS News, citing Reuters and UKMTO",
+      "url": "https://www.cbsnews.com/live-updates/iran-war-us-nuclear-strait-of-hormuz/?intcid=CNI-00-10aaa3a",
+      "source_domain": "cbsnews.com",
+      "source_tier": "C",
+      "published_at": "2026-11-13T00:00:00.000Z",
+      "age_days": 1,
+      "cluster": "military_energy_shipping",
+      "domains": [
+        "energy",
+        "military",
+        "supply_chain",
+        "trade"
+      ],
+      "geography": "Strait of Hormuz",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "Repeated ship attacks have kept insurers wary, while oil prices remain more than 40% above prewar levels and Hormuz normally carries about one-fifth of global oil.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E3",
+      "title": "Diplomatic opening and naval protection",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/7c8d1024302e0c6ad8be064eec852a64",
+      "url": "https://apnews.com/article/f9a8629626c087424f05adc85d127780",
       "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-11-11T00:00:00.000Z",
+      "published_at": "2026-11-14T00:00:00.000Z",
       "age_days": 0,
       "cluster": "military_energy_shipping",
       "domains": [
         "military",
         "energy",
-        "trade"
+        "supply_chain"
       ],
-      "geography": "Russia; Baltic Sea",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "A Ukrainian drone attack reportedly caused a fire at Russia’s Ust-Luga oil-export port, injuring three workers and threatening regional export flows.",
+      "geography": "Black Sea / Europe",
+      "evidence_type": "stabilizer",
+      "materiality": "medium",
+      "fact": "Ukraine is prioritizing an energy ceasefire and reopening the Black Sea in Abu Dhabi talks, offering a potential stabilizer for regional energy and shipping risks.",
       "americas_relevant": true
     },
     {
       "id": "E4",
-      "title": "Maritime fees suspended",
-      "source": "U.S. Trade Representative / Federal Register",
-      "url": "https://ustr.gov/sites/default/files/files/Issue_Areas/Enforcement/Section%20301/USTR%20Section%20301%20Ships%20FRN%20Further%20Suspension.pdf",
-      "source_domain": "ustr.gov",
-      "source_tier": "A",
-      "published_at": "2026-11-10T00:00:00.000Z",
-      "age_days": 1,
+      "title": "Rare-earth controls paused",
+      "source": "Market Access Map",
+      "url": "https://legacy.macmap.org/monitor",
+      "source_domain": "legacy.macmap.org",
+      "source_tier": "C",
+      "published_at": "2026-11-14T00:00:00.000Z",
+      "age_days": 0,
       "cluster": "trade_supply_technology",
       "domains": [
         "trade",
-        "supply_chain"
+        "supply_chain",
+        "technology"
       ],
-      "geography": "United States-China maritime trade",
+      "geography": "China-U.S.",
       "evidence_type": "stabilizer",
       "materiality": "high",
-      "fact": "USTR extended suspension of targeted maritime fees and cargo-equipment duties through January 10, 2027, avoiding near-term shipping-cost increases and potential commercial disruption.",
+      "fact": "China extended through January 10, 2027, the suspension of controls covering selected rare earths, related technologies, lithium-battery inputs, and synthetic graphite.",
       "americas_relevant": true
     },
     {
       "id": "E5",
-      "title": "Rare-earth vulnerability persists",
-      "source": "International Energy Agency",
-      "url": "https://www.iea.org/reports/global-critical-minerals-outlook-2026/executive-summary",
-      "source_domain": "iea.org",
-      "source_tier": "A",
-      "published_at": "2026-11-11T00:00:00.000Z",
-      "age_days": 0,
-      "cluster": "trade_supply_technology",
-      "domains": [
-        "supply_chain",
-        "technology"
-      ],
-      "geography": "Global, with China-centered processing",
-      "evidence_type": "forward",
-      "materiality": "high",
-      "fact": "IEA says suspended Chinese rare-earth controls still leave concentrated processing and magnet capacity capable of threatening automotive, technology, defense, and energy supply chains.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E6",
-      "title": "China semiconductor exports surge",
+      "title": "Nvidia export controls disputed",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/0fc56d7bd8bbff86ce6672bb67691f22",
+      "url": "https://apnews.com/article/17582a5098a5fb4c8fe866a084a6e52b",
       "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-11-10T00:00:00.000Z",
+      "published_at": "2026-11-13T00:00:00.000Z",
       "age_days": 1,
       "cluster": "trade_supply_technology",
       "domains": [
-        "trade",
         "technology",
+        "trade",
         "supply_chain"
       ],
-      "geography": "China and global markets",
+      "geography": "United States-China",
       "evidence_type": "observed",
-      "materiality": "medium",
-      "fact": "China’s semiconductor exports rose 137.1% year over year in October, amid heightened U.S. trade barriers and possible additional European restrictions.",
+      "materiality": "high",
+      "fact": "U.S. officials publicly disputed delays in restricting Nvidia semiconductor exports to a Singapore-based company accused of enabling Chinese access.",
       "americas_relevant": true
     },
     {
       "id": "E7",
-      "title": "Treasury plans liquidity support",
-      "source": "U.S. Department of the Treasury",
-      "url": "https://home.treasury.gov/news/press-releases/sb0678",
-      "source_domain": "home.treasury.gov",
+      "title": "Financial markets resilient, risks elevated",
+      "source": "IMF",
+      "url": "https://mediacenter.imf.org/press-briefings/imf---global-financial-stability-report-annual-meetings--2026/s/f55368c1-983b-45b7-ba7c-1978f67c168c",
+      "source_domain": "mediacenter.imf.org",
       "source_tier": "A",
-      "published_at": "2026-11-04T00:00:00.000Z",
-      "age_days": 7,
+      "published_at": "2026-10-13T00:00:00.000Z",
+      "age_days": 32,
+      "cluster": "cyber_infrastructure_finance",
+      "domains": [
+        "financial",
+        "technology"
+      ],
+      "geography": "Global",
+      "evidence_type": "forward",
+      "materiality": "medium",
+      "fact": "IMF says markets remain resilient, but cyber incidents, rising sovereign yields, and private-credit liquidity pressures could trigger broader financial stress.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E8",
+      "title": "U.S. Treasury liquidity remains favorable",
+      "source": "IMF Global Financial Stability Report",
+      "url": "https://www.imf.org/-/media/files/publications/gfsr/2026/october/english/ch1.pdf",
+      "source_domain": "imf.org",
+      "source_tier": "A",
+      "published_at": "2026-10-01T00:00:00.000Z",
+      "age_days": 44,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
         "financial"
@@ -923,158 +973,154 @@
       "geography": "United States",
       "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "Treasury plans purchases of up to $70 billion in off-the-run securities and $25 billion in short-maturity securities during November 2026–January 2027.",
+      "fact": "IMF reports U.S. Treasury-market liquidity metrics were favorable in recent months, while warning that leverage and sovereign-debt rollover risks remain.",
       "americas_relevant": true
     },
     {
-      "id": "E8",
-      "title": "Financial cyber-risk remains systemic",
-      "source": "International Monetary Fund",
-      "url": "https://www.imf.org/-/media/files/publications/gfsr/2026/october/english/ch1.pdf",
-      "source_domain": "imf.org",
+      "id": "E9",
+      "title": "Cyber risk could impair financial services",
+      "source": "Federal Reserve",
+      "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20260508.pdf",
+      "source_domain": "federalreserve.gov",
       "source_tier": "A",
-      "published_at": "2026-10-01T00:00:00.000Z",
-      "age_days": 41,
+      "published_at": "2026-05-08T00:00:00.000Z",
+      "age_days": 190,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
         "technology",
         "financial"
       ],
-      "geography": "Global",
+      "geography": "United States",
       "evidence_type": "forward",
       "materiality": "medium",
-      "fact": "The IMF warns that attacks on payments, trading, deposits, cloud providers, or financial-market utilities could rapidly impair credit and financial-service provision.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E9",
-      "title": "Haiti offensive risks civilian escalation",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/5c8a5e284835778c31c9ff78c140afcd",
-      "source_domain": "apnews.com",
-      "source_tier": "A",
-      "published_at": "2026-11-11T00:00:00.000Z",
-      "age_days": 0,
-      "cluster": "americas_civil",
-      "domains": [
-        "civil_unrest",
-        "public_health",
-        "domestic"
-      ],
-      "geography": "Haiti / Caribbean",
-      "evidence_type": "forward",
-      "materiality": "high",
-      "fact": "Salvadoran forces’ Haiti offensive is raising concerns that opaque operations could worsen violence and affect civilians.",
+      "fact": "The Federal Reserve warns a cyber event affecting financial institutions or critical providers could degrade liquidity, confidence, payments, and access to financial services.",
       "americas_relevant": true
     },
     {
       "id": "E10",
-      "title": "Immigration enforcement disrupts access",
+      "title": "FAA ground stop disrupts regional air travel",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/f3b9d1c9aab7d701c9b2c2550efa0332",
+      "url": "https://apnews.com/article/1fbf4992f0ddaa4c463b0e4990b6e291",
       "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-11-11T00:00:00.000Z",
+      "published_at": "2026-11-14T00:00:00.000Z",
       "age_days": 0,
       "cluster": "americas_civil",
       "domains": [
-        "domestic",
-        "civil_unrest"
+        "critical_infrastructure",
+        "domestic"
       ],
-      "geography": "United States",
+      "geography": "United States, Canada, Caribbean, South America",
       "evidence_type": "observed",
-      "materiality": "medium",
-      "fact": "Masked immigration officers blocked a Los Angeles hospital emergency-room driveway, while arrests continued in multiple U.S. communities.",
+      "materiality": "high",
+      "fact": "A U.S. nationwide FAA ground stop halted flights Friday; departures resumed, but airlines warned of cascading delays and rebooking through Sunday.",
       "americas_relevant": true
     },
     {
       "id": "E11",
-      "title": "U.S. Ebola entry restriction",
-      "source": "CDC",
-      "url": "https://www.cdc.gov/port-health/media/pdfs/2026/11/November-T42-Order_signed.pdf",
-      "source_domain": "cdc.gov",
+      "title": "Haiti food insecurity worsens amid violence",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/e7054f6124e386240f10c9ff3ad45331",
+      "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-11-09T00:00:00.000Z",
-      "age_days": 2,
+      "published_at": "2026-11-11T00:00:00.000Z",
+      "age_days": 3,
       "cluster": "americas_civil",
       "domains": [
-        "public_health",
-        "domestic"
+        "food",
+        "civil_unrest",
+        "public_health"
       ],
-      "geography": "United States",
-      "evidence_type": "stabilizer",
+      "geography": "Haiti",
+      "evidence_type": "observed",
       "materiality": "high",
-      "fact": "CDC issued a temporary 30-day suspension on covered entries, citing Ebola-importation risk while an ongoing public-health assessment continues.",
+      "fact": "Nearly six million Haitians face severe hunger, including almost two million at emergency levels, amid gang violence, displacement, high prices, and El Niño effects.",
       "americas_relevant": true
     },
     {
       "id": "E12",
-      "title": "South Texas flooding",
-      "source": "Texas Division of Emergency Management",
-      "url": "https://olympus.soc.texas.gov/services/Sitrep/GetFile.aspx?id=17779",
-      "source_domain": "olympus.soc.texas.gov",
-      "source_tier": "A",
-      "published_at": "2026-11-09T00:00:00.000Z",
-      "age_days": 2,
-      "cluster": "food_health_natural",
+      "title": "Migration caravan forming in southern Mexico",
+      "source": "Reuters via MarketScreener",
+      "url": "https://www.marketscreener.com/news/mexico-s-sheinbaum-says-migrant-caravan-not-moving-toward-us-now-as-trump-threatens-tariffs-ce785eded98af623",
+      "source_domain": "marketscreener.com",
+      "source_tier": "C",
+      "published_at": "2026-11-13T00:00:00.000Z",
+      "age_days": 1,
+      "cluster": "americas_civil",
       "domains": [
-        "natural",
         "domestic",
-        "critical_infrastructure"
+        "supply_chain"
       ],
-      "geography": "Texas, United States",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "Heavy rainfall and flash-flooding threats continued across South Texas, with state emergency resources deployed for local storm response.",
+      "geography": "Mexico, United States",
+      "evidence_type": "forward",
+      "materiality": "medium",
+      "fact": "A migrant group of roughly 870 to 2,000 people gathered near Mexico’s Guatemala border, but officials said it was not currently moving north toward the United States.",
       "americas_relevant": true
     },
     {
       "id": "E13",
-      "title": "Texas wildfire danger",
-      "source": "Texas Division of Emergency Management",
-      "url": "https://olympus.soc.texas.gov/services/Sitrep/GetFile.aspx?id=17775",
-      "source_domain": "olympus.soc.texas.gov",
+      "title": "Ebola remains international emergency",
+      "source": "WHO",
+      "url": "https://www.who.int/news-room/speeches/item/who-director-general-s-opening-remarks-at-the-member-state-briefing-on-ebola-outbreak-in-the-democratic-republic-of-the-congo---11-november-2026",
+      "source_domain": "who.int",
       "source_tier": "A",
-      "published_at": "2026-11-09T00:00:00.000Z",
-      "age_days": 2,
+      "published_at": "2026-11-11T00:00:00.000Z",
+      "age_days": 3,
       "cluster": "food_health_natural",
       "domains": [
-        "natural",
-        "domestic"
+        "public_health"
       ],
-      "geography": "Texas, United States",
+      "geography": "Democratic Republic of the Congo",
       "evidence_type": "observed",
-      "materiality": "medium",
-      "fact": "Despite recent rainfall, high wildfire danger persisted in parts of Texas, with new wildfire starts reported daily over several days.",
-      "americas_relevant": true
+      "materiality": "high",
+      "fact": "WHO says DRC’s Ebola outbreak remains an international emergency, with nearly 11,000 confirmed cases, over 5,300 deaths, and new hotspots despite slowing transmission elsewhere.",
+      "americas_relevant": false
     },
     {
       "id": "E14",
-      "title": "U.S. crop-weather exposure",
-      "source": "USDA National Agricultural Statistics Service",
-      "url": "https://esmis.nal.usda.gov/sites/default/release-files/796144/crop1126.pdf",
-      "source_domain": "esmis.nal.usda.gov",
+      "title": "West Coast storm hazards",
+      "source": "NOAA/NWS",
+      "url": "https://cpc.ncep.noaa.gov/cpc_key_messages/CPC-Key-Message-1.html",
+      "source_domain": "cpc.ncep.noaa.gov",
       "source_tier": "A",
-      "published_at": "2026-11-10T00:00:00.000Z",
-      "age_days": 1,
+      "published_at": "2026-11-06T00:00:00.000Z",
+      "age_days": 8,
       "cluster": "food_health_natural",
       "domains": [
-        "food",
         "natural"
       ],
-      "geography": "United States",
+      "geography": "Western United States",
       "evidence_type": "forward",
       "materiality": "medium",
-      "fact": "USDA reported extreme-to-exceptional drought across substantial parts of Arkansas, Louisiana, Mississippi, and Tennessee entering November.",
+      "fact": "NOAA forecasts heavy precipitation, high winds, and high-elevation snow across parts of the West on November 14–15, with possible flooding and power outages.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E15",
+      "title": "No near-term Atlantic cyclone",
+      "source": "National Weather Service",
+      "url": "https://www.weather.gov/srh/tropical?ncid=edlinkushpmg00000313&office=tbw",
+      "source_domain": "weather.gov",
+      "source_tier": "A",
+      "published_at": "2026-11-14T00:00:00.000Z",
+      "age_days": 0,
+      "cluster": "food_health_natural",
+      "domains": [
+        "natural"
+      ],
+      "geography": "Atlantic, Caribbean, Gulf of America",
+      "evidence_type": "stabilizer",
+      "materiality": "medium",
+      "fact": "NWS reports no active storms and no tropical-cyclone formation expected in the Atlantic, Caribbean, Gulf, or eastern and central Pacific during the next seven days.",
       "americas_relevant": true
     }
   ],
   "api_usage": {
     "research_model": "gpt-5.6-luna",
     "assessment_model": "gpt-5.6-terra",
-    "web_search_calls": 5,
-    "estimated_run_cost_usd": 0.087541,
-    "estimated_period_spend_usd": 5.91412,
+    "web_search_calls": 7,
+    "estimated_run_cost_usd": 0.110583,
+    "estimated_period_spend_usd": 6.170838,
     "allocated_90_day_budget_usd": 10,
     "operational_stop_usd": 9
   },
