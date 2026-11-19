@@ -2,18 +2,18 @@
   "schema_version": 5,
   "engine_version": "5.3",
   "data_status": "VERIFIED",
-  "as_of": "2026-11-18",
-  "updated_at": "2026-11-18T20:31:04.903Z",
-  "last_successful_update": "2026-11-18T20:31:04.903Z",
-  "preparedness_urgency": 87,
-  "raw_preparedness_urgency": 87,
+  "as_of": "2026-11-19",
+  "updated_at": "2026-11-19T20:34:22.621Z",
+  "last_successful_update": "2026-11-19T20:34:22.621Z",
+  "preparedness_urgency": 85,
+  "raw_preparedness_urgency": 85,
   "preparedness_stage": "HIGH ALERT",
   "global_threat_pressure": 89,
   "leading_threat_pressure": 89,
   "observed_civilian_disruption": 85,
   "americas_exposure": 89,
   "americas_stage": "SEVERE",
-  "americas_summary": "The Americas face high exposure through oil prices and maritime trade, U.S. technology restrictions and financial/cyber risk, localized South Florida flooding, and residual cross-border aviation disruption. No evidence shows a broad Americas-wide essential-service failure.",
+  "americas_summary": "The Americas face direct exposure through energy prices, trade and critical-mineral dependencies, a U.S. banking-payment disruption, South Florida flooding, Mexican highway blockades, and active U.S. foodborne investigations.",
   "americas_components": [
     {
       "name": "Energy security",
@@ -22,7 +22,7 @@
     },
     {
       "name": "Supply chain & transportation",
-      "score": 99,
+      "score": 98,
       "trend": "rising"
     },
     {
@@ -37,39 +37,39 @@
     },
     {
       "name": "Critical infrastructure / cyber",
-      "score": 95,
+      "score": 94,
       "trend": "rising"
     },
     {
-      "name": "Domestic institutional stress",
-      "score": 92,
+      "name": "Technology chokepoints",
+      "score": 86,
       "trend": "rising"
     }
   ],
   "conflict_escalation": 99,
-  "coupling_score": 84,
-  "momentum_score": 82,
-  "confidence_score": 86,
-  "confidence_level": "HIGH",
-  "confidence_rationale": "Fresh, direct Tier-A reporting covers the principal disruptions and stabilizers across all domains; several forward-looking finance and trade claims rely on lower-tier reporting. Evidence gate: 15 items, 8 sources, 5 Tier-A sources, 5/5 clusters.",
+  "coupling_score": 72,
+  "momentum_score": 79,
+  "confidence_score": 75,
+  "confidence_level": "MODERATE",
+  "confidence_rationale": "Fresh, multi-source, mostly Tier-A evidence covers all domains, though several forward-looking and localized claims limit certainty. Evidence gate: 15 items, 6 sources, 4 Tier-A sources, 5/5 clusters.",
   "preparedness_window": "Days to weeks",
-  "summary": "Severe, multi-domain disruption persists, led by active Gulf shipping insecurity and reduced oil flows, with localized U.S. flooding and continuing infrastructure/health pressures. Stabilizers show partial tanker-flow recovery, restored FAA operations, and resilient bank/payment capacity.",
-  "primary_driver": "Active military risk around the Strait of Hormuz is reinforcing energy, shipping, trade, and financial-risk exposure.",
+  "summary": "High but uneven disruption risk persists: Gulf conflict pressures energy and shipping, while flooding and localized transport disruptions affect the Americas. Some tanker recovery, trade facilitation, and resilient banking indicators provide offsets.",
+  "primary_driver": "Military escalation around the Strait of Hormuz and associated energy/shipping risk.",
   "primary_stabilizers": [
-    "Gulf oil exports excluding Oman reached 18.4 million barrels per day in October, recovering faster than expected but remaining 26% below prewar levels amid tanker attacks.",
-    "China extended suspension of new rare-earth export controls until January 2027, temporarily reducing immediate disruption risk for critical-mineral and magnet supply chains.",
-    "The ECB says cyber threats, AI exposures, sovereign debt, and non-bank vulnerabilities are rising, while banks retain ample liquidity, capital, and profitability.",
-    "Federal Reserve Governor Christopher Waller said the Fed will provide core payment and settlement infrastructure while monitoring financial-stability risks from digital finance.",
-    "The FAA lifted its nationwide ground stop, though airlines warned that cancellations and cross-border flight disruptions could continue into the following day."
+    "EIA reports Middle East chokepoint oil shipments rose 19% in third-quarter 2026, while escorted tanker movements helped restore Gulf shipments toward prewar levels.",
+    "Kenya selected a U.S. consortium to develop niobium and rare-earth deposits, advancing alternatives to China-centered critical-mineral supply chains.",
+    "WTO reporting says export-facilitating measures covered $570 billion of trade in the first half of 2026, partially offsetting restrictive measures.",
+    "EU/EEA banks remain well-capitalized, liquid, and profitable, with a 16.2% CET1 ratio, despite cyber threats and sovereign-yield sensitivity.",
+    "The United States and Venezuela signed an agreement restoring military ties, including joint training and intelligence sharing, potentially strengthening bilateral security coordination."
   ],
   "domains": [
     {
       "key": "energy",
       "threat": 99,
-      "impact": 97,
+      "impact": 96,
       "americas_exposure": 99,
       "trend": "rising",
-      "rationale": "Tanker strike and regional attacks sustain Hormuz risk; exports remain 26% below prewar levels despite recovery.",
+      "rationale": "Gulf strikes and blockade-linked pressure sustain high energy risk; escorted tanker flows are partly recovering.",
       "name": "Energy security",
       "weight": 11
     },
@@ -79,27 +79,27 @@
       "impact": 98,
       "americas_exposure": 90,
       "trend": "rising",
-      "rationale": "Iranian strikes in Kuwait and Bahrain and tanker attacks show active regional escalation.",
+      "rationale": "Iranian attacks and U.S. strikes, with two carriers deployed, show active escalation.",
       "name": "Military / geopolitical",
       "weight": 10
     },
     {
       "key": "supply_chain",
-      "threat": 99,
-      "impact": 97,
-      "americas_exposure": 99,
+      "threat": 98,
+      "impact": 96,
+      "americas_exposure": 98,
       "trend": "rising",
-      "rationale": "Tanker insecurity and below-prewar Gulf exports constrain a major shipping and energy corridor.",
+      "rationale": "Chokepoint disruption and Jalisco road blockades affect logistics, partly offset by tanker recovery and trade facilitation.",
       "name": "Supply chain & transportation",
       "weight": 10
     },
     {
       "key": "trade",
-      "threat": 80,
+      "threat": 82,
       "impact": 77,
       "americas_exposure": 85,
       "trend": "rising",
-      "rationale": "Hormuz disruption and expanded U.S. chip-access rules pressure trade; rare-earth controls remain paused.",
+      "rationale": "AI export controls and Iranian shipping disruption constrain trade; facilitation measures partly offset restrictions.",
       "name": "Global trade fragmentation",
       "weight": 10
     },
@@ -109,57 +109,57 @@
       "impact": 80,
       "americas_exposure": 86,
       "trend": "rising",
-      "rationale": "Advanced-computing access restrictions are active, while cyber and AI-finance vulnerabilities remain elevated.",
+      "rationale": "Expanded AI access controls and payment-service disruption sustain technology-access and service-continuity risk.",
       "name": "Technology chokepoints",
       "weight": 7
     },
     {
       "key": "critical_infrastructure",
-      "threat": 90,
-      "impact": 90,
-      "americas_exposure": 95,
+      "threat": 89,
+      "impact": 89,
+      "americas_exposure": 94,
       "trend": "rising",
-      "rationale": "South Florida flooding disrupted roads; recent aviation disruption and cyber-risk warnings sustain exposure.",
+      "rationale": "South Florida flooding closed highway sections and damaged buildings; regional road blockades add transport strain.",
       "name": "Critical infrastructure / cyber",
       "weight": 11
     },
     {
       "key": "financial",
       "threat": 86,
-      "impact": 80,
+      "impact": 79,
       "americas_exposure": 89,
-      "trend": "rising",
-      "rationale": "AI/cyber, sovereign, and non-bank risks remain elevated, though bank liquidity and payment support are stabilizers.",
+      "trend": "stable",
+      "rationale": "A U.S. bank technical outage delayed payments, while banking resilience evidence moderates systemic disruption.",
       "name": "Financial-system stress",
       "weight": 10
     },
     {
       "key": "food",
       "threat": 83,
-      "impact": 68,
+      "impact": 69,
       "americas_exposure": 83,
       "trend": "rising",
-      "rationale": "El Niño threatens staple production; active U.S. foodborne investigations add localized food-safety pressure.",
+      "rationale": "Twenty-seven active multistate foodborne investigations sustain food-safety disruption risk; recent outbreaks are closed.",
       "name": "Food & agriculture",
       "weight": 8
     },
     {
       "key": "domestic",
-      "threat": 84,
-      "impact": 86,
-      "americas_exposure": 92,
+      "threat": 83,
+      "impact": 85,
+      "americas_exposure": 91,
       "trend": "rising",
-      "rationale": "South Florida emergency flooding and residual aviation disruption demonstrate ongoing civilian disruption.",
+      "rationale": "South Florida emergency declarations and flooding cause localized domestic disruption; bilateral security cooperation is an offset.",
       "name": "Domestic institutional stress",
       "weight": 6
     },
     {
       "key": "civil_unrest",
       "threat": 68,
-      "impact": 63,
+      "impact": 64,
       "americas_exposure": 70,
       "trend": "stable",
-      "rationale": "Guatemala's security emergency reflects violence-related risk, without evidence of wider regional civil disruption.",
+      "rationale": "Jalisco producer blockades created concrete road-access disruption, but evidence supports a localized event.",
       "name": "Civil unrest / public order",
       "weight": 7
     },
@@ -169,7 +169,7 @@
       "impact": 78,
       "americas_exposure": 72,
       "trend": "stable",
-      "rationale": "Multiple active U.S. foodborne investigations persist; reported avian-flu outbreaks are animal cases outside the Americas.",
+      "rationale": "Active multistate foodborne investigations remain significant, while two sprout outbreaks have been closed.",
       "name": "Public health / biological",
       "weight": 5
     },
@@ -179,42 +179,28 @@
       "impact": 94,
       "americas_exposure": 97,
       "trend": "rising",
-      "rationale": "South Florida flooding caused direct damage and access disruption; strong El Niño raises broader crop risk.",
+      "rationale": "Severe South Florida rainfall flooded homes and roads, caused structural damage, and prompted emergency declarations.",
       "name": "Natural / environmental",
       "weight": 5
     }
   ],
-  "hard_triggers": [
-    {
-      "type": "shipping_chokepoint_closure",
-      "verified": true,
-      "scope": "multinational",
-      "status": "active",
-      "summary": "Hormuz transit is materially constrained by tanker attacks and mine danger; Gulf oil exports remain 26% below prewar levels.",
-      "source_url": "https://apnews.com/article/8830a880160d69e2d7f1fd654207a121",
-      "evidence_ids": [
-        "E1",
-        "E2",
-        "E3"
-      ]
-    }
-  ],
-  "verified_hard_trigger_count": 1,
-  "severe_hard_trigger_count": 1,
+  "hard_triggers": [],
+  "verified_hard_trigger_count": 0,
+  "severe_hard_trigger_count": 0,
   "score_calibration": {
-    "raw_score": 87,
-    "published_score": 87,
-    "previous_daily_anchor": 86,
+    "raw_score": 85,
+    "published_score": 85,
+    "previous_daily_anchor": 87,
     "rate_limit_applied": false,
-    "daily_rate_limit": null,
+    "daily_rate_limit": 3,
     "sustained_90_for_48h": false,
     "high_impact_domain_count": 10
   },
   "score_components": {
     "global_threat_pressure": 89,
     "observed_civilian_disruption": 85,
-    "coupling": 84,
-    "momentum": 82,
+    "coupling": 72,
+    "momentum": 79,
     "americas_exposure": 89
   },
   "drivers": [
@@ -244,60 +230,60 @@
       "note": ""
     },
     {
-      "name": "Domestic institutional stress",
-      "severity": "high",
+      "name": "Technology chokepoints",
+      "severity": "critical",
       "note": ""
     }
   ],
   "areas_to_watch": [
     {
-      "name": "Strait of Hormuz shipping and Gulf oil flows",
+      "name": "Strait of Hormuz energy and shipping",
       "severity": "critical",
-      "why": "Further attacks, mines, or escort failures could deepen fuel and freight disruption."
+      "why": "Active military escalation and blockade-related disruption can rapidly raise fuel and freight impacts."
     },
     {
-      "name": "South Florida flood recovery",
+      "name": "South Florida flooding and transport access",
       "severity": "high",
-      "why": "Road-access disruption and emergency conditions may worsen with additional rainfall."
+      "why": "Flooding has closed highway sections, damaged structures, and prompted emergency declarations."
     },
     {
-      "name": "U.S.-China technology and critical-mineral measures",
-      "severity": "high",
-      "why": "Reciprocal controls could disrupt AI hardware, magnets, and industrial supply chains."
-    },
-    {
-      "name": "Financial and payment-system cyber risk",
+      "name": "U.S. payment-service continuity",
       "severity": "medium",
-      "why": "Authorities identify rising cyber, AI-concentration, and non-bank vulnerabilities, though core resilience remains supported."
+      "why": "The Chase technical incident delayed online banking and Zelle transfers, though not attributed to cyberattack."
     },
     {
-      "name": "El Niño crop conditions and U.S. foodborne investigations",
+      "name": "Jalisco freight corridors",
       "severity": "medium",
-      "why": "Crop-production risks and active investigations could increase food-price or safety pressures."
+      "why": "Highway blockades near Guadalajara may delay regional road freight."
+    },
+    {
+      "name": "U.S. foodborne outbreaks",
+      "severity": "medium",
+      "why": "CDC lists 27 active multistate foodborne investigations."
     }
   ],
   "signals": [
     {
-      "title": "Tanker struck near Hormuz",
-      "summary": "A projectile struck a tanker transiting the Strait of Hormuz, causing an engine-room fire; no casualties were reported, while Iran warned the route remained dangerous because of mines.",
-      "url": "https://apnews.com/article/8830a880160d69e2d7f1fd654207a121",
+      "title": "Iran-U.S. strikes continue",
+      "summary": "Iran attacked a U.S. radar site in Bahrain, prompting U.S. strikes near the Strait of Hormuz and sustaining escalation risks to shipping and energy infrastructure.",
+      "url": "https://apnews.com/article/582e0b5d51be06f0ed630fac24f39b72",
       "source": "Associated Press",
-      "published_at": "2026-11-16T00:00:00.000Z",
+      "published_at": "2026-11-17T00:00:00.000Z",
       "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Gulf attacks widen",
-      "summary": "Iran targeted a U.S. air base in Kuwait and sites in Bahrain, increasing miscalculation risk as American escorts help restore tanker passage through Hormuz.",
-      "url": "https://apnews.com/article/b1f0b530cffe951e6fcc1e27b2e1af94",
+      "title": "Carriers return to Middle East",
+      "summary": "The U.S. again has two aircraft carriers supporting Iran operations while a naval blockade disrupts Iranian shipping and raises global energy-price pressure.",
+      "url": "https://apnews.com/article/f72d5aa085500412989183e606bfadfd",
       "source": "Associated Press",
       "published_at": "2026-11-18T00:00:00.000Z",
       "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "AI-chip access tightened",
-      "summary": "U.S. rules now restrict remote access to advanced computing chips and servers, extending controls beyond direct exports and increasing compliance pressure on regional data centers.",
+      "title": "AI-access controls expanded",
+      "summary": "U.S. export controls now block indirect Chinese access to advanced American AI technology through third-country remote-computing arrangements.",
       "url": "https://apnews.com/article/60f868d3bb430b85a8657b27d421096e",
       "source": "Associated Press",
       "published_at": "2026-11-16T00:00:00.000Z",
@@ -305,47 +291,47 @@
       "impact": "up"
     },
     {
-      "title": "Trade truce remains fragile",
-      "summary": "New U.S. semiconductor restrictions and possible Chinese countermeasures could reopen a tit-for-tat cycle affecting AI hardware, rare earths, and critical-mineral trade.",
-      "url": "https://www.breakingviews.com/ddb76cfb4026/columns/breaking-view/chip-curbs-threaten-us-china-trade-truce-2026-11-18/",
-      "source": "Reuters Breakingviews",
-      "published_at": "2026-11-18T00:00:00.000Z",
-      "category": "TRADE",
+      "title": "U.S. bank outage delayed payments",
+      "summary": "A JPMorgan Chase technical problem slowed online banking and delayed some Zelle transfers; Chase said it was not a cyberattack.",
+      "url": "https://apnews.com/article/50fee2693c22f597fa6ca51a97ef2cda",
+      "source": "Associated Press",
+      "published_at": "2026-11-16T00:00:00.000Z",
+      "category": "FINANCE",
       "impact": "up"
     },
     {
-      "title": "ECB flags cyber and sovereign risks",
-      "summary": "The ECB says cyber threats, AI exposures, sovereign debt, and non-bank vulnerabilities are rising, while banks retain ample liquidity, capital, and profitability.",
-      "url": "https://www.ecb.europa.eu/press/financial-stability-publications/fsr/html/ecb.fsr202611~e03b919d36.el.html",
-      "source": "European Central Bank",
-      "published_at": "2026-11-18T00:00:00.000Z",
-      "category": "TECH",
-      "impact": "up"
-    },
-    {
-      "title": "Fed sees AI-finance concentration risk",
-      "summary": "Federal Reserve survey respondents identified AI as the leading financial-stability concern, citing cyberattacks, complex financing, and risks of a broad market correction.",
-      "url": "https://www.investing.com/news/economy-news/ai-rockets-to-top-of-worries-about-financial-system-in-latest-fed-survey-5026488",
-      "source": "Federal Reserve reporting via Reuters",
-      "published_at": "2026-11-13T00:00:00.000Z",
-      "category": "TECH",
+      "title": "Sovereign yields and cyber risk threaten liquidity",
+      "summary": "The EBA warns higher sovereign yields can raise funding costs or disrupt debt issuance, while cyber incidents may interrupt payments and banking services.",
+      "url": "https://www.eba.europa.eu/sites/default/files/2026-11/828f300c-6a34-45c0-bbad-82ea626bf8fa/Risk%20Assessment%20Report%20-%20Autumn%202026_0.pdf",
+      "source": "European Banking Authority",
+      "published_at": "2026-11-19T00:00:00.000Z",
+      "category": "FINANCE",
       "impact": "up"
     },
     {
       "title": "South Florida flooding",
-      "summary": "Heavy rain triggered an emergency declaration in South Florida, flooding roads, submerging cars, and collapsing a synagogue roof.",
+      "summary": "Heavy rain flooded streets and homes, closed highway sections, collapsed a synagogue roof, and prompted emergency declarations in Broward County, Fort Lauderdale, and Hollywood.",
       "url": "https://apnews.com/article/a2eb0ab46c06ff3e6809c395466bf949",
       "source": "Associated Press",
       "published_at": "2026-11-18T00:00:00.000Z",
+      "category": "NATURAL",
+      "impact": "up"
+    },
+    {
+      "title": "Jalisco highway blockades",
+      "summary": "Agricultural producers blocked multiple highways outside Guadalajara, disrupting road access and potentially delaying regional freight movement.",
+      "url": "https://www.defconlevel.com/rapid-alerts/digest/",
+      "source": "U.S. Embassy Security Alerts, reported by Defcon Level",
+      "published_at": "2026-11-17T00:00:00.000Z",
       "category": "CIVIL",
       "impact": "up"
     },
     {
-      "title": "El Niño threatens staple crops",
-      "summary": "FAO warned that strong El Niño conditions heighten risks to staple-crop production and food security across several regions.",
-      "url": "https://www.fao.org/giews/reports/giews-updates/en/",
-      "source": "FAO",
-      "published_at": "2026-11-17T00:00:00.000Z",
+      "title": "Active foodborne investigations",
+      "summary": "CDC reported 27 active multistate foodborne investigations on November 18, including 15 Salmonella, six E. coli, four Listeria, and two Campylobacter investigations.",
+      "url": "https://www.cdc.gov/foodborne-outbreaks/outbreaks/",
+      "source": "CDC",
+      "published_at": "2026-11-18T00:00:00.000Z",
       "category": "FOOD",
       "impact": "up"
     }
@@ -847,27 +833,37 @@
       "americas": 89,
       "conflict": 99,
       "momentum": 82
+    },
+    {
+      "date": "2026-11-19",
+      "preparedness": 85,
+      "raw_preparedness": 85,
+      "threat": 89,
+      "impact": 85,
+      "americas": 89,
+      "conflict": 99,
+      "momentum": 79
     }
   ],
   "evidence_quality": {
     "evidence_count": 15,
-    "fresh_count": 11,
-    "unique_sources": 8,
-    "tier_a_sources": 5,
+    "fresh_count": 13,
+    "unique_sources": 6,
+    "tier_a_sources": 4,
     "clusters": 5,
     "domains_covered": 12,
-    "confidence_cap": 88,
+    "confidence_cap": 75,
     "publishable": true
   },
   "evidence_log": [
     {
       "id": "E1",
-      "title": "Tanker struck near Hormuz",
+      "title": "Iran-U.S. strikes continue",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/8830a880160d69e2d7f1fd654207a121",
+      "url": "https://apnews.com/article/582e0b5d51be06f0ed630fac24f39b72",
       "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-11-16T00:00:00.000Z",
+      "published_at": "2026-11-17T00:00:00.000Z",
       "age_days": 2,
       "cluster": "military_energy_shipping",
       "domains": [
@@ -875,63 +871,63 @@
         "energy",
         "supply_chain"
       ],
-      "geography": "Strait of Hormuz / Gulf of Oman",
+      "geography": "Persian Gulf/Bahrain/Strait of Hormuz",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "A projectile struck a tanker transiting the Strait of Hormuz, causing an engine-room fire; no casualties were reported, while Iran warned the route remained dangerous because of mines.",
+      "fact": "Iran attacked a U.S. radar site in Bahrain, prompting U.S. strikes near the Strait of Hormuz and sustaining escalation risks to shipping and energy infrastructure.",
       "americas_relevant": true
     },
     {
       "id": "E2",
-      "title": "Gulf attacks widen",
+      "title": "Carriers return to Middle East",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/b1f0b530cffe951e6fcc1e27b2e1af94",
+      "url": "https://apnews.com/article/f72d5aa085500412989183e606bfadfd",
       "source_domain": "apnews.com",
       "source_tier": "A",
       "published_at": "2026-11-18T00:00:00.000Z",
-      "age_days": 0,
+      "age_days": 1,
       "cluster": "military_energy_shipping",
       "domains": [
         "military",
         "energy",
         "trade"
       ],
-      "geography": "Kuwait, Bahrain, Strait of Hormuz",
+      "geography": "Middle East",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "Iran targeted a U.S. air base in Kuwait and sites in Bahrain, increasing miscalculation risk as American escorts help restore tanker passage through Hormuz.",
+      "fact": "The U.S. again has two aircraft carriers supporting Iran operations while a naval blockade disrupts Iranian shipping and raises global energy-price pressure.",
       "americas_relevant": true
     },
     {
       "id": "E3",
       "title": "Tanker flows partly recover",
-      "source": "International Energy Agency",
-      "url": "https://www.iea.org/reports/oil-market-report-november-2026",
-      "source_domain": "iea.org",
+      "source": "U.S. Energy Information Administration",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68485",
+      "source_domain": "eia.gov",
       "source_tier": "A",
-      "published_at": "2026-11-13T00:00:00.000Z",
-      "age_days": 5,
+      "published_at": "2026-11-19T00:00:00.000Z",
+      "age_days": 0,
       "cluster": "military_energy_shipping",
       "domains": [
         "energy",
-        "supply_chain",
-        "trade"
+        "trade",
+        "supply_chain"
       ],
-      "geography": "Persian Gulf",
+      "geography": "Middle East chokepoints",
       "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "Gulf oil exports excluding Oman reached 18.4 million barrels per day in October, recovering faster than expected but remaining 26% below prewar levels amid tanker attacks.",
+      "fact": "EIA reports Middle East chokepoint oil shipments rose 19% in third-quarter 2026, while escorted tanker movements helped restore Gulf shipments toward prewar levels.",
       "americas_relevant": true
     },
     {
       "id": "E4",
-      "title": "AI-chip access tightened",
+      "title": "AI-access controls expanded",
       "source": "Associated Press",
       "url": "https://apnews.com/article/60f868d3bb430b85a8657b27d421096e",
       "source_domain": "apnews.com",
       "source_tier": "A",
       "published_at": "2026-11-16T00:00:00.000Z",
-      "age_days": 2,
+      "age_days": 3,
       "cluster": "trade_supply_technology",
       "domains": [
         "trade",
@@ -941,111 +937,109 @@
       "geography": "United States-China-Southeast Asia",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "U.S. rules now restrict remote access to advanced computing chips and servers, extending controls beyond direct exports and increasing compliance pressure on regional data centers.",
+      "fact": "U.S. export controls now block indirect Chinese access to advanced American AI technology through third-country remote-computing arrangements.",
       "americas_relevant": true
     },
     {
       "id": "E5",
-      "title": "Rare-earth controls paused",
-      "source": "Reuters",
-      "url": "https://www.investing.com/news/commodities-news/china-extends-suspension-of-new-rare-earth-controls-until-january-5010878",
-      "source_domain": "investing.com",
-      "source_tier": "C",
-      "published_at": "2026-11-09T00:00:00.000Z",
-      "age_days": 9,
+      "title": "Rare-earth sourcing diversifies",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/510f8850db4308eefdfac88996f6116b",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-11-19T00:00:00.000Z",
+      "age_days": 0,
       "cluster": "trade_supply_technology",
       "domains": [
-        "trade",
         "supply_chain",
+        "trade",
         "technology"
       ],
-      "geography": "China-global",
+      "geography": "Kenya-United States",
       "evidence_type": "stabilizer",
-      "materiality": "high",
-      "fact": "China extended suspension of new rare-earth export controls until January 2027, temporarily reducing immediate disruption risk for critical-mineral and magnet supply chains.",
+      "materiality": "medium",
+      "fact": "Kenya selected a U.S. consortium to develop niobium and rare-earth deposits, advancing alternatives to China-centered critical-mineral supply chains.",
       "americas_relevant": true
     },
     {
       "id": "E6",
-      "title": "Trade truce remains fragile",
-      "source": "Reuters Breakingviews",
-      "url": "https://www.breakingviews.com/ddb76cfb4026/columns/breaking-view/chip-curbs-threaten-us-china-trade-truce-2026-11-18/",
-      "source_domain": "breakingviews.com",
+      "title": "Export facilitation provides offset",
+      "source": "World Trade Organization",
+      "url": "https://www.wto.org/english/news_e/news_docs/DG_tprm.pdf",
+      "source_domain": "wto.org",
       "source_tier": "C",
-      "published_at": "2026-11-18T00:00:00.000Z",
-      "age_days": 0,
+      "published_at": "2026-11-17T00:00:00.000Z",
+      "age_days": 2,
       "cluster": "trade_supply_technology",
       "domains": [
         "trade",
-        "technology",
         "supply_chain"
       ],
-      "geography": "United States-China",
-      "evidence_type": "forward",
-      "materiality": "high",
-      "fact": "New U.S. semiconductor restrictions and possible Chinese countermeasures could reopen a tit-for-tat cycle affecting AI hardware, rare earths, and critical-mineral trade.",
+      "geography": "Global",
+      "evidence_type": "stabilizer",
+      "materiality": "medium",
+      "fact": "WTO reporting says export-facilitating measures covered $570 billion of trade in the first half of 2026, partially offsetting restrictive measures.",
       "americas_relevant": true
     },
     {
       "id": "E7",
-      "title": "ECB flags cyber and sovereign risks",
-      "source": "European Central Bank",
-      "url": "https://www.ecb.europa.eu/press/financial-stability-publications/fsr/html/ecb.fsr202611~e03b919d36.el.html",
-      "source_domain": "ecb.europa.eu",
+      "title": "U.S. bank outage delayed payments",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/50fee2693c22f597fa6ca51a97ef2cda",
+      "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-11-18T00:00:00.000Z",
-      "age_days": 0,
-      "cluster": "cyber_infrastructure_finance",
-      "domains": [
-        "technology",
-        "critical_infrastructure",
-        "financial"
-      ],
-      "geography": "Euro area",
-      "evidence_type": "forward",
-      "materiality": "high",
-      "fact": "The ECB says cyber threats, AI exposures, sovereign debt, and non-bank vulnerabilities are rising, while banks retain ample liquidity, capital, and profitability.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E8",
-      "title": "Fed sees AI-finance concentration risk",
-      "source": "Federal Reserve reporting via Reuters",
-      "url": "https://www.investing.com/news/economy-news/ai-rockets-to-top-of-worries-about-financial-system-in-latest-fed-survey-5026488",
-      "source_domain": "investing.com",
-      "source_tier": "C",
-      "published_at": "2026-11-13T00:00:00.000Z",
-      "age_days": 5,
-      "cluster": "cyber_infrastructure_finance",
-      "domains": [
-        "technology",
-        "financial"
-      ],
-      "geography": "United States",
-      "evidence_type": "forward",
-      "materiality": "high",
-      "fact": "Federal Reserve survey respondents identified AI as the leading financial-stability concern, citing cyberattacks, complex financing, and risks of a broad market correction.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E9",
-      "title": "Fed maintains payment-system support",
-      "source": "Federal Reserve speech reported by Reuters",
-      "url": "https://www.investing.com/news/economy-news/feds-waller-says-central-bank-will-work-with-private-sector-on-digital-finance-5033237",
-      "source_domain": "investing.com",
-      "source_tier": "C",
-      "published_at": "2026-11-17T00:00:00.000Z",
-      "age_days": 1,
+      "published_at": "2026-11-16T00:00:00.000Z",
+      "age_days": 3,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
         "financial",
         "technology"
       ],
       "geography": "United States",
-      "evidence_type": "stabilizer",
+      "evidence_type": "observed",
       "materiality": "medium",
-      "fact": "Federal Reserve Governor Christopher Waller said the Fed will provide core payment and settlement infrastructure while monitoring financial-stability risks from digital finance.",
+      "fact": "A JPMorgan Chase technical problem slowed online banking and delayed some Zelle transfers; Chase said it was not a cyberattack.",
       "americas_relevant": true
+    },
+    {
+      "id": "E8",
+      "title": "Banks remain resilient amid rising risks",
+      "source": "European Banking Authority",
+      "url": "https://eba.europa.eu/publications-and-media/press-releases/eueea-banks-continue-display-resilience-amid-sovereign-debt-pressures-borrower-vulnerabilities-and",
+      "source_domain": "eba.europa.eu",
+      "source_tier": "A",
+      "published_at": "2026-11-19T00:00:00.000Z",
+      "age_days": 0,
+      "cluster": "cyber_infrastructure_finance",
+      "domains": [
+        "financial",
+        "technology"
+      ],
+      "geography": "European Union/European Economic Area",
+      "evidence_type": "stabilizer",
+      "materiality": "high",
+      "fact": "EU/EEA banks remain well-capitalized, liquid, and profitable, with a 16.2% CET1 ratio, despite cyber threats and sovereign-yield sensitivity.",
+      "americas_relevant": false
+    },
+    {
+      "id": "E9",
+      "title": "Sovereign yields and cyber risk threaten liquidity",
+      "source": "European Banking Authority",
+      "url": "https://www.eba.europa.eu/sites/default/files/2026-11/828f300c-6a34-45c0-bbad-82ea626bf8fa/Risk%20Assessment%20Report%20-%20Autumn%202026_0.pdf",
+      "source_domain": "eba.europa.eu",
+      "source_tier": "A",
+      "published_at": "2026-11-19T00:00:00.000Z",
+      "age_days": 0,
+      "cluster": "cyber_infrastructure_finance",
+      "domains": [
+        "financial",
+        "technology"
+      ],
+      "geography": "European Union/European Economic Area",
+      "evidence_type": "forward",
+      "materiality": "high",
+      "fact": "The EBA warns higher sovereign yields can raise funding costs or disrupt debt issuance, while cyber incidents may interrupt payments and banking services.",
+      "americas_relevant": false
     },
     {
       "id": "E10",
@@ -1055,92 +1049,73 @@
       "source_domain": "apnews.com",
       "source_tier": "A",
       "published_at": "2026-11-18T00:00:00.000Z",
-      "age_days": 0,
+      "age_days": 1,
       "cluster": "americas_civil",
       "domains": [
-        "domestic",
+        "natural",
         "critical_infrastructure",
-        "natural"
+        "domestic"
       ],
       "geography": "United States—South Florida",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "Heavy rain triggered an emergency declaration in South Florida, flooding roads, submerging cars, and collapsing a synagogue roof.",
+      "fact": "Heavy rain flooded streets and homes, closed highway sections, collapsed a synagogue roof, and prompted emergency declarations in Broward County, Fort Lauderdale, and Hollywood.",
       "americas_relevant": true
     },
     {
       "id": "E11",
-      "title": "Guatemala security emergency",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/2a27775f3cacaa98fd79c70a293df727",
-      "source_domain": "apnews.com",
-      "source_tier": "A",
-      "published_at": "2026-11-16T00:00:00.000Z",
+      "title": "Jalisco highway blockades",
+      "source": "U.S. Embassy Security Alerts, reported by Defcon Level",
+      "url": "https://www.defconlevel.com/rapid-alerts/digest/",
+      "source_domain": "defconlevel.com",
+      "source_tier": "C",
+      "published_at": "2026-11-17T00:00:00.000Z",
       "age_days": 2,
       "cluster": "americas_civil",
       "domains": [
         "civil_unrest",
-        "domestic"
+        "supply_chain",
+        "critical_infrastructure"
       ],
-      "geography": "Guatemala",
+      "geography": "Mexico—Jalisco",
       "evidence_type": "observed",
       "materiality": "medium",
-      "fact": "Guatemala deployed additional security forces after declaring a 30-day state of emergency to curb drug-related violence near Honduras.",
+      "fact": "Agricultural producers blocked multiple highways outside Guadalajara, disrupting road access and potentially delaying regional freight movement.",
       "americas_relevant": true
     },
     {
       "id": "E12",
-      "title": "FAA ground stop lifted",
+      "title": "U.S.-Venezuela cooperation",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/6aaa6bd4991ef22eb0c3baa6961a91d1",
+      "url": "https://apnews.com/article/e02dd6173e575c644a37dd417d84296d",
       "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-11-14T00:00:00.000Z",
-      "age_days": 4,
+      "published_at": "2026-11-18T00:00:00.000Z",
+      "age_days": 1,
       "cluster": "americas_civil",
       "domains": [
-        "critical_infrastructure",
-        "domestic"
+        "domestic",
+        "critical_infrastructure"
       ],
-      "geography": "United States, Canada, Mexico, Caribbean",
+      "geography": "United States–Venezuela",
       "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "The FAA lifted its nationwide ground stop, though airlines warned that cancellations and cross-border flight disruptions could continue into the following day.",
+      "fact": "The United States and Venezuela signed an agreement restoring military ties, including joint training and intelligence sharing, potentially strengthening bilateral security coordination.",
       "americas_relevant": true
     },
     {
       "id": "E13",
-      "title": "El Niño threatens staple crops",
-      "source": "FAO",
-      "url": "https://www.fao.org/giews/reports/giews-updates/en/",
-      "source_domain": "fao.org",
-      "source_tier": "C",
-      "published_at": "2026-11-17T00:00:00.000Z",
+      "title": "Active foodborne investigations",
+      "source": "CDC",
+      "url": "https://www.cdc.gov/foodborne-outbreaks/outbreaks/",
+      "source_domain": "cdc.gov",
+      "source_tier": "A",
+      "published_at": "2026-11-18T00:00:00.000Z",
       "age_days": 1,
       "cluster": "food_health_natural",
       "domains": [
         "food",
-        "natural"
-      ],
-      "geography": "Global",
-      "evidence_type": "forward",
-      "materiality": "high",
-      "fact": "FAO warned that strong El Niño conditions heighten risks to staple-crop production and food security across several regions.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E14",
-      "title": "Foodborne investigations remain active",
-      "source": "CDC",
-      "url": "https://portugues.cdc.gov/foodborne-outbreaks/outbreaks/index.html",
-      "source_domain": "portugues.cdc.gov",
-      "source_tier": "A",
-      "published_at": "2026-11-18T00:00:00.000Z",
-      "age_days": 0,
-      "cluster": "food_health_natural",
-      "domains": [
-        "public_health",
-        "food"
+        "public_health"
       ],
       "geography": "United States",
       "evidence_type": "observed",
@@ -1149,32 +1124,52 @@
       "americas_relevant": true
     },
     {
-      "id": "E15",
-      "title": "Avian-flu animal outbreaks reported",
-      "source": "WHO",
-      "url": "https://cdn.who.int/media/docs/default-source/wpro---documents/emergency/surveillance/avian-influenza/ai_20261113.pdf",
-      "source_domain": "cdn.who.int",
+      "id": "E14",
+      "title": "Alfalfa-sprout outbreak closed",
+      "source": "CDC",
+      "url": "https://www.cdc.gov/ecoli/outbreaks/alfalfa-sprouts-08-26/investigation.html",
+      "source_domain": "cdc.gov",
       "source_tier": "A",
-      "published_at": "2026-11-13T00:00:00.000Z",
-      "age_days": 5,
+      "published_at": "2026-11-09T00:00:00.000Z",
+      "age_days": 10,
       "cluster": "food_health_natural",
       "domains": [
-        "public_health",
-        "food"
+        "food",
+        "public_health"
       ],
-      "geography": "Western Pacific",
-      "evidence_type": "observed",
+      "geography": "United States",
+      "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "WHO reported four new highly pathogenic avian-influenza outbreaks in animals across China, Japan, and South Korea during November 6–12.",
-      "americas_relevant": false
+      "fact": "CDC closed the alfalfa-sprout E. coli and Salmonella outbreak after 77 cases across 16 states and six hospitalizations were reported.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E15",
+      "title": "Broccoli-sprout outbreak closed",
+      "source": "CDC",
+      "url": "https://www.cdc.gov/salmonella/outbreaks/broccoli-sprouts-09-26/investigation.html",
+      "source_domain": "cdc.gov",
+      "source_tier": "A",
+      "published_at": "2026-11-04T00:00:00.000Z",
+      "age_days": 15,
+      "cluster": "food_health_natural",
+      "domains": [
+        "food",
+        "public_health"
+      ],
+      "geography": "United States",
+      "evidence_type": "stabilizer",
+      "materiality": "low",
+      "fact": "CDC reported the broccoli-sprout Salmonella outbreak over, with 34 cases across six states, three hospitalizations, and no deaths.",
+      "americas_relevant": true
     }
   ],
   "api_usage": {
     "research_model": "gpt-5.6-luna",
     "assessment_model": "gpt-5.6-terra",
-    "web_search_calls": 6,
-    "estimated_run_cost_usd": 0.100027,
-    "estimated_period_spend_usd": 6.547605,
+    "web_search_calls": 7,
+    "estimated_run_cost_usd": 0.108223,
+    "estimated_period_spend_usd": 6.655828,
     "allocated_90_day_budget_usd": 10,
     "operational_stop_usd": 9
   },
