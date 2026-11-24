@@ -4,68 +4,8 @@
   "period_end": "2026-12-09",
   "allocated_usd": 10,
   "operational_stop_usd": 9,
-  "estimated_spent_usd": 7.027276,
+  "estimated_spent_usd": 7.115158,
   "entries": [
-    {
-      "run_id": "38066786050",
-      "date": "2026-10-10",
-      "timestamp": "2026-10-10T16:14:37.039Z",
-      "stage": "research:cyber_infrastructure_finance",
-      "model": "gpt-5.6-luna",
-      "input_tokens": 13308,
-      "cached_input_tokens": 0,
-      "output_tokens": 594,
-      "web_search_calls": 1,
-      "estimated_cost_usd": 0.01362
-    },
-    {
-      "run_id": "38066786050",
-      "date": "2026-10-10",
-      "timestamp": "2026-10-10T16:15:05.474Z",
-      "stage": "research:americas_civil",
-      "model": "gpt-5.6-luna",
-      "input_tokens": 13637,
-      "cached_input_tokens": 0,
-      "output_tokens": 406,
-      "web_search_calls": 2,
-      "estimated_cost_usd": 0.02346
-    },
-    {
-      "run_id": "38066786050",
-      "date": "2026-10-10",
-      "timestamp": "2026-10-10T16:15:32.777Z",
-      "stage": "research:food_health_natural",
-      "model": "gpt-5.6-luna",
-      "input_tokens": 13331,
-      "cached_input_tokens": 0,
-      "output_tokens": 587,
-      "web_search_calls": 1,
-      "estimated_cost_usd": 0.013616
-    },
-    {
-      "run_id": "38066786050",
-      "date": "2026-10-10",
-      "timestamp": "2026-10-10T16:16:46.864Z",
-      "stage": "assessment",
-      "model": "gpt-5.6-terra",
-      "input_tokens": 3225,
-      "cached_input_tokens": 0,
-      "output_tokens": 961,
-      "web_search_calls": 0,
-      "estimated_cost_usd": 0.019593
-    },
-    {
-      "run_id": "38156290832",
-      "date": "2026-10-11",
-      "timestamp": "2026-10-11T16:38:32.940Z",
-      "stage": "research:military_energy_shipping",
-      "model": "gpt-5.6-luna",
-      "input_tokens": 13424,
-      "cached_input_tokens": 0,
-      "output_tokens": 601,
-      "web_search_calls": 1,
-      "estimated_cost_usd": 0.013651
-    },
     {
       "run_id": "38156290832",
       "date": "2026-10-11",
@@ -3005,6 +2945,66 @@
       "output_tokens": 970,
       "web_search_calls": 0,
       "estimated_cost_usd": 0.019464
+    },
+    {
+      "run_id": "45500302030",
+      "date": "2026-11-24",
+      "timestamp": "2026-11-24T22:22:35.294Z",
+      "stage": "research:military_energy_shipping",
+      "model": "gpt-5.6-luna",
+      "input_tokens": 13453,
+      "cached_input_tokens": 0,
+      "output_tokens": 533,
+      "web_search_calls": 1,
+      "estimated_cost_usd": 0.013575
+    },
+    {
+      "run_id": "45500302030",
+      "date": "2026-11-24",
+      "timestamp": "2026-11-24T22:23:03.997Z",
+      "stage": "research:trade_supply_technology",
+      "model": "gpt-5.6-luna",
+      "input_tokens": 13467,
+      "cached_input_tokens": 0,
+      "output_tokens": 522,
+      "web_search_calls": 3,
+      "estimated_cost_usd": 0.033565
+    },
+    {
+      "run_id": "45500302030",
+      "date": "2026-11-24",
+      "timestamp": "2026-11-24T22:23:30.216Z",
+      "stage": "research:cyber_infrastructure_finance",
+      "model": "gpt-5.6-luna",
+      "input_tokens": 13271,
+      "cached_input_tokens": 0,
+      "output_tokens": 554,
+      "web_search_calls": 1,
+      "estimated_cost_usd": 0.013565
+    },
+    {
+      "run_id": "45500302030",
+      "date": "2026-11-24",
+      "timestamp": "2026-11-24T22:23:56.999Z",
+      "stage": "research:americas_civil",
+      "model": "gpt-5.6-luna",
+      "input_tokens": 13314,
+      "cached_input_tokens": 0,
+      "output_tokens": 585,
+      "web_search_calls": 1,
+      "estimated_cost_usd": 0.013611
+    },
+    {
+      "run_id": "45500302030",
+      "date": "2026-11-24",
+      "timestamp": "2026-11-24T22:24:23.246Z",
+      "stage": "research:food_health_natural",
+      "model": "gpt-5.6-luna",
+      "input_tokens": 13413,
+      "cached_input_tokens": 0,
+      "output_tokens": 532,
+      "web_search_calls": 1,
+      "estimated_cost_usd": 0.013566
     }
   ]
 }
