@@ -2,18 +2,18 @@
   "schema_version": 5,
   "engine_version": "5.3",
   "data_status": "VERIFIED",
-  "as_of": "2026-11-27",
-  "updated_at": "2026-11-27T21:16:05.708Z",
-  "last_successful_update": "2026-11-27T21:16:05.708Z",
-  "preparedness_urgency": 85,
-  "raw_preparedness_urgency": 85,
+  "as_of": "2026-11-28",
+  "updated_at": "2026-11-28T20:00:51.015Z",
+  "last_successful_update": "2026-11-28T20:00:51.015Z",
+  "preparedness_urgency": 84,
+  "raw_preparedness_urgency": 84,
   "preparedness_stage": "HIGH ALERT",
   "global_threat_pressure": 88,
   "leading_threat_pressure": 88,
   "observed_civilian_disruption": 84,
   "americas_exposure": 89,
   "americas_stage": "SEVERE",
-  "americas_summary": "The Americas face high exposure through energy and freight costs, trade and technology controls, cyber-financial transmission risk, U.S. storm-related outages and travel disruption, and localized armed violence in Colombia and Mexico.",
+  "americas_summary": "Americas exposure remains high through energy prices and shipping, alongside active U.S. storm-related road and power disruptions; tariff proposals add sourcing and price uncertainty.",
   "americas_components": [
     {
       "name": "Energy security",
@@ -28,7 +28,7 @@
     {
       "name": "Natural / environmental",
       "score": 97,
-      "trend": "rising"
+      "trend": "stable"
     },
     {
       "name": "Supply chain & transportation",
@@ -38,27 +38,29 @@
     {
       "name": "Critical infrastructure / cyber",
       "score": 93,
-      "trend": "rising"
+      "trend": "stable"
     },
     {
-      "name": "Technology chokepoints",
-      "score": 87,
+      "name": "Domestic institutional stress",
+      "score": 92,
       "trend": "stable"
     }
   ],
   "conflict_escalation": 98,
   "coupling_score": 82,
-  "momentum_score": 72,
+  "momentum_score": 62,
   "confidence_score": 75,
   "confidence_level": "MODERATE",
-  "confidence_rationale": "Fresh, high-materiality reporting from multiple Tier A sources covers all domains, though several forward-looking risks remain scenario-based and direct Americas effects are uneven. Evidence gate: 15 items, 10 sources, 8 Tier-A sources, 5/5 clusters.",
+  "confidence_rationale": "Fresh, multi-source evidence covers major shipping, weather, trade, and health signals, though several systemic effects remain indirect or forward-looking. Evidence gate: 13 items, 9 sources, 5 Tier-A sources, 5/5 clusters.",
   "preparedness_window": "Days to weeks",
-  "summary": "Severe, ongoing Hormuz-linked energy and shipping disruption remains the principal cross-border civilian risk, while East Coast storm outages and regional armed violence create acute Americas impacts. Partial oil-flow recovery and critical-material export relief provide limited offsets.",
-  "primary_driver": "Persistent Strait of Hormuz disruption and blockade-related shipping constraints affecting energy supply and global logistics.",
+  "summary": "Severe maritime-energy disruption risk and active U.S. weather impacts remain the principal preparedness concerns; commercial traffic and food availability provide partial offsets.",
+  "primary_driver": "Constrained Hormuz/Gulf shipping and reduced oil flows, reinforced by maritime security incidents.",
   "primary_stabilizers": [
-    "EIA reported third-quarter oil shipments through Middle Eastern chokepoints rose 19%, aided by smaller vessels, ship-to-ship transfers, and rerouting around high-risk areas.",
-    "China extended suspension of export restrictions affecting gallium, germanium, antimony and related materials through January 27, 2027.",
-    "The Bank of England says UK banks remain well capitalised and liquid, while recent third-party outages caused disruption but no severe financial-system impact."
+    "JMIC reported continuing tanker movement but persistent harassment and a tanker strike near the Strait of Hormuz, indicating constrained—not halted—commercial traffic.",
+    "China extended its pause on U.S.-specific gallium, germanium, and antimony restrictions, preserving licensed flows for semiconductor, defense, and energy supply chains through January.",
+    "The Bank of England says market spillovers remain limited and the UK banking system resilient, with high capital and liquidity levels.",
+    "The Thanksgiving storm was exiting Saturday, with drier conditions expected across the East despite lingering winds and coastal-flood warnings.",
+    "FAO said global food supplies remain generally ample, while warning that weather, logistics, policy uncertainty, and deteriorating fertilizer affordability are mounting risks."
   ],
   "domains": [
     {
@@ -67,7 +69,7 @@
       "impact": 95,
       "americas_exposure": 98,
       "trend": "rising",
-      "rationale": "Hormuz disruption remains unresolved and a merchant vessel was disabled amid blockade enforcement; flows have partly adapted.",
+      "rationale": "Hormuz blockade pressure and reported 20% oil-flow decline sustain acute price and availability risk despite continuing tanker movement.",
       "name": "Energy security",
       "weight": 11
     },
@@ -77,7 +79,7 @@
       "impact": 98,
       "americas_exposure": 90,
       "trend": "rising",
-      "rationale": "Active blockade enforcement and Iranian transit warnings show continuing military-linked maritime escalation.",
+      "rationale": "A vessel disabled near Iranian ports, persistent harassment, a tanker strike, and a Gulf of Aden hijacking show active maritime conflict risk.",
       "name": "Military / geopolitical",
       "weight": 10
     },
@@ -87,57 +89,57 @@
       "impact": 94,
       "americas_exposure": 96,
       "trend": "stable",
-      "rationale": "Hormuz constraints and new technology controls sustain disruption, partly offset by rerouting and materials-export relief.",
+      "rationale": "Shipping-route security incidents and constrained Hormuz traffic sustain disruption; minerals pause and active commercial movement partly stabilize flows.",
       "name": "Supply chain & transportation",
       "weight": 10
     },
     {
       "key": "trade",
-      "threat": 85,
-      "impact": 77,
-      "americas_exposure": 86,
+      "threat": 86,
+      "impact": 78,
+      "americas_exposure": 87,
       "trend": "rising",
-      "rationale": "Shipping disruption persists while proposed U.S. tariffs add trade-policy uncertainty.",
+      "rationale": "Proposed 15%–35% U.S. tariffs create direct pricing and sourcing uncertainty, though implementation effects are not yet established.",
       "name": "Global trade fragmentation",
       "weight": 10
     },
     {
       "key": "technology",
-      "threat": 90,
+      "threat": 89,
       "impact": 82,
       "americas_exposure": 87,
       "trend": "stable",
-      "rationale": "Remote semiconductor access controls raise compliance and access risk; critical-material restriction suspension stabilizes inputs.",
+      "rationale": "Tariff uncertainty affects high-tech sourcing, while semiconductor exemptions and continued Chinese mineral flows limit immediate disruption.",
       "name": "Technology chokepoints",
       "weight": 7
     },
     {
       "key": "critical_infrastructure",
-      "threat": 88,
+      "threat": 87,
       "impact": 89,
       "americas_exposure": 93,
-      "trend": "rising",
-      "rationale": "East Coast storm caused power outages and travel disruption; cyber-payment transmission remains a material contingency.",
+      "trend": "stable",
+      "rationale": "U.S. flooding and snow caused hazardous roads and outages affecting about 10,000 Missouri households; conditions are improving in the East.",
       "name": "Critical infrastructure / cyber",
       "weight": 11
     },
     {
       "key": "financial",
-      "threat": 84,
+      "threat": 83,
       "impact": 78,
       "americas_exposure": 87,
       "trend": "stable",
-      "rationale": "No U.S. financial access failure is reported; cyber and stressed-market transmission risks remain elevated.",
+      "rationale": "Energy and trade shocks remain spillover risks, but available evidence reports limited market spillovers and resilient UK banking.",
       "name": "Financial-system stress",
       "weight": 10
     },
     {
       "key": "food",
-      "threat": 82,
+      "threat": 81,
       "impact": 65,
       "americas_exposure": 82,
-      "trend": "rising",
-      "rationale": "El Niño raises forward crop and food-security risk; no broad Americas food shortage is evidenced.",
+      "trend": "stable",
+      "rationale": "Global food supplies are reported generally ample, though logistics, weather, policy uncertainty, and fertilizer affordability remain risks.",
       "name": "Food & agriculture",
       "weight": 8
     },
@@ -146,8 +148,8 @@
       "threat": 85,
       "impact": 86,
       "americas_exposure": 92,
-      "trend": "rising",
-      "rationale": "U.S. storm disruption and armed violence in Colombia and Mexico sustain civilian safety and service risks.",
+      "trend": "stable",
+      "rationale": "U.S. emergency declarations, hazardous travel, and storm impacts are observed, with the main storm exiting and conditions improving.",
       "name": "Domestic institutional stress",
       "weight": 6
     },
@@ -156,28 +158,28 @@
       "threat": 66,
       "impact": 62,
       "americas_exposure": 69,
-      "trend": "rising",
-      "rationale": "Deadly cartel-linked violence in Mexico and a bombing in Colombia show localized armed-security deterioration.",
+      "trend": "stable",
+      "rationale": "No new evidence indicates material civilian disruption from civil unrest.",
       "name": "Civil unrest / public order",
       "weight": 7
     },
     {
       "key": "public_health",
-      "threat": 83,
+      "threat": 82,
       "impact": 84,
       "americas_exposure": 78,
       "trend": "stable",
-      "rationale": "Occupational H5N1 cases include one death, but no human-to-human transmission and low general-population risk are reported.",
+      "rationale": "A cruise-ship norovirus outbreak affected 268 people, but evidence does not show wider community or health-system disruption.",
       "name": "Public health / biological",
       "weight": 5
     },
     {
       "key": "natural",
-      "threat": 97,
+      "threat": 96,
       "impact": 94,
       "americas_exposure": 97,
-      "trend": "rising",
-      "rationale": "A major East Coast storm caused flooding, rescues, outages and travel disruption; El Niño risk is strengthening.",
+      "trend": "stable",
+      "rationale": "Major rain, wind, coastal flooding, snow, travel disruption, and localized outages are observed; the eastern storm is moving out.",
       "name": "Natural / environmental",
       "weight": 5
     }
@@ -188,11 +190,11 @@
       "verified": true,
       "scope": "multinational",
       "status": "active",
-      "summary": "Blockade enforcement and transit warnings are constraining maritime access around Iranian ports and the Strait of Hormuz.",
+      "summary": "Naval blockade pressure on Iranian ports, reported 20% lower oil flows, and persistent harassment indicate an active material constraint on Hormuz shipping, though traffic continues.",
       "source_url": "https://apnews.com/article/800620518a351282f098faa9381b3375",
       "evidence_ids": [
-        "E1",
-        "E2"
+        "E2",
+        "E3"
       ]
     },
     {
@@ -200,20 +202,32 @@
       "verified": true,
       "scope": "regional",
       "status": "active",
-      "summary": "Thanksgiving storm caused power outages across the U.S. East Coast, with restoration ongoing.",
-      "source_url": "https://apnews.com/article/bbf9dad3076a69b9bd18b7c0c80490ad",
+      "summary": "Snowstorm-related power outages affected about 10,000 households in southeast Missouri.",
+      "source_url": "https://www.weather.gov/pah/thankgiving2026snow",
+      "evidence_ids": [
+        "E11",
+        "E13"
+      ]
+    },
+    {
+      "type": "emergency_civil_order",
+      "verified": true,
+      "scope": "regional",
+      "status": "active",
+      "summary": "New Jersey and parts of New York declared states of emergency amid heavy rain, wind, and coastal flooding.",
+      "source_url": "https://apnews.com/article/e8bc9bc454c933dacffe89b1139c4d3c",
       "evidence_ids": [
         "E10",
-        "E9"
+        "E13"
       ]
     }
   ],
-  "verified_hard_trigger_count": 2,
+  "verified_hard_trigger_count": 3,
   "severe_hard_trigger_count": 1,
   "score_calibration": {
-    "raw_score": 85,
-    "published_score": 85,
-    "previous_daily_anchor": 83,
+    "raw_score": 84,
+    "published_score": 84,
+    "previous_daily_anchor": 85,
     "rate_limit_applied": false,
     "daily_rate_limit": null,
     "sustained_90_for_48h": false,
@@ -223,7 +237,7 @@
     "global_threat_pressure": 88,
     "observed_civilian_disruption": 84,
     "coupling": 82,
-    "momentum": 72,
+    "momentum": 62,
     "americas_exposure": 89
   },
   "drivers": [
@@ -253,109 +267,109 @@
       "note": ""
     },
     {
-      "name": "Technology chokepoints",
+      "name": "Domestic institutional stress",
       "severity": "critical",
       "note": ""
     }
   ],
   "areas_to_watch": [
     {
-      "name": "Strait of Hormuz energy and shipping access",
+      "name": "Hormuz and Gulf shipping",
       "severity": "critical",
-      "why": "Blockade enforcement, warnings and unresolved supply losses could rapidly deepen fuel and freight disruption."
+      "why": "Blockade pressure, lower oil flows, harassment, and tanker-strike reporting could rapidly amplify fuel and supply-chain disruption."
     },
     {
-      "name": "U.S. East Coast storm recovery",
+      "name": "U.S. storm recovery and residual flooding",
       "severity": "high",
-      "why": "Power restoration, flooding impacts and holiday travel disruption remain active."
+      "why": "Localized outages, hazardous roads, and coastal-flood warnings may persist despite improving weather."
     },
     {
-      "name": "Americas armed violence",
+      "name": "Tariff implementation and retaliation",
       "severity": "high",
-      "why": "Recent attacks in Colombia and cartel-linked violence in Mexico show persistent localized civilian risk."
+      "why": "Proposed tariffs may raise costs and disrupt sourcing if enacted or met with countermeasures."
     },
     {
-      "name": "Cyber-financial infrastructure",
+      "name": "Cruise-associated norovirus",
       "severity": "medium",
-      "why": "No outage is evidenced, but the Federal Reserve identifies severe liquidity and confidence transmission risk from a major cyber event."
+      "why": "The outbreak is material onboard but no evidence yet indicates broader public-health-system stress."
     },
     {
-      "name": "H5N1 and El Niño-linked food risk",
+      "name": "Food and fertilizer logistics",
       "severity": "medium",
-      "why": "Current H5N1 population risk is low, while El Niño could worsen crop and food-security conditions into early 2027."
+      "why": "Supplies remain ample, but weather, logistics, and fertilizer affordability risks are mounting."
     }
   ],
   "signals": [
     {
-      "title": "Merchant ship disabled at Iranian blockade",
-      "summary": "The U.S. military said it disabled another merchant ship attempting to breach its blockade of Iranian ports, while Iran warned ships against unauthorized Strait of Hormuz transit.",
+      "title": "Gulf of Aden cargo ship hijacked",
+      "summary": "Armed men hijacked a Panama-flagged, UAE-owned cargo ship in the Gulf of Aden, adding a confirmed security incident along a major shipping route.",
+      "url": "https://apnews.com/article/19eb404b1863bb84773a81a64eb307d1",
+      "source": "AP",
+      "published_at": "2026-11-28T00:00:00.000Z",
+      "category": "MILITARY",
+      "impact": "up"
+    },
+    {
+      "title": "Hormuz blockade pressure persists",
+      "summary": "The U.S. military said it disabled another vessel attempting to breach a naval blockade on Iranian ports, while oil flows reportedly fell about 20% in early November.",
       "url": "https://apnews.com/article/800620518a351282f098faa9381b3375",
-      "source": "Associated Press",
+      "source": "AP",
       "published_at": "2026-11-27T00:00:00.000Z",
       "category": "MILITARY",
       "impact": "up"
     },
     {
-      "title": "Hormuz disruption remains unresolved",
-      "summary": "The IEA says 2026 Hormuz disruption remains unresolved, with cumulative losses of 2.8 billion oil barrels and 60 billion cubic metres of Gulf gas supply.",
-      "url": "https://www.iea.org/reports/world-energy-outlook-2026/executive-summary",
-      "source": "International Energy Agency",
-      "published_at": "2026-11-19T00:00:00.000Z",
-      "category": "ENERGY",
-      "impact": "up"
-    },
-    {
-      "title": "U.S. proposes tariffs",
-      "summary": "The U.S. proposed tariffs after Section 301 findings involving structural excess capacity across 14 trading partners.",
-      "url": "https://www.ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural",
-      "source": "USTR",
+      "title": "U.S. proposes new partner tariffs",
+      "summary": "The United States proposed 15%–35% tariffs on 14 partners, while exempting some Taiwanese and South Korean semiconductors and high-tech goods.",
+      "url": "https://apnews.com/article/367083ea32f71fd7f70029ba7df66bf0",
+      "source": "Associated Press",
       "published_at": "2026-11-25T00:00:00.000Z",
       "category": "TRADE",
       "impact": "up"
     },
     {
-      "title": "Remote semiconductor access restricted",
-      "summary": "A new BIS rule requires controls on remote access to advanced U.S. semiconductor technology through third-country data centers.",
-      "url": "https://www.bis.gov/regulations/federal-register-notices?years=2026",
-      "source": "BIS",
-      "published_at": "2026-11-19T00:00:00.000Z",
-      "category": "TECH",
-      "impact": "up"
-    },
-    {
-      "title": "Sovereign and liquidity risks",
-      "summary": "The EBA reports funding remains favorable, but stressed market access can become fragile as sovereign yields, risk premia, and refinancing costs rise.",
-      "url": "https://eba.europa.eu/publications-and-media/publications/risk-assessment-report-autumn-2026",
-      "source": "European Banking Authority",
-      "published_at": "2026-11-20T00:00:00.000Z",
-      "category": "FINANCE",
-      "impact": "up"
-    },
-    {
-      "title": "Cyber-payment transmission risk",
-      "summary": "The Federal Reserve warns a cyber event disrupting financial services could degrade market liquidity, undermine confidence, and force asset sales.",
-      "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
-      "source": "Federal Reserve",
-      "published_at": "2026-11-13T00:00:00.000Z",
-      "category": "TECH",
-      "impact": "up"
-    },
-    {
-      "title": "East Coast storm disrupts power and travel",
-      "summary": "A Thanksgiving storm caused flooding, rescues, travel disruption and power outages across the East Coast; utilities were restoring service by November 27.",
-      "url": "https://apnews.com/article/bbf9dad3076a69b9bd18b7c0c80490ad",
+      "title": "Trading partners oppose tariff plans",
+      "summary": "China, Japan, and other partners protested proposed U.S. tariffs, increasing uncertainty for cross-border sourcing and pricing.",
+      "url": "https://apnews.com/article/b94a693004ad8f9b5e78f7aafb196a71a",
       "source": "Associated Press",
-      "published_at": "2026-11-27T00:00:00.000Z",
+      "published_at": "2026-11-26T00:00:00.000Z",
+      "category": "TRADE",
+      "impact": "up"
+    },
+    {
+      "title": "East Coast flooding disrupts roads",
+      "summary": "Heavy rain, wind, and coastal flooding affected much of the United States; New Jersey and parts of New York declared states of emergency.",
+      "url": "https://apnews.com/article/e8bc9bc454c933dacffe89b1139c4d3c",
+      "source": "Associated Press",
+      "published_at": "2026-11-26T00:00:00.000Z",
       "category": "CIVIL",
       "impact": "up"
     },
     {
-      "title": "Bombing injures civilians in Colombia",
-      "summary": "A bomb outside regional government offices in Villavicencio injured 23 people, reflecting armed violence spreading into an urban center.",
-      "url": "https://apnews.com/article/c4b6e461e59ed1065efc73a0bd47eeb0",
-      "source": "Associated Press",
+      "title": "Missouri snowstorm causes outages",
+      "summary": "Snowfall of up to 11 inches caused hazardous roads and power outages affecting about 10,000 southeast Missouri households.",
+      "url": "https://www.weather.gov/pah/thankgiving2026snow",
+      "source": "National Weather Service",
+      "published_at": "2026-11-26T00:00:00.000Z",
+      "category": "CYBER",
+      "impact": "up"
+    },
+    {
+      "title": "Thanksgiving storm disruption",
+      "summary": "NOAA reported potent coastal storms bringing rain and snow likely to cause major holiday travel disruption across the United States.",
+      "url": "https://www.noaa.gov/news/thanksgiving-week-weather-potent-coastal-storms-rain-and-snow-to-impact-travel",
+      "source": "NOAA",
       "published_at": "2026-11-24T00:00:00.000Z",
-      "category": "CIVIL",
+      "category": "NATURAL",
+      "impact": "up"
+    },
+    {
+      "title": "Norovirus outbreak on cruise",
+      "summary": "CDC recorded a norovirus outbreak affecting 233 passengers and 35 crew members aboard Caribbean Princess during its November voyage.",
+      "url": "https://www.cdc.gov/vessel-sanitation/cruise-ship-outbreaks/caribbean-princess-november-2026.html",
+      "source": "CDC",
+      "published_at": "2026-11-24T00:00:00.000Z",
+      "category": "HEALTH",
       "impact": "up"
     }
   ],
@@ -916,213 +930,182 @@
       "americas": 89,
       "conflict": 98,
       "momentum": 72
+    },
+    {
+      "date": "2026-11-28",
+      "preparedness": 84,
+      "raw_preparedness": 84,
+      "threat": 88,
+      "impact": 84,
+      "americas": 89,
+      "conflict": 98,
+      "momentum": 62
     }
   ],
   "evidence_quality": {
-    "evidence_count": 15,
-    "fresh_count": 9,
-    "unique_sources": 10,
-    "tier_a_sources": 8,
+    "evidence_count": 13,
+    "fresh_count": 12,
+    "unique_sources": 9,
+    "tier_a_sources": 5,
     "clusters": 5,
-    "domains_covered": 12,
+    "domains_covered": 11,
     "confidence_cap": 75,
     "publishable": true
   },
   "evidence_log": [
     {
       "id": "E1",
-      "title": "Merchant ship disabled at Iranian blockade",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/800620518a351282f098faa9381b3375",
+      "title": "Gulf of Aden cargo ship hijacked",
+      "source": "AP",
+      "url": "https://apnews.com/article/19eb404b1863bb84773a81a64eb307d1",
       "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-11-27T00:00:00.000Z",
+      "published_at": "2026-11-28T00:00:00.000Z",
       "age_days": 0,
       "cluster": "military_energy_shipping",
       "domains": [
         "military",
-        "energy",
-        "supply_chain",
-        "trade"
+        "supply_chain"
       ],
-      "geography": "Strait of Hormuz / Iranian ports",
+      "geography": "Gulf of Aden; Somalia",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "The U.S. military said it disabled another merchant ship attempting to breach its blockade of Iranian ports, while Iran warned ships against unauthorized Strait of Hormuz transit.",
+      "fact": "Armed men hijacked a Panama-flagged, UAE-owned cargo ship in the Gulf of Aden, adding a confirmed security incident along a major shipping route.",
       "americas_relevant": true
     },
     {
       "id": "E2",
-      "title": "Hormuz disruption remains unresolved",
-      "source": "International Energy Agency",
-      "url": "https://www.iea.org/reports/world-energy-outlook-2026/executive-summary",
-      "source_domain": "iea.org",
+      "title": "Hormuz blockade pressure persists",
+      "source": "AP",
+      "url": "https://apnews.com/article/800620518a351282f098faa9381b3375",
+      "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-11-19T00:00:00.000Z",
-      "age_days": 8,
+      "published_at": "2026-11-27T00:00:00.000Z",
+      "age_days": 1,
       "cluster": "military_energy_shipping",
       "domains": [
+        "military",
         "energy",
-        "trade",
         "supply_chain"
       ],
-      "geography": "Global / Strait of Hormuz",
-      "evidence_type": "forward",
+      "geography": "Strait of Hormuz; Gulf of Oman",
+      "evidence_type": "observed",
       "materiality": "high",
-      "fact": "The IEA says 2026 Hormuz disruption remains unresolved, with cumulative losses of 2.8 billion oil barrels and 60 billion cubic metres of Gulf gas supply.",
+      "fact": "The U.S. military said it disabled another vessel attempting to breach a naval blockade on Iranian ports, while oil flows reportedly fell about 20% in early November.",
       "americas_relevant": true
     },
     {
       "id": "E3",
-      "title": "Chokepoint oil flows partially recover",
-      "source": "U.S. Energy Information Administration",
-      "url": "https://www.eia.gov/todayinEnergy/detail.php?id=68485",
-      "source_domain": "eia.gov",
-      "source_tier": "A",
-      "published_at": "2026-11-19T00:00:00.000Z",
-      "age_days": 8,
+      "title": "Commercial traffic remains active",
+      "source": "UKMTO/JMIC",
+      "url": "https://www.ukmto.org/-/media/ukmto/products/jmic_advisory_update_117_26-nov.pdf",
+      "source_domain": "ukmto.org",
+      "source_tier": "C",
+      "published_at": "2026-11-26T00:00:00.000Z",
+      "age_days": 2,
       "cluster": "military_energy_shipping",
       "domains": [
         "energy",
-        "trade",
+        "military",
         "supply_chain"
       ],
-      "geography": "Middle East chokepoints",
+      "geography": "Strait of Hormuz; United Arab Emirates",
       "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "EIA reported third-quarter oil shipments through Middle Eastern chokepoints rose 19%, aided by smaller vessels, ship-to-ship transfers, and rerouting around high-risk areas.",
+      "fact": "JMIC reported continuing tanker movement but persistent harassment and a tanker strike near the Strait of Hormuz, indicating constrained—not halted—commercial traffic.",
       "americas_relevant": true
     },
     {
       "id": "E4",
-      "title": "U.S. proposes tariffs",
-      "source": "USTR",
-      "url": "https://www.ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural",
-      "source_domain": "ustr.gov",
+      "title": "U.S. proposes new partner tariffs",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/367083ea32f71fd7f70029ba7df66bf0",
+      "source_domain": "apnews.com",
       "source_tier": "A",
       "published_at": "2026-11-25T00:00:00.000Z",
+      "age_days": 3,
+      "cluster": "trade_supply_technology",
+      "domains": [
+        "trade",
+        "supply_chain",
+        "technology"
+      ],
+      "geography": "United States and major trading partners",
+      "evidence_type": "observed",
+      "materiality": "high",
+      "fact": "The United States proposed 15%–35% tariffs on 14 partners, while exempting some Taiwanese and South Korean semiconductors and high-tech goods.",
+      "americas_relevant": true
+    },
+    {
+      "id": "E5",
+      "title": "Trading partners oppose tariff plans",
+      "source": "Associated Press",
+      "url": "https://apnews.com/article/b94a693004ad8f9b5e78f7aafb196a71a",
+      "source_domain": "apnews.com",
+      "source_tier": "A",
+      "published_at": "2026-11-26T00:00:00.000Z",
       "age_days": 2,
       "cluster": "trade_supply_technology",
       "domains": [
         "trade",
         "supply_chain"
       ],
-      "geography": "United States and 14 trading partners",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "The U.S. proposed tariffs after Section 301 findings involving structural excess capacity across 14 trading partners.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E5",
-      "title": "Critical-material export pause extended",
-      "source": "AP",
-      "url": "https://apnews.com/article/367083ea32f71fd7f70029ba7df66bf0",
-      "source_domain": "apnews.com",
-      "source_tier": "A",
-      "published_at": "2026-11-25T00:00:00.000Z",
-      "age_days": 2,
-      "cluster": "trade_supply_technology",
-      "domains": [
-        "supply_chain",
-        "technology"
-      ],
-      "geography": "China–United States",
-      "evidence_type": "stabilizer",
-      "materiality": "high",
-      "fact": "China extended suspension of export restrictions affecting gallium, germanium, antimony and related materials through January 27, 2027.",
+      "geography": "Asia, Europe, and United States",
+      "evidence_type": "forward",
+      "materiality": "medium",
+      "fact": "China, Japan, and other partners protested proposed U.S. tariffs, increasing uncertainty for cross-border sourcing and pricing.",
       "americas_relevant": true
     },
     {
       "id": "E6",
-      "title": "Remote semiconductor access restricted",
-      "source": "BIS",
-      "url": "https://www.bis.gov/regulations/federal-register-notices?years=2026",
-      "source_domain": "bis.gov",
-      "source_tier": "A",
-      "published_at": "2026-11-19T00:00:00.000Z",
-      "age_days": 8,
+      "title": "China extends minerals suspension",
+      "source": "S&P Global",
+      "url": "https://www.spglobal.com/energy/en/news-research/latest-news/metals/112426-china-extends-pause-on-us-minerals-ban-to-january-2027",
+      "source_domain": "spglobal.com",
+      "source_tier": "C",
+      "published_at": "2026-11-24T00:00:00.000Z",
+      "age_days": 4,
       "cluster": "trade_supply_technology",
       "domains": [
+        "supply_chain",
         "technology",
-        "supply_chain"
+        "trade"
       ],
-      "geography": "United States and third-country data centers",
-      "evidence_type": "observed",
+      "geography": "China and United States",
+      "evidence_type": "stabilizer",
       "materiality": "high",
-      "fact": "A new BIS rule requires controls on remote access to advanced U.S. semiconductor technology through third-country data centers.",
+      "fact": "China extended its pause on U.S.-specific gallium, germanium, and antimony restrictions, preserving licensed flows for semiconductor, defense, and energy supply chains through January.",
       "americas_relevant": true
     },
     {
       "id": "E7",
-      "title": "UK financial resilience",
+      "title": "UK financial resilience maintained",
       "source": "Bank of England",
-      "url": "https://www.bankofengland.co.uk/financial-stability-report/2026/november-2026/",
+      "url": "https://www.bankofengland.co.uk/financial-stability-report/2026/november-2026",
       "source_domain": "bankofengland.co.uk",
       "source_tier": "C",
       "published_at": "2026-11-26T00:00:00.000Z",
-      "age_days": 1,
+      "age_days": 2,
       "cluster": "cyber_infrastructure_finance",
       "domains": [
         "financial",
-        "technology",
-        "critical_infrastructure"
+        "technology"
       ],
       "geography": "United Kingdom",
       "evidence_type": "stabilizer",
       "materiality": "high",
-      "fact": "The Bank of England says UK banks remain well capitalised and liquid, while recent third-party outages caused disruption but no severe financial-system impact.",
+      "fact": "The Bank of England says market spillovers remain limited and the UK banking system resilient, with high capital and liquidity levels.",
       "americas_relevant": false
     },
     {
-      "id": "E8",
-      "title": "Sovereign and liquidity risks",
-      "source": "European Banking Authority",
-      "url": "https://eba.europa.eu/publications-and-media/publications/risk-assessment-report-autumn-2026",
-      "source_domain": "eba.europa.eu",
-      "source_tier": "A",
-      "published_at": "2026-11-20T00:00:00.000Z",
-      "age_days": 7,
-      "cluster": "cyber_infrastructure_finance",
-      "domains": [
-        "financial"
-      ],
-      "geography": "European Union",
-      "evidence_type": "forward",
-      "materiality": "medium",
-      "fact": "The EBA reports funding remains favorable, but stressed market access can become fragile as sovereign yields, risk premia, and refinancing costs rise.",
-      "americas_relevant": true
-    },
-    {
-      "id": "E9",
-      "title": "Cyber-payment transmission risk",
-      "source": "Federal Reserve",
-      "url": "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf",
-      "source_domain": "federalreserve.gov",
-      "source_tier": "A",
-      "published_at": "2026-11-13T00:00:00.000Z",
-      "age_days": 14,
-      "cluster": "cyber_infrastructure_finance",
-      "domains": [
-        "technology",
-        "financial",
-        "critical_infrastructure"
-      ],
-      "geography": "United States",
-      "evidence_type": "forward",
-      "materiality": "high",
-      "fact": "The Federal Reserve warns a cyber event disrupting financial services could degrade market liquidity, undermine confidence, and force asset sales.",
-      "americas_relevant": true
-    },
-    {
       "id": "E10",
-      "title": "East Coast storm disrupts power and travel",
+      "title": "East Coast flooding disrupts roads",
       "source": "Associated Press",
-      "url": "https://apnews.com/article/bbf9dad3076a69b9bd18b7c0c80490ad",
+      "url": "https://apnews.com/article/e8bc9bc454c933dacffe89b1139c4d3c",
       "source_domain": "apnews.com",
       "source_tier": "A",
-      "published_at": "2026-11-27T00:00:00.000Z",
-      "age_days": 0,
+      "published_at": "2026-11-26T00:00:00.000Z",
+      "age_days": 2,
       "cluster": "americas_civil",
       "domains": [
         "domestic",
@@ -1132,118 +1115,117 @@
       "geography": "United States",
       "evidence_type": "observed",
       "materiality": "high",
-      "fact": "A Thanksgiving storm caused flooding, rescues, travel disruption and power outages across the East Coast; utilities were restoring service by November 27.",
+      "fact": "Heavy rain, wind, and coastal flooding affected much of the United States; New Jersey and parts of New York declared states of emergency.",
       "americas_relevant": true
     },
     {
       "id": "E11",
-      "title": "Bombing injures civilians in Colombia",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/c4b6e461e59ed1065efc73a0bd47eeb0",
-      "source_domain": "apnews.com",
+      "title": "Missouri snowstorm causes outages",
+      "source": "National Weather Service",
+      "url": "https://www.weather.gov/pah/thankgiving2026snow",
+      "source_domain": "weather.gov",
       "source_tier": "A",
-      "published_at": "2026-11-24T00:00:00.000Z",
-      "age_days": 3,
+      "published_at": "2026-11-26T00:00:00.000Z",
+      "age_days": 2,
       "cluster": "americas_civil",
       "domains": [
-        "civil_unrest",
+        "critical_infrastructure",
         "domestic",
-        "critical_infrastructure"
+        "natural"
       ],
-      "geography": "Colombia",
+      "geography": "United States",
       "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "A bomb outside regional government offices in Villavicencio injured 23 people, reflecting armed violence spreading into an urban center.",
+      "materiality": "medium",
+      "fact": "Snowfall of up to 11 inches caused hazardous roads and power outages affecting about 10,000 southeast Missouri households.",
       "americas_relevant": true
     },
     {
       "id": "E12",
-      "title": "Cartel capture triggers Sinaloa violence",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/912af4eaae5e476a102adc2eca11abee",
-      "source_domain": "apnews.com",
+      "title": "Storm impacts easing",
+      "source": "National Weather Service Weather Prediction Center",
+      "url": "https://www.wpc.ncep.noaa.gov/?pubDate=20260620",
+      "source_domain": "wpc.ncep.noaa.gov",
       "source_tier": "A",
-      "published_at": "2026-11-23T00:00:00.000Z",
-      "age_days": 4,
+      "published_at": "2026-11-27T00:00:00.000Z",
+      "age_days": 1,
       "cluster": "americas_civil",
       "domains": [
-        "civil_unrest",
         "domestic",
+        "natural",
         "critical_infrastructure"
       ],
-      "geography": "Mexico",
-      "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "A cartel leader’s capture triggered violence in Sinaloa that killed 20 people, indicating continuing civilian security exposure after high-value arrests.",
+      "geography": "Eastern United States",
+      "evidence_type": "stabilizer",
+      "materiality": "medium",
+      "fact": "The Thanksgiving storm was exiting Saturday, with drier conditions expected across the East despite lingering winds and coastal-flood warnings.",
       "americas_relevant": true
     },
     {
       "id": "E13",
-      "title": "U.S. H5N1 infections",
-      "source": "WHO",
-      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON629",
-      "source_domain": "who.int",
+      "title": "Thanksgiving storm disruption",
+      "source": "NOAA",
+      "url": "https://www.noaa.gov/news/thanksgiving-week-weather-potent-coastal-storms-rain-and-snow-to-impact-travel",
+      "source_domain": "noaa.gov",
       "source_tier": "A",
       "published_at": "2026-11-24T00:00:00.000Z",
-      "age_days": 3,
+      "age_days": 4,
       "cluster": "food_health_natural",
       "domains": [
-        "public_health",
-        "food"
+        "natural",
+        "domestic"
       ],
-      "geography": "United States—Washington State",
+      "geography": "United States",
       "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "WHO reports three occupational H5N1 infections in Washington dairy workers, including one death; no human-to-human transmission is currently evidenced, and general-population risk remains low.",
+      "materiality": "medium",
+      "fact": "NOAA reported potent coastal storms bringing rain and snow likely to cause major holiday travel disruption across the United States.",
       "americas_relevant": true
     },
     {
       "id": "E14",
-      "title": "Ebola response disrupted",
-      "source": "Associated Press",
-      "url": "https://apnews.com/article/ff1890d63ca7f3c3a8beeb127727e5cdF",
-      "source_domain": "apnews.com",
+      "title": "Norovirus outbreak on cruise",
+      "source": "CDC",
+      "url": "https://www.cdc.gov/vessel-sanitation/cruise-ship-outbreaks/caribbean-princess-november-2026.html",
+      "source_domain": "cdc.gov",
       "source_tier": "A",
-      "published_at": "2026-11-25T00:00:00.000Z",
-      "age_days": 2,
+      "published_at": "2026-11-24T00:00:00.000Z",
+      "age_days": 4,
       "cluster": "food_health_natural",
       "domains": [
-        "public_health",
-        "civil_unrest"
+        "public_health"
       ],
-      "geography": "Democratic Republic of the Congo—Ituri Province",
+      "geography": "Caribbean Princess cruise",
       "evidence_type": "observed",
-      "materiality": "high",
-      "fact": "Fighting in eastern Congo forced Ebola responders to evacuate affected areas, disrupting containment efforts during the country’s deadliest recorded outbreak.",
-      "americas_relevant": false
+      "materiality": "medium",
+      "fact": "CDC recorded a norovirus outbreak affecting 233 passengers and 35 crew members aboard Caribbean Princess during its November voyage.",
+      "americas_relevant": true
     },
     {
       "id": "E15",
-      "title": "El Niño food-security risk",
+      "title": "Food supplies remain ample",
       "source": "FAO",
-      "url": "https://www.fao.org/markets-and-trade/do-not-touch/all-widgets/giews-update---strong-el-niño-heightens-risks-to-staple-crop-production-and-food-security-across-several-regions/en",
+      "url": "https://www.fao.org/newsroom/detail/fao-food-outlook--global-food-commodity-supplies-remain-generally-ample--but-risks-are-mounting",
       "source_domain": "fao.org",
       "source_tier": "C",
-      "published_at": "2026-11-20T00:00:00.000Z",
-      "age_days": 7,
+      "published_at": "2026-11-19T00:00:00.000Z",
+      "age_days": 9,
       "cluster": "food_health_natural",
       "domains": [
         "food",
-        "natural"
+        "supply_chain"
       ],
       "geography": "Global",
-      "evidence_type": "forward",
+      "evidence_type": "stabilizer",
       "materiality": "medium",
-      "fact": "FAO says strengthening El Niño conditions through early 2027 increase risks to staple-crop production and food security across several regions.",
+      "fact": "FAO said global food supplies remain generally ample, while warning that weather, logistics, policy uncertainty, and deteriorating fertilizer affordability are mounting risks.",
       "americas_relevant": true
     }
   ],
   "api_usage": {
     "research_model": "gpt-5.6-luna",
     "assessment_model": "gpt-5.6-terra",
-    "web_search_calls": 7,
-    "estimated_run_cost_usd": 0.109872,
-    "estimated_period_spend_usd": 7.399503,
+    "web_search_calls": 6,
+    "estimated_run_cost_usd": 0.099893,
+    "estimated_period_spend_usd": 7.499396,
     "allocated_90_day_budget_usd": 10,
     "operational_stop_usd": 9
   },
